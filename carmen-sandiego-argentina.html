@@ -256,58 +256,36 @@
           <div>
             <div class="flex items-center justify-between border-b border-slate-300 pb-2">
               <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">Field Clue Sheets</span>
-              <span id="clueRemainingHUD" class="text-xs font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded-full" aria-live="polite">Reveal Clues to Gather Clues</span>
             </div>
-            
+
             <p class="text-xs text-slate-500 leading-relaxed mt-2">
-              Flip the witness reports and evidence slips to deduce Carmen's hideout and disguise. You must inspect all clues before heading to the puzzle.
+              Review the witness reports and evidence slips below to deduce Carmen's hideout and disguise.
             </p>
 
             <div id="cluesGrid" class="grid sm:grid-cols-3 gap-4 mt-4">
-              <!-- Clue 1 card -->
-              <button type="button" onclick="flipClueCard(0)" class="clue-flip-container h-44 w-full text-left rounded-xl">
-                <span class="clue-flip-inner relative block w-full h-full shadow-md rounded-xl transition-all duration-300 transform">
-                  <span class="clue-front absolute inset-0 bg-slate-900 text-white flex flex-col items-center justify-center rounded-xl p-4 border border-white/10">
-                    <span class="text-2xl mb-1">🗣️</span>
-                    <span class="block font-bold text-sm text-amber-400">Witness 1</span>
-                    <span class="block text-[10px] text-slate-400 mt-1 uppercase tracking-widest font-bold">Tap to Flip</span>
-                  </span>
-                  <span class="clue-back absolute inset-0 bg-white text-slate-950 flex flex-col justify-between rounded-xl p-4 border border-slate-200">
-                    <span id="clueText0" class="block text-xs leading-relaxed italic text-slate-800">Reading clue...</span>
-                    <span class="text-[9px] font-bold text-emerald-600 text-right uppercase tracking-wider">Collected</span>
-                  </span>
-                </span>
-              </button>
+              <article class="bg-white text-slate-950 rounded-xl p-4 border border-slate-200 shadow-md flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-2xl" aria-hidden="true">🗣️</span>
+                  <span class="font-bold text-sm text-slate-700">Witness 1</span>
+                </div>
+                <p id="clueText0" class="text-xs leading-relaxed italic text-slate-800">Reading clue...</p>
+              </article>
 
-              <!-- Clue 2 card -->
-              <button type="button" onclick="flipClueCard(1)" class="clue-flip-container h-44 w-full text-left rounded-xl">
-                <span class="clue-flip-inner relative block w-full h-full shadow-md rounded-xl transition-all duration-300 transform">
-                  <span class="clue-front absolute inset-0 bg-slate-900 text-white flex flex-col items-center justify-center rounded-xl p-4 border border-white/10">
-                    <span class="text-2xl mb-1">🔍</span>
-                    <span class="block font-bold text-sm text-amber-400">Local Lead</span>
-                    <span class="block text-[10px] text-slate-400 mt-1 uppercase tracking-widest font-bold">Tap to Flip</span>
-                  </span>
-                  <span class="clue-back absolute inset-0 bg-white text-slate-950 flex flex-col justify-between rounded-xl p-4 border border-slate-200">
-                    <span id="clueText1" class="block text-xs leading-relaxed italic text-slate-800">Reading clue...</span>
-                    <span class="text-[9px] font-bold text-emerald-600 text-right uppercase tracking-wider">Collected</span>
-                  </span>
-                </span>
-              </button>
+              <article class="bg-white text-slate-950 rounded-xl p-4 border border-slate-200 shadow-md flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-2xl" aria-hidden="true">🔍</span>
+                  <span class="font-bold text-sm text-slate-700">Local Lead</span>
+                </div>
+                <p id="clueText1" class="text-xs leading-relaxed italic text-slate-800">Reading clue...</p>
+              </article>
 
-              <!-- Clue 3 card -->
-              <button type="button" onclick="flipClueCard(2)" class="clue-flip-container h-44 w-full text-left rounded-xl">
-                <span class="clue-flip-inner relative block w-full h-full shadow-md rounded-xl transition-all duration-300 transform">
-                  <span class="clue-front absolute inset-0 bg-slate-900 text-white flex flex-col items-center justify-center rounded-xl p-4 border border-white/10">
-                    <span class="text-2xl mb-1">🎫</span>
-                    <span class="block font-bold text-sm text-amber-400">Travel Clue</span>
-                    <span class="block text-[10px] text-slate-400 mt-1 uppercase tracking-widest font-bold">Tap to Flip</span>
-                  </span>
-                  <span class="clue-back absolute inset-0 bg-white text-slate-950 flex flex-col justify-between rounded-xl p-4 border border-slate-200">
-                    <span id="clueText2" class="block text-xs leading-relaxed italic text-slate-800">Reading clue...</span>
-                    <span class="text-[9px] font-bold text-emerald-600 text-right uppercase tracking-wider">Collected</span>
-                  </span>
-                </span>
-              </button>
+              <article class="bg-white text-slate-950 rounded-xl p-4 border border-slate-200 shadow-md flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-2xl" aria-hidden="true">🎫</span>
+                  <span class="font-bold text-sm text-slate-700">Travel Clue</span>
+                </div>
+                <p id="clueText2" class="text-xs leading-relaxed italic text-slate-800">Reading clue...</p>
+              </article>
             </div>
           </div>
 
@@ -315,7 +293,7 @@
             <button onclick="switchTab('dossier')" class="px-4 py-2 border border-slate-400 hover:border-slate-800 rounded font-semibold text-slate-700 hover:text-slate-900 transition-colors">
               ← View Briefing
             </button>
-            <button id="goToPuzzleBtn" onclick="unlockAndGoToPuzzle()" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center gap-2 opacity-50 cursor-not-allowed" disabled>
+            <button id="goToPuzzleBtn" onclick="unlockAndGoToPuzzle()" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center gap-2">
               Open Puzzle Log ➔
             </button>
           </div>

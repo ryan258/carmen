@@ -113,35 +113,6 @@
     color: #991b1b !important;
   }
 
-  /* Clue flip cards */
-  .clue-flip-container {
-    perspective: 1000px;
-    cursor: pointer;
-    appearance: none;
-    background: transparent;
-    border: 0;
-    color: inherit;
-    padding: 0;
-  }
-  .clue-flip-container:focus-visible {
-    outline: 3px solid #fbbf24;
-    outline-offset: 3px;
-  }
-  .clue-flip-inner {
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-style: preserve-3d;
-  }
-  .clue-flip-container.flipped .clue-flip-inner {
-    transform: rotateY(180deg);
-  }
-  .clue-front, .clue-back {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-  }
-  .clue-back {
-    transform: rotateY(180deg);
-  }
-
   /* Scrollbar */
   ::-webkit-scrollbar { width: 6px; height: 6px; }
   ::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }

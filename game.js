@@ -553,7 +553,6 @@ let state = {
   score: 0,
   lives: 5,
   streak: 0,
-  cluesFlipped: [false, false, false],
   puzzleSolved: false,
   puzzleAttempts: 0,
   hintsUsedInRound: 0,
@@ -1062,24 +1061,23 @@ function renderCaseHistorySummary() {
 // ROUND SETUP & INITIALIZATION
 // ============================================================
 function startLocation() {
-  state.cluesFlipped = [false, false, false];
   state.puzzleSolved = false;
   state.puzzleAttempts = 0;
   state.hintsUsedInRound = 0;
   state.roundScore = createRoundScore();
   state.warrantIssued = false;
   state.activeTab = 'dossier';
-  
+
   saveGame();
   updateHUD();
   drawMapGrid();
-  
-  // Setup tabs
+
+  // Setup tabs — clues are always visible, so the puzzle tab is unlocked from the start
   document.getElementById('tabClues').disabled = false;
-  document.getElementById('tabPuzzle').disabled = true;
+  document.getElementById('tabPuzzle').disabled = false;
   document.getElementById('tabWarrant').disabled = true;
-  document.getElementById('goToPuzzleBtn').disabled = true;
-  document.getElementById('goToPuzzleBtn').classList.add('opacity-50', 'cursor-not-allowed');
+  document.getElementById('goToPuzzleBtn').disabled = false;
+  document.getElementById('goToPuzzleBtn').classList.remove('opacity-50', 'cursor-not-allowed');
   document.getElementById('goToWarrantBtn').disabled = true;
   document.getElementById('goToWarrantBtn').classList.add('opacity-50', 'cursor-not-allowed');
   resetHintPanel();
@@ -1095,12 +1093,11 @@ function startLocation() {
   renderSuspectCard(loc);
   
   // Populate Clues Cards
-  document.querySelectorAll('.clue-flip-container').forEach(el => el.classList.remove('flipped'));
   document.getElementById('clueText0').textContent = loc.clues[0];
   document.getElementById('clueText1').textContent = loc.clues[1];
   document.getElementById('clueText2').textContent = loc.clues[2];
-  updateClueRemainingHUD();
-  
+
+
   // Populate Puzzle Details
   document.getElementById('puzzleTitleText').textContent = loc.puzzle.title;
   document.getElementById('puzzleDescription').textContent = loc.puzzle.description;
@@ -1158,44 +1155,8 @@ function typeWriterEffect(elementId, text) {
 }
 
 // ============================================================
-// CLUE INSPECTOR (TAB 2)
-// ============================================================
-function flipClueCard(index) {
-  sound.click();
-  const card = document.querySelectorAll('.clue-flip-container')[index];
-  card.classList.toggle('flipped');
-  
-  if (card.classList.contains('flipped')) {
-    state.cluesFlipped[index] = true;
-  }
-  
-  updateClueRemainingHUD();
-  
-  const allFlipped = state.cluesFlipped.every(val => val === true);
-  if (allFlipped) {
-    document.getElementById('tabPuzzle').disabled = false;
-    const puzzleBtn = document.getElementById('goToPuzzleBtn');
-    puzzleBtn.disabled = false;
-    puzzleBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-  }
-}
-
-// ============================================================
 // TAB NAVIGATION SKELETON
 // ============================================================
-function updateClueRemainingHUD() {
-  const flipCount = state.cluesFlipped.filter(v => v).length;
-  const remaining = 3 - flipCount;
-  const hud = document.getElementById('clueRemainingHUD');
-  if (remaining === 0) {
-    hud.className = 'text-xs font-bold text-emerald-700 bg-emerald-500/10 px-3 py-1 rounded-full';
-    hud.textContent = 'All evidence gathered!';
-  } else {
-    hud.className = 'text-xs font-bold text-amber-700 bg-amber-500/10 px-3 py-1 rounded-full';
-    hud.textContent = `${remaining} lead${remaining > 1 ? 's' : ''} remaining`;
-  }
-}
-
 function unlockAndGoToPuzzle() {
   sound.success();
   switchTab('puzzle');
@@ -1618,9 +1579,9 @@ function triggerTransitionRound() {
     ? `<span class="text-amber-400 font-extrabold">${suspect.name}</span> is in ACME custody. Carmen's network in <span class="text-amber-400 font-extrabold">${currentLoc.name}</span> just lost an operative.`
     : `Excellent work! You cornered and detained the suspect in <span class="text-amber-400 font-extrabold">${currentLoc.name}</span>!`;
   const nextLeadBlock = (currentLoc.briefing && currentLoc.briefing.nextLead)
-    ? `<div class="glass rounded-xl p-4 border border-amber-300/20 text-left max-w-md mx-auto shadow-xl bg-amber-500/5">
-        <p class="text-[10px] uppercase tracking-widest font-black text-amber-400 mb-1">Seized From Suspect — Next Lead</p>
-        <p class="text-slate-200 text-xs leading-relaxed italic">${currentLoc.briefing.nextLead}</p>
+    ? `<div class="glass rounded-xl p-4 text-left max-w-md mx-auto shadow-xl">
+        <p class="text-[10px] uppercase tracking-widest font-black text-amber-700 mb-1">Seized From Suspect — Next Lead</p>
+        <p class="text-slate-900 text-xs leading-relaxed italic">${currentLoc.briefing.nextLead}</p>
       </div>`
     : '';
 
@@ -1887,7 +1848,7 @@ function triggerGameOver() {
   updateStats('escape');
   localStorage.setItem(LAST_RUN_KEY, JSON.stringify(state.caseVariantIds));
   localStorage.removeItem(SAVE_KEY);
-  
+
   const container = document.getElementById('resultsContent');
   container.innerHTML = `
     <div class="text-7xl mb-4">🚨</div>
@@ -1912,9 +1873,47 @@ function triggerGameOver() {
         </div>
       </div>
     </div>
+
+    ${renderEscapedAnswersPanel()}
   `;
-  
+
   showScreen('resultsScreen');
+}
+
+function renderEscapedAnswersPanel() {
+  const loc = getLocationCase(state.currentLocationIndex);
+  if (!loc || !loc.warrantAnswers) return '';
+
+  const puzzleAnswer = (loc.puzzle && Array.isArray(loc.puzzle.options))
+    ? loc.puzzle.options[loc.puzzle.correctIndex]
+    : '';
+
+  const rows = [
+    ['City', loc.warrantAnswers.city],
+    ['Hideout', loc.warrantAnswers.hideout],
+    ['Disguise', loc.warrantAnswers.disguise]
+  ];
+
+  return `
+    <div class="glass rounded-2xl p-5 mt-6 max-w-md mx-auto text-left shadow-2xl">
+      <p class="text-[10px] uppercase tracking-widest font-black text-amber-700 mb-1">Case File — Correct Answers</p>
+      <p class="text-xs text-slate-700 mb-3">Carmen got away in <span class="font-bold">${loc.name}</span>. Here's what the warrant should have read:</p>
+      <dl class="grid grid-cols-1 gap-2 text-xs">
+        ${rows.map(([label, value]) => `
+          <div class="flex justify-between gap-3 border-b border-slate-900/10 pb-1">
+            <dt class="font-bold uppercase tracking-wider text-slate-700">${label}</dt>
+            <dd class="text-slate-900 text-right">${value}</dd>
+          </div>
+        `).join('')}
+      </dl>
+      ${puzzleAnswer ? `
+        <div class="mt-3 pt-3 border-t border-slate-900/10">
+          <p class="text-[10px] uppercase tracking-widest font-bold text-slate-700 mb-1">Puzzle Answer</p>
+          <p class="text-xs italic text-slate-900">${puzzleAnswer}</p>
+        </div>
+      ` : ''}
+    </div>
+  `;
 }
 
 function restartGameFlow() {
