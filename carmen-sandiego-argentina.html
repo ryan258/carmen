@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where in Argentina is Carmen Sandiego?</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Leaflet Map CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="min-h-screen relative flex flex-col justify-between">
+
+<!-- Background Particle Layer -->
+<div id="bgParticles" class="fixed inset-0 pointer-events-none z-0 overflow-hidden"></div>
+
+<!-- App Header -->
+<header class="relative z-10 w-full glass px-6 py-4 flex items-center justify-between border-b border-white/5">
+  <div class="flex items-center gap-3">
+    <span class="text-2xl">🕵️‍♂️</span>
+    <div>
+      <h1 class="title-font text-white font-extrabold text-lg tracking-wide">ACME DETECTIVE AGENCY</h1>
+      <p class="text-xs text-sky-400 font-semibold tracking-widest uppercase">Argentina Division</p>
+    </div>
+  </div>
+  <!-- Settings Bar -->
+  <div class="flex items-center gap-4">
+    <button onclick="toggleAudio()" id="soundToggle" class="text-slate-400 hover:text-white transition-colors text-lg min-w-11 min-h-11 flex items-center justify-center rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" title="Toggle Sound" aria-label="Toggle sound">
+      🔊
+    </button>
+    <button onclick="showResetModal()" class="text-slate-400 hover:text-white transition-colors text-sm font-semibold border border-white/10 px-3 py-1 rounded bg-white/5" title="Restart Game">
+      Restart Case
+    </button>
+  </div>
+</header>
+
+<!-- Main Container -->
+<main id="app" class="relative z-10 flex-grow w-full max-w-7xl mx-auto px-4 py-6 md:py-8 flex flex-col justify-center">
+
+  <!-- ================= SCREEN 1: TITLE SCREEN ================= -->
+  <div id="titleScreen" class="w-full flex flex-col items-center justify-center py-6 md:py-12 fade-in-up">
+    <div class="text-center max-w-2xl">
+      <!-- Flag colors badge -->
+      <div class="flex justify-center mb-6 gap-1">
+        <div class="w-14 h-2 bg-sky-400 rounded-full"></div>
+        <div class="w-14 h-2 bg-white rounded-full"></div>
+        <div class="w-14 h-2 bg-sky-400 rounded-full"></div>
+      </div>
+      
+      <p class="text-amber-400 text-xs font-bold tracking-[0.4em] uppercase mb-4">A Vintage Detective Caper</p>
+      
+      <h2 class="title-font text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-2">
+        <span class="text-slate-100">WHERE IN</span><br>
+        <span class="shimmer-text">ARGENTINA</span><br>
+        <span class="text-slate-100">is</span>
+      </h2>
+      
+      <div class="inline-block bg-gradient-to-r from-red-600 to-red-700 text-white title-font text-3xl md:text-5xl font-black px-10 py-3 rounded-lg shadow-2xl border-2 border-red-500/30 mb-8 transform -rotate-2">
+        CARMEN SANDIEGO?
+      </div>
+      
+      <p class="text-slate-400 max-w-md mx-auto text-base md:text-lg mb-8 leading-relaxed">
+        The master thief Carmen Sandiego has pilfered priceless cultural treasures across Argentina. Use your deductive wits, decode ciphers, and issue the correct arrest warrant before she slips away!
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <button onclick="goToDifficultySelect()" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-slate-900 text-lg font-bold rounded-xl shadow-lg shadow-amber-500/20 transition-all duration-300 transform active:scale-95">
+          📁 START NEW INVESTIGATION
+        </button>
+        <button id="resumeButton" onclick="resumeGame()" class="hidden w-full sm:w-auto px-8 py-4 glass text-white hover:bg-white/10 text-lg font-bold rounded-xl transition-all duration-300 transform active:scale-95 border border-white/20">
+          💼 RESUME CURRENT CASE
+        </button>
+      </div>
+
+      <div class="mt-12 grid grid-cols-3 gap-4 border-t border-white/5 pt-8 max-w-lg mx-auto text-slate-500 text-xs tracking-wider uppercase font-semibold">
+        <div>🗺️ Real Interactive Map</div>
+        <div>🔍 Clues & Ciphers</div>
+        <div>📑 Warrant Arrests</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SCREEN 2: DIFFICULTY SELECT ================= -->
+  <div id="difficultyScreen" class="hidden w-full flex flex-col items-center justify-center py-6 fade-in-up">
+    <div class="max-w-xl w-full text-center">
+      <p class="text-amber-400 text-xs font-bold tracking-[0.3em] uppercase mb-2">CLEARANCE AUTHENTICATION</p>
+      <h3 class="title-font text-3xl md:text-4xl font-extrabold text-white mb-8">Establish Detective Rank</h3>
+
+      <div class="space-y-4 text-left">
+        <button onclick="selectDifficulty('rookie')" class="w-full glass rounded-2xl p-5 text-left border border-white/10 hover:border-emerald-400/40 transition-all duration-300 group flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-emerald-500/20">📋</div>
+          <div>
+            <h4 class="text-white font-bold text-lg group-hover:text-emerald-400 transition-colors">Rookie Detective</h4>
+            <p class="text-slate-400 text-sm mt-1">6 lives. Puzzle prompts have 4 clues. Warrants are partially pre-filled to help you learn the locations.</p>
+          </div>
+        </button>
+
+        <button onclick="selectDifficulty('detective')" class="w-full glass rounded-2xl p-5 text-left border border-white/10 hover:border-amber-400/40 transition-all duration-300 group flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-amber-500/20">🔍</div>
+          <div>
+            <h4 class="text-white font-bold text-lg group-hover:text-amber-400 transition-colors">Senior Detective</h4>
+            <p class="text-slate-400 text-sm mt-1">5 lives. 3 clues per location. Standard warrant checks. The optimal way to play.</p>
+          </div>
+        </button>
+
+        <button onclick="selectDifficulty('inspector')" class="w-full glass rounded-2xl p-5 text-left border border-white/10 hover:border-red-400/40 transition-all duration-300 group flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-red-500/20">⭐</div>
+          <div>
+            <h4 class="text-white font-bold text-lg group-hover:text-red-400 transition-colors">Chief Inspector</h4>
+            <p class="text-slate-400 text-sm mt-1">4 lives. Tightest clues. Warrants must be typed or selected completely from scratch with zero hints.</p>
+          </div>
+        </button>
+      </div>
+
+      <button onclick="goToTitle()" class="mt-8 text-slate-400 hover:text-white transition-colors text-sm font-semibold">
+        ← Return to Main Menu
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= SCREEN 3: GAME SCREEN ================= -->
+  <div id="gameScreen" class="hidden w-full max-w-6xl mx-auto grid lg:grid-cols-12 gap-6 items-start fade-in">
+    
+    <!-- Left Column: Map and HUD (5 cols) -->
+    <div class="lg:col-span-5 space-y-4">
+      
+      <!-- HUD Card -->
+      <div class="glass rounded-2xl p-4 flex justify-between items-center border border-white/5 shadow-xl">
+        <div class="flex items-center gap-3">
+          <div class="text-2xl text-amber-400">🕵️‍♂️</div>
+          <div>
+            <p id="hudRank" class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Detective</p>
+            <p id="hudScore" class="text-white font-black text-lg" aria-live="polite">Score: <span class="text-amber-400">0000</span></p>
+          </div>
+        </div>
+        
+        <!-- Lives Indicator (Magnifying Glasses) -->
+        <div class="text-right">
+          <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-1">Backup Lives</p>
+          <div id="livesContainer" class="flex gap-1 justify-end">
+            <!-- Rendered via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Real Map Card -->
+      <div class="glass rounded-2xl p-4 border border-white/5 shadow-xl relative overflow-hidden">
+        <div class="flex items-center justify-between mb-2 border-b border-white/5 pb-2">
+          <p class="text-xs font-bold text-sky-400 uppercase tracking-wider">ACME Tracking Map</p>
+          <p id="currentCityText" class="text-xs text-white font-bold"></p>
+        </div>
+        <div class="relative w-full aspect-[4/5] bg-slate-950/40 rounded-xl border border-white/5 overflow-hidden z-10">
+          <div id="map" class="w-full h-full"></div>
+        </div>
+      </div>
+
+      <!-- Inventory Clue Tokens Card -->
+      <div class="glass rounded-2xl p-4 border border-white/5 shadow-xl">
+        <p class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Collected Clue Tokens</p>
+        <div id="tokenGrid" class="grid grid-cols-4 gap-2">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Column: Case File tabbed interface (7 cols) -->
+    <div id="caseFileColumn" class="lg:col-span-7 flex flex-col min-h-[580px] shadow-2xl">
+      
+      <!-- Tab Headers -->
+      <div class="flex border-b border-white/5 pl-4 gap-1">
+        <button id="tabDossier" onclick="switchTab('dossier')" class="dossier-tab active px-5 py-3 text-sm font-bold bg-slate-900 border-t border-x border-white/5 text-slate-400 hover:text-white">
+          📂 Dossier Briefing
+        </button>
+        <button id="tabClues" onclick="switchTab('clues')" class="dossier-tab px-5 py-3 text-sm font-bold border-t border-x border-white/5 text-slate-400 hover:text-white">
+          🔍 Clue Sheets
+        </button>
+        <button id="tabPuzzle" onclick="switchTab('puzzle')" class="dossier-tab px-5 py-3 text-sm font-bold border-t border-x border-white/5 text-slate-400 hover:text-white" disabled>
+          🧩 Puzzle Clue
+        </button>
+        <button id="tabWarrant" onclick="switchTab('warrant')" class="dossier-tab px-5 py-3 text-sm font-bold border-t border-x border-white/5 text-slate-400 hover:text-white" disabled>
+          📑 Arrest Warrant
+        </button>
+      </div>
+
+      <!-- Tab Content Area (Manila Parchment Folder) -->
+      <div class="parchment rounded-b-2xl rounded-tr-2xl p-6 flex-grow flex flex-col justify-between min-h-[500px] text-slate-950">
+
+        <!-- ================= TAB CONTENT 1: DOSSIER ================= -->
+        <div id="contentDossier" class="space-y-6 flex-grow flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-slate-300 pb-2">
+              <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">Case Briefing File</span>
+              <span id="caseCityNumber" class="text-xs font-bold text-amber-700 bg-amber-500/10 px-2.5 py-0.5 rounded-full">Location 1 of 8</span>
+            </div>
+            
+            <div class="mt-4">
+              <h4 id="briefingHeadline" class="title-font text-2xl font-black text-red-700 border-l-4 border-red-600 pl-3 leading-tight mb-3">
+                NATIONAL LIBRARY LARCENY!
+              </h4>
+              <p id="briefingReport" class="typewriter-font text-sm leading-relaxed text-slate-800 bg-white/60 p-4 rounded border border-slate-200 shadow-inner">
+                Loading police dispatch report...
+              </p>
+            </div>
+
+            <!-- Visual Calling Card Section -->
+            <div class="mt-6 flex flex-col sm:flex-row gap-4 items-center bg-white/40 p-4 rounded-xl border border-slate-200 shadow-sm">
+              <div class="w-16 h-16 bg-red-700 text-white rounded-lg flex items-center justify-center font-bold text-2xl flex-shrink-0 shadow-md">
+                🕵️‍♀️
+              </div>
+              <div class="flex-grow">
+                <p class="text-xs text-slate-500 font-extrabold uppercase tracking-wide">Left at Crime Scene:</p>
+                <p class="text-sm font-bold text-slate-800 mt-0.5">Carmen's signature calling card</p>
+                <p id="callingCardNote" class="typewriter-font text-xs text-red-600 italic bg-red-50 px-2 py-1 rounded border border-red-100 inline-block mt-2">
+                  "See you on the floor..."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 flex justify-end">
+            <button onclick="switchTab('clues')" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center gap-2">
+              Begin Field Investigation ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= TAB CONTENT 2: CLUES ================= -->
+        <div id="contentClues" class="hidden space-y-6 flex-grow flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-slate-300 pb-2">
+              <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">Field Clue Sheets</span>
+              <span id="clueRemainingHUD" class="text-xs font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded-full" aria-live="polite">Reveal Clues to Gather Clues</span>
+            </div>
+            
+            <p class="text-xs text-slate-500 leading-relaxed mt-2">
+              Flip the witness reports and evidence slips to deduce Carmen's hideout and disguise. You must inspect all clues before heading to the puzzle.
+            </p>
+
+            <div id="cluesGrid" class="grid sm:grid-cols-3 gap-4 mt-4">
+              <!-- Clue 1 card -->
+              <button type="button" onclick="flipClueCard(0)" class="clue-flip-container h-44 w-full text-left rounded-xl">
+                <span class="clue-flip-inner relative block w-full h-full shadow-md rounded-xl transition-all duration-300 transform">
+                  <span class="clue-front absolute inset-0 bg-slate-900 text-white flex flex-col items-center justify-center rounded-xl p-4 border border-white/10">
+                    <span class="text-2xl mb-1">🗣️</span>
+                    <span class="block font-bold text-sm text-amber-400">Witness 1</span>
+                    <span class="block text-[10px] text-slate-400 mt-1 uppercase tracking-widest font-bold">Tap to Flip</span>
+                  </span>
+                  <span class="clue-back absolute inset-0 bg-white text-slate-950 flex flex-col justify-between rounded-xl p-4 border border-slate-200">
+                    <span id="clueText0" class="block text-xs leading-relaxed italic text-slate-800">Reading clue...</span>
+                    <span class="text-[9px] font-bold text-emerald-600 text-right uppercase tracking-wider">Collected</span>
+                  </span>
+                </span>
+              </button>
+
+              <!-- Clue 2 card -->
+              <button type="button" onclick="flipClueCard(1)" class="clue-flip-container h-44 w-full text-left rounded-xl">
+                <span class="clue-flip-inner relative block w-full h-full shadow-md rounded-xl transition-all duration-300 transform">
+                  <span class="clue-front absolute inset-0 bg-slate-900 text-white flex flex-col items-center justify-center rounded-xl p-4 border border-white/10">
+                    <span class="text-2xl mb-1">🔍</span>
+                    <span class="block font-bold text-sm text-amber-400">Local Lead</span>
+                    <span class="block text-[10px] text-slate-400 mt-1 uppercase tracking-widest font-bold">Tap to Flip</span>
+                  </span>
+                  <span class="clue-back absolute inset-0 bg-white text-slate-950 flex flex-col justify-between rounded-xl p-4 border border-slate-200">
+                    <span id="clueText1" class="block text-xs leading-relaxed italic text-slate-800">Reading clue...</span>
+                    <span class="text-[9px] font-bold text-emerald-600 text-right uppercase tracking-wider">Collected</span>
+                  </span>
+                </span>
+              </button>
+
+              <!-- Clue 3 card -->
+              <button type="button" onclick="flipClueCard(2)" class="clue-flip-container h-44 w-full text-left rounded-xl">
+                <span class="clue-flip-inner relative block w-full h-full shadow-md rounded-xl transition-all duration-300 transform">
+                  <span class="clue-front absolute inset-0 bg-slate-900 text-white flex flex-col items-center justify-center rounded-xl p-4 border border-white/10">
+                    <span class="text-2xl mb-1">🎫</span>
+                    <span class="block font-bold text-sm text-amber-400">Travel Clue</span>
+                    <span class="block text-[10px] text-slate-400 mt-1 uppercase tracking-widest font-bold">Tap to Flip</span>
+                  </span>
+                  <span class="clue-back absolute inset-0 bg-white text-slate-950 flex flex-col justify-between rounded-xl p-4 border border-slate-200">
+                    <span id="clueText2" class="block text-xs leading-relaxed italic text-slate-800">Reading clue...</span>
+                    <span class="text-[9px] font-bold text-emerald-600 text-right uppercase tracking-wider">Collected</span>
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="mt-8 flex justify-between items-center border-t border-slate-300 pt-4">
+            <button onclick="switchTab('dossier')" class="px-4 py-2 border border-slate-400 hover:border-slate-800 rounded font-semibold text-slate-700 hover:text-slate-900 transition-colors">
+              ← View Briefing
+            </button>
+            <button id="goToPuzzleBtn" onclick="unlockAndGoToPuzzle()" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center gap-2 opacity-50 cursor-not-allowed" disabled>
+              Open Puzzle Log ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= TAB CONTENT 3: PUZZLE ================= -->
+        <div id="contentPuzzle" class="hidden space-y-6 flex-grow flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-slate-300 pb-2">
+              <span id="puzzleTitleText" class="text-xs font-bold tracking-widest text-slate-500 uppercase">Tango Cipher Decode</span>
+              <span class="text-xs font-extrabold text-amber-700 bg-amber-500/10 px-2 py-0.5 rounded uppercase tracking-wider">Deduction Puzzle</span>
+            </div>
+
+            <p id="puzzleDescription" class="text-xs text-slate-600 mt-2 mb-4">
+              Decipher the clue using the information gathered below, then select the matching A, B, C, or D option.
+            </p>
+
+            <div class="grid md:grid-cols-12 gap-4 items-stretch mb-4">
+              <!-- Visual Evidence Area (Left side) -->
+              <div id="puzzleVisualContainer" class="md:col-span-5 bg-white/60 p-4 rounded-xl border border-slate-200 flex flex-col justify-center items-center shadow-inner min-h-[160px]">
+                <!-- Injected dynamically based on location -->
+              </div>
+              
+              <!-- Multiple Choice Area (Right side) -->
+              <div class="md:col-span-7 flex flex-col justify-center">
+                <p id="puzzleQuestionText" class="text-sm font-bold text-slate-800 mb-3 leading-tight"></p>
+                <div id="puzzleOptionsGrid" class="space-y-2">
+                  <!-- Option buttons generated dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 flex justify-between items-center border-t border-slate-300 pt-4">
+            <button onclick="switchTab('clues')" class="px-4 py-2 border border-slate-400 hover:border-slate-800 rounded font-semibold text-slate-700 hover:text-slate-900 transition-colors">
+              ← Review Clues
+            </button>
+            <button id="goToWarrantBtn" onclick="switchTab('warrant')" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center gap-2 opacity-50 cursor-not-allowed" disabled>
+              Issue Arrest Warrant ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= TAB CONTENT 4: WARRANT ================= -->
+        <div id="contentWarrant" class="hidden space-y-6 flex-grow flex flex-col justify-between relative overflow-hidden">
+          <div>
+            <div class="flex items-center justify-between border-b border-slate-300 pb-2">
+              <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">ACME Warrant Submission</span>
+              <span class="text-xs font-extrabold text-red-700 bg-red-500/10 px-2 py-0.5 rounded uppercase tracking-wider">Case Authority</span>
+            </div>
+
+            <p class="text-xs text-slate-600 mt-2 mb-4">
+              Enter the correct suspect profile details below to dispatch the field team. Input wrong details, and the warrant is rejected, wasting precious chase time.
+            </p>
+
+            <div class="bg-white/50 p-4 rounded-xl border border-slate-200 shadow-inner space-y-4 max-w-md mx-auto">
+              <!-- Field 1: City -->
+              <div>
+                <label class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Target City</label>
+                <select id="warrantCity" class="w-full bg-white text-slate-900 border border-slate-300 rounded-lg px-3 py-2 font-bold focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
+                  <!-- Dynamically populated -->
+                </select>
+              </div>
+
+              <!-- Field 2: Hideout -->
+              <div>
+                <label class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Target Hideout</label>
+                <select id="warrantHideout" class="w-full bg-white text-slate-900 border border-slate-300 rounded-lg px-3 py-2 font-bold focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
+                  <!-- Dynamically populated -->
+                </select>
+              </div>
+
+              <!-- Field 3: Disguise -->
+              <div>
+                <label class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Suspect Disguise</label>
+                <select id="warrantDisguise" class="w-full bg-white text-slate-900 border border-slate-300 rounded-lg px-3 py-2 font-bold focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
+                  <!-- Dynamically populated -->
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stamp overlay container -->
+          <div id="warrantStampOverlay" class="hidden absolute inset-0 flex items-center justify-center bg-transparent pointer-events-none z-30">
+            <div id="warrantStamp" class="stamp text-5xl font-black px-8 py-3 rounded-xl border-4 transform -rotate-12 bg-white/90 shadow-2xl">
+              APPROVED
+            </div>
+          </div>
+
+          <div class="mt-8 flex justify-between items-center border-t border-slate-300 pt-4">
+            <button onclick="switchTab('puzzle')" class="px-4 py-2 border border-slate-400 hover:border-slate-800 rounded font-semibold text-slate-700 hover:text-slate-900 transition-colors">
+              ← Return to Puzzle
+            </button>
+            <button id="submitWarrantBtn" onclick="submitWarrant()" class="px-6 py-3 bg-red-700 hover:bg-red-800 text-white font-extrabold rounded-lg transition-colors flex items-center gap-2 shadow-md">
+              ⚡ Dispatch Field Team
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SCREEN 4: BETWEEN ROUNDS (TRAVEL / BRIEFING) ================= -->
+  <div id="betweenScreen" class="hidden w-full flex flex-col items-center justify-center py-6 fade-in">
+    <div class="max-w-xl w-full text-center">
+      
+      <div id="betweenContent" class="space-y-6">
+        <!-- Injected dynamically by JS -->
+      </div>
+      
+      <div class="mt-8">
+        <button id="nextRoundBtn" onclick="nextRound()" class="px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-slate-900 text-lg font-black rounded-xl shadow-lg shadow-amber-500/20 transition-all duration-300 transform active:scale-95">
+          TRAVEL TO NEXT LOCATION ✈️
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SCREEN 5: FINAL SCORES SCREEN ================= -->
+  <div id="resultsScreen" class="hidden w-full flex flex-col items-center justify-center py-6 fade-in">
+    <div class="max-w-2xl w-full text-center">
+      <div id="resultsContent" class="space-y-6">
+        <!-- Injected dynamically by JS -->
+      </div>
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <button onclick="restartGameFlow()" class="px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-slate-900 text-lg font-black rounded-xl shadow-lg shadow-amber-500/20 transition-all duration-300 transform active:scale-95">
+          🔄 INITIATE NEW CASE
+        </button>
+        <button onclick="goToTitle()" class="px-8 py-4 glass text-white hover:bg-white/10 text-lg font-black rounded-xl transition-all duration-300 transform active:scale-95">
+          🏠 MAIN MENU
+        </button>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Game Reset Confirmation Modal -->
+<div id="resetModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+  <div class="glass max-w-sm w-full rounded-2xl p-6 border border-white/15 text-center fade-in-up">
+    <span class="text-3xl">⚠️</span>
+    <h4 class="title-font text-white text-xl font-bold mt-2">Abort Active Case?</h4>
+    <p class="text-slate-400 text-sm mt-2">Are you sure you want to discard your current progress? The case file and gathered clues will be wiped.</p>
+    <div class="grid grid-cols-2 gap-3 mt-6">
+      <button onclick="confirmReset()" class="py-2.5 bg-red-600 hover:bg-red-500 text-white font-bold rounded-lg text-sm transition-colors">
+        Yes, Abort
+      </button>
+      <button onclick="hideResetModal()" class="py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold rounded-lg text-sm border border-white/5 transition-colors">
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="relative z-10 w-full text-center py-4 text-[10px] text-slate-500 tracking-wider uppercase border-t border-white/5 bg-slate-950/20 mt-8">
+  Where in Argentina is Carmen Sandiego? © 2026. Map data © OpenStreetMap contributors, Tiles © CartoDB.
+</footer>
+
+<!-- Leaflet Map JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="./game.js"></script>
+</body>
+</html>
