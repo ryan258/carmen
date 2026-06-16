@@ -313,6 +313,101 @@
     box-shadow: 9px 9px 0 var(--bass-teal);
   }
 
+  .cutout-ticket,
+  .cutout-mountain,
+  .cutout-gate,
+  .cutout-compass,
+  .cutout-train,
+  .cutout-water,
+  .cutout-glacier {
+    width: 118px;
+    height: 82px;
+    border: 4px solid var(--bass-ink);
+    box-shadow: 8px 8px 0 var(--bass-shadow);
+  }
+
+  .cutout-ticket {
+    background: var(--bass-paper);
+    clip-path: polygon(0 0, 100% 0, 100% 32%, 88% 50%, 100% 68%, 100% 100%, 0 100%, 0 68%, 12% 50%, 0 32%);
+  }
+
+  .cutout-mountain {
+    background: var(--bass-teal);
+    clip-path: polygon(0 100%, 22% 52%, 36% 70%, 55% 18%, 72% 60%, 84% 45%, 100% 100%);
+  }
+
+  .cutout-gate {
+    background: var(--bass-mustard);
+    clip-path: polygon(0 100%, 0 30%, 13% 30%, 13% 0, 27% 0, 27% 30%, 43% 30%, 43% 0, 57% 0, 57% 30%, 73% 30%, 73% 0, 87% 0, 87% 30%, 100% 30%, 100% 100%);
+  }
+
+  .cutout-compass {
+    background: var(--bass-paper-light);
+    clip-path: polygon(50% 0, 62% 37%, 100% 50%, 62% 63%, 50% 100%, 38% 63%, 0 50%, 38% 37%);
+  }
+
+  .cutout-train {
+    background: var(--bass-red);
+    clip-path: polygon(8% 26%, 72% 26%, 90% 48%, 90% 78%, 8% 78%);
+  }
+
+  .cutout-water {
+    background: var(--bass-blue);
+    clip-path: polygon(0 55%, 18% 42%, 34% 55%, 50% 42%, 66% 55%, 82% 42%, 100% 55%, 100% 100%, 0 100%);
+  }
+
+  .cutout-glacier {
+    background: #d8f1ff;
+    clip-path: polygon(8% 100%, 15% 18%, 34% 48%, 49% 8%, 64% 52%, 83% 20%, 92% 100%);
+  }
+
+  .hint-panel {
+    border: 3px solid var(--bass-ink);
+    background: var(--bass-paper-light);
+    box-shadow: 5px 5px 0 rgba(23, 19, 15, 0.22);
+  }
+
+  .map-fallback {
+    height: 100%;
+    min-height: 300px;
+    display: grid;
+    align-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    color: var(--bass-paper-light);
+    background: #102235;
+  }
+
+  body.high-contrast {
+    --bass-ink: #000000;
+    --bass-paper: #fff4c2;
+    --bass-paper-light: #ffffff;
+    --bass-red: #d00000;
+    --bass-mustard: #ffd400;
+    --bass-teal: #006b76;
+    --bass-blue: #005fcc;
+  }
+
+  body.reduced-motion *,
+  body.reduced-motion *::before,
+  body.reduced-motion *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
   #bgParticles div {
     border-radius: 0 !important;
     transform: rotate(12deg);

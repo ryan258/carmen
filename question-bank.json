@@ -1,16 +1,60 @@
 {
   "buenos-aires": [
     {
+      "caseId": "classic-buenos-aires",
+      "briefing": {
+        "headline": "NATIONAL LIBRARY LARCENY!",
+        "report": "A mysterious figure in a red trench coat broke into the National Library of Buenos Aires last night. She bypassed the security grid and stole the original manuscript of Jorge Luis Borges' \"Ficciones\". A witness saw her fleeing towards a tango salon in La Boca.",
+        "callingCard": "A card with a red silhouette. On the back, it says: \"FDPLQLWR WDQJR RXWILW\""
+      },
+      "clues": [
+        "A restaurant receipt from \"El Caminito\" in the colorful La Boca neighborhood.",
+        "A tango lyric sheet with the words \"El Choclo\" circled and a note: \"Dress code: Tango Dancer.\"",
+        "A metro ticket stub showing a trip ending at Plaza de Mayo, near the pink Casa Rosada presidential palace."
+      ],
+      "puzzle": {
+        "title": "Tango Cipher Decode",
+        "description": "Decipher Carmen's coded note. The thief left a message encoded with a Caesar cipher (shift left by 3 letters, e.g. D -> A, E -> B, F -> C, etc.). Use the Tango Substitution Guide.",
+        "question": "What does the cipher \"FDPLQLWR WDQJR RXWILW\" decode to?",
+        "options": [
+          "CAMINITO - TANGO OUTFIT",
+          "OBELISK - SUIT AND TIE",
+          "RECOLETA - DRESS AND HAT",
+          "PALERMO - PONCHO AND PANTS"
+        ],
+        "correctIndex": 0
+      },
+      "warrantAnswers": {
+        "city": "Buenos Aires",
+        "hideout": "La Boca",
+        "disguise": "Tango dancer"
+      },
+      "funFact": "Buenos Aires has more bookstores per capita than any other city in the world.",
+      "learningObjective": "Identify a real Buenos Aires landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "buenos_aires_tourism"
+      ],
+      "difficulty": "detective",
+      "mechanic": "cipher-choice",
+      "regionTags": [
+        "Capital Federal",
+        "Buenos Aires"
+      ],
+      "visualType": "built-in-visual",
+      "accessibilityDescription": "Visual evidence for Tango Cipher Decode in Buenos Aires.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
       "caseId": "obelisco-avenida",
       "briefing": {
         "headline": "OBELISCO BLUEPRINTS VANISH!",
         "report": "Carmen lifted a set of theater-district blueprints from a city archive. Witnesses saw her moving along Avenida 9 de Julio beneath a tall white monument.",
-        "callingCard": "A torn program from Teatro Colon reads: \"Count the lanes, find the needle.\""
+        "callingCard": "A torn program from Teatro Colón reads: \"Count the lanes, find the needle.\""
       },
       "clues": [
         "A taxi receipt lists a drop-off at Avenida Corrientes and 9 de Julio.",
         "A witness described a white monument rising from a broad avenue.",
-        "A costume tag reads: \"Stagehand blacks, Teatro Colon loading door.\""
+        "A costume tag reads: \"Stagehand blacks, Teatro Colón loading door.\""
       ],
       "puzzle": {
         "title": "Landmark Deduction",
@@ -30,7 +74,20 @@
         "hideout": "Obelisco",
         "disguise": "Stagehand"
       },
-      "funFact": "The Obelisco stands at the intersection of Avenida 9 de Julio and Corrientes, two major Buenos Aires landmarks."
+      "funFact": "The Obelisco stands at the intersection of Avenida 9 de Julio and Corrientes, two major Buenos Aires landmarks.",
+      "learningObjective": "Identify a real Buenos Aires landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "buenos_aires_tourism"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "Capital Federal",
+        "Buenos Aires"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "9 de Julio / Corrientes",
+      "reviewStatus": "source-linked-needs-line-review"
     },
     {
       "caseId": "cafe-tortoni",
@@ -49,7 +106,7 @@
         "description": "Match the address and cultural clues to the correct Buenos Aires hideout.",
         "question": "Where should the warrant team go?",
         "options": [
-          "Cafe Tortoni",
+          "Café Tortoni",
           "La Bombonera",
           "Recoleta Cemetery",
           "Puerto Madero docks"
@@ -59,13 +116,158 @@
       },
       "warrantAnswers": {
         "city": "Buenos Aires",
-        "hideout": "Cafe Tortoni",
+        "hideout": "Café Tortoni",
         "disguise": "Poet"
       },
-      "funFact": "Cafe Tortoni is one of Buenos Aires most famous historic cafes and has long been associated with writers and artists."
+      "funFact": "Café Tortoni is one of Buenos Aires most famous historic cafes and has long been associated with writers and artists.",
+      "learningObjective": "Identify a real Buenos Aires landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "buenos_aires_tourism"
+      ],
+      "difficulty": "detective",
+      "mechanic": "multiple-choice",
+      "regionTags": [
+        "Capital Federal",
+        "Buenos Aires"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "☕ Avenida de Mayo 825",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "teatro-colon-score",
+      "briefing": {
+        "headline": "OPERA SCORE SPIRITED AWAY!",
+        "report": "A handwritten overture vanished from a rehearsal room near Avenida 9 de Julio. Carmen left a stage cue marked for a grand opera house.",
+        "callingCard": "A black program says: \"Listen where the city keeps its velvet echo.\""
+      },
+      "clues": [
+        "A backstage pass names Teatro Colón in gold ink.",
+        "A violinist saw Carmen crossing from the orchestra pit to a loading door.",
+        "The disguise tag reads: \"Opera usher - balcony level.\""
+      ],
+      "puzzle": {
+        "title": "Stage Route Deduction",
+        "description": "Match the theater clues to the Buenos Aires landmark where Carmen hid the score.",
+        "question": "Which hideout matches the rehearsal evidence?",
+        "options": [
+          "Teatro Colón",
+          "La Boca shipyard",
+          "Tigre fruit market",
+          "Palermo rose garden"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-ticket mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-red-800\">Balcony pass / orchestra pit</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "Buenos Aires",
+        "hideout": "Teatro Colón",
+        "disguise": "Opera usher"
+      },
+      "funFact": "Teatro Colón is one of Buenos Aires most important performance landmarks and is internationally known for opera and classical music.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the buenos aires case pool.",
+      "sources": [
+        "buenos_aires_tourism"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "buenos-aires"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Match the theater clues to the Buenos Aires landmark where Carmen hid the score.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "recoleta-mausoleum",
+      "briefing": {
+        "headline": "MARBLE ANGEL TOKEN MISSING!",
+        "report": "A cemetery preservation token disappeared from a heritage desk. Carmen left a map of narrow paths and ornate mausoleums.",
+        "callingCard": "The card says: \"Find me among stone angels and city memory.\""
+      },
+      "clues": [
+        "A guidebook page has Recoleta Cemetery circled.",
+        "A witness saw Carmen carrying white flowers through a narrow lane of mausoleums.",
+        "The disguise note reads: \"Heritage guide, black folder.\""
+      ],
+      "puzzle": {
+        "title": "Heritage Path Match",
+        "description": "Use the cemetery and heritage clues to identify the Buenos Aires hideout.",
+        "question": "Where is Carmen hiding the token?",
+        "options": [
+          "Recoleta Cemetery",
+          "Caminito",
+          "Puerto Madero bridge",
+          "San Telmo fair"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-monument mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-slate-900\">Stone angels / mausoleum lanes</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "Buenos Aires",
+        "hideout": "Recoleta Cemetery",
+        "disguise": "Heritage guide"
+      },
+      "funFact": "Recoleta Cemetery is known for elaborate mausoleums and is one of Buenos Aires best-known heritage sites.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the buenos aires case pool.",
+      "sources": [
+        "buenos_aires_tourism"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "buenos-aires"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Use the cemetery and heritage clues to identify the Buenos Aires hideout.",
+      "reviewStatus": "source-linked-needs-line-review"
     }
   ],
   "mendoza": [
+    {
+      "caseId": "classic-mendoza",
+      "briefing": {
+        "headline": "VINTAGE MALBEC VANISHES!",
+        "report": "The oldest bottle of Malbec wine in Argentina, dating back to the 19th century, was stolen from a historic winery cellar in Mendoza. The thief left behind coordinate details on an empty bottle label.",
+        "callingCard": "A postcard of the Andes with coordinates written in red ink: \"32°39'S, 70°00'W\""
+      },
+      "clues": [
+        "A winery flyer with a handwritten note: \"Deliver grapes to the vineyard worker.\"",
+        "A GPS unit tracking history ending at coordinates 32°39'S, 70°00'W.",
+        "A mountaineering permit for Aconcagua base camp signed with a red 'C'."
+      ],
+      "puzzle": {
+        "title": "Triangulation Coordinates",
+        "description": "Examine the topographic GPS coordinates left by the suspect. Match them to the Aconcagua Base Camp location on your detective coordinate grid.",
+        "question": "Which coordinates pinpoint the Aconcagua Base Camp hideout?",
+        "options": [
+          "32°53'S, 68°49'W (Mendoza City)",
+          "32°39'S, 70°00'W (Aconcagua Base Camp)",
+          "34°36'S, 68°20'W (San Rafael)",
+          "31°32'S, 68°31'W (San Juan)"
+        ],
+        "correctIndex": 1
+      },
+      "warrantAnswers": {
+        "city": "Mendoza",
+        "hideout": "Aconcagua base camp",
+        "disguise": "Vineyard worker"
+      },
+      "funFact": "Mendoza is home to Aconcagua, the highest mountain in both the Western and Southern Hemispheres at 6,961m.",
+      "learningObjective": "Identify a real Mendoza landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "mendoza_tourism"
+      ],
+      "difficulty": "detective",
+      "mechanic": "coordinate-choice",
+      "regionTags": [
+        "Mendoza",
+        "Mendoza"
+      ],
+      "visualType": "built-in-visual",
+      "accessibilityDescription": "Visual evidence for Triangulation Coordinates in Mendoza.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
     {
       "caseId": "vendimia-plaza",
       "briefing": {
@@ -96,7 +298,20 @@
         "hideout": "Plaza Independencia",
         "disguise": "Festival dancer"
       },
-      "funFact": "Mendoza is closely associated with Argentina wine country and the annual grape harvest festival, Vendimia."
+      "funFact": "Mendoza is closely associated with Argentina wine country and the annual grape harvest festival, Vendimia.",
+      "learningObjective": "Identify a real Mendoza landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "mendoza_tourism"
+      ],
+      "difficulty": "detective",
+      "mechanic": "multiple-choice",
+      "regionTags": [
+        "Mendoza",
+        "Mendoza"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "🍇 Harvest crown + fountain plaza",
+      "reviewStatus": "source-linked-needs-line-review"
     },
     {
       "caseId": "puente-inca",
@@ -117,8 +332,8 @@
         "options": [
           "Puente del Inca",
           "Plaza Independencia",
-          "Uco Valley",
-          "General San Martin Park"
+          "Valle de Uco",
+          "General San Martín Park"
         ],
         "correctIndex": 0,
         "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"cutout-arch mx-auto\"></div>\n            <p class=\"mt-3 text-xs font-black uppercase text-amber-900\">Golden bridge / Andes route</p>\n          </div>\n        "
@@ -128,10 +343,155 @@
         "hideout": "Puente del Inca",
         "disguise": "Geology assistant"
       },
-      "funFact": "Puente del Inca is known for its naturally formed mineral-colored bridge in the Andes."
+      "funFact": "Puente del Inca is known for its naturally formed mineral-colored bridge in the Andes.",
+      "learningObjective": "Identify a real Mendoza landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "mendoza_tourism"
+      ],
+      "difficulty": "detective",
+      "mechanic": "multiple-choice",
+      "regionTags": [
+        "Mendoza",
+        "Mendoza"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Golden bridge / Andes route",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "uco-valley-irrigation",
+      "briefing": {
+        "headline": "VINEYARD WATER MAP STOLEN!",
+        "report": "An irrigation chart from a mountain vineyard vanished before harvest. Carmen followed a road south toward the Valle de Uco.",
+        "callingCard": "A grape leaf reads: \"Follow the snowmelt to the vines.\""
+      },
+      "clues": [
+        "A harvest note mentions Tunuyan and high-altitude vineyards.",
+        "The road receipt points south from Mendoza city.",
+        "Carmen bought work gloves labeled \"irrigation technician.\""
+      ],
+      "puzzle": {
+        "title": "Wine Region Inference",
+        "description": "Match the vineyard and snowmelt clues to the Mendoza region.",
+        "question": "Which hideout fits the route?",
+        "options": [
+          "Valle de Uco",
+          "Plaza Independencia",
+          "Cerro Otto",
+          "La Boca"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-mountain mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-purple-900\">Snowmelt / vineyard rows</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "Mendoza",
+        "hideout": "Valle de Uco",
+        "disguise": "Irrigation technician"
+      },
+      "funFact": "Mendoza wine regions use Andes snowmelt and irrigation canals to support vineyards in an otherwise dry climate.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the mendoza case pool.",
+      "sources": [
+        "mendoza_tourism"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "mendoza"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Match the vineyard and snowmelt clues to the Mendoza region.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "san-martin-park-gates",
+      "briefing": {
+        "headline": "BRONZE GATE CREST LIFTED!",
+        "report": "A decorative crest disappeared from a city park restoration crate. Carmen left footprints near a grand iron gate.",
+        "callingCard": "The card says: \"The general watches the park entrance.\""
+      },
+      "clues": [
+        "A city map highlights General San Martín Park.",
+        "A groundskeeper saw Carmen near ornamental entrance gates.",
+        "The costume invoice reads: \"Park gardener - green cap.\""
+      ],
+      "puzzle": {
+        "title": "City Park Deduction",
+        "description": "Use the city and park clues to choose Carmen hideout.",
+        "question": "Where should ACME search?",
+        "options": [
+          "General San Martín Park",
+          "Puente del Inca",
+          "Aconcagua base camp",
+          "Valle de Uco"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-gate mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-emerald-900\">Iron gates / city park</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "Mendoza",
+        "hideout": "General San Martín Park",
+        "disguise": "Park gardener"
+      },
+      "funFact": "General San Martín Park is a major public green space in Mendoza city.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the mendoza case pool.",
+      "sources": [
+        "mendoza_tourism"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "mendoza"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Use the city and park clues to choose Carmen hideout.",
+      "reviewStatus": "source-linked-needs-line-review"
     }
   ],
   "salta": [
+    {
+      "caseId": "classic-salta",
+      "briefing": {
+        "headline": "CLOUD TRAIN LOCOMOTIVE LOOTED!",
+        "report": "A scale gold model of the Tren a las Nubes locomotive was stolen from the Salta Cathedral museum. The thief was seen fleeing towards the railway station.",
+        "callingCard": "A boarding pass stub showing a flight from Buenos Aires and a train connection in Salta."
+      },
+      "clues": [
+        "A jumbled train schedule showing a final stop near the colourful hills of Quebrada de Humahuaca.",
+        "A witness statement: \"She boarded the train wearing a train conductor's uniform at 08:00.\"",
+        "A souvenir shop bag from the town of Humahuaca with a red hair thread."
+      ],
+      "puzzle": {
+        "title": "Timeline Reconstruction",
+        "description": "Reassemble the timeline logs to determine the final destination of the suspect.",
+        "question": "What is the correct chronological sequence and final destination?",
+        "options": [
+          "08:00 Depart Salta → 11:30 San Antonio de los Cobres → 14:00 La Polvorilla → 16:30 Quebrada de Humahuaca",
+          "08:00 Quebrada de Humahuaca → 11:30 La Polvorilla → 14:00 San Antonio → 16:30 Depart Salta",
+          "08:00 Depart Salta → 11:30 La Polvorilla → 14:00 Quebrada de Humahuaca → 16:30 San Antonio",
+          "08:00 San Antonio → 11:30 Depart Salta → 14:00 La Polvorilla → 16:30 Quebrada de Humahuaca"
+        ],
+        "correctIndex": 0
+      },
+      "warrantAnswers": {
+        "city": "Salta",
+        "hideout": "Quebrada de Humahuaca",
+        "disguise": "Train conductor"
+      },
+      "funFact": "The Tren a las Nubes reaches heights of 4,220 meters above sea level, making it one of the highest railways in the world.",
+      "learningObjective": "Identify a real Salta landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "salta_tourism"
+      ],
+      "difficulty": "detective",
+      "mechanic": "timeline-choice",
+      "regionTags": [
+        "Salta",
+        "Salta"
+      ],
+      "visualType": "built-in-visual",
+      "accessibilityDescription": "Visual evidence for Timeline Reconstruction in Salta.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
     {
       "caseId": "cafayate-guitar",
       "briefing": {
@@ -162,7 +522,20 @@
         "hideout": "Cafayate",
         "disguise": "Folk singer"
       },
-      "funFact": "Cafayate is known for dramatic valley landscapes and high-altitude wine production."
+      "funFact": "Cafayate is known for dramatic valley landscapes and high-altitude wine production.",
+      "learningObjective": "Identify a real Salta landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "salta_tourism"
+      ],
+      "difficulty": "detective",
+      "mechanic": "pattern-choice",
+      "regionTags": [
+        "Salta",
+        "Salta"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "🎸 Red valley / folk song / wine town",
+      "reviewStatus": "source-linked-needs-line-review"
     },
     {
       "caseId": "cabildo-archive",
@@ -181,7 +554,7 @@
         "description": "Match the arcade and city-center clues to the Salta location.",
         "question": "Which hideout should ACME search?",
         "options": [
-          "Cabildo Historico",
+          "Cabildo Histórico",
           "Quebrada de Humahuaca",
           "Train to the Clouds",
           "Cerro San Bernardo cable car"
@@ -191,13 +564,159 @@
       },
       "warrantAnswers": {
         "city": "Salta",
-        "hideout": "Cabildo Historico",
+        "hideout": "Cabildo Histórico",
         "disguise": "Archivist"
       },
-      "funFact": "Salta preserves notable colonial architecture around its central square."
+      "funFact": "Salta preserves notable colonial architecture around its central square.",
+      "learningObjective": "Identify a real Salta landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "salta_tourism"
+      ],
+      "difficulty": "detective",
+      "mechanic": "multiple-choice",
+      "regionTags": [
+        "Salta",
+        "Salta"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "🏛️ Arcades facing the main square",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "cerro-san-bernardo",
+      "briefing": {
+        "headline": "CABLE CAR TOKEN TAKEN!",
+        "report": "A commemorative cable-car token vanished from a hilltop viewpoint. Carmen was seen rising above Salta city toward Cerro San Bernardo.",
+        "callingCard": "A red ticket says: \"Climb without walking.\""
+      },
+      "clues": [
+        "A cable-car stub points to Cerro San Bernardo.",
+        "A witness saw Carmen looking down over the city grid.",
+        "The disguise note reads: \"Viewpoint photographer.\""
+      ],
+      "puzzle": {
+        "title": "Viewpoint Route",
+        "description": "Match the cable-car clues to the correct Salta hideout.",
+        "question": "Which location is Carmen using?",
+        "options": [
+          "Cerro San Bernardo",
+          "Cafayate",
+          "Cabildo Histórico",
+          "La Polvorilla Viaduct"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-mountain mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-red-900\">Cable route / city overlook</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "Salta",
+        "hideout": "Cerro San Bernardo",
+        "disguise": "Viewpoint photographer"
+      },
+      "funFact": "Cerro San Bernardo is a well-known viewpoint above Salta city.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the salta case pool.",
+      "sources": [
+        "salta_tourism"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "salta"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Match the cable-car clues to the correct Salta hideout.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "salinas-compass",
+      "briefing": {
+        "headline": "SALT FLAT COMPASS STOLEN!",
+        "report": "A field compass vanished from a desert expedition kit. Carmen left white powder on a route note toward high Andean salt flats.",
+        "callingCard": "The note says: \"Where the ground looks like sky, bearings disappear.\""
+      },
+      "clues": [
+        "The route climbs from Salta toward high Andean landscapes.",
+        "The evidence bag contains salt crystals, not sand.",
+        "The disguise tag reads: \"Expedition driver.\""
+      ],
+      "puzzle": {
+        "title": "Landscape Deduction",
+        "description": "Use the terrain clues to identify the regional hideout.",
+        "question": "Which hideout fits the clues?",
+        "options": [
+          "Salinas Grandes",
+          "Cerro San Bernardo",
+          "Salta Cathedral",
+          "Cafayate plaza"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-compass mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-slate-900\">White flats / high road</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "Salta",
+        "hideout": "Salinas Grandes",
+        "disguise": "Expedition driver"
+      },
+      "funFact": "The high Andean northwest includes striking salt-flat landscapes that are commonly visited from Salta and Jujuy routes.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the salta case pool.",
+      "sources": [
+        "salta_tourism"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "salta"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Use the terrain clues to identify the regional hideout.",
+      "reviewStatus": "source-linked-needs-line-review"
     }
   ],
   "cordoba": [
+    {
+      "caseId": "classic-cordoba",
+      "briefing": {
+        "headline": "JESUIT TREASURE STOLEN!",
+        "report": "An ancient 17th-century telescope was stolen from the National University of Córdoba. The thief left a series of logic riddles on a study desk.",
+        "callingCard": "A library card for the National University of Córdoba under an alias."
+      },
+      "clues": [
+        "A logic statement: \"The thief wearing glasses was NOT in the Jesuit Quarter.\"",
+        "A coffee shop receipt from the trendy Nueva Córdoba student district.",
+        "A notebook scribble: \"Blend in as a university student.\""
+      ],
+      "puzzle": {
+        "title": "Logic Elimination Grid",
+        "description": "Solve the detective logic grid. Match the suspect location and disguise using the notebook clues.",
+        "question": "Which combination matches the suspect's profile in Córdoba?",
+        "options": [
+          "Location: Jesuit Quarter | Disguise: Professor",
+          "Location: Nueva Córdoba | Disguise: University student",
+          "Location: Villa Belgrano | Disguise: Tourist",
+          "Location: Alta Córdoba | Disguise: Musician"
+        ],
+        "correctIndex": 1
+      },
+      "warrantAnswers": {
+        "city": "Córdoba",
+        "hideout": "Nueva Córdoba",
+        "disguise": "University student"
+      },
+      "funFact": "The National University of Córdoba, founded in 1613, is the third-oldest in the Americas.",
+      "learningObjective": "Identify a real Córdoba landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "cordoba_tourism",
+        "unesco_cordoba_jesuit"
+      ],
+      "difficulty": "detective",
+      "mechanic": "logic-choice",
+      "regionTags": [
+        "Córdoba",
+        "Córdoba"
+      ],
+      "visualType": "built-in-visual",
+      "accessibilityDescription": "Visual evidence for Logic Elimination Grid in Córdoba.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
     {
       "caseId": "jesuit-block",
       "briefing": {
@@ -228,7 +747,21 @@
         "hideout": "Jesuit Block",
         "disguise": "Professor"
       },
-      "funFact": "Córdoba has one of the oldest university traditions in the Americas."
+      "funFact": "Córdoba has one of the oldest university traditions in the Americas.",
+      "learningObjective": "Identify a real Córdoba landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "cordoba_tourism",
+        "unesco_cordoba_jesuit"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "Córdoba",
+        "Córdoba"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "📚 Old classrooms / city center",
+      "reviewStatus": "source-linked-needs-line-review"
     },
     {
       "caseId": "sierras-observatory",
@@ -250,7 +783,7 @@
           "Sierras observatory overlook",
           "Nueva Córdoba bookstore",
           "Jesuit Block courtyard",
-          "Cordoba bus terminal"
+          "Córdoba bus terminal"
         ],
         "correctIndex": 0,
         "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">✦</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-slate-900\">Star chart / mountain road</p>\n          </div>\n        "
@@ -260,10 +793,159 @@
         "hideout": "Sierras observatory overlook",
         "disguise": "Night guide"
       },
-      "funFact": "The Sierras de Córdoba are a defining landscape around the province."
+      "funFact": "The Sierras de Córdoba are a defining landscape around the province.",
+      "learningObjective": "Identify a real Córdoba landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "cordoba_tourism",
+        "unesco_cordoba_jesuit"
+      ],
+      "difficulty": "detective",
+      "mechanic": "multiple-choice",
+      "regionTags": [
+        "Córdoba",
+        "Córdoba"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "✦ Star chart / mountain road",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "alta-gracia-estancia",
+      "briefing": {
+        "headline": "ESTANCIA BELL VANISHES!",
+        "report": "A small mission bell disappeared from a heritage route display. Carmen left a road map toward Alta Gracia.",
+        "callingCard": "A stamped card reads: \"Follow the estancias beyond the city block.\""
+      },
+      "clues": [
+        "A UNESCO route note lists Jesuit estancias outside Córdoba city.",
+        "A ticket stub names Alta Gracia.",
+        "Carmen signed in as a heritage docent."
+      ],
+      "puzzle": {
+        "title": "UNESCO Route Link",
+        "description": "Connect the Jesuit heritage clues to the correct Córdoba hideout.",
+        "question": "Where is the missing bell?",
+        "options": [
+          "Alta Gracia Estancia",
+          "Nueva Córdoba",
+          "Cerro San Bernardo",
+          "Recoleta Cemetery"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-arch mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-slate-900\">Estancia route / mission bell</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "Córdoba",
+        "hideout": "Alta Gracia Estancia",
+        "disguise": "Heritage docent"
+      },
+      "funFact": "The Jesuit Block and Estancias of Córdoba are recognized by UNESCO for their historical and architectural significance.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the cordoba case pool.",
+      "sources": [
+        "cordoba_tourism",
+        "unesco_cordoba_jesuit"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "cordoba"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Connect the Jesuit heritage clues to the correct Córdoba hideout.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "buen-pastor-mural",
+      "briefing": {
+        "headline": "MURAL SKETCH DISAPPEARS!",
+        "report": "A public-art sketch vanished from a cultural center near Nueva Córdoba. Carmen left paint flecks and a student bus card.",
+        "callingCard": "The red card says: \"Old walls, new crowds.\""
+      },
+      "clues": [
+        "A bus card shows stops near Nueva Córdoba.",
+        "A witness saw Carmen carrying a rolled mural sketch near a cultural center.",
+        "The disguise receipt reads: \"Art student smock.\""
+      ],
+      "puzzle": {
+        "title": "Urban Culture Match",
+        "description": "Use the student district and cultural-center clues to find Carmen.",
+        "question": "Which hideout fits?",
+        "options": [
+          "Paseo del Buen Pastor",
+          "Alta Gracia Estancia",
+          "Aconcagua base camp",
+          "Caminito"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-ticket mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-red-800\">Student district / cultural center</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "Córdoba",
+        "hideout": "Paseo del Buen Pastor",
+        "disguise": "Art student"
+      },
+      "funFact": "Nueva Córdoba is associated with student life and cultural activity near the city center.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the cordoba case pool.",
+      "sources": [
+        "cordoba_tourism",
+        "unesco_cordoba_jesuit"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "cordoba"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Use the student district and cultural-center clues to find Carmen.",
+      "reviewStatus": "source-linked-needs-line-review"
     }
   ],
   "iguazu": [
+    {
+      "caseId": "classic-iguazu",
+      "briefing": {
+        "headline": "GUARANÍ CROWN JEWEL HEIST!",
+        "report": "A sacred Guaraní golden jaguar pendant was stolen from the Misiones Rainforest Museum near Iguazú Falls. The thief escaped on a speed boat.",
+        "callingCard": "A park ranger map with waypoint distances marked: 1km, 1km, 2km, 3km, 5km..."
+      },
+      "clues": [
+        "A trail guide mentioning: \"Follow the Fibonacci progression of waypoints to the final viewpoint.\"",
+        "A park ranger badge dropped on the catwalk leading to the Devil's Throat.",
+        "A witness quote: \"She was heading to Garganta del Diablo (Devil's Throat) next.\""
+      ],
+      "puzzle": {
+        "title": "Fibonacci Waypoint Sequence",
+        "description": "Analyze the trail map waypoint sequence: 1, 1, 2, 3, 5, ... Predict the next waypoint distance and identify the final waterfall hideout.",
+        "question": "What is the next distance and final destination in the sequence?",
+        "options": [
+          "7km — San Martín Falls",
+          "8km — Garganta del Diablo (Devil's Throat)",
+          "10km — Bosetti Falls",
+          "13km — Brazil Border"
+        ],
+        "correctIndex": 1
+      },
+      "warrantAnswers": {
+        "city": "Puerto Iguazú",
+        "hideout": "Garganta del Diablo",
+        "disguise": "Park ranger"
+      },
+      "funFact": "Iguazú Falls consists of 275 individual waterfalls spread across nearly 3 kilometers of the Iguazú River.",
+      "learningObjective": "Identify a real Puerto Iguazú landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "unesco_iguazu",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "pattern-choice",
+      "regionTags": [
+        "Misiones",
+        "Puerto Iguazú"
+      ],
+      "visualType": "built-in-visual",
+      "accessibilityDescription": "Visual evidence for Fibonacci Waypoint Sequence in Puerto Iguazú.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
     {
       "caseId": "lower-circuit",
       "briefing": {
@@ -294,7 +976,21 @@
         "hideout": "Lower Circuit",
         "disguise": "Biologist"
       },
-      "funFact": "Iguazú National Park has multiple walkways that reveal the falls from different levels."
+      "funFact": "Iguazú National Park has multiple walkways that reveal the falls from different levels.",
+      "learningObjective": "Identify a real Puerto Iguazú landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "unesco_iguazu",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "multiple-choice",
+      "regionTags": [
+        "Misiones",
+        "Puerto Iguazú"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "🌿 Below the mist / ranger trail",
+      "reviewStatus": "source-linked-needs-line-review"
     },
     {
       "caseId": "three-frontiers",
@@ -326,10 +1022,159 @@
         "hideout": "Triple Frontier viewpoint",
         "disguise": "Geography teacher"
       },
-      "funFact": "Puerto Iguazú sits near the border area shared by Argentina, Brazil, and Paraguay."
+      "funFact": "Puerto Iguazú sits near the border area shared by Argentina, Brazil, and Paraguay.",
+      "learningObjective": "Identify a real Puerto Iguazú landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "unesco_iguazu",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "Misiones",
+        "Puerto Iguazú"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "△ Three borders / river meeting",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "triple-frontier-marker",
+      "briefing": {
+        "headline": "BORDER MARKER MEDALLION GONE!",
+        "report": "A medallion from a river viewpoint display disappeared. Carmen left three colored ribbons pointing to Argentina, Brazil, and Paraguay.",
+        "callingCard": "A card says: \"Three borders, one red trail.\""
+      },
+      "clues": [
+        "A tourist map marks the Triple Frontier viewpoint.",
+        "The clue mentions the Iguazu and Parana river area.",
+        "Carmen wore a river-cruise guide badge."
+      ],
+      "puzzle": {
+        "title": "Border Geography Match",
+        "description": "Use the border and river clues to identify the hideout.",
+        "question": "Where did Carmen go?",
+        "options": [
+          "Triple Frontier viewpoint",
+          "Garganta del Diablo",
+          "San Martín Falls",
+          "Cerro Otto"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-compass mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-teal-900\">Three borders / river point</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "Puerto Iguazú",
+        "hideout": "Triple Frontier viewpoint",
+        "disguise": "River guide"
+      },
+      "funFact": "Puerto Iguazu is near the meeting area of Argentina, Brazil, and Paraguay.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the iguazu case pool.",
+      "sources": [
+        "unesco_iguazu",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "iguazu"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Use the border and river clues to identify the hideout.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "jungle-train-pass",
+      "briefing": {
+        "headline": "RAINFOREST TRAIN PASS STOLEN!",
+        "report": "A special-access train pass vanished inside the national park. Carmen left muddy boot prints near a forest platform.",
+        "callingCard": "The note reads: \"Ride through the green before the roar.\""
+      },
+      "clues": [
+        "A platform note mentions the ecological train inside Iguazu National Park.",
+        "The sound log records waterfalls growing louder after the stop.",
+        "The disguise tag reads: \"Park interpreter.\""
+      ],
+      "puzzle": {
+        "title": "Park Transport Deduction",
+        "description": "Match the rainforest travel clues to Carmen hideout.",
+        "question": "Which hideout is correct?",
+        "options": [
+          "Rainforest train platform",
+          "Triple Frontier viewpoint",
+          "Buenos Aires subway",
+          "Bariloche cable car"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-train mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-emerald-900\">Forest platform / waterfall roar</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "Puerto Iguazú",
+        "hideout": "Rainforest train platform",
+        "disguise": "Park interpreter"
+      },
+      "funFact": "Iguazu National Park protects subtropical forest around one of the world's great waterfall systems.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the iguazu case pool.",
+      "sources": [
+        "unesco_iguazu",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "iguazu"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Match the rainforest travel clues to Carmen hideout.",
+      "reviewStatus": "source-linked-needs-line-review"
     }
   ],
   "bariloche": [
+    {
+      "caseId": "classic-bariloche",
+      "briefing": {
+        "headline": "CHOCOLATE SCULPTURE SWIPED!",
+        "report": "A famous 50kg chocolate sculpture of Mount Fitz Roy was stolen from a chocolate shop on Mitre Street. The thief escaped into the Nahuel Huapi forest.",
+        "callingCard": "A ski pass for Cerro Otto with the signature \"Carmen\"."
+      },
+      "clues": [
+        "A torn polaroid photo showing a cable car going up to a revolving cafeteria on Cerro Otto.",
+        "A ski instructor's whistle with the initials 'C.S.'",
+        "A receipt for chocolate-covered raspberries from Rapa Nui on Mitre Street."
+      ],
+      "puzzle": {
+        "title": "Visual Clue Identification",
+        "description": "Examine the torn polaroid photo showing a cable car and a revolving summit building. Identify the alpine hideout.",
+        "question": "Which landmark is pictured in the visual evidence?",
+        "options": [
+          "Cerro Otto Viewpoint",
+          "Cerro Catedral Ski Center",
+          "Colonia Suiza Crafts Market",
+          "Nahuel Huapi Lake House"
+        ],
+        "correctIndex": 0
+      },
+      "warrantAnswers": {
+        "city": "San Carlos de Bariloche",
+        "hideout": "Cerro Otto",
+        "disguise": "Ski instructor"
+      },
+      "funFact": "Bariloche was founded by German and Swiss immigrants, and its architecture reflects that alpine heritage.",
+      "learningObjective": "Identify a real San Carlos de Bariloche landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "bariloche_tourism",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "visual-choice",
+      "regionTags": [
+        "Río Negro",
+        "San Carlos de Bariloche"
+      ],
+      "visualType": "built-in-visual",
+      "accessibilityDescription": "Visual evidence for Visual Clue Identification in San Carlos de Bariloche.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
     {
       "caseId": "nahuel-huapi",
       "briefing": {
@@ -360,7 +1205,21 @@
         "hideout": "Nahuel Huapi dock",
         "disguise": "Boat captain"
       },
-      "funFact": "Nahuel Huapi Lake is central to Bariloche scenery and tourism."
+      "funFact": "Nahuel Huapi Lake is central to Bariloche scenery and tourism.",
+      "learningObjective": "Identify a real San Carlos de Bariloche landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "bariloche_tourism",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "pattern-choice",
+      "regionTags": [
+        "Río Negro",
+        "San Carlos de Bariloche"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "⛵ Lake chart / chocolate wrapper",
+      "reviewStatus": "source-linked-needs-line-review"
     },
     {
       "caseId": "civic-center",
@@ -392,10 +1251,159 @@
         "hideout": "Civic Center",
         "disguise": "Municipal guide"
       },
-      "funFact": "Bariloche civic architecture is known for its alpine-inspired stone and timber character."
+      "funFact": "Bariloche civic architecture is known for its alpine-inspired stone and timber character.",
+      "learningObjective": "Identify a real San Carlos de Bariloche landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "bariloche_tourism",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "multiple-choice",
+      "regionTags": [
+        "Río Negro",
+        "San Carlos de Bariloche"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "■ Stone square / timber lines",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "civic-center-clock",
+      "briefing": {
+        "headline": "CLOCKTOWER BLUEPRINTS TAKEN!",
+        "report": "Blueprints from a stone civic building vanished near Bariloche city center. Carmen left a chocolate wrapper on the plaza steps.",
+        "callingCard": "A red card says: \"Meet when the alpine clock strikes noon.\""
+      },
+      "clues": [
+        "A plaza sketch shows stone-and-wood civic buildings.",
+        "A witness saw Carmen at the Civic Center clocktower.",
+        "The disguise receipt reads: \"Municipal clerk.\""
+      ],
+      "puzzle": {
+        "title": "Civic Landmark Match",
+        "description": "Use the plaza and clocktower clues to identify the hideout.",
+        "question": "Where is Carmen hiding?",
+        "options": [
+          "Civic Center",
+          "Cerro Otto",
+          "Colonia Suiza",
+          "Nahuel Huapi dock"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-monument mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-slate-900\">Clocktower / plaza steps</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "San Carlos de Bariloche",
+        "hideout": "Civic Center",
+        "disguise": "Municipal clerk"
+      },
+      "funFact": "Bariloche Civic Center is a recognizable stone-and-wood landmark in the city center.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the bariloche case pool.",
+      "sources": [
+        "bariloche_tourism",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "bariloche"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Use the plaza and clocktower clues to identify the hideout.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "nahuel-huapi-dock",
+      "briefing": {
+        "headline": "LAKE CHART SNATCHED!",
+        "report": "A navigation chart disappeared from a boat office. Carmen fled toward a dock on Nahuel Huapi Lake.",
+        "callingCard": "The card says: \"Blue water, dark forest, red coat.\""
+      },
+      "clues": [
+        "A boat ticket names Nahuel Huapi Lake.",
+        "The route note mentions forested shores and cold blue water.",
+        "Carmen wore a boat-captain cap."
+      ],
+      "puzzle": {
+        "title": "Lake Route Deduction",
+        "description": "Match the lake and boat clues to Carmen hideout.",
+        "question": "Which location fits?",
+        "options": [
+          "Nahuel Huapi dock",
+          "Cerro Otto",
+          "Civic Center",
+          "Recoleta Cemetery"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-water mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-blue-900\">Boat ticket / glacial lake</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "San Carlos de Bariloche",
+        "hideout": "Nahuel Huapi dock",
+        "disguise": "Boat captain"
+      },
+      "funFact": "Nahuel Huapi Lake is central to Bariloche scenery and national-park tourism.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the bariloche case pool.",
+      "sources": [
+        "bariloche_tourism",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "bariloche"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Match the lake and boat clues to Carmen hideout.",
+      "reviewStatus": "source-linked-needs-line-review"
     }
   ],
   "ushuaia": [
+    {
+      "caseId": "classic-ushuaia",
+      "briefing": {
+        "headline": "HISTORIC LIGHTHOUSE DIAL STOLEN!",
+        "report": "The original brass lens rotation gear from the Les Eclaireurs Lighthouse was stolen in the dead of night. The thief escaped by sailboat into the Beagle Channel.",
+        "callingCard": "A maritime map grid with compass commands: 'Start at Port. Go East 4, South 2.'"
+      },
+      "clues": [
+        "A lighthouse keeper's log noting: \"A suspicious woman was asking for the key to the main beacon.\"",
+        "A navigation route map showing a destination at the Les Eclaireurs Lighthouse in the Beagle Channel.",
+        "A penguin colony report mentioning a woman in a red coat boarding a boat near the islands."
+      ],
+      "puzzle": {
+        "title": "Compass Navigation Grid",
+        "description": "Start at Port (Row 1, Col 1). Follow the directions: Go East 4 grid spaces, then South 2 grid spaces. What is your final destination?",
+        "question": "Which landmark coordinate is the final destination?",
+        "options": [
+          "Row 1, Col 5 — Martial Glacier",
+          "Row 3, Col 5 — Les Eclaireurs Lighthouse",
+          "Row 3, Col 1 — Port",
+          "Row 5, Col 2 — Penguin Colony"
+        ],
+        "correctIndex": 1
+      },
+      "warrantAnswers": {
+        "city": "Ushuaia",
+        "hideout": "Les Eclaireurs Lighthouse",
+        "disguise": "Lighthouse keeper"
+      },
+      "funFact": "Ushuaia is the only city in the world that lies below the 54th parallel south, earning its \"End of the World\" nickname.",
+      "learningObjective": "Identify a real Ushuaia landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "ushuaia_tourism",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "navigation-choice",
+      "regionTags": [
+        "Tierra del Fuego",
+        "Ushuaia"
+      ],
+      "visualType": "built-in-visual",
+      "accessibilityDescription": "Visual evidence for Compass Navigation Grid in Ushuaia.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
     {
       "caseId": "beagle-channel",
       "briefing": {
@@ -416,7 +1424,7 @@
           "Beagle Channel harbor",
           "Martial Glacier trailhead",
           "Cerro Otto",
-          "Cabildo Historico"
+          "Cabildo Histórico"
         ],
         "correctIndex": 0,
         "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">⚓</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-blue-900\">Ship log / harbor cleat</p>\n          </div>\n        "
@@ -426,7 +1434,21 @@
         "hideout": "Beagle Channel harbor",
         "disguise": "Sailor"
       },
-      "funFact": "The Beagle Channel is one of Ushuaia most recognizable maritime settings."
+      "funFact": "The Beagle Channel is one of Ushuaia most recognizable maritime settings.",
+      "learningObjective": "Identify a real Ushuaia landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "ushuaia_tourism",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "multiple-choice",
+      "regionTags": [
+        "Tierra del Fuego",
+        "Ushuaia"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "⚓ Ship log / harbor cleat",
+      "reviewStatus": "source-linked-needs-line-review"
     },
     {
       "caseId": "end-world-post",
@@ -458,10 +1480,159 @@
         "hideout": "End of the World post office",
         "disguise": "Postal clerk"
       },
-      "funFact": "Ushuaia is strongly associated with the phrase Fin del Mundo, or End of the World."
+      "funFact": "Ushuaia is strongly associated with the phrase Fin del Mundo, or End of the World.",
+      "learningObjective": "Identify a real Ushuaia landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "ushuaia_tourism",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "multiple-choice",
+      "regionTags": [
+        "Tierra del Fuego",
+        "Ushuaia"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "✉ Fin del Mundo",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "end-of-world-train",
+      "briefing": {
+        "headline": "RAIL SPIKE RELIC STOLEN!",
+        "report": "A railway relic vanished from a southern heritage display. Carmen left a ticket marked End of the World Train.",
+        "callingCard": "The card reads: \"Follow the last rails south.\""
+      },
+      "clues": [
+        "A heritage ticket points to the End of the World Train.",
+        "A forest route note mentions Tierra del Fuego landscapes.",
+        "The disguise note reads: \"Rail guide.\""
+      ],
+      "puzzle": {
+        "title": "Southern Rail Clue",
+        "description": "Use the railway and landscape clues to identify the hideout.",
+        "question": "Where did Carmen go?",
+        "options": [
+          "End of the World Train",
+          "Les Eclaireurs Lighthouse",
+          "Martial Glacier",
+          "Civic Center"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-train mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-red-900\">Last rails / southern forest</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "Ushuaia",
+        "hideout": "End of the World Train",
+        "disguise": "Rail guide"
+      },
+      "funFact": "Ushuaia is strongly associated with the End of the World identity and Tierra del Fuego landscapes.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the ushuaia case pool.",
+      "sources": [
+        "ushuaia_tourism",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "ushuaia"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Use the railway and landscape clues to identify the hideout.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "martial-glacier-cache",
+      "briefing": {
+        "headline": "ICE AXE HANDLE MISSING!",
+        "report": "A historic mountaineering handle disappeared from a local display. Carmen left crampon marks pointing toward Martial Glacier.",
+        "callingCard": "A blue card says: \"Climb above the harbor and look back.\""
+      },
+      "clues": [
+        "A trail note names Martial Glacier.",
+        "A witness saw Carmen above the city with a view toward the Beagle Channel.",
+        "The disguise tag reads: \"Mountain guide.\""
+      ],
+      "puzzle": {
+        "title": "Glacier Overlook Match",
+        "description": "Match the mountain and harbor-view clues to the hideout.",
+        "question": "Which hideout matches?",
+        "options": [
+          "Martial Glacier",
+          "Les Eclaireurs Lighthouse",
+          "End of the World Train",
+          "Garganta del Diablo"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-glacier mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-blue-900\">Crampon marks / harbor view</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "Ushuaia",
+        "hideout": "Martial Glacier",
+        "disguise": "Mountain guide"
+      },
+      "funFact": "Martial Glacier sits above Ushuaia and is associated with mountain views over the city and Beagle Channel.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the ushuaia case pool.",
+      "sources": [
+        "ushuaia_tourism",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "ushuaia"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Match the mountain and harbor-view clues to the hideout.",
+      "reviewStatus": "source-linked-needs-line-review"
     }
   ],
   "el-calafate": [
+    {
+      "caseId": "classic-el-calafate",
+      "briefing": {
+        "headline": "GLACIER ICE CORE PILFERED!",
+        "report": "A scientific ice core sample representing 10,000 years of climate history was stolen from the Glaciarium Museum. The thief left a final note taunting the police.",
+        "callingCard": "A letter: \"You've chased me far, detective. But my final hideout is locked behind the symbols of my journey.\""
+      },
+      "clues": [
+        "A tour guide pamphlet: \"Walk the Perito Moreno Glacier catwalks.\"",
+        "A glacier trekking harness with red stitching.",
+        "A final note mentioning: \"Where the ice collapses, the journey ends.\""
+      ],
+      "puzzle": {
+        "title": "Final Token Deduction",
+        "description": "Examine the symbols on your collected clue tokens. Identify the 3 locations that contain the Sun, the Ice, and the Wind symbols to locate Carmen's final glacier hideout.",
+        "question": "Which combination of clue tokens contains the Sun, Wind, and Ice symbols?",
+        "options": [
+          "Mendoza (Sun) + Bariloche (Wind) + El Calafate (Ice)",
+          "Buenos Aires (Tango) + Iguazú (Water) + Ushuaia (Light)",
+          "Salta (Cloud) + Córdoba (Book) + Ushuaia (Light)",
+          "Buenos Aires (Tango) + Mendoza (Sun) + Salta (Cloud)"
+        ],
+        "correctIndex": 0
+      },
+      "warrantAnswers": {
+        "city": "El Calafate",
+        "hideout": "Perito Moreno Glacier",
+        "disguise": "Tour guide"
+      },
+      "funFact": "The Perito Moreno Glacier is 30km long and 70m tall, and periodically dams the lake before spectacularly collapsing.",
+      "learningObjective": "Identify a real El Calafate landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "unesco_los_glaciares",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "Santa Cruz",
+        "El Calafate"
+      ],
+      "visualType": "built-in-visual",
+      "accessibilityDescription": "Visual evidence for Final Token Deduction in El Calafate.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
     {
       "caseId": "glaciarium",
       "briefing": {
@@ -492,7 +1663,21 @@
         "hideout": "Glaciarium Museum",
         "disguise": "Museum educator"
       },
-      "funFact": "El Calafate is a gateway for visitors learning about and visiting Patagonian glaciers."
+      "funFact": "El Calafate is a gateway for visitors learning about and visiting Patagonian glaciers.",
+      "learningObjective": "Identify a real El Calafate landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "unesco_los_glaciares",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "multiple-choice",
+      "regionTags": [
+        "Santa Cruz",
+        "El Calafate"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "❄ Science exhibit / frost envelope",
+      "reviewStatus": "source-linked-needs-line-review"
     },
     {
       "caseId": "lago-argentino",
@@ -524,7 +1709,111 @@
         "hideout": "Lago Argentino boat dock",
         "disguise": "Deckhand"
       },
-      "funFact": "Lago Argentino is the large lake associated with glacier routes near El Calafate."
+      "funFact": "Lago Argentino is the large lake associated with glacier routes near El Calafate.",
+      "learningObjective": "Identify a real El Calafate landmark or regional feature from connected cultural and geographic clues.",
+      "sources": [
+        "unesco_los_glaciares",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "multiple-choice",
+      "regionTags": [
+        "Santa Cruz",
+        "El Calafate"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "▰ Lake route / floating ice",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "lago-argentino-ferry",
+      "briefing": {
+        "headline": "LAKE SOUNDING LOG TAKEN!",
+        "report": "A boat log from Lago Argentino vanished before a glacier excursion. Carmen left a blue ticket stub near the pier.",
+        "callingCard": "The card says: \"Follow the largest blue mirror to the ice.\""
+      },
+      "clues": [
+        "A ferry ticket names Lago Argentino.",
+        "A guide mentioned glacier-fed water and floating ice.",
+        "The disguise receipt reads: \"Boat naturalist.\""
+      ],
+      "puzzle": {
+        "title": "Lake And Glacier Link",
+        "description": "Use the lake and glacier clues to identify Carmen hideout.",
+        "question": "Where is Carmen headed?",
+        "options": [
+          "Lago Argentino pier",
+          "Perito Moreno Glacier",
+          "Glaciarium",
+          "Cerro San Bernardo"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-water mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-blue-900\">Blue lake / glacier boats</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "El Calafate",
+        "hideout": "Lago Argentino pier",
+        "disguise": "Boat naturalist"
+      },
+      "funFact": "El Calafate is a gateway for visits to Lago Argentino and the glaciers of Los Glaciares National Park.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the el calafate case pool.",
+      "sources": [
+        "unesco_los_glaciares",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "el-calafate"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Use the lake and glacier clues to identify Carmen hideout.",
+      "reviewStatus": "source-linked-needs-line-review"
+    },
+    {
+      "caseId": "glaciarium-lab",
+      "briefing": {
+        "headline": "CLIMATE CORE LABEL STOLEN!",
+        "report": "A museum label for an ice-core exhibit disappeared. Carmen left a chilled glove at the Glaciarium exit.",
+        "callingCard": "A frosted card says: \"The past is frozen in layers.\""
+      },
+      "clues": [
+        "A museum wristband is stamped Glaciarium.",
+        "The stolen label explains glacier layers and climate history.",
+        "Carmen disguised herself as a science educator."
+      ],
+      "puzzle": {
+        "title": "Science Exhibit Deduction",
+        "description": "Use the museum and ice-core clues to identify the hideout.",
+        "question": "Which hideout fits?",
+        "options": [
+          "Glaciarium",
+          "Perito Moreno Glacier",
+          "Lago Argentino pier",
+          "Civic Center"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-glacier mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-blue-900\">Ice layers / science exhibit</p></div>"
+      },
+      "warrantAnswers": {
+        "city": "El Calafate",
+        "hideout": "Glaciarium",
+        "disguise": "Science educator"
+      },
+      "funFact": "Glacier museums and park exhibits help visitors understand ice, climate, and Patagonian landscapes.",
+      "learningObjective": "Connect place-based clues to a real Argentina location in the el calafate case pool.",
+      "sources": [
+        "unesco_los_glaciares",
+        "national_parks_argentina"
+      ],
+      "difficulty": "detective",
+      "mechanic": "deduction-choice",
+      "regionTags": [
+        "el-calafate"
+      ],
+      "visualType": "inline-html-cutout",
+      "accessibilityDescription": "Use the museum and ice-core clues to identify the hideout.",
+      "reviewStatus": "source-linked-needs-line-review"
     }
   ]
 }

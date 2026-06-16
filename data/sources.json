@@ -1,0 +1,62 @@
+{
+  "buenos_aires_tourism": {
+    "title": "Buenos Aires City Tourism",
+    "publisher": "Government of the City of Buenos Aires",
+    "url": "https://turismo.buenosaires.gob.ar/",
+    "reviewed": false
+  },
+  "mendoza_tourism": {
+    "title": "Mendoza Tourism",
+    "publisher": "Government of Mendoza",
+    "url": "https://mendoza.tur.ar/",
+    "reviewed": false
+  },
+  "salta_tourism": {
+    "title": "Salta Tourism",
+    "publisher": "Government of Salta",
+    "url": "https://www.saltaturismo.gob.ar/",
+    "reviewed": false
+  },
+  "cordoba_tourism": {
+    "title": "Córdoba Tourism",
+    "publisher": "Government of Córdoba",
+    "url": "https://www.cordobaturismo.gov.ar/",
+    "reviewed": false
+  },
+  "unesco_cordoba_jesuit": {
+    "title": "Jesuit Block and Estancias of Córdoba",
+    "publisher": "UNESCO World Heritage Centre",
+    "url": "https://whc.unesco.org/en/list/995/",
+    "reviewed": true
+  },
+  "unesco_iguazu": {
+    "title": "Iguazu National Park",
+    "publisher": "UNESCO World Heritage Centre",
+    "url": "https://whc.unesco.org/en/list/303/",
+    "reviewed": true
+  },
+  "unesco_los_glaciares": {
+    "title": "Los Glaciares National Park",
+    "publisher": "UNESCO World Heritage Centre",
+    "url": "https://whc.unesco.org/en/list/145/",
+    "reviewed": true
+  },
+  "bariloche_tourism": {
+    "title": "Bariloche Tourism",
+    "publisher": "Municipality of San Carlos de Bariloche",
+    "url": "https://barilocheturismo.gob.ar/",
+    "reviewed": false
+  },
+  "ushuaia_tourism": {
+    "title": "Ushuaia Tourism",
+    "publisher": "Municipality of Ushuaia",
+    "url": "https://turismoushuaia.com/",
+    "reviewed": false
+  },
+  "national_parks_argentina": {
+    "title": "National Parks of Argentina",
+    "publisher": "Administracion de Parques Nacionales",
+    "url": "https://www.argentina.gob.ar/interior/ambiente/parquesnacionales",
+    "reviewed": false
+  }
+}

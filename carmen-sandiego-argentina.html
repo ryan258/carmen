@@ -24,9 +24,15 @@
     </div>
   </div>
   <!-- Settings Bar -->
-  <div class="flex items-center gap-4">
+  <div class="flex items-center gap-2 sm:gap-4">
     <button onclick="toggleAudio()" id="soundToggle" class="text-slate-400 hover:text-white transition-colors text-lg min-w-11 min-h-11 flex items-center justify-center rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" title="Toggle Sound" aria-label="Toggle sound">
       🔊
+    </button>
+    <button onclick="toggleReducedMotion()" id="motionToggle" class="text-slate-400 hover:text-white transition-colors text-xs font-bold min-w-11 min-h-11 flex items-center justify-center rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" title="Toggle reduced motion" aria-label="Toggle reduced motion">
+      MOT
+    </button>
+    <button onclick="toggleHighContrast()" id="contrastToggle" class="text-slate-400 hover:text-white transition-colors text-xs font-bold min-w-11 min-h-11 flex items-center justify-center rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" title="Toggle high contrast" aria-label="Toggle high contrast">
+      HC
     </button>
     <button onclick="showResetModal()" class="text-slate-400 hover:text-white transition-colors text-sm font-semibold border border-white/10 px-3 py-1 rounded bg-white/5" title="Restart Game">
       Restart Case
@@ -70,7 +76,13 @@
         <button id="resumeButton" onclick="resumeGame()" class="hidden w-full sm:w-auto px-8 py-4 glass text-white hover:bg-white/10 text-lg font-bold rounded-xl transition-all duration-300 transform active:scale-95 border border-white/20">
           💼 RESUME CURRENT CASE
         </button>
+        <button onclick="showRecordsModal()" class="w-full sm:w-auto px-8 py-4 glass text-white hover:bg-white/10 text-lg font-bold rounded-xl transition-all duration-300 transform active:scale-95 border border-white/20">
+          🏅 VIEW RECORDS
+        </button>
       </div>
+      <button id="clearBrokenSaveButton" onclick="clearBrokenSave()" class="hidden mt-4 text-sm font-bold text-amber-300 underline underline-offset-4">
+        Clear unreadable saved case
+      </button>
 
       <div class="mt-12 grid grid-cols-3 gap-4 border-t border-white/5 pt-8 max-w-lg mx-auto text-slate-500 text-xs tracking-wider uppercase font-semibold">
         <div>🗺️ Real Interactive Map</div>
@@ -152,6 +164,7 @@
         <div class="relative w-full aspect-[4/5] bg-slate-950/40 rounded-xl border border-white/5 overflow-hidden z-10">
           <div id="map" class="w-full h-full"></div>
         </div>
+        <p id="mapTextAlternative" class="sr-only" aria-live="polite">Map not initialized.</p>
       </div>
 
       <!-- Inventory Clue Tokens Card -->
@@ -321,15 +334,21 @@
                 </div>
               </div>
             </div>
+            <div id="hintPanel" class="hint-panel hidden text-xs leading-relaxed text-slate-800 p-3 mb-4" aria-live="polite"></div>
           </div>
 
           <div class="mt-4 flex justify-between items-center border-t border-slate-300 pt-4">
             <button onclick="switchTab('clues')" class="px-4 py-2 border border-slate-400 hover:border-slate-800 rounded font-semibold text-slate-700 hover:text-slate-900 transition-colors">
               ← Review Clues
             </button>
-            <button id="goToWarrantBtn" onclick="switchTab('warrant')" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center gap-2 opacity-50 cursor-not-allowed" disabled>
-              Issue Arrest Warrant ➔
-            </button>
+            <div class="flex flex-col sm:flex-row gap-2">
+              <button id="hintButton" onclick="requestHint()" class="px-4 py-3 border border-slate-500 hover:border-slate-900 text-slate-800 font-bold rounded-lg transition-colors">
+                Request Hint
+              </button>
+              <button id="goToWarrantBtn" onclick="switchTab('warrant')" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center gap-2 opacity-50 cursor-not-allowed" disabled>
+                Issue Arrest Warrant ➔
+              </button>
+            </div>
           </div>
         </div>
 
@@ -446,6 +465,22 @@
   </div>
 </div>
 
+<!-- Records Modal -->
+<div id="recordsModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+  <div class="glass max-w-lg w-full rounded-2xl p-6 border border-white/15 text-left fade-in-up">
+    <div class="flex justify-between items-start gap-4">
+      <div>
+        <h4 class="title-font text-xl font-bold">ACME Records</h4>
+        <p class="text-sm text-slate-400 mt-1">Best scores and case outcomes stored on this device.</p>
+      </div>
+      <button onclick="hideRecordsModal()" class="min-w-11 min-h-11 text-xl font-bold" aria-label="Close records">×</button>
+    </div>
+    <div id="recordsContent" class="mt-5 space-y-4 text-sm">
+      <!-- Injected dynamically -->
+    </div>
+  </div>
+</div>
+
 <!-- Footer -->
 <footer class="relative z-10 w-full text-center py-4 text-[10px] text-slate-500 tracking-wider uppercase border-t border-white/5 bg-slate-950/20 mt-8">
   Where in Argentina is Carmen Sandiego? © 2026. Map data © OpenStreetMap contributors, Tiles © CartoDB.
@@ -453,6 +488,7 @@
 
 <!-- Leaflet Map JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="./run-generator.js"></script>
 <script src="./game.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 // ============================================================
 // GAME DATA & LOCATIONS
 // ============================================================
-const LOCATIONS = [
+let LOCATIONS = [
   {
     id: 'buenos-aires',
     name: 'Buenos Aires',
@@ -292,6 +292,8 @@ const LOCATIONS = [
   }
 ];
 
+const FALLBACK_LOCATIONS = LOCATIONS;
+
 // Symbols assigned to locations for final puzzle
 const LOCATION_SYMBOLS = {
   'buenos-aires': { char: '💃', name: 'Tango' },
@@ -305,6 +307,25 @@ const LOCATION_SYMBOLS = {
 };
 
 let QUESTION_BANK = {};
+const SAVE_SCHEMA_VERSION = 2;
+const SAVE_KEY = 'carmen_save';
+const LAST_RUN_KEY = 'carmen_lastCaseVariantIds';
+const SETTINGS_KEY = 'carmen_settings';
+
+async function loadRegionData() {
+  try {
+    const response = await fetch('./data/argentina-regions.json', { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`Region data request failed: ${response.status}`);
+    }
+    const regionData = await response.json();
+    if (Array.isArray(regionData.locations) && regionData.locations.length > 0) {
+      LOCATIONS = regionData.locations;
+    }
+  } catch (error) {
+    console.warn('Region metadata unavailable; using built-in fallback locations.', error);
+  }
+}
 
 async function loadQuestionBank() {
   try {
@@ -315,6 +336,7 @@ async function loadQuestionBank() {
     QUESTION_BANK = await response.json();
   } catch (error) {
     QUESTION_BANK = {};
+    LOCATIONS = FALLBACK_LOCATIONS;
     console.warn('Question bank unavailable; using classic cases only.', error);
   }
 }
@@ -322,6 +344,7 @@ async function loadQuestionBank() {
 const SCORE_RULES = {
   puzzleByAttempt: [100, 75, 50],
   laterAttempt: 25,
+  hintPenalty: 15,
   warrant: 50,
   streakStep: 25,
   finalConfrontation: 200,
@@ -329,8 +352,9 @@ const SCORE_RULES = {
   perfectGame: 500
 };
 
-function getPuzzleScore(attemptsBeforeSolve) {
-  return SCORE_RULES.puzzleByAttempt[attemptsBeforeSolve] ?? SCORE_RULES.laterAttempt;
+function getPuzzleScore(attemptsBeforeSolve, hintsUsed = 0) {
+  const baseScore = SCORE_RULES.puzzleByAttempt[attemptsBeforeSolve] ?? SCORE_RULES.laterAttempt;
+  return Math.max(SCORE_RULES.laterAttempt, baseScore - (hintsUsed * SCORE_RULES.hintPenalty));
 }
 
 function getStreakBonus(streak) {
@@ -362,7 +386,7 @@ function getStartingLives(difficulty) {
 
 function createClassicCase(location) {
   return {
-    caseId: 'classic',
+    caseId: `classic-${location.id}`,
     briefing: location.briefing,
     clues: location.clues,
     puzzle: location.puzzle,
@@ -372,19 +396,48 @@ function createClassicCase(location) {
 }
 
 function getLocationCasePool(location) {
-  return [createClassicCase(location), ...(QUESTION_BANK[location.id] || [])];
+  const bankCases = Array.isArray(QUESTION_BANK[location.id]) ? QUESTION_BANK[location.id] : [];
+  if (bankCases.length > 0) return bankCases;
+  if (location.briefing && location.clues && location.puzzle && location.warrantAnswers) {
+    return [createClassicCase(location)];
+  }
+  return [];
 }
 
-function createRunCaseVariantIds() {
-  return LOCATIONS.map((location) => {
-    const pool = getLocationCasePool(location);
-    return pool[Math.floor(Math.random() * pool.length)].caseId;
-  });
+function createCaseSeed() {
+  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
+function createRunCaseVariantIds(seed = createCaseSeed()) {
+  return CarmenRunGenerator.createRunCaseVariantIds(LOCATIONS, getLocationCasePool, seed);
+}
+
+function readLastRunCaseVariantIds() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(LAST_RUN_KEY));
+    return Array.isArray(parsed) ? parsed : [];
+  } catch(e) {
+    return [];
+  }
+}
+
+function createDistinctRun() {
+  const lastRun = readLastRunCaseVariantIds();
+  let seed = createCaseSeed();
+  let caseVariantIds = createRunCaseVariantIds(seed);
+  
+  for (let attempt = 0; attempt < 5 && CarmenRunGenerator.arraysMatch(caseVariantIds, lastRun); attempt++) {
+    seed = createCaseSeed();
+    caseVariantIds = createRunCaseVariantIds(seed);
+  }
+  
+  return { seed, caseVariantIds };
 }
 
 function ensureRunCaseVariants() {
   if (!Array.isArray(state.caseVariantIds) || state.caseVariantIds.length !== LOCATIONS.length) {
-    state.caseVariantIds = createRunCaseVariantIds();
+    state.caseSeed = state.caseSeed || createCaseSeed();
+    state.caseVariantIds = createRunCaseVariantIds(state.caseSeed);
   }
 }
 
@@ -393,16 +446,8 @@ function getLocationCase(locationIndex) {
   const location = LOCATIONS[locationIndex];
   const pool = getLocationCasePool(location);
   const selectedCase = pool.find(item => item.caseId === state.caseVariantIds[locationIndex]) || pool[0];
-  
-  return {
-    ...location,
-    briefing: selectedCase.briefing,
-    clues: selectedCase.clues,
-    puzzle: selectedCase.puzzle,
-    warrantAnswers: selectedCase.warrantAnswers,
-    funFact: selectedCase.funFact,
-    caseId: selectedCase.caseId
-  };
+
+  return { ...location, ...selectedCase };
 }
 
 function getAllWarrantChoices(field) {
@@ -427,17 +472,22 @@ let state = {
   cluesFlipped: [false, false, false],
   puzzleSolved: false,
   puzzleAttempts: 0,
+  hintsUsedInRound: 0,
+  totalHintsUsed: 0,
   roundScore: createRoundScore(),
   warrantIssued: false,
   clueTokens: [],
   history: [],
+  caseSeed: '',
   caseVariantIds: [],
   activeTab: 'dossier',
   finalConfrontationRound: 1,
   activeFinalCorrectIndex: 0,
   isFinalConfrontation: false,
   settings: {
-    sound: true
+    sound: true,
+    reducedMotion: false,
+    highContrast: false
   }
 };
 
@@ -522,6 +572,7 @@ const sound = {
 // SYSTEM BOOT & MAIN NAV
 // ============================================================
 window.onload = async () => {
+  await loadRegionData();
   await loadQuestionBank();
   initBgParticles();
   loadSettings();
@@ -546,29 +597,53 @@ window.onload = async () => {
 };
 
 function checkResumeState() {
-  const save = localStorage.getItem('carmen_save');
-  if (save) {
+  const hasSave = localStorage.getItem(SAVE_KEY) !== null;
+  const validSave = getValidSave();
+  if (validSave) {
     document.getElementById('resumeButton').classList.remove('hidden');
   } else {
     document.getElementById('resumeButton').classList.add('hidden');
   }
+  const clearButton = document.getElementById('clearBrokenSaveButton');
+  if (clearButton) {
+    clearButton.classList.toggle('hidden', !hasSave || Boolean(validSave));
+  }
+}
+
+function clearBrokenSave() {
+  localStorage.removeItem(SAVE_KEY);
+  checkResumeState();
 }
 
 function loadSettings() {
-  const localSettings = localStorage.getItem('carmen_settings');
+  const localSettings = localStorage.getItem(SETTINGS_KEY);
   if (localSettings) {
     try {
       const parsed = JSON.parse(localSettings);
       state.settings.sound = parsed.sound !== undefined ? parsed.sound : true;
+      state.settings.reducedMotion = parsed.reducedMotion === true;
+      state.settings.highContrast = parsed.highContrast === true;
     } catch(e) {}
   }
+  applySettings();
+}
+
+function saveSettings() {
+  localStorage.setItem(SETTINGS_KEY, JSON.stringify(state.settings));
+}
+
+function applySettings() {
+  document.body.classList.toggle('reduced-motion', state.settings.reducedMotion);
+  document.body.classList.toggle('high-contrast', state.settings.highContrast);
   updateSoundIcon();
+  updateMotionIcon();
+  updateContrastIcon();
 }
 
 function toggleAudio() {
   state.settings.sound = !state.settings.sound;
-  localStorage.setItem('carmen_settings', JSON.stringify(state.settings));
-  updateSoundIcon();
+  saveSettings();
+  applySettings();
   sound.click();
 }
 
@@ -578,6 +653,42 @@ function updateSoundIcon() {
   icon.setAttribute('aria-label', state.settings.sound ? 'Turn sound off' : 'Turn sound on');
   icon.classList.toggle('text-slate-400', !state.settings.sound);
   icon.classList.toggle('text-white', state.settings.sound);
+}
+
+function toggleReducedMotion() {
+  state.settings.reducedMotion = !state.settings.reducedMotion;
+  saveSettings();
+  applySettings();
+  sound.click();
+}
+
+function updateMotionIcon() {
+  const icon = document.getElementById('motionToggle');
+  if (!icon) return;
+  icon.textContent = state.settings.reducedMotion ? 'NO MOT' : 'MOT';
+  icon.setAttribute('aria-label', state.settings.reducedMotion ? 'Turn reduced motion off' : 'Turn reduced motion on');
+  icon.classList.toggle('text-amber-400', state.settings.reducedMotion);
+  icon.classList.toggle('text-slate-400', !state.settings.reducedMotion);
+}
+
+function toggleHighContrast() {
+  state.settings.highContrast = !state.settings.highContrast;
+  saveSettings();
+  applySettings();
+  sound.click();
+}
+
+function updateContrastIcon() {
+  const icon = document.getElementById('contrastToggle');
+  if (!icon) return;
+  icon.textContent = state.settings.highContrast ? 'HC ON' : 'HC';
+  icon.setAttribute('aria-label', state.settings.highContrast ? 'Turn high contrast off' : 'Turn high contrast on');
+  icon.classList.toggle('text-amber-400', state.settings.highContrast);
+  icon.classList.toggle('text-slate-400', !state.settings.highContrast);
+}
+
+function shouldReduceMotion() {
+  return state.settings.reducedMotion || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
 function showScreen(screenId) {
@@ -629,14 +740,18 @@ function goToDifficultySelect() {
 // ============================================================
 function selectDifficulty(diff) {
   sound.success();
+  const run = createDistinctRun();
   state.difficulty = diff;
   state.currentLocationIndex = 0;
   state.score = 0;
   state.streak = 0;
+  state.hintsUsedInRound = 0;
+  state.totalHintsUsed = 0;
   state.roundScore = createRoundScore();
   state.clueTokens = [];
   state.history = [];
-  state.caseVariantIds = createRunCaseVariantIds();
+  state.caseSeed = run.seed;
+  state.caseVariantIds = run.caseVariantIds;
   state.isFinalConfrontation = false;
   state.finalConfrontationRound = 1;
   
@@ -647,19 +762,21 @@ function selectDifficulty(diff) {
 
 function resumeGame() {
   sound.success();
-  const save = localStorage.getItem('carmen_save');
-  if (!save) return;
+  const parsed = getValidSave();
+  if (!parsed) return;
   
   try {
-    const parsed = JSON.parse(save);
     state.difficulty = parsed.difficulty || 'detective';
     state.currentLocationIndex = parsed.currentLocationIndex || 0;
     state.score = parsed.score || 0;
     state.lives = parsed.lives || 5;
     state.streak = parsed.streak || 0;
+    state.hintsUsedInRound = parsed.hintsUsedInRound || 0;
+    state.totalHintsUsed = parsed.totalHintsUsed || 0;
     state.roundScore = parsed.roundScore || createRoundScore();
     state.clueTokens = parsed.clueTokens || [];
     state.history = parsed.history || [];
+    state.caseSeed = parsed.caseSeed || createCaseSeed();
     state.caseVariantIds = parsed.caseVariantIds || [];
     state.isFinalConfrontation = parsed.isFinalConfrontation || false;
     state.finalConfrontationRound = parsed.finalConfrontationRound || 1;
@@ -670,26 +787,85 @@ function resumeGame() {
       startLocation();
     }
   } catch(e) {
-    localStorage.removeItem('carmen_save');
+    localStorage.removeItem(SAVE_KEY);
     goToDifficultySelect();
   }
 }
 
+function caseVariantIdsAreValid(ids) {
+  if (!Array.isArray(ids) || ids.length !== LOCATIONS.length) return false;
+  return ids.every((id, index) => {
+    const pool = getLocationCasePool(LOCATIONS[index]);
+    return pool.some((entry) => entry.caseId === id);
+  });
+}
+
+function getValidSave() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(SAVE_KEY));
+    if (!parsed) return null;
+    if (parsed.schemaVersion !== SAVE_SCHEMA_VERSION) {
+      return migrateSave(parsed);
+    }
+    if (!LOCATIONS[parsed.currentLocationIndex] && !parsed.isFinalConfrontation) return null;
+    if (!caseVariantIdsAreValid(parsed.caseVariantIds)) return null;
+    return parsed;
+  } catch(e) {
+    return null;
+  }
+}
+
+function migrateSave(parsed) {
+  if (!parsed || typeof parsed !== 'object') return null;
+  const currentLocationIndex = Number(parsed.currentLocationIndex ?? parsed.currentLocation ?? 0);
+  if (!LOCATIONS[currentLocationIndex] && !parsed.isFinalConfrontation) return null;
+
+  const caseSeed = parsed.caseSeed || createCaseSeed();
+  const caseVariantIds = caseVariantIdsAreValid(parsed.caseVariantIds)
+    ? parsed.caseVariantIds
+    : createRunCaseVariantIds(caseSeed);
+  
+  const migrated = {
+    schemaVersion: SAVE_SCHEMA_VERSION,
+    difficulty: parsed.difficulty || 'detective',
+    currentLocationIndex,
+    score: Number(parsed.score) || 0,
+    lives: Number(parsed.lives) || getStartingLives(parsed.difficulty || 'detective'),
+    streak: Number(parsed.streak) || 0,
+    hintsUsedInRound: Number(parsed.hintsUsedInRound) || 0,
+    totalHintsUsed: Number(parsed.totalHintsUsed) || 0,
+    roundScore: parsed.roundScore || createRoundScore(),
+    clueTokens: Array.isArray(parsed.clueTokens) ? parsed.clueTokens : [],
+    history: Array.isArray(parsed.history) ? parsed.history : [],
+    caseSeed,
+    caseVariantIds,
+    isFinalConfrontation: parsed.isFinalConfrontation === true,
+    finalConfrontationRound: Number(parsed.finalConfrontationRound) || 1
+  };
+  
+  localStorage.setItem(SAVE_KEY, JSON.stringify(migrated));
+  return migrated;
+}
+
 function saveGame(overrides = {}) {
   const saveObj = {
+    schemaVersion: SAVE_SCHEMA_VERSION,
     difficulty: state.difficulty,
     currentLocationIndex: state.currentLocationIndex,
     score: state.score,
     lives: state.lives,
     streak: state.streak,
+    hintsUsedInRound: state.hintsUsedInRound,
+    totalHintsUsed: state.totalHintsUsed,
     roundScore: state.roundScore,
     clueTokens: state.clueTokens,
     history: state.history,
+    caseSeed: state.caseSeed,
     caseVariantIds: state.caseVariantIds,
     isFinalConfrontation: state.isFinalConfrontation,
     finalConfrontationRound: state.finalConfrontationRound
   };
-  localStorage.setItem('carmen_save', JSON.stringify({ ...saveObj, ...overrides }));
+  localStorage.setItem(SAVE_KEY, JSON.stringify({ ...saveObj, ...overrides }));
 }
 
 function saveHighScore(finalScore, rank) {
@@ -708,6 +884,8 @@ function saveHighScore(finalScore, rank) {
     score: finalScore,
     rank,
     difficulty: state.difficulty,
+    caseSeed: state.caseSeed,
+    caseVariantIds: state.caseVariantIds,
     date: new Date().toISOString()
   });
   
@@ -720,11 +898,53 @@ function saveHighScore(finalScore, rank) {
   };
 }
 
-function updateStats(outcome) {
+function getHighScores() {
+  try {
+    return JSON.parse(localStorage.getItem('carmen_highScores')) || [];
+  } catch(e) {
+    return [];
+  }
+}
+
+function getStats() {
   let stats = { gamesPlayed: 0, totalArrests: 0, totalEscapes: 0, perfectGames: 0 };
   try {
     stats = { ...stats, ...(JSON.parse(localStorage.getItem('carmen_stats')) || {}) };
   } catch(e) {}
+  return stats;
+}
+
+function showRecordsModal() {
+  sound.click();
+  const records = getHighScores();
+  const stats = getStats();
+  const grouped = ['rookie', 'detective', 'inspector'].map((difficulty) => {
+    const best = records.find((entry) => entry.difficulty === difficulty);
+    return `<div class="flex justify-between gap-4 border-b border-black/10 pb-2">
+      <span class="font-black uppercase">${difficulty}</span>
+      <span>${best ? `${best.score} - ${best.rank}` : 'No score yet'}</span>
+    </div>`;
+  }).join('');
+  
+  document.getElementById('recordsContent').innerHTML = `
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
+      <div class="bg-white/50 p-3 border border-black/10"><strong class="block text-lg">${stats.gamesPlayed}</strong><span class="text-xs uppercase">Games</span></div>
+      <div class="bg-white/50 p-3 border border-black/10"><strong class="block text-lg">${stats.totalArrests}</strong><span class="text-xs uppercase">Arrests</span></div>
+      <div class="bg-white/50 p-3 border border-black/10"><strong class="block text-lg">${stats.totalEscapes}</strong><span class="text-xs uppercase">Escapes</span></div>
+      <div class="bg-white/50 p-3 border border-black/10"><strong class="block text-lg">${stats.perfectGames}</strong><span class="text-xs uppercase">Perfect</span></div>
+    </div>
+    <div class="space-y-2">${grouped}</div>
+  `;
+  document.getElementById('recordsModal').classList.remove('hidden');
+}
+
+function hideRecordsModal() {
+  sound.click();
+  document.getElementById('recordsModal').classList.add('hidden');
+}
+
+function updateStats(outcome) {
+  const stats = getStats();
   
   stats.gamesPlayed++;
   if (outcome === 'arrest') stats.totalArrests++;
@@ -737,6 +957,23 @@ function updateStats(outcome) {
   localStorage.setItem('carmen_stats', JSON.stringify(stats));
 }
 
+function renderCaseHistorySummary() {
+  if (!state.history.length) return '';
+  return `
+    <div class="glass rounded-2xl p-5 border border-white/10 mt-6 max-w-2xl mx-auto text-left shadow-2xl">
+      <p class="text-xs uppercase tracking-wider font-black text-slate-400 mb-3">Case History</p>
+      <div class="grid gap-2">
+        ${state.history.map((entry, index) => `
+          <div class="flex justify-between gap-3 text-xs bg-white/10 p-2 border border-white/10">
+            <span class="font-bold">${index + 1}. ${entry.location}</span>
+            <span>${entry.attempts} attempt${entry.attempts === 1 ? '' : 's'} / +${entry.points}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
 // ============================================================
 // ROUND SETUP & INITIALIZATION
 // ============================================================
@@ -744,6 +981,7 @@ function startLocation() {
   state.cluesFlipped = [false, false, false];
   state.puzzleSolved = false;
   state.puzzleAttempts = 0;
+  state.hintsUsedInRound = 0;
   state.roundScore = createRoundScore();
   state.warrantIssued = false;
   state.activeTab = 'dossier';
@@ -760,6 +998,7 @@ function startLocation() {
   document.getElementById('goToPuzzleBtn').classList.add('opacity-50', 'cursor-not-allowed');
   document.getElementById('goToWarrantBtn').disabled = true;
   document.getElementById('goToWarrantBtn').classList.add('opacity-50', 'cursor-not-allowed');
+  resetHintPanel();
   
   // Populate Dossier Screen
   const loc = getLocationCase(state.currentLocationIndex);
@@ -779,10 +1018,12 @@ function startLocation() {
   
   // Populate Puzzle Details
   document.getElementById('puzzleTitleText').textContent = loc.puzzle.title;
+  document.getElementById('puzzleDescription').textContent = loc.puzzle.description;
   document.getElementById('puzzleQuestionText').textContent = loc.puzzle.question;
   
   renderPuzzleVisual(loc);
   buildPuzzleOptions(loc.puzzle);
+  updateHintButton();
   buildWarrantDropdowns(loc);
   document.getElementById('warrantStampOverlay').classList.add('hidden');
   
@@ -815,6 +1056,10 @@ function getRankString(score) {
 
 function typeWriterEffect(elementId, text) {
   const el = document.getElementById(elementId);
+  if (shouldReduceMotion()) {
+    el.textContent = text;
+    return;
+  }
   el.textContent = '';
   let i = 0;
   function walk() {
@@ -895,6 +1140,8 @@ function switchTab(tabName) {
 function renderPuzzleVisual(loc) {
   const container = document.getElementById('puzzleVisualContainer');
   container.innerHTML = '';
+  container.setAttribute('role', 'img');
+  container.setAttribute('aria-label', loc.accessibilityDescription || loc.puzzle.description || 'Puzzle visual evidence');
   
   if (loc.puzzle.visualHtml) {
     container.innerHTML = loc.puzzle.visualHtml;
@@ -1007,6 +1254,79 @@ function renderPuzzleVisual(loc) {
   }
 }
 
+function getHintLimit() {
+  if (state.difficulty === 'rookie') return 3;
+  if (state.difficulty === 'detective') return 2;
+  return 0;
+}
+
+function getHintTexts(loc) {
+  if (Array.isArray(loc.puzzle.hints) && loc.puzzle.hints.length > 0) {
+    return loc.puzzle.hints;
+  }
+  
+  const correctOption = loc.puzzle.options[loc.puzzle.correctIndex];
+  return [
+    loc.learningObjective || 'Use at least two evidence clues together before choosing an answer.',
+    `Focus on evidence pointing to ${loc.warrantAnswers.hideout} and the ${loc.warrantAnswers.disguise} disguise.`,
+    `The strongest match is ${correctOption}.`
+  ];
+}
+
+function resetHintPanel() {
+  const panel = document.getElementById('hintPanel');
+  if (panel) {
+    panel.classList.add('hidden');
+    panel.textContent = '';
+  }
+}
+
+function updateHintButton() {
+  const hintButton = document.getElementById('hintButton');
+  if (!hintButton) return;
+  
+  if (state.isFinalConfrontation) {
+    hintButton.disabled = true;
+    hintButton.textContent = 'No Hints In Final';
+    hintButton.classList.add('opacity-50', 'cursor-not-allowed');
+    return;
+  }
+  
+  const limit = getHintLimit();
+  const hintsRemaining = Math.max(0, limit - state.hintsUsedInRound);
+  hintButton.disabled = limit === 0 || state.puzzleSolved || hintsRemaining === 0;
+  hintButton.textContent = limit === 0
+    ? 'No Hints In Inspector'
+    : `Request Hint (${hintsRemaining}/${limit})`;
+  hintButton.classList.toggle('opacity-50', hintButton.disabled);
+  hintButton.classList.toggle('cursor-not-allowed', hintButton.disabled);
+  hintButton.setAttribute('aria-label', `Request puzzle hint. ${hintsRemaining} hints remaining. Each hint costs ${SCORE_RULES.hintPenalty} points.`);
+}
+
+function requestHint() {
+  if (state.puzzleSolved || state.isFinalConfrontation) return;
+  
+  const limit = getHintLimit();
+  if (state.hintsUsedInRound >= limit) {
+    updateHintButton();
+    return;
+  }
+  
+  sound.click();
+  const loc = getLocationCase(state.currentLocationIndex);
+  const hints = getHintTexts(loc);
+  const hintText = hints[Math.min(state.hintsUsedInRound, hints.length - 1)];
+  
+  state.hintsUsedInRound++;
+  state.totalHintsUsed++;
+  saveGame();
+  
+  const panel = document.getElementById('hintPanel');
+  panel.classList.remove('hidden');
+  panel.innerHTML = `<strong>Hint ${state.hintsUsedInRound}:</strong> ${hintText} <span class="block mt-1 text-[10px] uppercase font-bold text-red-800">-${SCORE_RULES.hintPenalty} potential puzzle points</span>`;
+  updateHintButton();
+}
+
 function buildPuzzleOptions(puzzle) {
   const container = document.getElementById('puzzleOptionsGrid');
   container.innerHTML = '';
@@ -1035,7 +1355,8 @@ function selectChoice(index) {
     buttons[index].classList.add('correct');
     state.puzzleSolved = true;
     
-    addRoundPoints('puzzle', getPuzzleScore(state.puzzleAttempts));
+    addRoundPoints('puzzle', getPuzzleScore(state.puzzleAttempts, state.hintsUsedInRound));
+    updateHintButton();
     
     document.getElementById('tabWarrant').disabled = false;
     const warrantBtn = document.getElementById('goToWarrantBtn');
@@ -1056,7 +1377,8 @@ function selectChoice(index) {
     
     state.lives--;
     updateHUD();
-    
+    saveGame();
+
     if (state.lives <= 0) {
       setTimeout(() => {
         triggerGameOver();
@@ -1167,7 +1489,8 @@ function submitWarrant() {
     state.lives--;
     state.streak = 0;
     updateHUD();
-    
+    saveGame();
+
     if (state.lives <= 0) {
       setTimeout(() => {
         triggerGameOver();
@@ -1255,6 +1578,7 @@ function triggerFinalConfrontationFlow() {
 
 function startFinalConfrontationRound() {
   state.puzzleSolved = false;
+  state.hintsUsedInRound = 0;
   state.activeTab = 'puzzle';
   updateHUD();
   drawMapGrid();
@@ -1267,6 +1591,8 @@ function startFinalConfrontationRound() {
   
   showScreen('gameScreen');
   switchTab('puzzle');
+  resetHintPanel();
+  updateHintButton();
   
   const container = document.getElementById('puzzleVisualContainer');
   container.innerHTML = '';
@@ -1277,6 +1603,7 @@ function startFinalConfrontationRound() {
   puzzleTitle.textContent = `Boss Duel - Round ${state.finalConfrontationRound} of 3`;
   
   if (state.finalConfrontationRound === 1) {
+    container.setAttribute('aria-label', 'Encrypted farewell note showing FDUPHQ for a Caesar cipher challenge.');
     document.getElementById('puzzleDescription').textContent = 'Crack Carmen\'s signature encrypted farewell note using Caesar cipher (shift left by 3).';
     container.innerHTML = `
       <div class="text-center">
@@ -1294,6 +1621,7 @@ function startFinalConfrontationRound() {
     ], 0);
     
   } else if (state.finalConfrontationRound === 2) {
+    container.setAttribute('aria-label', 'ACME intelligence list used to deduce Carmen getaway vehicle.');
     document.getElementById('puzzleDescription').textContent = 'Use process of elimination to deduce Carmen\'s getaway vehicle in El Calafate.';
     container.innerHTML = `
       <div class="text-left text-[9px] bg-white/80 p-3 rounded border border-slate-200 leading-tight space-y-1 font-semibold">
@@ -1314,6 +1642,7 @@ function startFinalConfrontationRound() {
     ], 2);
     
   } else if (state.finalConfrontationRound === 3) {
+    container.setAttribute('aria-label', 'Compass grid starting at glacier row 3 column 3 and moving north 2 west 1.');
     document.getElementById('puzzleDescription').textContent = 'Solve the final compass tracking course on the Perito Moreno Glacier.';
     container.innerHTML = `
       <div class="w-full text-xs">
@@ -1381,7 +1710,8 @@ function selectFinalChoice(index, correctIdx) {
     buttons[index].classList.add('wrong');
     state.lives--;
     updateHUD();
-    
+    saveGame();
+
     if (state.lives <= 0) {
       setTimeout(() => {
         triggerGameOver();
@@ -1411,7 +1741,8 @@ function triggerGameSuccess() {
   const rank = getRankString(state.score);
   const scoreRecord = saveHighScore(state.score, rank);
   updateStats(perfectGame ? 'perfect' : 'arrest');
-  localStorage.removeItem('carmen_save');
+  localStorage.setItem(LAST_RUN_KEY, JSON.stringify(state.caseVariantIds));
+  localStorage.removeItem(SAVE_KEY);
   
   const container = document.getElementById('resultsContent');
   container.innerHTML = `
@@ -1422,6 +1753,7 @@ function triggerGameSuccess() {
     <p class="text-sm font-bold ${scoreRecord.isHighScore ? 'text-emerald-400' : 'text-slate-400'} mt-2">
       ${scoreRecord.isHighScore ? 'New high score for this difficulty' : `Best ${state.difficulty} score remains ${scoreRecord.previousBest}`}
     </p>
+    <p class="typewriter-font text-[10px] text-slate-400 uppercase tracking-widest mt-3">Case ID: ${state.caseSeed}</p>
 
     <div class="glass rounded-2xl p-6 border border-white/10 mt-8 max-w-md mx-auto shadow-2xl">
       <div class="grid grid-cols-3 gap-4 text-center">
@@ -1444,6 +1776,7 @@ function triggerGameSuccess() {
         <div>Perfect: +${perfectBonus}</div>
       </div>
     </div>
+    ${renderCaseHistorySummary()}
   `;
   
   showScreen('resultsScreen');
@@ -1454,7 +1787,8 @@ function triggerGameOver() {
   const rank = getRankString(state.score);
   const scoreRecord = saveHighScore(state.score, rank);
   updateStats('escape');
-  localStorage.removeItem('carmen_save');
+  localStorage.setItem(LAST_RUN_KEY, JSON.stringify(state.caseVariantIds));
+  localStorage.removeItem(SAVE_KEY);
   
   const container = document.getElementById('resultsContent');
   container.innerHTML = `
@@ -1465,6 +1799,7 @@ function triggerGameOver() {
     <p class="text-sm font-bold ${scoreRecord.isHighScore ? 'text-emerald-400' : 'text-slate-400'} mt-2">
       ${scoreRecord.isHighScore ? 'New high score for this difficulty' : `Best ${state.difficulty} score remains ${scoreRecord.previousBest}`}
     </p>
+    <p class="typewriter-font text-[10px] text-slate-400 uppercase tracking-widest mt-3">Case ID: ${state.caseSeed}</p>
 
     <div class="glass rounded-2xl p-6 border border-white/10 mt-8 max-w-sm mx-auto shadow-2xl">
       <div class="flex justify-between items-center text-center">
@@ -1503,7 +1838,7 @@ function hideResetModal() {
 }
 
 function confirmReset() {
-  localStorage.removeItem('carmen_save');
+  localStorage.removeItem(SAVE_KEY);
   hideResetModal();
   goToTitle();
 }
@@ -1517,6 +1852,10 @@ let mapPolyline = null;
 
 function initLeafletMap() {
   if (map) return;
+  if (!window.L) {
+    renderMapFallback();
+    return;
+  }
   
   // Center on central Argentina
   map = L.map('map', {
@@ -1536,7 +1875,7 @@ function initLeafletMap() {
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     maxZoom: 10,
     minZoom: 3
-  }).addTo(map);
+  }).on('tileerror', renderMapFallback).addTo(map);
 }
 
 function invalidateMapSize() {
@@ -1545,8 +1884,49 @@ function invalidateMapSize() {
   }
 }
 
+function getMapTextAlternative() {
+  const current = LOCATIONS[state.currentLocationIndex];
+  const visited = LOCATIONS
+    .slice(0, state.currentLocationIndex)
+    .map((loc) => loc.name)
+    .join(', ') || 'None yet';
+  const next = LOCATIONS[state.currentLocationIndex + 1]?.name || 'Final report';
+  return `Current city: ${current.name}. Province: ${current.province}. Visited cities: ${visited}. Next destination: ${next}.`;
+}
+
+function updateMapTextAlternative() {
+  const text = getMapTextAlternative();
+  const alt = document.getElementById('mapTextAlternative');
+  if (alt) alt.textContent = text;
+  return text;
+}
+
+function renderMapFallback() {
+  const mapEl = document.getElementById('map');
+  if (!mapEl) return;
+  const current = LOCATIONS[state.currentLocationIndex];
+  const text = updateMapTextAlternative();
+  mapEl.innerHTML = `
+    <div class="map-fallback" role="img" aria-label="${text}">
+      <p class="text-xs uppercase font-black text-amber-400">Static Map Fallback</p>
+      <p class="text-lg font-black">${current.emoji || '•'} ${current.name}</p>
+      <p class="text-sm">${current.province}</p>
+      <ol class="text-xs leading-relaxed">
+        ${LOCATIONS.map((loc, index) => `<li>${index + 1}. ${loc.name} - ${index < state.currentLocationIndex ? 'visited' : index === state.currentLocationIndex ? 'current' : 'upcoming'}</li>`).join('')}
+      </ol>
+    </div>
+  `;
+}
+
 function drawMapGrid() {
   initLeafletMap();
+  updateMapTextAlternative();
+  if (!map) {
+    renderMapFallback();
+    const cur = LOCATIONS[state.currentLocationIndex];
+    document.getElementById('currentCityText').textContent = `${cur.emoji} ${cur.name} (${cur.province})`;
+    return;
+  }
   invalidateMapSize();
   
   // Remove existing markers
@@ -1591,7 +1971,7 @@ function drawMapGrid() {
       }).openTooltip();
       
       // Pan to focus on active coordinate
-      map.setView([loc.lat, loc.lng], 4.5, { animate: true, duration: 1.2 });
+      map.setView([loc.lat, loc.lng], 4.5, { animate: !shouldReduceMotion(), duration: shouldReduceMotion() ? 0 : 1.2 });
     }
     
     mapMarkers.push(marker);
@@ -1603,6 +1983,10 @@ function drawMapGrid() {
 
 function animateTravelPath(onComplete) {
   if (state.currentLocationIndex >= LOCATIONS.length - 1) {
+    onComplete();
+    return;
+  }
+  if (!map || shouldReduceMotion()) {
     onComplete();
     return;
   }
@@ -1721,6 +2105,7 @@ document.head.appendChild(styleSheet);
 // BACKGROUND GLOW PARTICLES
 // ============================================================
 function initBgParticles() {
+  if (shouldReduceMotion()) return;
   const container = document.getElementById('bgParticles');
   container.innerHTML = '';
   for (let i = 0; i < 20; i++) {
