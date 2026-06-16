@@ -36,6 +36,8 @@ Opening `index.html` directly may work for the classic fallback case, but browse
 
 ## MVP Roadmap
 
+See `ROADMAP.md` for the full production-grade plan. The short version:
+
 1. Accessibility hardening
    - Add a full screen-reader pass for maps, token inventory, and dynamically injected puzzle visuals.
    - Add reduced-motion and high-contrast toggles.
