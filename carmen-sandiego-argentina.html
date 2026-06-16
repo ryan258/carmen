@@ -216,6 +216,19 @@
               </p>
             </div>
 
+            <!-- Suspect Dossier (Henchman) -->
+            <div id="suspectCard" class="mt-6 hidden flex flex-col sm:flex-row gap-4 items-center bg-amber-50/70 p-4 rounded-xl border border-amber-300 shadow-sm">
+              <div id="suspectMugshot" class="w-16 h-16 bg-slate-900 text-amber-300 rounded-lg flex items-center justify-center font-bold text-2xl flex-shrink-0 shadow-md">
+                🕵️
+              </div>
+              <div class="flex-grow">
+                <p class="text-xs text-slate-500 font-extrabold uppercase tracking-wide">V.I.L.E. Accomplice On Site</p>
+                <p class="text-sm font-bold text-slate-900 mt-0.5"><span id="suspectName">Suspect unknown</span> <span id="suspectAliasWrapper" class="text-red-700 hidden">"<span id="suspectAlias"></span>"</span></p>
+                <p id="suspectRole" class="text-[11px] font-bold text-slate-700 uppercase tracking-wider mt-1"></p>
+                <p id="suspectDossier" class="typewriter-font text-xs text-slate-700 italic mt-1"></p>
+              </div>
+            </div>
+
             <!-- Visual Calling Card Section -->
             <div class="mt-6 flex flex-col sm:flex-row gap-4 items-center bg-white/40 p-4 rounded-xl border border-slate-200 shadow-sm">
               <div class="w-16 h-16 bg-red-700 text-white rounded-lg flex items-center justify-center font-bold text-2xl flex-shrink-0 shadow-md">

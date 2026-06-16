@@ -46,6 +46,11 @@ test('region metadata covers every active case pool', () => {
     assert.equal(typeof location.province, 'string', `${location.id} province`);
     assert.equal(typeof location.lat, 'number', `${location.id} latitude`);
     assert.equal(typeof location.lng, 'number', `${location.id} longitude`);
+    assert.ok(location.henchman && typeof location.henchman === 'object', `${location.id} canon henchman`);
+    ['name', 'alias', 'emoji', 'role', 'dossierNote'].forEach((field) => {
+      assert.ok(typeof location.henchman[field] === 'string' && location.henchman[field].length > 0,
+        `${location.id} henchman ${field}`);
+    });
   });
 });
 
@@ -63,6 +68,15 @@ test('every case satisfies the content schema contract', () => {
       assert.equal(typeof caseData.briefing?.headline, 'string', `${caseData.caseId} briefing headline`);
       assert.equal(typeof caseData.briefing?.report, 'string', `${caseData.caseId} briefing report`);
       assert.equal(typeof caseData.briefing?.callingCard, 'string', `${caseData.caseId} calling card`);
+      const suspect = caseData.briefing?.suspect;
+      assert.ok(suspect && typeof suspect === 'object', `${caseData.caseId} suspect block`);
+      ['name', 'alias', 'emoji', 'role', 'dossierNote'].forEach((field) => {
+        assert.ok(typeof suspect[field] === 'string' && suspect[field].length > 0, `${caseData.caseId} suspect ${field}`);
+      });
+      if (caseData.briefing.nextLead !== undefined) {
+        assert.equal(typeof caseData.briefing.nextLead, 'string', `${caseData.caseId} nextLead`);
+        assert.ok(caseData.briefing.nextLead.length > 0, `${caseData.caseId} nextLead cannot be empty`);
+      }
 
       assert.ok(Array.isArray(caseData.clues), `${caseData.caseId} clues must be an array`);
       assert.equal(caseData.clues.length, 3, `${caseData.caseId} must have exactly 3 clues`);

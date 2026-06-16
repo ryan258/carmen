@@ -4,8 +4,16 @@
       "caseId": "classic-buenos-aires",
       "briefing": {
         "headline": "NATIONAL LIBRARY LARCENY!",
-        "report": "A mysterious figure in a red trench coat broke into the National Library of Buenos Aires last night. She bypassed the security grid and stole the original manuscript of Jorge Luis Borges' \"Ficciones\". A witness saw her fleeing towards a tango salon in La Boca.",
-        "callingCard": "A card with a red silhouette. On the back, it says: \"FDPLQLWR WDQJR RXWILW\""
+        "report": "The National Library of Buenos Aires was hit overnight. Carmen Sandiego was on the Aeroparque tarmac by dawn — but her courier is still in town, carrying the original manuscript of Borges' \"Ficciones\". A witness saw a bandoneón player slipping toward a tango salon in La Boca.",
+        "callingCard": "A card with a red silhouette. On the back: \"FDPLQLWR WDQJR RXWILW\" — and beneath it, \"My dancer always leaves the floor. Yours is still spinning.\"",
+        "suspect": {
+          "name": "Tito Trapaza",
+          "alias": "El Tanguero",
+          "emoji": "🎻",
+          "role": "Forger of opera scores and theater blueprints",
+          "dossierNote": "Trapaza's bandoneón case had room for one stolen manuscript and his stagehand blacks. The witness in La Boca remembers the case but never saw his hands."
+        },
+        "nextLead": "A coded telegram pulled from Trapaza's coat lining: \"MAY 8 / SAN MARTÍN PARK / SHE EXPECTS COMPANY.\" The park is in Mendoza."
       },
       "clues": [
         "A restaurant receipt from \"El Caminito\" in the colorful La Boca neighborhood.",
@@ -48,8 +56,16 @@
       "caseId": "obelisco-avenida",
       "briefing": {
         "headline": "OBELISCO BLUEPRINTS VANISH!",
-        "report": "Carmen lifted a set of theater-district blueprints from a city archive. Witnesses saw her moving along Avenida 9 de Julio beneath a tall white monument.",
-        "callingCard": "A torn program from Teatro Colón reads: \"Count the lanes, find the needle.\""
+        "report": "A V.I.L.E. operative lifted theater-district blueprints from a city archive. Carmen's plane was already over Mendoza by the time the alarm rang — but her courier was still moving along Avenida 9 de Julio beneath a tall white monument.",
+        "callingCard": "A torn program from Teatro Colón reads: \"Count the lanes, find the needle. I'm not the one you'll catch tonight.\"",
+        "suspect": {
+          "name": "Tito Trapaza",
+          "alias": "El Tanguero",
+          "emoji": "🎻",
+          "role": "Forger of opera scores and theater blueprints",
+          "dossierNote": "Trapaza's taxi receipt from Avenida Corrientes ends at a fence he's used twice this month. The Obelisco is his favorite drop point."
+        },
+        "nextLead": "A folded Mendoza city plan in his bag, with red ink circling Cerro de la Gloria — and the words \"crossroads, midnight\" in the margin."
       },
       "clues": [
         "A taxi receipt lists a drop-off at Avenida Corrientes and 9 de Julio.",
@@ -93,8 +109,16 @@
       "caseId": "cafe-tortoni",
       "briefing": {
         "headline": "POETRY LEDGER STOLEN!",
-        "report": "A ledger of old literary gatherings disappeared from a historic cafe. Carmen left behind a coffee ring and a cryptic note about Avenida de Mayo.",
-        "callingCard": "A napkin says: \"The oldest table keeps the freshest secret.\""
+        "report": "A ledger of old literary gatherings disappeared from a historic cafe. Carmen herself was already at altitude over the Andes — but her courier was seen at a corner table on Avenida de Mayo, posing as a visiting poet.",
+        "callingCard": "A napkin reads: \"The oldest table keeps the freshest secret. My poet is still pouring; he'll be there when you arrive.\"",
+        "suspect": {
+          "name": "Tito Trapaza",
+          "alias": "El Tanguero",
+          "emoji": "🎻",
+          "role": "Forger of opera scores and theater blueprints",
+          "dossierNote": "Trapaza has rotated through Café Tortoni four nights this month, posing as a visiting poet. A waiter recognized his bandoneón calluses."
+        },
+        "nextLead": "A poet's notebook, half-finished verse about \"the Malbec she never poured,\" and a Mendoza street name penciled in the margin."
       },
       "clues": [
         "The receipt is stamped Avenida de Mayo 825.",
@@ -138,8 +162,16 @@
       "caseId": "teatro-colon-score",
       "briefing": {
         "headline": "OPERA SCORE SPIRITED AWAY!",
-        "report": "A handwritten overture vanished from a rehearsal room near Avenida 9 de Julio. Carmen left a stage cue marked for a grand opera house.",
-        "callingCard": "A black program says: \"Listen where the city keeps its velvet echo.\""
+        "report": "A handwritten overture vanished from a rehearsal room near Avenida 9 de Julio. Carmen's signature is on the chase manifest, but witnesses place her courier — a former pit musician in stagehand blacks — at the grand opera house's loading door.",
+        "callingCard": "A black program says: \"Listen where the city keeps its velvet echo. The hands you'll cuff tonight are not mine.\"",
+        "suspect": {
+          "name": "Tito Trapaza",
+          "alias": "El Tanguero",
+          "emoji": "🎻",
+          "role": "Forger of opera scores and theater blueprints",
+          "dossierNote": "Trapaza last worked the Teatro Colón orchestra pit; the loading-door log still shows his old badge number from his expulsion year."
+        },
+        "nextLead": "A benefit-opera ticket stub for a Mendoza concert hall, dated four days from now, with a backstage pass clipped to it."
       },
       "clues": [
         "A backstage pass names Teatro Colón in gold ink.",
@@ -182,8 +214,16 @@
       "caseId": "recoleta-mausoleum",
       "briefing": {
         "headline": "MARBLE ANGEL TOKEN MISSING!",
-        "report": "A cemetery preservation token disappeared from a heritage desk. Carmen left a map of narrow paths and ornate mausoleums.",
-        "callingCard": "The card says: \"Find me among stone angels and city memory.\""
+        "report": "A cemetery preservation token disappeared from a heritage desk. Carmen had already crossed into the Cuyo by dusk — but her courier, posing as a heritage guide, was still leading visitors through the mausoleum lanes.",
+        "callingCard": "The card reads: \"Find me among stone angels and city memory. You'll find my guide instead — give him my regards.\"",
+        "suspect": {
+          "name": "Tito Trapaza",
+          "alias": "El Tanguero",
+          "emoji": "🎻",
+          "role": "Forger of opera scores and theater blueprints",
+          "dossierNote": "A Recoleta florist confirms Trapaza ordered white lilies for a 'guided tour' the morning of the heist. He was already in costume."
+        },
+        "nextLead": "A heritage-conservation invoice charging vines and trellises to a Mendoza cemetery preservation project — Carmen's next staging ground."
       },
       "clues": [
         "A guidebook page has Recoleta Cemetery circled.",
@@ -229,7 +269,15 @@
       "briefing": {
         "headline": "VINTAGE MALBEC VANISHES!",
         "report": "The oldest bottle of Malbec wine in Argentina, dating back to the 19th century, was stolen from a historic winery cellar in Mendoza. The thief left behind coordinate details on an empty bottle label.",
-        "callingCard": "A postcard of the Andes with coordinates written in red ink: \"32°39'S, 70°00'W\""
+        "callingCard": "A postcard of the Andes with coordinates written in red ink: \"32°39'S, 70°00'W\"",
+        "suspect": {
+          "name": "Vera Vicario",
+          "alias": "La Vendimia",
+          "emoji": "🍇",
+          "role": "Label forger and irrigation-canal smuggler",
+          "dossierNote": "Trained sommelier. Forges vintage labels and uses high-Andean canal routes to move Carmen's contraband past customs."
+        },
+        "nextLead": "A high-altitude permit stamped for the colonial salt road north of Salta."
       },
       "clues": [
         "A winery flyer with a handwritten note: \"Deliver grapes to the vineyard worker.\"",
@@ -273,7 +321,15 @@
       "briefing": {
         "headline": "VENDIMIA CROWN TAKEN!",
         "report": "The ceremonial grape-harvest crown disappeared before a festival rehearsal. Carmen left purple footprints leading toward Mendoza city center.",
-        "callingCard": "A grape-stained card reads: \"Find me where harvest queens meet the fountains.\""
+        "callingCard": "A grape-stained card reads: \"Find me where harvest queens meet the fountains.\"",
+        "suspect": {
+          "name": "Vera Vicario",
+          "alias": "La Vendimia",
+          "emoji": "🍇",
+          "role": "Label forger and irrigation-canal smuggler",
+          "dossierNote": "Trained sommelier. Forges vintage labels and uses high-Andean canal routes to move Carmen's contraband past customs."
+        },
+        "nextLead": "A high-altitude permit stamped for the colonial salt road north of Salta."
       },
       "clues": [
         "A city map has Plaza Independencia circled in purple ink.",
@@ -318,7 +374,15 @@
       "briefing": {
         "headline": "MINERAL MAP MISSING!",
         "report": "A mineral survey map vanished from an Andes research office. Carmen mailed back a card showing a natural stone bridge.",
-        "callingCard": "The card says: \"Hot springs, cold trail, golden arch.\""
+        "callingCard": "The card says: \"Hot springs, cold trail, golden arch.\"",
+        "suspect": {
+          "name": "Vera Vicario",
+          "alias": "La Vendimia",
+          "emoji": "🍇",
+          "role": "Label forger and irrigation-canal smuggler",
+          "dossierNote": "Trained sommelier. Forges vintage labels and uses high-Andean canal routes to move Carmen's contraband past customs."
+        },
+        "nextLead": "A high-altitude permit stamped for the colonial salt road north of Salta."
       },
       "clues": [
         "A route note follows the road toward the Chilean border.",
@@ -363,7 +427,15 @@
       "briefing": {
         "headline": "VINEYARD WATER MAP STOLEN!",
         "report": "An irrigation chart from a mountain vineyard vanished before harvest. Carmen followed a road south toward the Valle de Uco.",
-        "callingCard": "A grape leaf reads: \"Follow the snowmelt to the vines.\""
+        "callingCard": "A grape leaf reads: \"Follow the snowmelt to the vines.\"",
+        "suspect": {
+          "name": "Vera Vicario",
+          "alias": "La Vendimia",
+          "emoji": "🍇",
+          "role": "Label forger and irrigation-canal smuggler",
+          "dossierNote": "Trained sommelier. Forges vintage labels and uses high-Andean canal routes to move Carmen's contraband past customs."
+        },
+        "nextLead": "A high-altitude permit stamped for the colonial salt road north of Salta."
       },
       "clues": [
         "A harvest note mentions Tunuyan and high-altitude vineyards.",
@@ -407,7 +479,15 @@
       "briefing": {
         "headline": "BRONZE GATE CREST LIFTED!",
         "report": "A decorative crest disappeared from a city park restoration crate. Carmen left footprints near a grand iron gate.",
-        "callingCard": "The card says: \"The general watches the park entrance.\""
+        "callingCard": "The card says: \"The general watches the park entrance.\"",
+        "suspect": {
+          "name": "Vera Vicario",
+          "alias": "La Vendimia",
+          "emoji": "🍇",
+          "role": "Label forger and irrigation-canal smuggler",
+          "dossierNote": "Trained sommelier. Forges vintage labels and uses high-Andean canal routes to move Carmen's contraband past customs."
+        },
+        "nextLead": "A high-altitude permit stamped for the colonial salt road north of Salta."
       },
       "clues": [
         "A city map highlights General San Martín Park.",
@@ -453,7 +533,15 @@
       "briefing": {
         "headline": "CLOUD TRAIN LOCOMOTIVE LOOTED!",
         "report": "A scale gold model of the Tren a las Nubes locomotive was stolen from the Salta Cathedral museum. The thief was seen fleeing towards the railway station.",
-        "callingCard": "A boarding pass stub showing a flight from Buenos Aires and a train connection in Salta."
+        "callingCard": "A boarding pass stub showing a flight from Buenos Aires and a train connection in Salta.",
+        "suspect": {
+          "name": "Saúl Sandoval",
+          "alias": "El Salteño",
+          "emoji": "🐎",
+          "role": "Caravan smuggler trafficking colonial relics",
+          "dossierNote": "Former muleteer on the old salt caravans. Now runs Carmen's relic pipeline through the Quebrada de Humahuaca."
+        },
+        "nextLead": "A torn bookplate from a Jesuit-era manuscript in the Córdoba archives."
       },
       "clues": [
         "A jumbled train schedule showing a final stop near the colourful hills of Quebrada de Humahuaca.",
@@ -497,7 +585,15 @@
       "briefing": {
         "headline": "FOLK GUITAR STOLEN!",
         "report": "A historic peña guitar disappeared after a night of folk music. Tire tracks point south through red-rock valleys.",
-        "callingCard": "A lyric scrap reads: \"Follow the echo through the quebrada to the wine town.\""
+        "callingCard": "A lyric scrap reads: \"Follow the echo through the quebrada to the wine town.\"",
+        "suspect": {
+          "name": "Saúl Sandoval",
+          "alias": "El Salteño",
+          "emoji": "🐎",
+          "role": "Caravan smuggler trafficking colonial relics",
+          "dossierNote": "Former muleteer on the old salt caravans. Now runs Carmen's relic pipeline through the Quebrada de Humahuaca."
+        },
+        "nextLead": "A torn bookplate from a Jesuit-era manuscript in the Córdoba archives."
       },
       "clues": [
         "A bus ticket is marked Salta to Cafayate.",
@@ -542,7 +638,15 @@
       "briefing": {
         "headline": "COLONIAL SEAL SWIPED!",
         "report": "A colonial seal vanished from an old civic archive. Carmen left a sketch of arches facing Salta main square.",
-        "callingCard": "The card says: \"Under the arcade, history keeps quiet.\""
+        "callingCard": "The card says: \"Under the arcade, history keeps quiet.\"",
+        "suspect": {
+          "name": "Saúl Sandoval",
+          "alias": "El Salteño",
+          "emoji": "🐎",
+          "role": "Caravan smuggler trafficking colonial relics",
+          "dossierNote": "Former muleteer on the old salt caravans. Now runs Carmen's relic pipeline through the Quebrada de Humahuaca."
+        },
+        "nextLead": "A torn bookplate from a Jesuit-era manuscript in the Córdoba archives."
       },
       "clues": [
         "The clue sketch shows a long colonial arcade.",
@@ -587,7 +691,15 @@
       "briefing": {
         "headline": "CABLE CAR TOKEN TAKEN!",
         "report": "A commemorative cable-car token vanished from a hilltop viewpoint. Carmen was seen rising above Salta city toward Cerro San Bernardo.",
-        "callingCard": "A red ticket says: \"Climb without walking.\""
+        "callingCard": "A red ticket says: \"Climb without walking.\"",
+        "suspect": {
+          "name": "Saúl Sandoval",
+          "alias": "El Salteño",
+          "emoji": "🐎",
+          "role": "Caravan smuggler trafficking colonial relics",
+          "dossierNote": "Former muleteer on the old salt caravans. Now runs Carmen's relic pipeline through the Quebrada de Humahuaca."
+        },
+        "nextLead": "A torn bookplate from a Jesuit-era manuscript in the Córdoba archives."
       },
       "clues": [
         "A cable-car stub points to Cerro San Bernardo.",
@@ -631,7 +743,15 @@
       "briefing": {
         "headline": "SALT FLAT COMPASS STOLEN!",
         "report": "A field compass vanished from a desert expedition kit. Carmen left white powder on a route note toward high Andean salt flats.",
-        "callingCard": "The note says: \"Where the ground looks like sky, bearings disappear.\""
+        "callingCard": "The note says: \"Where the ground looks like sky, bearings disappear.\"",
+        "suspect": {
+          "name": "Saúl Sandoval",
+          "alias": "El Salteño",
+          "emoji": "🐎",
+          "role": "Caravan smuggler trafficking colonial relics",
+          "dossierNote": "Former muleteer on the old salt caravans. Now runs Carmen's relic pipeline through the Quebrada de Humahuaca."
+        },
+        "nextLead": "A torn bookplate from a Jesuit-era manuscript in the Córdoba archives."
       },
       "clues": [
         "The route climbs from Salta toward high Andean landscapes.",
@@ -677,7 +797,15 @@
       "briefing": {
         "headline": "JESUIT TREASURE STOLEN!",
         "report": "An ancient 17th-century telescope was stolen from the National University of Córdoba. The thief left a series of logic riddles on a study desk.",
-        "callingCard": "A library card for the National University of Córdoba under an alias."
+        "callingCard": "A library card for the National University of Córdoba under an alias.",
+        "suspect": {
+          "name": "Clara Cortázar",
+          "alias": "La Cátedra",
+          "emoji": "📚",
+          "role": "Rare-book thief and Jesuit-archive impostor",
+          "dossierNote": "Dismissed university archivist with a key to half the Jesuit Block. Forges provenance papers for stolen manuscripts."
+        },
+        "nextLead": "A soaked map of the Iguazú falls boat route, marked in red ink."
       },
       "clues": [
         "A logic statement: \"The thief wearing glasses was NOT in the Jesuit Quarter.\"",
@@ -722,7 +850,15 @@
       "briefing": {
         "headline": "UNIVERSITY KEY DISAPPEARS!",
         "report": "An old ceremonial key vanished from the university quarter. Carmen left notes about courtyards, churches, and early classrooms.",
-        "callingCard": "A stamped card reads: \"The block remembers every lesson.\""
+        "callingCard": "A stamped card reads: \"The block remembers every lesson.\"",
+        "suspect": {
+          "name": "Clara Cortázar",
+          "alias": "La Cátedra",
+          "emoji": "📚",
+          "role": "Rare-book thief and Jesuit-archive impostor",
+          "dossierNote": "Dismissed university archivist with a key to half the Jesuit Block. Forges provenance papers for stolen manuscripts."
+        },
+        "nextLead": "A soaked map of the Iguazú falls boat route, marked in red ink."
       },
       "clues": [
         "A campus guide has the Jesuit Block underlined.",
@@ -768,7 +904,15 @@
       "briefing": {
         "headline": "STAR CHART STOLEN!",
         "report": "A night-sky chart was stolen before a public astronomy talk. Carmen left a mountain road toll receipt.",
-        "callingCard": "A black card reads: \"Count the stars from the sierras.\""
+        "callingCard": "A black card reads: \"Count the stars from the sierras.\"",
+        "suspect": {
+          "name": "Clara Cortázar",
+          "alias": "La Cátedra",
+          "emoji": "📚",
+          "role": "Rare-book thief and Jesuit-archive impostor",
+          "dossierNote": "Dismissed university archivist with a key to half the Jesuit Block. Forges provenance papers for stolen manuscripts."
+        },
+        "nextLead": "A soaked map of the Iguazú falls boat route, marked in red ink."
       },
       "clues": [
         "The car receipt points west toward the Sierras de Córdoba.",
@@ -814,7 +958,15 @@
       "briefing": {
         "headline": "ESTANCIA BELL VANISHES!",
         "report": "A small mission bell disappeared from a heritage route display. Carmen left a road map toward Alta Gracia.",
-        "callingCard": "A stamped card reads: \"Follow the estancias beyond the city block.\""
+        "callingCard": "A stamped card reads: \"Follow the estancias beyond the city block.\"",
+        "suspect": {
+          "name": "Clara Cortázar",
+          "alias": "La Cátedra",
+          "emoji": "📚",
+          "role": "Rare-book thief and Jesuit-archive impostor",
+          "dossierNote": "Dismissed university archivist with a key to half the Jesuit Block. Forges provenance papers for stolen manuscripts."
+        },
+        "nextLead": "A soaked map of the Iguazú falls boat route, marked in red ink."
       },
       "clues": [
         "A UNESCO route note lists Jesuit estancias outside Córdoba city.",
@@ -859,7 +1011,15 @@
       "briefing": {
         "headline": "MURAL SKETCH DISAPPEARS!",
         "report": "A public-art sketch vanished from a cultural center near Nueva Córdoba. Carmen left paint flecks and a student bus card.",
-        "callingCard": "The red card says: \"Old walls, new crowds.\""
+        "callingCard": "The red card says: \"Old walls, new crowds.\"",
+        "suspect": {
+          "name": "Clara Cortázar",
+          "alias": "La Cátedra",
+          "emoji": "📚",
+          "role": "Rare-book thief and Jesuit-archive impostor",
+          "dossierNote": "Dismissed university archivist with a key to half the Jesuit Block. Forges provenance papers for stolen manuscripts."
+        },
+        "nextLead": "A soaked map of the Iguazú falls boat route, marked in red ink."
       },
       "clues": [
         "A bus card shows stops near Nueva Córdoba.",
@@ -906,7 +1066,15 @@
       "briefing": {
         "headline": "GUARANÍ CROWN JEWEL HEIST!",
         "report": "A sacred Guaraní golden jaguar pendant was stolen from the Misiones Rainforest Museum near Iguazú Falls. The thief escaped on a speed boat.",
-        "callingCard": "A park ranger map with waypoint distances marked: 1km, 1km, 2km, 3km, 5km..."
+        "callingCard": "A park ranger map with waypoint distances marked: 1km, 1km, 2km, 3km, 5km...",
+        "suspect": {
+          "name": "Iván Irala",
+          "alias": "El Iguazuano",
+          "emoji": "🚤",
+          "role": "Falls-boatman running goods across the triple frontier",
+          "dossierNote": "Ex-park boatman with a black-market ferry route under the Devil's Throat. Carries Carmen's couriers between three countries before dawn."
+        },
+        "nextLead": "A Bariloche chocolatier's business card with a microfilm receipt clipped to it."
       },
       "clues": [
         "A trail guide mentioning: \"Follow the Fibonacci progression of waypoints to the final viewpoint.\"",
@@ -951,7 +1119,15 @@
       "briefing": {
         "headline": "JUNGLE FIELD NOTES LIFTED!",
         "report": "A ranger notebook vanished from the park office. Carmen left damp footprints heading to a lower waterfall trail.",
-        "callingCard": "A wet card reads: \"Look below the mist.\""
+        "callingCard": "A wet card reads: \"Look below the mist.\"",
+        "suspect": {
+          "name": "Iván Irala",
+          "alias": "El Iguazuano",
+          "emoji": "🚤",
+          "role": "Falls-boatman running goods across the triple frontier",
+          "dossierNote": "Ex-park boatman with a black-market ferry route under the Devil's Throat. Carries Carmen's couriers between three countries before dawn."
+        },
+        "nextLead": "A Bariloche chocolatier's business card with a microfilm receipt clipped to it."
       },
       "clues": [
         "A trail pass is stamped Circuito Inferior.",
@@ -997,7 +1173,15 @@
       "briefing": {
         "headline": "BORDER COMPASS STOLEN!",
         "report": "A compass used for geography lessons disappeared. Carmen left three colored ribbons: Argentina, Brazil, and Paraguay.",
-        "callingCard": "A triangular card reads: \"Three countries, one river meeting.\""
+        "callingCard": "A triangular card reads: \"Three countries, one river meeting.\"",
+        "suspect": {
+          "name": "Iván Irala",
+          "alias": "El Iguazuano",
+          "emoji": "🚤",
+          "role": "Falls-boatman running goods across the triple frontier",
+          "dossierNote": "Ex-park boatman with a black-market ferry route under the Devil's Throat. Carries Carmen's couriers between three countries before dawn."
+        },
+        "nextLead": "A Bariloche chocolatier's business card with a microfilm receipt clipped to it."
       },
       "clues": [
         "A tourist map marks the Triple Frontier viewpoint.",
@@ -1043,7 +1227,15 @@
       "briefing": {
         "headline": "BORDER MARKER MEDALLION GONE!",
         "report": "A medallion from a river viewpoint display disappeared. Carmen left three colored ribbons pointing to Argentina, Brazil, and Paraguay.",
-        "callingCard": "A card says: \"Three borders, one red trail.\""
+        "callingCard": "A card says: \"Three borders, one red trail.\"",
+        "suspect": {
+          "name": "Iván Irala",
+          "alias": "El Iguazuano",
+          "emoji": "🚤",
+          "role": "Falls-boatman running goods across the triple frontier",
+          "dossierNote": "Ex-park boatman with a black-market ferry route under the Devil's Throat. Carries Carmen's couriers between three countries before dawn."
+        },
+        "nextLead": "A Bariloche chocolatier's business card with a microfilm receipt clipped to it."
       },
       "clues": [
         "A tourist map marks the Triple Frontier viewpoint.",
@@ -1088,7 +1280,15 @@
       "briefing": {
         "headline": "RAINFOREST TRAIN PASS STOLEN!",
         "report": "A special-access train pass vanished inside the national park. Carmen left muddy boot prints near a forest platform.",
-        "callingCard": "The note reads: \"Ride through the green before the roar.\""
+        "callingCard": "The note reads: \"Ride through the green before the roar.\"",
+        "suspect": {
+          "name": "Iván Irala",
+          "alias": "El Iguazuano",
+          "emoji": "🚤",
+          "role": "Falls-boatman running goods across the triple frontier",
+          "dossierNote": "Ex-park boatman with a black-market ferry route under the Devil's Throat. Carries Carmen's couriers between three countries before dawn."
+        },
+        "nextLead": "A Bariloche chocolatier's business card with a microfilm receipt clipped to it."
       },
       "clues": [
         "A platform note mentions the ecological train inside Iguazu National Park.",
@@ -1135,7 +1335,15 @@
       "briefing": {
         "headline": "CHOCOLATE SCULPTURE SWIPED!",
         "report": "A famous 50kg chocolate sculpture of Mount Fitz Roy was stolen from a chocolate shop on Mitre Street. The thief escaped into the Nahuel Huapi forest.",
-        "callingCard": "A ski pass for Cerro Otto with the signature \"Carmen\"."
+        "callingCard": "A ski pass for Cerro Otto with the signature \"Carmen\".",
+        "suspect": {
+          "name": "Berta Brügger",
+          "alias": "La Bombonera",
+          "emoji": "🍫",
+          "role": "Chocolatier and forger of alpine permits",
+          "dossierNote": "Third-generation Swiss-Argentine chocolatier. Hides Carmen's microfilm in pralines bound for Nahuel Huapi tour boats."
+        },
+        "nextLead": "A Beagle Channel weather log forged for an Ushuaia departure tomorrow."
       },
       "clues": [
         "A torn polaroid photo showing a cable car going up to a revolving cafeteria on Cerro Otto.",
@@ -1180,7 +1388,15 @@
       "briefing": {
         "headline": "LAKE CHART STOLEN!",
         "report": "A historic navigation chart vanished from a lakeside exhibit. Carmen left a chocolate wrapper folded into a boat.",
-        "callingCard": "A blue card reads: \"The lake reflects the route.\""
+        "callingCard": "A blue card reads: \"The lake reflects the route.\"",
+        "suspect": {
+          "name": "Berta Brügger",
+          "alias": "La Bombonera",
+          "emoji": "🍫",
+          "role": "Chocolatier and forger of alpine permits",
+          "dossierNote": "Third-generation Swiss-Argentine chocolatier. Hides Carmen's microfilm in pralines bound for Nahuel Huapi tour boats."
+        },
+        "nextLead": "A Beagle Channel weather log forged for an Ushuaia departure tomorrow."
       },
       "clues": [
         "The wrapper came from a chocolate shop on Mitre Street.",
@@ -1226,7 +1442,15 @@
       "briefing": {
         "headline": "ALPINE CLOCK FACE MISSING!",
         "report": "A decorative clock face disappeared from a civic exhibit. Carmen left boot prints in the town square.",
-        "callingCard": "A square card says: \"Stone walls, timber lines, civic time.\""
+        "callingCard": "A square card says: \"Stone walls, timber lines, civic time.\"",
+        "suspect": {
+          "name": "Berta Brügger",
+          "alias": "La Bombonera",
+          "emoji": "🍫",
+          "role": "Chocolatier and forger of alpine permits",
+          "dossierNote": "Third-generation Swiss-Argentine chocolatier. Hides Carmen's microfilm in pralines bound for Nahuel Huapi tour boats."
+        },
+        "nextLead": "A Beagle Channel weather log forged for an Ushuaia departure tomorrow."
       },
       "clues": [
         "The photo shows alpine-style stone and wood buildings.",
@@ -1272,7 +1496,15 @@
       "briefing": {
         "headline": "CLOCKTOWER BLUEPRINTS TAKEN!",
         "report": "Blueprints from a stone civic building vanished near Bariloche city center. Carmen left a chocolate wrapper on the plaza steps.",
-        "callingCard": "A red card says: \"Meet when the alpine clock strikes noon.\""
+        "callingCard": "A red card says: \"Meet when the alpine clock strikes noon.\"",
+        "suspect": {
+          "name": "Berta Brügger",
+          "alias": "La Bombonera",
+          "emoji": "🍫",
+          "role": "Chocolatier and forger of alpine permits",
+          "dossierNote": "Third-generation Swiss-Argentine chocolatier. Hides Carmen's microfilm in pralines bound for Nahuel Huapi tour boats."
+        },
+        "nextLead": "A Beagle Channel weather log forged for an Ushuaia departure tomorrow."
       },
       "clues": [
         "A plaza sketch shows stone-and-wood civic buildings.",
@@ -1317,7 +1549,15 @@
       "briefing": {
         "headline": "LAKE CHART SNATCHED!",
         "report": "A navigation chart disappeared from a boat office. Carmen fled toward a dock on Nahuel Huapi Lake.",
-        "callingCard": "The card says: \"Blue water, dark forest, red coat.\""
+        "callingCard": "The card says: \"Blue water, dark forest, red coat.\"",
+        "suspect": {
+          "name": "Berta Brügger",
+          "alias": "La Bombonera",
+          "emoji": "🍫",
+          "role": "Chocolatier and forger of alpine permits",
+          "dossierNote": "Third-generation Swiss-Argentine chocolatier. Hides Carmen's microfilm in pralines bound for Nahuel Huapi tour boats."
+        },
+        "nextLead": "A Beagle Channel weather log forged for an Ushuaia departure tomorrow."
       },
       "clues": [
         "A boat ticket names Nahuel Huapi Lake.",
@@ -1364,7 +1604,15 @@
       "briefing": {
         "headline": "HISTORIC LIGHTHOUSE DIAL STOLEN!",
         "report": "The original brass lens rotation gear from the Les Eclaireurs Lighthouse was stolen in the dead of night. The thief escaped by sailboat into the Beagle Channel.",
-        "callingCard": "A maritime map grid with compass commands: 'Start at Port. Go East 4, South 2.'"
+        "callingCard": "A maritime map grid with compass commands: 'Start at Port. Go East 4, South 2.'",
+        "suspect": {
+          "name": "Ulises Urrutia",
+          "alias": "El Austral",
+          "emoji": "⚓",
+          "role": "Disgraced expedition captain, polar relic smuggler",
+          "dossierNote": "Stripped of his master's license after a Beagle Channel scandal. Sells berth space on southern cruises to anyone with a forged research badge."
+        },
+        "nextLead": "A glaciology permit forged with last week's date, addressed to El Calafate."
       },
       "clues": [
         "A lighthouse keeper's log noting: \"A suspicious woman was asking for the key to the main beacon.\"",
@@ -1409,7 +1657,15 @@
       "briefing": {
         "headline": "SHIP LOG BOOK STOLEN!",
         "report": "A Beagle Channel ship log vanished before morning departure. Carmen left a red scarf tied to a pier cleat.",
-        "callingCard": "A salt-stained card reads: \"Follow the channel at the end of the world.\""
+        "callingCard": "A salt-stained card reads: \"Follow the channel at the end of the world.\"",
+        "suspect": {
+          "name": "Ulises Urrutia",
+          "alias": "El Austral",
+          "emoji": "⚓",
+          "role": "Disgraced expedition captain, polar relic smuggler",
+          "dossierNote": "Stripped of his master's license after a Beagle Channel scandal. Sells berth space on southern cruises to anyone with a forged research badge."
+        },
+        "nextLead": "A glaciology permit forged with last week's date, addressed to El Calafate."
       },
       "clues": [
         "The manifest lists a small boat crossing the Beagle Channel.",
@@ -1455,7 +1711,15 @@
       "briefing": {
         "headline": "POSTMARK PLATE PILFERED!",
         "report": "A souvenir postmark plate disappeared from a remote tourism desk. Carmen left a postcard marked \"Fin del Mundo.\"",
-        "callingCard": "The card reads: \"Send the warrant to the last post.\""
+        "callingCard": "The card reads: \"Send the warrant to the last post.\"",
+        "suspect": {
+          "name": "Ulises Urrutia",
+          "alias": "El Austral",
+          "emoji": "⚓",
+          "role": "Disgraced expedition captain, polar relic smuggler",
+          "dossierNote": "Stripped of his master's license after a Beagle Channel scandal. Sells berth space on southern cruises to anyone with a forged research badge."
+        },
+        "nextLead": "A glaciology permit forged with last week's date, addressed to El Calafate."
       },
       "clues": [
         "The clue points to end-of-the-world tourism routes.",
@@ -1501,7 +1765,15 @@
       "briefing": {
         "headline": "RAIL SPIKE RELIC STOLEN!",
         "report": "A railway relic vanished from a southern heritage display. Carmen left a ticket marked End of the World Train.",
-        "callingCard": "The card reads: \"Follow the last rails south.\""
+        "callingCard": "The card reads: \"Follow the last rails south.\"",
+        "suspect": {
+          "name": "Ulises Urrutia",
+          "alias": "El Austral",
+          "emoji": "⚓",
+          "role": "Disgraced expedition captain, polar relic smuggler",
+          "dossierNote": "Stripped of his master's license after a Beagle Channel scandal. Sells berth space on southern cruises to anyone with a forged research badge."
+        },
+        "nextLead": "A glaciology permit forged with last week's date, addressed to El Calafate."
       },
       "clues": [
         "A heritage ticket points to the End of the World Train.",
@@ -1546,7 +1818,15 @@
       "briefing": {
         "headline": "ICE AXE HANDLE MISSING!",
         "report": "A historic mountaineering handle disappeared from a local display. Carmen left crampon marks pointing toward Martial Glacier.",
-        "callingCard": "A blue card says: \"Climb above the harbor and look back.\""
+        "callingCard": "A blue card says: \"Climb above the harbor and look back.\"",
+        "suspect": {
+          "name": "Ulises Urrutia",
+          "alias": "El Austral",
+          "emoji": "⚓",
+          "role": "Disgraced expedition captain, polar relic smuggler",
+          "dossierNote": "Stripped of his master's license after a Beagle Channel scandal. Sells berth space on southern cruises to anyone with a forged research badge."
+        },
+        "nextLead": "A glaciology permit forged with last week's date, addressed to El Calafate."
       },
       "clues": [
         "A trail note names Martial Glacier.",
@@ -1593,7 +1873,15 @@
       "briefing": {
         "headline": "GLACIER ICE CORE PILFERED!",
         "report": "A scientific ice core sample representing 10,000 years of climate history was stolen from the Glaciarium Museum. The thief left a final note taunting the police.",
-        "callingCard": "A letter: \"You've chased me far, detective. But my final hideout is locked behind the symbols of my journey.\""
+        "callingCard": "A letter: \"You've chased me far, detective. But my final hideout is locked behind the symbols of my journey.\"",
+        "suspect": {
+          "name": "Eva Errázuriz",
+          "alias": "La Esmeralda",
+          "emoji": "🥽",
+          "role": "Carmen's local fixer, masquerading as a glaciologist",
+          "dossierNote": "Former Los Glaciares park scientist. Forges climate-research permits and books Carmen's escape routes across the ice field."
+        },
+        "nextLead": "A hand-scrawled bearing across the ice field. Carmen's coordinates — and she knows you have them."
       },
       "clues": [
         "A tour guide pamphlet: \"Walk the Perito Moreno Glacier catwalks.\"",
@@ -1638,7 +1926,15 @@
       "briefing": {
         "headline": "ICE AGE DIAGRAM TAKEN!",
         "report": "A glacier formation diagram disappeared from a science exhibit. Carmen left a frosted envelope stamped Glaciarium.",
-        "callingCard": "A cold card reads: \"Learn the ice before you cross it.\""
+        "callingCard": "A cold card reads: \"Learn the ice before you cross it.\"",
+        "suspect": {
+          "name": "Eva Errázuriz",
+          "alias": "La Esmeralda",
+          "emoji": "🥽",
+          "role": "Carmen's local fixer, masquerading as a glaciologist",
+          "dossierNote": "Former Los Glaciares park scientist. Forges climate-research permits and books Carmen's escape routes across the ice field."
+        },
+        "nextLead": "A hand-scrawled bearing across the ice field. Carmen's coordinates — and she knows you have them."
       },
       "clues": [
         "A museum ticket is stamped Glaciarium.",
@@ -1684,7 +1980,15 @@
       "briefing": {
         "headline": "PATAGONIAN ROUTE MAP GONE!",
         "report": "A route map for glacier boats vanished from a travel office. Carmen left a blue ticket stub beside a windblown berry branch.",
-        "callingCard": "A card reads: \"Where the lake carries ice, I carry the loot.\""
+        "callingCard": "A card reads: \"Where the lake carries ice, I carry the loot.\"",
+        "suspect": {
+          "name": "Eva Errázuriz",
+          "alias": "La Esmeralda",
+          "emoji": "🥽",
+          "role": "Carmen's local fixer, masquerading as a glaciologist",
+          "dossierNote": "Former Los Glaciares park scientist. Forges climate-research permits and books Carmen's escape routes across the ice field."
+        },
+        "nextLead": "A hand-scrawled bearing across the ice field. Carmen's coordinates — and she knows you have them."
       },
       "clues": [
         "The boat ticket references Lago Argentino.",
@@ -1730,7 +2034,15 @@
       "briefing": {
         "headline": "LAKE SOUNDING LOG TAKEN!",
         "report": "A boat log from Lago Argentino vanished before a glacier excursion. Carmen left a blue ticket stub near the pier.",
-        "callingCard": "The card says: \"Follow the largest blue mirror to the ice.\""
+        "callingCard": "The card says: \"Follow the largest blue mirror to the ice.\"",
+        "suspect": {
+          "name": "Eva Errázuriz",
+          "alias": "La Esmeralda",
+          "emoji": "🥽",
+          "role": "Carmen's local fixer, masquerading as a glaciologist",
+          "dossierNote": "Former Los Glaciares park scientist. Forges climate-research permits and books Carmen's escape routes across the ice field."
+        },
+        "nextLead": "A hand-scrawled bearing across the ice field. Carmen's coordinates — and she knows you have them."
       },
       "clues": [
         "A ferry ticket names Lago Argentino.",
@@ -1775,7 +2087,15 @@
       "briefing": {
         "headline": "CLIMATE CORE LABEL STOLEN!",
         "report": "A museum label for an ice-core exhibit disappeared. Carmen left a chilled glove at the Glaciarium exit.",
-        "callingCard": "A frosted card says: \"The past is frozen in layers.\""
+        "callingCard": "A frosted card says: \"The past is frozen in layers.\"",
+        "suspect": {
+          "name": "Eva Errázuriz",
+          "alias": "La Esmeralda",
+          "emoji": "🥽",
+          "role": "Carmen's local fixer, masquerading as a glaciologist",
+          "dossierNote": "Former Los Glaciares park scientist. Forges climate-research permits and books Carmen's escape routes across the ice field."
+        },
+        "nextLead": "A hand-scrawled bearing across the ice field. Carmen's coordinates — and she knows you have them."
       },
       "clues": [
         "A museum wristband is stamped Glaciarium.",

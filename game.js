@@ -9,6 +9,13 @@ let LOCATIONS = [
     emoji: '🏛️',
     tagline: 'The Paris of South America',
     lat: -34.6037, lng: -58.3816,
+    henchman: {
+      name: 'Tito Trapaza',
+      alias: 'El Tanguero',
+      emoji: '🎻',
+      role: 'Forger of opera scores and theater blueprints',
+      dossierNote: "Former Teatro Colón sub-musician. Expelled for selling rehearsal tapes. Moves through stagehand crews and tango salons."
+    },
     briefing: {
       headline: 'NATIONAL LIBRARY LARCENY!',
       report: 'A mysterious figure in a red trench coat broke into the National Library of Buenos Aires last night. She bypassed the security grid and stole the original manuscript of Jorge Luis Borges\' "Ficciones". A witness saw her fleeing towards a tango salon in La Boca.',
@@ -45,6 +52,13 @@ let LOCATIONS = [
     emoji: '🍷',
     tagline: 'Wine country at the foot of the Andes',
     lat: -32.8902, lng: -68.8458,
+    henchman: {
+      name: 'Vera Vicario',
+      alias: 'La Vendimia',
+      emoji: '🍇',
+      role: 'Label forger and irrigation-canal smuggler',
+      dossierNote: "Trained sommelier. Forges vintage labels and uses high-Andean canal routes to move Carmen's contraband past customs."
+    },
     briefing: {
       headline: 'VINTAGE MALBEC VANISHES!',
       report: 'The oldest bottle of Malbec wine in Argentina, dating back to the 19th century, was stolen from a historic winery cellar in Mendoza. The thief left behind coordinate details on an empty bottle label.',
@@ -81,6 +95,13 @@ let LOCATIONS = [
     emoji: '🏔️',
     tagline: 'Colonial charm in the mountainous north',
     lat: -24.7821, lng: -65.4232,
+    henchman: {
+      name: 'Saúl Sandoval',
+      alias: 'El Salteño',
+      emoji: '🐎',
+      role: 'Caravan smuggler trafficking colonial relics',
+      dossierNote: "Former muleteer on the old salt caravans. Now runs Carmen's relic pipeline through the Quebrada de Humahuaca."
+    },
     briefing: {
       headline: 'CLOUD TRAIN LOCOMOTIVE LOOTED!',
       report: 'A scale gold model of the Tren a las Nubes locomotive was stolen from the Salta Cathedral museum. The thief was seen fleeing towards the railway station.',
@@ -117,6 +138,13 @@ let LOCATIONS = [
     emoji: '🎸',
     tagline: 'Historic university town in the Sierras',
     lat: -31.4201, lng: -64.1888,
+    henchman: {
+      name: 'Clara Cortázar',
+      alias: 'La Cátedra',
+      emoji: '📚',
+      role: 'Rare-book thief and Jesuit-archive impostor',
+      dossierNote: "Dismissed university archivist with a key to half the Jesuit Block. Forges provenance papers for stolen manuscripts."
+    },
     briefing: {
       headline: 'JESUIT TREASURE STOLEN!',
       report: 'An ancient 17th-century telescope was stolen from the National University of Córdoba. The thief left a series of logic riddles on a study desk.',
@@ -153,6 +181,13 @@ let LOCATIONS = [
     emoji: '🌊',
     tagline: 'The Great Waters',
     lat: -25.5991, lng: -54.5736,
+    henchman: {
+      name: 'Iván Irala',
+      alias: 'El Iguazuano',
+      emoji: '🚤',
+      role: 'Falls-boatman running goods across the triple frontier',
+      dossierNote: "Ex-park boatman with a black-market ferry route under the Devil's Throat. Carries Carmen's couriers between three countries before dawn."
+    },
     briefing: {
       headline: 'GUARANÍ CROWN JEWEL HEIST!',
       report: 'A sacred Guaraní golden jaguar pendant was stolen from the Misiones Rainforest Museum near Iguazú Falls. The thief escaped on a speed boat.',
@@ -189,6 +224,13 @@ let LOCATIONS = [
     emoji: '🏔️',
     tagline: 'Swiss alpine charm and glacial lakes',
     lat: -41.1335, lng: -71.3103,
+    henchman: {
+      name: 'Berta Brügger',
+      alias: 'La Bombonera',
+      emoji: '🍫',
+      role: 'Chocolatier and forger of alpine permits',
+      dossierNote: "Third-generation Swiss-Argentine chocolatier. Hides Carmen's microfilm in pralines bound for Nahuel Huapi tour boats."
+    },
     briefing: {
       headline: 'CHOCOLATE SCULPTURE SWIPED!',
       report: 'A famous 50kg chocolate sculpture of Mount Fitz Roy was stolen from a chocolate shop on Mitre Street. The thief escaped into the Nahuel Huapi forest.',
@@ -225,6 +267,13 @@ let LOCATIONS = [
     emoji: '🚢',
     tagline: 'The End of the World',
     lat: -54.8019, lng: -68.3030,
+    henchman: {
+      name: 'Ulises Urrutia',
+      alias: 'El Austral',
+      emoji: '⚓',
+      role: 'Disgraced expedition captain, polar relic smuggler',
+      dossierNote: "Stripped of his master's license after a Beagle Channel scandal. Sells berth space on southern cruises to anyone with a forged research badge."
+    },
     briefing: {
       headline: 'HISTORIC LIGHTHOUSE DIAL STOLEN!',
       report: 'The original brass lens rotation gear from the Les Eclaireurs Lighthouse was stolen in the dead of night. The thief escaped by sailboat into the Beagle Channel.',
@@ -261,6 +310,13 @@ let LOCATIONS = [
     emoji: '🧊',
     tagline: 'Gateway to the Perito Moreno Glacier',
     lat: -50.3381, lng: -72.2648,
+    henchman: {
+      name: 'Eva Errázuriz',
+      alias: 'La Esmeralda',
+      emoji: '🥽',
+      role: "Carmen's local fixer, masquerading as a glaciologist",
+      dossierNote: "Former Los Glaciares park scientist. Forges climate-research permits and books Carmen's escape routes across the ice field."
+    },
     briefing: {
       headline: 'GLACIER ICE CORE PILFERED!',
       report: 'A scientific ice core sample representing 10,000 years of climate history was stolen from the Glaciarium Museum. The thief left a final note taunting the police.',
@@ -448,6 +504,34 @@ function getLocationCase(locationIndex) {
   const selectedCase = pool.find(item => item.caseId === state.caseVariantIds[locationIndex]) || pool[0];
 
   return { ...location, ...selectedCase };
+}
+
+function getSuspect(loc) {
+  return (loc.briefing && loc.briefing.suspect) || loc.henchman || null;
+}
+
+function renderSuspectCard(loc) {
+  const card = document.getElementById('suspectCard');
+  if (!card) return;
+  const suspect = getSuspect(loc);
+  if (!suspect) {
+    card.classList.add('hidden');
+    return;
+  }
+  card.classList.remove('hidden');
+  document.getElementById('suspectMugshot').textContent = suspect.emoji || '🕵️';
+  document.getElementById('suspectName').textContent = suspect.name || 'Unknown accomplice';
+  const aliasWrapper = document.getElementById('suspectAliasWrapper');
+  const aliasNode = document.getElementById('suspectAlias');
+  if (suspect.alias) {
+    aliasNode.textContent = suspect.alias;
+    aliasWrapper.classList.remove('hidden');
+  } else {
+    aliasNode.textContent = '';
+    aliasWrapper.classList.add('hidden');
+  }
+  document.getElementById('suspectRole').textContent = suspect.role || '';
+  document.getElementById('suspectDossier').textContent = suspect.dossierNote || '';
 }
 
 function getAllWarrantChoices(field) {
@@ -1005,9 +1089,10 @@ function startLocation() {
   
   document.getElementById('caseCityNumber').textContent = `Location ${state.currentLocationIndex + 1} of 8`;
   document.getElementById('briefingHeadline').textContent = loc.briefing.headline;
-  
+
   typeWriterEffect('briefingReport', loc.briefing.report);
   document.getElementById('callingCardNote').textContent = `"${loc.briefing.callingCard}"`;
+  renderSuspectCard(loc);
   
   // Populate Clues Cards
   document.querySelectorAll('.clue-flip-container').forEach(el => el.classList.remove('flipped'));
@@ -1478,7 +1563,7 @@ function submitWarrant() {
     saveGame(saveAfterSuccess);
     
     setTimeout(() => {
-      triggerTransitionRound(true);
+      triggerTransitionRound();
     }, 1800);
   } else {
     sound.fail();
@@ -1506,41 +1591,51 @@ function submitWarrant() {
 // ============================================================
 // TRANSITIONS AND ROUND OVER FLOWS
 // ============================================================
-function triggerTransitionRound(success) {
+function triggerTransitionRound() {
   const currentLoc = getLocationCase(state.currentLocationIndex);
   const container = document.getElementById('betweenContent');
-  
+
   sound.travel();
-  
-  let scoreDetails = '';
-  if (success) {
-    const detailRows = [
-      ['Puzzle', state.roundScore.puzzle],
-      ['Warrant', state.roundScore.warrant],
-      ['Streak', state.roundScore.streak]
-    ].filter(([, points]) => points > 0);
-    
-    scoreDetails = `<div class="glass rounded-xl p-4 inline-block mx-auto text-center border border-white/10 shadow-lg">
-      <p class="text-slate-400 text-xs uppercase tracking-wider font-semibold">ACME Merits Awarded</p>
-      <p class="text-3xl font-black text-amber-400">+${state.roundScore.total} Points</p>
-      <div class="mt-2 space-y-1 text-[10px] text-slate-400 font-semibold uppercase tracking-wider">
-        ${detailRows.map(([label, points]) => `<div>${label}: +${points}</div>`).join('')}
-      </div>
-      ${state.streak > 1 ? `<p class="text-emerald-400 text-xs font-bold mt-2">${state.streak}x Capture Streak</p>` : ''}
-    </div>`;
-  }
-  
+
+  const detailRows = [
+    ['Puzzle', state.roundScore.puzzle],
+    ['Warrant', state.roundScore.warrant],
+    ['Streak', state.roundScore.streak]
+  ].filter(([, points]) => points > 0);
+
+  const scoreDetails = `<div class="glass rounded-xl p-4 inline-block mx-auto text-center border border-white/10 shadow-lg">
+    <p class="text-slate-400 text-xs uppercase tracking-wider font-semibold">ACME Merits Awarded</p>
+    <p class="text-3xl font-black text-amber-400">+${state.roundScore.total} Points</p>
+    <div class="mt-2 space-y-1 text-[10px] text-slate-400 font-semibold uppercase tracking-wider">
+      ${detailRows.map(([label, points]) => `<div>${label}: +${points}</div>`).join('')}
+    </div>
+    ${state.streak > 1 ? `<p class="text-emerald-400 text-xs font-bold mt-2">${state.streak}x Capture Streak</p>` : ''}
+  </div>`;
+
+  const suspect = getSuspect(currentLoc);
+  const headline = suspect ? `${suspect.alias || suspect.name} APPREHENDED!` : 'ACCOMPLICE BOOKED!';
+  const successCopy = suspect
+    ? `<span class="text-amber-400 font-extrabold">${suspect.name}</span> is in ACME custody. Carmen's network in <span class="text-amber-400 font-extrabold">${currentLoc.name}</span> just lost an operative.`
+    : `Excellent work! You cornered and detained the suspect in <span class="text-amber-400 font-extrabold">${currentLoc.name}</span>!`;
+  const nextLeadBlock = (currentLoc.briefing && currentLoc.briefing.nextLead)
+    ? `<div class="glass rounded-xl p-4 border border-amber-300/20 text-left max-w-md mx-auto shadow-xl bg-amber-500/5">
+        <p class="text-[10px] uppercase tracking-widest font-black text-amber-400 mb-1">Seized From Suspect — Next Lead</p>
+        <p class="text-slate-200 text-xs leading-relaxed italic">${currentLoc.briefing.nextLead}</p>
+      </div>`
+    : '';
+
   container.innerHTML = `
-    <div class="text-6xl mb-4">${success ? '🎉' : '🏃‍♀️'}</div>
-    <h3 class="title-font text-4xl font-extrabold ${success ? 'text-emerald-400' : 'text-red-400'} leading-tight tracking-wide">
-      ${success ? 'CARMEN ARRESTED!' : 'CARMEN ESCAPED!'}
+    <div class="text-6xl mb-4">🎉</div>
+    <h3 class="title-font text-4xl font-extrabold text-emerald-400 leading-tight tracking-wide">
+      ${headline}
     </h3>
     <p class="text-slate-200 text-lg">
-      ${success ? `Excellent work! You cornered and detained the suspect in <span class="text-amber-400 font-extrabold">${currentLoc.name}</span>!` 
-                : `Foiled! Carmen slipped past your web and fled the province of <span class="text-red-400 font-extrabold">${currentLoc.name}</span>!`}
+      ${successCopy}
     </p>
-    
+
     ${scoreDetails}
+
+    ${nextLeadBlock}
 
     <div class="glass rounded-xl p-5 border border-white/10 text-left max-w-md mx-auto shadow-xl">
       <div class="flex items-center gap-2 border-b border-white/5 pb-2 mb-2">
@@ -1583,7 +1678,10 @@ function startFinalConfrontationRound() {
   updateHUD();
   drawMapGrid();
   renderTokenGrid();
-  
+
+  const suspectCard = document.getElementById('suspectCard');
+  if (suspectCard) suspectCard.classList.add('hidden');
+
   document.getElementById('tabDossier').disabled = true;
   document.getElementById('tabClues').disabled = true;
   document.getElementById('tabPuzzle').disabled = false;

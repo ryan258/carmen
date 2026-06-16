@@ -6,8 +6,10 @@ Every case in `question-bank.json` must satisfy this contract before it is treat
 
 - `caseId`: stable, unique identifier.
 - `briefing.headline`: short ACME-style incident title.
-- `briefing.report`: narrative setup tied to the location.
-- `briefing.callingCard`: Carmen clue language.
+- `briefing.report`: narrative setup tied to the location. Carmen herself is offstage by the time the player lands; the brief should make clear that the on-site target is one of her accomplices, not Carmen.
+- `briefing.callingCard`: Carmen taunt language, written as if sent from a distance (not as on-scene dialogue).
+- `briefing.suspect`: the V.I.L.E. accomplice the player will actually arrest. Object with `name`, `alias`, `emoji`, `role`, and `dossierNote`. Defaults inherit from the canon roster on `data/argentina-regions.json`; cases may override `dossierNote` for round-specific flavor.
+- `briefing.nextLead` (recommended): one-sentence breadcrumb seized from the suspect that points toward the next city. The final El Calafate round's nextLead points at Carmen herself.
 - `clues`: exactly three inspectable clues.
 - `puzzle.title`: puzzle name.
 - `puzzle.description`: explanation of the puzzle action.
