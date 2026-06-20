@@ -18,7 +18,13 @@ test('html references the split production assets in dependency order', () => {
 });
 
 test('referenced local assets exist', () => {
-  ['styles.css', 'run-generator.js', 'game.js', 'question-bank.json', 'data/argentina-regions.json', 'data/sources.json'].forEach((fileName) => {
+  ['styles.css', 'tailwind.build.css', 'run-generator.js', 'game.js', 'question-bank.json', 'data/argentina-regions.json', 'data/sources.json'].forEach((fileName) => {
     assert.ok(fs.existsSync(path.join(root, fileName)), `${fileName} exists`);
   });
+});
+
+test('production html does not depend on the Tailwind CDN', () => {
+  const html = fs.readFileSync(path.join(root, 'carmen-sandiego-argentina.html'), 'utf8');
+  assert.ok(!html.includes('cdn.tailwindcss.com'), 'Tailwind CDN must not be referenced; use tailwind.build.css');
+  assert.ok(html.includes('tailwind.build.css'), 'local Tailwind build is linked');
 });

@@ -2,13 +2,15 @@
 
 ## Tailwind
 
-The current build still uses the Tailwind CDN. This is acceptable for prototype work, but not for production because the app depends on a remote runtime stylesheet generator.
+Done. The Tailwind CDN has been replaced with a checked-in build (`tailwind.build.css`),
+generated from the project's utility usage via `tailwind.config.js`. Rebuild with:
 
-Production direction:
+```sh
+npx tailwindcss -i tailwind.input.css -o tailwind.build.css --minify
+```
 
-- Replace the CDN with a checked-in stylesheet generated from the current utility classes, or migrate the remaining utility usage into `styles.css`.
-- Keep `styles.css` as the source of truth for the Saul Bass-inspired design system.
-- Add a smoke test that fails if `cdn.tailwindcss.com` remains in production HTML once the migration starts.
+- `styles.css` remains the source of truth for the Saul Bass-inspired design system.
+- `tests/smoke.test.js` fails if `cdn.tailwindcss.com` reappears in production HTML.
 
 ## Map Tiles
 
@@ -22,6 +24,6 @@ Decision:
 
 ## Production Risk
 
-- Tailwind CDN is the largest remaining frontend dependency risk.
+- Leaflet remote tiles are now the largest remaining frontend dependency risk.
 - Leaflet remote tiles are acceptable only with fallback and clear credits.
 - Browser smoke tests should cover both normal Leaflet mode and simulated no-Leaflet fallback mode.

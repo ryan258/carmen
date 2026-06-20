@@ -115,6 +115,17 @@ test('every case satisfies the content schema contract', () => {
   });
 });
 
+test('every location has a final-puzzle token symbol', () => {
+  // LOCATION_SYMBOLS is hard-coded in game.js; renderTokenGrid() crashes if a location id is missing.
+  const gameSource = fs.readFileSync(path.join(root, 'game.js'), 'utf8');
+  const block = gameSource.match(/const LOCATION_SYMBOLS\s*=\s*\{([\s\S]*?)\};/);
+  assert.ok(block, 'LOCATION_SYMBOLS object not found in game.js');
+  const symbolIds = [...block[1].matchAll(/'([^']+)'\s*:/g)].map((m) => m[1]);
+  regionData.locations.forEach((loc) => {
+    assert.ok(symbolIds.includes(loc.id), `LOCATION_SYMBOLS missing entry for location "${loc.id}"`);
+  });
+});
+
 test('source registry entries are usable', () => {
   Object.entries(sourceRegistry).forEach(([sourceId, source]) => {
     assert.equal(typeof source.title, 'string', `${sourceId} title`);

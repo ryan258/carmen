@@ -65,7 +65,9 @@ function applyToCity(cityId) {
   cases.forEach((caseData) => {
     caseData.briefing = caseData.briefing || {};
     const override = (cityId === 'buenos-aires' && buenosAiresOverrides[caseData.caseId]) || null;
-    const dossierNote = (override && override.suspectNote) || henchman.dossierNote;
+    const existingNote = caseData.briefing.suspect && caseData.briefing.suspect.dossierNote;
+    // Per docs/new-location.md: preserve an author's round-specific dossierNote; otherwise use canon.
+    const dossierNote = (override && override.suspectNote) || existingNote || henchman.dossierNote;
     caseData.briefing.suspect = {
       name: henchman.name,
       alias: henchman.alias,

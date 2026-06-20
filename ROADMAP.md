@@ -12,7 +12,9 @@ results explain themselves, cases replay differently, and tests pass (`npm test`
 Items marked **Cut (YAGNI)** were closed by decision, not code.
 
 Recently completed (see CHANGELOG): Tailwind CDN replaced with a local build; accessibility
-static audit + color-alone fix.
+static audit + color-alone fix; post-review hardening — warrant submission made idempotent,
+keyboard shortcuts now respect locked answer buttons, `LOCATION_SYMBOLS` coverage test added,
+Tailwind-CDN guard smoke test added, stale difficulty/dependency copy corrected.
 
 What genuinely still needs building (no shortcut exists — these are real work):
 
@@ -20,7 +22,9 @@ What genuinely still needs building (no shortcut exists — these are real work)
 2. **Fact-checking + breadth to 50 cases** (Content Phases 2–3) — 40 cases now, none source-verified line by line.
 3. **Accessibility QA** (Accessibility Roadmap) — static audit done; interactive keyboard/zoom/reduced-motion/mobile testing still needs a human (`docs/a11y-qa.md`).
 
-Pick one to start; don't try to clear the whole board at once.
+The remaining unchecked boxes below split into two kinds: **big features** (1–2 above) and
+**manual QA a human must confirm** — the latter are gathered in `docs/manual-qa.md`.
+Pick one feature to start; don't try to clear the whole board at once.
 
 ## Product Principles
 
