@@ -669,10 +669,13 @@ window.onload = async () => {
     if (puzzleTabActive && !state.puzzleSolved) {
       const indexByKey = { a: 0, 1: 0, b: 1, 2: 1, c: 2, 3: 2, d: 3, 4: 3 };
       if (key in indexByKey) {
+        const idx = indexByKey[key];
+        const buttons = document.querySelectorAll('.option-btn');
+        if (buttons[idx] && buttons[idx].disabled) return; // respect locked buttons during answer timeout
         if (state.isFinalConfrontation) {
-          selectFinalChoice(indexByKey[key], state.activeFinalCorrectIndex);
+          selectFinalChoice(idx, state.activeFinalCorrectIndex);
         } else {
-          selectChoice(indexByKey[key]);
+          selectChoice(idx);
         }
       }
     }
@@ -1066,6 +1069,7 @@ function startLocation() {
   state.hintsUsedInRound = 0;
   state.roundScore = createRoundScore();
   state.warrantIssued = false;
+  document.getElementById('submitWarrantBtn').disabled = false;
   state.activeTab = 'dossier';
 
   saveGame();
@@ -1474,6 +1478,7 @@ function buildWarrantDropdowns(currentLoc) {
 }
 
 function submitWarrant() {
+  if (state.warrantIssued) return; // already approved this round; ignore repeat clicks during transition
   const cityVal = document.getElementById('warrantCity').value;
   const hideoutVal = document.getElementById('warrantHideout').value;
   const disguiseVal = document.getElementById('warrantDisguise').value;
@@ -1506,7 +1511,8 @@ function submitWarrant() {
       addRoundPoints('streak', streakBonus);
     }
     state.warrantIssued = true;
-    
+    document.getElementById('submitWarrantBtn').disabled = true;
+
     if (!state.clueTokens.includes(currentLoc.id)) {
       state.clueTokens.push(currentLoc.id);
     }
