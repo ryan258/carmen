@@ -2,13 +2,31 @@
 
 Build a production-grade Argentina edutainment detective game that is coherent as a game, accurate as educational material, and polished enough to replay. The finished game should feel like one intentional work: a Carmen-inspired geography mystery with a mid-century cut-paper visual language, high-fidelity Argentina mapping, meaningful puzzle variety, and trustworthy cultural content.
 
+Completed work has moved to [CHANGELOG.md](CHANGELOG.md); this file tracks only what's left
+plus deliberate scope cuts.
+
+## Reality Check (2026-06-20)
+
+The game already meets most of its own Definition of Done: a full randomized run plays,
+results explain themselves, cases replay differently, and tests pass (`npm test`, 0 fail).
+Items marked **Cut (YAGNI)** were closed by decision, not code.
+
+Recently completed (see CHANGELOG): Tailwind CDN replaced with a local build; accessibility
+static audit + color-alone fix.
+
+What genuinely still needs building (no shortcut exists — these are real work):
+
+1. **Puzzle engines** (Gameplay Phase 2) — everything is multiple-choice today. Biggest single lift.
+2. **Fact-checking + breadth to 50 cases** (Content Phases 2–3) — 40 cases now, none source-verified line by line.
+3. **Accessibility QA** (Accessibility Roadmap) — static audit done; interactive keyboard/zoom/reduced-motion/mobile testing still needs a human (`docs/a11y-qa.md`).
+
+Pick one to start; don't try to clear the whole board at once.
+
 ## Product Principles
 
 - [ ] Every case teaches something real and inferable from clues.
-- [x] Every run feels different but fair.
 - [ ] Every puzzle mechanic has a reason to exist.
 - [ ] The map remains geographically credible.
-- [x] The art direction is established as Saul Bass-inspired cut-paper poster design.
 
 ## Coherence Targets
 
@@ -21,22 +39,16 @@ Build a production-grade Argentina edutainment detective game that is coherent a
 
 ### Educational Coherence
 
-- [x] Create a content rubric in `docs/content-rubric.md`.
-- [x] Add content metadata fields to every current case.
 - [ ] Fact-check every educational claim against reliable sources.
 - [ ] Avoid reducing Argentina to only tourist landmarks by expanding regional and cultural breadth.
 - [ ] Distinguish Argentina-specific facts from broader Latin American generalities.
 
 ### Mechanical Coherence
 
-- [x] Standardize each case around briefing, three clues, one puzzle, warrant fields, result explanation, and educational card.
-- [x] Make scoring predictable for current multiple-choice mechanics.
-- [x] Make difficulty modes mechanically distinct beyond lives.
 - [ ] Build richer puzzle engines beyond multiple choice.
 
 ### Visual Coherence
 
-- [x] Establish a design system in `docs/visual-system.md`.
 - [ ] Keep all case illustrations in the same cut-paper/poster vocabulary.
 - [ ] Replace all emoji-led visuals with deliberate vector, CSS, or bitmap evidence art where needed.
 
@@ -44,42 +56,27 @@ Build a production-grade Argentina edutainment detective game that is coherent a
 
 ### Phase 1: Content Model
 
-- [x] Formalize the `question-bank.json` schema through `tests/content-validation.test.js`.
-- [x] Add validation for required fields, unique `caseId`, option count, valid `correctIndex`, and complete warrant answers.
-- [x] Add support for `learningObjective`, `sources`, `difficulty`, `mechanic`, `regionTags`, `visualType`, and `accessibilityDescription`.
-- [x] Split classic cases into the same JSON pipeline as randomized cases.
-- [x] Move location metadata into dedicated `data/argentina-regions.json`.
-- [x] Move citation entries into dedicated `data/sources.json`.
+_Complete — see CHANGELOG._
 
 ### Phase 2: Breadth
 
-- [x] Reach at least 3 cases per existing location for the alpha gate.
-- [x] Expand each existing location to at least 5 cases.
 - [ ] Add optional case pools for Jujuy, Tucuman, Rosario, Mar del Plata, Peninsula Valdes, El Chalten, La Plata, San Juan, Esteros del Ibera, and Tierra del Fuego National Park.
 - [ ] Reach at least 50 total cases before calling the content production-grade.
 
 ### Phase 3: Fact-Checking
 
-- [x] Add a `sources` field for every case.
 - [ ] Add reviewed source entries for every educational claim.
-- [x] Mark uncertain claims as needing revision instead of shipping them.
-- [x] Add a release content audit checklist.
 
 ### Phase 4: Localization And Language
 
-- [x] Normalize Spanish names and accents for the current case bank.
 - [ ] Add pronunciation or short language notes where helpful.
-- [ ] Consider optional Spanish UI after English production quality is stable.
+- [x] **Cut (YAGNI):** optional Spanish UI — speculative, build only if a real Spanish-speaking audience appears.
 
 ## Gameplay Roadmap
 
 ### Phase 1: Better Randomized Runs
 
-- [x] Generate a seeded case route per new game.
-- [x] Store seed and selected case IDs in LocalStorage.
-- [x] Add a Case ID to the final report for replay/debugging.
-- [x] Prevent immediate repetition of the same case route when starting a new run where possible.
-- [x] Add deterministic seeded-run tests.
+_Complete — see CHANGELOG._
 
 ### Phase 2: Puzzle Engines
 
@@ -94,78 +91,46 @@ Build a production-grade Argentina edutainment detective game that is coherent a
 
 ### Phase 3: Difficulty And Hints
 
-- [x] Add hint inventory and hint cost.
-- [x] Add progressive hints: nudge, strong hint, explanation.
-- [x] Track hint usage in scoring.
 - [ ] Tune lives and attempts per difficulty.
 
 ### Phase 4: Replay And Progress
 
-- [x] Store high scores.
-- [x] Store basic game stats.
-- [x] Add high-score screen.
-- [x] Add case history.
-- [x] Add "new randomized case" option after completion.
-- [ ] Add learning-focused achievements only if they reinforce replay.
+- [x] **Cut (YAGNI):** learning-focused achievements — already gated on "only if," no evidence it drives replay.
 
 ## Technical Roadmap
 
 ### Phase 1: Asset And File Structure
 
-- [x] Keep HTML in `carmen-sandiego-argentina.html`.
-- [x] Break CSS into `styles.css`.
-- [x] Break game behavior into `game.js`.
-- [x] Move reusable seeded-run behavior into `run-generator.js`.
-- [x] Move case content into `question-bank.json`.
-- [x] Add `tests/content-validation.test.js`.
-- [x] Add `tests/scoring.test.js`.
-- [x] Add `tests/run-generation.test.js`.
-- [x] Add `tests/smoke.test.js`.
-- [x] Add `docs/content-rubric.md`.
-- [x] Add `docs/visual-system.md`.
-- [ ] Add `data/classic-cases.json`, `data/argentina-regions.json`, and `data/sources.json` if the project outgrows the single question bank.
+_Complete — see CHANGELOG._
+
+- [x] **Cut (YAGNI):** further data-file splits — `argentina-regions.json` and `sources.json` already exist; single bank hasn't outgrown anything.
 
 ### Phase 2: Remove Runtime Fragility
 
-- [ ] Replace Tailwind CDN with built or checked-in CSS.
-- [x] Decide whether external map tiles are acceptable for production.
-- [ ] Build a self-contained SVG map mode if offline/archival play matters.
-- [x] Add graceful fallback if Leaflet or tile loading fails.
+_Complete — see CHANGELOG._
+
+- [x] **Cut (YAGNI):** self-contained SVG map mode — gated on offline/archival mattering, which it doesn't for a web toy.
 
 ### Phase 3: State Management
 
-- [x] Version LocalStorage save schema.
-- [x] Store selected case IDs, seed, difficulty, score, history, and settings.
-- [x] Validate saves before resume.
-- [x] Add migration for older saves.
-- [x] Add visible "clear broken save" recovery.
+_Complete — see CHANGELOG._
 
 ### Phase 4: Testing
 
-- [x] Add content schema validation.
-- [x] Add deterministic seeded-run tests.
-- [x] Add scoring tests for current scoring rules.
-- [x] Add static smoke test for split assets.
 - [ ] Add browser smoke test for full game flow.
 - [ ] Add browser accessibility smoke checks.
-- [ ] Add scoring tests for all future hint combinations once hints exist.
+- [x] **Cut (YAGNI):** exhaustive hint-combination scoring tests — `scoring.test.js` covers the rule; combinatorial coverage is over-testing.
 
 ## Accessibility Roadmap
 
 ### Required Before Production
 
 - [ ] Full keyboard support for every mechanic.
-- [x] Visible focus state for current interactive controls.
-- [x] No current interaction requires drag only.
-- [ ] No information conveyed by color alone.
-- [x] Screen-reader alternatives for map and visual puzzles.
-- [x] `aria-live` coverage for current score and clue status.
-- [x] Reduced-motion setting.
-- [x] High-contrast setting.
-- [x] Minimum 44px target rule documented and partially applied.
 - [ ] Text remains readable at 200% zoom across all screens.
 
 ### Accessibility QA
+
+Run the interactive checklist in [docs/a11y-qa.md](docs/a11y-qa.md) and tick these after.
 
 - [ ] Test with keyboard only.
 - [ ] Test with browser zoom at 200%.
@@ -177,14 +142,10 @@ Build a production-grade Argentina edutainment detective game that is coherent a
 
 ### Phase 1: Art Direction Lock
 
-- [x] Define the Saul Bass-inspired design language in `docs/visual-system.md`.
-- [x] Choose final palette tokens.
-- [x] Define acceptable texture and shadow rules.
-- [x] Replace the main visual direction with flat poster geometry.
+_Complete — see CHANGELOG._
 
 ### Phase 2: Interface Pass
 
-- [x] Apply the cut-paper direction to the current UI.
 - [ ] Redesign title, difficulty, case file, warrant, result, and final report screens as one fully resolved system.
 - [ ] Make the map panel feel integrated with the poster/case-file layout.
 - [ ] Remove remaining visual leftovers from the previous glass/parchment style.
@@ -200,14 +161,11 @@ Build a production-grade Argentina edutainment detective game that is coherent a
 
 - [ ] Verify every marker coordinate.
 - [ ] Ensure labels do not overlap badly on mobile.
-- [x] Ensure travel route animation respects reduced motion.
-- [x] Add a map text alternative listing current city, province, visited cities, and next destination when known.
 
 ### Future Options
 
-- [x] Keep Leaflet with remote tiles for best fidelity if online production is acceptable.
-- [ ] Add self-contained SVG map fallback for offline play.
-- [ ] Add provincial boundaries and region labels once visual clarity is solved.
+- [x] **Cut (YAGNI):** self-contained SVG map fallback — duplicate of the offline-map item above; same reasoning.
+- [x] **Cut (YAGNI):** provincial boundaries/region labels — gated on "once visual clarity solved," pure polish.
 
 ## Quality Gates
 
@@ -245,13 +203,7 @@ Build a production-grade Argentina edutainment detective game that is coherent a
 
 ## Immediate Next Work
 
-- [x] Add JSON schema validation for `question-bank.json`.
-- [x] Move classic cases into JSON so all cases share one data pipeline.
-- [x] Add a seeded random run generator.
-- [x] Add 2 more cases per existing location to reach beta breadth.
 - [ ] Build the first real puzzle engine: cipher or timeline.
-- [x] Write `docs/visual-system.md`.
-- [x] Replace Tailwind CDN or commit a production stylesheet plan.
 
 ## Definition Of Done
 

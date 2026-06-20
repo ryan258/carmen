@@ -112,6 +112,9 @@
     border-color: #ef4444 !important;
     color: #991b1b !important;
   }
+  /* WCAG 1.4.1: don't signal correct/wrong by color alone — add a glyph. */
+  .option-btn.correct::after { content: " ✓"; font-weight: 700; }
+  .option-btn.wrong::after { content: " ✗"; font-weight: 700; }
 
   /* Scrollbar */
   ::-webkit-scrollbar { width: 6px; height: 6px; }
