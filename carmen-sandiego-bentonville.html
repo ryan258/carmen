@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Where in Argentina is Carmen Sandiego?</title>
+<title>Where in Bentonville is Carmen Sandiego?</title>
 <!-- Built locally from Tailwind v3 (see tailwind.config.js); rebuild: npx tailwindcss -i tailwind.input.css -o tailwind.build.css --minify -->
 <link rel="stylesheet" href="./tailwind.build.css">
 <!-- Leaflet Map CSS -->
@@ -21,7 +21,7 @@
     <span class="text-2xl">🕵️‍♂️</span>
     <div>
       <h1 class="title-font text-white font-extrabold text-lg tracking-wide">ACME DETECTIVE AGENCY</h1>
-      <p class="text-xs text-sky-400 font-semibold tracking-widest uppercase">Argentina Division</p>
+      <p id="packSubtitle" class="text-xs text-sky-400 font-semibold tracking-widest uppercase">Bentonville Division</p>
     </div>
   </div>
   <!-- Settings Bar -->
@@ -47,10 +47,10 @@
   <!-- ================= SCREEN 1: TITLE SCREEN ================= -->
   <div id="titleScreen" class="w-full flex flex-col items-center justify-center py-6 md:py-12 fade-in-up">
     <div class="text-center max-w-2xl">
-      <!-- Flag colors badge -->
+      <!-- Bentonville route badge -->
       <div class="flex justify-center mb-6 gap-1">
-        <div class="w-14 h-2 bg-sky-400 rounded-full"></div>
-        <div class="w-14 h-2 bg-white rounded-full"></div>
+        <div class="w-14 h-2 bg-emerald-500 rounded-full"></div>
+        <div class="w-14 h-2 bg-amber-400 rounded-full"></div>
         <div class="w-14 h-2 bg-sky-400 rounded-full"></div>
       </div>
       
@@ -58,7 +58,7 @@
       
       <h2 class="title-font text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-2">
         <span class="text-slate-100">WHERE IN</span><br>
-        <span class="shimmer-text">ARGENTINA</span><br>
+        <span id="packHeroLocation" class="shimmer-text">BENTONVILLE</span><br>
         <span class="text-slate-100">is</span>
       </h2>
       
@@ -66,9 +66,17 @@
         CARMEN SANDIEGO?
       </div>
       
-      <p class="text-slate-400 max-w-md mx-auto text-base md:text-lg mb-8 leading-relaxed">
-        The master thief Carmen Sandiego has pilfered priceless cultural treasures across Argentina. Use your deductive wits, decode ciphers, and issue the correct arrest warrant before she slips away!
+      <p id="packIntro" class="text-slate-400 max-w-md mx-auto text-base md:text-lg mb-8 leading-relaxed">
+        The master thief Carmen Sandiego has scattered clues across Bentonville landmarks, trails, museums, and public spaces. Use your deductive wits, decode ciphers, and issue the correct arrest warrant before she slips away!
       </p>
+
+      <div class="max-w-md mx-auto mb-8 text-left">
+        <label for="packSelector" class="block text-xs font-bold uppercase tracking-[0.25em] text-sky-300 mb-2">Quiz Pack</label>
+        <select id="packSelector" onchange="selectQuizPackFromControl(this.value)" class="w-full bg-slate-950/80 border border-white/15 text-white rounded-lg px-4 py-3 font-bold focus:outline-none focus:ring-2 focus:ring-amber-400">
+          <option>Loading quiz packs...</option>
+        </select>
+        <p id="packSelectorStatus" class="mt-2 text-xs text-slate-400" aria-live="polite">Loading quiz packs...</p>
+      </div>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <button onclick="goToDifficultySelect()" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-slate-900 text-lg font-bold rounded-xl shadow-lg shadow-amber-500/20 transition-all duration-300 transform active:scale-95">
@@ -357,9 +365,9 @@
             </p>
 
             <div class="bg-white/50 p-4 rounded-xl border border-slate-200 shadow-inner space-y-4 max-w-md mx-auto">
-              <!-- Field 1: City -->
+              <!-- Field 1: Stop -->
               <div>
-                <label class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Target City</label>
+                <label class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Target Stop</label>
                 <select id="warrantCity" class="w-full bg-white text-slate-900 border border-slate-300 rounded-lg px-3 py-2 font-bold focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
                   <!-- Dynamically populated -->
                 </select>
@@ -475,7 +483,7 @@
 
 <!-- Footer -->
 <footer class="relative z-10 w-full text-center py-4 text-[10px] text-slate-500 tracking-wider uppercase border-t border-white/5 bg-slate-950/20 mt-8">
-  Where in Argentina is Carmen Sandiego? © 2026. Map data © OpenStreetMap contributors, Tiles © CartoDB.
+  <span id="packFooterTitle">Where in Bentonville is Carmen Sandiego?</span> © 2026. Map data © OpenStreetMap contributors, Tiles © CartoDB.
 </footer>
 
 <!-- Leaflet Map JS -->

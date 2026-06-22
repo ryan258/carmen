@@ -1,399 +1,739 @@
 // ============================================================
 // GAME DATA & LOCATIONS
 // ============================================================
-let LOCATIONS = [
+let LOCATIONS = [];
+
+const FALLBACK_LOCATIONS = [
   {
-    id: 'buenos-aires',
-    name: 'Buenos Aires',
-    province: 'Capital Federal',
-    emoji: '🏛️',
-    tagline: 'The Paris of South America',
-    lat: -34.6037, lng: -58.3816,
-    henchman: {
-      name: 'Tito Trapaza',
-      alias: 'El Tanguero',
-      emoji: '🎻',
-      role: 'Forger of opera scores and theater blueprints',
-      dossierNote: "Former Teatro Colón sub-musician. Expelled for selling rehearsal tapes. Moves through stagehand crews and tango salons."
+    "id": "downtown-square",
+    "name": "Downtown Square",
+    "province": "Historic Downtown",
+    "emoji": "🏛️",
+    "tagline": "The civic heart of Bentonville",
+    "lat": 36.3729,
+    "lng": -94.2088,
+    "henchman": {
+      "name": "Dottie Ledger",
+      "alias": "The Square Dealer",
+      "emoji": "🧾",
+      "role": "Receipt forger hiding in market-day crowds",
+      "dossierNote": "Knows every vendor tent, bench, and side street around the Square. Uses event flyers as coded delivery slips."
     },
-    briefing: {
-      headline: 'NATIONAL LIBRARY LARCENY!',
-      report: 'A mysterious figure in a red trench coat broke into the National Library of Buenos Aires last night. She bypassed the security grid and stole the original manuscript of Jorge Luis Borges\' "Ficciones". A witness saw her fleeing towards a tango salon in La Boca.',
-      callingCard: 'A card with a red silhouette. On the back, it says: "FDPLQLWR WDQJR RXWILW"'
+    "caseId": "classic-downtown-square",
+    "briefing": {
+      "headline": "SQUARE MARKET SWAP!",
+      "report": "A brass market bell vanished from a farmers market stall on the Bentonville Square. Carmen is already gone, but The Square Dealer is still in Bentonville, blending in as a farmers market vendor.",
+      "callingCard": "A red card reads: \"I left the hard part local. Ask The Square Dealer why Downtown Square mattered.\"",
+      "suspect": {
+        "name": "Dottie Ledger",
+        "alias": "The Square Dealer",
+        "emoji": "🧾",
+        "role": "Receipt forger hiding in market-day crowds",
+        "dossierNote": "Knows every vendor tent, bench, and side street around the Square. Uses event flyers as coded delivery slips."
+      },
+      "nextLead": "A dime-store receipt points across the Square to the museum where the price tags do not add up."
     },
-    clues: [
-      'A restaurant receipt from "El Caminito" in the colorful La Boca neighborhood.',
-      'A tango lyric sheet with the words "El Choclo" circled and a note: "Dress code: Tango Dancer."',
-      'A metro ticket stub showing a trip ending at Plaza de Mayo, near the pink Casa Rosada presidential palace.'
+    "clues": [
+      "A canvas tote is stamped with Bentonville Farmers Market and a sketch of the Square fountain.",
+      "The receipt lists local honey, flowers, and a booth number facing Central Avenue.",
+      "A witness saw the courier fold a tent beside boutiques, bakeries, and public art."
     ],
-    puzzle: {
-      title: 'Tango Cipher Decode',
-      description: 'Decipher Carmen\'s coded note. The thief left a message encoded with a Caesar cipher (shift left by 3 letters, e.g. D -> A, E -> B, F -> C, etc.). Use the Tango Substitution Guide.',
-      question: 'What does the cipher "FDPLQLWR WDQJR RXWILW" decode to?',
-      options: [
-        'CAMINITO - TANGO OUTFIT',
-        'OBELISK - SUIT AND TIE',
-        'RECOLETA - DRESS AND HAT',
-        'PALERMO - PONCHO AND PANTS'
-      ],
-      correctIndex: 0
+    "puzzle": {
+      "title": "Market Map Match",
+      "description": "Use the Bentonville clues to identify the correct Downtown Square hideout.",
+      "question": "Which stop matches the market clues?",
+      "options": ["Downtown Square", "Osage Park", "Crystal Bridges", "Coler Mountain Bike Preserve"],
+      "correctIndex": 0
     },
-    warrantAnswers: {
-      city: 'Buenos Aires',
-      hideout: 'La Boca',
-      disguise: 'Tango dancer'
+    "warrantAnswers": {
+      "city": "Downtown Square",
+      "hideout": "Downtown Square",
+      "disguise": "Farmers market vendor"
     },
-    funFact: 'Buenos Aires has more bookstores per capita than any other city in the world.'
+    "funFact": "The Bentonville Square hosts community programs including First Fridays, farmers markets, and art markets."
   },
   {
-    id: 'mendoza',
-    name: 'Mendoza',
-    province: 'Mendoza',
-    emoji: '🍷',
-    tagline: 'Wine country at the foot of the Andes',
-    lat: -32.8902, lng: -68.8458,
-    henchman: {
-      name: 'Vera Vicario',
-      alias: 'La Vendimia',
-      emoji: '🍇',
-      role: 'Label forger and irrigation-canal smuggler',
-      dossierNote: "Trained sommelier. Forges vintage labels and uses high-Andean canal routes to move Carmen's contraband past customs."
+    "id": "walmart-museum",
+    "name": "Walmart Museum",
+    "province": "Downtown Bentonville",
+    "emoji": "🛒",
+    "tagline": "Walton's 5&10 and retail history",
+    "lat": 36.3727,
+    "lng": -94.2092,
+    "henchman": {
+      "name": "Marty Markup",
+      "alias": "The Price Roller",
+      "emoji": "🏷️",
+      "role": "Archive thief swapping labels and display tags",
+      "dossierNote": "Former exhibit installer. Hides microfilm behind old price cards and knows the Spark Cafe closing routine."
     },
-    briefing: {
-      headline: 'VINTAGE MALBEC VANISHES!',
-      report: 'The oldest bottle of Malbec wine in Argentina, dating back to the 19th century, was stolen from a historic winery cellar in Mendoza. The thief left behind coordinate details on an empty bottle label.',
-      callingCard: 'A postcard of the Andes with coordinates written in red ink: "32°39\'S, 70°00\'W"'
+    "caseId": "classic-walmart-museum",
+    "briefing": {
+      "headline": "FIVE AND DIME FILE VANISHES!",
+      "report": "A copy of Mr. Sam's first price ledger vanished from Walton's 5&10. Carmen is already gone, but The Price Roller is still in Bentonville, blending in as a dime-store clerk.",
+      "callingCard": "A red card reads: \"I left the hard part local. Ask The Price Roller why Walton's 5&10 mattered.\"",
+      "suspect": {
+        "name": "Marty Markup",
+        "alias": "The Price Roller",
+        "emoji": "🏷️",
+        "role": "Archive thief swapping labels and display tags",
+        "dossierNote": "Former exhibit installer. Hides microfilm behind old price cards and knows the Spark Cafe closing routine."
+      },
+      "nextLead": "A campus visitor badge lists an 8th Street meeting room and a tour time in the margin."
     },
-    clues: [
-      'A winery flyer with a handwritten note: "Deliver grapes to the vineyard worker."',
-      'A GPS unit tracking history ending at coordinates 32°39\'S, 70°00\'W.',
-      'A mountaineering permit for Aconcagua base camp signed with a red \'C\'.'
+    "clues": [
+      "The shelf tag says this humble dime store is where the story began.",
+      "A red price roller marked every label 5 and 10.",
+      "The suspect asked how to get from classic finds to the museum galleries."
     ],
-    puzzle: {
-      title: 'Triangulation Coordinates',
-      description: 'Examine the topographic GPS coordinates left by the suspect. Match them to the Aconcagua Base Camp location on your detective coordinate grid.',
-      question: 'Which coordinates pinpoint the Aconcagua Base Camp hideout?',
-      options: [
-        '32°53\'S, 68°49\'W (Mendoza City)',
-        '32°39\'S, 70°00\'W (Aconcagua Base Camp)',
-        '34°36\'S, 68°20\'W (San Rafael)',
-        '31°32\'S, 68°31\'W (San Juan)'
-      ],
-      correctIndex: 1
+    "puzzle": {
+      "title": "Price Tag Cipher",
+      "description": "Use the Bentonville clues to identify the correct Walmart Museum hideout.",
+      "question": "Which museum space is tied to the 5&10 clues?",
+      "options": ["Walton's 5&10", "The Quiver", "Momentary Green", "The Hub"],
+      "correctIndex": 0
     },
-    warrantAnswers: {
-      city: 'Mendoza',
-      hideout: 'Aconcagua base camp',
-      disguise: 'Vineyard worker'
+    "warrantAnswers": {
+      "city": "Walmart Museum",
+      "hideout": "Walton's 5&10",
+      "disguise": "Dime-store clerk"
     },
-    funFact: 'Mendoza is home to Aconcagua, the highest mountain in both the Western and Southern Hemispheres at 6,961m.'
+    "funFact": "The Walmart Museum presents Walton's 5&10 as the small dime store where Walmart's story began."
   },
   {
-    id: 'salta',
-    name: 'Salta',
-    province: 'Salta',
-    emoji: '🏔️',
-    tagline: 'Colonial charm in the mountainous north',
-    lat: -24.7821, lng: -65.4232,
-    henchman: {
-      name: 'Saúl Sandoval',
-      alias: 'El Salteño',
-      emoji: '🐎',
-      role: 'Caravan smuggler trafficking colonial relics',
-      dossierNote: "Former muleteer on the old salt caravans. Now runs Carmen's relic pipeline through the Quebrada de Humahuaca."
+    "id": "walmart-home-office",
+    "name": "Walmart Home Office",
+    "province": "8th Street Campus",
+    "emoji": "🏢",
+    "tagline": "A 350-acre campus built for Bentonville work life",
+    "lat": 36.3599,
+    "lng": -94.2054,
+    "henchman": {
+      "name": "Hollis Hallway",
+      "alias": "The Wayfinder",
+      "emoji": "🧭",
+      "role": "Campus-route fixer with a doctored tour map",
+      "dossierNote": "Moves through public tour routes with a lanyard, a tablet, and a habit of relabeling meeting rooms."
     },
-    briefing: {
-      headline: 'CLOUD TRAIN LOCOMOTIVE LOOTED!',
-      report: 'A scale gold model of the Tren a las Nubes locomotive was stolen from the Salta Cathedral museum. The thief was seen fleeing towards the railway station.',
-      callingCard: 'A boarding pass stub showing a flight from Buenos Aires and a train connection in Salta.'
+    "caseId": "classic-walmart-home-office",
+    "briefing": {
+      "headline": "CAMPUS MAP MISDIRECT!",
+      "report": "An interactive campus map chip vanished from the new Walmart Home Office visitor route. Carmen is already gone, but The Wayfinder is still in Bentonville, blending in as a campus wayfinder.",
+      "callingCard": "A red card reads: \"I left the hard part local. Ask The Wayfinder why Interactive map kiosk mattered.\"",
+      "suspect": {
+        "name": "Hollis Hallway",
+        "alias": "The Wayfinder",
+        "emoji": "🧭",
+        "role": "Campus-route fixer with a doctored tour map",
+        "dossierNote": "Moves through public tour routes with a lanyard, a tablet, and a habit of relabeling meeting rooms."
+      },
+      "nextLead": "A gallery crate label names a bridge, a spring, and a museum trail north of downtown."
     },
-    clues: [
-      'A jumbled train schedule showing a final stop near the colourful hills of Quebrada de Humahuaca.',
-      'A witness statement: "She boarded the train wearing a train conductor\'s uniform at 08:00."',
-      'A souvenir shop bag from the town of Humahuaca with a red hair thread.'
+    "clues": [
+      "The map chip shows 350 acres and a zoom button.",
+      "The courier kept saying the whole campus could be checked from one screen.",
+      "A visitor badge points to 8th Street and a public tour."
     ],
-    puzzle: {
-      title: 'Timeline Reconstruction',
-      description: 'Reassemble the timeline logs to determine the final destination of the suspect.',
-      question: 'What is the correct chronological sequence and final destination?',
-      options: [
-        '08:00 Depart Salta → 11:30 San Antonio de los Cobres → 14:00 La Polvorilla → 16:30 Quebrada de Humahuaca',
-        '08:00 Quebrada de Humahuaca → 11:30 La Polvorilla → 14:00 San Antonio → 16:30 Depart Salta',
-        '08:00 Depart Salta → 11:30 La Polvorilla → 14:00 Quebrada de Humahuaca → 16:30 San Antonio',
-        '08:00 San Antonio → 11:30 Depart Salta → 14:00 La Polvorilla → 16:30 Quebrada de Humahuaca'
-      ],
-      correctIndex: 0
+    "puzzle": {
+      "title": "Campus Scale Match",
+      "description": "Use the Bentonville clues to identify the correct Walmart Home Office hideout.",
+      "question": "Which Home Office stop matches the 350-acre clue?",
+      "options": ["Interactive map kiosk", "Walton's 5&10", "Crystal Spring pond", "Osage wetland boardwalk"],
+      "correctIndex": 0
     },
-    warrantAnswers: {
-      city: 'Salta',
-      hideout: 'Quebrada de Humahuaca',
-      disguise: 'Train conductor'
+    "warrantAnswers": {
+      "city": "Walmart Home Office",
+      "hideout": "Interactive map kiosk",
+      "disguise": "Campus wayfinder"
     },
-    funFact: 'The Tren a las Nubes reaches heights of 4,220 meters above sea level, making it one of the highest railways in the world.'
+    "funFact": "Walmart describes the new Home Office as a 350-acre campus with an interactive map."
   },
   {
-    id: 'cordoba',
-    name: 'Córdoba',
-    province: 'Córdoba',
-    emoji: '🎸',
-    tagline: 'Historic university town in the Sierras',
-    lat: -31.4201, lng: -64.1888,
-    henchman: {
-      name: 'Clara Cortázar',
-      alias: 'La Cátedra',
-      emoji: '📚',
-      role: 'Rare-book thief and Jesuit-archive impostor',
-      dossierNote: "Dismissed university archivist with a key to half the Jesuit Block. Forges provenance papers for stolen manuscripts."
+    "id": "crystal-bridges",
+    "name": "Crystal Bridges",
+    "province": "Museum Way",
+    "emoji": "🎨",
+    "tagline": "American art in an Ozark ravine",
+    "lat": 36.3812,
+    "lng": -94.2037,
+    "henchman": {
+      "name": "Clara Glaze",
+      "alias": "The Varnish",
+      "emoji": "🖼️",
+      "role": "Art handler forging gallery transfer slips",
+      "dossierNote": "Studies sightlines between the pavilions and ponds. Carries decoy crate labels in a conservation folder."
     },
-    briefing: {
-      headline: 'JESUIT TREASURE STOLEN!',
-      report: 'An ancient 17th-century telescope was stolen from the National University of Córdoba. The thief left a series of logic riddles on a study desk.',
-      callingCard: 'A library card for the National University of Córdoba under an alias.'
+    "caseId": "classic-crystal-bridges",
+    "briefing": {
+      "headline": "GLASS BRIDGE GETAWAY!",
+      "report": "A gallery transfer slip vanished from the bridge overlooking the ponds. Carmen is already gone, but The Varnish is still in Bentonville, blending in as an art handler.",
+      "callingCard": "A red card reads: \"I left the hard part local. Ask The Varnish why Glass bridge mattered.\"",
+      "suspect": {
+        "name": "Clara Glaze",
+        "alias": "The Varnish",
+        "emoji": "🖼️",
+        "role": "Art handler forging gallery transfer slips",
+        "dossierNote": "Studies sightlines between the pavilions and ponds. Carries decoy crate labels in a conservation folder."
+      },
+      "nextLead": "A black-box theater cue sheet sends the trail toward a former cheese factory near 8th Street Market."
     },
-    clues: [
-      'A logic statement: "The thief wearing glasses was NOT in the Jesuit Quarter."',
-      'A coffee shop receipt from the trendy Nueva Córdoba student district.',
-      'A notebook scribble: "Blend in as a university student."'
+    "clues": [
+      "The witness saw a crate cross a glass-enclosed bridge over water.",
+      "The transfer slip mentions American art and a museum in an Ozark setting.",
+      "The suspect headed toward pavilions around two spring-fed ponds."
     ],
-    puzzle: {
-      title: 'Logic Elimination Grid',
-      description: 'Solve the detective logic grid. Match the suspect location and disguise using the notebook clues.',
-      question: 'Which combination matches the suspect\'s profile in Córdoba?',
-      options: [
-        'Location: Jesuit Quarter | Disguise: Professor',
-        'Location: Nueva Córdoba | Disguise: University student',
-        'Location: Villa Belgrano | Disguise: Tourist',
-        'Location: Alta Córdoba | Disguise: Musician'
-      ],
-      correctIndex: 1
+    "puzzle": {
+      "title": "Bridge Evidence",
+      "description": "Use the Bentonville clues to identify the correct Crystal Bridges hideout.",
+      "question": "Which Crystal Bridges location matches the water-and-glass clues?",
+      "options": ["Glass bridge", "Momentary Green", "Square Park", "Osage boardwalk"],
+      "correctIndex": 0
     },
-    warrantAnswers: {
-      city: 'Córdoba',
-      hideout: 'Nueva Córdoba',
-      disguise: 'University student'
+    "warrantAnswers": {
+      "city": "Crystal Bridges",
+      "hideout": "Glass bridge",
+      "disguise": "Art handler"
     },
-    funFact: 'The National University of Córdoba, founded in 1613, is the third-oldest in the Americas.'
+    "funFact": "Crystal Bridges takes its name from a nearby natural spring and bridge construction in the building."
   },
   {
-    id: 'iguazu',
-    name: 'Puerto Iguazú',
-    province: 'Misiones',
-    emoji: '🌊',
-    tagline: 'The Great Waters',
-    lat: -25.5991, lng: -54.5736,
-    henchman: {
-      name: 'Iván Irala',
-      alias: 'El Iguazuano',
-      emoji: '🚤',
-      role: 'Falls-boatman running goods across the triple frontier',
-      dossierNote: "Ex-park boatman with a black-market ferry route under the Devil's Throat. Carries Carmen's couriers between three countries before dawn."
+    "id": "the-momentary",
+    "name": "The Momentary",
+    "province": "8th Street Market District",
+    "emoji": "🎭",
+    "tagline": "A former cheese factory turned contemporary art space",
+    "lat": 36.3653,
+    "lng": -94.2028,
+    "henchman": {
+      "name": "Mina Flux",
+      "alias": "The Pop-Up",
+      "emoji": "🎛️",
+      "role": "Performance tech rerouting props through back-of-house",
+      "dossierNote": "Times escapes to show changeovers. Her favorite hiding places are the Tower stairs and Fermentation Hall cases."
     },
-    briefing: {
-      headline: 'GUARANÍ CROWN JEWEL HEIST!',
-      report: 'A sacred Guaraní golden jaguar pendant was stolen from the Misiones Rainforest Museum near Iguazú Falls. The thief escaped on a speed boat.',
-      callingCard: 'A park ranger map with waypoint distances marked: 1km, 1km, 2km, 3km, 5km...'
+    "caseId": "classic-the-momentary",
+    "briefing": {
+      "headline": "CHEESE FACTORY CUE SHEET!",
+      "report": "A performance cue sheet vanished from the repurposed factory floor. Carmen is already gone, but The Pop-Up is still in Bentonville, blending in as a stage technician.",
+      "callingCard": "A red card reads: \"I left the hard part local. Ask The Pop-Up why Fermentation Hall mattered.\"",
+      "suspect": {
+        "name": "Mina Flux",
+        "alias": "The Pop-Up",
+        "emoji": "🎛️",
+        "role": "Performance tech rerouting props through back-of-house",
+        "dossierNote": "Times escapes to show changeovers. Her favorite hiding places are the Tower stairs and Fermentation Hall cases."
+      },
+      "nextLead": "A seed packet marked North Main says the next handoff is hiding among native Ozark plants."
     },
-    clues: [
-      'A trail guide mentioning: "Follow the Fibonacci progression of waypoints to the final viewpoint."',
-      'A park ranger badge dropped on the catwalk leading to the Devil\'s Throat.',
-      'A witness quote: "She was heading to Garganta del Diablo (Devil\'s Throat) next."'
+    "clues": [
+      "The clue names a former cheese factory and a black-box theater.",
+      "The suspect carried gaffer tape and a cue sheet marked Fermentation Hall.",
+      "A floor plan points to a multidisciplinary art space near 8th Street Market."
     ],
-    puzzle: {
-      title: 'Fibonacci Waypoint Sequence',
-      description: 'Analyze the trail map waypoint sequence: 1, 1, 2, 3, 5, ... Predict the next waypoint distance and identify the final waterfall hideout.',
-      question: 'What is the next distance and final destination in the sequence?',
-      options: [
-        '7km — San Martin Falls',
-        '8km — Garganta del Diablo (Devil\'s Throat)',
-        '10km — Bosetti Falls',
-        '13km — Brazil Border'
-      ],
-      correctIndex: 1
+    "puzzle": {
+      "title": "Backstage Venue Match",
+      "description": "Use the Bentonville clues to identify the correct The Momentary hideout.",
+      "question": "Which Momentary space fits the theater evidence?",
+      "options": ["Fermentation Hall", "Square Park", "Walton's 5&10", "Crystal Bridges library"],
+      "correctIndex": 0
     },
-    warrantAnswers: {
-      city: 'Puerto Iguazú',
-      hideout: 'Garganta del Diablo',
-      disguise: 'Park ranger'
+    "warrantAnswers": {
+      "city": "The Momentary",
+      "hideout": "Fermentation Hall",
+      "disguise": "Stage technician"
     },
-    funFact: 'Iguazú Falls consists of 275 individual waterfalls spread across nearly 3 kilometers of the Iguazú River.'
+    "funFact": "The Momentary transformed a decommissioned 63,000-square-foot cheese factory into a contemporary art space."
   },
   {
-    id: 'bariloche',
-    name: 'San Carlos de Bariloche',
-    province: 'Río Negro',
-    emoji: '🏔️',
-    tagline: 'Swiss alpine charm and glacial lakes',
-    lat: -41.1335, lng: -71.3103,
-    henchman: {
-      name: 'Berta Brügger',
-      alias: 'La Bombonera',
-      emoji: '🍫',
-      role: 'Chocolatier and forger of alpine permits',
-      dossierNote: "Third-generation Swiss-Argentine chocolatier. Hides Carmen's microfilm in pralines bound for Nahuel Huapi tour boats."
+    "id": "compton-gardens",
+    "name": "Compton Gardens",
+    "province": "North Main Greenway",
+    "emoji": "🌿",
+    "tagline": "Native Ozark plants in a seven-acre downtown haven",
+    "lat": 36.3766,
+    "lng": -94.2082,
+    "henchman": {
+      "name": "Fern Compton",
+      "alias": "The Understory",
+      "emoji": "🍃",
+      "role": "Botanical courier marking trails with plant tags",
+      "dossierNote": "Can vanish behind native shrubs without snapping a twig. Leaves route notes in seed packets."
     },
-    briefing: {
-      headline: 'CHOCOLATE SCULPTURE SWIPED!',
-      report: 'A famous 50kg chocolate sculpture of Mount Fitz Roy was stolen from a chocolate shop on Mitre Street. The thief escaped into the Nahuel Huapi forest.',
-      callingCard: 'A ski pass for Cerro Otto with the signature "Carmen".'
+    "caseId": "classic-compton-gardens",
+    "briefing": {
+      "headline": "NATIVE PLANT TAG THEFT!",
+      "report": "A set of hand-lettered plant tags vanished from the native plant collection. Carmen is already gone, but The Understory is still in Bentonville, blending in as a botanist.",
+      "callingCard": "A red card reads: \"I left the hard part local. Ask The Understory why Native plant beds mattered.\"",
+      "suspect": {
+        "name": "Fern Compton",
+        "alias": "The Understory",
+        "emoji": "🍃",
+        "role": "Botanical courier marking trails with plant tags",
+        "dossierNote": "Can vanish behind native shrubs without snapping a twig. Leaves route notes in seed packets."
+      },
+      "nextLead": "A bike repair ticket lists the Hub, a campground, and a westside trail code."
     },
-    clues: [
-      'A torn polaroid photo showing a cable car going up to a revolving cafeteria on Cerro Otto.',
-      'A ski instructor\'s whistle with the initials \'C.S.\'',
-      'A receipt for chocolate-covered raspberries from Rapa Nui on Mitre Street.'
+    "clues": [
+      "The stolen tags name native trees, grasses, vines, shrubs, and perennials.",
+      "A seed packet points to North Main Street and a seven-acre greenspace.",
+      "The suspect wore garden gloves and quoted Dr. Neil Compton."
     ],
-    puzzle: {
-      title: 'Visual Clue Identification',
-      description: 'Examine the torn polaroid photo showing a cable car and a revolving summit building. Identify the alpine hideout.',
-      question: 'Which landmark is pictured in the visual evidence?',
-      options: [
-        'Cerro Otto Viewpoint',
-        'Cerro Catedral Ski Center',
-        'Colonia Suiza Crafts Market',
-        'Nahuel Huapi Lake House'
-      ],
-      correctIndex: 0
+    "puzzle": {
+      "title": "Plant Tag Sort",
+      "description": "Use the Bentonville clues to identify the correct Compton Gardens hideout.",
+      "question": "Which Compton Gardens hideout matches the native-plant clues?",
+      "options": ["Native plant beds", "The Hub", "Momentary Green", "Square Park"],
+      "correctIndex": 0
     },
-    warrantAnswers: {
-      city: 'San Carlos de Bariloche',
-      hideout: 'Cerro Otto',
-      disguise: 'Ski instructor'
+    "warrantAnswers": {
+      "city": "Compton Gardens",
+      "hideout": "Native plant beds",
+      "disguise": "Botanist"
     },
-    funFact: 'Bariloche was founded by German and Swiss immigrants, and its architecture reflects that alpine heritage.'
+    "funFact": "Compton Gardens & Arboretum showcases native Ozark plants in a seven-acre downtown greenspace."
   },
   {
-    id: 'ushuaia',
-    name: 'Ushuaia',
-    province: 'Tierra del Fuego',
-    emoji: '🚢',
-    tagline: 'The End of the World',
-    lat: -54.8019, lng: -68.3030,
-    henchman: {
-      name: 'Ulises Urrutia',
-      alias: 'El Austral',
-      emoji: '⚓',
-      role: 'Disgraced expedition captain, polar relic smuggler',
-      dossierNote: "Stripped of his master's license after a Beagle Channel scandal. Sells berth space on southern cruises to anyone with a forged research badge."
+    "id": "coler-preserve",
+    "name": "Coler Mountain Bike Preserve",
+    "province": "West Bentonville Trails",
+    "emoji": "🚵",
+    "tagline": "Trailhead, Hub, campground, and deep-woods rides",
+    "lat": 36.3807,
+    "lng": -94.2328,
+    "henchman": {
+      "name": "Ridge Reilly",
+      "alias": "The Dropper",
+      "emoji": "🛞",
+      "role": "Bike courier using trail names as dead-drop codes",
+      "dossierNote": "Rides with a silent freehub and a false-bottom repair kit. Knows every connector between the Hub and camp."
     },
-    briefing: {
-      headline: 'HISTORIC LIGHTHOUSE DIAL STOLEN!',
-      report: 'The original brass lens rotation gear from the Les Eclaireurs Lighthouse was stolen in the dead of night. The thief escaped by sailboat into the Beagle Channel.',
-      callingCard: 'A maritime map grid with compass commands: \'Start at Port. Go East 4, South 2.\''
+    "caseId": "classic-coler-preserve",
+    "briefing": {
+      "headline": "HUB TRAIL TOKEN LIFTED!",
+      "report": "A steel trail-launch token vanished from the top of Coler Mountain. Carmen is already gone, but The Dropper is still in Bentonville, blending in as a bike mechanic.",
+      "callingCard": "A red card reads: \"I left the hard part local. Ask The Dropper why The Hub mattered.\"",
+      "suspect": {
+        "name": "Ridge Reilly",
+        "alias": "The Dropper",
+        "emoji": "🛞",
+        "role": "Bike courier using trail names as dead-drop codes",
+        "dossierNote": "Rides with a silent freehub and a false-bottom repair kit. Knows every connector between the Hub and camp."
+      },
+      "nextLead": "A wetland map and an archery scorecard point south to Osage Park."
     },
-    clues: [
-      'A lighthouse keeper\'s log noting: "A suspicious woman was asking for the key to the main beacon."',
-      'A navigation route map showing a destination at the Les Eclaireurs Lighthouse in the Beagle Channel.',
-      'A penguin colony report mentioning a woman in a red coat boarding a boat near the islands.'
+    "clues": [
+      "The clue names a 20-foot steel and wood launch structure.",
+      "Three downhill run names are scratched into a tire lever.",
+      "The courier carried a repair stand tag marked Fire Line."
     ],
-    puzzle: {
-      title: 'Compass Navigation Grid',
-      description: 'Start at Port (Row 1, Col 1). Follow the directions: Go East 4 grid spaces, then South 2 grid spaces. What is your final destination?',
-      question: 'Which landmark coordinate is the final destination?',
-      options: [
-        'Row 1, Col 5 — Martial Glacier',
-        'Row 3, Col 5 — Les Eclaireurs Lighthouse',
-        'Row 3, Col 1 — Port',
-        'Row 5, Col 2 — Penguin Colony'
-      ],
-      correctIndex: 1
+    "puzzle": {
+      "title": "Trail Launch Deduction",
+      "description": "Use the Bentonville clues to identify the correct Coler Mountain Bike Preserve hideout.",
+      "question": "Which Coler feature is the launch point?",
+      "options": ["The Hub", "Momentary Tower", "Downtown Square", "Osage pavilion"],
+      "correctIndex": 0
     },
-    warrantAnswers: {
-      city: 'Ushuaia',
-      hideout: 'Les Eclaireurs Lighthouse',
-      disguise: 'Lighthouse keeper'
+    "warrantAnswers": {
+      "city": "Coler Mountain Bike Preserve",
+      "hideout": "The Hub",
+      "disguise": "Bike mechanic"
     },
-    funFact: 'Ushuaia is the only city in the world that lies below the 54th parallel south, earning its "End of the World" nickname.'
+    "funFact": "At the top of Coler Mountain, The Hub launches riders toward three downhill runs."
   },
   {
-    id: 'el-calafate',
-    name: 'El Calafate',
-    province: 'Santa Cruz',
-    emoji: '🧊',
-    tagline: 'Gateway to the Perito Moreno Glacier',
-    lat: -50.3381, lng: -72.2648,
-    henchman: {
-      name: 'Eva Errázuriz',
-      alias: 'La Esmeralda',
-      emoji: '🥽',
-      role: "Carmen's local fixer, masquerading as a glaciologist",
-      dossierNote: "Former Los Glaciares park scientist. Forges climate-research permits and books Carmen's escape routes across the ice field."
+    "id": "osage-park",
+    "name": "Osage Park",
+    "province": "Southwest Bentonville Wetlands",
+    "emoji": "🦆",
+    "tagline": "Wetlands, boardwalks, archery, art, and play",
+    "lat": 36.3545,
+    "lng": -94.2224,
+    "henchman": {
+      "name": "Ozzie Quill",
+      "alias": "The Fletching",
+      "emoji": "🏹",
+      "role": "Lookout hiding evidence among wetland programs",
+      "dossierNote": "Uses archery scorecards for cipher keys and knows which boardwalk turns are quiet after sunset."
     },
-    briefing: {
-      headline: 'GLACIER ICE CORE PILFERED!',
-      report: 'A scientific ice core sample representing 10,000 years of climate history was stolen from the Glaciarium Museum. The thief left a final note taunting the police.',
-      callingCard: 'A letter: "You\'ve chased me far, detective. But my final hideout is locked behind the symbols of my journey."'
+    "caseId": "classic-osage-park",
+    "briefing": {
+      "headline": "BOARDWALK BEARING STOLEN!",
+      "report": "A final compass bearing vanished from the Osage Park wetland boardwalks. Carmen is already gone, but The Fletching is still in Bentonville, blending in as a wetland guide.",
+      "callingCard": "A red card reads: \"I left the hard part local. Ask The Fletching why Floating boardwalks mattered.\"",
+      "suspect": {
+        "name": "Ozzie Quill",
+        "alias": "The Fletching",
+        "emoji": "🏹",
+        "role": "Lookout hiding evidence among wetland programs",
+        "dossierNote": "Uses archery scorecards for cipher keys and knows which boardwalk turns are quiet after sunset."
+      },
+      "nextLead": "The last scorecard has Carmen's red mark and three final coordinates for the closing chase."
     },
-    clues: [
-      'A tour guide pamphlet: "Walk the Perito Moreno Glacier catwalks."',
-      'A glacier trekking harness with red stitching.',
-      'A final note mentioning: "Where the ice collapses, the journey ends."'
+    "clues": [
+      "The map circles floating boardwalks around a wetland ecosystem.",
+      "The suspect carried binoculars and a sunrise-to-sunset park note.",
+      "A muddy arrow points from the pavilion toward the water."
     ],
-    puzzle: {
-      title: 'Final Token Deduction',
-      description: 'Examine the symbols on your collected clue tokens. Identify the 3 locations that contain the Sun, the Ice, and the Wind symbols to locate Carmen\'s final glacier hideout.',
-      question: 'Which combination of clue tokens contains the Sun, Wind, and Ice symbols?',
-      options: [
-        'Mendoza (Sun) + Bariloche (Wind) + El Calafate (Ice)',
-        'Buenos Aires (Tango) + Iguazú (Water) + Ushuaia (Light)',
-        'Salta (Cloud) + Córdoba (Book) + Ushuaia (Light)',
-        'Buenos Aires (Tango) + Mendoza (Sun) + Salta (Cloud)'
-      ],
-      correctIndex: 0
+    "puzzle": {
+      "title": "Wetland Route",
+      "description": "Use the Bentonville clues to identify the correct Osage Park hideout.",
+      "question": "Where does the final compass bearing point?",
+      "options": ["Floating boardwalks", "The Hub", "Crystal Bridges pavilions", "Downtown Square"],
+      "correctIndex": 0
     },
-    warrantAnswers: {
-      city: 'El Calafate',
-      hideout: 'Perito Moreno Glacier',
-      disguise: 'Tour guide'
+    "warrantAnswers": {
+      "city": "Osage Park",
+      "hideout": "Floating boardwalks",
+      "disguise": "Wetland guide"
     },
-    funFact: 'The Perito Moreno Glacier is 30km long and 70m tall, and periodically dams the lake before spectacularly collapsing.'
+    "funFact": "Osage Park includes floating boardwalks around a wetland ecosystem."
+  }
+];
+LOCATIONS = FALLBACK_LOCATIONS;
+
+const DEFAULT_FINAL_CONFRONTATION_ROUNDS = [
+  {
+    ariaLabel: 'Encrypted farewell note showing FDUPHQ for a Caesar cipher challenge.',
+    description: 'Crack Carmen\'s signature encrypted farewell note using Caesar cipher (shift left by 3).',
+    visualHtml: `
+      <div class="text-center">
+        <span class="text-xs bg-slate-900 text-amber-400 px-3 py-1 rounded font-mono font-bold border border-slate-700">ENCRYPTED NOTE</span>
+        <p class="typewriter-font text-lg font-bold border border-dashed border-red-700 bg-red-50 text-red-900 px-4 py-2 mt-4 rounded rotate-[-3deg]">FDUPHQ</p>
+      </div>
+    `,
+    question: 'What does "FDUPHQ" decode to?',
+    options: ['CARMEN', 'CAPER', 'CHIEF', 'CABIN'],
+    correctIndex: 0
+  },
+  {
+    ariaLabel: 'ACME intelligence list used to deduce Carmen getaway vehicle.',
+    description: 'Use process of elimination to deduce Carmen\'s getaway route through Bentonville.',
+    visualHtml: `
+      <div class="text-left text-[9px] bg-white/80 p-3 rounded border border-slate-200 leading-tight space-y-1 font-semibold">
+        <p class="font-bold border-b pb-0.5 text-red-800">ACME Intelligence Details</p>
+        <p>* The suspect wears a red hat.</p>
+        <p>* The suspect is not at the Downtown Square.</p>
+        <p>* The suspect does not drive a delivery truck.</p>
+        <p>* Hired a trail guide near Osage Park.</p>
+      </div>
+    `,
+    question: 'Which getaway vehicle matches the profile?',
+    options: ['Helicopter', 'Bicycle', 'Tour Boat', 'Delivery Truck'],
+    correctIndex: 1
+  },
+  {
+    ariaLabel: 'Compass grid starting at wetland row 3 column 3 and moving north 2 west 1.',
+    description: 'Solve the final compass tracking course through the Osage Park wetlands.',
+    visualHtml: `
+      <div class="w-full text-xs">
+        <div class="grid grid-cols-6 gap-0.5 border border-slate-400 p-1 bg-blue-950/20 rounded font-bold text-[8px] text-center">
+          <div></div><div class="bg-red-500/20 text-red-900 p-0.5 rounded">Boardwalk</div><div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div><div></div><div></div>
+          <div></div><div></div><div class="bg-blue-300 p-0.5 rounded">Wetland</div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+        <p class="text-[8px] text-slate-500 text-center mt-2 font-semibold">Start: Wetland (3,3). Go North 2, West 1.</p>
+      </div>
+    `,
+    question: 'Which coordinate tile contains the escape portal?',
+    options: [
+      'Row 1, Col 2 (Boardwalk)',
+      'Row 5, Col 4 (Dog Park)',
+      'Row 3, Col 1 (Pond Dock)',
+      'Row 1, Col 4 (Archery Range)'
+    ],
+    correctIndex: 0
   }
 ];
 
-const FALLBACK_LOCATIONS = LOCATIONS;
-
 // Symbols assigned to locations for final puzzle
 const LOCATION_SYMBOLS = {
-  'buenos-aires': { char: '💃', name: 'Tango' },
-  'mendoza': { char: '☀️', name: 'Sun' },
-  'salta': { char: '☁️', name: 'Cloud' },
-  'cordoba': { char: '📖', name: 'Book' },
-  'iguazu': { char: '💧', name: 'Water' },
-  'bariloche': { char: '💨', name: 'Wind' },
-  'ushuaia': { char: '🚨', name: 'Light' },
-  'el-calafate': { char: '❄️', name: 'Ice' }
+  'downtown-square': { char: '🏛️', name: 'Square' },
+  'walmart-museum': { char: '🏷️', name: 'Price Tag' },
+  'walmart-home-office': { char: '🧭', name: 'Campus' },
+  'crystal-bridges': { char: '🖼️', name: 'Gallery' },
+  'the-momentary': { char: '🎭', name: 'Stage' },
+  'compton-gardens': { char: '🌿', name: 'Leaf' },
+  'coler-preserve': { char: '🚵', name: 'Trail' },
+  'osage-park': { char: '🏹', name: 'Arrow' }
 };
 
-let QUESTION_BANK = {};
-const SAVE_SCHEMA_VERSION = 2;
+const DEFAULT_QUIZ_PACK = {
+  schemaVersion: 1,
+  id: 'bentonville-carmen',
+  title: 'Where in Bentonville is Carmen Sandiego?',
+  subtitle: 'Bentonville Division',
+  heroLocation: 'BENTONVILLE',
+  intro: 'The master thief Carmen Sandiego has scattered clues across Bentonville landmarks, trails, museums, and public spaces. Use your deductive wits, decode ciphers, and issue the correct arrest warrant before she slips away!',
+  evidenceLabel: 'ACME BENTONVILLE EVIDENCE',
+  successMessage: 'You arrested Carmen Sandiego in Bentonville and recovered every stolen clue.',
+  map: {
+    center: {
+      lat: 36.3729,
+      lng: -94.2088
+    },
+    zoom: 13,
+    minZoom: 11,
+    maxZoom: 17
+  },
+  finalConfrontation: {
+    title: 'Boss Duel',
+    rounds: DEFAULT_FINAL_CONFRONTATION_ROUNDS
+  },
+  locations: FALLBACK_LOCATIONS,
+  questions: createFallbackQuestionBank(FALLBACK_LOCATIONS),
+  sources: {}
+};
+
+const DEFAULT_QUIZ_PACK_ENTRY = {
+  id: DEFAULT_QUIZ_PACK.id,
+  title: DEFAULT_QUIZ_PACK.title,
+  description: 'Built-in fallback quiz pack.',
+  path: ''
+};
+
+const DEFAULT_QUIZ_PACK_MANIFEST = {
+  schemaVersion: 1,
+  defaultPackId: DEFAULT_QUIZ_PACK.id,
+  packs: [DEFAULT_QUIZ_PACK_ENTRY]
+};
+
+let QUIZ_PACK = DEFAULT_QUIZ_PACK;
+let QUIZ_PACK_MANIFEST = DEFAULT_QUIZ_PACK_MANIFEST;
+let ACTIVE_PACK_ENTRY = QUIZ_PACK_MANIFEST.packs[0];
+let QUESTION_BANK = DEFAULT_QUIZ_PACK.questions;
+const SAVE_SCHEMA_VERSION = 3;
 const SAVE_KEY = 'carmen_save';
 const LAST_RUN_KEY = 'carmen_lastCaseVariantIds';
 const SETTINGS_KEY = 'carmen_settings';
+const PACK_SELECTION_KEY = 'carmen_selectedQuizPackId';
 
-async function loadRegionData() {
-  try {
-    const response = await fetch('./data/argentina-regions.json', { cache: 'no-store' });
-    if (!response.ok) {
-      throw new Error(`Region data request failed: ${response.status}`);
+function createFallbackQuestionBank(locations) {
+  return Object.fromEntries(locations.map((location) => [location.id, [createClassicCase(location)]]));
+}
+
+function hasFiniteNumber(value) {
+  return typeof value === 'number' && Number.isFinite(value);
+}
+
+function normalizeMapCenter(center) {
+  if (Array.isArray(center) && center.length === 2) {
+    return {
+      lat: Number(center[0]),
+      lng: Number(center[1])
+    };
+  }
+  if (center && typeof center === 'object') {
+    return {
+      lat: Number(center.lat),
+      lng: Number(center.lng)
+    };
+  }
+  return DEFAULT_QUIZ_PACK.map.center;
+}
+
+function normalizeQuizPack(pack) {
+  const nextPack = {
+    ...DEFAULT_QUIZ_PACK,
+    ...pack,
+    map: {
+      ...DEFAULT_QUIZ_PACK.map,
+      ...(pack?.map || {})
+    },
+    finalConfrontation: {
+      ...DEFAULT_QUIZ_PACK.finalConfrontation,
+      ...(pack?.finalConfrontation || {})
     }
-    const regionData = await response.json();
-    if (Array.isArray(regionData.locations) && regionData.locations.length > 0) {
-      LOCATIONS = regionData.locations;
+  };
+  nextPack.map.center = normalizeMapCenter(nextPack.map.center);
+  return nextPack;
+}
+
+function validateQuizPack(pack) {
+  if (!pack || !Array.isArray(pack.locations) || pack.locations.length === 0) {
+    throw new Error('Quiz pack must include at least one location.');
+  }
+  if (!pack.questions || typeof pack.questions !== 'object') {
+    throw new Error('Quiz pack must include a questions object keyed by location id.');
+  }
+  if (!hasFiniteNumber(pack.map?.center?.lat) || !hasFiniteNumber(pack.map?.center?.lng)) {
+    throw new Error('Quiz pack map.center must include numeric lat and lng values.');
+  }
+
+  pack.locations.forEach((location) => {
+    if (!location.id || !hasFiniteNumber(location.lat) || !hasFiniteNumber(location.lng)) {
+      throw new Error(`Quiz pack location "${location.id || 'unknown'}" must include id, lat, and lng.`);
     }
-  } catch (error) {
-    console.warn('Region metadata unavailable; using built-in fallback locations.', error);
+    if (!Array.isArray(pack.questions[location.id]) || pack.questions[location.id].length === 0) {
+      throw new Error(`Quiz pack location "${location.id}" is missing a question pool.`);
+    }
+  });
+}
+
+function normalizeQuizPackManifest(manifest) {
+  return {
+    schemaVersion: 1,
+    ...manifest,
+    packs: Array.isArray(manifest?.packs) ? manifest.packs : []
+  };
+}
+
+function validateQuizPackManifest(manifest) {
+  if (!manifest || !Array.isArray(manifest.packs) || manifest.packs.length === 0) {
+    throw new Error('Quiz pack manifest must include at least one pack.');
+  }
+  if (!manifest.defaultPackId) {
+    throw new Error('Quiz pack manifest must include a defaultPackId.');
+  }
+  const ids = new Set();
+  manifest.packs.forEach((entry) => {
+    if (!entry.id || !entry.title || !entry.path) {
+      throw new Error('Every quiz pack manifest entry needs id, title, and path.');
+    }
+    if (ids.has(entry.id)) {
+      throw new Error(`Duplicate quiz pack id "${entry.id}".`);
+    }
+    ids.add(entry.id);
+  });
+  if (!ids.has(manifest.defaultPackId)) {
+    throw new Error(`Default quiz pack "${manifest.defaultPackId}" is not listed.`);
   }
 }
 
-async function loadQuestionBank() {
+function applyQuizPack(pack) {
+  const normalizedPack = normalizeQuizPack(pack);
+  validateQuizPack(normalizedPack);
+  QUIZ_PACK = normalizedPack;
+  LOCATIONS = normalizedPack.locations;
+  QUESTION_BANK = normalizedPack.questions;
+  applyQuizPackMetadata();
+}
+
+function setTextIfPresent(id, value) {
+  const element = document.getElementById(id);
+  if (element && typeof value === 'string') {
+    element.textContent = value;
+  }
+}
+
+function applyQuizPackMetadata() {
+  document.title = QUIZ_PACK.title;
+  setTextIfPresent('packSubtitle', QUIZ_PACK.subtitle);
+  setTextIfPresent('packHeroLocation', QUIZ_PACK.heroLocation);
+  setTextIfPresent('packIntro', QUIZ_PACK.intro);
+  setTextIfPresent('packFooterTitle', QUIZ_PACK.title);
+}
+
+function getPreferredPackId() {
+  const savedPackId = localStorage.getItem(PACK_SELECTION_KEY);
+  const savedPack = QUIZ_PACK_MANIFEST.packs.find((entry) => entry.id === savedPackId);
+  return savedPack?.id || QUIZ_PACK_MANIFEST.defaultPackId;
+}
+
+function getPackEntry(packId) {
+  return QUIZ_PACK_MANIFEST.packs.find((entry) => entry.id === packId) ||
+    QUIZ_PACK_MANIFEST.packs.find((entry) => entry.id === QUIZ_PACK_MANIFEST.defaultPackId) ||
+    QUIZ_PACK_MANIFEST.packs[0];
+}
+
+function updatePackSelectorUi(selectedPackId) {
+  const selector = document.getElementById('packSelector');
+  if (!selector) return;
+
+  selector.innerHTML = '';
+  QUIZ_PACK_MANIFEST.packs.forEach((entry) => {
+    const option = document.createElement('option');
+    option.value = entry.id;
+    option.textContent = entry.title;
+    selector.appendChild(option);
+  });
+  selector.value = selectedPackId;
+  selector.disabled = QUIZ_PACK_MANIFEST.packs.length <= 1;
+}
+
+function setPackSelectorStatus(message) {
+  setTextIfPresent('packSelectorStatus', message);
+}
+
+function resetMapForPackChange() {
+  if (map && typeof map.remove === 'function') {
+    map.remove();
+  }
+  map = null;
+  mapMarkers = [];
+  mapPolyline = null;
+  const mapEl = document.getElementById('map');
+  if (mapEl) mapEl.innerHTML = '';
+}
+
+async function fetchJson(path) {
+  const response = await fetch(path, { cache: 'no-store' });
+  if (!response.ok) {
+    throw new Error(`Request failed for ${path}: ${response.status}`);
+  }
+  return response.json();
+}
+
+async function selectQuizPackById(packId, options = {}) {
+  const entry = getPackEntry(packId);
+  if (!entry) {
+    throw new Error('No quiz pack entry is available.');
+  }
+
+  const selector = document.getElementById('packSelector');
+  if (selector) selector.disabled = true;
+  setPackSelectorStatus(`Loading ${entry.title}...`);
+
   try {
-    const response = await fetch('./question-bank.json', { cache: 'no-store' });
-    if (!response.ok) {
-      throw new Error(`Question bank request failed: ${response.status}`);
+    const pack = entry.path ? await fetchJson(entry.path) : DEFAULT_QUIZ_PACK;
+    resetMapForPackChange();
+    applyQuizPack(pack);
+    ACTIVE_PACK_ENTRY = entry;
+    if (options.persist !== false) {
+      localStorage.setItem(PACK_SELECTION_KEY, entry.id);
     }
-    QUESTION_BANK = await response.json();
+    updatePackSelectorUi(entry.id);
+    setPackSelectorStatus(entry.description || `${entry.title} selected.`);
+    checkResumeState();
   } catch (error) {
-    QUESTION_BANK = {};
-    LOCATIONS = FALLBACK_LOCATIONS;
-    console.warn('Question bank unavailable; using classic cases only.', error);
+    if (options.allowFallback === false) throw error;
+    const fallbackEntry = getPackEntry(DEFAULT_QUIZ_PACK.id);
+    ACTIVE_PACK_ENTRY = fallbackEntry;
+    applyQuizPack(DEFAULT_QUIZ_PACK);
+    if (options.persist !== false) {
+      localStorage.setItem(PACK_SELECTION_KEY, fallbackEntry.id);
+    }
+    updatePackSelectorUi(fallbackEntry.id);
+    setPackSelectorStatus('Pack unavailable; using the built-in fallback quiz.');
+    checkResumeState();
+    console.warn('Quiz pack unavailable; using built-in fallback cases.', error);
+  } finally {
+    if (selector) selector.disabled = QUIZ_PACK_MANIFEST.packs.length <= 1;
+  }
+}
+
+async function selectQuizPackFromControl(packId) {
+  sound.click();
+  await selectQuizPackById(packId);
+}
+
+async function loadQuizPack() {
+  try {
+    const manifest = normalizeQuizPackManifest(await fetchJson('./data/quiz-packs.json'));
+    validateQuizPackManifest(manifest);
+    QUIZ_PACK_MANIFEST = manifest;
+    const preferredPackId = getPreferredPackId();
+    updatePackSelectorUi(preferredPackId);
+    await selectQuizPackById(preferredPackId, { persist: false });
+  } catch (error) {
+    QUIZ_PACK_MANIFEST = DEFAULT_QUIZ_PACK_MANIFEST;
+    ACTIVE_PACK_ENTRY = DEFAULT_QUIZ_PACK_ENTRY;
+    applyQuizPack(DEFAULT_QUIZ_PACK);
+    updatePackSelectorUi(DEFAULT_QUIZ_PACK.id);
+    setPackSelectorStatus('Pack manifest unavailable; using the built-in fallback quiz.');
+    console.warn('Quiz pack manifest unavailable; using built-in fallback cases.', error);
   }
 }
 
@@ -565,6 +905,7 @@ let state = {
   caseVariantIds: [],
   activeTab: 'dossier',
   finalConfrontationRound: 1,
+  activePuzzleCorrectIndex: 0,
   activeFinalCorrectIndex: 0,
   isFinalConfrontation: false,
   settings: {
@@ -655,8 +996,7 @@ const sound = {
 // SYSTEM BOOT & MAIN NAV
 // ============================================================
 window.onload = async () => {
-  await loadRegionData();
-  await loadQuestionBank();
+  await loadQuizPack();
   initBgParticles();
   loadSettings();
   checkResumeState();
@@ -683,8 +1023,10 @@ window.onload = async () => {
 };
 
 function checkResumeState() {
-  const hasSave = localStorage.getItem(SAVE_KEY) !== null;
+  const rawSave = readSavedGame();
+  const hasSave = rawSave !== null;
   const validSave = getValidSave();
+  const saveBelongsToOtherPack = Boolean(rawSave?.quizPackId && rawSave.quizPackId !== QUIZ_PACK.id);
   if (validSave) {
     document.getElementById('resumeButton').classList.remove('hidden');
   } else {
@@ -692,7 +1034,7 @@ function checkResumeState() {
   }
   const clearButton = document.getElementById('clearBrokenSaveButton');
   if (clearButton) {
-    clearButton.classList.toggle('hidden', !hasSave || Boolean(validSave));
+    clearButton.classList.toggle('hidden', !hasSave || Boolean(validSave) || saveBelongsToOtherPack);
   }
 }
 
@@ -878,6 +1220,14 @@ function resumeGame() {
   }
 }
 
+function readSavedGame() {
+  try {
+    return JSON.parse(localStorage.getItem(SAVE_KEY));
+  } catch(e) {
+    return null;
+  }
+}
+
 function caseVariantIdsAreValid(ids) {
   if (!Array.isArray(ids) || ids.length !== LOCATIONS.length) return false;
   return ids.every((id, index) => {
@@ -888,11 +1238,12 @@ function caseVariantIdsAreValid(ids) {
 
 function getValidSave() {
   try {
-    const parsed = JSON.parse(localStorage.getItem(SAVE_KEY));
+    const parsed = readSavedGame();
     if (!parsed) return null;
     if (parsed.schemaVersion !== SAVE_SCHEMA_VERSION) {
       return migrateSave(parsed);
     }
+    if (parsed.quizPackId !== QUIZ_PACK.id) return null;
     if (!LOCATIONS[parsed.currentLocationIndex] && !parsed.isFinalConfrontation) return null;
     if (!caseVariantIdsAreValid(parsed.caseVariantIds)) return null;
     return parsed;
@@ -913,6 +1264,7 @@ function migrateSave(parsed) {
   
   const migrated = {
     schemaVersion: SAVE_SCHEMA_VERSION,
+    quizPackId: parsed.quizPackId || QUIZ_PACK.id,
     difficulty: parsed.difficulty || 'detective',
     currentLocationIndex,
     score: Number(parsed.score) || 0,
@@ -936,6 +1288,7 @@ function migrateSave(parsed) {
 function saveGame(overrides = {}) {
   const saveObj = {
     schemaVersion: SAVE_SCHEMA_VERSION,
+    quizPackId: QUIZ_PACK.id,
     difficulty: state.difficulty,
     currentLocationIndex: state.currentLocationIndex,
     score: state.score,
@@ -961,22 +1314,32 @@ function saveHighScore(finalScore, rank) {
   } catch(e) {
     highScores = [];
   }
+
+  // Pre-pack scores have no quizPackId and belonged to the old Argentina game;
+  // they are kept in storage but never count toward a pack's board.
+  const isCurrentPackScore = (entry) => entry.quizPackId === QUIZ_PACK.id;
   
   const previousBest = highScores
-    .filter(entry => entry.difficulty === state.difficulty)
+    .filter(entry => isCurrentPackScore(entry) && entry.difficulty === state.difficulty)
     .reduce((best, entry) => Math.max(best, Number(entry.score) || 0), 0);
   
-  highScores.push({
+  const newEntry = {
+    quizPackId: QUIZ_PACK.id,
     score: finalScore,
     rank,
     difficulty: state.difficulty,
     caseSeed: state.caseSeed,
     caseVariantIds: state.caseVariantIds,
     date: new Date().toISOString()
-  });
+  };
   
-  highScores.sort((a, b) => b.score - a.score);
-  localStorage.setItem('carmen_highScores', JSON.stringify(highScores.slice(0, 10)));
+  const nextScores = [...highScores, newEntry];
+  const currentPackScores = nextScores
+    .filter(isCurrentPackScore)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 10);
+  const otherPackScores = nextScores.filter((entry) => !isCurrentPackScore(entry));
+  localStorage.setItem('carmen_highScores', JSON.stringify([...otherPackScores, ...currentPackScores]));
   
   return {
     previousBest,
@@ -986,18 +1349,34 @@ function saveHighScore(finalScore, rank) {
 
 function getHighScores() {
   try {
-    return JSON.parse(localStorage.getItem('carmen_highScores')) || [];
+    const highScores = JSON.parse(localStorage.getItem('carmen_highScores')) || [];
+    return highScores
+      .filter((entry) => entry.quizPackId === QUIZ_PACK.id)
+      .sort((a, b) => b.score - a.score);
   } catch(e) {
     return [];
   }
 }
 
-function getStats() {
-  let stats = { gamesPlayed: 0, totalArrests: 0, totalEscapes: 0, perfectGames: 0 };
+function getAllStats() {
   try {
-    stats = { ...stats, ...(JSON.parse(localStorage.getItem('carmen_stats')) || {}) };
-  } catch(e) {}
-  return stats;
+    const parsed = JSON.parse(localStorage.getItem('carmen_stats')) || {};
+    // Legacy flat stats (no byPack) were the old Argentina game's aggregate; ignore
+    // them rather than mislabel them as the active pack. The next write overwrites them.
+    return parsed.byPack && typeof parsed.byPack === 'object' ? parsed : { byPack: {} };
+  } catch(e) {
+    return { byPack: {} };
+  }
+}
+
+function getStats() {
+  const stats = getAllStats().byPack[QUIZ_PACK.id] || {};
+  return {
+    gamesPlayed: Number(stats.gamesPlayed) || 0,
+    totalArrests: Number(stats.totalArrests) || 0,
+    totalEscapes: Number(stats.totalEscapes) || 0,
+    perfectGames: Number(stats.perfectGames) || 0
+  };
 }
 
 function showRecordsModal() {
@@ -1030,6 +1409,7 @@ function hideRecordsModal() {
 }
 
 function updateStats(outcome) {
+  const allStats = getAllStats();
   const stats = getStats();
   
   stats.gamesPlayed++;
@@ -1040,7 +1420,8 @@ function updateStats(outcome) {
     stats.perfectGames++;
   }
   
-  localStorage.setItem('carmen_stats', JSON.stringify(stats));
+  allStats.byPack[QUIZ_PACK.id] = stats;
+  localStorage.setItem('carmen_stats', JSON.stringify(allStats));
 }
 
 function renderCaseHistorySummary() {
@@ -1198,110 +1579,21 @@ function renderPuzzleVisual(loc) {
     return;
   }
   
-  const id = loc.id;
-  
-  if (id === 'buenos-aires') {
-    container.innerHTML = `
-      <div class="w-full text-center space-y-2">
-        <div class="typewriter-font text-[10px] bg-slate-950 text-amber-400 p-2 rounded border border-slate-700 leading-tight uppercase font-bold text-left shadow-inner">
-          GUIDE: SHIFT LEFT BY 3<br>
-          (D-&gt;A, E-&gt;B, F-&gt;C...)
-        </div>
-        <div class="typewriter-font text-xs font-bold border-2 border-dashed border-red-700 p-4 rounded text-red-900 bg-red-50 inline-block rotate-[-2deg] mt-3">
-          FDPLQLWR WDQJR RXWILW
-        </div>
+  const symbol = LOCATION_SYMBOLS[loc.id] || { char: '📍', name: loc.name };
+  container.innerHTML = `
+    <div class="w-full text-center space-y-2">
+      <div class="text-5xl" aria-hidden="true">${symbol.char}</div>
+      <div class="typewriter-font text-[10px] bg-slate-950 text-amber-400 p-2 rounded border border-slate-700 leading-tight uppercase font-bold text-left shadow-inner">
+        ${QUIZ_PACK.evidenceLabel}<br>
+        STOP: ${loc.name}<br>
+        TOKEN: ${symbol.name}
       </div>
-    `;
-  } else if (id === 'mendoza') {
-    container.innerHTML = `
-      <div class="w-full space-y-2 text-center text-xs">
-        <div class="border border-slate-300 rounded p-2 bg-white/80">
-          <p class="font-bold border-b border-slate-200 pb-1 mb-1">Mendoza Topo Chart</p>
-          <div class="grid grid-cols-2 gap-1 text-[9px] text-left font-semibold">
-            <div>📍 Mendoza: 32°53'S, 68°49'W</div>
-            <div>🏔️ Aconcagua: 32°39'S, 70°00'W</div>
-            <div>🍇 San Rafael: 34°36'S, 68°20'W</div>
-            <div>🏔️ San Juan: 31°32'S, 68°31'W</div>
-          </div>
-        </div>
-        <span class="text-xs text-red-600 font-bold bg-white px-2 py-0.5 rounded border border-slate-200 inline-block mt-1">Postcard target: "32°39'S, 70°00'W"</span>
+      <div class="typewriter-font text-xs font-bold border-2 border-dashed border-red-700 p-3 rounded text-red-900 bg-red-50 inline-block rotate-[-2deg]">
+        ${loc.puzzle.title}
       </div>
-    `;
-  } else if (id === 'salta') {
-    container.innerHTML = `
-      <div class="w-full space-y-1.5 text-left text-[9px] font-semibold">
-        <div class="bg-white/80 border border-slate-200 rounded p-2">
-          <p class="font-bold text-slate-700 border-b pb-1 mb-1 text-[10px]">Transit Timestamps</p>
-          <div>⏰ 11:30 - Spied at San Antonio de los Cobres</div>
-          <div>⏰ 08:00 - Train leaves Salta Cathedral</div>
-          <div>⏰ 16:30 - Escaped into Quebrada Humahuaca</div>
-          <div>⏰ 14:00 - Crosses La Polvorilla Viaduct</div>
-        </div>
-      </div>
-    `;
-  } else if (id === 'cordoba') {
-    container.innerHTML = `
-      <div class="w-full space-y-1 text-left text-[9px] leading-tight font-semibold">
-        <div class="bg-white/80 border border-slate-200 rounded p-2">
-          <p class="font-bold border-b border-slate-200 pb-1 mb-1 text-[10px]">Logic Case Notes</p>
-          <div class="text-[8px] space-y-0.5 text-slate-800">
-            • Suspect in Jesuit Quarter was NOT glasses.<br>
-            • Nueva Córdoba target = University student.<br>
-            • Red scarf wearer heading to Sierras.<br>
-            • Target was confirmed in Nueva Córdoba.
-          </div>
-        </div>
-      </div>
-    `;
-  } else if (id === 'iguazu') {
-    container.innerHTML = `
-      <div class="w-full space-y-2 text-center text-xs">
-        <div class="bg-white/80 border border-slate-200 rounded p-2 text-left">
-          <p class="font-bold border-b border-slate-200 pb-1 mb-1 text-[10px]">Trail Waypoint Distances</p>
-          <p class="text-[10px] text-center font-bold tracking-widest text-emerald-800 bg-emerald-50 px-2 py-1 rounded">1km ➔ 1km ➔ 2km ➔ 3km ➔ 5km ➔ ?</p>
-          <p class="text-[8px] text-slate-500 mt-1 text-center font-semibold">"Sum of the two preceding waypoints."</p>
-        </div>
-      </div>
-    `;
-  } else if (id === 'bariloche') {
-    container.innerHTML = `
-      <div class="w-full text-center">
-        <div class="relative w-24 h-24 mx-auto border-4 border-white bg-slate-300 rounded shadow-md overflow-hidden flex items-center justify-center">
-          <div class="text-3xl">🚠</div>
-          <div class="absolute bottom-0 inset-x-0 bg-black/60 text-[7px] text-white py-0.5 tracking-wider uppercase font-bold">REVOLVING CAFE</div>
-        </div>
-        <p class="text-[8px] text-slate-500 mt-2 font-semibold italic">Torn polaroid shows summit cable car</p>
-      </div>
-    `;
-  } else if (id === 'ushuaia') {
-    container.innerHTML = `
-      <div class="w-full text-xs">
-        <div class="grid grid-cols-6 gap-0.5 border border-slate-400 p-1 bg-sky-950/20 rounded font-bold text-[8px] text-center">
-          <div class="bg-slate-300 p-0.5 text-slate-800 rounded">Port</div>
-          <div></div><div></div><div></div><div></div><div></div>
-          <div></div><div></div><div></div><div></div><div></div><div></div>
-          <div></div><div></div><div></div><div></div><div class="bg-amber-100 p-0.5 text-amber-900 rounded">Lighthouse</div><div></div>
-          <div></div><div></div><div></div><div></div><div></div><div></div>
-          <div></div><div class="bg-slate-300 p-0.5 text-slate-800 rounded">Penguin</div><div></div><div></div><div></div><div></div>
-          <div></div><div></div><div></div><div></div><div></div><div></div>
-        </div>
-        <p class="text-[8px] text-slate-500 text-center mt-1 font-semibold">Start: Port (1,1). Go East 4, South 2.</p>
-      </div>
-    `;
-  } else if (id === 'el-calafate') {
-    container.innerHTML = `
-      <div class="w-full space-y-1.5 text-[9px] font-semibold">
-        <div class="bg-white/80 border border-slate-200 rounded p-2">
-          <p class="font-bold border-b pb-0.5 mb-1 text-[10px]">Symbol Directory</p>
-          <div class="grid grid-cols-3 gap-1 text-center font-bold text-[10px]">
-            <div class="bg-amber-50 p-1 rounded">Mendoza<br>☀️</div>
-            <div class="bg-sky-50 p-1 rounded">Bariloche<br>💨</div>
-            <div class="bg-blue-50 p-1 rounded">Calafate<br>❄️</div>
-          </div>
-        </div>
-      </div>
-    `;
-  }
+    </div>
+  `;
+  return;
 }
 
 function getHintLimit() {
@@ -1377,11 +1669,25 @@ function requestHint() {
   updateHintButton();
 }
 
+// Fisher-Yates: return options reordered with the new index of the correct answer.
+// Authored packs almost always list the answer first; without this the game is
+// beatable by always pressing A.
+function shuffleOptions(options, correctIndex) {
+  const order = options.map((_, i) => i);
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+  return { options: order.map((i) => options[i]), correctIndex: order.indexOf(correctIndex) };
+}
+
 function buildPuzzleOptions(puzzle) {
   const container = document.getElementById('puzzleOptionsGrid');
   container.innerHTML = '';
-  
-  puzzle.options.forEach((opt, idx) => {
+
+  const shuffled = shuffleOptions(puzzle.options, puzzle.correctIndex);
+  state.activePuzzleCorrectIndex = shuffled.correctIndex;
+  shuffled.options.forEach((opt, idx) => {
     const letters = ['A', 'B', 'C', 'D'];
     const btn = document.createElement('button');
     btn.className = 'option-btn w-full text-left p-3 border border-slate-300 bg-white/70 hover:bg-white text-slate-900 rounded-lg text-xs md:text-sm font-semibold flex items-center shadow-sm';
@@ -1393,18 +1699,17 @@ function buildPuzzleOptions(puzzle) {
 
 function selectChoice(index) {
   if (state.puzzleSolved) return;
-  
-  const loc = getLocationCase(state.currentLocationIndex);
+
   const buttons = document.querySelectorAll('.option-btn');
   buttons.forEach(btn => btn.disabled = true);
   
-  const isCorrect = (index === loc.puzzle.correctIndex);
-  
+  const isCorrect = (index === state.activePuzzleCorrectIndex);
+
   if (isCorrect) {
     sound.success();
     buttons[index].classList.add('correct');
     state.puzzleSolved = true;
-    
+
     addRoundPoints('puzzle', getPuzzleScore(state.puzzleAttempts, state.hintsUsedInRound));
     updateHintButton();
     
@@ -1451,7 +1756,7 @@ function buildWarrantDropdowns(currentLoc) {
   const hideoutSelect = document.getElementById('warrantHideout');
   const disguiseSelect = document.getElementById('warrantDisguise');
   
-  citySelect.innerHTML = '<option value="">-- SELECT CITY --</option>';
+  citySelect.innerHTML = '<option value="">-- SELECT STOP --</option>';
   hideoutSelect.innerHTML = '<option value="">-- SELECT HIDEOUT --</option>';
   disguiseSelect.innerHTML = '<option value="">-- SELECT DISGUISE --</option>';
   
@@ -1664,85 +1969,34 @@ function startFinalConfrontationRound() {
   
   const puzzleTitle = document.getElementById('puzzleTitleText');
   const puzzleQuestion = document.getElementById('puzzleQuestionText');
+  const rounds = getFinalConfrontationRounds();
+  const round = rounds[state.finalConfrontationRound - 1] || rounds[0];
+  const finalTitle = QUIZ_PACK.finalConfrontation?.title || 'Boss Duel';
   
-  puzzleTitle.textContent = `Boss Duel - Round ${state.finalConfrontationRound} of 3`;
-  
-  if (state.finalConfrontationRound === 1) {
-    container.setAttribute('aria-label', 'Encrypted farewell note showing FDUPHQ for a Caesar cipher challenge.');
-    document.getElementById('puzzleDescription').textContent = 'Crack Carmen\'s signature encrypted farewell note using Caesar cipher (shift left by 3).';
-    container.innerHTML = `
-      <div class="text-center">
-        <span class="text-xs bg-slate-900 text-amber-400 px-3 py-1 rounded font-mono font-bold border border-slate-700">ENCRYPTED NOTE</span>
-        <p class="typewriter-font text-lg font-bold border border-dashed border-red-700 bg-red-50 text-red-900 px-4 py-2 mt-4 rounded rotate-[-3deg]">FDUPHQ</p>
-      </div>
-    `;
-    puzzleQuestion.textContent = 'What does "FDUPHQ" decode to?';
-    
-    buildCustomOptions([
-      'CARMEN',
-      'CAPER',
-      'CHIEF',
-      'CABIN'
-    ], 0);
-    
-  } else if (state.finalConfrontationRound === 2) {
-    container.setAttribute('aria-label', 'ACME intelligence list used to deduce Carmen getaway vehicle.');
-    document.getElementById('puzzleDescription').textContent = 'Use process of elimination to deduce Carmen\'s getaway vehicle in El Calafate.';
-    container.innerHTML = `
-      <div class="text-left text-[9px] bg-white/80 p-3 rounded border border-slate-200 leading-tight space-y-1 font-semibold">
-        <p class="font-bold border-b pb-0.5 text-red-800">ACME Intelligence Details</p>
-        <p>• The suspect wears a red hat.</p>
-        <p>• The suspect is not in Buenos Aires.</p>
-        <p>• The suspect does not ride a train.</p>
-        <p>• Hired a private tour guide in El Calafate.</p>
-      </div>
-    `;
-    puzzleQuestion.textContent = 'Which getaway vehicle matches the profile?';
-    
-    buildCustomOptions([
-      'Helicopter',
-      'Bicycle',
-      'Tour Boat',
-      'Steam Locomotive'
-    ], 2);
-    
-  } else if (state.finalConfrontationRound === 3) {
-    container.setAttribute('aria-label', 'Compass grid starting at glacier row 3 column 3 and moving north 2 west 1.');
-    document.getElementById('puzzleDescription').textContent = 'Solve the final compass tracking course on the Perito Moreno Glacier.';
-    container.innerHTML = `
-      <div class="w-full text-xs">
-        <div class="grid grid-cols-6 gap-0.5 border border-slate-400 p-1 bg-blue-950/20 rounded font-bold text-[8px] text-center">
-          <div></div><div class="bg-red-500/20 text-red-900 p-0.5 rounded">Ice Cave</div><div></div><div></div><div></div><div></div>
-          <div></div><div></div><div></div><div></div><div></div><div></div>
-          <div></div><div></div><div class="bg-blue-300 p-0.5 rounded">Glacier</div><div></div><div></div><div></div>
-          <div></div><div></div><div></div><div></div><div></div><div></div>
-          <div></div><div></div><div></div><div></div><div></div><div></div>
-          <div></div><div></div><div></div><div></div><div></div><div></div>
-        </div>
-        <p class="text-[8px] text-slate-500 text-center mt-2 font-semibold">Start: Glacier (3,3). Go North 2, West 1.</p>
-      </div>
-    `;
-    puzzleQuestion.textContent = 'Which coordinate tile contains the escape portal?';
-    
-    buildCustomOptions([
-      'Row 1, Col 2 (Ice Cave)',
-      'Row 5, Col 4 (Crevasse)',
-      'Row 3, Col 1 (Lagoon)',
-      'Row 1, Col 4 (Forest Peak)'
-    ], 0);
-  }
+  puzzleTitle.textContent = `${finalTitle} - Round ${state.finalConfrontationRound} of ${rounds.length}`;
+  container.setAttribute('aria-label', round.ariaLabel || round.description || round.question);
+  document.getElementById('puzzleDescription').textContent = round.description;
+  container.innerHTML = round.visualHtml || '';
+  puzzleQuestion.textContent = round.question;
+  buildCustomOptions(round.options, round.correctIndex);
+}
+
+function getFinalConfrontationRounds() {
+  const rounds = QUIZ_PACK.finalConfrontation?.rounds;
+  return Array.isArray(rounds) && rounds.length > 0 ? rounds : DEFAULT_FINAL_CONFRONTATION_ROUNDS;
 }
 
 function buildCustomOptions(options, correctIdx) {
   const container = document.getElementById('puzzleOptionsGrid');
   container.innerHTML = '';
-  state.activeFinalCorrectIndex = correctIdx;
-  
-  options.forEach((opt, idx) => {
+
+  const shuffled = shuffleOptions(options, correctIdx);
+  state.activeFinalCorrectIndex = shuffled.correctIndex;
+  shuffled.options.forEach((opt, idx) => {
     const letters = ['A', 'B', 'C', 'D'];
     const btn = document.createElement('button');
     btn.className = 'option-btn w-full text-left p-3 border border-slate-300 bg-white/70 hover:bg-white text-slate-900 rounded-lg text-xs md:text-sm font-semibold flex items-center shadow-sm';
-    btn.onclick = () => selectFinalChoice(idx, correctIdx);
+    btn.onclick = () => selectFinalChoice(idx, shuffled.correctIndex);
     btn.innerHTML = `<span class="bg-slate-950 text-white font-bold rounded-full w-5 h-5 flex items-center justify-center text-[10px] mr-3">${letters[idx]}</span> <span class="flex-grow">${opt}</span>`;
     container.appendChild(btn);
   });
@@ -1762,7 +2016,7 @@ function selectFinalChoice(index, correctIdx) {
     state.puzzleSolved = true;
     
     setTimeout(() => {
-      if (state.finalConfrontationRound < 3) {
+      if (state.finalConfrontationRound < getFinalConfrontationRounds().length) {
         state.finalConfrontationRound++;
         saveGame();
         startFinalConfrontationRound();
@@ -1813,7 +2067,7 @@ function triggerGameSuccess() {
   container.innerHTML = `
     <div class="text-7xl mb-4">🏆</div>
     <h3 class="title-font text-5xl font-black text-amber-400 uppercase tracking-wide">CASE CLOSED</h3>
-    <p class="text-slate-200 text-lg mt-2">You arrested <span class="text-red-400 font-extrabold">Carmen Sandiego</span> in Patagonia and recovered all stolen treasures!</p>
+    <p class="text-slate-200 text-lg mt-2">${QUIZ_PACK.successMessage}</p>
     <p class="text-2xl font-bold text-sky-400 mt-4">${rank}</p>
     <p class="text-sm font-bold ${scoreRecord.isHighScore ? 'text-emerald-400' : 'text-slate-400'} mt-2">
       ${scoreRecord.isHighScore ? 'New high score for this difficulty' : `Best ${state.difficulty} score remains ${scoreRecord.previousBest}`}
@@ -1895,7 +2149,7 @@ function renderEscapedAnswersPanel() {
     : '';
 
   const rows = [
-    ['City', loc.warrantAnswers.city],
+    ['Stop', loc.warrantAnswers.city],
     ['Hideout', loc.warrantAnswers.hideout],
     ['Disguise', loc.warrantAnswers.disguise]
   ];
@@ -1959,11 +2213,12 @@ function initLeafletMap() {
     renderMapFallback();
     return;
   }
+  const mapConfig = QUIZ_PACK.map || DEFAULT_QUIZ_PACK.map;
+  const mapCenter = normalizeMapCenter(mapConfig.center);
   
-  // Center on central Argentina
   map = L.map('map', {
-    center: [-38.4161, -63.6167],
-    zoom: 3.5,
+    center: [mapCenter.lat, mapCenter.lng],
+    zoom: mapConfig.zoom,
     zoomControl: false,
     attributionControl: false,
     dragging: false,
@@ -1976,8 +2231,8 @@ function initLeafletMap() {
   
   // High-fidelity dark mode map tiles matching deep navy palette
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    maxZoom: 10,
-    minZoom: 3
+    maxZoom: mapConfig.maxZoom,
+    minZoom: mapConfig.minZoom
   }).on('tileerror', renderMapFallback).addTo(map);
 }
 
@@ -1994,7 +2249,7 @@ function getMapTextAlternative() {
     .map((loc) => loc.name)
     .join(', ') || 'None yet';
   const next = LOCATIONS[state.currentLocationIndex + 1]?.name || 'Final report';
-  return `Current city: ${current.name}. Province: ${current.province}. Visited cities: ${visited}. Next destination: ${next}.`;
+  return `Current stop: ${current.name}. District: ${current.province}. Visited stops: ${visited}. Next destination: ${next}.`;
 }
 
 function updateMapTextAlternative() {
@@ -2152,7 +2407,7 @@ function renderTokenGrid() {
   
   LOCATIONS.forEach((loc) => {
     const hasToken = state.clueTokens.includes(loc.id);
-    const sym = LOCATION_SYMBOLS[loc.id];
+    const sym = LOCATION_SYMBOLS[loc.id] || { char: loc.emoji || '📍', name: loc.name };
     
     const tile = document.createElement('div');
     if (hasToken) {

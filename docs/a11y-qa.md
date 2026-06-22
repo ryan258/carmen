@@ -21,7 +21,7 @@ an agent can't truly tab through or hear a screen reader. That checklist is at t
 
 ## Still needs a human (run these once in a browser)
 
-Open `carmen-sandiego-argentina.html` and:
+Open `carmen-sandiego-bentonville.html` and:
 
 1. **Automated:** paste axe-core in the console, check for serious/critical violations:
    ```js

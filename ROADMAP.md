@@ -1,6 +1,6 @@
 # Production Roadmap
 
-Build a production-grade Argentina edutainment detective game that is coherent as a game, accurate as educational material, and polished enough to replay. The finished game should feel like one intentional work: a Carmen-inspired geography mystery with a mid-century cut-paper visual language, high-fidelity Argentina mapping, meaningful puzzle variety, and trustworthy cultural content.
+Build a production-grade Bentonville edutainment detective game that is coherent as a game, accurate as educational material, and polished enough to replay. The finished game should feel like one intentional work: a Carmen-inspired local geography mystery with a mid-century cut-paper visual language, high-fidelity Bentonville mapping, meaningful puzzle variety, and trustworthy local content.
 
 Completed work has moved to [CHANGELOG.md](CHANGELOG.md); this file tracks only what's left
 plus deliberate scope cuts.
@@ -44,8 +44,8 @@ Pick one feature to start; don't try to clear the whole board at once.
 ### Educational Coherence
 
 - [ ] Fact-check every educational claim against reliable sources.
-- [ ] Avoid reducing Argentina to only tourist landmarks by expanding regional and cultural breadth.
-- [ ] Distinguish Argentina-specific facts from broader Latin American generalities.
+- [ ] Avoid reducing Bentonville to only tourist landmarks by expanding civic, trail, art, food, public-space, and history breadth.
+- [ ] Distinguish Bentonville-specific facts from broader Northwest Arkansas generalities.
 
 ### Mechanical Coherence
 
@@ -107,7 +107,7 @@ _Complete — see CHANGELOG._
 
 _Complete — see CHANGELOG._
 
-- [x] **Cut (YAGNI):** further data-file splits — `argentina-regions.json` and `sources.json` already exist; single bank hasn't outgrown anything.
+- [x] **Cut (YAGNI):** further data-file splits — `bentonville-regions.json` and `sources.json` already exist; single bank hasn't outgrown anything.
 
 ### Phase 2: Remove Runtime Fragility
 
@@ -211,4 +211,4 @@ _Complete — see CHANGELOG._
 
 ## Definition Of Done
 
-The game is production-grade when a new player can complete a full randomized run, learn accurate Argentina-specific material, understand why each answer is correct, replay a meaningfully different case, use the game with keyboard and assistive technology, and experience a coherent visual/narrative style from title screen to final report.
+The game is production-grade when a new player can complete a full randomized run, learn accurate Bentonville-specific material, understand why each answer is correct, replay a meaningfully different case, use the game with keyboard and assistive technology, and experience a coherent visual/narrative style from title screen to final report.

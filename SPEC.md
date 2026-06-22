@@ -424,11 +424,13 @@ TITLE → DIFFICULTY → BRIEFING → INVESTIGATE → PUZZLE → WARRANT → RES
 ### File Structure
 ```
 carmen/
-├── index.html                         # Browser entry point
-├── carmen-sandiego-argentina.html     # Single self-contained game file
+├── index.html                         # Browser entry point (redirects to the active pack page)
+├── carmen-sandiego-bentonville.html   # Single self-contained game file
 ├── styles.css                         # Visual design and responsive styles
 ├── game.js                            # Game state, scoring, map, and UI logic
-├── question-bank.json                 # Randomized per-location case variants
+├── run-generator.js                   # Seeded per-run case selection (shared)
+├── data/quiz-packs.json               # Pack manifest the runtime loads first
+├── data/packs/*.json                  # Self-contained packs (locations + questions + sources)
 ├── SPEC.md                            # This document
 └── README.md                          # How to play, credits, keyboard shortcuts, roadmap
 ```

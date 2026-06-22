@@ -1,8 +1,8 @@
 # Manual QA — things a human must confirm
 
-Automated tests (`npm test`, 16/16) and `node --check` cover syntax, content schema, scoring,
-symbol coverage, and the no-CDN guard. The items below can't be verified by an agent — they need
-a real browser, real input devices, or human judgement. Open `carmen-sandiego-argentina.html`
+Automated tests (`npm test`) and `node --check` cover syntax, quiz-pack schema, content schema,
+scoring, generic token fallback, and the no-CDN guard. The items below can't be verified by an agent — they need
+a real browser, real input devices, or human judgement. Open `carmen-sandiego-bentonville.html`
 (or serve it) and work top to bottom.
 
 ## A. Verify the post-review bug fixes
@@ -28,8 +28,8 @@ Run the full checklist in [a11y-qa.md](a11y-qa.md) — keyboard-only run, axe-co
 
 ## C. Map / geography (ROADMAP "Map Roadmap")
 
-- [ ] Every marker sits on the correct city — spot-check each `lat`/`lng` in
-  `data/argentina-regions.json` against the real place.
+- [ ] Every marker sits on the correct stop for each selectable quiz pack — spot-check each
+  `lat`/`lng` in the relevant `data/packs/*.json` file against the real place.
 - [ ] Labels/pins don't overlap badly at mobile width.
 - [ ] Kill the network (DevTools offline) and confirm the static map fallback shows instead of a blank panel.
 
@@ -56,6 +56,6 @@ Run the full checklist in [a11y-qa.md](a11y-qa.md) — keyboard-only run, axe-co
 50 cases, and full interface/evidence-art redesign. See ROADMAP §Gameplay Phase 2, Content
 Phase 2, Visual Phase 2–3.
 
-**Deliberately skipped (review Medium):** sanitizing `innerHTML` from `question-bank.json`. That
+**Deliberately skipped (review Medium):** sanitizing `innerHTML` from `data/packs/*.json`. That
 content is author-owned and static, so there's no untrusted-input boundary today. Add a sanitizer
 only if that file ever accepts user-supplied content.

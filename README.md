@@ -1,6 +1,6 @@
-# Where in Argentina is Carmen Sandiego?
+# Where in Bentonville is Carmen Sandiego?
 
-A single-page detective game set across Argentina. Track Carmen through eight locations, inspect clues, solve a puzzle, and submit the correct arrest warrant before the case goes cold.
+A single-page detective game set across Bentonville, Arkansas. Track Carmen through eight local landmarks, inspect clues, solve a puzzle, and submit the correct arrest warrant before the case goes cold.
 
 ## Run Locally
 
@@ -16,7 +16,7 @@ Then visit:
 http://127.0.0.1:8000/
 ```
 
-Opening `index.html` directly may work for the classic fallback case, but browser file-security rules can block `question-bank.json`. Use the local server for randomized cases.
+Opening `index.html` directly may work for the classic fallback case, but browser file-security rules can block the quiz-pack manifest and pack files. Use the local server for randomized cases.
 
 ## Controls
 
@@ -27,12 +27,16 @@ Opening `index.html` directly may work for the classic fallback case, but browse
 ## Current MVP State
 
 - Playable full case flow from title screen through final confrontation.
-- Eight Argentina locations with randomized case variants, dossiers, clues, puzzle choices, warrants, travel screens, and final results.
+- Eight Bentonville locations with randomized case variants, dossiers, clues, puzzle choices, warrants, travel screens, and final results.
 - LocalStorage save/resume, high scores, basic stats, clue tokens, and settings.
 - Spec-aligned scoring for puzzle attempts, warrant bonus, streak bonus, final bonus, remaining-life bonus, and perfect-game bonus.
 - Separate `styles.css` and `game.js` files for easier iteration.
-- Separate `question-bank.json` file for adding and editing randomized case variants.
+- Interchangeable quiz packs under `data/packs/`, selected through `data/quiz-packs.json`.
 - Mid-century cut-paper visual direction with flat geometric shapes and a high-fidelity Leaflet map.
+
+## Content Packs
+
+Available game content is listed in `data/quiz-packs.json`; each entry points to a self-contained pack in `data/packs/`. See `docs/quiz-pack-schema.md` for the contract. The Bentonville generator (`scripts/generate-bentonville-content.js`) writes a single artifact, `data/packs/bentonville.json`, which inlines locations, questions, and sources.
 
 ## MVP Roadmap
 
@@ -51,7 +55,7 @@ See `ROADMAP.md` for the full production-grade plan. The short version:
 3. Puzzle depth
    - Convert the multiple-choice wrappers into the richer mechanics described in `SPEC.md`: cipher input, coordinate plotting, timeline ordering, logic grid, sequence map, jigsaw, compass movement, and final token deduction.
    - Keep A/B/C/D fallback choices available as an accessible mode.
-   - Keep expanding the question bank with province-specific culture, geography, food, music, and history variants.
+   - Keep expanding the quiz pack with Bentonville-specific culture, trails, museums, food, public art, and history variants.
 
 4. Score and progress UX
    - Add a high-score screen from the title menu.

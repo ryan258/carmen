@@ -4,20 +4,11 @@ const path = require('node:path');
 const test = require('node:test');
 
 const root = path.resolve(__dirname, '..');
-const questionBank = JSON.parse(fs.readFileSync(path.join(root, 'question-bank.json'), 'utf8'));
-const sourceRegistry = JSON.parse(fs.readFileSync(path.join(root, 'data/sources.json'), 'utf8'));
-const regionData = JSON.parse(fs.readFileSync(path.join(root, 'data/argentina-regions.json'), 'utf8'));
-
-const expectedLocationIds = [
-  'buenos-aires',
-  'mendoza',
-  'salta',
-  'cordoba',
-  'iguazu',
-  'bariloche',
-  'ushuaia',
-  'el-calafate'
-];
+const manifest = JSON.parse(fs.readFileSync(path.join(root, 'data/quiz-packs.json'), 'utf8'));
+const quizPacks = manifest.packs.map((entry) => ({
+  manifestEntry: entry,
+  pack: JSON.parse(fs.readFileSync(path.join(root, entry.path.replace(/^\.\//, '')), 'utf8'))
+}));
 
 const requiredMetadataFields = [
   'learningObjective',
@@ -29,19 +20,96 @@ const requiredMetadataFields = [
   'accessibilityDescription'
 ];
 
-test('question bank has the expected location pools', () => {
-  assert.deepEqual(Object.keys(questionBank).sort(), expectedLocationIds.toSorted());
-  expectedLocationIds.forEach((locationId) => {
+function validatePackMetadata(quizPack) {
+  assert.equal(quizPack.schemaVersion, 1);
+  ['id', 'title', 'subtitle', 'heroLocation', 'intro', 'evidenceLabel', 'successMessage'].forEach((field) => {
+    assert.equal(typeof quizPack[field], 'string', `${field} must be a string`);
+    assert.ok(quizPack[field].length > 0, `${field} cannot be empty`);
+  });
+
+  assert.ok(quizPack.map && typeof quizPack.map === 'object', 'map block is required');
+  assert.equal(typeof quizPack.map.center?.lat, 'number', 'map center latitude');
+  assert.equal(typeof quizPack.map.center?.lng, 'number', 'map center longitude');
+  ['zoom', 'minZoom', 'maxZoom'].forEach((field) => {
+    assert.equal(typeof quizPack.map[field], 'number', `map ${field}`);
+  });
+  assert.ok(quizPack.map.minZoom <= quizPack.map.zoom, 'minZoom cannot exceed zoom');
+  assert.ok(quizPack.map.zoom <= quizPack.map.maxZoom, 'zoom cannot exceed maxZoom');
+}
+
+function validateFinalConfrontation(quizPack) {
+  const rounds = quizPack.finalConfrontation?.rounds;
+  assert.equal(typeof quizPack.finalConfrontation?.title, 'string', 'final confrontation title');
+  assert.ok(Array.isArray(rounds), 'final confrontation rounds must be an array');
+  assert.ok(rounds.length > 0, 'final confrontation needs at least one round');
+  rounds.forEach((round, index) => {
+    assert.equal(typeof round.description, 'string', `final round ${index + 1} description`);
+    assert.equal(typeof round.question, 'string', `final round ${index + 1} question`);
+    assert.ok(Array.isArray(round.options), `final round ${index + 1} options`);
+    assert.equal(round.options.length, 4, `final round ${index + 1} needs 4 options`);
+    assert.ok(Number.isInteger(round.correctIndex), `final round ${index + 1} correctIndex`);
+    assert.ok(round.correctIndex >= 0 && round.correctIndex < 4, `final round ${index + 1} correctIndex in range`);
+  });
+}
+
+test('quiz pack manifest lists Bentonville and Argentina packs', () => {
+  assert.equal(manifest.schemaVersion, 1);
+  assert.equal(typeof manifest.defaultPackId, 'string');
+  assert.ok(Array.isArray(manifest.packs), 'manifest packs must be an array');
+  assert.ok(manifest.packs.length >= 2, 'manifest must list multiple quiz packs');
+
+  const ids = manifest.packs.map((entry) => entry.id);
+  assert.ok(ids.includes('bentonville-carmen'), 'Bentonville pack remains available');
+  assert.ok(ids.includes('argentina-carmen'), 'Argentina pack remains available');
+  assert.ok(ids.includes(manifest.defaultPackId), 'defaultPackId must match a listed pack');
+
+  manifest.packs.forEach((entry) => {
+    ['id', 'title', 'description', 'path'].forEach((field) => {
+      assert.equal(typeof entry[field], 'string', `${entry.id} ${field}`);
+      assert.ok(entry[field].length > 0, `${entry.id} ${field} cannot be empty`);
+    });
+    assert.match(entry.path, /^\.\/data\/packs\/.+\.json$/, `${entry.id} path should point at a pack file`);
+    assert.ok(fs.existsSync(path.join(root, entry.path.replace(/^\.\//, ''))), `${entry.id} pack file exists`);
+  });
+});
+
+test('manifest entries match their quiz pack metadata', () => {
+  quizPacks.forEach(({ manifestEntry, pack }) => {
+    assert.equal(pack.id, manifestEntry.id, `${manifestEntry.id} pack id`);
+    assert.equal(pack.title, manifestEntry.title, `${manifestEntry.id} pack title`);
+  });
+});
+
+test('every quiz pack exposes reusable metadata and map defaults', () => {
+  quizPacks.forEach(({ pack }) => validatePackMetadata(pack));
+});
+
+test('every quiz pack owns final confrontation rounds', () => {
+  quizPacks.forEach(({ pack }) => validateFinalConfrontation(pack));
+});
+
+function validateQuestionPools(quizPack) {
+  const questionBank = quizPack.questions;
+  const locationIds = quizPack.locations.map((location) => location.id);
+  assert.ok(Array.isArray(quizPack.locations), 'locations must be an array');
+  assert.ok(quizPack.locations.length >= 2, 'a quiz pack needs at least two map stops');
+  assert.deepEqual(Object.keys(questionBank).sort(), locationIds.toSorted());
+  locationIds.forEach((locationId) => {
     assert.ok(Array.isArray(questionBank[locationId]), `${locationId} must be an array`);
     assert.ok(questionBank[locationId].length >= 5, `${locationId} needs at least 5 cases for beta breadth`);
     assert.equal(questionBank[locationId][0].caseId, `classic-${locationId}`);
   });
+}
+
+test('every quiz pack has one randomized pool per packed location', () => {
+  quizPacks.forEach(({ pack }) => validateQuestionPools(pack));
 });
 
-test('region metadata covers every active case pool', () => {
-  const regionIds = regionData.locations.map((location) => location.id).sort();
-  assert.deepEqual(regionIds, expectedLocationIds.toSorted());
-  regionData.locations.forEach((location) => {
+function validateLocations(quizPack) {
+  const questionBank = quizPack.questions;
+  const regionIds = quizPack.locations.map((location) => location.id).sort();
+  assert.deepEqual(regionIds, Object.keys(questionBank).sort());
+  quizPack.locations.forEach((location) => {
     assert.equal(typeof location.name, 'string', `${location.id} name`);
     assert.equal(typeof location.province, 'string', `${location.id} province`);
     assert.equal(typeof location.lat, 'number', `${location.id} latitude`);
@@ -52,14 +120,22 @@ test('region metadata covers every active case pool', () => {
         `${location.id} henchman ${field}`);
     });
   });
+}
+
+test('location metadata covers every active case pool in every pack', () => {
+  quizPacks.forEach(({ pack }) => validateLocations(pack));
 });
 
-test('case ids are unique across the full bank', () => {
-  const allIds = Object.values(questionBank).flat().map((caseData) => caseData.caseId);
-  assert.equal(new Set(allIds).size, allIds.length);
+test('case ids are unique across each full bank', () => {
+  quizPacks.forEach(({ pack }) => {
+    const allIds = Object.values(pack.questions).flat().map((caseData) => caseData.caseId);
+    assert.equal(new Set(allIds).size, allIds.length, `${pack.id} case ids must be unique`);
+  });
 });
 
-test('every case satisfies the content schema contract', () => {
+function validateCases(quizPack) {
+  const questionBank = quizPack.questions;
+  const sourceRegistry = quizPack.sources;
   Object.entries(questionBank).forEach(([locationId, cases]) => {
     cases.forEach((caseData) => {
       assert.equal(typeof caseData.caseId, 'string', `${locationId} caseId`);
@@ -113,24 +189,24 @@ test('every case satisfies the content schema contract', () => {
       assert.ok(caseData.regionTags.length > 0, `${caseData.caseId} regionTags cannot be empty`);
     });
   });
+}
+
+test('every case in every pack satisfies the content schema contract', () => {
+  quizPacks.forEach(({ pack }) => validateCases(pack));
 });
 
-test('every location has a final-puzzle token symbol', () => {
-  // LOCATION_SYMBOLS is hard-coded in game.js; renderTokenGrid() crashes if a location id is missing.
+test('runtime does not require code changes for new location token symbols', () => {
   const gameSource = fs.readFileSync(path.join(root, 'game.js'), 'utf8');
-  const block = gameSource.match(/const LOCATION_SYMBOLS\s*=\s*\{([\s\S]*?)\};/);
-  assert.ok(block, 'LOCATION_SYMBOLS object not found in game.js');
-  const symbolIds = [...block[1].matchAll(/'([^']+)'\s*:/g)].map((m) => m[1]);
-  regionData.locations.forEach((loc) => {
-    assert.ok(symbolIds.includes(loc.id), `LOCATION_SYMBOLS missing entry for location "${loc.id}"`);
-  });
+  assert.match(gameSource, /LOCATION_SYMBOLS\[loc\.id\]\s*\|\|/, 'token rendering needs a generic symbol fallback');
 });
 
-test('source registry entries are usable', () => {
-  Object.entries(sourceRegistry).forEach(([sourceId, source]) => {
-    assert.equal(typeof source.title, 'string', `${sourceId} title`);
-    assert.equal(typeof source.publisher, 'string', `${sourceId} publisher`);
-    assert.match(source.url, /^https:\/\//, `${sourceId} URL`);
-    assert.equal(typeof source.reviewed, 'boolean', `${sourceId} reviewed`);
+test('source registry entries are usable in every pack', () => {
+  quizPacks.forEach(({ pack }) => {
+    Object.entries(pack.sources).forEach(([sourceId, source]) => {
+      assert.equal(typeof source.title, 'string', `${pack.id} ${sourceId} title`);
+      assert.equal(typeof source.publisher, 'string', `${pack.id} ${sourceId} publisher`);
+      assert.match(source.url, /^https:\/\//, `${pack.id} ${sourceId} URL`);
+      assert.equal(typeof source.reviewed, 'boolean', `${pack.id} ${sourceId} reviewed`);
+    });
   });
 });

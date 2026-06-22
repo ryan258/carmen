@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "defaultPackId": "bentonville-carmen",
+  "packs": [
+    {
+      "id": "bentonville-carmen",
+      "title": "Where in Bentonville is Carmen Sandiego?",
+      "description": "A city-scale Bentonville case across landmarks, trails, museums, and public spaces.",
+      "path": "./data/packs/bentonville.json"
+    },
+    {
+      "id": "argentina-carmen",
+      "title": "Where in Argentina is Carmen Sandiego?",
+      "description": "The original Argentina case across Buenos Aires, wine country, the north, the lakes, and Patagonia.",
+      "path": "./data/packs/argentina.json"
+    }
+  ]
+}

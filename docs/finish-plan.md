@@ -53,15 +53,15 @@ missed. Skip any drag/drop library — native buttons + keyboard cover the acces
 **Problem:** 40 cases, none verified line-by-line. RC gate wants 50 *fact-checked*.
 
 **Lazy path:** verify before you expand — cheaper and higher-value than writing new cases first.
-1. **Verify the 40 you have:** for each case, fill the `sources` array against `data/sources.json`,
+1. **Verify the 40 you have:** for each case, fill the `sources` array against the selected pack's `sources`,
    flip `needsRevision: false` only when a source backs the claim. Park anything shaky as
    `needsRevision: true` (already supported) — don't ship a guess.
 2. **Then add 10** to hit 50, each born with a source. Pull from the optional-location pools
    already in the roadmap (Jujuy, Tucuman, Rosario, …).
 3. Add a validation rule: shippable cases must have ≥1 source and `needsRevision: false`.
 
-**Skip:** a CMS, an external fact-check service, citation tooling — the `sources` field + a JSON
-file is the whole system. YAGNI on anything heavier until there are hundreds of cases.
+**Skip:** a CMS, an external fact-check service, citation tooling — the quiz pack's `sources`
+field is the whole system. YAGNI on anything heavier until there are hundreds of cases.
 
 **Done when:** all 50 cases have backing sources, validation enforces it, RC content box checked.
 

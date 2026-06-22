@@ -1,0 +1,2387 @@
+{
+  "schemaVersion": 1,
+  "id": "bentonville-carmen",
+  "title": "Where in Bentonville is Carmen Sandiego?",
+  "subtitle": "Bentonville Division",
+  "heroLocation": "BENTONVILLE",
+  "intro": "The master thief Carmen Sandiego has scattered clues across Bentonville landmarks, trails, museums, and public spaces. Use your deductive wits, decode ciphers, and issue the correct arrest warrant before she slips away!",
+  "evidenceLabel": "ACME BENTONVILLE EVIDENCE",
+  "successMessage": "You arrested Carmen Sandiego in Bentonville and recovered every stolen clue.",
+  "map": {
+    "center": {
+      "lat": 36.3729,
+      "lng": -94.2088
+    },
+    "zoom": 13,
+    "minZoom": 11,
+    "maxZoom": 17
+  },
+  "finalConfrontation": {
+    "title": "Boss Duel",
+    "rounds": [
+      {
+        "ariaLabel": "Encrypted farewell note showing FDUPHQ for a Caesar cipher challenge.",
+        "description": "Crack Carmen's signature encrypted farewell note using Caesar cipher (shift left by 3).",
+        "visualHtml": "<div class=\"text-center\"><span class=\"text-xs bg-slate-900 text-amber-400 px-3 py-1 rounded font-mono font-bold border border-slate-700\">ENCRYPTED NOTE</span><p class=\"typewriter-font text-lg font-bold border border-dashed border-red-700 bg-red-50 text-red-900 px-4 py-2 mt-4 rounded rotate-[-3deg]\">FDUPHQ</p></div>",
+        "question": "What does \"FDUPHQ\" decode to?",
+        "options": [
+          "CARMEN",
+          "CAPER",
+          "CHIEF",
+          "CABIN"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "ariaLabel": "ACME intelligence list used to deduce Carmen getaway vehicle.",
+        "description": "Use process of elimination to deduce Carmen's getaway route through Bentonville.",
+        "visualHtml": "<div class=\"text-left text-[9px] bg-white/80 p-3 rounded border border-slate-200 leading-tight space-y-1 font-semibold\"><p class=\"font-bold border-b pb-0.5 text-red-800\">ACME Intelligence Details</p><p>* The suspect wears a red hat.</p><p>* The suspect is not at the Downtown Square.</p><p>* The suspect does not drive a delivery truck.</p><p>* Hired a trail guide near Osage Park.</p></div>",
+        "question": "Which getaway vehicle matches the profile?",
+        "options": [
+          "Helicopter",
+          "Bicycle",
+          "Tour Boat",
+          "Delivery Truck"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "ariaLabel": "Compass grid starting at wetland row 3 column 3 and moving north 2 west 1.",
+        "description": "Solve the final compass tracking course through the Osage Park wetlands.",
+        "visualHtml": "<div class=\"w-full text-xs\"><div class=\"grid grid-cols-6 gap-0.5 border border-slate-400 p-1 bg-blue-950/20 rounded font-bold text-[8px] text-center\"><div></div><div class=\"bg-red-500/20 text-red-900 p-0.5 rounded\">Boardwalk</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div class=\"bg-blue-300 p-0.5 rounded\">Wetland</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><p class=\"text-[8px] text-slate-500 text-center mt-2 font-semibold\">Start: Wetland (3,3). Go North 2, West 1.</p></div>",
+        "question": "Which coordinate tile contains the escape portal?",
+        "options": [
+          "Row 1, Col 2 (Boardwalk)",
+          "Row 5, Col 4 (Dog Park)",
+          "Row 3, Col 1 (Pond Dock)",
+          "Row 1, Col 4 (Archery Range)"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  "locations": [
+    {
+      "id": "downtown-square",
+      "name": "Downtown Square",
+      "province": "Historic Downtown",
+      "emoji": "🏛️",
+      "tagline": "The civic heart of Bentonville",
+      "lat": 36.3729,
+      "lng": -94.2088,
+      "henchman": {
+        "name": "Dottie Ledger",
+        "alias": "The Square Dealer",
+        "emoji": "🧾",
+        "role": "Receipt forger hiding in market-day crowds",
+        "dossierNote": "Knows every vendor tent, bench, and side street around the Square. Uses event flyers as coded delivery slips."
+      }
+    },
+    {
+      "id": "walmart-museum",
+      "name": "Walmart Museum",
+      "province": "Downtown Bentonville",
+      "emoji": "🛒",
+      "tagline": "Walton's 5&10 and retail history",
+      "lat": 36.3727,
+      "lng": -94.2092,
+      "henchman": {
+        "name": "Marty Markup",
+        "alias": "The Price Roller",
+        "emoji": "🏷️",
+        "role": "Archive thief swapping labels and display tags",
+        "dossierNote": "Former exhibit installer. Hides microfilm behind old price cards and knows the Spark Cafe closing routine."
+      }
+    },
+    {
+      "id": "walmart-home-office",
+      "name": "Walmart Home Office",
+      "province": "8th Street Campus",
+      "emoji": "🏢",
+      "tagline": "A 350-acre campus built for Bentonville work life",
+      "lat": 36.3599,
+      "lng": -94.2054,
+      "henchman": {
+        "name": "Hollis Hallway",
+        "alias": "The Wayfinder",
+        "emoji": "🧭",
+        "role": "Campus-route fixer with a doctored tour map",
+        "dossierNote": "Moves through public tour routes with a lanyard, a tablet, and a habit of relabeling meeting rooms."
+      }
+    },
+    {
+      "id": "crystal-bridges",
+      "name": "Crystal Bridges",
+      "province": "Museum Way",
+      "emoji": "🎨",
+      "tagline": "American art in an Ozark ravine",
+      "lat": 36.3812,
+      "lng": -94.2037,
+      "henchman": {
+        "name": "Clara Glaze",
+        "alias": "The Varnish",
+        "emoji": "🖼️",
+        "role": "Art handler forging gallery transfer slips",
+        "dossierNote": "Studies sightlines between the pavilions and ponds. Carries decoy crate labels in a conservation folder."
+      }
+    },
+    {
+      "id": "the-momentary",
+      "name": "The Momentary",
+      "province": "8th Street Market District",
+      "emoji": "🎭",
+      "tagline": "A former cheese factory turned contemporary art space",
+      "lat": 36.3653,
+      "lng": -94.2028,
+      "henchman": {
+        "name": "Mina Flux",
+        "alias": "The Pop-Up",
+        "emoji": "🎛️",
+        "role": "Performance tech rerouting props through back-of-house",
+        "dossierNote": "Times escapes to show changeovers. Her favorite hiding places are the Tower stairs and Fermentation Hall cases."
+      }
+    },
+    {
+      "id": "compton-gardens",
+      "name": "Compton Gardens",
+      "province": "North Main Greenway",
+      "emoji": "🌿",
+      "tagline": "Native Ozark plants in a seven-acre downtown haven",
+      "lat": 36.3766,
+      "lng": -94.2082,
+      "henchman": {
+        "name": "Fern Compton",
+        "alias": "The Understory",
+        "emoji": "🍃",
+        "role": "Botanical courier marking trails with plant tags",
+        "dossierNote": "Can vanish behind native shrubs without snapping a twig. Leaves route notes in seed packets."
+      }
+    },
+    {
+      "id": "coler-preserve",
+      "name": "Coler Mountain Bike Preserve",
+      "province": "West Bentonville Trails",
+      "emoji": "🚵",
+      "tagline": "Trailhead, Hub, campground, and deep-woods rides",
+      "lat": 36.3807,
+      "lng": -94.2328,
+      "henchman": {
+        "name": "Ridge Reilly",
+        "alias": "The Dropper",
+        "emoji": "🛞",
+        "role": "Bike courier using trail names as dead-drop codes",
+        "dossierNote": "Rides with a silent freehub and a false-bottom repair kit. Knows every connector between the Hub and camp."
+      }
+    },
+    {
+      "id": "osage-park",
+      "name": "Osage Park",
+      "province": "Southwest Bentonville Wetlands",
+      "emoji": "🦆",
+      "tagline": "Wetlands, boardwalks, archery, art, and play",
+      "lat": 36.3545,
+      "lng": -94.2224,
+      "henchman": {
+        "name": "Ozzie Quill",
+        "alias": "The Fletching",
+        "emoji": "🏹",
+        "role": "Lookout hiding evidence among wetland programs",
+        "dossierNote": "Uses archery scorecards for cipher keys and knows which boardwalk turns are quiet after sunset."
+      }
+    }
+  ],
+  "questions": {
+    "downtown-square": [
+      {
+        "caseId": "classic-downtown-square",
+        "briefing": {
+          "headline": "SQUARE MARKET SWAP!",
+          "report": "a brass market bell vanished from a farmers market stall on the Bentonville Square. Carmen is already gone, but The Square Dealer is still in Bentonville, blending in as a farmers market vendor.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Square Dealer why Downtown Square mattered.\"",
+          "suspect": {
+            "name": "Dottie Ledger",
+            "alias": "The Square Dealer",
+            "emoji": "🧾",
+            "role": "Receipt forger hiding in market-day crowds",
+            "dossierNote": "Knows every vendor tent, bench, and side street around the Square. Uses event flyers as coded delivery slips."
+          },
+          "nextLead": "A dime-store receipt points across the Square to the museum where the price tags do not add up."
+        },
+        "clues": [
+          "A canvas tote is stamped with Bentonville Farmers Market and a sketch of the Square fountain.",
+          "The receipt lists local honey, flowers, and a booth number facing Central Avenue.",
+          "A witness saw the courier fold a tent beside boutiques, bakeries, and public art."
+        ],
+        "puzzle": {
+          "title": "Market Map Match",
+          "description": "Use the Bentonville clues to identify the correct Downtown Square hideout.",
+          "question": "Which stop matches the market clues?",
+          "options": [
+            "Downtown Square",
+            "Osage Park",
+            "Crystal Bridges",
+            "Coler Mountain Bike Preserve"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Downtown Square</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Downtown Square</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Downtown Square",
+          "hideout": "Downtown Square",
+          "disguise": "Farmers market vendor"
+        },
+        "funFact": "The Bentonville Square hosts community programs including First Fridays, farmers markets, and art markets.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Downtown Square.",
+        "sources": [
+          "visit_bentonville_square"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Historic Downtown",
+          "Downtown Square"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Downtown Square evidence card for Downtown Square.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "downtown-square-first-friday",
+        "briefing": {
+          "headline": "FIRST FRIDAY FLYER FORGERY!",
+          "report": "the master event flyer plate vanished from the First Friday event route downtown. Carmen is already gone, but The Square Dealer is still in Bentonville, blending in as a event volunteer.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Square Dealer why A Street Promenade mattered.\"",
+          "suspect": {
+            "name": "Dottie Ledger",
+            "alias": "The Square Dealer",
+            "emoji": "🧾",
+            "role": "Receipt forger hiding in market-day crowds",
+            "dossierNote": "Knows every vendor tent, bench, and side street around the Square. Uses event flyers as coded delivery slips."
+          },
+          "nextLead": "A dime-store receipt points across the Square to the museum where the price tags do not add up."
+        },
+        "clues": [
+          "The flyer says First Friday and routes visitors toward the Square.",
+          "A volunteer vest has chalk dust from a temporary street mural.",
+          "The torn corner shows restaurants, bars, and boutiques around one downtown block."
+        ],
+        "puzzle": {
+          "title": "Event Route Deduction",
+          "description": "Use the Bentonville clues to identify the correct Downtown Square hideout.",
+          "question": "Where should ACME close the event route?",
+          "options": [
+            "A Street Promenade",
+            "The Momentary Tower",
+            "Coler campground",
+            "Osage dog park"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Downtown Square</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">A Street Promenade</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Downtown Square",
+          "hideout": "A Street Promenade",
+          "disguise": "Event volunteer"
+        },
+        "funFact": "Visit Bentonville describes the Square as a year-round gathering place for community programs.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Downtown Square.",
+        "sources": [
+          "visit_bentonville_square"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "map-coordinate-choice",
+        "regionTags": [
+          "Historic Downtown",
+          "Downtown Square"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Downtown Square evidence card for A Street Promenade.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "downtown-square-courthouse",
+        "briefing": {
+          "headline": "COURTHOUSE SEAL CAPER!",
+          "report": "a replica courthouse seal vanished from the east side of the historic Square. Carmen is already gone, but The Square Dealer is still in Bentonville, blending in as a records clerk.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Square Dealer why Benton County Courthouse mattered.\"",
+          "suspect": {
+            "name": "Dottie Ledger",
+            "alias": "The Square Dealer",
+            "emoji": "🧾",
+            "role": "Receipt forger hiding in market-day crowds",
+            "dossierNote": "Knows every vendor tent, bench, and side street around the Square. Uses event flyers as coded delivery slips."
+          },
+          "nextLead": "A dime-store receipt points across the Square to the museum where the price tags do not add up."
+        },
+        "clues": [
+          "A notary stamp mentions the county seat and a stone building on the Square.",
+          "The suspect asked for a records-room badge instead of a museum ticket.",
+          "A coffee receipt points to the east side of the downtown plaza."
+        ],
+        "puzzle": {
+          "title": "Civic Landmark Check",
+          "description": "Use the Bentonville clues to identify the correct Downtown Square hideout.",
+          "question": "Which hideout fits the county-seat evidence?",
+          "options": [
+            "Benton County Courthouse",
+            "Walmart Museum galleries",
+            "Compton Gardens house",
+            "The Quiver Archery Range"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Downtown Square</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Benton County Courthouse</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Downtown Square",
+          "hideout": "Benton County Courthouse",
+          "disguise": "Records clerk"
+        },
+        "funFact": "The Square is the heart of Bentonville historic downtown and sits among civic, dining, shopping, and public art destinations.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Downtown Square.",
+        "sources": [
+          "visit_bentonville_square"
+        ],
+        "difficulty": "detective",
+        "mechanic": "timeline-choice",
+        "regionTags": [
+          "Historic Downtown",
+          "Downtown Square"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Downtown Square evidence card for Benton County Courthouse.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "downtown-square-winter-lights",
+        "briefing": {
+          "headline": "HOLIDAY LIGHTS GO DARK!",
+          "report": "the timer key for the Square lights vanished from a winter light display around the downtown plaza. Carmen is already gone, but The Square Dealer is still in Bentonville, blending in as a holiday-light electrician.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Square Dealer why Square Park mattered.\"",
+          "suspect": {
+            "name": "Dottie Ledger",
+            "alias": "The Square Dealer",
+            "emoji": "🧾",
+            "role": "Receipt forger hiding in market-day crowds",
+            "dossierNote": "Knows every vendor tent, bench, and side street around the Square. Uses event flyers as coded delivery slips."
+          },
+          "nextLead": "A dime-store receipt points across the Square to the museum where the price tags do not add up."
+        },
+        "clues": [
+          "The evidence bag contains zip ties, light clips, and a winter event schedule.",
+          "A witness heard the courier say the community gathers here when the Square is illuminated.",
+          "The footprint trail circles the central park instead of leaving downtown."
+        ],
+        "puzzle": {
+          "title": "Light Timer Logic",
+          "description": "Use the Bentonville clues to identify the correct Downtown Square hideout.",
+          "question": "Where did the courier hide the timer key?",
+          "options": [
+            "Square Park",
+            "Sam Walton Hall",
+            "Momentary Green",
+            "Crystal Bridges library"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Downtown Square</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Square Park</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Downtown Square",
+          "hideout": "Square Park",
+          "disguise": "Holiday-light electrician"
+        },
+        "funFact": "The Square is illuminated with holiday lights each winter.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Downtown Square.",
+        "sources": [
+          "visit_bentonville_square"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "logic-grid-choice",
+        "regionTags": [
+          "Historic Downtown",
+          "Downtown Square"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Downtown Square evidence card for Square Park.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "downtown-square-art-market",
+        "briefing": {
+          "headline": "ART MARKET STENCIL STOLEN!",
+          "report": "a copper mural stencil vanished from a temporary art market tent near public artwork downtown. Carmen is already gone, but The Square Dealer is still in Bentonville, blending in as a mural installer.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Square Dealer why Art Market booth mattered.\"",
+          "suspect": {
+            "name": "Dottie Ledger",
+            "alias": "The Square Dealer",
+            "emoji": "🧾",
+            "role": "Receipt forger hiding in market-day crowds",
+            "dossierNote": "Knows every vendor tent, bench, and side street around the Square. Uses event flyers as coded delivery slips."
+          },
+          "nextLead": "A dime-store receipt points across the Square to the museum where the price tags do not add up."
+        },
+        "clues": [
+          "A paint rag has a booth tag from the Square Art Market.",
+          "The courier carried a ladder but never left the block of shops and bakeries.",
+          "A public-art walking map is folded to the downtown Square."
+        ],
+        "puzzle": {
+          "title": "Public Art Trail",
+          "description": "Use the Bentonville clues to identify the correct Downtown Square hideout.",
+          "question": "Which warrant hideout matches the stencil trail?",
+          "options": [
+            "Art Market booth",
+            "Coler Hub",
+            "Osage wetland dock",
+            "Museum Way library"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Downtown Square</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Art Market booth</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Downtown Square",
+          "hideout": "Art Market booth",
+          "disguise": "Mural installer"
+        },
+        "funFact": "Downtown Square is known for unique public artwork as well as restaurants, bars, boutiques, bakeries, and coffee shops.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Downtown Square.",
+        "sources": [
+          "visit_bentonville_square"
+        ],
+        "difficulty": "detective",
+        "mechanic": "sequence-choice",
+        "regionTags": [
+          "Historic Downtown",
+          "Downtown Square"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Downtown Square evidence card for Art Market booth.",
+        "reviewStatus": "source-linked-needs-line-review"
+      }
+    ],
+    "walmart-museum": [
+      {
+        "caseId": "classic-walmart-museum",
+        "briefing": {
+          "headline": "FIVE AND DIME FILE VANISHES!",
+          "report": "a copy of Mr. Sam's first price ledger vanished from Walton's 5&10. Carmen is already gone, but The Price Roller is still in Bentonville, blending in as a dime-store clerk.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Price Roller why Walton's 5&10 mattered.\"",
+          "suspect": {
+            "name": "Marty Markup",
+            "alias": "The Price Roller",
+            "emoji": "🏷️",
+            "role": "Archive thief swapping labels and display tags",
+            "dossierNote": "Former exhibit installer. Hides microfilm behind old price cards and knows the Spark Cafe closing routine."
+          },
+          "nextLead": "A campus visitor badge lists an 8th Street meeting room and a tour time in the margin."
+        },
+        "clues": [
+          "The shelf tag says this humble dime store is where the story began.",
+          "A red price roller marked every label 5 and 10.",
+          "The suspect asked how to get from classic finds to the museum galleries."
+        ],
+        "puzzle": {
+          "title": "Price Tag Cipher",
+          "description": "Use the Bentonville clues to identify the correct Walmart Museum hideout.",
+          "question": "Which museum space is tied to the 5&10 clues?",
+          "options": [
+            "Walton's 5&10",
+            "The Quiver",
+            "Momentary Green",
+            "The Hub"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Walmart Museum</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Walton's 5&10</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Walmart Museum",
+          "hideout": "Walton's 5&10",
+          "disguise": "Dime-store clerk"
+        },
+        "funFact": "The Walmart Museum presents Walton's 5&10 as the small dime store where Walmart's story began.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Walmart Museum.",
+        "sources": [
+          "walmart_museum"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Downtown Bentonville",
+          "Walmart Museum"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Walmart Museum evidence card for Walton's 5&10.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "walmart-museum-spark-cafe",
+        "briefing": {
+          "headline": "BUTTER PECAN BLACKOUT!",
+          "report": "Sam's favorite flavor card vanished from The Spark Cafe. Carmen is already gone, but The Price Roller is still in Bentonville, blending in as a soda fountain server.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Price Roller why The Spark Cafe mattered.\"",
+          "suspect": {
+            "name": "Marty Markup",
+            "alias": "The Price Roller",
+            "emoji": "🏷️",
+            "role": "Archive thief swapping labels and display tags",
+            "dossierNote": "Former exhibit installer. Hides microfilm behind old price cards and knows the Spark Cafe closing routine."
+          },
+          "nextLead": "A campus visitor badge lists an 8th Street meeting room and a tour time in the margin."
+        },
+        "clues": [
+          "A menu card mentions butter pecan and Walmart-themed sundaes.",
+          "The courier carried an apron dusted with malt powder.",
+          "The calling card says the coldest clue is beside the museum sweets."
+        ],
+        "puzzle": {
+          "title": "Cafe Receipt Match",
+          "description": "Use the Bentonville clues to identify the correct Walmart Museum hideout.",
+          "question": "Where does the dessert evidence point?",
+          "options": [
+            "The Spark Cafe",
+            "Eleven at Crystal Bridges",
+            "Airship Coffee",
+            "8th & Plate"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Walmart Museum</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">The Spark Cafe</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Walmart Museum",
+          "hideout": "The Spark Cafe",
+          "disguise": "Soda fountain server"
+        },
+        "funFact": "The Spark Cafe serves Sam Walton themed treats, including butter pecan as a signature reference.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Walmart Museum.",
+        "sources": [
+          "walmart_museum"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "map-coordinate-choice",
+        "regionTags": [
+          "Downtown Bentonville",
+          "Walmart Museum"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Walmart Museum evidence card for The Spark Cafe.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "walmart-museum-galleries",
+        "briefing": {
+          "headline": "GALLERY TIMELINE TAMPERED!",
+          "report": "a decade marker from the exhibit timeline vanished from the Walmart Museum galleries. Carmen is already gone, but The Price Roller is still in Bentonville, blending in as a archive docent.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Price Roller why Museum galleries mattered.\"",
+          "suspect": {
+            "name": "Marty Markup",
+            "alias": "The Price Roller",
+            "emoji": "🏷️",
+            "role": "Archive thief swapping labels and display tags",
+            "dossierNote": "Former exhibit installer. Hides microfilm behind old price cards and knows the Spark Cafe closing routine."
+          },
+          "nextLead": "A campus visitor badge lists an 8th Street meeting room and a tour time in the margin."
+        },
+        "clues": [
+          "The report says visitors can discover the journey from small-town store to global retailer.",
+          "The timeline case is missing one decade label.",
+          "A docent badge was scanned at the gallery entrance, not the cafe."
+        ],
+        "puzzle": {
+          "title": "Timeline Stop",
+          "description": "Use the Bentonville clues to identify the correct Walmart Museum hideout.",
+          "question": "Which place holds the missing decade marker?",
+          "options": [
+            "Museum galleries",
+            "Downtown Square fountain",
+            "Compton Exhibit Room",
+            "Osage boardwalk"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Walmart Museum</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Museum galleries</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Walmart Museum",
+          "hideout": "Museum galleries",
+          "disguise": "Archive docent"
+        },
+        "funFact": "The museum galleries trace Walmart history from a small-town store to a global retailer.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Walmart Museum.",
+        "sources": [
+          "walmart_museum"
+        ],
+        "difficulty": "detective",
+        "mechanic": "timeline-choice",
+        "regionTags": [
+          "Downtown Bentonville",
+          "Walmart Museum"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Walmart Museum evidence card for Museum galleries.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "walmart-museum-archive-keys",
+        "briefing": {
+          "headline": "ARCHIVE KEYS MISLABELED!",
+          "report": "a ring of display-case keys vanished from the museum archive display. Carmen is already gone, but The Price Roller is still in Bentonville, blending in as a display technician.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Price Roller why From the archives wall mattered.\"",
+          "suspect": {
+            "name": "Marty Markup",
+            "alias": "The Price Roller",
+            "emoji": "🏷️",
+            "role": "Archive thief swapping labels and display tags",
+            "dossierNote": "Former exhibit installer. Hides microfilm behind old price cards and knows the Spark Cafe closing routine."
+          },
+          "nextLead": "A campus visitor badge lists an 8th Street meeting room and a tour time in the margin."
+        },
+        "clues": [
+          "The suspect left a key tag behind an archival photo.",
+          "A museum floor card reads From the archives.",
+          "The fake technician knew which display cases used vintage product labels."
+        ],
+        "puzzle": {
+          "title": "Archive Key Sort",
+          "description": "Use the Bentonville clues to identify the correct Walmart Museum hideout.",
+          "question": "Which hideout fits the key-tag evidence?",
+          "options": [
+            "From the archives wall",
+            "The Momentary Box Office",
+            "Crystal Bridges trailhead",
+            "Coler Westside"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Walmart Museum</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">From the archives wall</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Walmart Museum",
+          "hideout": "From the archives wall",
+          "disguise": "Display technician"
+        },
+        "funFact": "The Walmart Museum includes archive-focused exhibits alongside the 5&10 and cafe experiences.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Walmart Museum.",
+        "sources": [
+          "walmart_museum"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "logic-grid-choice",
+        "regionTags": [
+          "Downtown Bentonville",
+          "Walmart Museum"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Walmart Museum evidence card for From the archives wall.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "walmart-museum-free-admission",
+        "briefing": {
+          "headline": "ADMISSION STAMP COUNTERFEIT!",
+          "report": "a counterfeit admission stamper vanished from the museum entry desk. Carmen is already gone, but The Price Roller is still in Bentonville, blending in as a greeter.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Price Roller why Museum welcome desk mattered.\"",
+          "suspect": {
+            "name": "Marty Markup",
+            "alias": "The Price Roller",
+            "emoji": "🏷️",
+            "role": "Archive thief swapping labels and display tags",
+            "dossierNote": "Former exhibit installer. Hides microfilm behind old price cards and knows the Spark Cafe closing routine."
+          },
+          "nextLead": "A campus visitor badge lists an 8th Street meeting room and a tour time in the margin."
+        },
+        "clues": [
+          "The forged stamp says Free Admission in blue ink.",
+          "The suspect quoted the museum hours but mixed up the Sunday opening.",
+          "A welcome desk map circles the galleries, 5&10, and Spark Cafe."
+        ],
+        "puzzle": {
+          "title": "Welcome Desk Check",
+          "description": "Use the Bentonville clues to identify the correct Walmart Museum hideout.",
+          "question": "Where did the counterfeit stamp belong?",
+          "options": [
+            "Museum welcome desk",
+            "Walmart Home Office map kiosk",
+            "Compton Gardens trailhead",
+            "Osage pavilion"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Walmart Museum</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Museum welcome desk</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Walmart Museum",
+          "hideout": "Museum welcome desk",
+          "disguise": "Greeter"
+        },
+        "funFact": "The Walmart Museum lists free admission and includes galleries, Walton's 5&10, and The Spark Cafe.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Walmart Museum.",
+        "sources": [
+          "walmart_museum"
+        ],
+        "difficulty": "detective",
+        "mechanic": "sequence-choice",
+        "regionTags": [
+          "Downtown Bentonville",
+          "Walmart Museum"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Walmart Museum evidence card for Museum welcome desk.",
+        "reviewStatus": "source-linked-needs-line-review"
+      }
+    ],
+    "walmart-home-office": [
+      {
+        "caseId": "classic-walmart-home-office",
+        "briefing": {
+          "headline": "CAMPUS MAP MISDIRECT!",
+          "report": "an interactive campus map chip vanished from the new Walmart Home Office visitor route. Carmen is already gone, but The Wayfinder is still in Bentonville, blending in as a campus wayfinder.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Wayfinder why Interactive map kiosk mattered.\"",
+          "suspect": {
+            "name": "Hollis Hallway",
+            "alias": "The Wayfinder",
+            "emoji": "🧭",
+            "role": "Campus-route fixer with a doctored tour map",
+            "dossierNote": "Moves through public tour routes with a lanyard, a tablet, and a habit of relabeling meeting rooms."
+          },
+          "nextLead": "A gallery crate label names a bridge, a spring, and a museum trail north of downtown."
+        },
+        "clues": [
+          "The map chip shows 350 acres and a zoom button.",
+          "The courier kept saying the whole campus could be checked from one screen.",
+          "A visitor badge points to 8th Street and a public tour."
+        ],
+        "puzzle": {
+          "title": "Campus Scale Match",
+          "description": "Use the Bentonville clues to identify the correct Walmart Home Office hideout.",
+          "question": "Which Home Office stop matches the 350-acre clue?",
+          "options": [
+            "Interactive map kiosk",
+            "Walton's 5&10",
+            "Crystal Spring pond",
+            "Osage wetland boardwalk"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Walmart Home Office</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Interactive map kiosk</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Walmart Home Office",
+          "hideout": "Interactive map kiosk",
+          "disguise": "Campus wayfinder"
+        },
+        "funFact": "Walmart describes the new Home Office as a 350-acre campus with an interactive map.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Walmart Home Office.",
+        "sources": [
+          "walmart_home_office"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "8th Street Campus",
+          "Walmart Home Office"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Walmart Home Office evidence card for Interactive map kiosk.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "walmart-home-office-sam-walton-hall",
+        "briefing": {
+          "headline": "HALL PLAQUE SWITCHED!",
+          "report": "a polished hall plaque vanished from Sam Walton Hall. Carmen is already gone, but The Wayfinder is still in Bentonville, blending in as a campus tour guide.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Wayfinder why Sam Walton Hall mattered.\"",
+          "suspect": {
+            "name": "Hollis Hallway",
+            "alias": "The Wayfinder",
+            "emoji": "🧭",
+            "role": "Campus-route fixer with a doctored tour map",
+            "dossierNote": "Moves through public tour routes with a lanyard, a tablet, and a habit of relabeling meeting rooms."
+          },
+          "nextLead": "A gallery crate label names a bridge, a spring, and a museum trail north of downtown."
+        },
+        "clues": [
+          "A tour card lists Sam Walton Hall between the food hall and fitness center.",
+          "The suspect carried a lanyard that said Proud Past, Bright Future.",
+          "The replacement plaque was wrapped in a campus wayfinding map."
+        ],
+        "puzzle": {
+          "title": "Public Space Route",
+          "description": "Use the Bentonville clues to identify the correct Walmart Home Office hideout.",
+          "question": "Which campus place is named in the tour-card clues?",
+          "options": [
+            "Sam Walton Hall",
+            "The Spark Cafe",
+            "The Momentary Tower",
+            "The Coler Hub"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Walmart Home Office</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Sam Walton Hall</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Walmart Home Office",
+          "hideout": "Sam Walton Hall",
+          "disguise": "Campus tour guide"
+        },
+        "funFact": "The Home Office public-space list includes Sam Walton Hall.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Walmart Home Office.",
+        "sources": [
+          "walmart_home_office"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "map-coordinate-choice",
+        "regionTags": [
+          "8th Street Campus",
+          "Walmart Home Office"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Walmart Home Office evidence card for Sam Walton Hall.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "walmart-home-office-8th-plate",
+        "briefing": {
+          "headline": "FOOD HALL TOKEN TAKEN!",
+          "report": "a brass food hall token vanished from 8th & Plate. Carmen is already gone, but The Wayfinder is still in Bentonville, blending in as a food hall cashier.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Wayfinder why 8th & Plate mattered.\"",
+          "suspect": {
+            "name": "Hollis Hallway",
+            "alias": "The Wayfinder",
+            "emoji": "🧭",
+            "role": "Campus-route fixer with a doctored tour map",
+            "dossierNote": "Moves through public tour routes with a lanyard, a tablet, and a habit of relabeling meeting rooms."
+          },
+          "nextLead": "A gallery crate label names a bridge, a spring, and a museum trail north of downtown."
+        },
+        "clues": [
+          "A lunch receipt reads 8th & Plate in block letters.",
+          "The courier moved through a campus food hall, not a downtown cafe.",
+          "The badge scanner logged a stop between office spaces and public tour routes."
+        ],
+        "puzzle": {
+          "title": "Lunch Trail",
+          "description": "Use the Bentonville clues to identify the correct Walmart Home Office hideout.",
+          "question": "Which Home Office hideout matches the lunch receipt?",
+          "options": [
+            "8th & Plate",
+            "The Spark Cafe",
+            "Eleven",
+            "Airship Coffee"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Walmart Home Office</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">8th & Plate</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Walmart Home Office",
+          "hideout": "8th & Plate",
+          "disguise": "Food hall cashier"
+        },
+        "funFact": "Walmart lists 8th & Plate among the new Home Office spaces where campus ideas and public visits meet.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Walmart Home Office.",
+        "sources": [
+          "walmart_home_office"
+        ],
+        "difficulty": "detective",
+        "mechanic": "timeline-choice",
+        "regionTags": [
+          "8th Street Campus",
+          "Walmart Home Office"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Walmart Home Office evidence card for 8th & Plate.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "walmart-home-office-whole-health",
+        "briefing": {
+          "headline": "FITNESS FOB FAKED!",
+          "report": "a cloned fitness center fob vanished from Walton Family Whole Health & Fitness. Carmen is already gone, but The Wayfinder is still in Bentonville, blending in as a trainer.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Wayfinder why Walton Family Whole Health & Fitness mattered.\"",
+          "suspect": {
+            "name": "Hollis Hallway",
+            "alias": "The Wayfinder",
+            "emoji": "🧭",
+            "role": "Campus-route fixer with a doctored tour map",
+            "dossierNote": "Moves through public tour routes with a lanyard, a tablet, and a habit of relabeling meeting rooms."
+          },
+          "nextLead": "A gallery crate label names a bridge, a spring, and a museum trail north of downtown."
+        },
+        "clues": [
+          "The access card uses the phrase Whole Health & Fitness.",
+          "The suspect wore running shoes but never left the Home Office campus.",
+          "A campus map circles a fitness building near the public spaces list."
+        ],
+        "puzzle": {
+          "title": "Access Card Audit",
+          "description": "Use the Bentonville clues to identify the correct Walmart Home Office hideout.",
+          "question": "Which space should ACME check for the cloned fob?",
+          "options": [
+            "Walton Family Whole Health & Fitness",
+            "Osage pickleball courts",
+            "Compton Exhibit Room",
+            "Crystal Bridges library"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Walmart Home Office</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Walton Family Whole Health & Fitness</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Walmart Home Office",
+          "hideout": "Walton Family Whole Health & Fitness",
+          "disguise": "Trainer"
+        },
+        "funFact": "The new Home Office includes Walton Family Whole Health & Fitness as a named campus destination.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Walmart Home Office.",
+        "sources": [
+          "walmart_home_office"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "logic-grid-choice",
+        "regionTags": [
+          "8th Street Campus",
+          "Walmart Home Office"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Walmart Home Office evidence card for Walton Family Whole Health & Fitness.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "walmart-home-office-office-buildings",
+        "briefing": {
+          "headline": "BUILDING STORYBOARDS STOLEN!",
+          "report": "a set of office-story plaques vanished from the campus office buildings. Carmen is already gone, but The Wayfinder is still in Bentonville, blending in as a facilities planner.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Wayfinder why Office Spaces mattered.\"",
+          "suspect": {
+            "name": "Hollis Hallway",
+            "alias": "The Wayfinder",
+            "emoji": "🧭",
+            "role": "Campus-route fixer with a doctored tour map",
+            "dossierNote": "Moves through public tour routes with a lanyard, a tablet, and a habit of relabeling meeting rooms."
+          },
+          "nextLead": "A gallery crate label names a bridge, a spring, and a museum trail north of downtown."
+        },
+        "clues": [
+          "The missing plaques describe history, culture, and leaders who shaped the company.",
+          "The suspect had keys marked for twelve office buildings.",
+          "A storyboard mockup says every building tells a unique story."
+        ],
+        "puzzle": {
+          "title": "Office Story Match",
+          "description": "Use the Bentonville clues to identify the correct Walmart Home Office hideout.",
+          "question": "Which campus hideout fits the twelve-building evidence?",
+          "options": [
+            "Office Spaces",
+            "Museum galleries",
+            "The Momentary galleries",
+            "Peel Museum"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Walmart Home Office</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Office Spaces</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Walmart Home Office",
+          "hideout": "Office Spaces",
+          "disguise": "Facilities planner"
+        },
+        "funFact": "Walmart says the 12 office buildings on the new Home Office each tell a unique story through design and identity.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Walmart Home Office.",
+        "sources": [
+          "walmart_home_office"
+        ],
+        "difficulty": "detective",
+        "mechanic": "sequence-choice",
+        "regionTags": [
+          "8th Street Campus",
+          "Walmart Home Office"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Walmart Home Office evidence card for Office Spaces.",
+        "reviewStatus": "source-linked-needs-line-review"
+      }
+    ],
+    "crystal-bridges": [
+      {
+        "caseId": "classic-crystal-bridges",
+        "briefing": {
+          "headline": "GLASS BRIDGE GETAWAY!",
+          "report": "a gallery transfer slip vanished from the bridge overlooking the ponds. Carmen is already gone, but The Varnish is still in Bentonville, blending in as a art handler.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Varnish why Glass bridge mattered.\"",
+          "suspect": {
+            "name": "Clara Glaze",
+            "alias": "The Varnish",
+            "emoji": "🖼️",
+            "role": "Art handler forging gallery transfer slips",
+            "dossierNote": "Studies sightlines between the pavilions and ponds. Carries decoy crate labels in a conservation folder."
+          },
+          "nextLead": "A black-box theater cue sheet sends the trail toward a former cheese factory near 8th Street Market."
+        },
+        "clues": [
+          "The witness saw a crate cross a glass-enclosed bridge over water.",
+          "The transfer slip mentions American art and a museum in an Ozark setting.",
+          "The suspect headed toward pavilions around two spring-fed ponds."
+        ],
+        "puzzle": {
+          "title": "Bridge Evidence",
+          "description": "Use the Bentonville clues to identify the correct Crystal Bridges hideout.",
+          "question": "Which Crystal Bridges location matches the water-and-glass clues?",
+          "options": [
+            "Glass bridge",
+            "Momentary Green",
+            "Square Park",
+            "Osage boardwalk"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Crystal Bridges</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Glass bridge</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Crystal Bridges",
+          "hideout": "Glass bridge",
+          "disguise": "Art handler"
+        },
+        "funFact": "Crystal Bridges takes its name from a nearby natural spring and bridge construction in the building.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Crystal Bridges.",
+        "sources": [
+          "crystal_bridges"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museum Way",
+          "Crystal Bridges"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Crystal Bridges evidence card for Glass bridge.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "crystal-bridges-trails",
+        "briefing": {
+          "headline": "SCULPTURE TRAIL SWITCH!",
+          "report": "a trail sculpture label vanished from the sculpture and walking trails. Carmen is already gone, but The Varnish is still in Bentonville, blending in as a trail docent.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Varnish why Sculpture trail mattered.\"",
+          "suspect": {
+            "name": "Clara Glaze",
+            "alias": "The Varnish",
+            "emoji": "🖼️",
+            "role": "Art handler forging gallery transfer slips",
+            "dossierNote": "Studies sightlines between the pavilions and ponds. Carries decoy crate labels in a conservation folder."
+          },
+          "nextLead": "A black-box theater cue sheet sends the trail toward a former cheese factory near 8th Street Market."
+        },
+        "clues": [
+          "A boot print leads away from the galleries onto a walking trail.",
+          "The stolen label names outdoor sculpture and a path to downtown Bentonville.",
+          "The courier carried a docent clipboard instead of a gallery crate."
+        ],
+        "puzzle": {
+          "title": "Trail Label Check",
+          "description": "Use the Bentonville clues to identify the correct Crystal Bridges hideout.",
+          "question": "Where is the missing sculpture label likely hidden?",
+          "options": [
+            "Sculpture trail",
+            "The Hub",
+            "A Street Promenade",
+            "The Quiver"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Crystal Bridges</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Sculpture trail</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Crystal Bridges",
+          "hideout": "Sculpture trail",
+          "disguise": "Trail docent"
+        },
+        "funFact": "Five miles of sculpture and walking trails connect Crystal Bridges to downtown Bentonville.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Crystal Bridges.",
+        "sources": [
+          "crystal_bridges"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "map-coordinate-choice",
+        "regionTags": [
+          "Museum Way",
+          "Crystal Bridges"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Crystal Bridges evidence card for Sculpture trail.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "crystal-bridges-library",
+        "briefing": {
+          "headline": "REFERENCE VOLUME REMOVED!",
+          "report": "a rare art-reference index vanished from the Crystal Bridges library. Carmen is already gone, but The Varnish is still in Bentonville, blending in as a art researcher.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Varnish why Library mattered.\"",
+          "suspect": {
+            "name": "Clara Glaze",
+            "alias": "The Varnish",
+            "emoji": "🖼️",
+            "role": "Art handler forging gallery transfer slips",
+            "dossierNote": "Studies sightlines between the pavilions and ponds. Carries decoy crate labels in a conservation folder."
+          },
+          "nextLead": "A black-box theater cue sheet sends the trail toward a former cheese factory near 8th Street Market."
+        },
+        "clues": [
+          "The card catalog notes more than 50,000 art reference volumes.",
+          "The suspect asked for a quiet table instead of an exhibit map.",
+          "A library pencil is tucked into a gallery transfer envelope."
+        ],
+        "puzzle": {
+          "title": "Reference Room Riddle",
+          "description": "Use the Bentonville clues to identify the correct Crystal Bridges hideout.",
+          "question": "Which hideout matches the catalog clues?",
+          "options": [
+            "Library",
+            "Museum welcome desk",
+            "Compton Exhibit Room",
+            "Home Office media hub"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Crystal Bridges</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Library</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Crystal Bridges",
+          "hideout": "Library",
+          "disguise": "Art researcher"
+        },
+        "funFact": "Crystal Bridges has a library with more than 50,000 art reference volumes.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Crystal Bridges.",
+        "sources": [
+          "crystal_bridges"
+        ],
+        "difficulty": "detective",
+        "mechanic": "timeline-choice",
+        "regionTags": [
+          "Museum Way",
+          "Crystal Bridges"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Crystal Bridges evidence card for Library.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "crystal-bridges-pavilions",
+        "briefing": {
+          "headline": "PAVILION BLUEPRINT PINCHED!",
+          "report": "a pavilion section drawing vanished from the museum pavilions. Carmen is already gone, but The Varnish is still in Bentonville, blending in as a architecture intern.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Varnish why Museum pavilions mattered.\"",
+          "suspect": {
+            "name": "Clara Glaze",
+            "alias": "The Varnish",
+            "emoji": "🖼️",
+            "role": "Art handler forging gallery transfer slips",
+            "dossierNote": "Studies sightlines between the pavilions and ponds. Carries decoy crate labels in a conservation folder."
+          },
+          "nextLead": "A black-box theater cue sheet sends the trail toward a former cheese factory near 8th Street Market."
+        },
+        "clues": [
+          "The blueprint shows pavilions nestled around two ponds.",
+          "The suspect knew the architect and kept muttering about bridge construction.",
+          "A gallery guard saw an intern badge near a classroom wing."
+        ],
+        "puzzle": {
+          "title": "Architecture Deduction",
+          "description": "Use the Bentonville clues to identify the correct Crystal Bridges hideout.",
+          "question": "Which Crystal Bridges area fits the blueprint?",
+          "options": [
+            "Museum pavilions",
+            "Downtown Square",
+            "Coler campground",
+            "Osage dog park"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Crystal Bridges</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Museum pavilions</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Crystal Bridges",
+          "hideout": "Museum pavilions",
+          "disguise": "Architecture intern"
+        },
+        "funFact": "The museum building was designed by architect Moshe Safdie with pavilions around spring-fed ponds.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Crystal Bridges.",
+        "sources": [
+          "crystal_bridges"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "logic-grid-choice",
+        "regionTags": [
+          "Museum Way",
+          "Crystal Bridges"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Crystal Bridges evidence card for Museum pavilions.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "crystal-bridges-collection",
+        "briefing": {
+          "headline": "COLLECTION CARD CAPER!",
+          "report": "a collection object card vanished from the permanent collection galleries. Carmen is already gone, but The Varnish is still in Bentonville, blending in as a gallery guide.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Varnish why Permanent collection mattered.\"",
+          "suspect": {
+            "name": "Clara Glaze",
+            "alias": "The Varnish",
+            "emoji": "🖼️",
+            "role": "Art handler forging gallery transfer slips",
+            "dossierNote": "Studies sightlines between the pavilions and ponds. Carries decoy crate labels in a conservation folder."
+          },
+          "nextLead": "A black-box theater cue sheet sends the trail toward a former cheese factory near 8th Street Market."
+        },
+        "clues": [
+          "The missing card says the collection spans five centuries of American artworks.",
+          "The courier wore a gallery-guide pin and carried a folded floor plan.",
+          "A note compares early American works with contemporary artists."
+        ],
+        "puzzle": {
+          "title": "Collection Span",
+          "description": "Use the Bentonville clues to identify the correct Crystal Bridges hideout.",
+          "question": "Where should the guide be stopped?",
+          "options": [
+            "Permanent collection",
+            "The Momentary Tower",
+            "Walmart archive wall",
+            "Compton native plant beds"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Crystal Bridges</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Permanent collection</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Crystal Bridges",
+          "hideout": "Permanent collection",
+          "disguise": "Gallery guide"
+        },
+        "funFact": "Crystal Bridges permanent collection spans five centuries of American art and is free to view.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Crystal Bridges.",
+        "sources": [
+          "crystal_bridges"
+        ],
+        "difficulty": "detective",
+        "mechanic": "sequence-choice",
+        "regionTags": [
+          "Museum Way",
+          "Crystal Bridges"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Crystal Bridges evidence card for Permanent collection.",
+        "reviewStatus": "source-linked-needs-line-review"
+      }
+    ],
+    "the-momentary": [
+      {
+        "caseId": "classic-the-momentary",
+        "briefing": {
+          "headline": "CHEESE FACTORY CUE SHEET!",
+          "report": "a performance cue sheet vanished from the repurposed factory floor. Carmen is already gone, but The Pop-Up is still in Bentonville, blending in as a stage technician.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Pop-Up why Fermentation Hall mattered.\"",
+          "suspect": {
+            "name": "Mina Flux",
+            "alias": "The Pop-Up",
+            "emoji": "🎛️",
+            "role": "Performance tech rerouting props through back-of-house",
+            "dossierNote": "Times escapes to show changeovers. Her favorite hiding places are the Tower stairs and Fermentation Hall cases."
+          },
+          "nextLead": "A seed packet marked North Main says the next handoff is hiding among native Ozark plants."
+        },
+        "clues": [
+          "The clue names a former cheese factory and a black-box theater.",
+          "The suspect carried gaffer tape and a cue sheet marked Fermentation Hall.",
+          "A floor plan points to a multidisciplinary art space near 8th Street Market."
+        ],
+        "puzzle": {
+          "title": "Backstage Venue Match",
+          "description": "Use the Bentonville clues to identify the correct The Momentary hideout.",
+          "question": "Which Momentary space fits the theater evidence?",
+          "options": [
+            "Fermentation Hall",
+            "Square Park",
+            "Walton's 5&10",
+            "Crystal Bridges library"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">The Momentary</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Fermentation Hall</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "The Momentary",
+          "hideout": "Fermentation Hall",
+          "disguise": "Stage technician"
+        },
+        "funFact": "The Momentary transformed a decommissioned 63,000-square-foot cheese factory into a contemporary art space.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about The Momentary.",
+        "sources": [
+          "momentary"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "8th Street Market District",
+          "The Momentary"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "The Momentary evidence card for Fermentation Hall.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "the-momentary-tower",
+        "briefing": {
+          "headline": "TOWER LIGHTS TAMPERED!",
+          "report": "a lighting patch sheet vanished from the 70-foot Tower. Carmen is already gone, but The Pop-Up is still in Bentonville, blending in as a lighting technician.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Pop-Up why The Tower mattered.\"",
+          "suspect": {
+            "name": "Mina Flux",
+            "alias": "The Pop-Up",
+            "emoji": "🎛️",
+            "role": "Performance tech rerouting props through back-of-house",
+            "dossierNote": "Times escapes to show changeovers. Her favorite hiding places are the Tower stairs and Fermentation Hall cases."
+          },
+          "nextLead": "A seed packet marked North Main says the next handoff is hiding among native Ozark plants."
+        },
+        "clues": [
+          "The patch sheet lists mezzanines and a tall vertical room.",
+          "The courier was last seen behind glass with an arrow pattern.",
+          "A technician badge says Tower access only."
+        ],
+        "puzzle": {
+          "title": "Tower Level Check",
+          "description": "Use the Bentonville clues to identify the correct The Momentary hideout.",
+          "question": "Where is the lighting patch sheet hidden?",
+          "options": [
+            "The Tower",
+            "The Hub",
+            "Sam Walton Hall",
+            "Compton Gardens trail"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">The Momentary</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">The Tower</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "The Momentary",
+          "hideout": "The Tower",
+          "disguise": "Lighting technician"
+        },
+        "funFact": "The Momentary Tower is a 70-foot-tall space with multiple mezzanines for art, performance, and social events.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about The Momentary.",
+        "sources": [
+          "momentary"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "map-coordinate-choice",
+        "regionTags": [
+          "8th Street Market District",
+          "The Momentary"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "The Momentary evidence card for The Tower.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "the-momentary-green",
+        "briefing": {
+          "headline": "FESTIVAL PASS FORGED!",
+          "report": "a festival access pass vanished from Momentary Green. Carmen is already gone, but The Pop-Up is still in Bentonville, blending in as a festival vendor.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Pop-Up why Momentary Green mattered.\"",
+          "suspect": {
+            "name": "Mina Flux",
+            "alias": "The Pop-Up",
+            "emoji": "🎛️",
+            "role": "Performance tech rerouting props through back-of-house",
+            "dossierNote": "Times escapes to show changeovers. Her favorite hiding places are the Tower stairs and Fermentation Hall cases."
+          },
+          "nextLead": "A seed packet marked North Main says the next handoff is hiding among native Ozark plants."
+        },
+        "clues": [
+          "The pass describes a spacious outdoor area for picnics, gatherings, and music festivals.",
+          "Grass stains cover the bottom of the forged vendor permit.",
+          "The courier parked a bike near the outdoor space before entering the crowd."
+        ],
+        "puzzle": {
+          "title": "Outdoor Pass",
+          "description": "Use the Bentonville clues to identify the correct The Momentary hideout.",
+          "question": "Which outdoor venue matches the forged pass?",
+          "options": [
+            "Momentary Green",
+            "Osage wetland dock",
+            "Square fountain",
+            "Crystal Spring pond"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">The Momentary</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Momentary Green</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "The Momentary",
+          "hideout": "Momentary Green",
+          "disguise": "Festival vendor"
+        },
+        "funFact": "Momentary Green is an outdoor gathering area used for picnics, social events, art exploration, and music festivals.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about The Momentary.",
+        "sources": [
+          "momentary"
+        ],
+        "difficulty": "detective",
+        "mechanic": "timeline-choice",
+        "regionTags": [
+          "8th Street Market District",
+          "The Momentary"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "The Momentary evidence card for Momentary Green.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "the-momentary-galleries",
+        "briefing": {
+          "headline": "GALLERY WALL SWITCHED!",
+          "report": "an exhibition wall label vanished from the changing visual arts galleries. Carmen is already gone, but The Pop-Up is still in Bentonville, blending in as a installation artist.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Pop-Up why The Galleries mattered.\"",
+          "suspect": {
+            "name": "Mina Flux",
+            "alias": "The Pop-Up",
+            "emoji": "🎛️",
+            "role": "Performance tech rerouting props through back-of-house",
+            "dossierNote": "Times escapes to show changeovers. Her favorite hiding places are the Tower stairs and Fermentation Hall cases."
+          },
+          "nextLead": "A seed packet marked North Main says the next handoff is hiding among native Ozark plants."
+        },
+        "clues": [
+          "The label says exhibitions change throughout the year.",
+          "A roll of artist tape was found beside an open gallery wall.",
+          "The suspect said the place is for contemporary art in everyday life."
+        ],
+        "puzzle": {
+          "title": "Changing Exhibit",
+          "description": "Use the Bentonville clues to identify the correct The Momentary hideout.",
+          "question": "Which hideout fits the changing-exhibition clue?",
+          "options": [
+            "The Galleries",
+            "Walmart Museum galleries",
+            "Compton Exhibit Room",
+            "Peel Museum parlor"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">The Momentary</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">The Galleries</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "The Momentary",
+          "hideout": "The Galleries",
+          "disguise": "Installation artist"
+        },
+        "funFact": "The Momentary galleries feature art and exhibitions that change throughout the year.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about The Momentary.",
+        "sources": [
+          "momentary"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "logic-grid-choice",
+        "regionTags": [
+          "8th Street Market District",
+          "The Momentary"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "The Momentary evidence card for The Galleries.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "the-momentary-box-office",
+        "briefing": {
+          "headline": "BOX OFFICE BADGE DOUBLE!",
+          "report": "a duplicate event badge vanished from the Momentary Box Office. Carmen is already gone, but The Pop-Up is still in Bentonville, blending in as a ticket clerk.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Pop-Up why Box Office mattered.\"",
+          "suspect": {
+            "name": "Mina Flux",
+            "alias": "The Pop-Up",
+            "emoji": "🎛️",
+            "role": "Performance tech rerouting props through back-of-house",
+            "dossierNote": "Times escapes to show changeovers. Her favorite hiding places are the Tower stairs and Fermentation Hall cases."
+          },
+          "nextLead": "A seed packet marked North Main says the next handoff is hiding among native Ozark plants."
+        },
+        "clues": [
+          "The duplicate badge was printed at the main entrance.",
+          "The suspect knew ticket schedules and program details.",
+          "A note says the Box Office is the place to ask for event information."
+        ],
+        "puzzle": {
+          "title": "Ticket Desk Trail",
+          "description": "Use the Bentonville clues to identify the correct The Momentary hideout.",
+          "question": "Where should ACME compare the duplicate badge?",
+          "options": [
+            "Box Office",
+            "Downtown visitor center",
+            "Coler campground",
+            "Crystal Bridges Coffee Bar"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">The Momentary</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Box Office</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "The Momentary",
+          "hideout": "Box Office",
+          "disguise": "Ticket clerk"
+        },
+        "funFact": "The Momentary Box Office handles tickets, schedules, program details, and visitor information.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about The Momentary.",
+        "sources": [
+          "momentary"
+        ],
+        "difficulty": "detective",
+        "mechanic": "sequence-choice",
+        "regionTags": [
+          "8th Street Market District",
+          "The Momentary"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "The Momentary evidence card for Box Office.",
+        "reviewStatus": "source-linked-needs-line-review"
+      }
+    ],
+    "compton-gardens": [
+      {
+        "caseId": "classic-compton-gardens",
+        "briefing": {
+          "headline": "NATIVE PLANT TAG THEFT!",
+          "report": "a set of hand-lettered plant tags vanished from the native plant collection. Carmen is already gone, but The Understory is still in Bentonville, blending in as a botanist.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Understory why Native plant beds mattered.\"",
+          "suspect": {
+            "name": "Fern Compton",
+            "alias": "The Understory",
+            "emoji": "🍃",
+            "role": "Botanical courier marking trails with plant tags",
+            "dossierNote": "Can vanish behind native shrubs without snapping a twig. Leaves route notes in seed packets."
+          },
+          "nextLead": "A bike repair ticket lists the Hub, a campground, and a westside trail code."
+        },
+        "clues": [
+          "The stolen tags name native trees, grasses, vines, shrubs, and perennials.",
+          "A seed packet points to North Main Street and a seven-acre greenspace.",
+          "The suspect wore garden gloves and quoted Dr. Neil Compton."
+        ],
+        "puzzle": {
+          "title": "Plant Tag Sort",
+          "description": "Use the Bentonville clues to identify the correct Compton Gardens hideout.",
+          "question": "Which Compton Gardens hideout matches the native-plant clues?",
+          "options": [
+            "Native plant beds",
+            "The Hub",
+            "Momentary Green",
+            "Square Park"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Compton Gardens</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Native plant beds</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Compton Gardens",
+          "hideout": "Native plant beds",
+          "disguise": "Botanist"
+        },
+        "funFact": "Compton Gardens & Arboretum showcases native Ozark plants in a seven-acre downtown greenspace.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Compton Gardens.",
+        "sources": [
+          "compton_gardens"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "North Main Greenway",
+          "Compton Gardens"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Compton Gardens evidence card for Native plant beds.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "compton-gardens-exhibit-room",
+        "briefing": {
+          "headline": "EXHIBIT ROOM MAP MISSING!",
+          "report": "a trail interpretation map vanished from the Compton Gardens Exhibit Room. Carmen is already gone, but The Understory is still in Bentonville, blending in as a garden docent.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Understory why Exhibit Room mattered.\"",
+          "suspect": {
+            "name": "Fern Compton",
+            "alias": "The Understory",
+            "emoji": "🍃",
+            "role": "Botanical courier marking trails with plant tags",
+            "dossierNote": "Can vanish behind native shrubs without snapping a twig. Leaves route notes in seed packets."
+          },
+          "nextLead": "A bike repair ticket lists the Hub, a campground, and a westside trail code."
+        },
+        "clues": [
+          "The room hours are marked Monday through Friday, 8am to 5pm.",
+          "A docent badge references Arkansas native plants and history.",
+          "The courier never crossed the trail; the map disappeared indoors."
+        ],
+        "puzzle": {
+          "title": "Exhibit Hours",
+          "description": "Use the Bentonville clues to identify the correct Compton Gardens hideout.",
+          "question": "Where did the map vanish?",
+          "options": [
+            "Exhibit Room",
+            "The Spark Cafe",
+            "Sam Walton Hall",
+            "Osage pickleball courts"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Compton Gardens</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Exhibit Room</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Compton Gardens",
+          "hideout": "Exhibit Room",
+          "disguise": "Garden docent"
+        },
+        "funFact": "The Compton Gardens Exhibit Room is listed at 312 N. Main Street with weekday hours.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Compton Gardens.",
+        "sources": [
+          "compton_gardens"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "map-coordinate-choice",
+        "regionTags": [
+          "North Main Greenway",
+          "Compton Gardens"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Compton Gardens evidence card for Exhibit Room.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "compton-gardens-trails",
+        "briefing": {
+          "headline": "TRAIL MARKERS TURNED!",
+          "report": "three brass trail markers vanished from the garden walking trails. Carmen is already gone, but The Understory is still in Bentonville, blending in as a arborist.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Understory why Garden trails mattered.\"",
+          "suspect": {
+            "name": "Fern Compton",
+            "alias": "The Understory",
+            "emoji": "🍃",
+            "role": "Botanical courier marking trails with plant tags",
+            "dossierNote": "Can vanish behind native shrubs without snapping a twig. Leaves route notes in seed packets."
+          },
+          "nextLead": "A bike repair ticket lists the Hub, a campground, and a westside trail code."
+        },
+        "clues": [
+          "The path is lined with native plants, towering trees, and seasonal blooms.",
+          "A bicycle bell was found beside a downtown garden trail.",
+          "The suspect carried an arborist clipboard and pruning twine."
+        ],
+        "puzzle": {
+          "title": "Trail Marker Check",
+          "description": "Use the Bentonville clues to identify the correct Compton Gardens hideout.",
+          "question": "Which path did the arborist tamper with?",
+          "options": [
+            "Garden trails",
+            "Coler Eastside",
+            "Razorback Greenway by The Momentary",
+            "Square event route"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Compton Gardens</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Garden trails</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Compton Gardens",
+          "hideout": "Garden trails",
+          "disguise": "Arborist"
+        },
+        "funFact": "Visitors can walk or bike through trails lined with native plants and trees at Compton Gardens.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Compton Gardens.",
+        "sources": [
+          "compton_gardens"
+        ],
+        "difficulty": "detective",
+        "mechanic": "timeline-choice",
+        "regionTags": [
+          "North Main Greenway",
+          "Compton Gardens"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Compton Gardens evidence card for Garden trails.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "compton-gardens-dr-compton",
+        "briefing": {
+          "headline": "CONSERVATION QUOTE CUT OUT!",
+          "report": "a framed conservation quote vanished from the Dr. Neil Compton display. Carmen is already gone, but The Understory is still in Bentonville, blending in as a conservation volunteer.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Understory why Dr. Compton display mattered.\"",
+          "suspect": {
+            "name": "Fern Compton",
+            "alias": "The Understory",
+            "emoji": "🍃",
+            "role": "Botanical courier marking trails with plant tags",
+            "dossierNote": "Can vanish behind native shrubs without snapping a twig. Leaves route notes in seed packets."
+          },
+          "nextLead": "A bike repair ticket lists the Hub, a campground, and a westside trail code."
+        },
+        "clues": [
+          "The missing frame carried a quote challenging visitors to protect wild places.",
+          "A volunteer badge says Step Forward.",
+          "The courier underlined Ozark landscape preservation twice."
+        ],
+        "puzzle": {
+          "title": "Conservation Note",
+          "description": "Use the Bentonville clues to identify the correct Compton Gardens hideout.",
+          "question": "Which exhibit should ACME inspect?",
+          "options": [
+            "Dr. Compton display",
+            "Walmart timeline",
+            "Crystal Bridges pavilions",
+            "The Momentary Box Office"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Compton Gardens</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Dr. Compton display</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Compton Gardens",
+          "hideout": "Dr. Compton display",
+          "disguise": "Conservation volunteer"
+        },
+        "funFact": "Compton Gardens honors Dr. Neil Compton and his passion for preserving the Ozark landscape.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Compton Gardens.",
+        "sources": [
+          "compton_gardens"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "logic-grid-choice",
+        "regionTags": [
+          "North Main Greenway",
+          "Compton Gardens"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Compton Gardens evidence card for Dr. Compton display.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "compton-gardens-house",
+        "briefing": {
+          "headline": "HOUSE RENTAL LEDGER LIFTED!",
+          "report": "a private-event rental ledger vanished from the mid-century modern home. Carmen is already gone, but The Understory is still in Bentonville, blending in as a event planner.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Understory why Compton house mattered.\"",
+          "suspect": {
+            "name": "Fern Compton",
+            "alias": "The Understory",
+            "emoji": "🍃",
+            "role": "Botanical courier marking trails with plant tags",
+            "dossierNote": "Can vanish behind native shrubs without snapping a twig. Leaves route notes in seed packets."
+          },
+          "nextLead": "A bike repair ticket lists the Hub, a campground, and a westside trail code."
+        },
+        "clues": [
+          "The ledger mentions a private rental house at the garden.",
+          "The suspect measured table layouts but ignored the plant beds.",
+          "A floor plan says the mid-century modern home can host events."
+        ],
+        "puzzle": {
+          "title": "Rental Ledger",
+          "description": "Use the Bentonville clues to identify the correct Compton Gardens hideout.",
+          "question": "Where does the floor plan point?",
+          "options": [
+            "Compton house",
+            "Peel Museum parlor",
+            "Sam Walton Hall",
+            "Momentary Green"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Compton Gardens</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Compton house</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Compton Gardens",
+          "hideout": "Compton house",
+          "disguise": "Event planner"
+        },
+        "funFact": "The Compton Gardens house is a mid-century modern space used for private rentals.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Compton Gardens.",
+        "sources": [
+          "compton_gardens"
+        ],
+        "difficulty": "detective",
+        "mechanic": "sequence-choice",
+        "regionTags": [
+          "North Main Greenway",
+          "Compton Gardens"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Compton Gardens evidence card for Compton house.",
+        "reviewStatus": "source-linked-needs-line-review"
+      }
+    ],
+    "coler-preserve": [
+      {
+        "caseId": "classic-coler-preserve",
+        "briefing": {
+          "headline": "HUB TRAIL TOKEN LIFTED!",
+          "report": "a steel trail-launch token vanished from the top of Coler Mountain. Carmen is already gone, but The Dropper is still in Bentonville, blending in as a bike mechanic.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Dropper why The Hub mattered.\"",
+          "suspect": {
+            "name": "Ridge Reilly",
+            "alias": "The Dropper",
+            "emoji": "🛞",
+            "role": "Bike courier using trail names as dead-drop codes",
+            "dossierNote": "Rides with a silent freehub and a false-bottom repair kit. Knows every connector between the Hub and camp."
+          },
+          "nextLead": "A wetland map and an archery scorecard point south to Osage Park."
+        },
+        "clues": [
+          "The clue names a 20-foot steel and wood launch structure.",
+          "Three downhill run names are scratched into a tire lever.",
+          "The courier carried a repair stand tag marked Fire Line."
+        ],
+        "puzzle": {
+          "title": "Trail Launch Deduction",
+          "description": "Use the Bentonville clues to identify the correct Coler Mountain Bike Preserve hideout.",
+          "question": "Which Coler feature is the launch point?",
+          "options": [
+            "The Hub",
+            "Momentary Tower",
+            "Downtown Square",
+            "Osage pavilion"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Coler Mountain Bike Preserve</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">The Hub</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Coler Mountain Bike Preserve",
+          "hideout": "The Hub",
+          "disguise": "Bike mechanic"
+        },
+        "funFact": "At the top of Coler Mountain, The Hub launches riders toward three downhill runs.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Coler Mountain Bike Preserve.",
+        "sources": [
+          "coler_preserve"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "West Bentonville Trails",
+          "Coler Mountain Bike Preserve"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Coler Mountain Bike Preserve evidence card for The Hub.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "coler-preserve-campground",
+        "briefing": {
+          "headline": "CAMPSITE PASS COUNTERFEIT!",
+          "report": "a forged campsite pass vanished from the Coler campground. Carmen is already gone, but The Dropper is still in Bentonville, blending in as a camp host.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Dropper why Coler campground mattered.\"",
+          "suspect": {
+            "name": "Ridge Reilly",
+            "alias": "The Dropper",
+            "emoji": "🛞",
+            "role": "Bike courier using trail names as dead-drop codes",
+            "dossierNote": "Rides with a silent freehub and a false-bottom repair kit. Knows every connector between the Hub and camp."
+          },
+          "nextLead": "A wetland map and an archery scorecard point south to Osage Park."
+        },
+        "clues": [
+          "The pass mentions 16 hike-in sites, 5 camper van spots, and 1 ADA site.",
+          "The suspect hauled gear with a wagon instead of a getaway car.",
+          "A repair ticket says ride straight from camp onto the trail."
+        ],
+        "puzzle": {
+          "title": "Camp Pass Count",
+          "description": "Use the Bentonville clues to identify the correct Coler Mountain Bike Preserve hideout.",
+          "question": "Where did the forged pass belong?",
+          "options": [
+            "Coler campground",
+            "Osage dog park",
+            "Compton house",
+            "The Spark Cafe"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Coler Mountain Bike Preserve</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Coler campground</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Coler Mountain Bike Preserve",
+          "hideout": "Coler campground",
+          "disguise": "Camp host"
+        },
+        "funFact": "Coler campground offers hike-in, camper van, and ADA sites with trail access.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Coler Mountain Bike Preserve.",
+        "sources": [
+          "coler_preserve"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "map-coordinate-choice",
+        "regionTags": [
+          "West Bentonville Trails",
+          "Coler Mountain Bike Preserve"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Coler Mountain Bike Preserve evidence card for Coler campground.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "coler-preserve-westside",
+        "briefing": {
+          "headline": "WESTSIDE SIGN SPUN!",
+          "report": "a Westside trail sign vanished from the beginner and intermediate trail area. Carmen is already gone, but The Dropper is still in Bentonville, blending in as a ride coach.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Dropper why Westside trails mattered.\"",
+          "suspect": {
+            "name": "Ridge Reilly",
+            "alias": "The Dropper",
+            "emoji": "🛞",
+            "role": "Bike courier using trail names as dead-drop codes",
+            "dossierNote": "Rides with a silent freehub and a false-bottom repair kit. Knows every connector between the Hub and camp."
+          },
+          "nextLead": "A wetland map and an archery scorecard point south to Osage Park."
+        },
+        "clues": [
+          "The sign points beginners away from the more advanced Eastside.",
+          "A coaching whistle and green trail marker were found together.",
+          "The suspect changed arrows before a skills class rolled through."
+        ],
+        "puzzle": {
+          "title": "Trail Level Logic",
+          "description": "Use the Bentonville clues to identify the correct Coler Mountain Bike Preserve hideout.",
+          "question": "Which trail area matches beginner and intermediate riders?",
+          "options": [
+            "Westside trails",
+            "Eastside trails",
+            "Momentary Green",
+            "Square Park"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Coler Mountain Bike Preserve</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Westside trails</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Coler Mountain Bike Preserve",
+          "hideout": "Westside trails",
+          "disguise": "Ride coach"
+        },
+        "funFact": "Coler is divided into Westside trails for beginner and intermediate riders and Eastside trails for more experienced riders.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Coler Mountain Bike Preserve.",
+        "sources": [
+          "coler_preserve"
+        ],
+        "difficulty": "detective",
+        "mechanic": "timeline-choice",
+        "regionTags": [
+          "West Bentonville Trails",
+          "Coler Mountain Bike Preserve"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Coler Mountain Bike Preserve evidence card for Westside trails.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "coler-preserve-eastside",
+        "briefing": {
+          "headline": "ROCKY LINE ROUTE STOLEN!",
+          "report": "a technical trail route card vanished from the advanced Eastside trails. Carmen is already gone, but The Dropper is still in Bentonville, blending in as a downhill spotter.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Dropper why Eastside trails mattered.\"",
+          "suspect": {
+            "name": "Ridge Reilly",
+            "alias": "The Dropper",
+            "emoji": "🛞",
+            "role": "Bike courier using trail names as dead-drop codes",
+            "dossierNote": "Rides with a silent freehub and a false-bottom repair kit. Knows every connector between the Hub and camp."
+          },
+          "nextLead": "A wetland map and an archery scorecard point south to Osage Park."
+        },
+        "clues": [
+          "The route card mentions technical rocky sections and massive gap jumps.",
+          "The suspect wore full-face gear and ignored the walking trail.",
+          "A red arrow points from The Hub toward the more advanced side."
+        ],
+        "puzzle": {
+          "title": "Advanced Route",
+          "description": "Use the Bentonville clues to identify the correct Coler Mountain Bike Preserve hideout.",
+          "question": "Where is the route card hidden?",
+          "options": [
+            "Eastside trails",
+            "Westside trails",
+            "Downtown Square",
+            "Compton Exhibit Room"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Coler Mountain Bike Preserve</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Eastside trails</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Coler Mountain Bike Preserve",
+          "hideout": "Eastside trails",
+          "disguise": "Downhill spotter"
+        },
+        "funFact": "Coler trails include flowy jump lines, technical rocky sections, and large gap jumps.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Coler Mountain Bike Preserve.",
+        "sources": [
+          "coler_preserve"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "logic-grid-choice",
+        "regionTags": [
+          "West Bentonville Trails",
+          "Coler Mountain Bike Preserve"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Coler Mountain Bike Preserve evidence card for Eastside trails.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "coler-preserve-airship",
+        "briefing": {
+          "headline": "TRAIL CAFE RECEIPT CODED!",
+          "report": "a coded cafe receipt vanished from the coffee stop along Coler trails. Carmen is already gone, but The Dropper is still in Bentonville, blending in as a trail barista.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Dropper why Airship Coffee at Coler mattered.\"",
+          "suspect": {
+            "name": "Ridge Reilly",
+            "alias": "The Dropper",
+            "emoji": "🛞",
+            "role": "Bike courier using trail names as dead-drop codes",
+            "dossierNote": "Rides with a silent freehub and a false-bottom repair kit. Knows every connector between the Hub and camp."
+          },
+          "nextLead": "A wetland map and an archery scorecard point south to Osage Park."
+        },
+        "clues": [
+          "The receipt names a coffee stop inside the preserve.",
+          "Bike tire mud marked the receipt, but no car tracks led to the handoff.",
+          "A note says the next clue is brewed between trail segments."
+        ],
+        "puzzle": {
+          "title": "Trail Cafe Trail",
+          "description": "Use the Bentonville clues to identify the correct Coler Mountain Bike Preserve hideout.",
+          "question": "Which Coler stop matches the receipt?",
+          "options": [
+            "Airship Coffee at Coler",
+            "The Spark Cafe",
+            "Crystal Bridges Coffee Bar",
+            "8th & Plate"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Coler Mountain Bike Preserve</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Airship Coffee at Coler</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Coler Mountain Bike Preserve",
+          "hideout": "Airship Coffee at Coler",
+          "disguise": "Trail barista"
+        },
+        "funFact": "Visit Bentonville lists Airship Coffee at Coler among the preserve stops.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Coler Mountain Bike Preserve.",
+        "sources": [
+          "coler_preserve"
+        ],
+        "difficulty": "detective",
+        "mechanic": "sequence-choice",
+        "regionTags": [
+          "West Bentonville Trails",
+          "Coler Mountain Bike Preserve"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Coler Mountain Bike Preserve evidence card for Airship Coffee at Coler.",
+        "reviewStatus": "source-linked-needs-line-review"
+      }
+    ],
+    "osage-park": [
+      {
+        "caseId": "classic-osage-park",
+        "briefing": {
+          "headline": "BOARDWALK BEARING STOLEN!",
+          "report": "a final compass bearing vanished from the Osage Park wetland boardwalks. Carmen is already gone, but The Fletching is still in Bentonville, blending in as a wetland guide.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Fletching why Floating boardwalks mattered.\"",
+          "suspect": {
+            "name": "Ozzie Quill",
+            "alias": "The Fletching",
+            "emoji": "🏹",
+            "role": "Lookout hiding evidence among wetland programs",
+            "dossierNote": "Uses archery scorecards for cipher keys and knows which boardwalk turns are quiet after sunset."
+          },
+          "nextLead": "The last scorecard has Carmen's red mark and three final coordinates for the closing chase."
+        },
+        "clues": [
+          "The map circles floating boardwalks around a wetland ecosystem.",
+          "The suspect carried binoculars and a sunrise-to-sunset park note.",
+          "A muddy arrow points from the pavilion toward the water."
+        ],
+        "puzzle": {
+          "title": "Wetland Route",
+          "description": "Use the Bentonville clues to identify the correct Osage Park hideout.",
+          "question": "Where does the final compass bearing point?",
+          "options": [
+            "Floating boardwalks",
+            "The Hub",
+            "Crystal Bridges pavilions",
+            "Downtown Square"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Osage Park</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Floating boardwalks</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Osage Park",
+          "hideout": "Floating boardwalks",
+          "disguise": "Wetland guide"
+        },
+        "funFact": "Osage Park includes floating boardwalks around a wetland ecosystem.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Osage Park.",
+        "sources": [
+          "osage_park"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Southwest Bentonville Wetlands",
+          "Osage Park"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Osage Park evidence card for Floating boardwalks.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "osage-park-quiver",
+        "briefing": {
+          "headline": "ARCHERY SCORECARD ALTERED!",
+          "report": "a scored archery target card vanished from The Quiver Archery Range. Carmen is already gone, but The Fletching is still in Bentonville, blending in as a range marshal.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Fletching why The Quiver Archery Range mattered.\"",
+          "suspect": {
+            "name": "Ozzie Quill",
+            "alias": "The Fletching",
+            "emoji": "🏹",
+            "role": "Lookout hiding evidence among wetland programs",
+            "dossierNote": "Uses archery scorecards for cipher keys and knows which boardwalk turns are quiet after sunset."
+          },
+          "nextLead": "The last scorecard has Carmen's red mark and three final coordinates for the closing chase."
+        },
+        "clues": [
+          "The scorecard uses fletching marks as cipher arrows.",
+          "A range marshal vest was found near Osage Park.",
+          "The clue says beginners and seasoned archers can both take aim there."
+        ],
+        "puzzle": {
+          "title": "Arrow Cipher",
+          "description": "Use the Bentonville clues to identify the correct Osage Park hideout.",
+          "question": "Which Osage Park feature matches the scorecard?",
+          "options": [
+            "The Quiver Archery Range",
+            "Coler Hub",
+            "Momentary Box Office",
+            "Museum welcome desk"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Osage Park</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">The Quiver Archery Range</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Osage Park",
+          "hideout": "The Quiver Archery Range",
+          "disguise": "Range marshal"
+        },
+        "funFact": "The Quiver is an outdoor archery range nestled in Osage Park.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Osage Park.",
+        "sources": [
+          "osage_park"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "map-coordinate-choice",
+        "regionTags": [
+          "Southwest Bentonville Wetlands",
+          "Osage Park"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Osage Park evidence card for The Quiver Archery Range.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "osage-park-pickleball",
+        "briefing": {
+          "headline": "PICKLEBALL SCOREBOARD SWIPE!",
+          "report": "a tournament scoreboard tile vanished from the Osage Park pickleball courts. Carmen is already gone, but The Fletching is still in Bentonville, blending in as a scorekeeper.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Fletching why Pickleball courts mattered.\"",
+          "suspect": {
+            "name": "Ozzie Quill",
+            "alias": "The Fletching",
+            "emoji": "🏹",
+            "role": "Lookout hiding evidence among wetland programs",
+            "dossierNote": "Uses archery scorecards for cipher keys and knows which boardwalk turns are quiet after sunset."
+          },
+          "nextLead": "The last scorecard has Carmen's red mark and three final coordinates for the closing chase."
+        },
+        "clues": [
+          "The score tile says court 8 in green marker.",
+          "A paddle grip and tournament bracket were left near the pavilion parking lot.",
+          "The suspect counted courts before cutting across the park."
+        ],
+        "puzzle": {
+          "title": "Court Count",
+          "description": "Use the Bentonville clues to identify the correct Osage Park hideout.",
+          "question": "Where should the scorekeeper be stopped?",
+          "options": [
+            "Pickleball courts",
+            "Walton Family Whole Health & Fitness",
+            "The Momentary galleries",
+            "Garden trails"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Osage Park</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Pickleball courts</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Osage Park",
+          "hideout": "Pickleball courts",
+          "disguise": "Scorekeeper"
+        },
+        "funFact": "Osage Park has an eight-court outdoor pickleball facility.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Osage Park.",
+        "sources": [
+          "osage_park"
+        ],
+        "difficulty": "detective",
+        "mechanic": "timeline-choice",
+        "regionTags": [
+          "Southwest Bentonville Wetlands",
+          "Osage Park"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Osage Park evidence card for Pickleball courts.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "osage-park-art-park",
+        "briefing": {
+          "headline": "PARK ART LABEL LIFTED!",
+          "report": "a public-art label vanished from an art installation inside Osage Park. Carmen is already gone, but The Fletching is still in Bentonville, blending in as a public art docent.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Fletching why Art in the Park mattered.\"",
+          "suspect": {
+            "name": "Ozzie Quill",
+            "alias": "The Fletching",
+            "emoji": "🏹",
+            "role": "Lookout hiding evidence among wetland programs",
+            "dossierNote": "Uses archery scorecards for cipher keys and knows which boardwalk turns are quiet after sunset."
+          },
+          "nextLead": "The last scorecard has Carmen's red mark and three final coordinates for the closing chase."
+        },
+        "clues": [
+          "The label describes art installations located throughout the park.",
+          "The courier followed a path between recreation areas instead of a museum gallery.",
+          "A docent badge reads Art in the Park."
+        ],
+        "puzzle": {
+          "title": "Park Art Match",
+          "description": "Use the Bentonville clues to identify the correct Osage Park hideout.",
+          "question": "Which Osage destination fits the lifted label?",
+          "options": [
+            "Art in the Park",
+            "Crystal Bridges permanent collection",
+            "Downtown Art Market booth",
+            "Momentary galleries"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Osage Park</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Art in the Park</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Osage Park",
+          "hideout": "Art in the Park",
+          "disguise": "Public art docent"
+        },
+        "funFact": "Osage Park includes art installations throughout the park.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Osage Park.",
+        "sources": [
+          "osage_park"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "logic-grid-choice",
+        "regionTags": [
+          "Southwest Bentonville Wetlands",
+          "Osage Park"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Osage Park evidence card for Art in the Park.",
+        "reviewStatus": "source-linked-needs-line-review"
+      },
+      {
+        "caseId": "osage-park-dog-park",
+        "briefing": {
+          "headline": "DOG PARK PERMIT DISAPPEARS!",
+          "report": "a laminated dog park permit vanished from the Osage Park dog park. Carmen is already gone, but The Fletching is still in Bentonville, blending in as a park volunteer.",
+          "callingCard": "A red card reads: \"I left the hard part local. Ask The Fletching why Dog park mattered.\"",
+          "suspect": {
+            "name": "Ozzie Quill",
+            "alias": "The Fletching",
+            "emoji": "🏹",
+            "role": "Lookout hiding evidence among wetland programs",
+            "dossierNote": "Uses archery scorecards for cipher keys and knows which boardwalk turns are quiet after sunset."
+          },
+          "nextLead": "The last scorecard has Carmen's red mark and three final coordinates for the closing chase."
+        },
+        "clues": [
+          "The permit says Park & Play and is clipped to a leash hook.",
+          "The suspect was steps from the pavilion parking lot.",
+          "A volunteer vest has wetland mud on one side and paw prints on the other."
+        ],
+        "puzzle": {
+          "title": "Park Permit Trail",
+          "description": "Use the Bentonville clues to identify the correct Osage Park hideout.",
+          "question": "Which Osage Park feature matches the paw-print clues?",
+          "options": [
+            "Dog park",
+            "The Quiver",
+            "Coler campground",
+            "Compton house"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Osage Park</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Dog park</p></div>"
+        },
+        "warrantAnswers": {
+          "city": "Osage Park",
+          "hideout": "Dog park",
+          "disguise": "Park volunteer"
+        },
+        "funFact": "Osage Park combines wetland access, recreation areas, pickleball, dog park space, archery, and public art.",
+        "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Osage Park.",
+        "sources": [
+          "osage_park"
+        ],
+        "difficulty": "detective",
+        "mechanic": "sequence-choice",
+        "regionTags": [
+          "Southwest Bentonville Wetlands",
+          "Osage Park"
+        ],
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "Osage Park evidence card for Dog park.",
+        "reviewStatus": "source-linked-needs-line-review"
+      }
+    ]
+  },
+  "sources": {
+    "visit_bentonville": {
+      "title": "Things to Do in Bentonville AR",
+      "publisher": "Visit Bentonville",
+      "url": "https://www.visitbentonville.com/things-to-do/",
+      "reviewed": true
+    },
+    "visit_bentonville_square": {
+      "title": "Downtown Square",
+      "publisher": "Visit Bentonville",
+      "url": "https://www.visitbentonville.com/things-to-do/parks-trails-lakes/downtown-square/",
+      "reviewed": true
+    },
+    "walmart_museum": {
+      "title": "Walmart Museum & History",
+      "publisher": "Walmart",
+      "url": "https://corporate.walmart.com/about/walmart-museum/",
+      "reviewed": true
+    },
+    "walmart_home_office": {
+      "title": "New Home Office",
+      "publisher": "Walmart",
+      "url": "https://corporate.walmart.com/about/newhomeoffice",
+      "reviewed": true
+    },
+    "crystal_bridges": {
+      "title": "About Crystal Bridges Museum of American Art",
+      "publisher": "Crystal Bridges Museum of American Art",
+      "url": "https://crystalbridges.org/about",
+      "reviewed": true
+    },
+    "momentary": {
+      "title": "About the Momentary",
+      "publisher": "The Momentary",
+      "url": "https://themomentary.org/about/",
+      "reviewed": true
+    },
+    "compton_gardens": {
+      "title": "Compton Gardens & Arboretum",
+      "publisher": "Peel Compton Foundation",
+      "url": "https://peelcompton.org/compton-gardens-arboretum/",
+      "reviewed": true
+    },
+    "coler_preserve": {
+      "title": "Things to do at Coler Mountain Bike Preserve",
+      "publisher": "Visit Bentonville",
+      "url": "https://www.visitbentonville.com/things-to-do/parks-trails-lakes/coler/",
+      "reviewed": true
+    },
+    "osage_park": {
+      "title": "Osage Park",
+      "publisher": "Peel Compton Foundation",
+      "url": "https://peelcompton.org/osage-park/",
+      "reviewed": true
+    }
+  }
+}

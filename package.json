@@ -1,5 +1,5 @@
 {
-  "name": "carmen-sandiego-argentina",
+  "name": "carmen-sandiego-bentonville",
   "private": true,
   "scripts": {
     "test": "node --test tests/*.test.js",

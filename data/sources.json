@@ -1,62 +1,56 @@
 {
-  "buenos_aires_tourism": {
-    "title": "Buenos Aires City Tourism",
-    "publisher": "Government of the City of Buenos Aires",
-    "url": "https://turismo.buenosaires.gob.ar/",
-    "reviewed": false
-  },
-  "mendoza_tourism": {
-    "title": "Mendoza Tourism",
-    "publisher": "Government of Mendoza",
-    "url": "https://mendoza.tur.ar/",
-    "reviewed": false
-  },
-  "salta_tourism": {
-    "title": "Salta Tourism",
-    "publisher": "Government of Salta",
-    "url": "https://www.saltaturismo.gob.ar/",
-    "reviewed": false
-  },
-  "cordoba_tourism": {
-    "title": "Córdoba Tourism",
-    "publisher": "Government of Córdoba",
-    "url": "https://www.cordobaturismo.gov.ar/",
-    "reviewed": false
-  },
-  "unesco_cordoba_jesuit": {
-    "title": "Jesuit Block and Estancias of Córdoba",
-    "publisher": "UNESCO World Heritage Centre",
-    "url": "https://whc.unesco.org/en/list/995/",
+  "visit_bentonville": {
+    "title": "Things to Do in Bentonville AR",
+    "publisher": "Visit Bentonville",
+    "url": "https://www.visitbentonville.com/things-to-do/",
     "reviewed": true
   },
-  "unesco_iguazu": {
-    "title": "Iguazu National Park",
-    "publisher": "UNESCO World Heritage Centre",
-    "url": "https://whc.unesco.org/en/list/303/",
+  "visit_bentonville_square": {
+    "title": "Downtown Square",
+    "publisher": "Visit Bentonville",
+    "url": "https://www.visitbentonville.com/things-to-do/parks-trails-lakes/downtown-square/",
     "reviewed": true
   },
-  "unesco_los_glaciares": {
-    "title": "Los Glaciares National Park",
-    "publisher": "UNESCO World Heritage Centre",
-    "url": "https://whc.unesco.org/en/list/145/",
+  "walmart_museum": {
+    "title": "Walmart Museum & History",
+    "publisher": "Walmart",
+    "url": "https://corporate.walmart.com/about/walmart-museum/",
     "reviewed": true
   },
-  "bariloche_tourism": {
-    "title": "Bariloche Tourism",
-    "publisher": "Municipality of San Carlos de Bariloche",
-    "url": "https://barilocheturismo.gob.ar/",
-    "reviewed": false
+  "walmart_home_office": {
+    "title": "New Home Office",
+    "publisher": "Walmart",
+    "url": "https://corporate.walmart.com/about/newhomeoffice",
+    "reviewed": true
   },
-  "ushuaia_tourism": {
-    "title": "Ushuaia Tourism",
-    "publisher": "Municipality of Ushuaia",
-    "url": "https://turismoushuaia.com/",
-    "reviewed": false
+  "crystal_bridges": {
+    "title": "About Crystal Bridges Museum of American Art",
+    "publisher": "Crystal Bridges Museum of American Art",
+    "url": "https://crystalbridges.org/about",
+    "reviewed": true
   },
-  "national_parks_argentina": {
-    "title": "National Parks of Argentina",
-    "publisher": "Administracion de Parques Nacionales",
-    "url": "https://www.argentina.gob.ar/interior/ambiente/parquesnacionales",
-    "reviewed": false
+  "momentary": {
+    "title": "About the Momentary",
+    "publisher": "The Momentary",
+    "url": "https://themomentary.org/about/",
+    "reviewed": true
+  },
+  "compton_gardens": {
+    "title": "Compton Gardens & Arboretum",
+    "publisher": "Peel Compton Foundation",
+    "url": "https://peelcompton.org/compton-gardens-arboretum/",
+    "reviewed": true
+  },
+  "coler_preserve": {
+    "title": "Things to do at Coler Mountain Bike Preserve",
+    "publisher": "Visit Bentonville",
+    "url": "https://www.visitbentonville.com/things-to-do/parks-trails-lakes/coler/",
+    "reviewed": true
+  },
+  "osage_park": {
+    "title": "Osage Park",
+    "publisher": "Peel Compton Foundation",
+    "url": "https://peelcompton.org/osage-park/",
+    "reviewed": true
   }
 }
