@@ -2,7 +2,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const test = require('node:test');
-const { arraysMatch, createRunCaseVariantIds } = require('../run-generator.js');
+const { arraysMatch, createRunCaseVariantIds, computeStopCountOptions } = require('../run-generator.js');
 
 const root = path.resolve(__dirname, '..');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'data/quiz-packs.json'), 'utf8'));
@@ -32,6 +32,18 @@ test('different seeds can produce different case routes', () => {
     assert.equal(first.length, locations.length, `${quizPack.id} first route length`);
     assert.equal(second.length, locations.length, `${quizPack.id} second route length`);
     assert.equal(arraysMatch(first, second), false, `${quizPack.id} seed variation`);
+  });
+});
+
+test('stop count options always include the full pack size and never dip below 3 unless the pack itself is smaller', () => {
+  quizPacks.forEach((quizPack) => {
+    const total = quizPack.locations.length;
+    const options = computeStopCountOptions(total);
+    assert.ok(options.includes(total), `${quizPack.id} stop options include the full pack size`);
+    options.forEach((count) => {
+      assert.ok(count >= 3 || count === total, `${quizPack.id} stop option ${count} is either >=3 or the full pack`);
+    });
+    assert.deepEqual(options, [...options].sort((a, b) => a - b), `${quizPack.id} stop options are ascending`);
   });
 });
 

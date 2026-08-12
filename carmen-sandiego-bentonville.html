@@ -107,6 +107,13 @@
       <p class="text-amber-400 text-xs font-bold tracking-[0.3em] uppercase mb-2">CLEARANCE AUTHENTICATION</p>
       <h3 class="title-font text-3xl md:text-4xl font-extrabold text-white mb-8">Establish Detective Rank</h3>
 
+      <div class="max-w-xs mx-auto mb-8 text-left">
+        <label for="stopCountSelect" class="block text-xs font-bold uppercase tracking-[0.25em] text-sky-300 mb-2">Number Of Stops</label>
+        <select id="stopCountSelect" onchange="selectStopCount(this.value)" class="w-full bg-slate-950/80 border border-white/15 text-white rounded-lg px-4 py-3 font-bold focus:outline-none focus:ring-2 focus:ring-amber-400">
+          <option>All Stops</option>
+        </select>
+      </div>
+
       <div class="space-y-4 text-left">
         <button onclick="selectDifficulty('rookie')" class="w-full glass rounded-2xl p-5 text-left border border-white/10 hover:border-emerald-400/40 transition-all duration-300 group flex items-start gap-4">
           <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-emerald-500/20">📋</div>

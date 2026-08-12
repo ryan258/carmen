@@ -624,6 +624,25 @@ function applyQuizPackMetadata() {
   setTextIfPresent('packHeroLocation', QUIZ_PACK.heroLocation);
   setTextIfPresent('packIntro', QUIZ_PACK.intro);
   setTextIfPresent('packFooterTitle', QUIZ_PACK.title);
+  updateStopCountOptions();
+}
+
+function updateStopCountOptions() {
+  const select = document.getElementById('stopCountSelect');
+  if (!select) return;
+  const total = QUIZ_PACK.locations.length;
+  const options = CarmenRunGenerator.computeStopCountOptions(total);
+  select.innerHTML = options
+    .map((count) => `<option value="${count}">${count} Stop${count === 1 ? '' : 's'}${count === total ? ' (All)' : ''}</option>`)
+    .join('');
+  const preferred = options.includes(state.stopCount) ? state.stopCount : total;
+  select.value = preferred;
+  state.stopCount = preferred;
+}
+
+function selectStopCount(value) {
+  sound.click();
+  state.stopCount = Number(value) || QUIZ_PACK.locations.length;
 }
 
 function getPreferredPackId() {
@@ -901,6 +920,7 @@ let state = {
   warrantIssued: false,
   clueTokens: [],
   history: [],
+  stopCount: null,
   caseSeed: '',
   caseVariantIds: [],
   activeTab: 'dossier',
@@ -1168,6 +1188,8 @@ function goToDifficultySelect() {
 // ============================================================
 function selectDifficulty(diff) {
   sound.success();
+  state.stopCount = state.stopCount || QUIZ_PACK.locations.length;
+  LOCATIONS = getRunLocationsForStopCount(state.stopCount);
   const run = createDistinctRun();
   state.difficulty = diff;
   state.currentLocationIndex = 0;
@@ -1195,6 +1217,8 @@ function resumeGame() {
   
   try {
     state.difficulty = parsed.difficulty || 'detective';
+    state.stopCount = Number(parsed.stopCount) || QUIZ_PACK.locations.length;
+    LOCATIONS = getRunLocationsForStopCount(state.stopCount);
     state.currentLocationIndex = parsed.currentLocationIndex || 0;
     state.score = parsed.score || 0;
     state.lives = parsed.lives || 5;
@@ -1228,12 +1252,16 @@ function readSavedGame() {
   }
 }
 
-function caseVariantIdsAreValid(ids) {
-  if (!Array.isArray(ids) || ids.length !== LOCATIONS.length) return false;
+function caseVariantIdsAreValid(ids, locations) {
+  if (!Array.isArray(ids) || ids.length !== locations.length) return false;
   return ids.every((id, index) => {
-    const pool = getLocationCasePool(LOCATIONS[index]);
+    const pool = getLocationCasePool(locations[index]);
     return pool.some((entry) => entry.caseId === id);
   });
+}
+
+function getRunLocationsForStopCount(stopCount) {
+  return QUIZ_PACK.locations.slice(0, Number(stopCount) || QUIZ_PACK.locations.length);
 }
 
 function getValidSave() {
@@ -1244,8 +1272,9 @@ function getValidSave() {
       return migrateSave(parsed);
     }
     if (parsed.quizPackId !== QUIZ_PACK.id) return null;
-    if (!LOCATIONS[parsed.currentLocationIndex] && !parsed.isFinalConfrontation) return null;
-    if (!caseVariantIdsAreValid(parsed.caseVariantIds)) return null;
+    const runLocations = getRunLocationsForStopCount(parsed.stopCount);
+    if (!runLocations[parsed.currentLocationIndex] && !parsed.isFinalConfrontation) return null;
+    if (!caseVariantIdsAreValid(parsed.caseVariantIds, runLocations)) return null;
     return parsed;
   } catch(e) {
     return null;
@@ -1255,18 +1284,21 @@ function getValidSave() {
 function migrateSave(parsed) {
   if (!parsed || typeof parsed !== 'object') return null;
   const currentLocationIndex = Number(parsed.currentLocationIndex ?? parsed.currentLocation ?? 0);
-  if (!LOCATIONS[currentLocationIndex] && !parsed.isFinalConfrontation) return null;
+  const stopCount = Number(parsed.stopCount) || QUIZ_PACK.locations.length;
+  const runLocations = getRunLocationsForStopCount(stopCount);
+  if (!runLocations[currentLocationIndex] && !parsed.isFinalConfrontation) return null;
 
   const caseSeed = parsed.caseSeed || createCaseSeed();
-  const caseVariantIds = caseVariantIdsAreValid(parsed.caseVariantIds)
+  const caseVariantIds = caseVariantIdsAreValid(parsed.caseVariantIds, runLocations)
     ? parsed.caseVariantIds
-    : createRunCaseVariantIds(caseSeed);
-  
+    : CarmenRunGenerator.createRunCaseVariantIds(runLocations, getLocationCasePool, caseSeed);
+
   const migrated = {
     schemaVersion: SAVE_SCHEMA_VERSION,
     quizPackId: parsed.quizPackId || QUIZ_PACK.id,
     difficulty: parsed.difficulty || 'detective',
     currentLocationIndex,
+    stopCount,
     score: Number(parsed.score) || 0,
     lives: Number(parsed.lives) || getStartingLives(parsed.difficulty || 'detective'),
     streak: Number(parsed.streak) || 0,
@@ -1299,6 +1331,7 @@ function saveGame(overrides = {}) {
     roundScore: state.roundScore,
     clueTokens: state.clueTokens,
     history: state.history,
+    stopCount: state.stopCount,
     caseSeed: state.caseSeed,
     caseVariantIds: state.caseVariantIds,
     isFinalConfrontation: state.isFinalConfrontation,
@@ -1470,7 +1503,7 @@ function startLocation() {
   // Populate Dossier Screen
   const loc = getLocationCase(state.currentLocationIndex);
   
-  document.getElementById('caseCityNumber').textContent = `Location ${state.currentLocationIndex + 1} of 8`;
+  document.getElementById('caseCityNumber').textContent = `Location ${state.currentLocationIndex + 1} of ${LOCATIONS.length}`;
   document.getElementById('briefingHeadline').textContent = loc.briefing.headline;
 
   typeWriterEffect('briefingReport', loc.briefing.report);

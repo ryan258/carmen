@@ -34,11 +34,21 @@
       a.every((item, index) => item === b[index]);
   }
 
+  // Offers roughly-half, roughly-three-quarters, and all stops so a run can be
+  // shortened without breaking the authored location order (nextLead text
+  // assumes each stop is followed by the very next one in pack order).
+  function computeStopCountOptions(total) {
+    const candidates = [Math.ceil(total / 2), Math.ceil(total * 0.75), total];
+    const unique = [...new Set(candidates)].filter((count) => count >= 3 || count === total);
+    return unique.sort((a, b) => a - b);
+  }
+
   const api = {
     hashSeed,
     createSeededRandom,
     createRunCaseVariantIds,
-    arraysMatch
+    arraysMatch,
+    computeStopCountOptions
   };
 
   if (typeof module !== 'undefined' && module.exports) {
