@@ -4,9 +4,9 @@
   "title": "Where in Argentina is Carmen Sandiego?",
   "subtitle": "Argentina Division",
   "heroLocation": "ARGENTINA",
-  "intro": "The master thief Carmen Sandiego has scattered clues across Argentina, from Buenos Aires tango halls to Patagonia glaciers. Use your deductive wits, decode ciphers, and issue the correct arrest warrant before she slips away!",
+  "intro": "A fictional ACME training mystery across Argentina. Compare clue sheets, answer multiple-choice puzzles, and arrest fictional accomplices. Choose 4, 6, or all 8 stops; finish with a report at headquarters.",
   "evidenceLabel": "ACME ARGENTINA EVIDENCE",
-  "successMessage": "You arrested Carmen Sandiego in Patagonia and recovered all stolen treasures.",
+  "successMessage": "Your selected route is complete. The evidence from your captured accomplices has helped ACME close the case.",
   "map": {
     "center": {
       "lat": -38.4161,
@@ -17,46 +17,46 @@
     "maxZoom": 10
   },
   "finalConfrontation": {
-    "title": "Boss Duel",
+    "title": "Final Report",
     "rounds": [
       {
-        "ariaLabel": "Encrypted farewell note showing FDUPHQ for a Caesar cipher challenge.",
-        "description": "Crack Carmen's signature encrypted farewell note using Caesar cipher (shift left by 3).",
-        "visualHtml": "<div class=\"text-center\"><span class=\"text-xs bg-slate-900 text-amber-400 px-3 py-1 rounded font-mono font-bold border border-slate-700\">ENCRYPTED NOTE</span><p class=\"typewriter-font text-lg font-bold border border-dashed border-red-700 bg-red-50 text-red-900 px-4 py-2 mt-4 rounded rotate-[-3deg]\">FDUPHQ</p></div>",
-        "question": "What does \"FDUPHQ\" decode to?",
+        "title": "First-stop evidence review",
+        "description": "Review the written evidence from the first selected case.",
+        "question": "Which answer matches the first case evidence?",
         "options": [
-          "CARMEN",
-          "CAPER",
-          "CHIEF",
-          "CABIN"
+          "Selected case answer",
+          "Case alternative 1",
+          "Case alternative 2",
+          "Case alternative 3"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "The live report copies the selected first case, including its choices, correct index, and explanation."
       },
       {
-        "ariaLabel": "ACME intelligence list used to deduce Carmen getaway vehicle.",
-        "description": "Use process of elimination to deduce Carmen's getaway vehicle in El Calafate.",
-        "visualHtml": "<div class=\"text-left text-[9px] bg-white/80 p-3 rounded border border-slate-200 leading-tight space-y-1 font-semibold\"><p class=\"font-bold border-b pb-0.5 text-red-800\">ACME Intelligence Details</p><p>* The suspect wears a red hat.</p><p>* The suspect is not in Buenos Aires.</p><p>* The suspect does not ride a train.</p><p>* Hired a private tour guide in El Calafate.</p></div>",
-        "question": "Which getaway vehicle matches the profile?",
+        "title": "Route evidence review",
+        "description": "Review the written evidence from a case in the middle of the selected route.",
+        "question": "Which answer matches the route evidence?",
         "options": [
-          "Helicopter",
-          "Bicycle",
-          "Tour Boat",
-          "Steam Locomotive"
+          "Selected case answer",
+          "Case alternative 1",
+          "Case alternative 2",
+          "Case alternative 3"
         ],
-        "correctIndex": 2
+        "correctIndex": 0,
+        "explanation": "The live report copies the selected middle case, including its choices, correct index, and explanation."
       },
       {
-        "ariaLabel": "Compass grid starting at glacier row 3 column 3 and moving north 2 west 1.",
-        "description": "Solve the final compass tracking course on the Perito Moreno Glacier.",
-        "visualHtml": "<div class=\"w-full text-xs\"><div class=\"grid grid-cols-6 gap-0.5 border border-slate-400 p-1 bg-blue-950/20 rounded font-bold text-[8px] text-center\"><div></div><div class=\"bg-red-500/20 text-red-900 p-0.5 rounded\">Ice Cave</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div class=\"bg-blue-300 p-0.5 rounded\">Glacier</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><p class=\"text-[8px] text-slate-500 text-center mt-2 font-semibold\">Start: Glacier (3,3). Go North 2, West 1.</p></div>",
-        "question": "Which coordinate tile contains the escape portal?",
+        "title": "Route inventory",
+        "description": "Use the collected tokens from your completed route.",
+        "question": "Which token came from the last completed stop?",
         "options": [
-          "Row 1, Col 2 (Ice Cave)",
-          "Row 5, Col 4 (Crevasse)",
-          "Row 3, Col 1 (Lagoon)",
-          "Row 1, Col 4 (Forest Peak)"
+          "Last stop token",
+          "First stop token",
+          "Second stop token",
+          "Third stop token"
         ],
-        "correctIndex": 0
+        "correctIndex": 0,
+        "explanation": "The live report resolves the last token and three other tokens from the completed route."
       }
     ]
   },
@@ -75,6 +75,10 @@
         "emoji": "🎻",
         "role": "Forger of opera scores and theater blueprints",
         "dossierNote": "Former Teatro Colón sub-musician. Expelled for selling rehearsal tapes. Moves through stagehand crews and tango salons."
+      },
+      "token": {
+        "char": "🏛️",
+        "name": "Tango"
       }
     },
     {
@@ -91,6 +95,10 @@
         "emoji": "🍇",
         "role": "Label forger and irrigation-canal smuggler",
         "dossierNote": "Trained sommelier. Forges vintage labels and uses high-Andean canal routes to move Carmen's contraband past customs."
+      },
+      "token": {
+        "char": "🍷",
+        "name": "Sun"
       }
     },
     {
@@ -107,6 +115,10 @@
         "emoji": "🐎",
         "role": "Caravan smuggler trafficking colonial relics",
         "dossierNote": "Former muleteer on the old salt caravans. Now runs Carmen's relic pipeline through the Quebrada de Humahuaca."
+      },
+      "token": {
+        "char": "🏔️",
+        "name": "Cloud"
       }
     },
     {
@@ -123,6 +135,10 @@
         "emoji": "📚",
         "role": "Rare-book thief and Jesuit-archive impostor",
         "dossierNote": "Dismissed university archivist with a key to half the Jesuit Block. Forges provenance papers for stolen manuscripts."
+      },
+      "token": {
+        "char": "🎸",
+        "name": "Book"
       }
     },
     {
@@ -139,6 +155,10 @@
         "emoji": "🚤",
         "role": "Falls-boatman running goods across the triple frontier",
         "dossierNote": "Ex-park boatman with a black-market ferry route under the Devil's Throat. Carries Carmen's couriers between three countries before dawn."
+      },
+      "token": {
+        "char": "🌊",
+        "name": "Water"
       }
     },
     {
@@ -155,6 +175,10 @@
         "emoji": "🍫",
         "role": "Chocolatier and forger of alpine permits",
         "dossierNote": "Third-generation Swiss-Argentine chocolatier. Hides Carmen's microfilm in pralines bound for Nahuel Huapi tour boats."
+      },
+      "token": {
+        "char": "🏔️",
+        "name": "Wind"
       }
     },
     {
@@ -171,6 +195,10 @@
         "emoji": "⚓",
         "role": "Disgraced expedition captain, polar relic smuggler",
         "dossierNote": "Stripped of his master's license after a Beagle Channel scandal. Sells berth space on southern cruises to anyone with a forged research badge."
+      },
+      "token": {
+        "char": "🚢",
+        "name": "Light"
       }
     },
     {
@@ -187,6 +215,10 @@
         "emoji": "🥽",
         "role": "Carmen's local fixer, masquerading as a glaciologist",
         "dossierNote": "Former Los Glaciares park scientist. Forges climate-research permits and books Carmen's escape routes across the ice field."
+      },
+      "token": {
+        "char": "🧊",
+        "name": "Ice"
       }
     }
   ],
@@ -196,7 +228,7 @@
         "caseId": "classic-buenos-aires",
         "briefing": {
           "headline": "NATIONAL LIBRARY LARCENY!",
-          "report": "The National Library of Buenos Aires was hit overnight. Carmen Sandiego was on the Aeroparque tarmac by dawn — but her courier is still in town, carrying the original manuscript of Borges' \"Ficciones\". A witness saw a bandoneón player slipping toward a tango salon in La Boca.",
+          "report": "In this fictional training case, a replica manuscript disappeared from an ACME display in Buenos Aires. Carmen has left the city, but Tito Trapaza remains. A witness saw a bandoneón case carried toward La Boca.",
           "callingCard": "A card with a red silhouette. On the back: \"FDPLQLWR WDQJR RXWILW\" — and beneath it, \"My dancer always leaves the floor. Yours is still spinning.\"",
           "suspect": {
             "name": "Tito Trapaza",
@@ -210,11 +242,11 @@
         "clues": [
           "A restaurant receipt from \"El Caminito\" in the colorful La Boca neighborhood.",
           "A tango lyric sheet with the words \"El Choclo\" circled and a note: \"Dress code: Tango Dancer.\"",
-          "A metro ticket stub showing a trip ending at Plaza de Mayo, near the pink Casa Rosada presidential palace."
+          "A metro ticket stub showing a trip ending at Plaza de Mayo, near the pink Casa Rosada presidential palace. A recovered costume label reads: Tango dancer."
         ],
         "puzzle": {
           "title": "Tango Cipher Decode",
-          "description": "Decipher Carmen's coded note. The thief left a message encoded with a Caesar cipher (shift left by 3 letters, e.g. D -> A, E -> B, F -> C, etc.). Use the Tango Substitution Guide.",
+          "description": "Decipher the accomplice’s coded note. The thief left a message encoded with a Caesar cipher (shift left by 3 letters, e.g. D -> A, E -> B, F -> C, etc.).",
           "question": "What does the cipher \"FDPLQLWR WDQJR RXWILW\" decode to?",
           "options": [
             "CAMINITO - TANGO OUTFIT",
@@ -222,33 +254,40 @@
             "RECOLETA - DRESS AND HAT",
             "PALERMO - PONCHO AND PANTS"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "Shifting FDPLQLWR gives CAMINITO; WDQJR gives TANGO; RXWILW gives OUTFIT. The decoded destination is Caminito in La Boca, and the costume clue identifies a tango dancer.",
+          "visualHtml": "<p class=\"evidence-note\">Use the written clues and puzzle instructions. All required evidence is available as text.</p>",
+          "hints": [
+            "Shift each letter three places left, wrapping A back to X.",
+            "Decode one word at a time: F → C, D → A, P → M. Preserve spaces.",
+            "Answer: CAMINITO - TANGO OUTFIT. Shifting FDPLQLWR gives CAMINITO; WDQJR gives TANGO; RXWILW gives OUTFIT. The decoded destination is Caminito in La Boca, and the costume clue identifies a tango dancer."
+          ]
         },
         "warrantAnswers": {
           "city": "Buenos Aires",
           "hideout": "La Boca",
           "disguise": "Tango dancer"
         },
-        "funFact": "Buenos Aires has more bookstores per capita than any other city in the world.",
-        "learningObjective": "Identify a real Buenos Aires landmark or regional feature from connected cultural and geographic clues.",
+        "funFact": "Buenos Aires is known for its bookstores, literary culture, and historic neighborhoods.",
+        "learningObjective": "Decode a Caesar cipher by shifting letters three places left.",
         "sources": [
           "buenos_aires_tourism"
         ],
         "difficulty": "detective",
-        "mechanic": "cipher-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
           "Capital Federal",
           "Buenos Aires"
         ],
-        "visualType": "built-in-visual",
-        "accessibilityDescription": "Visual evidence for Tango Cipher Decode in Buenos Aires.",
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "All required evidence and instructions are written as text. What does the cipher \"FDPLQLWR WDQJR RXWILW\" decode to?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "obelisco-avenida",
         "briefing": {
           "headline": "OBELISCO BLUEPRINTS VANISH!",
-          "report": "A V.I.L.E. operative lifted theater-district blueprints from a city archive. Carmen's plane was already over Mendoza by the time the alarm rang — but her courier was still moving along Avenida 9 de Julio beneath a tall white monument.",
+          "report": "Fictional theater-district blueprints are missing. Carmen has left Buenos Aires; Tito Trapaza was seen near the tall white monument on Avenida 9 de Julio.",
           "callingCard": "A torn program from Teatro Colón reads: \"Count the lanes, find the needle. I'm not the one you'll catch tonight.\"",
           "suspect": {
             "name": "Tito Trapaza",
@@ -266,8 +305,8 @@
         ],
         "puzzle": {
           "title": "Landmark Deduction",
-          "description": "Use the city clues to identify the Buenos Aires landmark Carmen chose as her rendezvous.",
-          "question": "Which location is Carmen pointing to?",
+          "description": "Use the city clues to identify the Buenos Aires landmark the accomplice chose as a rendezvous.",
+          "question": "Which location is the accomplice pointing to?",
           "options": [
             "The Obelisco on Avenida 9 de Julio",
             "Tigre Delta docks",
@@ -275,7 +314,13 @@
             "Retiro bus terminal"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"cutout-monument mx-auto\"></div>\n            <p class=\"mt-3 text-xs font-black uppercase tracking-wider text-red-800\">9 de Julio / Corrientes</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"cutout-monument mx-auto\"></div>\n            <p class=\"mt-3 text-xs font-black uppercase tracking-wider text-red-800\">9 de Julio / Corrientes</p>\n          </div>\n        ",
+          "explanation": "The Obelisco on Avenida 9 de Julio follows the evidence: A taxi receipt lists a drop-off at Avenida Corrientes and 9 de Julio. A witness described a white monument rising from a broad avenue. A costume tag reads: \"Stagehand blacks, Teatro Colón loading door.\" A recovered costume label reads: Stagehand.",
+          "hints": [
+            "Combine the named avenue with the white monument.",
+            "The Obelisco is the monument option; the other choices are different kinds of places.",
+            "Answer: The Obelisco on Avenida 9 de Julio. The Obelisco on Avenida 9 de Julio follows the evidence: A taxi receipt lists a drop-off at Avenida Corrientes and 9 de Julio. A witness described a white monument rising from a broad avenue. A costume tag reads: \"Stagehand blacks, Teatro Colón loading door.\" A recovered costume label reads: Stagehand."
+          ]
         },
         "warrantAnswers": {
           "city": "Buenos Aires",
@@ -294,14 +339,14 @@
           "Buenos Aires"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "9 de Julio / Corrientes",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which location is the accomplice pointing to?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "cafe-tortoni",
         "briefing": {
           "headline": "POETRY LEDGER STOLEN!",
-          "report": "A ledger of old literary gatherings disappeared from a historic cafe. Carmen herself was already at altitude over the Andes — but her courier was seen at a corner table on Avenida de Mayo, posing as a visiting poet.",
+          "report": "A fictional cafe ledger is missing. Carmen has left Buenos Aires; Tito Trapaza was last seen at a corner table on Avenida de Mayo, posing as a poet.",
           "callingCard": "A napkin reads: \"The oldest table keeps the freshest secret. My poet is still pouring; he'll be there when you arrive.\"",
           "suspect": {
             "name": "Tito Trapaza",
@@ -314,8 +359,8 @@
         },
         "clues": [
           "The receipt is stamped Avenida de Mayo 825.",
-          "A server saw Carmen wearing a poet disguise and carrying a small red notebook.",
-          "The calling card smells faintly of strong coffee and medialunas."
+          "A server saw the accomplice wearing a poet disguise and carrying a small red notebook.",
+          "The calling card smells faintly of strong coffee and medialunas. A recovered costume label reads: Poet."
         ],
         "puzzle": {
           "title": "Cafe Trail",
@@ -328,7 +373,13 @@
             "Puerto Madero docks"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">☕</div>\n            <p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Avenida de Mayo 825</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">☕</div>\n            <p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Avenida de Mayo 825</p>\n          </div>\n        ",
+          "explanation": "Café Tortoni follows the evidence: The receipt is stamped Avenida de Mayo 825. A server saw the accomplice wearing a poet disguise and carrying a small red notebook. The calling card smells faintly of strong coffee and medialunas. A recovered costume label reads: Poet.",
+          "hints": [
+            "Use the address on the receipt as the location evidence.",
+            "The coffee and literary-table clues reinforce the cafe choice.",
+            "Answer: Café Tortoni. Café Tortoni follows the evidence: The receipt is stamped Avenida de Mayo 825. A server saw the accomplice wearing a poet disguise and carrying a small red notebook. The calling card smells faintly of strong coffee and medialunas. A recovered costume label reads: Poet."
+          ]
         },
         "warrantAnswers": {
           "city": "Buenos Aires",
@@ -341,20 +392,20 @@
           "buenos_aires_tourism"
         ],
         "difficulty": "detective",
-        "mechanic": "multiple-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
           "Capital Federal",
           "Buenos Aires"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "☕ Avenida de Mayo 825",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Where should the warrant team go?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "teatro-colon-score",
         "briefing": {
           "headline": "OPERA SCORE SPIRITED AWAY!",
-          "report": "A handwritten overture vanished from a rehearsal room near Avenida 9 de Julio. Carmen's signature is on the chase manifest, but witnesses place her courier — a former pit musician in stagehand blacks — at the grand opera house's loading door.",
+          "report": "A fictional overture is missing. Carmen has left Buenos Aires; Tito Trapaza was seen at the opera house loading door, wearing an opera usher disguise.",
           "callingCard": "A black program says: \"Listen where the city keeps its velvet echo. The hands you'll cuff tonight are not mine.\"",
           "suspect": {
             "name": "Tito Trapaza",
@@ -367,12 +418,12 @@
         },
         "clues": [
           "A backstage pass names Teatro Colón in gold ink.",
-          "A violinist saw Carmen crossing from the orchestra pit to a loading door.",
+          "A violinist saw the accomplice crossing from the orchestra pit to a loading door.",
           "The disguise tag reads: \"Opera usher - balcony level.\""
         ],
         "puzzle": {
           "title": "Stage Route Deduction",
-          "description": "Match the theater clues to the Buenos Aires landmark where Carmen hid the score.",
+          "description": "Match the theater clues to the Buenos Aires landmark where the accomplice hid the score.",
           "question": "Which hideout matches the rehearsal evidence?",
           "options": [
             "Teatro Colón",
@@ -381,7 +432,13 @@
             "Palermo rose garden"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-ticket mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-red-800\">Balcony pass / orchestra pit</p></div>"
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-ticket mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-red-800\">Balcony pass / orchestra pit</p></div>",
+          "explanation": "Teatro Colón follows the evidence: A backstage pass names Teatro Colón in gold ink. A violinist saw the accomplice crossing from the orchestra pit to a loading door. The disguise tag reads: \"Opera usher - balcony level.\" A recovered costume label reads: Opera usher.",
+          "hints": [
+            "The backstage pass names the venue.",
+            "An orchestra pit and loading door reinforce the opera-house choice.",
+            "Answer: Teatro Colón. Teatro Colón follows the evidence: A backstage pass names Teatro Colón in gold ink. A violinist saw the accomplice crossing from the orchestra pit to a loading door. The disguise tag reads: \"Opera usher - balcony level.\" A recovered costume label reads: Opera usher."
+          ]
         },
         "warrantAnswers": {
           "city": "Buenos Aires",
@@ -399,14 +456,14 @@
           "buenos-aires"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Match the theater clues to the Buenos Aires landmark where Carmen hid the score.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout matches the rehearsal evidence?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "recoleta-mausoleum",
         "briefing": {
           "headline": "MARBLE ANGEL TOKEN MISSING!",
-          "report": "A cemetery preservation token disappeared from a heritage desk. Carmen had already crossed into the Cuyo by dusk — but her courier, posing as a heritage guide, was still leading visitors through the mausoleum lanes.",
+          "report": "A fictional preservation token is missing. Carmen has left Buenos Aires; Tito Trapaza was seen among the mausoleum lanes, posing as a heritage guide.",
           "callingCard": "The card reads: \"Find me among stone angels and city memory. You'll find my guide instead — give him my regards.\"",
           "suspect": {
             "name": "Tito Trapaza",
@@ -419,13 +476,13 @@
         },
         "clues": [
           "A guidebook page has Recoleta Cemetery circled.",
-          "A witness saw Carmen carrying white flowers through a narrow lane of mausoleums.",
+          "A witness saw the accomplice carrying white flowers through a narrow lane of mausoleums.",
           "The disguise note reads: \"Heritage guide, black folder.\""
         ],
         "puzzle": {
           "title": "Heritage Path Match",
           "description": "Use the cemetery and heritage clues to identify the Buenos Aires hideout.",
-          "question": "Where is Carmen hiding the token?",
+          "question": "Where is the accomplice hiding the token?",
           "options": [
             "Recoleta Cemetery",
             "Caminito",
@@ -433,7 +490,13 @@
             "San Telmo fair"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-monument mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-slate-900\">Stone angels / mausoleum lanes</p></div>"
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-monument mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-slate-900\">Stone angels / mausoleum lanes</p></div>",
+          "explanation": "Recoleta Cemetery follows the evidence: A guidebook page has Recoleta Cemetery circled. A witness saw the accomplice carrying white flowers through a narrow lane of mausoleums. The disguise note reads: \"Heritage guide, black folder.\" A recovered costume label reads: Heritage guide.",
+          "hints": [
+            "Distinguish a cemetery from a theater or market.",
+            "The guidebook name and mausoleum lanes point to Recoleta Cemetery.",
+            "Answer: Recoleta Cemetery. Recoleta Cemetery follows the evidence: A guidebook page has Recoleta Cemetery circled. A witness saw the accomplice carrying white flowers through a narrow lane of mausoleums. The disguise note reads: \"Heritage guide, black folder.\" A recovered costume label reads: Heritage guide."
+          ]
         },
         "warrantAnswers": {
           "city": "Buenos Aires",
@@ -451,7 +514,7 @@
           "buenos-aires"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Use the cemetery and heritage clues to identify the Buenos Aires hideout.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Where is the accomplice hiding the token?",
         "reviewStatus": "source-linked-needs-line-review"
       }
     ],
@@ -459,9 +522,9 @@
       {
         "caseId": "classic-mendoza",
         "briefing": {
-          "headline": "VINTAGE MALBEC VANISHES!",
-          "report": "The oldest bottle of Malbec wine in Argentina, dating back to the 19th century, was stolen from a historic winery cellar in Mendoza. The thief left behind coordinate details on an empty bottle label.",
-          "callingCard": "A postcard of the Andes with coordinates written in red ink: \"32°39'S, 70°00'W\"",
+          "headline": "EXPEDITION PERMIT MISSING!",
+          "report": "In this fictional training case, a replica expedition permit disappeared from an ACME evidence table in Mendoza. A recovered equipment list points toward an Andes base camp.",
+          "callingCard": "A red card reads: \"Match the permit to the expedition gear. My courier is still in the mountains.\"",
           "suspect": {
             "name": "Vera Vicario",
             "alias": "La Vendimia",
@@ -472,21 +535,28 @@
           "nextLead": "A high-altitude permit stamped for the colonial salt road north of Salta."
         },
         "clues": [
-          "A winery flyer with a handwritten note: \"Deliver grapes to the vineyard worker.\"",
-          "A GPS unit tracking history ending at coordinates 32°39'S, 70°00'W.",
-          "A mountaineering permit for Aconcagua base camp signed with a red 'C'."
+          "A winery flyer says: Deliver the parcel to the vineyard worker.",
+          "A fictional expedition permit names Aconcagua, in Mendoza province.",
+          "The suspect took mountaineering equipment to a base camp rather than staying in a city plaza. A recovered costume label reads: Vineyard worker."
         ],
         "puzzle": {
-          "title": "Triangulation Coordinates",
-          "description": "Examine the topographic GPS coordinates left by the suspect. Match them to the Aconcagua Base Camp location on your detective coordinate grid.",
-          "question": "Which coordinates pinpoint the Aconcagua Base Camp hideout?",
+          "title": "Andes Expedition Evidence",
+          "description": "Use the expedition permit and equipment clues. No real-world navigation is required.",
+          "question": "Which hideout matches the permit and equipment?",
           "options": [
-            "32°53'S, 68°49'W (Mendoza City)",
-            "32°39'S, 70°00'W (Aconcagua Base Camp)",
-            "34°36'S, 68°20'W (San Rafael)",
-            "31°32'S, 68°31'W (San Juan)"
+            "Mendoza city center",
+            "Aconcagua base camp",
+            "San Rafael city center",
+            "San Juan city center"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Aconcagua base camp follows the evidence: A winery flyer says: Deliver the parcel to the vineyard worker. A fictional expedition permit names Aconcagua, in Mendoza province. The suspect took mountaineering equipment to a base camp rather than staying in a city plaza. A recovered costume label reads: Vineyard worker.",
+          "visualHtml": "<p class=\"evidence-note\">Use the written clues and puzzle instructions. All required evidence is available as text.</p>",
+          "hints": [
+            "Use the permit destination together with the climbing equipment.",
+            "A high-altitude base camp fits the gear better than a city park or winery.",
+            "Answer: Aconcagua base camp. Aconcagua base camp follows the evidence: A winery flyer says: Deliver the parcel to the vineyard worker. A fictional expedition permit names Aconcagua, in Mendoza province. The suspect took mountaineering equipment to a base camp rather than staying in a city plaza. A recovered costume label reads: Vineyard worker."
+          ]
         },
         "warrantAnswers": {
           "city": "Mendoza",
@@ -499,20 +569,19 @@
           "mendoza_tourism"
         ],
         "difficulty": "detective",
-        "mechanic": "coordinate-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
-          "Mendoza",
           "Mendoza"
         ],
-        "visualType": "built-in-visual",
-        "accessibilityDescription": "Visual evidence for Triangulation Coordinates in Mendoza.",
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout matches the permit and equipment?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "vendimia-plaza",
         "briefing": {
           "headline": "VENDIMIA CROWN TAKEN!",
-          "report": "The ceremonial grape-harvest crown disappeared before a festival rehearsal. Carmen left purple footprints leading toward Mendoza city center.",
+          "report": "In this fictional training case: The ceremonial grape-harvest crown disappeared before a festival rehearsal. Vera Vicario left purple footprints leading toward Mendoza city center.",
           "callingCard": "A grape-stained card reads: \"Find me where harvest queens meet the fountains.\"",
           "suspect": {
             "name": "Vera Vicario",
@@ -526,11 +595,11 @@
         "clues": [
           "A city map has Plaza Independencia circled in purple ink.",
           "A festival sash was found beside a fountain.",
-          "A witness saw Carmen dressed as a festival dancer."
+          "A witness saw the accomplice dressed as a festival dancer."
         ],
         "puzzle": {
           "title": "Festival Map Clue",
-          "description": "Use the harvest festival clues to locate Carmen in Mendoza.",
+          "description": "Use the harvest festival clues to locate the accomplice in Mendoza.",
           "question": "Which hideout matches the evidence?",
           "options": [
             "Plaza Independencia",
@@ -539,7 +608,13 @@
             "Puente del Inca"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">🍇</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-purple-900\">Harvest crown + fountain plaza</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">🍇</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-purple-900\">Harvest crown + fountain plaza</p>\n          </div>\n        ",
+          "explanation": "Plaza Independencia follows the evidence: A city map has Plaza Independencia circled in purple ink. A festival sash was found beside a fountain. A witness saw the accomplice dressed as a festival dancer. A recovered costume label reads: Festival dancer.",
+          "hints": [
+            "Start with the city map, then check the festival clue.",
+            "The circled plaza is stronger evidence than the general wine theme.",
+            "Answer: Plaza Independencia. Plaza Independencia follows the evidence: A city map has Plaza Independencia circled in purple ink. A festival sash was found beside a fountain. A witness saw the accomplice dressed as a festival dancer. A recovered costume label reads: Festival dancer."
+          ]
         },
         "warrantAnswers": {
           "city": "Mendoza",
@@ -552,20 +627,19 @@
           "mendoza_tourism"
         ],
         "difficulty": "detective",
-        "mechanic": "multiple-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
-          "Mendoza",
           "Mendoza"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "🍇 Harvest crown + fountain plaza",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout matches the evidence?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "puente-inca",
         "briefing": {
           "headline": "MINERAL MAP MISSING!",
-          "report": "A mineral survey map vanished from an Andes research office. Carmen mailed back a card showing a natural stone bridge.",
+          "report": "In this fictional training case: A mineral survey map vanished from an Andes research office. Vera Vicario mailed back a card showing a natural stone bridge.",
           "callingCard": "The card says: \"Hot springs, cold trail, golden arch.\"",
           "suspect": {
             "name": "Vera Vicario",
@@ -579,12 +653,12 @@
         "clues": [
           "A route note follows the road toward the Chilean border.",
           "The photo shows a yellow-orange natural bridge over a river.",
-          "A borrowed jacket is labeled \"geology field assistant.\""
+          "A borrowed jacket is labeled \"geology field assistant.\" A recovered costume label reads: Geology assistant."
         ],
         "puzzle": {
           "title": "Andes Landmark Match",
           "description": "Read the mountain clues and identify the correct Mendoza hideout.",
-          "question": "Which landmark is Carmen using?",
+          "question": "Which landmark is the accomplice using?",
           "options": [
             "Puente del Inca",
             "Plaza Independencia",
@@ -592,7 +666,13 @@
             "General San Martín Park"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"cutout-arch mx-auto\"></div>\n            <p class=\"mt-3 text-xs font-black uppercase text-amber-900\">Golden bridge / Andes route</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"cutout-arch mx-auto\"></div>\n            <p class=\"mt-3 text-xs font-black uppercase text-amber-900\">Golden bridge / Andes route</p>\n          </div>\n        ",
+          "explanation": "Puente del Inca follows the evidence: A route note follows the road toward the Chilean border. The photo shows a yellow-orange natural bridge over a river. A borrowed jacket is labeled \"geology field assistant.\" A recovered costume label reads: Geology assistant.",
+          "hints": [
+            "Identify the feature shown on the card.",
+            "A natural stone bridge fits the bridge option, not a city plaza.",
+            "Answer: Puente del Inca. Puente del Inca follows the evidence: A route note follows the road toward the Chilean border. The photo shows a yellow-orange natural bridge over a river. A borrowed jacket is labeled \"geology field assistant.\" A recovered costume label reads: Geology assistant."
+          ]
         },
         "warrantAnswers": {
           "city": "Mendoza",
@@ -605,20 +685,19 @@
           "mendoza_tourism"
         ],
         "difficulty": "detective",
-        "mechanic": "multiple-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
-          "Mendoza",
           "Mendoza"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Golden bridge / Andes route",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which landmark is the accomplice using?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "uco-valley-irrigation",
         "briefing": {
           "headline": "VINEYARD WATER MAP STOLEN!",
-          "report": "An irrigation chart from a mountain vineyard vanished before harvest. Carmen followed a road south toward the Valle de Uco.",
+          "report": "In this fictional training case: An irrigation chart from a mountain vineyard vanished before harvest. Vera Vicario followed a road south toward the Valle de Uco.",
           "callingCard": "A grape leaf reads: \"Follow the snowmelt to the vines.\"",
           "suspect": {
             "name": "Vera Vicario",
@@ -632,7 +711,7 @@
         "clues": [
           "A harvest note mentions Tunuyan and high-altitude vineyards.",
           "The road receipt points south from Mendoza city.",
-          "Carmen bought work gloves labeled \"irrigation technician.\""
+          "The accomplice bought work gloves labeled \"irrigation technician.\""
         ],
         "puzzle": {
           "title": "Wine Region Inference",
@@ -645,7 +724,13 @@
             "La Boca"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-mountain mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-purple-900\">Snowmelt / vineyard rows</p></div>"
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-mountain mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-purple-900\">Snowmelt / vineyard rows</p></div>",
+          "explanation": "Valle de Uco follows the evidence: A harvest note mentions Tunuyan and high-altitude vineyards. The road receipt points south from Mendoza city. The accomplice bought work gloves labeled \"irrigation technician.\" A recovered costume label reads: Irrigation technician.",
+          "hints": [
+            "Follow the direction on the vineyard road map.",
+            "The irrigation and vineyard clues identify a valley rather than a city park.",
+            "Answer: Valle de Uco. Valle de Uco follows the evidence: A harvest note mentions Tunuyan and high-altitude vineyards. The road receipt points south from Mendoza city. The accomplice bought work gloves labeled \"irrigation technician.\" A recovered costume label reads: Irrigation technician."
+          ]
         },
         "warrantAnswers": {
           "city": "Mendoza",
@@ -663,14 +748,14 @@
           "mendoza"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Match the vineyard and snowmelt clues to the Mendoza region.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout fits the route?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "san-martin-park-gates",
         "briefing": {
           "headline": "BRONZE GATE CREST LIFTED!",
-          "report": "A decorative crest disappeared from a city park restoration crate. Carmen left footprints near a grand iron gate.",
+          "report": "In this fictional training case: A decorative crest disappeared from a city park restoration crate. Vera Vicario left footprints near a grand iron gate.",
           "callingCard": "The card says: \"The general watches the park entrance.\"",
           "suspect": {
             "name": "Vera Vicario",
@@ -683,12 +768,12 @@
         },
         "clues": [
           "A city map highlights General San Martín Park.",
-          "A groundskeeper saw Carmen near ornamental entrance gates.",
+          "A groundskeeper saw the accomplice near ornamental entrance gates.",
           "The costume invoice reads: \"Park gardener - green cap.\""
         ],
         "puzzle": {
           "title": "City Park Deduction",
-          "description": "Use the city and park clues to choose Carmen hideout.",
+          "description": "Use the city and park clues to choose the accomplice’s hideout.",
           "question": "Where should ACME search?",
           "options": [
             "General San Martín Park",
@@ -697,7 +782,13 @@
             "Valle de Uco"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-gate mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-emerald-900\">Iron gates / city park</p></div>"
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-gate mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-emerald-900\">Iron gates / city park</p></div>",
+          "explanation": "General San Martín Park follows the evidence: A city map highlights General San Martín Park. A groundskeeper saw the accomplice near ornamental entrance gates. The costume invoice reads: \"Park gardener - green cap.\" A recovered costume label reads: Park gardener.",
+          "hints": [
+            "Combine the highlighted park with the gates.",
+            "The park named on the map matches the ornamental entrance.",
+            "Answer: General San Martín Park. General San Martín Park follows the evidence: A city map highlights General San Martín Park. A groundskeeper saw the accomplice near ornamental entrance gates. The costume invoice reads: \"Park gardener - green cap.\" A recovered costume label reads: Park gardener."
+          ]
         },
         "warrantAnswers": {
           "city": "Mendoza",
@@ -715,7 +806,7 @@
           "mendoza"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Use the city and park clues to choose Carmen hideout.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Where should ACME search?",
         "reviewStatus": "source-linked-needs-line-review"
       }
     ],
@@ -724,8 +815,8 @@
         "caseId": "classic-salta",
         "briefing": {
           "headline": "CLOUD TRAIN LOCOMOTIVE LOOTED!",
-          "report": "A scale gold model of the Tren a las Nubes locomotive was stolen from the Salta Cathedral museum. The thief was seen fleeing towards the railway station.",
-          "callingCard": "A boarding pass stub showing a flight from Buenos Aires and a train connection in Salta.",
+          "report": "In this fictional training case, a model locomotive disappeared from an ACME display in Salta. The local accomplice left a rail log with three recorded movements.",
+          "callingCard": "A fictional rail log: 09:00 departure, 11:00 viaduct visit, 13:00 return. These are puzzle times, not a visitor timetable.",
           "suspect": {
             "name": "Saúl Sandoval",
             "alias": "El Salteño",
@@ -736,47 +827,54 @@
           "nextLead": "A torn bookplate from a Jesuit-era manuscript in the Córdoba archives."
         },
         "clues": [
-          "A jumbled train schedule showing a final stop near the colourful hills of Quebrada de Humahuaca.",
-          "A witness statement: \"She boarded the train wearing a train conductor's uniform at 08:00.\"",
-          "A souvenir shop bag from the town of Humahuaca with a red hair thread."
+          "09:00: depart San Antonio de los Cobres.",
+          "11:00: visit La Polvorilla Viaduct. A conductor uniform was recovered.",
+          "13:00: return to San Antonio de los Cobres. The suspect stayed at the viaduct after the visit."
         ],
         "puzzle": {
-          "title": "Timeline Reconstruction",
-          "description": "Reassemble the timeline logs to determine the final destination of the suspect.",
-          "question": "What is the correct chronological sequence and final destination?",
+          "title": "Rail Log Reconstruction",
+          "description": "Put the fictional log entries in time order. The real train runs from San Antonio de los Cobres to La Polvorilla and returns; a Salta connection is by road.",
+          "question": "Which sequence puts the evidence in chronological order?",
           "options": [
-            "08:00 Depart Salta → 11:30 San Antonio de los Cobres → 14:00 La Polvorilla → 16:30 Quebrada de Humahuaca",
-            "08:00 Quebrada de Humahuaca → 11:30 La Polvorilla → 14:00 San Antonio → 16:30 Depart Salta",
-            "08:00 Depart Salta → 11:30 La Polvorilla → 14:00 Quebrada de Humahuaca → 16:30 San Antonio",
-            "08:00 San Antonio → 11:30 Depart Salta → 14:00 La Polvorilla → 16:30 Quebrada de Humahuaca"
+            "San Antonio de los Cobres → La Polvorilla → San Antonio de los Cobres",
+            "La Polvorilla → Salta → Humahuaca",
+            "Humahuaca → La Polvorilla → Salta",
+            "Salta → Humahuaca → La Polvorilla"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "09:00 comes before 11:00, which comes before 13:00. The log therefore runs San Antonio de los Cobres → La Polvorilla → San Antonio de los Cobres. These are fictional puzzle times.",
+          "visualHtml": "<p class=\"evidence-note\">Use the written clues and puzzle instructions. All required evidence is available as text.</p>",
+          "hints": [
+            "Sort the three entries by time, starting at 09:00.",
+            "The departure and return share a place; the viaduct visit belongs between them.",
+            "Answer: San Antonio de los Cobres → La Polvorilla → San Antonio de los Cobres. 09:00 comes before 11:00, which comes before 13:00. The log therefore runs San Antonio de los Cobres → La Polvorilla → San Antonio de los Cobres. These are fictional puzzle times."
+          ]
         },
         "warrantAnswers": {
           "city": "Salta",
-          "hideout": "Quebrada de Humahuaca",
+          "hideout": "La Polvorilla Viaduct",
           "disguise": "Train conductor"
         },
         "funFact": "The Tren a las Nubes reaches heights of 4,220 meters above sea level, making it one of the highest railways in the world.",
-        "learningObjective": "Identify a real Salta landmark or regional feature from connected cultural and geographic clues.",
+        "learningObjective": "Order three fictional rail-log entries by time.",
         "sources": [
-          "salta_tourism"
+          "salta_tourism",
+          "train_route"
         ],
         "difficulty": "detective",
-        "mechanic": "timeline-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
-          "Salta",
           "Salta"
         ],
-        "visualType": "built-in-visual",
-        "accessibilityDescription": "Visual evidence for Timeline Reconstruction in Salta.",
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which sequence puts the evidence in chronological order?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "cafayate-guitar",
         "briefing": {
           "headline": "FOLK GUITAR STOLEN!",
-          "report": "A historic peña guitar disappeared after a night of folk music. Tire tracks point south through red-rock valleys.",
+          "report": "In this fictional training case: A historic peña guitar disappeared after a night of folk music. Tire tracks point south through red-rock valleys.",
           "callingCard": "A lyric scrap reads: \"Follow the echo through the quebrada to the wine town.\"",
           "suspect": {
             "name": "Saúl Sandoval",
@@ -790,11 +888,11 @@
         "clues": [
           "A bus ticket is marked Salta to Cafayate.",
           "A witness heard a zamba tune near red sandstone cliffs.",
-          "Carmen bought a poncho and posed as a folk singer."
+          "The accomplice bought a poncho and posed as a folk singer."
         ],
         "puzzle": {
           "title": "Valley Route",
-          "description": "Use music and landscape clues to identify Carmen trail south of Salta.",
+          "description": "Use music and landscape clues to identify the accomplice’s trail south of Salta.",
           "question": "Where is the hideout?",
           "options": [
             "Cafayate",
@@ -803,7 +901,13 @@
             "San Lorenzo"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">🎸</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-red-900\">Red valley / folk song / wine town</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">🎸</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-red-900\">Red valley / folk song / wine town</p>\n          </div>\n        ",
+          "explanation": "Cafayate follows the evidence: A bus ticket is marked Salta to Cafayate. A witness heard a zamba tune near red sandstone cliffs. The accomplice bought a poncho and posed as a folk singer. A recovered costume label reads: Folk singer.",
+          "hints": [
+            "Follow the road south and compare the landscape clues.",
+            "The folk-music and valley route clues support Cafayate.",
+            "Answer: Cafayate. Cafayate follows the evidence: A bus ticket is marked Salta to Cafayate. A witness heard a zamba tune near red sandstone cliffs. The accomplice bought a poncho and posed as a folk singer. A recovered costume label reads: Folk singer."
+          ]
         },
         "warrantAnswers": {
           "city": "Salta",
@@ -816,20 +920,19 @@
           "salta_tourism"
         ],
         "difficulty": "detective",
-        "mechanic": "pattern-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
-          "Salta",
           "Salta"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "🎸 Red valley / folk song / wine town",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Where is the hideout?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "cabildo-archive",
         "briefing": {
           "headline": "COLONIAL SEAL SWIPED!",
-          "report": "A colonial seal vanished from an old civic archive. Carmen left a sketch of arches facing Salta main square.",
+          "report": "In this fictional training case: A colonial seal vanished from an old civic archive. Saúl Sandoval left a sketch of arches facing Salta main square.",
           "callingCard": "The card says: \"Under the arcade, history keeps quiet.\"",
           "suspect": {
             "name": "Saúl Sandoval",
@@ -842,8 +945,8 @@
         },
         "clues": [
           "The clue sketch shows a long colonial arcade.",
-          "A plaza vendor saw Carmen wearing an archivist badge.",
-          "The route never leaves Salta city center."
+          "A plaza vendor saw the accomplice wearing an archivist badge.",
+          "The route never leaves Salta city center. A recovered costume label reads: Archivist."
         ],
         "puzzle": {
           "title": "Colonial Architecture Clue",
@@ -856,7 +959,13 @@
             "Cerro San Bernardo cable car"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">🏛️</div>\n            <p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Arcades facing the main square</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">🏛️</div>\n            <p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Arcades facing the main square</p>\n          </div>\n        ",
+          "explanation": "Cabildo Histórico follows the evidence: The clue sketch shows a long colonial arcade. A plaza vendor saw the accomplice wearing an archivist badge. The route never leaves Salta city center. A recovered costume label reads: Archivist.",
+          "hints": [
+            "A colonial arcade and a civic archive describe the building’s purpose.",
+            "Keep the search in Salta city center, as the route says.",
+            "Answer: Cabildo Histórico. Cabildo Histórico follows the evidence: The clue sketch shows a long colonial arcade. A plaza vendor saw the accomplice wearing an archivist badge. The route never leaves Salta city center. A recovered costume label reads: Archivist."
+          ]
         },
         "warrantAnswers": {
           "city": "Salta",
@@ -869,20 +978,19 @@
           "salta_tourism"
         ],
         "difficulty": "detective",
-        "mechanic": "multiple-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
-          "Salta",
           "Salta"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "🏛️ Arcades facing the main square",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout should ACME search?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "cerro-san-bernardo",
         "briefing": {
           "headline": "CABLE CAR TOKEN TAKEN!",
-          "report": "A commemorative cable-car token vanished from a hilltop viewpoint. Carmen was seen rising above Salta city toward Cerro San Bernardo.",
+          "report": "In this fictional training case: A commemorative cable-car token vanished from a hilltop viewpoint. Saúl Sandoval was seen rising above Salta city toward Cerro San Bernardo.",
           "callingCard": "A red ticket says: \"Climb without walking.\"",
           "suspect": {
             "name": "Saúl Sandoval",
@@ -895,13 +1003,13 @@
         },
         "clues": [
           "A cable-car stub points to Cerro San Bernardo.",
-          "A witness saw Carmen looking down over the city grid.",
+          "A witness saw the accomplice looking down over the city grid.",
           "The disguise note reads: \"Viewpoint photographer.\""
         ],
         "puzzle": {
           "title": "Viewpoint Route",
           "description": "Match the cable-car clues to the correct Salta hideout.",
-          "question": "Which location is Carmen using?",
+          "question": "Which location is the accomplice using?",
           "options": [
             "Cerro San Bernardo",
             "Cafayate",
@@ -909,7 +1017,13 @@
             "La Polvorilla Viaduct"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-mountain mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-red-900\">Cable route / city overlook</p></div>"
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-mountain mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-red-900\">Cable route / city overlook</p></div>",
+          "explanation": "Cerro San Bernardo follows the evidence: A cable-car stub points to Cerro San Bernardo. A witness saw the accomplice looking down over the city grid. The disguise note reads: \"Viewpoint photographer.\" A recovered costume label reads: Viewpoint photographer.",
+          "hints": [
+            "Use the transport ticket to identify the hill.",
+            "The cable-car destination is written on the stub.",
+            "Answer: Cerro San Bernardo. Cerro San Bernardo follows the evidence: A cable-car stub points to Cerro San Bernardo. A witness saw the accomplice looking down over the city grid. The disguise note reads: \"Viewpoint photographer.\" A recovered costume label reads: Viewpoint photographer."
+          ]
         },
         "warrantAnswers": {
           "city": "Salta",
@@ -927,14 +1041,14 @@
           "salta"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Match the cable-car clues to the correct Salta hideout.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which location is the accomplice using?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "salinas-compass",
         "briefing": {
           "headline": "SALT FLAT COMPASS STOLEN!",
-          "report": "A field compass vanished from a desert expedition kit. Carmen left white powder on a route note toward high Andean salt flats.",
+          "report": "In this fictional training case: A field compass vanished from a desert expedition kit. Saúl Sandoval left white powder on a route note toward high Andean salt flats.",
           "callingCard": "The note says: \"Where the ground looks like sky, bearings disappear.\"",
           "suspect": {
             "name": "Saúl Sandoval",
@@ -961,7 +1075,13 @@
             "Cafayate plaza"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-compass mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-slate-900\">White flats / high road</p></div>"
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-compass mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-slate-900\">White flats / high road</p></div>",
+          "explanation": "Salinas Grandes follows the evidence: The route climbs from Salta toward high Andean landscapes. The evidence bag contains salt crystals, not sand. The disguise tag reads: \"Expedition driver.\" A recovered costume label reads: Expedition driver.",
+          "hints": [
+            "Look for the landscape that explains the white surface.",
+            "High Andean salt flats fit the salt-flat option.",
+            "Answer: Salinas Grandes. Salinas Grandes follows the evidence: The route climbs from Salta toward high Andean landscapes. The evidence bag contains salt crystals, not sand. The disguise tag reads: \"Expedition driver.\" A recovered costume label reads: Expedition driver."
+          ]
         },
         "warrantAnswers": {
           "city": "Salta",
@@ -979,7 +1099,7 @@
           "salta"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Use the terrain clues to identify the regional hideout.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout fits the clues?",
         "reviewStatus": "source-linked-needs-line-review"
       }
     ],
@@ -988,7 +1108,7 @@
         "caseId": "classic-cordoba",
         "briefing": {
           "headline": "JESUIT TREASURE STOLEN!",
-          "report": "An ancient 17th-century telescope was stolen from the National University of Córdoba. The thief left a series of logic riddles on a study desk.",
+          "report": "In this fictional training case, a replica telescope disappeared from an ACME study desk in Córdoba. The local accomplice left a set of witness statements.",
           "callingCard": "A library card for the National University of Córdoba under an alias.",
           "suspect": {
             "name": "Clara Cortázar",
@@ -1006,7 +1126,7 @@
         ],
         "puzzle": {
           "title": "Logic Elimination Grid",
-          "description": "Solve the detective logic grid. Match the suspect location and disguise using the notebook clues.",
+          "description": "Compare the notebook evidence. Match the suspect location and disguise using the notebook clues.",
           "question": "Which combination matches the suspect's profile in Córdoba?",
           "options": [
             "Location: Jesuit Quarter | Disguise: Professor",
@@ -1014,34 +1134,40 @@
             "Location: Villa Belgrano | Disguise: Tourist",
             "Location: Alta Córdoba | Disguise: Musician"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Location: Nueva Córdoba | Disguise: University student follows the evidence: A logic statement: \"The thief wearing glasses was NOT in the Jesuit Quarter.\" A coffee shop receipt from the trendy Nueva Córdoba student district. A notebook scribble: \"Blend in as a university student.\" A recovered costume label reads: University student.",
+          "visualHtml": "<p class=\"evidence-note\">Use the written clues and puzzle instructions. All required evidence is available as text.</p>",
+          "hints": [
+            "Eliminate the location ruled out by the first statement.",
+            "Combine the Nueva Córdoba receipt with the notebook’s university-student disguise.",
+            "Answer: Location: Nueva Córdoba | Disguise: University student. Location: Nueva Córdoba | Disguise: University student follows the evidence: A logic statement: \"The thief wearing glasses was NOT in the Jesuit Quarter.\" A coffee shop receipt from the trendy Nueva Córdoba student district. A notebook scribble: \"Blend in as a university student.\" A recovered costume label reads: University student."
+          ]
         },
         "warrantAnswers": {
           "city": "Córdoba",
           "hideout": "Nueva Córdoba",
           "disguise": "University student"
         },
-        "funFact": "The National University of Córdoba, founded in 1613, is the third-oldest in the Americas.",
-        "learningObjective": "Identify a real Córdoba landmark or regional feature from connected cultural and geographic clues.",
+        "funFact": "The National University of Córdoba was founded in 1613 and is one of the oldest universities in the Americas.",
+        "learningObjective": "Combine a location exclusion, receipt, and disguise statement.",
         "sources": [
           "cordoba_tourism",
           "unesco_cordoba_jesuit"
         ],
         "difficulty": "detective",
-        "mechanic": "logic-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
-          "Córdoba",
           "Córdoba"
         ],
-        "visualType": "built-in-visual",
-        "accessibilityDescription": "Visual evidence for Logic Elimination Grid in Córdoba.",
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which combination matches the suspect's profile in Córdoba?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "jesuit-block",
         "briefing": {
           "headline": "UNIVERSITY KEY DISAPPEARS!",
-          "report": "An old ceremonial key vanished from the university quarter. Carmen left notes about courtyards, churches, and early classrooms.",
+          "report": "In this fictional training case: An old ceremonial key vanished from the university quarter. Clara Cortázar left notes about courtyards, churches, and early classrooms.",
           "callingCard": "A stamped card reads: \"The block remembers every lesson.\"",
           "suspect": {
             "name": "Clara Cortázar",
@@ -1054,12 +1180,12 @@
         },
         "clues": [
           "A campus guide has the Jesuit Block underlined.",
-          "A witness saw Carmen in a professor robe.",
-          "The clue mentions historic classrooms near the city center."
+          "A witness saw the accomplice in a professor robe.",
+          "The clue mentions historic classrooms near the city center. A recovered costume label reads: Professor."
         ],
         "puzzle": {
           "title": "Heritage Deduction",
-          "description": "Use the university and heritage clues to find Carmen hideout.",
+          "description": "Use the university and heritage clues to find the accomplice’s hideout.",
           "question": "Which Córdoba location fits?",
           "options": [
             "Jesuit Block",
@@ -1068,7 +1194,13 @@
             "Alta Gracia clock tower"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">📚</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-slate-900\">Old classrooms / city center</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">📚</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-slate-900\">Old classrooms / city center</p>\n          </div>\n        ",
+          "explanation": "Jesuit Block follows the evidence: A campus guide has the Jesuit Block underlined. A witness saw the accomplice in a professor robe. The clue mentions historic classrooms near the city center. A recovered costume label reads: Professor.",
+          "hints": [
+            "The campus guide names the destination.",
+            "Courtyards and historic classrooms reinforce the underlined Jesuit Block.",
+            "Answer: Jesuit Block. Jesuit Block follows the evidence: A campus guide has the Jesuit Block underlined. A witness saw the accomplice in a professor robe. The clue mentions historic classrooms near the city center. A recovered costume label reads: Professor."
+          ]
         },
         "warrantAnswers": {
           "city": "Córdoba",
@@ -1084,18 +1216,17 @@
         "difficulty": "detective",
         "mechanic": "deduction-choice",
         "regionTags": [
-          "Córdoba",
           "Córdoba"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "📚 Old classrooms / city center",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which Córdoba location fits?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "sierras-observatory",
         "briefing": {
           "headline": "STAR CHART STOLEN!",
-          "report": "A night-sky chart was stolen before a public astronomy talk. Carmen left a mountain road toll receipt.",
+          "report": "In this fictional training case: A night-sky chart was stolen before a public astronomy talk. Clara Cortázar left a mountain road toll receipt.",
           "callingCard": "A black card reads: \"Count the stars from the sierras.\"",
           "suspect": {
             "name": "Clara Cortázar",
@@ -1108,13 +1239,13 @@
         },
         "clues": [
           "The car receipt points west toward the Sierras de Córdoba.",
-          "A telescope lens cap was found in Carmen red coat pocket.",
+          "A telescope lens cap was found in the accomplice’s red coat pocket.",
           "A witness saw her dressed as a night guide."
         ],
         "puzzle": {
           "title": "Mountain Night Clue",
           "description": "Follow the star-chart and mountain-road evidence.",
-          "question": "Where is Carmen hiding?",
+          "question": "Where is the accomplice hiding?",
           "options": [
             "Sierras observatory overlook",
             "Nueva Córdoba bookstore",
@@ -1122,7 +1253,13 @@
             "Córdoba bus terminal"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">✦</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-slate-900\">Star chart / mountain road</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">✦</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-slate-900\">Star chart / mountain road</p>\n          </div>\n        ",
+          "explanation": "Sierras observatory overlook follows the evidence: The car receipt points west toward the Sierras de Córdoba. A telescope lens cap was found in the accomplice’s red coat pocket. A witness saw her dressed as a night guide. A recovered costume label reads: Night guide.",
+          "hints": [
+            "Combine the mountain road with astronomy equipment.",
+            "A lens cap and night guide support the observatory overlook.",
+            "Answer: Sierras observatory overlook. Sierras observatory overlook follows the evidence: The car receipt points west toward the Sierras de Córdoba. A telescope lens cap was found in the accomplice’s red coat pocket. A witness saw her dressed as a night guide. A recovered costume label reads: Night guide."
+          ]
         },
         "warrantAnswers": {
           "city": "Córdoba",
@@ -1136,20 +1273,19 @@
           "unesco_cordoba_jesuit"
         ],
         "difficulty": "detective",
-        "mechanic": "multiple-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
-          "Córdoba",
           "Córdoba"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "✦ Star chart / mountain road",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Where is the accomplice hiding?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "alta-gracia-estancia",
         "briefing": {
           "headline": "ESTANCIA BELL VANISHES!",
-          "report": "A small mission bell disappeared from a heritage route display. Carmen left a road map toward Alta Gracia.",
+          "report": "In this fictional training case: A small mission bell disappeared from a heritage route display. Clara Cortázar left a road map toward Alta Gracia.",
           "callingCard": "A stamped card reads: \"Follow the estancias beyond the city block.\"",
           "suspect": {
             "name": "Clara Cortázar",
@@ -1163,7 +1299,7 @@
         "clues": [
           "A UNESCO route note lists Jesuit estancias outside Córdoba city.",
           "A ticket stub names Alta Gracia.",
-          "Carmen signed in as a heritage docent."
+          "The accomplice signed in as a heritage docent."
         ],
         "puzzle": {
           "title": "UNESCO Route Link",
@@ -1176,7 +1312,13 @@
             "Recoleta Cemetery"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-arch mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-slate-900\">Estancia route / mission bell</p></div>"
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-arch mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-slate-900\">Estancia route / mission bell</p></div>",
+          "explanation": "Alta Gracia Estancia follows the evidence: A UNESCO route note lists Jesuit estancias outside Córdoba city. A ticket stub names Alta Gracia. The accomplice signed in as a heritage docent. A recovered costume label reads: Heritage docent.",
+          "hints": [
+            "Follow the road map rather than the disguise alone.",
+            "The destination named on the map is Alta Gracia.",
+            "Answer: Alta Gracia Estancia. Alta Gracia Estancia follows the evidence: A UNESCO route note lists Jesuit estancias outside Córdoba city. A ticket stub names Alta Gracia. The accomplice signed in as a heritage docent. A recovered costume label reads: Heritage docent."
+          ]
         },
         "warrantAnswers": {
           "city": "Córdoba",
@@ -1195,14 +1337,14 @@
           "cordoba"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Connect the Jesuit heritage clues to the correct Córdoba hideout.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Where is the missing bell?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "buen-pastor-mural",
         "briefing": {
           "headline": "MURAL SKETCH DISAPPEARS!",
-          "report": "A public-art sketch vanished from a cultural center near Nueva Córdoba. Carmen left paint flecks and a student bus card.",
+          "report": "In this fictional training case: A public-art sketch vanished from a cultural center near Nueva Córdoba. Clara Cortázar left paint flecks and a student bus card.",
           "callingCard": "The red card says: \"Old walls, new crowds.\"",
           "suspect": {
             "name": "Clara Cortázar",
@@ -1215,12 +1357,12 @@
         },
         "clues": [
           "A bus card shows stops near Nueva Córdoba.",
-          "A witness saw Carmen carrying a rolled mural sketch near a cultural center.",
+          "A witness saw the accomplice carrying a rolled mural sketch near a cultural center.",
           "The disguise receipt reads: \"Art student smock.\""
         ],
         "puzzle": {
           "title": "Urban Culture Match",
-          "description": "Use the student district and cultural-center clues to find Carmen.",
+          "description": "Use the student district and cultural-center clues to find the accomplice.",
           "question": "Which hideout fits?",
           "options": [
             "Paseo del Buen Pastor",
@@ -1229,7 +1371,13 @@
             "Caminito"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-ticket mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-red-800\">Student district / cultural center</p></div>"
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-ticket mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-red-800\">Student district / cultural center</p></div>",
+          "explanation": "Paseo del Buen Pastor follows the evidence: A bus card shows stops near Nueva Córdoba. A witness saw the accomplice carrying a rolled mural sketch near a cultural center. The disguise receipt reads: \"Art student smock.\" A recovered costume label reads: Art student.",
+          "hints": [
+            "Use the neighborhood and the cultural-center clue together.",
+            "A rolled mural sketch supports the arts venue option.",
+            "Answer: Paseo del Buen Pastor. Paseo del Buen Pastor follows the evidence: A bus card shows stops near Nueva Córdoba. A witness saw the accomplice carrying a rolled mural sketch near a cultural center. The disguise receipt reads: \"Art student smock.\" A recovered costume label reads: Art student."
+          ]
         },
         "warrantAnswers": {
           "city": "Córdoba",
@@ -1248,7 +1396,7 @@
           "cordoba"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Use the student district and cultural-center clues to find Carmen.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout fits?",
         "reviewStatus": "source-linked-needs-line-review"
       }
     ],
@@ -1256,9 +1404,9 @@
       {
         "caseId": "classic-iguazu",
         "briefing": {
-          "headline": "GUARANÍ CROWN JEWEL HEIST!",
-          "report": "A sacred Guaraní golden jaguar pendant was stolen from the Misiones Rainforest Museum near Iguazú Falls. The thief escaped on a speed boat.",
-          "callingCard": "A park ranger map with waypoint distances marked: 1km, 1km, 2km, 3km, 5km...",
+          "headline": "TRAINING EXHIBIT PROP MISSING!",
+          "report": "In this fictional training case, a jaguar-shaped exhibit prop has disappeared. The local accomplice left a numbered clue card.",
+          "callingCard": "An ACME puzzle card shows the numbers 1, 1, 2, 3, 5. These are code numbers, not trail distances.",
           "suspect": {
             "name": "Iván Irala",
             "alias": "El Iguazuano",
@@ -1269,21 +1417,28 @@
           "nextLead": "A Bariloche chocolatier's business card with a microfilm receipt clipped to it."
         },
         "clues": [
-          "A trail guide mentioning: \"Follow the Fibonacci progression of waypoints to the final viewpoint.\"",
+          "The code card says: Each number is the sum of the previous two.",
           "A park ranger badge dropped on the catwalk leading to the Devil's Throat.",
-          "A witness quote: \"She was heading to Garganta del Diablo (Devil's Throat) next.\""
+          "A witness quote: \"She was heading to Garganta del Diablo (Devil's Throat) next.\" A recovered costume label reads: Park ranger."
         ],
         "puzzle": {
           "title": "Fibonacci Waypoint Sequence",
-          "description": "Analyze the trail map waypoint sequence: 1, 1, 2, 3, 5, ... Predict the next waypoint distance and identify the final waterfall hideout.",
-          "question": "What is the next distance and final destination in the sequence?",
+          "description": "Continue the code sequence 1, 1, 2, 3, 5. These numbers are a fictional puzzle, not walking distances.",
+          "question": "What is the next code number, paired with the viewpoint named by the witness?",
           "options": [
-            "7km — San Martín Falls",
-            "8km — Garganta del Diablo (Devil's Throat)",
-            "10km — Bosetti Falls",
-            "13km — Brazil Border"
+            "7 — San Martín Falls",
+            "8 — Garganta del Diablo (Devil’s Throat)",
+            "10 — Bosetti Falls",
+            "13 — Brazil Border"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "The next number is 3+5=8. Pair it with Garganta del Diablo, the viewpoint explicitly named by the witness. These are code numbers, not real trail distances.",
+          "visualHtml": "<p class=\"evidence-note\">Use the written clues and puzzle instructions. All required evidence is available as text.</p>",
+          "hints": [
+            "Compare each number with the two numbers before it.",
+            "The rule is addition: 1+1=2, 1+2=3, 2+3=5.",
+            "Answer: 8 — Garganta del Diablo (Devil’s Throat). The next number is 3+5=8. Pair it with Garganta del Diablo, the viewpoint explicitly named by the witness. These are code numbers, not real trail distances."
+          ]
         },
         "warrantAnswers": {
           "city": "Puerto Iguazú",
@@ -1291,26 +1446,26 @@
           "disguise": "Park ranger"
         },
         "funFact": "Iguazú Falls consists of 275 individual waterfalls spread across nearly 3 kilometers of the Iguazú River.",
-        "learningObjective": "Identify a real Puerto Iguazú landmark or regional feature from connected cultural and geographic clues.",
+        "learningObjective": "Extend an additive sequence and connect it to a named viewpoint.",
         "sources": [
           "unesco_iguazu",
           "national_parks_argentina"
         ],
         "difficulty": "detective",
-        "mechanic": "pattern-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
           "Misiones",
           "Puerto Iguazú"
         ],
-        "visualType": "built-in-visual",
-        "accessibilityDescription": "Visual evidence for Fibonacci Waypoint Sequence in Puerto Iguazú.",
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "All required evidence and instructions are written as text. What is the next code number, paired with the viewpoint named by the witness?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "lower-circuit",
         "briefing": {
           "headline": "JUNGLE FIELD NOTES LIFTED!",
-          "report": "A ranger notebook vanished from the park office. Carmen left damp footprints heading to a lower waterfall trail.",
+          "report": "In this fictional training case: A ranger notebook vanished from the park office. Iván Irala left damp footprints heading to a lower waterfall trail.",
           "callingCard": "A wet card reads: \"Look below the mist.\"",
           "suspect": {
             "name": "Iván Irala",
@@ -1324,7 +1479,7 @@
         "clues": [
           "A trail pass is stamped Circuito Inferior.",
           "The clue mentions spray rising from below the walkways.",
-          "Carmen borrowed a biologist vest."
+          "The accomplice borrowed a biologist vest."
         ],
         "puzzle": {
           "title": "Waterfall Circuit",
@@ -1337,7 +1492,13 @@
             "Mendoza wine road"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">🌿</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-emerald-900\">Below the mist / ranger trail</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">🌿</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-emerald-900\">Below the mist / ranger trail</p>\n          </div>\n        ",
+          "explanation": "Lower Circuit follows the evidence: A trail pass is stamped Circuito Inferior. The clue mentions spray rising from below the walkways. The accomplice borrowed a biologist vest. A recovered costume label reads: Biologist.",
+          "hints": [
+            "Look for the route described as lower in the written evidence.",
+            "The wet trail and park map support the Lower Circuit.",
+            "Answer: Lower Circuit. Lower Circuit follows the evidence: A trail pass is stamped Circuito Inferior. The clue mentions spray rising from below the walkways. The accomplice borrowed a biologist vest. A recovered costume label reads: Biologist."
+          ]
         },
         "warrantAnswers": {
           "city": "Puerto Iguazú",
@@ -1351,20 +1512,20 @@
           "national_parks_argentina"
         ],
         "difficulty": "detective",
-        "mechanic": "multiple-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
           "Misiones",
           "Puerto Iguazú"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "🌿 Below the mist / ranger trail",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout matches the evidence?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "three-frontiers",
         "briefing": {
           "headline": "BORDER COMPASS STOLEN!",
-          "report": "A compass used for geography lessons disappeared. Carmen left three colored ribbons: Argentina, Brazil, and Paraguay.",
+          "report": "In this fictional training case: A compass used for geography lessons disappeared. Iván Irala left three colored ribbons: Argentina, Brazil, and Paraguay.",
           "callingCard": "A triangular card reads: \"Three countries, one river meeting.\"",
           "suspect": {
             "name": "Iván Irala",
@@ -1378,12 +1539,12 @@
         "clues": [
           "A tourist map marks the Triple Frontier viewpoint.",
           "The ribbons match three national colors.",
-          "A witness saw Carmen disguised as a geography teacher."
+          "A witness saw the accomplice disguised as a geography teacher."
         ],
         "puzzle": {
           "title": "Border Deduction",
           "description": "Use the river and three-country clues.",
-          "question": "Where is Carmen heading?",
+          "question": "Where is the accomplice heading?",
           "options": [
             "Triple Frontier viewpoint",
             "Garganta del Diablo",
@@ -1391,7 +1552,13 @@
             "San Martin Island"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">△</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-blue-900\">Three borders / river meeting</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">△</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-blue-900\">Three borders / river meeting</p>\n          </div>\n        ",
+          "explanation": "Triple Frontier viewpoint follows the evidence: A tourist map marks the Triple Frontier viewpoint. The ribbons match three national colors. A witness saw the accomplice disguised as a geography teacher. A recovered costume label reads: Geography teacher.",
+          "hints": [
+            "Count the distinct countries named by the ribbons.",
+            "Three national borders point to the Triple Frontier viewpoint.",
+            "Answer: Triple Frontier viewpoint. Triple Frontier viewpoint follows the evidence: A tourist map marks the Triple Frontier viewpoint. The ribbons match three national colors. A witness saw the accomplice disguised as a geography teacher. A recovered costume label reads: Geography teacher."
+          ]
         },
         "warrantAnswers": {
           "city": "Puerto Iguazú",
@@ -1411,14 +1578,14 @@
           "Puerto Iguazú"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "△ Three borders / river meeting",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Where is the accomplice heading?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "triple-frontier-marker",
         "briefing": {
           "headline": "BORDER MARKER MEDALLION GONE!",
-          "report": "A medallion from a river viewpoint display disappeared. Carmen left three colored ribbons pointing to Argentina, Brazil, and Paraguay.",
+          "report": "In this fictional training case: A medallion from a river viewpoint display disappeared. Iván Irala left three colored ribbons pointing to Argentina, Brazil, and Paraguay.",
           "callingCard": "A card says: \"Three borders, one red trail.\"",
           "suspect": {
             "name": "Iván Irala",
@@ -1430,22 +1597,28 @@
           "nextLead": "A Bariloche chocolatier's business card with a microfilm receipt clipped to it."
         },
         "clues": [
-          "A tourist map marks the Triple Frontier viewpoint.",
-          "The clue mentions the Iguazu and Parana river area.",
-          "Carmen wore a river-cruise guide badge."
+          "Fictional log 09:00: collect a map at the harbor.",
+          "Fictional log 10:00: the river guide checks the river junction.",
+          "Fictional log 11:00: the river guide waits at the Triple Frontier viewpoint."
         ],
         "puzzle": {
-          "title": "Border Geography Match",
-          "description": "Use the border and river clues to identify the hideout.",
-          "question": "Where did Carmen go?",
+          "title": "River Log Order",
+          "description": "Use the complete written evidence below. Times, counts, and codes are fictional training data.",
+          "question": "Which sequence puts the fictional sightings in time order?",
           "options": [
-            "Triple Frontier viewpoint",
-            "Garganta del Diablo",
-            "San Martín Falls",
-            "Cerro Otto"
+            "Harbor → river junction → viewpoint",
+            "Viewpoint → harbor → river junction",
+            "River junction → viewpoint → harbor",
+            "Harbor → viewpoint → river junction"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-compass mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-teal-900\">Three borders / river point</p></div>"
+          "visualHtml": "<p>Consult the three written clues. This training puzzle does not represent a real timetable or visitor route.</p>",
+          "explanation": "Harbor → river junction → viewpoint follows the evidence: Fictional log 09:00: collect a map at the harbor. Fictional log 10:00: the river guide checks the river junction. Fictional log 11:00: the river guide waits at the Triple Frontier viewpoint.",
+          "hints": [
+            "Put the fictional sightings in time order.",
+            "Start at the harbor, then follow the later river-junction sighting.",
+            "Answer: Harbor → river junction → viewpoint. Harbor → river junction → viewpoint follows the evidence: Fictional log 09:00: collect a map at the harbor. Fictional log 10:00: the river guide checks the river junction. Fictional log 11:00: the river guide waits at the Triple Frontier viewpoint."
+          ]
         },
         "warrantAnswers": {
           "city": "Puerto Iguazú",
@@ -1453,7 +1626,7 @@
           "disguise": "River guide"
         },
         "funFact": "Puerto Iguazu is near the meeting area of Argentina, Brazil, and Paraguay.",
-        "learningObjective": "Connect place-based clues to a real Argentina location in the iguazu case pool.",
+        "learningObjective": "Put fictional witness observations in chronological order.",
         "sources": [
           "unesco_iguazu",
           "national_parks_argentina"
@@ -1464,14 +1637,14 @@
           "iguazu"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Use the border and river clues to identify the hideout.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which sequence puts the fictional sightings in time order?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "jungle-train-pass",
         "briefing": {
           "headline": "RAINFOREST TRAIN PASS STOLEN!",
-          "report": "A special-access train pass vanished inside the national park. Carmen left muddy boot prints near a forest platform.",
+          "report": "In this fictional training case: A special-access train pass vanished inside the national park. Iván Irala left muddy boot prints near a forest platform.",
           "callingCard": "The note reads: \"Ride through the green before the roar.\"",
           "suspect": {
             "name": "Iván Irala",
@@ -1489,7 +1662,7 @@
         ],
         "puzzle": {
           "title": "Park Transport Deduction",
-          "description": "Match the rainforest travel clues to Carmen hideout.",
+          "description": "Match the rainforest travel clues to the accomplice’s hideout.",
           "question": "Which hideout is correct?",
           "options": [
             "Rainforest train platform",
@@ -1498,7 +1671,13 @@
             "Bariloche cable car"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-train mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-emerald-900\">Forest platform / waterfall roar</p></div>"
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-train mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-emerald-900\">Forest platform / waterfall roar</p></div>",
+          "explanation": "Rainforest train platform follows the evidence: A platform note mentions the ecological train inside Iguazu National Park. The sound log records waterfalls growing louder after the stop. The disguise tag reads: \"Park interpreter.\" A recovered costume label reads: Park interpreter.",
+          "hints": [
+            "Identify the transport type named on the pass.",
+            "A forest platform belongs to the rainforest train.",
+            "Answer: Rainforest train platform. Rainforest train platform follows the evidence: A platform note mentions the ecological train inside Iguazu National Park. The sound log records waterfalls growing louder after the stop. The disguise tag reads: \"Park interpreter.\" A recovered costume label reads: Park interpreter."
+          ]
         },
         "warrantAnswers": {
           "city": "Puerto Iguazú",
@@ -1517,7 +1696,7 @@
           "iguazu"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Match the rainforest travel clues to Carmen hideout.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout is correct?",
         "reviewStatus": "source-linked-needs-line-review"
       }
     ],
@@ -1526,8 +1705,8 @@
         "caseId": "classic-bariloche",
         "briefing": {
           "headline": "CHOCOLATE SCULPTURE SWIPED!",
-          "report": "A famous 50kg chocolate sculpture of Mount Fitz Roy was stolen from a chocolate shop on Mitre Street. The thief escaped into the Nahuel Huapi forest.",
-          "callingCard": "A ski pass for Cerro Otto with the signature \"Carmen\".",
+          "report": "In this fictional training case, a chocolate mountain sculpture disappeared from an ACME display in Bariloche. The local accomplice left a set of summit clues.",
+          "callingCard": "An unsigned ski pass is tucked inside a red envelope. The written witness evidence identifies the destination.",
           "suspect": {
             "name": "Berta Brügger",
             "alias": "La Bombonera",
@@ -1540,46 +1719,53 @@
         "clues": [
           "A torn polaroid photo showing a cable car going up to a revolving cafeteria on Cerro Otto.",
           "A ski instructor's whistle with the initials 'C.S.'",
-          "A receipt for chocolate-covered raspberries from Rapa Nui on Mitre Street."
+          "A receipt for chocolate-covered raspberries from Rapa Nui on Mitre Street. A recovered costume label reads: Ski instructor."
         ],
         "puzzle": {
-          "title": "Visual Clue Identification",
-          "description": "Examine the torn polaroid photo showing a cable car and a revolving summit building. Identify the alpine hideout.",
-          "question": "Which landmark is pictured in the visual evidence?",
+          "title": "Summit Clue Identification",
+          "description": "A written evidence note describes a cable car and a revolving summit cafeteria. Match those clues to the landmark.",
+          "question": "Which landmark matches the written evidence?",
           "options": [
             "Cerro Otto Viewpoint",
             "Cerro Catedral Ski Center",
             "Colonia Suiza Crafts Market",
             "Nahuel Huapi Lake House"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "Cerro Otto Viewpoint follows the evidence: A torn polaroid photo showing a cable car going up to a revolving cafeteria on Cerro Otto. A ski instructor's whistle with the initials 'C.S.' A receipt for chocolate-covered raspberries from Rapa Nui on Mitre Street. A recovered costume label reads: Ski instructor.",
+          "visualHtml": "<p class=\"evidence-note\">Use the written clues and puzzle instructions. All required evidence is available as text.</p>",
+          "hints": [
+            "Use the summit name in the written evidence.",
+            "Match Cerro Otto to the viewpoint option; no image recognition is needed.",
+            "Answer: Cerro Otto Viewpoint. Cerro Otto Viewpoint follows the evidence: A torn polaroid photo showing a cable car going up to a revolving cafeteria on Cerro Otto. A ski instructor's whistle with the initials 'C.S.' A receipt for chocolate-covered raspberries from Rapa Nui on Mitre Street. A recovered costume label reads: Ski instructor."
+          ]
         },
         "warrantAnswers": {
           "city": "San Carlos de Bariloche",
           "hideout": "Cerro Otto",
           "disguise": "Ski instructor"
         },
-        "funFact": "Bariloche was founded by German and Swiss immigrants, and its architecture reflects that alpine heritage.",
+        "funFact": "San Carlos de Bariloche lies beside Nahuel Huapi Lake in the Argentine Andes.",
         "learningObjective": "Identify a real San Carlos de Bariloche landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
           "bariloche_tourism",
           "national_parks_argentina"
         ],
         "difficulty": "detective",
-        "mechanic": "visual-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
           "Río Negro",
           "San Carlos de Bariloche"
         ],
-        "visualType": "built-in-visual",
-        "accessibilityDescription": "Visual evidence for Visual Clue Identification in San Carlos de Bariloche.",
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which landmark matches the written evidence?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "nahuel-huapi",
         "briefing": {
           "headline": "LAKE CHART STOLEN!",
-          "report": "A historic navigation chart vanished from a lakeside exhibit. Carmen left a chocolate wrapper folded into a boat.",
+          "report": "In this fictional training case: A historic navigation chart vanished from a lakeside exhibit. Berta Brügger left a chocolate wrapper folded into a boat.",
           "callingCard": "A blue card reads: \"The lake reflects the route.\"",
           "suspect": {
             "name": "Berta Brügger",
@@ -1593,7 +1779,7 @@
         "clues": [
           "The wrapper came from a chocolate shop on Mitre Street.",
           "A boat schedule points across Nahuel Huapi Lake.",
-          "Carmen purchased a captain cap."
+          "The accomplice purchased a captain cap. A recovered costume label reads: Boat captain."
         ],
         "puzzle": {
           "title": "Lake Route",
@@ -1606,7 +1792,13 @@
             "Recoleta"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">⛵</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-blue-900\">Lake chart / chocolate wrapper</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">⛵</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-blue-900\">Lake chart / chocolate wrapper</p>\n          </div>\n        ",
+          "explanation": "Nahuel Huapi dock follows the evidence: The wrapper came from a chocolate shop on Mitre Street. A boat schedule points across Nahuel Huapi Lake. The accomplice purchased a captain cap. A recovered costume label reads: Boat captain.",
+          "hints": [
+            "Combine the lake chart with the boat clue.",
+            "A dock on Nahuel Huapi fits the evidence.",
+            "Answer: Nahuel Huapi dock. Nahuel Huapi dock follows the evidence: The wrapper came from a chocolate shop on Mitre Street. A boat schedule points across Nahuel Huapi Lake. The accomplice purchased a captain cap. A recovered costume label reads: Boat captain."
+          ]
         },
         "warrantAnswers": {
           "city": "San Carlos de Bariloche",
@@ -1620,20 +1812,20 @@
           "national_parks_argentina"
         ],
         "difficulty": "detective",
-        "mechanic": "pattern-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
           "Río Negro",
           "San Carlos de Bariloche"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "⛵ Lake chart / chocolate wrapper",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Where should ACME search?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "civic-center",
         "briefing": {
           "headline": "ALPINE CLOCK FACE MISSING!",
-          "report": "A decorative clock face disappeared from a civic exhibit. Carmen left boot prints in the town square.",
+          "report": "In this fictional training case: A decorative clock face disappeared from a civic exhibit. Berta Brügger left boot prints in the town square.",
           "callingCard": "A square card says: \"Stone walls, timber lines, civic time.\"",
           "suspect": {
             "name": "Berta Brügger",
@@ -1646,8 +1838,8 @@
         },
         "clues": [
           "The photo shows alpine-style stone and wood buildings.",
-          "A witness saw Carmen dressed as a municipal guide.",
-          "The trail stays in central Bariloche, not the ski slopes."
+          "A witness saw the accomplice dressed as a municipal guide.",
+          "The trail stays in central Bariloche, not the ski slopes. A recovered costume label reads: Municipal guide."
         ],
         "puzzle": {
           "title": "Architecture Match",
@@ -1660,7 +1852,13 @@
             "Llao Llao peninsula"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">■</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-stone-900\">Stone square / timber lines</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">■</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-stone-900\">Stone square / timber lines</p>\n          </div>\n        ",
+          "explanation": "Civic Center follows the evidence: The photo shows alpine-style stone and wood buildings. A witness saw the accomplice dressed as a municipal guide. The trail stays in central Bariloche, not the ski slopes. A recovered costume label reads: Municipal guide.",
+          "hints": [
+            "Keep the search near the town square.",
+            "The civic building description identifies the Civic Center.",
+            "Answer: Civic Center. Civic Center follows the evidence: The photo shows alpine-style stone and wood buildings. A witness saw the accomplice dressed as a municipal guide. The trail stays in central Bariloche, not the ski slopes. A recovered costume label reads: Municipal guide."
+          ]
         },
         "warrantAnswers": {
           "city": "San Carlos de Bariloche",
@@ -1674,20 +1872,20 @@
           "national_parks_argentina"
         ],
         "difficulty": "detective",
-        "mechanic": "multiple-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
           "Río Negro",
           "San Carlos de Bariloche"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "■ Stone square / timber lines",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which Bariloche hideout fits?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "civic-center-clock",
         "briefing": {
           "headline": "CLOCKTOWER BLUEPRINTS TAKEN!",
-          "report": "Blueprints from a stone civic building vanished near Bariloche city center. Carmen left a chocolate wrapper on the plaza steps.",
+          "report": "In this fictional training case: Blueprints from a stone civic building vanished near Bariloche city center. Berta Brügger left a chocolate wrapper on the plaza steps.",
           "callingCard": "A red card says: \"Meet when the alpine clock strikes noon.\"",
           "suspect": {
             "name": "Berta Brügger",
@@ -1699,22 +1897,28 @@
           "nextLead": "A Beagle Channel weather log forged for an Ushuaia departure tomorrow."
         },
         "clues": [
-          "A plaza sketch shows stone-and-wood civic buildings.",
-          "A witness saw Carmen at the Civic Center clocktower.",
-          "The disguise receipt reads: \"Municipal clerk.\""
+          "In this fictional case, the Civic Center clock in the witness sketch reads 10:20.",
+          "A second sighting at the same place is logged at 10:45.",
+          "Both sightings describe a municipal clerk carrying the stolen clock hand."
         ],
         "puzzle": {
-          "title": "Civic Landmark Match",
-          "description": "Use the plaza and clocktower clues to identify the hideout.",
-          "question": "Where is Carmen hiding?",
+          "title": "Clock Difference",
+          "description": "Use the complete written evidence below. Times, counts, and codes are fictional training data.",
+          "question": "How many minutes separate the two sightings?",
           "options": [
-            "Civic Center",
-            "Cerro Otto",
-            "Colonia Suiza",
-            "Nahuel Huapi dock"
+            "25 minutes",
+            "15 minutes",
+            "35 minutes",
+            "45 minutes"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-monument mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-slate-900\">Clocktower / plaza steps</p></div>"
+          "visualHtml": "<p>Consult the three written clues. This training puzzle does not represent a real timetable or visitor route.</p>",
+          "explanation": "Both sightings are within the 10 o’clock hour. Subtract the minutes: 45 − 20 = 25 minutes. The witness identifies the municipal clerk at the Civic Center.",
+          "hints": [
+            "Both times are in the same hour, so compare the minute numbers.",
+            "Subtract the earlier 20 minutes from the later 45 minutes.",
+            "Answer: 25 minutes. 45 − 20 = 25."
+          ]
         },
         "warrantAnswers": {
           "city": "San Carlos de Bariloche",
@@ -1722,7 +1926,7 @@
           "disguise": "Municipal clerk"
         },
         "funFact": "Bariloche Civic Center is a recognizable stone-and-wood landmark in the city center.",
-        "learningObjective": "Connect place-based clues to a real Argentina location in the bariloche case pool.",
+        "learningObjective": "Calculate the elapsed minutes between two sightings in the same hour.",
         "sources": [
           "bariloche_tourism",
           "national_parks_argentina"
@@ -1733,14 +1937,14 @@
           "bariloche"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Use the plaza and clocktower clues to identify the hideout.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. How many minutes separate the two sightings?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "nahuel-huapi-dock",
         "briefing": {
           "headline": "LAKE CHART SNATCHED!",
-          "report": "A navigation chart disappeared from a boat office. Carmen fled toward a dock on Nahuel Huapi Lake.",
+          "report": "In this fictional training case: A navigation chart disappeared from a boat office. Berta Brügger fled toward a dock on Nahuel Huapi Lake.",
           "callingCard": "The card says: \"Blue water, dark forest, red coat.\"",
           "suspect": {
             "name": "Berta Brügger",
@@ -1752,22 +1956,28 @@
           "nextLead": "A Beagle Channel weather log forged for an Ushuaia departure tomorrow."
         },
         "clues": [
-          "A boat ticket names Nahuel Huapi Lake.",
-          "The route note mentions forested shores and cold blue water.",
-          "Carmen wore a boat-captain cap."
+          "The fictional dock locker uses a code: 2, 4, 8, 16.",
+          "Each number doubles the previous one.",
+          "A boat captain collected the coded parcel at Nahuel Huapi dock."
         ],
         "puzzle": {
-          "title": "Lake Route Deduction",
-          "description": "Match the lake and boat clues to Carmen hideout.",
-          "question": "Which location fits?",
+          "title": "Dock Parcel Code",
+          "description": "Use the complete written evidence below. Times, counts, and codes are fictional training data.",
+          "question": "Which number comes next in the locker code?",
           "options": [
-            "Nahuel Huapi dock",
-            "Cerro Otto",
-            "Civic Center",
-            "Recoleta Cemetery"
+            "32",
+            "18",
+            "24",
+            "64"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-water mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-blue-900\">Boat ticket / glacial lake</p></div>"
+          "visualHtml": "<p>Consult the three written clues. This training puzzle does not represent a real timetable or visitor route.</p>",
+          "explanation": "The code doubles at each step. After 16 comes 16 × 2 = 32. The dock location is given by the written witness evidence.",
+          "hints": [
+            "Compare each code number to the previous one.",
+            "The sequence doubles each time; multiply the last number by two.",
+            "Answer: 32. The code doubles at each step. After 16 comes 16 × 2 = 32. The dock location is given by the written witness evidence."
+          ]
         },
         "warrantAnswers": {
           "city": "San Carlos de Bariloche",
@@ -1775,7 +1985,7 @@
           "disguise": "Boat captain"
         },
         "funFact": "Nahuel Huapi Lake is central to Bariloche scenery and national-park tourism.",
-        "learningObjective": "Connect place-based clues to a real Argentina location in the bariloche case pool.",
+        "learningObjective": "Recognize and extend a doubling pattern.",
         "sources": [
           "bariloche_tourism",
           "national_parks_argentina"
@@ -1786,7 +1996,7 @@
           "bariloche"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Match the lake and boat clues to Carmen hideout.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which number comes next in the locker code?",
         "reviewStatus": "source-linked-needs-line-review"
       }
     ],
@@ -1795,7 +2005,7 @@
         "caseId": "classic-ushuaia",
         "briefing": {
           "headline": "HISTORIC LIGHTHOUSE DIAL STOLEN!",
-          "report": "The original brass lens rotation gear from the Les Eclaireurs Lighthouse was stolen in the dead of night. The thief escaped by sailboat into the Beagle Channel.",
+          "report": "In this fictional training case, a replica lighthouse gear disappeared from an ACME evidence display in Ushuaia. The local accomplice left directions on a training grid.",
           "callingCard": "A maritime map grid with compass commands: 'Start at Port. Go East 4, South 2.'",
           "suspect": {
             "name": "Ulises Urrutia",
@@ -1807,13 +2017,13 @@
           "nextLead": "A glaciology permit forged with last week's date, addressed to El Calafate."
         },
         "clues": [
-          "A lighthouse keeper's log noting: \"A suspicious woman was asking for the key to the main beacon.\"",
-          "A navigation route map showing a destination at the Les Eclaireurs Lighthouse in the Beagle Channel.",
-          "A penguin colony report mentioning a woman in a red coat boarding a boat near the islands."
+          "On the fictional training grid, Port is at row 1, column 1. East increases the column number; south increases the row number.",
+          "The route instruction says: go east 4, then south 2. Les Eclaireurs Lighthouse is labeled at row 3, column 5 on this training grid.",
+          "The witness identifies the local accomplice’s disguise as Lighthouse keeper. This puzzle grid is not a real navigation chart."
         ],
         "puzzle": {
           "title": "Compass Navigation Grid",
-          "description": "Start at Port (Row 1, Col 1). Follow the directions: Go East 4 grid spaces, then South 2 grid spaces. What is your final destination?",
+          "description": "On a fictional training grid, start at Port (Row 1, Col 1). Go East 4 grid spaces, then South 2. This is a logic exercise, not a real navigation route.",
           "question": "Which landmark coordinate is the final destination?",
           "options": [
             "Row 1, Col 5 — Martial Glacier",
@@ -1821,34 +2031,41 @@
             "Row 3, Col 1 — Port",
             "Row 5, Col 2 — Penguin Colony"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Column 1 + 4 = 5; row 1 + 2 = 3. Row 3, column 5 is the lighthouse on the fictional training grid, not a real navigation chart.",
+          "visualHtml": "<p class=\"evidence-note\">Use the written clues and puzzle instructions. All required evidence is available as text.</p>",
+          "hints": [
+            "East changes the column; south changes the row.",
+            "Start at row 1, column 1. Move four columns east and two rows south.",
+            "Answer: Row 3, Col 5 — Les Eclaireurs Lighthouse. Column 1 + 4 = 5; row 1 + 2 = 3. Row 3, column 5 is the lighthouse on the fictional training grid, not a real navigation chart."
+          ]
         },
         "warrantAnswers": {
           "city": "Ushuaia",
           "hideout": "Les Eclaireurs Lighthouse",
           "disguise": "Lighthouse keeper"
         },
-        "funFact": "Ushuaia is the only city in the world that lies below the 54th parallel south, earning its \"End of the World\" nickname.",
-        "learningObjective": "Identify a real Ushuaia landmark or regional feature from connected cultural and geographic clues.",
+        "funFact": "Ushuaia is a city on the Beagle Channel in Tierra del Fuego, in southern Argentina.",
+        "learningObjective": "Apply row and column movement on a fictional coordinate grid.",
         "sources": [
           "ushuaia_tourism",
           "national_parks_argentina"
         ],
         "difficulty": "detective",
-        "mechanic": "navigation-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
           "Tierra del Fuego",
           "Ushuaia"
         ],
-        "visualType": "built-in-visual",
-        "accessibilityDescription": "Visual evidence for Compass Navigation Grid in Ushuaia.",
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which landmark coordinate is the final destination?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "beagle-channel",
         "briefing": {
           "headline": "SHIP LOG BOOK STOLEN!",
-          "report": "A Beagle Channel ship log vanished before morning departure. Carmen left a red scarf tied to a pier cleat.",
+          "report": "In this fictional training case: A Beagle Channel ship log vanished before morning departure. Ulises Urrutia left a red scarf tied to a pier cleat.",
           "callingCard": "A salt-stained card reads: \"Follow the channel at the end of the world.\"",
           "suspect": {
             "name": "Ulises Urrutia",
@@ -1861,13 +2078,13 @@
         },
         "clues": [
           "The manifest lists a small boat crossing the Beagle Channel.",
-          "A witness saw Carmen wearing a sailor coat.",
-          "The route points away from the airport and toward the harbor."
+          "A witness saw the accomplice wearing a sailor coat.",
+          "The route points away from the airport and toward the harbor. A recovered costume label reads: Sailor."
         ],
         "puzzle": {
           "title": "Harbor Trail",
           "description": "Use the maritime clues to identify the Ushuaia hideout.",
-          "question": "Where is Carmen going?",
+          "question": "Where is the accomplice going?",
           "options": [
             "Beagle Channel harbor",
             "Martial Glacier trailhead",
@@ -1875,7 +2092,13 @@
             "Cabildo Histórico"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">⚓</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-blue-900\">Ship log / harbor cleat</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">⚓</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-blue-900\">Ship log / harbor cleat</p>\n          </div>\n        ",
+          "explanation": "Beagle Channel harbor follows the evidence: The manifest lists a small boat crossing the Beagle Channel. A witness saw the accomplice wearing a sailor coat. The route points away from the airport and toward the harbor. A recovered costume label reads: Sailor.",
+          "hints": [
+            "The ship log identifies a waterway.",
+            "A pier cleat supports a harbor on the Beagle Channel.",
+            "Answer: Beagle Channel harbor. Beagle Channel harbor follows the evidence: The manifest lists a small boat crossing the Beagle Channel. A witness saw the accomplice wearing a sailor coat. The route points away from the airport and toward the harbor. A recovered costume label reads: Sailor."
+          ]
         },
         "warrantAnswers": {
           "city": "Ushuaia",
@@ -1889,20 +2112,20 @@
           "national_parks_argentina"
         ],
         "difficulty": "detective",
-        "mechanic": "multiple-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
           "Tierra del Fuego",
           "Ushuaia"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "⚓ Ship log / harbor cleat",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Where is the accomplice going?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "end-world-post",
         "briefing": {
           "headline": "POSTMARK PLATE PILFERED!",
-          "report": "A souvenir postmark plate disappeared from a remote tourism desk. Carmen left a postcard marked \"Fin del Mundo.\"",
+          "report": "In this fictional training case: A souvenir postmark plate disappeared from a remote tourism desk. Ulises Urrutia left a postcard marked \"Fin del Mundo.\"",
           "callingCard": "The card reads: \"Send the warrant to the last post.\"",
           "suspect": {
             "name": "Ulises Urrutia",
@@ -1916,7 +2139,7 @@
         "clues": [
           "The clue points to end-of-the-world tourism routes.",
           "A stack of postcards is tied with red thread.",
-          "Carmen wore a postal clerk disguise."
+          "The accomplice wore a postal clerk disguise."
         ],
         "puzzle": {
           "title": "End-of-World Clue",
@@ -1929,7 +2152,13 @@
             "Puerto Iguazú viewpoint"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">✉</div>\n            <p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Fin del Mundo</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">✉</div>\n            <p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Fin del Mundo</p>\n          </div>\n        ",
+          "explanation": "End of the World post office follows the evidence: The clue points to end-of-the-world tourism routes. A stack of postcards is tied with red thread. The accomplice wore a postal clerk disguise. A recovered costume label reads: Postal clerk.",
+          "hints": [
+            "Identify the service that uses postmarks.",
+            "The postcard and postmark plate point to the post office.",
+            "Answer: End of the World post office. End of the World post office follows the evidence: The clue points to end-of-the-world tourism routes. A stack of postcards is tied with red thread. The accomplice wore a postal clerk disguise. A recovered costume label reads: Postal clerk."
+          ]
         },
         "warrantAnswers": {
           "city": "Ushuaia",
@@ -1943,20 +2172,20 @@
           "national_parks_argentina"
         ],
         "difficulty": "detective",
-        "mechanic": "multiple-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
           "Tierra del Fuego",
           "Ushuaia"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "✉ Fin del Mundo",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Where should the warrant team search?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "end-of-world-train",
         "briefing": {
           "headline": "RAIL SPIKE RELIC STOLEN!",
-          "report": "A railway relic vanished from a southern heritage display. Carmen left a ticket marked End of the World Train.",
+          "report": "In this fictional training case: A railway relic vanished from a southern heritage display. Ulises Urrutia left a ticket marked End of the World Train.",
           "callingCard": "The card reads: \"Follow the last rails south.\"",
           "suspect": {
             "name": "Ulises Urrutia",
@@ -1975,7 +2204,7 @@
         "puzzle": {
           "title": "Southern Rail Clue",
           "description": "Use the railway and landscape clues to identify the hideout.",
-          "question": "Where did Carmen go?",
+          "question": "Where did the accomplice go?",
           "options": [
             "End of the World Train",
             "Les Eclaireurs Lighthouse",
@@ -1983,7 +2212,13 @@
             "Civic Center"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-train mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-red-900\">Last rails / southern forest</p></div>"
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-train mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-red-900\">Last rails / southern forest</p></div>",
+          "explanation": "End of the World Train follows the evidence: A heritage ticket points to the End of the World Train. A forest route note mentions Tierra del Fuego landscapes. The disguise note reads: \"Rail guide.\" A recovered costume label reads: Rail guide.",
+          "hints": [
+            "Read the destination on the railway ticket.",
+            "Match the named train rather than the harbor or glacier.",
+            "Answer: End of the World Train. End of the World Train follows the evidence: A heritage ticket points to the End of the World Train. A forest route note mentions Tierra del Fuego landscapes. The disguise note reads: \"Rail guide.\" A recovered costume label reads: Rail guide."
+          ]
         },
         "warrantAnswers": {
           "city": "Ushuaia",
@@ -2002,14 +2237,14 @@
           "ushuaia"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Use the railway and landscape clues to identify the hideout.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Where did the accomplice go?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "martial-glacier-cache",
         "briefing": {
           "headline": "ICE AXE HANDLE MISSING!",
-          "report": "A historic mountaineering handle disappeared from a local display. Carmen left crampon marks pointing toward Martial Glacier.",
+          "report": "In this fictional training case: A historic mountaineering handle disappeared from a local display. Ulises Urrutia left crampon marks pointing toward Martial Glacier.",
           "callingCard": "A blue card says: \"Climb above the harbor and look back.\"",
           "suspect": {
             "name": "Ulises Urrutia",
@@ -2022,7 +2257,7 @@
         },
         "clues": [
           "A trail note names Martial Glacier.",
-          "A witness saw Carmen above the city with a view toward the Beagle Channel.",
+          "A witness saw the accomplice above the city with a view toward the Beagle Channel.",
           "The disguise tag reads: \"Mountain guide.\""
         ],
         "puzzle": {
@@ -2036,7 +2271,13 @@
             "Garganta del Diablo"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-glacier mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-blue-900\">Crampon marks / harbor view</p></div>"
+          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-glacier mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-blue-900\">Crampon marks / harbor view</p></div>",
+          "explanation": "Martial Glacier follows the evidence: A trail note names Martial Glacier. A witness saw the accomplice above the city with a view toward the Beagle Channel. The disguise tag reads: \"Mountain guide.\" A recovered costume label reads: Mountain guide.",
+          "hints": [
+            "Follow the named mountain route in the evidence.",
+            "Crampons and the glacier clue support Martial Glacier.",
+            "Answer: Martial Glacier. Martial Glacier follows the evidence: A trail note names Martial Glacier. A witness saw the accomplice above the city with a view toward the Beagle Channel. The disguise tag reads: \"Mountain guide.\" A recovered costume label reads: Mountain guide."
+          ]
         },
         "warrantAnswers": {
           "city": "Ushuaia",
@@ -2055,7 +2296,7 @@
           "ushuaia"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Match the mountain and harbor-view clues to the hideout.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout matches?",
         "reviewStatus": "source-linked-needs-line-review"
       }
     ],
@@ -2064,8 +2305,8 @@
         "caseId": "classic-el-calafate",
         "briefing": {
           "headline": "GLACIER ICE CORE PILFERED!",
-          "report": "A scientific ice core sample representing 10,000 years of climate history was stolen from the Glaciarium Museum. The thief left a final note taunting the police.",
-          "callingCard": "A letter: \"You've chased me far, detective. But my final hideout is locked behind the symbols of my journey.\"",
+          "report": "In this fictional training case, a replica ice-core sample disappeared from an ACME exhibit in El Calafate. The local accomplice left a note and three glacier clues.",
+          "callingCard": "A red card reads: \"The local courier knows the ice. Compare the glacier evidence, then send your report to headquarters.\"",
           "suspect": {
             "name": "Eva Errázuriz",
             "alias": "La Esmeralda",
@@ -2073,31 +2314,38 @@
             "role": "Carmen's local fixer, masquerading as a glaciologist",
             "dossierNote": "Former Los Glaciares park scientist. Forges climate-research permits and books Carmen's escape routes across the ice field."
           },
-          "nextLead": "A hand-scrawled bearing across the ice field. Carmen's coordinates — and she knows you have them."
+          "nextLead": "Send the recovered evidence and collected tokens to ACME headquarters for the final report."
         },
         "clues": [
           "A tour guide pamphlet: \"Walk the Perito Moreno Glacier catwalks.\"",
           "A glacier trekking harness with red stitching.",
-          "A final note mentioning: \"Where the ice collapses, the journey ends.\""
+          "The recovered costume tag reads: Tour guide. A note says the suspect is beside a glacier, not inside a museum."
         ],
         "puzzle": {
-          "title": "Final Token Deduction",
-          "description": "Examine the symbols on your collected clue tokens. Identify the 3 locations that contain the Sun, the Ice, and the Wind symbols to locate Carmen's final glacier hideout.",
-          "question": "Which combination of clue tokens contains the Sun, Wind, and Ice symbols?",
+          "title": "Glacier Evidence Match",
+          "description": "Compare the walkway, glacier, and guide evidence. This puzzle does not require an unearned token.",
+          "question": "Which hideout matches the evidence?",
           "options": [
-            "Mendoza (Sun) + Bariloche (Wind) + El Calafate (Ice)",
-            "Buenos Aires (Tango) + Iguazú (Water) + Ushuaia (Light)",
-            "Salta (Cloud) + Córdoba (Book) + Ushuaia (Light)",
-            "Buenos Aires (Tango) + Mendoza (Sun) + Salta (Cloud)"
+            "Perito Moreno Glacier",
+            "Glaciarium",
+            "Cerro Otto",
+            "Plaza Independencia"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "Perito Moreno Glacier follows the evidence: A tour guide pamphlet: \"Walk the Perito Moreno Glacier catwalks.\" A glacier trekking harness with red stitching. The recovered costume tag reads: Tour guide. A note says the suspect is beside a glacier, not inside a museum.",
+          "visualHtml": "<p class=\"evidence-note\">Use the written clues and puzzle instructions. All required evidence is available as text.</p>",
+          "hints": [
+            "Use the named glacier and witness evidence together.",
+            "Choose the glacier location rather than the museum or pier.",
+            "Answer: Perito Moreno Glacier. Perito Moreno Glacier follows the evidence: A tour guide pamphlet: \"Walk the Perito Moreno Glacier catwalks.\" A glacier trekking harness with red stitching. The recovered costume tag reads: Tour guide. A note says the suspect is beside a glacier, not inside a museum."
+          ]
         },
         "warrantAnswers": {
           "city": "El Calafate",
           "hideout": "Perito Moreno Glacier",
           "disguise": "Tour guide"
         },
-        "funFact": "The Perito Moreno Glacier is 30km long and 70m tall, and periodically dams the lake before spectacularly collapsing.",
+        "funFact": "Perito Moreno is one of the glaciers in Los Glaciares National Park, a UNESCO World Heritage site.",
         "learningObjective": "Identify a real El Calafate landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
           "unesco_los_glaciares",
@@ -2109,15 +2357,15 @@
           "Santa Cruz",
           "El Calafate"
         ],
-        "visualType": "built-in-visual",
-        "accessibilityDescription": "Visual evidence for Final Token Deduction in El Calafate.",
+        "visualType": "inline-html-cutout",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout matches the evidence?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "glaciarium",
         "briefing": {
           "headline": "ICE AGE DIAGRAM TAKEN!",
-          "report": "A glacier formation diagram disappeared from a science exhibit. Carmen left a frosted envelope stamped Glaciarium.",
+          "report": "In this fictional training case: A glacier formation diagram disappeared from a science exhibit. Eva Errázuriz left a frosted envelope stamped Glaciarium.",
           "callingCard": "A cold card reads: \"Learn the ice before you cross it.\"",
           "suspect": {
             "name": "Eva Errázuriz",
@@ -2126,29 +2374,35 @@
             "role": "Carmen's local fixer, masquerading as a glaciologist",
             "dossierNote": "Former Los Glaciares park scientist. Forges climate-research permits and books Carmen's escape routes across the ice field."
           },
-          "nextLead": "A hand-scrawled bearing across the ice field. Carmen's coordinates — and she knows you have them."
+          "nextLead": "Send the recovered evidence and collected tokens to ACME headquarters for the final report."
         },
         "clues": [
           "A museum ticket is stamped Glaciarium.",
           "The note references glacier science, not a boat dock.",
-          "Carmen wore a museum educator badge."
+          "The accomplice wore a museum educator badge."
         ],
         "puzzle": {
           "title": "Science Exhibit Clue",
           "description": "Use the museum and glacier-science clues.",
-          "question": "Where is Carmen hiding?",
+          "question": "Where is the accomplice hiding?",
           "options": [
-            "Glaciarium Museum",
+            "Glaciarium",
             "Perito Moreno catwalk",
             "El Chalten trailhead",
             "Nahuel Huapi dock"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">❄</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-blue-900\">Science exhibit / frost envelope</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">❄</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-blue-900\">Science exhibit / frost envelope</p>\n          </div>\n        ",
+          "explanation": "Glaciarium follows the evidence: A museum ticket is stamped Glaciarium. The note references glacier science, not a boat dock. The accomplice wore a museum educator badge. A recovered costume label reads: Museum educator.",
+          "hints": [
+            "A formation diagram and exhibit label belong to a museum.",
+            "Use the Glaciarium name in the exhibit evidence.",
+            "Answer: Glaciarium. Glaciarium follows the evidence: A museum ticket is stamped Glaciarium. The note references glacier science, not a boat dock. The accomplice wore a museum educator badge. A recovered costume label reads: Museum educator."
+          ]
         },
         "warrantAnswers": {
           "city": "El Calafate",
-          "hideout": "Glaciarium Museum",
+          "hideout": "Glaciarium",
           "disguise": "Museum educator"
         },
         "funFact": "El Calafate is a gateway for visitors learning about and visiting Patagonian glaciers.",
@@ -2158,20 +2412,20 @@
           "national_parks_argentina"
         ],
         "difficulty": "detective",
-        "mechanic": "multiple-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
           "Santa Cruz",
           "El Calafate"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "❄ Science exhibit / frost envelope",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Where is the accomplice hiding?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "lago-argentino",
         "briefing": {
           "headline": "PATAGONIAN ROUTE MAP GONE!",
-          "report": "A route map for glacier boats vanished from a travel office. Carmen left a blue ticket stub beside a windblown berry branch.",
+          "report": "In this fictional training case: A route map for glacier boats vanished from a travel office. Eva Errázuriz left a blue ticket stub beside a windblown berry branch.",
           "callingCard": "A card reads: \"Where the lake carries ice, I carry the loot.\"",
           "suspect": {
             "name": "Eva Errázuriz",
@@ -2180,29 +2434,35 @@
             "role": "Carmen's local fixer, masquerading as a glaciologist",
             "dossierNote": "Former Los Glaciares park scientist. Forges climate-research permits and books Carmen's escape routes across the ice field."
           },
-          "nextLead": "A hand-scrawled bearing across the ice field. Carmen's coordinates — and she knows you have them."
+          "nextLead": "Send the recovered evidence and collected tokens to ACME headquarters for the final report."
         },
         "clues": [
           "The boat ticket references Lago Argentino.",
           "The clue mentions ice floating on a large Patagonian lake.",
-          "Carmen borrowed a deckhand coat."
+          "The accomplice borrowed a deckhand coat."
         ],
         "puzzle": {
           "title": "Lake and Ice Trail",
           "description": "Use the boat-route clues around El Calafate.",
           "question": "Which hideout fits the evidence?",
           "options": [
-            "Lago Argentino boat dock",
-            "Glaciarium Museum",
+            "Lago Argentino pier",
+            "Glaciarium",
             "Cerro Otto",
             "Triple Frontier viewpoint"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">▰</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-blue-900\">Lake route / floating ice</p>\n          </div>\n        "
+          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">▰</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-blue-900\">Lake route / floating ice</p>\n          </div>\n        ",
+          "explanation": "Lago Argentino pier follows the evidence: The boat ticket references Lago Argentino. The clue mentions ice floating on a large Patagonian lake. The accomplice borrowed a deckhand coat. A recovered costume label reads: Deckhand.",
+          "hints": [
+            "Follow the lake-route ticket.",
+            "Boat and floating-ice clues support the Lago Argentino pier.",
+            "Answer: Lago Argentino pier. Lago Argentino pier follows the evidence: The boat ticket references Lago Argentino. The clue mentions ice floating on a large Patagonian lake. The accomplice borrowed a deckhand coat. A recovered costume label reads: Deckhand."
+          ]
         },
         "warrantAnswers": {
           "city": "El Calafate",
-          "hideout": "Lago Argentino boat dock",
+          "hideout": "Lago Argentino pier",
           "disguise": "Deckhand"
         },
         "funFact": "Lago Argentino is the large lake associated with glacier routes near El Calafate.",
@@ -2212,20 +2472,20 @@
           "national_parks_argentina"
         ],
         "difficulty": "detective",
-        "mechanic": "multiple-choice",
+        "mechanic": "deduction-choice",
         "regionTags": [
           "Santa Cruz",
           "El Calafate"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "▰ Lake route / floating ice",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout fits the evidence?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "lago-argentino-ferry",
         "briefing": {
           "headline": "LAKE SOUNDING LOG TAKEN!",
-          "report": "A boat log from Lago Argentino vanished before a glacier excursion. Carmen left a blue ticket stub near the pier.",
+          "report": "In this fictional training case: A boat log from Lago Argentino vanished before a glacier excursion. Eva Errázuriz left a blue ticket stub near the pier.",
           "callingCard": "The card says: \"Follow the largest blue mirror to the ice.\"",
           "suspect": {
             "name": "Eva Errázuriz",
@@ -2234,25 +2494,31 @@
             "role": "Carmen's local fixer, masquerading as a glaciologist",
             "dossierNote": "Former Los Glaciares park scientist. Forges climate-research permits and books Carmen's escape routes across the ice field."
           },
-          "nextLead": "A hand-scrawled bearing across the ice field. Carmen's coordinates — and she knows you have them."
+          "nextLead": "Send the recovered evidence and collected tokens to ACME headquarters for the final report."
         },
         "clues": [
-          "A ferry ticket names Lago Argentino.",
-          "A guide mentioned glacier-fed water and floating ice.",
-          "The disguise receipt reads: \"Boat naturalist.\""
+          "The fictional pier log lists 6 passengers at the first check.",
+          "Two passengers leave and three arrive before the second check.",
+          "A boat naturalist is waiting with the missing parcel at Lago Argentino pier."
         ],
         "puzzle": {
-          "title": "Lake And Glacier Link",
-          "description": "Use the lake and glacier clues to identify Carmen hideout.",
-          "question": "Where is Carmen headed?",
+          "title": "Passenger Log Deduction",
+          "description": "Use the complete written evidence below. Times, counts, and codes are fictional training data.",
+          "question": "How many passengers should appear at the second check?",
           "options": [
-            "Lago Argentino pier",
-            "Perito Moreno Glacier",
-            "Glaciarium",
-            "Cerro San Bernardo"
+            "7",
+            "5",
+            "9",
+            "11"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-water mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-blue-900\">Blue lake / glacier boats</p></div>"
+          "visualHtml": "<p>Consult the three written clues. This training puzzle does not represent a real timetable or visitor route.</p>",
+          "explanation": "6 − 2 + 3 = 7 passengers at the second check. The boat naturalist and Lago Argentino pier are identified by the witness clue.",
+          "hints": [
+            "Track departures and arrivals separately.",
+            "Start with 6; subtract the 2 who leave, then add the 3 who arrive.",
+            "Answer: 7. 6 − 2 + 3 = 7 passengers at the second check. The boat naturalist and Lago Argentino pier are identified by the witness clue."
+          ]
         },
         "warrantAnswers": {
           "city": "El Calafate",
@@ -2260,7 +2526,7 @@
           "disguise": "Boat naturalist"
         },
         "funFact": "El Calafate is a gateway for visits to Lago Argentino and the glaciers of Los Glaciares National Park.",
-        "learningObjective": "Connect place-based clues to a real Argentina location in the el calafate case pool.",
+        "learningObjective": "Subtract departures and add arrivals in a fictional passenger log.",
         "sources": [
           "unesco_los_glaciares",
           "national_parks_argentina"
@@ -2271,14 +2537,14 @@
           "el-calafate"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Use the lake and glacier clues to identify Carmen hideout.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. How many passengers should appear at the second check?",
         "reviewStatus": "source-linked-needs-line-review"
       },
       {
         "caseId": "glaciarium-lab",
         "briefing": {
           "headline": "CLIMATE CORE LABEL STOLEN!",
-          "report": "A museum label for an ice-core exhibit disappeared. Carmen left a chilled glove at the Glaciarium exit.",
+          "report": "In this fictional training case: A museum label for an ice-core exhibit disappeared. Eva Errázuriz left a chilled glove at the Glaciarium exit.",
           "callingCard": "A frosted card says: \"The past is frozen in layers.\"",
           "suspect": {
             "name": "Eva Errázuriz",
@@ -2287,25 +2553,31 @@
             "role": "Carmen's local fixer, masquerading as a glaciologist",
             "dossierNote": "Former Los Glaciares park scientist. Forges climate-research permits and books Carmen's escape routes across the ice field."
           },
-          "nextLead": "A hand-scrawled bearing across the ice field. Carmen's coordinates — and she knows you have them."
+          "nextLead": "Send the recovered evidence and collected tokens to ACME headquarters for the final report."
         },
         "clues": [
-          "A museum wristband is stamped Glaciarium.",
-          "The stolen label explains glacier layers and climate history.",
-          "Carmen disguised herself as a science educator."
+          "In this fictional museum exercise, a label says snow accumulates first.",
+          "Burial and compression follow accumulation.",
+          "The final label describes glacier ice. A science educator hid the labels at Glaciarium."
         ],
         "puzzle": {
-          "title": "Science Exhibit Deduction",
-          "description": "Use the museum and ice-core clues to identify the hideout.",
-          "question": "Which hideout fits?",
+          "title": "Exhibit Label Order",
+          "description": "Use the complete written evidence below. Times, counts, and codes are fictional training data.",
+          "question": "Which order follows the labels in the exercise?",
           "options": [
-            "Glaciarium",
-            "Perito Moreno Glacier",
-            "Lago Argentino pier",
-            "Civic Center"
+            "Snow accumulation → burial and compression → glacier ice",
+            "Glacier ice → snow accumulation → burial",
+            "Burial → glacier ice → snow accumulation",
+            "Snow accumulation → glacier ice → burial"
           ],
           "correctIndex": 0,
-          "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"cutout-glacier mx-auto\"></div><p class=\"mt-3 text-xs font-black uppercase text-blue-900\">Ice layers / science exhibit</p></div>"
+          "visualHtml": "<p>Consult the three written clues. This training puzzle does not represent a real timetable or visitor route.</p>",
+          "explanation": "Snow accumulation → burial and compression → glacier ice follows the evidence: In this fictional museum exercise, a label says snow accumulates first. Burial and compression follow accumulation. The final label describes glacier ice. A science educator hid the labels at Glaciarium.",
+          "hints": [
+            "Find the label explicitly marked as the first stage.",
+            "Accumulation precedes burial and compression; glacier ice is last.",
+            "Answer: Snow accumulation → burial and compression → glacier ice. Snow accumulation → burial and compression → glacier ice follows the evidence: In this fictional museum exercise, a label says snow accumulates first. Burial and compression follow accumulation. The final label describes glacier ice. A science educator hid the labels at Glaciarium."
+          ]
         },
         "warrantAnswers": {
           "city": "El Calafate",
@@ -2313,7 +2585,7 @@
           "disguise": "Science educator"
         },
         "funFact": "Glacier museums and park exhibits help visitors understand ice, climate, and Patagonian landscapes.",
-        "learningObjective": "Connect place-based clues to a real Argentina location in the el calafate case pool.",
+        "learningObjective": "Order stages using the sequence given in the exhibit labels.",
         "sources": [
           "unesco_los_glaciares",
           "national_parks_argentina"
@@ -2324,7 +2596,7 @@
           "el-calafate"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "Use the museum and ice-core clues to identify the hideout.",
+        "accessibilityDescription": "All required evidence and instructions are written as text. Which order follows the labels in the exercise?",
         "reviewStatus": "source-linked-needs-line-review"
       }
     ]
@@ -2358,19 +2630,19 @@
       "title": "Jesuit Block and Estancias of Córdoba",
       "publisher": "UNESCO World Heritage Centre",
       "url": "https://whc.unesco.org/en/list/995/",
-      "reviewed": true
+      "reviewed": false
     },
     "unesco_iguazu": {
       "title": "Iguazu National Park",
       "publisher": "UNESCO World Heritage Centre",
       "url": "https://whc.unesco.org/en/list/303/",
-      "reviewed": true
+      "reviewed": false
     },
     "unesco_los_glaciares": {
       "title": "Los Glaciares National Park",
       "publisher": "UNESCO World Heritage Centre",
       "url": "https://whc.unesco.org/en/list/145/",
-      "reviewed": true
+      "reviewed": false
     },
     "bariloche_tourism": {
       "title": "Bariloche Tourism",
@@ -2389,6 +2661,13 @@
       "publisher": "Administracion de Parques Nacionales",
       "url": "https://www.argentina.gob.ar/interior/ambiente/parquesnacionales",
       "reviewed": false
+    },
+    "train_route": {
+      "title": "Tren a las Nubes — official route",
+      "publisher": "La Ruta Natural, Argentina",
+      "url": "https://www.larutanatural.gob.ar/es/imperdible/85/tren-a-las-nubes",
+      "reviewed": false
     }
-  }
+  },
+  "contentVersion": 3
 }

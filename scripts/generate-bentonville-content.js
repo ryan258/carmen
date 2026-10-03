@@ -1,5 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
+const {validatePack, escapeHtml} = require('../game-core.js');
+const {writeAtomic} = require('./content-io.cjs');
 
 const root = path.resolve(__dirname, '..');
 
@@ -8,61 +10,62 @@ const sources = {
     title: 'Things to Do in Bentonville AR',
     publisher: 'Visit Bentonville',
     url: 'https://www.visitbentonville.com/things-to-do/',
-    reviewed: true
+    reviewed: false
   },
   visit_bentonville_square: {
     title: 'Downtown Square',
     publisher: 'Visit Bentonville',
     url: 'https://www.visitbentonville.com/things-to-do/parks-trails-lakes/downtown-square/',
-    reviewed: true
+    reviewed: false
   },
   walmart_museum: {
     title: 'Walmart Museum & History',
     publisher: 'Walmart',
     url: 'https://corporate.walmart.com/about/walmart-museum/',
-    reviewed: true
+    reviewed: false
   },
   walmart_home_office: {
     title: 'New Home Office',
     publisher: 'Walmart',
     url: 'https://corporate.walmart.com/about/newhomeoffice',
-    reviewed: true
+    reviewed: false
   },
   crystal_bridges: {
     title: 'About Crystal Bridges Museum of American Art',
     publisher: 'Crystal Bridges Museum of American Art',
     url: 'https://crystalbridges.org/about',
-    reviewed: true
+    reviewed: false
   },
   momentary: {
     title: 'About the Momentary',
     publisher: 'The Momentary',
     url: 'https://themomentary.org/about/',
-    reviewed: true
+    reviewed: false
   },
   compton_gardens: {
     title: 'Compton Gardens & Arboretum',
     publisher: 'Peel Compton Foundation',
     url: 'https://peelcompton.org/compton-gardens-arboretum/',
-    reviewed: true
+    reviewed: false
   },
   coler_preserve: {
     title: 'Things to do at Coler Mountain Bike Preserve',
     publisher: 'Visit Bentonville',
     url: 'https://www.visitbentonville.com/things-to-do/parks-trails-lakes/coler/',
-    reviewed: true
+    reviewed: false
   },
   osage_park: {
     title: 'Osage Park',
     publisher: 'Peel Compton Foundation',
     url: 'https://peelcompton.org/osage-park/',
-    reviewed: true
+    reviewed: false
   }
 };
 
 const locations = [
   {
     id: 'downtown-square',
+    token: {"char": "🏛️", "name": "Square"},
     name: 'Downtown Square',
     province: 'Historic Downtown',
     emoji: '🏛️',
@@ -80,6 +83,7 @@ const locations = [
   },
   {
     id: 'walmart-museum',
+    token: {"char": "🏷️", "name": "Price Tag"},
     name: 'Walmart Museum',
     province: 'Downtown Bentonville',
     emoji: '🛒',
@@ -97,6 +101,7 @@ const locations = [
   },
   {
     id: 'walmart-home-office',
+    token: {"char": "🧭", "name": "Campus"},
     name: 'Walmart Home Office',
     province: '8th Street Campus',
     emoji: '🏢',
@@ -114,6 +119,7 @@ const locations = [
   },
   {
     id: 'crystal-bridges',
+    token: {"char": "🖼️", "name": "Gallery"},
     name: 'Crystal Bridges',
     province: 'Museum Way',
     emoji: '🎨',
@@ -131,6 +137,7 @@ const locations = [
   },
   {
     id: 'the-momentary',
+    token: {"char": "🎭", "name": "Stage"},
     name: 'The Momentary',
     province: '8th Street Market District',
     emoji: '🎭',
@@ -148,6 +155,7 @@ const locations = [
   },
   {
     id: 'compton-gardens',
+    token: {"char": "🌿", "name": "Leaf"},
     name: 'Compton Gardens',
     province: 'North Main Greenway',
     emoji: '🌿',
@@ -165,6 +173,7 @@ const locations = [
   },
   {
     id: 'coler-preserve',
+    token: {"char": "🚵", "name": "Trail"},
     name: 'Coler Mountain Bike Preserve',
     province: 'West Bentonville Trails',
     emoji: '🚵',
@@ -182,6 +191,7 @@ const locations = [
   },
   {
     id: 'osage-park',
+    token: {"char": "🏹", "name": "Arrow"},
     name: 'Osage Park',
     province: 'Southwest Bentonville Wetlands',
     emoji: '🦆',
@@ -207,7 +217,7 @@ const nextLeadById = {
   'the-momentary': 'A seed packet marked North Main says the next handoff is hiding among native Ozark plants.',
   'compton-gardens': 'A bike repair ticket lists the Hub, a campground, and a westside trail code.',
   'coler-preserve': 'A wetland map and an archery scorecard point south to Osage Park.',
-  'osage-park': 'The last scorecard has Carmen\'s red mark and three final coordinates for the closing chase.'
+  'osage-park': 'The last scorecard directs ACME to headquarters for the closing report.'
 };
 
 const casesByLocation = {
@@ -217,7 +227,7 @@ const casesByLocation = {
       headline: 'SQUARE MARKET SWAP!',
       scene: 'a farmers market stall on the Bentonville Square',
       item: 'a brass market bell',
-      hideout: 'Downtown Square',
+      hideout: 'Farmers Market stalls',
       disguise: 'Farmers market vendor',
       clues: [
         'A canvas tote is stamped with Bentonville Farmers Market and a sketch of the Square fountain.',
@@ -225,9 +235,10 @@ const casesByLocation = {
         'A witness saw the courier fold a tent beside boutiques, bakeries, and public art.'
       ],
       puzzle: {
+        hints: ["Separate food sales from civic records and park lighting.", "Honey, flowers, and numbered stalls point to an outdoor market.", "Answer: Farmers Market stalls. Honey, flowers, and numbered stalls point to an outdoor market."],
         title: 'Market Map Match',
-        question: 'Which stop matches the market clues?',
-        options: ['Downtown Square', 'Osage Park', 'Crystal Bridges', 'Coler Mountain Bike Preserve']
+        question: 'Which Square activity matches the stall, receipt, and tent clues?',
+        options: ['Farmers Market stalls', 'County records desk', 'Museum gallery', 'Winter lights display']
       },
       funFact: 'The Bentonville Square hosts community programs including First Fridays, farmers markets, and art markets.'
     },
@@ -244,6 +255,7 @@ const casesByLocation = {
         'The torn corner shows restaurants, bars, and boutiques around one downtown block.'
       ],
       puzzle: {
+        hints: ["Use the event route and street art together.", "Look for the pedestrian street space, rather than a permanent museum or civic building.", "Answer: A Street Promenade. Look for the pedestrian street space, rather than a permanent museum or civic building."],
         title: 'Event Route Deduction',
         question: 'Where should ACME close the event route?',
         options: ['A Street Promenade', 'The Momentary Tower', 'Coler campground', 'Osage dog park']
@@ -263,6 +275,7 @@ const casesByLocation = {
         'A coffee receipt points to the east side of the downtown plaza.'
       ],
       puzzle: {
+        hints: ["The type of public records matters more than the building material.", "A county seat, notary stamp, and records room point to county government.", "Answer: Benton County Courthouse. A county seat, notary stamp, and records room point to county government."],
         title: 'Civic Landmark Check',
         question: 'Which hideout fits the county-seat evidence?',
         options: ['Benton County Courthouse', 'Walmart Museum galleries', 'Compton Gardens house', 'The Quiver Archery Range']
@@ -282,6 +295,7 @@ const casesByLocation = {
         'The footprint trail circles the central park instead of leaving downtown.'
       ],
       puzzle: {
+        hints: ["Consider where public lights and a community gathering would be managed.", "The light clips and central green-space clue identify the park on the Square.", "Answer: Square Park. The light clips and central green-space clue identify the park on the Square."],
         title: 'Light Timer Logic',
         question: 'Where did the courier hide the timer key?',
         options: ['Square Park', 'Sam Walton Hall', 'Momentary Green', 'Crystal Bridges library']
@@ -301,6 +315,7 @@ const casesByLocation = {
         'A public-art walking map is folded to the downtown Square.'
       ],
       puzzle: {
+        hints: ["The booth tag identifies the event; the paint rag identifies the activity.", "Find the art-selling booth rather than a whole museum.", "Answer: Art Market booth. Find the art-selling booth rather than a whole museum."],
         title: 'Public Art Trail',
         question: 'Which warrant hideout matches the stencil trail?',
         options: ['Art Market booth', 'Coler Hub', 'Osage wetland dock', 'Museum Way library']
@@ -322,7 +337,8 @@ const casesByLocation = {
         'The suspect asked how to get from classic finds to the museum galleries.'
       ],
       puzzle: {
-        title: 'Price Tag Cipher',
+        hints: ["The two prices are a store-name clue, not an encrypted message.", "A dime is ten cents. Look for the historic shop whose name includes 5 and 10.", "Answer: Walton's 5&10. A dime is ten cents. Look for the historic shop whose name includes 5 and 10."],
+        title: 'Dime Store Evidence',
         question: 'Which museum space is tied to the 5&10 clues?',
         options: ["Walton's 5&10", 'The Quiver', 'Momentary Green', 'The Hub']
       },
@@ -341,6 +357,7 @@ const casesByLocation = {
         'The calling card says the coldest clue is beside the museum sweets.'
       ],
       puzzle: {
+        hints: ["Use the food on the receipt to narrow the venue type.", "Sundaes and malt powder belong to the museum cafe, not its archives.", "Answer: The Spark Cafe. Sundaes and malt powder belong to the museum cafe, not its archives."],
         title: 'Cafe Receipt Match',
         question: 'Where does the dessert evidence point?',
         options: ['The Spark Cafe', 'Eleven at Crystal Bridges', 'Airship Coffee', '8th & Plate']
@@ -360,6 +377,7 @@ const casesByLocation = {
         'A docent badge was scanned at the gallery entrance, not the cafe.'
       ],
       puzzle: {
+        hints: ["Ask which museum area presents its history to visitors.", "A displayed decade marker belongs in the galleries.", "Answer: Museum galleries. A displayed decade marker belongs in the galleries."],
         title: 'Timeline Stop',
         question: 'Which place holds the missing decade marker?',
         options: ['Museum galleries', 'Downtown Square fountain', 'Compton Exhibit Room', 'Osage boardwalk']
@@ -379,6 +397,7 @@ const casesByLocation = {
         'The fake technician knew which display cases used vintage product labels.'
       ],
       puzzle: {
+        hints: ["Read the key tag and floor card as labels.", "The archive-wall label is more specific than the general galleries.", "Answer: From the archives wall. The archive-wall label is more specific than the general galleries."],
         title: 'Archive Key Sort',
         question: 'Which hideout fits the key-tag evidence?',
         options: ['From the archives wall', 'The Momentary Box Office', 'Crystal Bridges trailhead', 'Coler Westside']
@@ -398,9 +417,10 @@ const casesByLocation = {
         'A welcome desk map circles the galleries, 5&10, and Spark Cafe.'
       ],
       puzzle: {
+        hints: ["A visitor admission stamp belongs at an arrival point.", "Look for the museum welcome desk rather than a cafe or trail.", "Answer: Museum welcome desk. Look for the museum welcome desk rather than a cafe or trail."],
         title: 'Welcome Desk Check',
         question: 'Where did the counterfeit stamp belong?',
-        options: ['Museum welcome desk', 'Walmart Home Office map kiosk', 'Compton Gardens trailhead', 'Osage pavilion']
+        options: ['Museum welcome desk', 'Fictional campus map desk', 'Compton Gardens trailhead', 'Osage pavilion']
       },
       funFact: 'The Walmart Museum lists free admission and includes galleries, Walton\'s 5&10, and The Spark Cafe.'
     }
@@ -411,7 +431,7 @@ const casesByLocation = {
       headline: 'CAMPUS MAP MISDIRECT!',
       scene: 'the new Walmart Home Office visitor route',
       item: 'an interactive campus map chip',
-      hideout: 'Interactive map kiosk',
+      hideout: 'Fictional campus map desk',
       disguise: 'Campus wayfinder',
       clues: [
         'The map chip shows 350 acres and a zoom button.',
@@ -419,9 +439,10 @@ const casesByLocation = {
         'A visitor badge points to 8th Street and a public tour.'
       ],
       puzzle: {
+        hints: ["The screen describes the whole campus rather than one building.", "This fictional map desk is the place for a campus-wide overview.", "Answer: Fictional campus map desk. This fictional map desk is the place for a campus-wide overview."],
         title: 'Campus Scale Match',
         question: 'Which Home Office stop matches the 350-acre clue?',
-        options: ['Interactive map kiosk', 'Walton\'s 5&10', 'Crystal Spring pond', 'Osage wetland boardwalk']
+        options: ['Fictional campus map desk', 'Walton\'s 5&10', 'Crystal Spring pond', 'Osage wetland boardwalk']
       },
       funFact: 'Walmart describes the new Home Office as a 350-acre campus with an interactive map.'
     },
@@ -438,6 +459,7 @@ const casesByLocation = {
         'The replacement plaque was wrapped in a campus wayfinding map.'
       ],
       puzzle: {
+        hints: ["Treat the hall name on the tour card as the strongest clue.", "The campus lanyard supports the named hall rather than a downtown stop.", "Answer: Sam Walton Hall. The campus lanyard supports the named hall rather than a downtown stop."],
         title: 'Public Space Route',
         question: 'Which campus place is named in the tour-card clues?',
         options: ['Sam Walton Hall', 'The Spark Cafe', 'The Momentary Tower', 'The Coler Hub']
@@ -457,6 +479,7 @@ const casesByLocation = {
         'The badge scanner logged a stop between office spaces and public tour routes.'
       ],
       puzzle: {
+        hints: ["The receipt names the venue directly.", "Match 8th & Plate with the campus food hall.", "Answer: 8th & Plate. Match 8th & Plate with the campus food hall."],
         title: 'Lunch Trail',
         question: 'Which Home Office hideout matches the lunch receipt?',
         options: ['8th & Plate', 'The Spark Cafe', 'Eleven', 'Airship Coffee']
@@ -476,6 +499,7 @@ const casesByLocation = {
         'A campus map circles a fitness building near the public spaces list.'
       ],
       puzzle: {
+        hints: ["Pair the access-card wording with the running shoes.", "Whole Health & Fitness identifies a fitness space rather than an office.", "Answer: Walton Family Whole Health & Fitness. Whole Health & Fitness identifies a fitness space rather than an office."],
         title: 'Access Card Audit',
         question: 'Which space should ACME check for the cloned fob?',
         options: ['Walton Family Whole Health & Fitness', 'Osage pickleball courts', 'Compton Exhibit Room', 'Crystal Bridges library']
@@ -495,6 +519,7 @@ const casesByLocation = {
         'A storyboard mockup says every building tells a unique story.'
       ],
       puzzle: {
+        hints: ["Distinguish ordinary workplaces from public recreation spaces.", "Keys for twelve office buildings support the office-space option.", "Answer: Office Spaces. Keys for twelve office buildings support the office-space option."],
         title: 'Office Story Match',
         question: 'Which campus hideout fits the twelve-building evidence?',
         options: ['Office Spaces', 'Museum galleries', 'The Momentary galleries', 'Peel Museum']
@@ -516,6 +541,7 @@ const casesByLocation = {
         'The suspect headed toward pavilions around two spring-fed ponds.'
       ],
       puzzle: {
+        hints: ["Look for a structure crossing water.", "Glass enclosure and an art transfer identify the bridge.", "Answer: Glass bridge. Glass enclosure and an art transfer identify the bridge."],
         title: 'Bridge Evidence',
         question: 'Which Crystal Bridges location matches the water-and-glass clues?',
         options: ['Glass bridge', 'Momentary Green', 'Square Park', 'Osage boardwalk']
@@ -535,6 +561,7 @@ const casesByLocation = {
         'The courier carried a docent clipboard instead of a gallery crate.'
       ],
       puzzle: {
+        hints: ["Follow the boot prints out of the indoor galleries.", "An outdoor sculpture label belongs along a sculpture trail.", "Answer: Sculpture trail. An outdoor sculpture label belongs along a sculpture trail."],
         title: 'Trail Label Check',
         question: 'Where is the missing sculpture label likely hidden?',
         options: ['Sculpture trail', 'The Hub', 'A Street Promenade', 'The Quiver']
@@ -554,6 +581,7 @@ const casesByLocation = {
         'A library pencil is tucked into a gallery transfer envelope.'
       ],
       puzzle: {
+        hints: ["Reference books and a quiet table identify a type of room.", "A catalog of art volumes belongs in a library.", "Answer: Library. A catalog of art volumes belongs in a library."],
         title: 'Reference Room Riddle',
         question: 'Which hideout matches the catalog clues?',
         options: ['Library', 'Museum welcome desk', 'Compton Exhibit Room', 'Home Office media hub']
@@ -573,6 +601,7 @@ const casesByLocation = {
         'A gallery guard saw an intern badge near a classroom wing.'
       ],
       puzzle: {
+        hints: ["The layout around ponds is architectural evidence.", "Look for the museum pavilions rather than a single gallery.", "Answer: Museum pavilions. Look for the museum pavilions rather than a single gallery."],
         title: 'Architecture Deduction',
         question: 'Which Crystal Bridges area fits the blueprint?',
         options: ['Museum pavilions', 'Downtown Square', 'Coler campground', 'Osage dog park']
@@ -592,6 +621,7 @@ const casesByLocation = {
         'A note compares early American works with contemporary artists.'
       ],
       puzzle: {
+        hints: ["A span of centuries describes a collection.", "The gallery-guide pin and collection card fit the permanent collection.", "Answer: Permanent collection. The gallery-guide pin and collection card fit the permanent collection."],
         title: 'Collection Span',
         question: 'Where should the guide be stopped?',
         options: ['Permanent collection', 'The Momentary Tower', 'Walmart archive wall', 'Compton native plant beds']
@@ -613,6 +643,7 @@ const casesByLocation = {
         'A floor plan points to a multidisciplinary art space near 8th Street Market.'
       ],
       puzzle: {
+        hints: ["A cue sheet and gaffer tape suggest a performance venue.", "Match the named hall to the black-box theater clue.", "Answer: Fermentation Hall. Match the named hall to the black-box theater clue."],
         title: 'Backstage Venue Match',
         question: 'Which Momentary space fits the theater evidence?',
         options: ['Fermentation Hall', 'Square Park', 'Walton\'s 5&10', 'Crystal Bridges library']
@@ -632,6 +663,7 @@ const casesByLocation = {
         'A technician badge says Tower access only.'
       ],
       puzzle: {
+        hints: ["Vertical height and mezzanines distinguish the space.", "Find the Tower rather than the outdoor Green.", "Answer: The Tower. Find the Tower rather than the outdoor Green."],
         title: 'Tower Level Check',
         question: 'Where is the lighting patch sheet hidden?',
         options: ['The Tower', 'The Hub', 'Sam Walton Hall', 'Compton Gardens trail']
@@ -651,6 +683,7 @@ const casesByLocation = {
         'The courier parked a bike near the outdoor space before entering the crowd.'
       ],
       puzzle: {
+        hints: ["Grass stains rule out an indoor gallery.", "Picnics and outdoor music gatherings fit the Green.", "Answer: Momentary Green. Picnics and outdoor music gatherings fit the Green."],
         title: 'Outdoor Pass',
         question: 'Which outdoor venue matches the forged pass?',
         options: ['Momentary Green', 'Osage wetland dock', 'Square fountain', 'Crystal Spring pond']
@@ -670,6 +703,7 @@ const casesByLocation = {
         'The suspect said the place is for contemporary art in everyday life.'
       ],
       puzzle: {
+        hints: ["Changing exhibitions need display walls.", "The gallery wall and artist tape identify the Galleries.", "Answer: The Galleries. The gallery wall and artist tape identify the Galleries."],
         title: 'Changing Exhibit',
         question: 'Which hideout fits the changing-exhibition clue?',
         options: ['The Galleries', 'Walmart Museum galleries', 'Compton Exhibit Room', 'Peel Museum parlor']
@@ -689,6 +723,7 @@ const casesByLocation = {
         'A note says the Box Office is the place to ask for event information.'
       ],
       puzzle: {
+        hints: ["Badge printing and ticket schedules point to visitor admission.", "Search the ticket desk at the Box Office.", "Answer: Box Office. Search the ticket desk at the Box Office."],
         title: 'Ticket Desk Trail',
         question: 'Where should ACME compare the duplicate badge?',
         options: ['Box Office', 'Downtown visitor center', 'Coler campground', 'Crystal Bridges Coffee Bar']
@@ -710,6 +745,7 @@ const casesByLocation = {
         'The suspect wore garden gloves and quoted Dr. Neil Compton.'
       ],
       puzzle: {
+        hints: ["The missing objects are labels for living plants.", "Native plant beds fit the seed packet and planting tags.", "Answer: Native plant beds. Native plant beds fit the seed packet and planting tags."],
         title: 'Plant Tag Sort',
         question: 'Which Compton Gardens hideout matches the native-plant clues?',
         options: ['Native plant beds', 'The Hub', 'Momentary Green', 'Square Park']
@@ -729,6 +765,7 @@ const casesByLocation = {
         'The courier never crossed the trail; the map disappeared indoors.'
       ],
       puzzle: {
+        hints: ["The docent badge points to an indoor interpretation space.", "Use the exhibit-room clue rather than guessing from visitor hours alone.", "Answer: Exhibit Room. Use the exhibit-room clue rather than guessing from visitor hours alone."],
         title: 'Exhibit Hours',
         question: 'Where did the map vanish?',
         options: ['Exhibit Room', 'The Spark Cafe', 'Sam Walton Hall', 'Osage pickleball courts']
@@ -748,6 +785,7 @@ const casesByLocation = {
         'The suspect carried an arborist clipboard and pruning twine.'
       ],
       puzzle: {
+        hints: ["A bicycle bell and path markings indicate a route.", "The garden trails connect the native plant areas.", "Answer: Garden trails. The garden trails connect the native plant areas."],
         title: 'Trail Marker Check',
         question: 'Which path did the arborist tamper with?',
         options: ['Garden trails', 'Coler Eastside', 'Razorback Greenway by The Momentary', 'Square event route']
@@ -767,6 +805,7 @@ const casesByLocation = {
         'The courier underlined Ozark landscape preservation twice.'
       ],
       puzzle: {
+        hints: ["Use the subject of the quote rather than the building type.", "The conservation note points to the Dr. Compton display.", "Answer: Dr. Compton display. The conservation note points to the Dr. Compton display."],
         title: 'Conservation Note',
         question: 'Which exhibit should ACME inspect?',
         options: ['Dr. Compton display', 'Walmart timeline', 'Crystal Bridges pavilions', 'The Momentary Box Office']
@@ -786,6 +825,7 @@ const casesByLocation = {
         'A floor plan says the mid-century modern home can host events.'
       ],
       puzzle: {
+        hints: ["A rental floor plan serves a different purpose from a garden map.", "Tables and a private rental identify the house.", "Answer: Compton house. Tables and a private rental identify the house."],
         title: 'Rental Ledger',
         question: 'Where does the floor plan point?',
         options: ['Compton house', 'Peel Museum parlor', 'Sam Walton Hall', 'Momentary Green']
@@ -807,6 +847,7 @@ const casesByLocation = {
         'The courier carried a repair stand tag marked Fire Line.'
       ],
       puzzle: {
+        hints: ["The object is a launch structure, not a whole trail network.", "Three downhill runs leave from the Hub.", "Answer: The Hub. Three downhill runs leave from the Hub."],
         title: 'Trail Launch Deduction',
         question: 'Which Coler feature is the launch point?',
         options: ['The Hub', 'Momentary Tower', 'Downtown Square', 'Osage pavilion']
@@ -826,7 +867,8 @@ const casesByLocation = {
         'A repair ticket says ride straight from camp onto the trail.'
       ],
       puzzle: {
-        title: 'Camp Pass Count',
+        hints: ["Site types and hauling gear describe an overnight area.", "Hike-in and camper-van pitches identify the campground; no addition is needed.", "Answer: Coler campground. Hike-in and camper-van pitches identify the campground; no addition is needed."],
+        title: 'Camp Pass Match',
         question: 'Where did the forged pass belong?',
         options: ['Coler campground', 'Osage dog park', 'Compton house', 'The Spark Cafe']
       },
@@ -845,6 +887,7 @@ const casesByLocation = {
         'The suspect changed arrows before a skills class rolled through.'
       ],
       puzzle: {
+        hints: ["Beginner-friendly and advanced routes are contrasted.", "Choose the Westside option for beginner and intermediate riders.", "Answer: Westside trails. Choose the Westside option for beginner and intermediate riders."],
         title: 'Trail Level Logic',
         question: 'Which trail area matches beginner and intermediate riders?',
         options: ['Westside trails', 'Eastside trails', 'Momentary Green', 'Square Park']
@@ -864,6 +907,7 @@ const casesByLocation = {
         'A red arrow points from The Hub toward the more advanced side.'
       ],
       puzzle: {
+        hints: ["Technical terrain and protective gear indicate advanced riding.", "The Eastside option fits rocky sections and gap jumps.", "Answer: Eastside trails. The Eastside option fits rocky sections and gap jumps."],
         title: 'Advanced Route',
         question: 'Where is the route card hidden?',
         options: ['Eastside trails', 'Westside trails', 'Downtown Square', 'Compton Exhibit Room']
@@ -883,6 +927,7 @@ const casesByLocation = {
         'A note says the next clue is brewed between trail segments.'
       ],
       puzzle: {
+        hints: ["Use the named business on the receipt.", "Coffee inside the preserve identifies Airship Coffee at Coler.", "Answer: Airship Coffee at Coler. Coffee inside the preserve identifies Airship Coffee at Coler."],
         title: 'Trail Cafe Trail',
         question: 'Which Coler stop matches the receipt?',
         options: ['Airship Coffee at Coler', 'The Spark Cafe', 'Crystal Bridges Coffee Bar', '8th & Plate']
@@ -904,6 +949,7 @@ const casesByLocation = {
         'A muddy arrow points from the pavilion toward the water.'
       ],
       puzzle: {
+        hints: ["Look for a route built over water.", "Floating boardwalks provide the wetland path described by the map.", "Answer: Floating boardwalks. Floating boardwalks provide the wetland path described by the map."],
         title: 'Wetland Route',
         question: 'Where does the final compass bearing point?',
         options: ['Floating boardwalks', 'The Hub', 'Crystal Bridges pavilions', 'Downtown Square']
@@ -918,12 +964,13 @@ const casesByLocation = {
       hideout: 'The Quiver Archery Range',
       disguise: 'Range marshal',
       clues: [
-        'The scorecard uses fletching marks as cipher arrows.',
+        'The scorecard shows arrows with feathered ends, beside a target with concentric rings.',
         'A range marshal vest was found near Osage Park.',
         'The clue says beginners and seasoned archers can both take aim there.'
       ],
       puzzle: {
-        title: 'Arrow Cipher',
+        hints: ["Identify the sport from the equipment rather than treating it as a code.", "Fletching and targets point to archery, at The Quiver.", "Answer: The Quiver Archery Range. Fletching and targets point to archery, at The Quiver."],
+        title: 'Archery Equipment Match',
         question: 'Which Osage Park feature matches the scorecard?',
         options: ['The Quiver Archery Range', 'Coler Hub', 'Momentary Box Office', 'Museum welcome desk']
       },
@@ -942,7 +989,8 @@ const casesByLocation = {
         'The suspect counted courts before cutting across the park.'
       ],
       puzzle: {
-        title: 'Court Count',
+        hints: ["The paddle and tournament bracket identify the sport.", "Match pickleball courts; the court number is a label, not a counting problem.", "Answer: Pickleball courts. Match pickleball courts; the court number is a label, not a counting problem."],
+        title: 'Court Equipment Match',
         question: 'Where should the scorekeeper be stopped?',
         options: ['Pickleball courts', 'Walton Family Whole Health & Fitness', 'The Momentary galleries', 'Garden trails']
       },
@@ -961,6 +1009,7 @@ const casesByLocation = {
         'A docent badge reads Art in the Park.'
       ],
       puzzle: {
+        hints: ["The label describes art distributed outdoors.", "Art in the Park fits the recreation-area path.", "Answer: Art in the Park. Art in the Park fits the recreation-area path."],
         title: 'Park Art Match',
         question: 'Which Osage destination fits the lifted label?',
         options: ['Art in the Park', 'Crystal Bridges permanent collection', 'Downtown Art Market booth', 'Momentary galleries']
@@ -980,6 +1029,7 @@ const casesByLocation = {
         'A volunteer vest has wetland mud on one side and paw prints on the other.'
       ],
       puzzle: {
+        hints: ["Paw prints and a leash hook point to an animal recreation area.", "The dog park fits the permit and volunteer evidence.", "Answer: Dog park. The dog park fits the permit and volunteer evidence."],
         title: 'Park Permit Trail',
         question: 'Which Osage Park feature matches the paw-print clues?',
         options: ['Dog park', 'The Quiver', 'Coler campground', 'Compton house']
@@ -990,33 +1040,37 @@ const casesByLocation = {
 };
 
 function createVisual(title, detail) {
-  return `<div class="cutout-evidence text-center"><div class="text-4xl">📍</div><p class="mt-2 typewriter-font text-xs bg-white/70 p-2 rounded">${title}</p><p class="mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800">${detail}</p></div>`;
+  return `<div class="cutout-evidence text-center"><div class="text-4xl">📍</div><p class="mt-2 typewriter-font text-xs bg-white/70 p-2 rounded">${escapeHtml(title)}</p><p class="mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800">${escapeHtml(detail)}</p></div>`;
 }
 
 function createCase(location, variant, index) {
   const caseId = variant.slug === 'classic' ? `classic-${location.id}` : `${location.id}-${variant.slug}`;
   const correctIndex = variant.puzzle.correctIndex ?? 0;
-  const mechanic = index === 0
-    ? 'deduction-choice'
-    : ['map-coordinate-choice', 'timeline-choice', 'logic-grid-choice', 'sequence-choice'][index - 1];
+  const mechanic = 'deduction-choice';
 
   return {
     caseId,
     briefing: {
       headline: variant.headline,
-      report: `${variant.item} vanished from ${variant.scene}. Carmen is already gone, but ${location.henchman.alias} is still in Bentonville, blending in as a ${variant.disguise.toLowerCase()}.`,
-      callingCard: `A red card reads: "I left the hard part local. Ask ${location.henchman.alias} why ${variant.hideout} mattered."`,
+      report: `In this fictional training case, ${variant.item} vanished from ${variant.scene}. Carmen is already gone, but ${location.henchman.alias} is still in Bentonville, leaving the evidence below for ACME to examine.`,
+      callingCard: `A red card reads: "I left the hard part local. Follow the evidence to find ${location.henchman.alias}."`,
       suspect: { ...location.henchman },
-      nextLead: nextLeadById[location.id]
+      nextLead: variant.nextLead ?? location.nextLead ?? nextLeadById[location.id]
     },
-    clues: variant.clues,
+    clues: variant.clues.map((clue, i) => i === 2 && !clue.toLowerCase().includes(variant.disguise.toLowerCase()) ? `${clue} Witness identification: ${variant.disguise}.` : clue),
     puzzle: {
       title: variant.puzzle.title,
-      description: `Use the Bentonville clues to identify the correct ${location.name} hideout.`,
+      description: variant.puzzle.description ?? `Use the three written clues to identify the ${location.name} hideout.`,
       question: variant.puzzle.question,
       options: variant.puzzle.options,
       correctIndex,
-      visualHtml: createVisual(location.name, variant.hideout)
+      visualHtml: variant.puzzle.visualHtml ?? createVisual(location.name, 'Compare the three clue sheets'),
+      hints: variant.puzzle.hints ?? [
+        `Start with this evidence: ${variant.clues[0]}`,
+        `Narrow the choices using a second clue: ${variant.clues[1]}`,
+        `The matching answer is ${variant.puzzle.options[correctIndex]}. ${variant.clues[0]}`
+      ],
+      explanation: variant.puzzle.explanation ?? `${variant.puzzle.options[correctIndex]} matches the evidence: ${variant.clues.join(' ')} The witness evidence identifies the ${variant.disguise} disguise.`
     },
     warrantAnswers: {
       city: location.name,
@@ -1024,14 +1078,15 @@ function createCase(location, variant, index) {
       disguise: variant.disguise
     },
     funFact: variant.funFact,
-    learningObjective: `Identify a real Bentonville landmark or district feature from connected clues about ${location.name}.`,
-    sources: [location.source],
-    difficulty: index === 0 ? 'detective' : ['rookie', 'detective', 'inspector', 'detective'][index - 1],
+    learningObjective: variant.learningObjective ?? `Identify a real Bentonville landmark or district feature from connected clues about ${location.name}.`,
+    sources: variant.sources ?? [location.source],
+    difficulty: variant.difficulty ?? (index === 0 ? 'detective' : ['rookie', 'detective', 'inspector', 'detective'][(index - 1) % 4]),
     mechanic,
-    regionTags: [location.province, location.name],
+    regionTags: [...new Set([location.province, location.name])],
     visualType: 'inline-html-cutout',
-    accessibilityDescription: `${location.name} evidence card for ${variant.hideout}.`,
-    reviewStatus: 'source-linked-needs-line-review'
+    accessibilityDescription: `Evidence card for ${location.name}. Use the three clue sheets to solve the case.`,
+    reviewStatus: variant.reviewStatus ?? 'source-linked-needs-line-review',
+    ...(variant.reviewEvidence ? {reviewEvidence: {...variant.reviewEvidence}} : {})
   };
 }
 
@@ -1048,13 +1103,14 @@ const regionData = {
 
 const quizPack = {
   schemaVersion: 1,
+  contentVersion: 3,
   id: 'bentonville-carmen',
   title: 'Where in Bentonville is Carmen Sandiego?',
   subtitle: 'Bentonville Division',
   heroLocation: 'BENTONVILLE',
-  intro: 'The master thief Carmen Sandiego has scattered clues across Bentonville landmarks, trails, museums, and public spaces. Use your deductive wits, decode ciphers, and issue the correct arrest warrant before she slips away!',
+  intro: 'A fictional ACME training mystery across Bentonville landmarks. Compare clue sheets, answer multiple-choice puzzles, and arrest fictional accomplices. Choose 4, 6, or all 8 stops; finish with a report at headquarters.',
   evidenceLabel: 'ACME BENTONVILLE EVIDENCE',
-  successMessage: 'You arrested Carmen Sandiego in Bentonville and recovered every stolen clue.',
+  successMessage: 'Your selected route is complete. The evidence from your captured accomplices has helped ACME close the case.',
   map: {
     center: {
       lat: 36.3729,
@@ -1065,45 +1121,17 @@ const quizPack = {
     maxZoom: 17
   },
   finalConfrontation: {
-    title: 'Boss Duel',
-    rounds: [
-      {
-        ariaLabel: 'Encrypted farewell note showing FDUPHQ for a Caesar cipher challenge.',
-        description: 'Crack Carmen\'s signature encrypted farewell note using Caesar cipher (shift left by 3).',
-        visualHtml: '<div class="text-center"><span class="text-xs bg-slate-900 text-amber-400 px-3 py-1 rounded font-mono font-bold border border-slate-700">ENCRYPTED NOTE</span><p class="typewriter-font text-lg font-bold border border-dashed border-red-700 bg-red-50 text-red-900 px-4 py-2 mt-4 rounded rotate-[-3deg]">FDUPHQ</p></div>',
-        question: 'What does "FDUPHQ" decode to?',
-        options: ['CARMEN', 'CAPER', 'CHIEF', 'CABIN'],
-        correctIndex: 0
-      },
-      {
-        ariaLabel: 'ACME intelligence list used to deduce Carmen getaway vehicle.',
-        description: 'Use process of elimination to deduce Carmen\'s getaway route through Bentonville.',
-        visualHtml: '<div class="text-left text-[9px] bg-white/80 p-3 rounded border border-slate-200 leading-tight space-y-1 font-semibold"><p class="font-bold border-b pb-0.5 text-red-800">ACME Intelligence Details</p><p>* The suspect wears a red hat.</p><p>* The suspect is not at the Downtown Square.</p><p>* The suspect does not drive a delivery truck.</p><p>* Hired a trail guide near Osage Park.</p></div>',
-        question: 'Which getaway vehicle matches the profile?',
-        options: ['Helicopter', 'Bicycle', 'Tour Boat', 'Delivery Truck'],
-        correctIndex: 1
-      },
-      {
-        ariaLabel: 'Compass grid starting at wetland row 3 column 3 and moving north 2 west 1.',
-        description: 'Solve the final compass tracking course through the Osage Park wetlands.',
-        visualHtml: '<div class="w-full text-xs"><div class="grid grid-cols-6 gap-0.5 border border-slate-400 p-1 bg-blue-950/20 rounded font-bold text-[8px] text-center"><div></div><div class="bg-red-500/20 text-red-900 p-0.5 rounded">Boardwalk</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div class="bg-blue-300 p-0.5 rounded">Wetland</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><p class="text-[8px] text-slate-500 text-center mt-2 font-semibold">Start: Wetland (3,3). Go North 2, West 1.</p></div>',
-        question: 'Which coordinate tile contains the escape portal?',
-        options: [
-          'Row 1, Col 2 (Boardwalk)',
-          'Row 5, Col 4 (Dog Park)',
-          'Row 3, Col 1 (Pond Dock)',
-          'Row 1, Col 4 (Archery Range)'
-        ],
-        correctIndex: 0
-      }
-    ]
+    title: 'Final Report',
+    rounds: require('./final-rounds.cjs')()
   },
   locations: regionData.locations,
   questions: questionBank,
   sources
 };
 
-// The pack file is self-contained (locations + questions + sources inline); it is
-// the only artifact the runtime loads.
-fs.mkdirSync(path.join(root, 'data/packs'), { recursive: true });
-fs.writeFileSync(path.join(root, 'data/packs/bentonville.json'), `${JSON.stringify(quizPack, null, 2)}\n`);
+// Importing the authoring source is read-only; only the CLI writes generated content.
+if (require.main === module) {
+  validatePack(quizPack);
+  writeAtomic(path.join(root, 'data/packs/bentonville.json'), `${JSON.stringify(quizPack, null, 2)}\n`);
+}
+module.exports = {createCase, quizPack, locations, casesByLocation};
