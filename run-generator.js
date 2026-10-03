@@ -38,9 +38,8 @@
   // shortened without breaking the authored location order (nextLead text
   // assumes each stop is followed by the very next one in pack order).
   function computeStopCountOptions(total) {
-    const candidates = [Math.ceil(total / 2), Math.ceil(total * 0.75), total];
-    const unique = [...new Set(candidates)].filter((count) => count >= 3 || count === total);
-    return unique.sort((a, b) => a - b);
+    const core = typeof module !== 'undefined' && module.exports ? require('./game-core.js') : root.CarmenCore;
+    return core.stopCounts(total);
   }
 
   const api = {

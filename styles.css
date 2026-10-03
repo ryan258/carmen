@@ -1,44 +1,10 @@
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+Pro:wght@400;600;700&family=Courier+Prime:wght@400;700&display=swap');
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: system-ui, sans-serif;
     background: #0c1222;
     color: #e2e8f0;
     overflow-x: hidden;
     min-height: 100vh;
-  }
-  .title-font { font-family: 'Playfair Display', serif; }
-  .typewriter-font { font-family: 'Courier Prime', monospace; }
-
-  /* Parchment Paper Aesthetic */
-  .parchment {
-    background-color: #f6efe2;
-    color: #1e293b;
-    background-image: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.15), rgba(0,0,0,0.03)), 
-                      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.045'/%3E%3C/svg%3E");
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4), inset 0 0 40px rgba(139,92,26,0.1);
-    border: 1px solid #e4d8c1;
-  }
-
-  .glass {
-    background: rgba(15,23,42,0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.06);
-  }
-
-  /* Custom Leaflet Tooltip Styling */
-  .leaflet-tooltip-carmen {
-    background-color: #0f172a !important;
-    border: 1px solid #fbbf24 !important;
-    color: #fbbf24 !important;
-    font-family: 'Source Sans Pro', sans-serif !important;
-    font-size: 10px !important;
-    font-weight: 700 !important;
-    padding: 2px 6px !important;
-    border-radius: 4px !important;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3) !important;
   }
 
   /* Keyframe Animations */
@@ -150,7 +116,7 @@
   }
 
   .typewriter-font {
-    font-family: 'Courier Prime', 'Courier New', monospace;
+    font-family: ui-monospace, monospace;
   }
 
   .glass {
@@ -342,6 +308,7 @@
   }
 
   .map-fallback {
+    overflow-y: auto;
     height: 100%;
     min-height: 300px;
     display: grid;
@@ -399,3 +366,63 @@
       font-size: 0.72rem !important;
     }
   }
+
+/* Shared accessible surface rules. Keep these after legacy utility overrides. */
+header.glass { flex-wrap: wrap; gap: 1rem; padding: 1rem; }
+header.glass > div { min-width: 0; flex-wrap: wrap; }
+header h1 { overflow-wrap: anywhere; }
+button, select { min-height: 44px; }
+button:disabled { cursor: not-allowed; }
+:focus-visible { outline: 3px solid #176c72 !important; outline-offset: 4px; }
+header :focus-visible, footer :focus-visible { outline-color: #fff3d6 !important; }
+.case-tabs { display: flex; flex-wrap: wrap; padding-left: 0; }
+.case-tabs button { flex: 1 1 8rem; white-space: normal; }
+#caseFileColumn, #gameScreen > div { min-width: 0; }
+#contentPuzzle > .mt-4 { flex-wrap: wrap; gap: .75rem; }
+#contentPuzzle > .mt-4 > div { flex-wrap: wrap; }
+.parchment { padding: clamp(.75rem, 3vw, 1.5rem); }
+:is(.glass:not(header), .parchment) :is(.text-amber-300,.text-amber-400,.text-yellow-400,.text-sky-400,.text-emerald-400,.text-red-400,.text-red-500) { color: #34302a !important; }
+.glass:not(header).text-white { color: #17130f !important; }
+:is(.glass,.parchment) :is(.bg-slate-950,.bg-slate-900,.bg-slate-800,.bg-red-600,.bg-red-700,.bg-red-800),
+:is(.glass,.parchment) :is(.bg-slate-950,.bg-slate-900,.bg-slate-800,.bg-red-600,.bg-red-700,.bg-red-800) * { color: #fff3d6 !important; }
+#packSelector, #stopCountSelect { background: #17130f; color: #fff3d6; }
+:is(.glass,.parchment) a { color: #17485d; text-decoration: underline; text-underline-offset: .15em; overflow-wrap: anywhere; }
+footer a { color: #fff3d6; text-decoration: underline; }
+:is(.glass,.parchment) [class*="text-["] { font-size: .8rem; line-height: 1.45; }
+.token-tile { border: 2px solid #514537; padding: .55rem; display: flex; flex-direction: column; gap: .25rem; text-align: center; overflow-wrap: anywhere; }
+.token-tile strong, .token-tile > span:last-child { font-size: .8rem; line-height: 1.3; }
+.token-tile.earned { background: #fff3d6; color: #17130f; }
+.token-tile.locked { background: #ded4c4; color: #34302a; }
+.explanation { margin: 1rem 0; max-width: 42rem; margin-inline: auto; }
+.explanation h4 { font-weight: 800; }
+.explanation p { margin-top: .6rem; line-height: 1.6; }
+.review-note { font-size: .85rem; }
+.record-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; padding: .5rem 0; border-bottom: 1px solid #514537; }
+[role="dialog"] > div { max-height: 90dvh; overflow-y: auto; }
+.game-status:empty { display: none; }
+.game-status, .storage-status { position: relative; z-index: 20; background: #fff3d6; color: #17130f; padding: .6rem 1rem; border-bottom: 2px solid #17130f; }
+.map-fallback { overflow-y: auto; height: 100%; background: #fff3d6; color: #17130f; padding: 1rem; }
+.map-fallback ol { list-style: decimal inside; }
+.leaflet-control-attribution { color: #17130f !important; background: #fff !important; font-size: .75rem !important; }
+.leaflet-control-attribution a { color: #17485d !important; }
+.text-purple-900 { color: #581c87; }
+.text-emerald-900 { color: #064e3b; }
+.ambient-particle { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: #fff3d6; opacity: .12; animation: ambient-drift 10s ease-in-out infinite alternate; }
+@keyframes ambient-drift { to { transform: translate(20px,-15px); } }
+body.reduced-motion .confetti, body.reduced-motion .ambient-particle { display: none; }
+body.high-contrast { --bass-paper: #fff; --bass-paper-light: #fff; --bass-ink: #111; }
+body.high-contrast :is(.glass:not(header),.parchment,.token-tile) { background: #fff; color: #111; }
+@media (prefers-reduced-motion: reduce) { .confetti, .ambient-particle { display: none; } }
+@media (max-width: 400px) { #tokenGrid { grid-template-columns: repeat(2,minmax(0,1fr)); } .case-tabs button { flex-basis: 40%; } }
+
+/* Stable voice-friendly controls and feedback at the point of action. */
+[hidden] { display: none !important; }
+header, header > div:last-child { flex-wrap: wrap; }
+.utility-control, .continue-control {
+  min-height: 44px; padding: .5rem .8rem; border: 2px solid currentColor;
+  background: var(--bass-ink); color: var(--bass-paper-light); font-weight: 700;
+}
+.answer-key { min-width: 5.2rem; padding: .35rem; flex-shrink: 0; }
+.action-feedback { margin-block: .8rem; line-height: 1.6; font-weight: 600; }
+.action-feedback:empty { display: none; }
+#contentPuzzle > div:last-child { flex-wrap: wrap; gap: .8rem; }

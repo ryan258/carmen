@@ -6,8 +6,8 @@
 <title>Where in Bentonville is Carmen Sandiego?</title>
 <!-- Built locally from Tailwind v3 (see tailwind.config.js); rebuild: npx tailwindcss -i tailwind.input.css -o tailwind.build.css --minify -->
 <link rel="stylesheet" href="./tailwind.build.css">
-<!-- Leaflet Map CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<!-- Optional map CSS must not block the local game scripts. -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" media="print" onload="this.media='all'" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body class="min-h-screen relative flex flex-col justify-between">
@@ -35,12 +35,16 @@
     <button onclick="toggleHighContrast()" id="contrastToggle" class="text-slate-400 hover:text-white transition-colors text-xs font-bold min-w-11 min-h-11 flex items-center justify-center rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" title="Toggle high contrast" aria-label="Toggle high contrast">
       HC
     </button>
-    <button onclick="showResetModal()" class="text-slate-400 hover:text-white transition-colors text-sm font-semibold border border-white/10 px-3 py-1 rounded bg-white/5" title="Restart Game">
-      Restart Case
+    <button id="routeToggle" onclick="toggleTextRoute()" class="utility-control" aria-pressed="false">Text route: off</button>
+    <button onclick="goToTitle()" class="utility-control" title="Keep progress and return to the title">Pause</button>
+    <button onclick="showResetModal()" class="text-slate-400 hover:text-white transition-colors text-sm font-semibold border border-white/10 px-3 py-1 rounded bg-white/5" title="Discard saved progress">
+      Discard Case
     </button>
   </div>
 </header>
 
+<p id="storageStatus" class="storage-status" role="status" hidden></p>
+<div id="gameStatus" class="game-status" role="status" aria-live="polite" aria-atomic="true"></div>
 <!-- Main Container -->
 <main id="app" class="relative z-10 flex-grow w-full max-w-7xl mx-auto px-4 py-6 md:py-8 flex flex-col justify-center">
 
@@ -67,34 +71,34 @@
       </div>
       
       <p id="packIntro" class="text-slate-400 max-w-md mx-auto text-base md:text-lg mb-8 leading-relaxed">
-        The master thief Carmen Sandiego has scattered clues across Bentonville landmarks, trails, museums, and public spaces. Use your deductive wits, decode ciphers, and issue the correct arrest warrant before she slips away!
+        A fictional ACME training mystery across Bentonville landmarks. Choose a route, compare clues, and complete the final report at headquarters.
       </p>
 
       <div class="max-w-md mx-auto mb-8 text-left">
         <label for="packSelector" class="block text-xs font-bold uppercase tracking-[0.25em] text-sky-300 mb-2">Quiz Pack</label>
-        <select id="packSelector" onchange="selectQuizPackFromControl(this.value)" class="w-full bg-slate-950/80 border border-white/15 text-white rounded-lg px-4 py-3 font-bold focus:outline-none focus:ring-2 focus:ring-amber-400">
+        <select id="packSelector" disabled onchange="selectQuizPackFromControl(this.value)" class="w-full bg-slate-950/80 border border-white/15 text-white rounded-lg px-4 py-3 font-bold focus:outline-none focus:ring-2 focus:ring-amber-400">
           <option>Loading quiz packs...</option>
         </select>
         <p id="packSelectorStatus" class="mt-2 text-xs text-slate-400" aria-live="polite">Loading quiz packs...</p>
       </div>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <button onclick="goToDifficultySelect()" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-slate-900 text-lg font-bold rounded-xl shadow-lg shadow-amber-500/20 transition-all duration-300 transform active:scale-95">
+        <button id="startButton" disabled onclick="goToDifficultySelect()" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-slate-900 text-lg font-bold rounded-xl shadow-lg shadow-amber-500/20 transition-all duration-300 transform active:scale-95">
           📁 START NEW INVESTIGATION
         </button>
-        <button id="resumeButton" onclick="resumeGame()" class="hidden w-full sm:w-auto px-8 py-4 glass text-white hover:bg-white/10 text-lg font-bold rounded-xl transition-all duration-300 transform active:scale-95 border border-white/20">
+        <button id="resumeButton" disabled onclick="resumeGame()" class="hidden w-full sm:w-auto px-8 py-4 glass text-white hover:bg-white/10 text-lg font-bold rounded-xl transition-all duration-300 transform active:scale-95 border border-white/20">
           💼 RESUME CURRENT CASE
         </button>
-        <button onclick="showRecordsModal()" class="w-full sm:w-auto px-8 py-4 glass text-white hover:bg-white/10 text-lg font-bold rounded-xl transition-all duration-300 transform active:scale-95 border border-white/20">
+        <button id="recordsButton" disabled onclick="showRecordsModal()" class="w-full sm:w-auto px-8 py-4 glass text-white hover:bg-white/10 text-lg font-bold rounded-xl transition-all duration-300 transform active:scale-95 border border-white/20">
           🏅 VIEW RECORDS
         </button>
       </div>
       <button id="clearBrokenSaveButton" onclick="clearBrokenSave()" class="hidden mt-4 text-sm font-bold text-amber-300 underline underline-offset-4">
-        Clear unreadable saved case
+        Clear incompatible or unreadable saved case
       </button>
 
       <div class="mt-12 grid grid-cols-3 gap-4 border-t border-white/5 pt-8 max-w-lg mx-auto text-slate-500 text-xs tracking-wider uppercase font-semibold">
-        <div>🗺️ Real Interactive Map</div>
+        <div>🗺️ Route Map</div>
         <div>🔍 Clues & Ciphers</div>
         <div>📑 Warrant Arrests</div>
       </div>
@@ -119,7 +123,7 @@
           <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-emerald-500/20">📋</div>
           <div>
             <h4 class="text-white font-bold text-lg group-hover:text-emerald-400 transition-colors">Rookie Detective</h4>
-            <p class="text-slate-400 text-sm mt-1">6 lives. Three clue sheets per case. Warrants are partially pre-filled to help you learn the locations.</p>
+            <p class="text-slate-400 text-sm mt-1">6 lives and up to 3 hints per stop. The warrant location is filled in for you.</p>
           </div>
         </button>
 
@@ -127,7 +131,7 @@
           <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-amber-500/20">🔍</div>
           <div>
             <h4 class="text-white font-bold text-lg group-hover:text-amber-400 transition-colors">Senior Detective</h4>
-            <p class="text-slate-400 text-sm mt-1">5 lives. 3 clues per location. Standard warrant checks. The optimal way to play.</p>
+            <p class="text-slate-400 text-sm mt-1">5 lives and up to 2 hints per stop. Choose all three warrant fields from the evidence.</p>
           </div>
         </button>
 
@@ -135,7 +139,7 @@
           <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-red-500/20">⭐</div>
           <div>
             <h4 class="text-white font-bold text-lg group-hover:text-red-400 transition-colors">Chief Inspector</h4>
-            <p class="text-slate-400 text-sm mt-1">4 lives. Tightest clues. Warrants must be selected completely from scratch with zero hints.</p>
+            <p class="text-slate-400 text-sm mt-1">4 lives and no hints. Choose all three warrant fields from the same evidence used in the other difficulties.</p>
           </div>
         </button>
       </div>
@@ -165,7 +169,7 @@
         <!-- Lives Indicator (Magnifying Glasses) -->
         <div class="text-right">
           <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-1">Backup Lives</p>
-          <div id="livesContainer" class="flex gap-1 justify-end">
+          <div id="livesContainer" role="img" aria-label="Lives remaining" class="flex gap-1 justify-end">
             <!-- Rendered via JS -->
           </div>
         </div>
@@ -197,17 +201,17 @@
     <div id="caseFileColumn" class="lg:col-span-7 flex flex-col min-h-[580px] shadow-2xl">
       
       <!-- Tab Headers -->
-      <div class="flex border-b border-white/5 pl-4 gap-1">
-        <button id="tabDossier" onclick="switchTab('dossier')" class="dossier-tab active px-5 py-3 text-sm font-bold bg-slate-900 border-t border-x border-white/5 text-slate-400 hover:text-white">
+      <div class="case-tabs flex border-b border-white/5 pl-4 gap-1" role="tablist" aria-label="Case file">
+        <button id="tabDossier" role="tab" aria-controls="contentDossier" aria-selected="true" tabindex="0" onclick="switchTab('dossier')" class="dossier-tab active px-5 py-3 text-sm font-bold bg-slate-900 border-t border-x border-white/5 text-slate-400 hover:text-white">
           📂 Dossier Briefing
         </button>
-        <button id="tabClues" onclick="switchTab('clues')" class="dossier-tab px-5 py-3 text-sm font-bold border-t border-x border-white/5 text-slate-400 hover:text-white">
+        <button id="tabClues" role="tab" aria-controls="contentClues" aria-selected="false" tabindex="-1" onclick="switchTab('clues')" class="dossier-tab px-5 py-3 text-sm font-bold border-t border-x border-white/5 text-slate-400 hover:text-white">
           🔍 Clue Sheets
         </button>
-        <button id="tabPuzzle" onclick="switchTab('puzzle')" class="dossier-tab px-5 py-3 text-sm font-bold border-t border-x border-white/5 text-slate-400 hover:text-white" disabled>
+        <button id="tabPuzzle" role="tab" aria-controls="contentPuzzle" aria-selected="false" tabindex="-1" onclick="switchTab('puzzle')" class="dossier-tab px-5 py-3 text-sm font-bold border-t border-x border-white/5 text-slate-400 hover:text-white" disabled>
           🧩 Puzzle Clue
         </button>
-        <button id="tabWarrant" onclick="switchTab('warrant')" class="dossier-tab px-5 py-3 text-sm font-bold border-t border-x border-white/5 text-slate-400 hover:text-white" disabled>
+        <button id="tabWarrant" role="tab" aria-controls="contentWarrant" aria-selected="false" tabindex="-1" onclick="switchTab('warrant')" class="dossier-tab px-5 py-3 text-sm font-bold border-t border-x border-white/5 text-slate-400 hover:text-white" disabled>
           📑 Arrest Warrant
         </button>
       </div>
@@ -216,7 +220,7 @@
       <div class="parchment rounded-b-2xl rounded-tr-2xl p-6 flex-grow flex flex-col justify-between min-h-[500px] text-slate-950">
 
         <!-- ================= TAB CONTENT 1: DOSSIER ================= -->
-        <div id="contentDossier" class="space-y-6 flex-grow flex flex-col justify-between">
+        <div id="contentDossier" role="tabpanel" aria-labelledby="tabDossier" tabindex="0" class="space-y-6 flex-grow flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between border-b border-slate-300 pb-2">
               <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">Case Briefing File</span>
@@ -261,14 +265,14 @@
           </div>
 
           <div class="mt-8 flex justify-end">
-            <button onclick="switchTab('clues')" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center gap-2">
+            <button id="beginInvestigationBtn" onclick="switchTab('clues')" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center gap-2">
               Begin Field Investigation ➔
             </button>
           </div>
         </div>
 
         <!-- ================= TAB CONTENT 2: CLUES ================= -->
-        <div id="contentClues" class="hidden space-y-6 flex-grow flex flex-col justify-between">
+        <div id="contentClues" role="tabpanel" aria-labelledby="tabClues" tabindex="0" class="hidden space-y-6 flex-grow flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between border-b border-slate-300 pb-2">
               <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">Field Clue Sheets</span>
@@ -316,7 +320,7 @@
         </div>
 
         <!-- ================= TAB CONTENT 3: PUZZLE ================= -->
-        <div id="contentPuzzle" class="hidden space-y-6 flex-grow flex flex-col justify-between">
+        <div id="contentPuzzle" role="tabpanel" aria-labelledby="tabPuzzle" tabindex="0" class="hidden space-y-6 flex-grow flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between border-b border-slate-300 pb-2">
               <span id="puzzleTitleText" class="text-xs font-bold tracking-widest text-slate-500 uppercase">Tango Cipher Decode</span>
@@ -341,26 +345,28 @@
                 </div>
               </div>
             </div>
-            <div id="hintPanel" class="hint-panel hidden text-xs leading-relaxed text-slate-800 p-3 mb-4" aria-live="polite"></div>
+            <p id="puzzleFeedback" class="action-feedback"></p>
+            <div id="hintPanel" class="hint-panel hidden text-xs leading-relaxed text-slate-800 p-3 mb-4"></div>
           </div>
 
           <div class="mt-4 flex justify-between items-center border-t border-slate-300 pt-4">
-            <button onclick="switchTab('clues')" class="px-4 py-2 border border-slate-400 hover:border-slate-800 rounded font-semibold text-slate-700 hover:text-slate-900 transition-colors">
-              ← Review Clues
+            <button id="reviewCluesBtn" onclick="switchTab('clues')" class="px-4 py-2 border border-slate-400 hover:border-slate-800 rounded font-semibold text-slate-700 hover:text-slate-900 transition-colors">
+              Clues
             </button>
             <div class="flex flex-col sm:flex-row gap-2">
               <button id="hintButton" onclick="requestHint()" class="px-4 py-3 border border-slate-500 hover:border-slate-900 text-slate-800 font-bold rounded-lg transition-colors">
-                Request Hint
+                Hint
               </button>
+              <button id="finalContinueBtn" class="continue-control" onclick="advanceFinalRound()" hidden>Continue</button>
               <button id="goToWarrantBtn" onclick="switchTab('warrant')" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center gap-2 opacity-50 cursor-not-allowed" disabled>
-                Issue Arrest Warrant ➔
+                Continue: warrant
               </button>
             </div>
           </div>
         </div>
 
         <!-- ================= TAB CONTENT 4: WARRANT ================= -->
-        <div id="contentWarrant" class="hidden space-y-6 flex-grow flex flex-col justify-between relative overflow-hidden">
+        <div id="contentWarrant" role="tabpanel" aria-labelledby="tabWarrant" tabindex="0" class="hidden space-y-6 flex-grow flex flex-col justify-between relative overflow-hidden">
           <div>
             <div class="flex items-center justify-between border-b border-slate-300 pb-2">
               <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">ACME Warrant Submission</span>
@@ -374,7 +380,7 @@
             <div class="bg-white/50 p-4 rounded-xl border border-slate-200 shadow-inner space-y-4 max-w-md mx-auto">
               <!-- Field 1: Stop -->
               <div>
-                <label class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Target Stop</label>
+                <label for="warrantCity" class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Target Stop</label>
                 <select id="warrantCity" class="w-full bg-white text-slate-900 border border-slate-300 rounded-lg px-3 py-2 font-bold focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
                   <!-- Dynamically populated -->
                 </select>
@@ -382,7 +388,7 @@
 
               <!-- Field 2: Hideout -->
               <div>
-                <label class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Target Hideout</label>
+                <label for="warrantHideout" class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Target Hideout</label>
                 <select id="warrantHideout" class="w-full bg-white text-slate-900 border border-slate-300 rounded-lg px-3 py-2 font-bold focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
                   <!-- Dynamically populated -->
                 </select>
@@ -390,7 +396,7 @@
 
               <!-- Field 3: Disguise -->
               <div>
-                <label class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Suspect Disguise</label>
+                <label for="warrantDisguise" class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Suspect Disguise</label>
                 <select id="warrantDisguise" class="w-full bg-white text-slate-900 border border-slate-300 rounded-lg px-3 py-2 font-bold focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
                   <!-- Dynamically populated -->
                 </select>
@@ -398,6 +404,7 @@
             </div>
           </div>
 
+          <p id="warrantFeedback" class="action-feedback"></p>
           <!-- Stamp overlay container -->
           <div id="warrantStampOverlay" class="hidden absolute inset-0 flex items-center justify-center bg-transparent pointer-events-none z-30">
             <div id="warrantStamp" class="stamp text-5xl font-black px-8 py-3 rounded-xl border-4 transform -rotate-12 bg-white/90 shadow-2xl">
@@ -410,7 +417,7 @@
               ← Return to Puzzle
             </button>
             <button id="submitWarrantBtn" onclick="submitWarrant()" class="px-6 py-3 bg-red-700 hover:bg-red-800 text-white font-extrabold rounded-lg transition-colors flex items-center gap-2 shadow-md">
-              ⚡ Dispatch Field Team
+              Submit warrant
             </button>
           </div>
         </div>
@@ -456,16 +463,16 @@
 </main>
 
 <!-- Game Reset Confirmation Modal -->
-<div id="resetModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+<div id="resetModal" role="dialog" aria-modal="true" aria-labelledby="resetTitle" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
   <div class="glass max-w-sm w-full rounded-2xl p-6 border border-white/15 text-center fade-in-up">
     <span class="text-3xl">⚠️</span>
-    <h4 class="title-font text-white text-xl font-bold mt-2">Abort Active Case?</h4>
+    <h4 id="resetTitle" class="title-font text-white text-xl font-bold mt-2">Abort Active Case?</h4>
     <p class="text-slate-400 text-sm mt-2">Are you sure you want to discard your current progress? The case file and gathered clues will be wiped.</p>
     <div class="grid grid-cols-2 gap-3 mt-6">
       <button onclick="confirmReset()" class="py-2.5 bg-red-600 hover:bg-red-500 text-white font-bold rounded-lg text-sm transition-colors">
         Yes, Abort
       </button>
-      <button onclick="hideResetModal()" class="py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold rounded-lg text-sm border border-white/5 transition-colors">
+      <button data-initial-focus onclick="hideResetModal()" class="py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold rounded-lg text-sm border border-white/5 transition-colors">
         Cancel
       </button>
     </div>
@@ -473,11 +480,11 @@
 </div>
 
 <!-- Records Modal -->
-<div id="recordsModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+<div id="recordsModal" role="dialog" aria-modal="true" aria-labelledby="recordsTitle" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
   <div class="glass max-w-lg w-full rounded-2xl p-6 border border-white/15 text-left fade-in-up">
     <div class="flex justify-between items-start gap-4">
       <div>
-        <h4 class="title-font text-xl font-bold">ACME Records</h4>
+        <h4 id="recordsTitle" class="title-font text-xl font-bold">ACME Records</h4>
         <p class="text-sm text-slate-400 mt-1">Best scores and case outcomes stored on this device.</p>
       </div>
       <button onclick="hideRecordsModal()" class="min-w-11 min-h-11 text-xl font-bold" aria-label="Close records">×</button>
@@ -490,12 +497,19 @@
 
 <!-- Footer -->
 <footer class="relative z-10 w-full text-center py-4 text-[10px] text-slate-500 tracking-wider uppercase border-t border-white/5 bg-slate-950/20 mt-8">
-  <span id="packFooterTitle">Where in Bentonville is Carmen Sandiego?</span> © 2026. Map data © OpenStreetMap contributors, Tiles © CartoDB.
+  <span id="packFooterTitle">Where in Bentonville is Carmen Sandiego?</span> — Unofficial fan-made training game. All crimes and suspects are fictional.
+  <a href="https://www.openstreetmap.org/copyright">Map data © OpenStreetMap contributors</a>.
+  <a href="https://www.openstreetmap.org/fixthemap">Report a map issue</a>.
 </footer>
 
 <!-- Leaflet Map JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script async src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="./game-core.js"></script>
+<script src="./builtin-pack.js"></script>
+<script src="./map-config.js"></script>
 <script src="./run-generator.js"></script>
+<script src="./game-map.js"></script>
+<script src="./game-records.js"></script>
 <script src="./game.js"></script>
 </body>
 </html>
