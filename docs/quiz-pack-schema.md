@@ -1,62 +1,43 @@
-# Quiz Pack Schema
+# Quiz pack contract
 
-`data/quiz-packs.json` is the pack manifest, and each file under `data/packs/` is a game-content pack. The runtime should be able to swap packs without JavaScript edits as long as the manifest entry points at a pack that follows this shape.
+`data/quiz-packs.json` lists first-party packs with `schemaVersion: 1`, `defaultPackId`, and entries containing `id`, `title`, `description`, and a local `./data/packs/<name>.json` path. Entry identity/title must match the pack; IDs and paths are unique, the list is nonempty, and the default must be listed. Pack data is repository-owned; there is no remote-pack or upload feature.
 
-## Manifest Fields
+The executable contracts are `CarmenCore.validateManifest` and `CarmenCore.validatePack` in `game-core.js`, used by the loader and `npm run check:content`. Structural validity does not establish factual correctness.
 
-- `schemaVersion`: currently `1`.
-- `defaultPackId`: pack id selected on first load.
-- `packs`: list of selectable packs.
-- `packs[].id`: stable id. Must match the pack file's top-level `id`.
-- `packs[].title`: selector label. Should match the pack file's `title`.
-- `packs[].description`: short selector status text.
-- `packs[].path`: relative path to the pack file, for example `./data/packs/argentina.json`.
+## Pack fields
 
-## Pack Fields
+- `schemaVersion: 1`; positive integer `contentVersion`, increased when content changes invalidate saved case semantics.
+- Nonempty `id`, `title`, `subtitle`, `heroLocation`, `intro`, `evidenceLabel`, and `successMessage`.
+- `map.center.lat/lng` in geographic bounds; finite `minZoom ≤ zoom ≤ maxZoom`, between 0 and 20. Tile URL/attribution live in `map-config.js`.
+- `locations`: ordered array, at least 4 and at most 100. Every location has unique `id`, `name`, `province`, `emoji`, numeric `lat/lng`, a canonical `henchman` (`name`, `alias`, `emoji`, `role`, `dossierNote`), and `token: {name, char}`. Token names must be unique in the pack.
+- `questions`: exactly one nonempty array per location ID. Existing packs contain five cases per stop; the runtime contract does not require padding new content with weak variants.
+- `sources`: registry keyed by source ID, with `title`, `publisher`, HTTPS `url`, and boolean `reviewed`.
+- `finalConfrontation.title` and exactly three structurally valid report descriptors in `rounds`. The live questions come from `CarmenCore.finalRounds`: selected first-case evidence, selected middle-case evidence, and the last completed stop's token. The resolver supplies all written instructions and is also used by save validation. Descriptors do not introduce independent facts or override this shared engine. Editorial evidence comes from the selected cases.
 
-- `schemaVersion`: currently `1`.
-- `id`: stable pack identifier.
-- `title`: browser title, footer title, and pack name.
-- `subtitle`: header subtitle.
-- `heroLocation`: large title-screen place text.
-- `intro`: title-screen introduction.
-- `evidenceLabel`: label rendered on generated puzzle evidence cards.
-- `successMessage`: final results message after Carmen is caught.
-- `map.center.lat` and `map.center.lng`: default map center.
-- `map.zoom`, `map.minZoom`, `map.maxZoom`: Leaflet zoom settings.
-- `locations`: ordered route stops. Each stop needs `id`, `name`, `province`, `emoji`, `tagline`, `lat`, `lng`, and `henchman`.
-- `questions`: object keyed by `location.id`; each value is that location's randomized case pool.
-- `sources`: source registry keyed by source id.
-- `finalConfrontation.title` and `finalConfrontation.rounds`: optional endgame puzzle rounds. If omitted, the built-in Bentonville fallback rounds are used.
+## Case fields
 
-## Case Fields
+Every case has a pack-unique `caseId`; `briefing` with `headline`, `report`, `callingCard`, `nextLead`, and `suspect`; exactly three text `clues`; a `puzzle` with `title`, `description`, `question`, four distinct text `options`, zero-based `correctIndex`, and `explanation`; plus `warrantAnswers.city/hideout/disguise` and `funFact`.
 
-Each case in `questions[locationId]` follows the case contract in [content-rubric.md](content-rubric.md). Required game fields include:
+`warrantAnswers.city` equals the parent location name. The disguise and hideout must be recoverable from the evidence. Use one canonical label for equivalent sites within a stop; the same place must not appear under competing names in warrant choices. The UI prefills the established location and offers only current-stop hideouts/disguises. The calling card and decorative visual should not simply print the answer. Keep essential instructions visible as text; do not hide textual evidence behind `role="img"`.
 
-- `caseId`
-- `briefing.headline`
-- `briefing.report`
-- `briefing.callingCard`
-- `briefing.suspect`
-- `clues`
-- `puzzle.title`
-- `puzzle.description`
-- `puzzle.question`
-- `puzzle.options`
-- `puzzle.correctIndex`
-- `warrantAnswers.city`
-- `warrantAnswers.hideout`
-- `warrantAnswers.disguise`
-- `funFact`
+Required metadata: `learningObjective`, source IDs, `difficulty` (`rookie`, `detective`, `inspector`), `mechanic: "deduction-choice"` (the current engine contract), nonempty `regionTags`, `visualType`, `accessibilityDescription`, and `reviewStatus`. The difficulty metadata is descriptive; runtime difficulty does not filter the pool. Optional `puzzle.hints` is an array of nonempty text strings. Both current packs author three: a reasoning nudge, a stronger step, and a worked answer. New cases should do the same.
 
-## Randomization
+Use `reviewStatus: "source-linked-needs-line-review"` until editorial work is complete. To mark `reviewed`, also record:
 
-The route order is the order of `locations`. For each stop, `run-generator.js` chooses one case from `questions[location.id]` using the run seed. A new pack should include multiple cases per location for replay value; the current tests require at least five per active location.
+```json
+{
+  "reviewEvidence": {
+    "reviewer": "Actual reviewer name",
+    "date": "YYYY-MM-DD",
+    "notes": "Specific claims, source passages, corrections, and any fictional details checked."
+  }
+}
+```
 
-## Coordinates
+The loader, UI and content checker share the same evidence predicate: actual calendar date, nonempty reviewer and notes, and reviewed source entries. Setting reviewed without that evidence fails the structural contract. The optional sharing gate additionally requires every case to be reviewed. Do not replace a review with a boolean or infer review from structural checks.
 
-The common denominator across packs is map-backed trivia: every location must include numeric `lat` and `lng` fields, and every case pool must map back to one of those location ids.
+## HTML and compatibility
 
-## Trust Boundary
+`puzzle.visualHtml` is optional trusted first-party presentation markup. The loader rejects obvious executable elements and event handlers, but this is not a general sanitizer. Prefer text and semantic elements. All pack JSON participates in the Tailwind content scan; run `npm run build:css` after adding utility classes.
 
-Pack files are trusted first-party content. `puzzle.visualHtml` and `finalConfrontation.rounds[].visualHtml` are injected with `innerHTML` and are **not** sanitized. Only load packs you author or review — do not point a manifest entry at a third-party or user-supplied pack file, or its markup runs with full page privileges (stored XSS). If untrusted packs ever become a goal, sanitize `visualHtml` at render time first.
+The full Bentonville fallback is generated from the same pack. Run `npm run build:content` after editing its authoring source. A content-version mismatch makes an existing schema-5 save incompatible; it does not silently select a new case or alter an answer.

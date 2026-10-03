@@ -1,5 +1,38 @@
 # Changelog
 
+## Unreleased — October 3, 2026 review remediation
+
+- Protect stale save writes, completion cleanup and abort confirmation; close dialogs when another tab changes progress.
+- Add explicit Continue, Pause and Text route controls; shorten warrant lists and match visible/accessible answer names.
+- Resolve final questions from selected cases and share the answer contract with save validation. Save schema is 5; pack content versions are 3.
+- Fix duplicated HTML IDs, content contradictions and canonical place labels; author progressive hints and worked reasoning.
+- Preserve authoring review metadata and tokens; validate manifests/fallback equality; replace generated outputs atomically.
+- Extract map/records adapters; remove obsolete helpers, fixed finale trivia, unused travel animation and font/theme defaults.
+- Expand the real-page boundary harness and regressions. Verified offline via `npm run verify` (52/52 passing tests, syntax and content checks).
+- Reframe docs for personal use and consolidate evidence in `docs/remediation-status.md`.
+
+## Unreleased — verification and dependency follow-up
+
+- Ryan supplied passing syntax/content/CSS-build results and 43/43 tests, plus successful GitNexus indexing (737 nodes, 2,474 edges).
+- Updated the lockfile from PostCSS 8.5.15 to 8.5.28 and Nano ID to 3.3.19 to address the reported dependency advisories.
+- Declared local Autoprefixer and cssnano builds, retaining Tailwind 3 and making browser-data dependencies explicitly maintainable.
+- The updated lockfile audit reports zero vulnerabilities.
+- Ryan subsequently confirmed the updated dependency installation, a successful CSS rebuild without the Browserslist warning, zero installed-tree audit vulnerabilities, and 7/7 smoke tests passing.
+- Browser and editorial evidence remain open. The follow-up changed build dependency manifests and documentation; the supplied smoke results are a repeated subset of the original 43 tests.
+
+## Unreleased — October 2, 2026 remediation
+
+- Added strict schema-4 resume with exact round state, phase/input guards, cancellable callbacks, pack-load gating, and defensive local persistence.
+- Separated records by route length/content version; adapted short routes and final token questions; corrected final failure explanations.
+- Corrected identified content contradictions and answer leaks, added explanations/source links, and enforced a separate editorial release gate.
+- Added semantic forms/tabs/dialog behavior, readable tokens, narrow-screen wrapping, surface colors, and reduced-motion cleanup.
+- Replaced the failing default tile service with configurable OSM tiles and attribution, pack zoom, and persistent map fallback.
+- Extracted production rules/contracts/storage/scheduling, generated the full fallback from canonical content, and added production-function regression tests.
+- Reconciled the current documentation; the original broad spec is archived. Historical entries below describe earlier states and do not establish current verification.
+
+Verification: tests, browser checks, syntax checks, and GitNexus analyze were deliberately left for Ryan to run. Content generation and whitespace inspection are not behavioral proof. See `docs/remediation-status.md` for commands, scope, and remaining gates.
+
+
 Completed work, moved out of `ROADMAP.md` so the roadmap shows only what's left.
 Grouped by roadmap area rather than by release (this project is pre-1.0 and unversioned).
 Remaining work and scope cuts stay in `ROADMAP.md`.

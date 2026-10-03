@@ -1,106 +1,32 @@
-# Creating a New Quiz Pack
+# Author a location or pack
 
-The game shell is now designed to be content-pack driven. To make another edition, create or generate a new pack file under `data/packs/`, add it to `data/quiz-packs.json`, then run the tests. JavaScript edits should not be required for ordinary location or question-set swaps.
+1. Choose the owning source: edit `scripts/generate-bentonville-content.js` for Bentonville, or the hand-authored Argentina JSON. Generated Bentonville JSON and `builtin-pack.js` will be overwritten by the content build.
+2. Add a location with identity, geographic coordinates, canonical henchman, and a unique token directly on the location record. The generator never derives tokens from an eight-item positional list. Names are displayed in the warrant and inventory, so preserve spelling and avoid duplicate token names.
+3. Add a nonempty case pool. Reuse an existing complete case as the structural template, change the ID, and author the dossier, three clues, four choices, warrant answers, three progressive hints, worked explanation, fact, and metadata. The generator preserves puzzle hints/description/explanation, sources, difficulty and reviewEvidence overrides. The correct option must follow from the evidence. Put costume evidence in the clues and keep the answer out of decorative headings/calling cards.
+4. Add precise primary-source registry entries. Mark the new case `source-linked-needs-line-review`. Record claim-level review evidence before changing it to `reviewed`.
+5. Supply `nextLead` on a Bentonville variant/location or in its lead registry; hand-authored JSON keeps it in briefing. At a selected run's last stop, the UI replaces the breadcrumb with the headquarters ending. Never assume all stops will be played.
+6. Increment `contentVersion` for a changed existing pack. New packs need at least four locations, three final rounds, and a manifest entry. The shared final resolver uses the actual selected first/middle cases and earned last token.
+7. Run the content and CSS builds, then the focused content/runtime checks in README. Use a representative check with your preferred input method; source and layout checks are separate.
 
-## 1. Define the Scope
-
-Pick the map scale before writing cases:
-
-| Source scale | Good stop unit |
-| --- | --- |
-| City | neighborhoods, venues, parks, districts |
-| Region | towns, counties, landmarks |
-| Country | cities, provinces, national landmarks |
-
-Each stop must have real coordinates. The common denominator is:
+Example location shape (illustrative values; not a publishable fact claim):
 
 ```json
 {
-  "id": "downtown-square",
-  "name": "Downtown Square",
-  "province": "Historic Downtown",
-  "emoji": "🏛️",
-  "tagline": "The civic heart of Bentonville",
-  "lat": 36.3729,
-  "lng": -94.2088
+  "id": "example-stop",
+  "name": "Example Stop",
+  "province": "Example District",
+  "emoji": "📍",
+  "lat": 36.37,
+  "lng": -94.20,
+  "token": {"name": "Compass", "char": "🧭"},
+  "henchman": {
+    "name": "Fictional Person",
+    "alias": "The Map Collector",
+    "emoji": "🗺️",
+    "role": "Fictional courier",
+    "dossierNote": "A fictional suspect in the ACME training exercise."
+  }
 }
 ```
 
-## 2. Build the Pack
-
-Start from an existing file such as `data/packs/bentonville.json` or `data/packs/argentina.json`, save the new pack under `data/packs/`, and replace:
-
-- Top-level metadata: `id`, `title`, `subtitle`, `heroLocation`, `intro`, `evidenceLabel`, and `successMessage`.
-- `map.center`, `map.zoom`, `map.minZoom`, and `map.maxZoom`.
-- `locations`: the ordered route.
-- `questions`: one randomized case pool per `location.id`.
-- `sources`: the source registry used by case `sources` arrays.
-- `finalConfrontation.rounds`: optional endgame rounds for the new edition.
-
-Add the new pack to `data/quiz-packs.json` with `id`, `title`, `description`, and `path`. Each pack file is self-contained (locations, questions, and sources inline), so no separate region or question-bank files are needed. The runtime loads `data/quiz-packs.json`, then fetches the selected pack path.
-
-## 3. Write Cases
-
-Every case must satisfy [content-rubric.md](content-rubric.md). The minimum shape is:
-
-```json
-{
-  "caseId": "classic-downtown-square",
-  "briefing": {
-    "headline": "SQUARE MARKET SWAP!",
-    "report": "Narrative tying the crime to this stop.",
-    "callingCard": "Carmen's remote taunt.",
-    "suspect": {
-      "name": "Dottie Ledger",
-      "alias": "The Square Dealer",
-      "emoji": "🧾",
-      "role": "Receipt forger hiding in market-day crowds",
-      "dossierNote": "Short suspect flavor."
-    },
-    "nextLead": "A clue pointing to the next stop."
-  },
-  "clues": ["...", "...", "..."],
-  "puzzle": {
-    "title": "Market Map Match",
-    "description": "Use the local clues to identify the hideout.",
-    "question": "Which stop matches the market clues?",
-    "options": ["Downtown Square", "Osage Park", "Crystal Bridges", "Coler Mountain Bike Preserve"],
-    "correctIndex": 0
-  },
-  "warrantAnswers": {
-    "city": "Downtown Square",
-    "hideout": "Downtown Square",
-    "disguise": "Farmers market vendor"
-  },
-  "funFact": "Short educational takeaway.",
-  "learningObjective": "What the player should learn.",
-  "sources": ["visit_bentonville_square"],
-  "difficulty": "detective",
-  "mechanic": "deduction-choice",
-  "regionTags": ["Historic Downtown", "Downtown Square"],
-  "visualType": "inline-html-cutout",
-  "accessibilityDescription": "Text alternative for visual evidence."
-}
-```
-
-## 4. Validation Workflow
-
-Run:
-
-```sh
-npm test
-```
-
-The important pack checks are:
-
-- `tests/smoke.test.js`: verifies the app loads the manifest and exposes the selector.
-- `tests/content-validation.test.js`: validates manifest entries, pack metadata, locations, sources, and case schema for every listed pack.
-- `tests/run-generation.test.js`: verifies seeded random case selection from each location pool.
-
-Then serve locally:
-
-```sh
-python3 -m http.server 8000
-```
-
-Open `http://127.0.0.1:8000/` and play one full run. Confirm markers land on the intended coordinates, clues are inferable, warrants accept the expected answers, and the final confrontation matches the pack theme.
+For hand-authored packs only, `node scripts/apply-henchmen.js data/packs/argentina.json` fills canonical suspect data and missing leads, preserving a case-specific dossier note. It validates before writing and increases content version if it changes data. Do not use it to edit generated Bentonville content. The [schema](quiz-pack-schema.md) and [rubric](content-rubric.md) are the full contract.

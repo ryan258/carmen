@@ -1,48 +1,16 @@
-# Content Rubric
+# Editorial rubric
 
-Every case in every `data/packs/*.json` file listed by `data/quiz-packs.json` must satisfy this contract before it is treated as production-ready. The legacy `question-bank.json` file is generated for compatibility, but the pack files are the active runtime contract.
+Both packs follow the same rules. Sources are embedded in each pack; there is no active legacy question bank or separate source registry.
 
-## Required Fields
+A case is structurally usable when `npm run check:content` accepts it. It is editorially ready only when its factual claims, evidence, answer, explanation, and representation have been reviewed. Current cases remain previews until that review is recorded.
 
-- `caseId`: stable, unique identifier.
-- `briefing.headline`: short ACME-style incident title.
-- `briefing.report`: narrative setup tied to the location. Carmen herself is offstage by the time the player lands; the brief should make clear that the on-site target is one of her accomplices, not Carmen.
-- `briefing.callingCard`: Carmen taunt language, written as if sent from a distance (not as on-scene dialogue).
-- `briefing.suspect`: the V.I.L.E. accomplice the player will actually arrest. Object with `name`, `alias`, `emoji`, `role`, and `dossierNote`. Defaults inherit from the canon roster in the quiz pack's `locations` array; cases may override `dossierNote` for round-specific flavor.
-- `briefing.nextLead` (recommended): one-sentence breadcrumb seized from the suspect that points toward the next stop. The final Osage Park round's nextLead points at Carmen herself.
-- `clues`: exactly three inspectable clues.
-- `puzzle.title`: puzzle name.
-- `puzzle.description`: explanation of the puzzle action.
-- `puzzle.question`: player-facing prompt.
-- `puzzle.options`: exactly four A/B/C/D choices until a richer puzzle engine exists.
-- `puzzle.correctIndex`: zero-based index for the correct answer.
-- `warrantAnswers.city`: city or place shown in the warrant dropdown.
-- `warrantAnswers.hideout`: specific hideout.
-- `warrantAnswers.disguise`: disguise clue.
-- `funFact`: short educational takeaway.
-- `learningObjective`: what the player should learn.
-- `sources`: verification sources for educational claims.
-- `difficulty`: `rookie`, `detective`, or `inspector`.
-- `mechanic`: puzzle mechanic identifier.
-- `regionTags`: location, province, or theme tags.
-- `visualType`: rendering strategy for the clue art.
-- `accessibilityDescription`: text alternative for visual evidence.
+- Distinguish fictional crimes, suspects, receipts, times, codes, and route diagrams from real geography and cultural claims.
+- Make exactly one choice defensible from the evidence. At least two clues should help identify the hideout; disguise evidence must be explicit enough to complete the warrant.
+- Keep direct answer leakage out of calling cards and decorative visuals. Directly named landmarks may be evidence in a recognition question, but should not masquerade as a complex deduction.
+- Explain why the answer fits; do not rely on the key alone. Code/sequence/arithmetic puzzles need a derivation, and wrong options must conflict with stated evidence.
+- Prefer stable, specific facts. Verify superlatives, historical attributions, dates, counts, hours, distances, Indigenous history, and changing venue details individually. A tourism homepage is not proof of every claim in its region.
+- Preserve place names and distinguish a city stop from a regional hideout. Navigation exercises must be labeled fictional and must not present invented coordinates as visitor guidance.
+- Ensure all evidence is available as text. Read the question without the illustration; it must remain answerable.
+- Distinguish variants by the evidence or reasoning they require. Cosmetic rewordings do not add meaningful breadth.
 
-## Quality Rules
-
-- The answer must be inferable from at least two clues.
-- Distractors should be plausible but not misleading after the clues are read.
-- Fun facts must be Bentonville-specific, not generic Arkansas or tourism facts.
-- Claims about Indigenous history, sacred objects, migration, or living cultures need extra source review.
-- Local names should preserve official spelling and styling where the game UI can support them.
-- Any case without reviewed sources keeps `reviewStatus: "needs-source-review"`.
-
-## Review Checklist
-
-- Geography verified.
-- Cultural claim verified.
-- Learning objective clear.
-- Warrant answer exactly matches dropdown text.
-- Puzzle options include one correct answer and three distractors.
-- Visual evidence supports the clue.
-- Accessibility description explains the meaningful visual information.
+Use the exact statuses `source-linked-needs-line-review` and `reviewed`. For reviewed cases, add `reviewEvidence.reviewer`, `date`, and claim-specific `notes`, and review the cited source records. See the schema for fields. Run `npm run check:release` only as the editorial gate; it is expected to fail while review evidence is absent.

@@ -1,60 +1,19 @@
-# Visual System
+# Visual system
 
-## Direction
+The game uses a cut-paper case-file treatment. `styles.css` owns the current semantic surface rules; the checked-in Tailwind build supplies layout/utilities. Obsolete dark-glass defaults and the unused Google Fonts import were removed. System fonts keep typography available without a font service; the current cutout-theme rules own the surfaces.
 
-The game uses a Saul Bass-inspired cut-paper detective poster style: hard silhouettes, uneven paper shapes, limited colors, strong diagonals, and theatrical contrast. The map remains legible and geographically credible; the poster style frames the game, not the cartography.
+| Token | Value | Role |
+| --- | --- | --- |
+| `--bass-ink` | `#17130f` | Main ink and dark backdrop |
+| `--bass-paper` | `#f4dfbd` | Case paper |
+| `--bass-paper-light` | `#fff3d6` | Light text on dark surfaces and light panels |
+| `--bass-red` | `#c73a22` | Decorative accent |
+| `--bass-mustard` | `#d99a21` | Decorative accent |
+| `--bass-teal` | `#176c72` | Focus/accent |
+| `--bass-blue` | `#26547c` | Supporting accent |
 
-## Palette
+Warm panels use dark readable text. Bright amber/sky/green utilities are overridden on light surfaces; dark buttons and badges retain light text. Colors intended for decoration are not automatically suitable for body text. Check actual compositing and all interaction states before claiming a contrast pass.
 
-- Ink: `#171510`
-- Paper: `#f2e3bd`
-- Carmen red: `#c7352c`
-- Mustard: `#d29a2e`
-- Teal: `#2e7f80`
-- Map blue: `#2f6f8f`
-- Case gray: `#3a3a35`
-- Success green: `#287b52`
+Native controls have a minimum 44px height. Headers/tabs/actions wrap, token names appear in full, and tiny utility labels inside the main panels have a larger text floor. Focus is visible and separate from selection. Correct/wrong feedback includes text/live announcements in addition to color. Dialogs scroll within the viewport.
 
-## Type
-
-- Display: bold condensed headline treatment for ACME case titles and screen headings.
-- Body: readable sans serif for instructions, clues, and controls.
-- Evidence: monospace or typewriter treatment for cards, coordinates, ciphers, and reports.
-- Letter spacing stays at `0`; use weight and scale instead of tracking-heavy text.
-
-## Shape Vocabulary
-
-- Torn paper panels with hard corners or small-radius corners.
-- Diagonal strips for urgency and travel.
-- Flat landmarks built from CSS or SVG-like cutout shapes.
-- Carmen red appears as a signal color, not a background wash.
-- Texture is subtle paper grain only; avoid glow, glass, blur, and orb decoration.
-
-## Interface Rules
-
-- Buttons use clear command labels and visible focus states.
-- Repeated case cards can use contained panels; page sections should not become nested cards.
-- Evidence visuals must communicate useful clue information.
-- Map controls must remain visually distinct from decorative poster elements.
-- The map must never be obscured by large decorative overlays.
-
-## Motion Rules
-
-- Motion should feel like paper sliding, stamping, or case files snapping into place.
-- Travel animation should be brief and respect reduced-motion preferences.
-- Correct and incorrect feedback may stamp or snap, but should not rely on color alone.
-
-## Evidence Art Requirements
-
-Each case should eventually use one of these reusable evidence components or a similarly styled custom cutout:
-
-- Monument
-- Mountain
-- Waterfall
-- Train
-- Book
-- Lighthouse
-- Glacier
-- Compass
-- Ticket
-- Calling card
+Meaningful evidence is text, with optional decorative first-party HTML. Essential text must remain in the accessibility tree. Build Tailwind after changing utility classes in HTML, JS, or pack JSON. Validate at 320px and zoom; the source changes alone do not prove reflow.

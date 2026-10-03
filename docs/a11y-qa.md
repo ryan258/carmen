@@ -1,38 +1,25 @@
-# Accessibility QA — 2026-06-20
+# Accessibility verification
 
-Method: static audit of HTML/CSS/JS for the three unverified roadmap boxes, plus fixes.
-Interactive testing (screen reader, real keyboard run, real device zoom) still needs a human —
-an agent can't truly tab through or hear a screen reader. That checklist is at the bottom.
+The remediation adds associated warrant labels, tab/panel semantics, keyboard tab navigation, live answer/warrant feedback, explicit lives text, screen focus movement, modal containment/return, readable token labels, wrapped narrow-screen controls, surface-specific colors, and reduced-motion handling. They are implementation changes, **not verified WCAG conformance**.
 
-## Verified statically
+## Short personal check
 
-- **Keyboard structure** — zero `onclick` on `div`/`span`/`li`/`a`; every interactive control is a
-  real `<button>`, so it's focusable and Enter/Space-activatable for free. Focus rings present
-  (`focus:ring-*` utilities). No drag-only interaction in current mechanics (all multiple-choice).
-- **Color alone** — found a real WCAG 1.4.1 gap: correct/wrong answer buttons differed *only* by
-  green/red. **Fixed** in `styles.css` with a `::after` glyph (✓ / ✗) so the state reads without color.
-- **200% zoom** — the only fixed-`px` heights are decorative `.cutout-*` evidence art (no text);
-  browser page-zoom scales px, so they don't clip text. Body text uses rem/Tailwind scale. No
-  obvious reflow trap found, but confirm visually (see checklist).
+Use the input method you normally prefer on one short route. Confirm that Answer A–D, Clues, Hint, Continue, Submit warrant, Pause and Resume work with manageable effort; that solved feedback stays until Continue; that Text route remains selected after reload; and that Cancel initially receives focus in Discard Case. If one thing is awkward, report that specific obstacle. You do not need to manually audit every case.
 
-## Fixed this pass
+The broader matrix below is optional coverage for later sharing. None of these browser/AT outcomes has been verified for the October 3 tree.
 
-- `styles.css`: `.option-btn.correct::after { content:" ✓" }`, `.wrong::after { content:" ✗" }`.
+## Broader reference matrix
 
-## Still needs a human (run these once in a browser)
+Record the tested revision, browser, viewport/zoom, input method, assistive technology/version, exact route/state, result, and unresolved issue.
 
-Open `carmen-sandiego-bentonville.html` and:
+- [ ] Keyboard-only: pack/stop/difficulty selection, each case tab, answer/hint controls, warrant fields, final report, records, and restart. All actions have a visible focus indicator; no trap except intentional modal containment.
+- [ ] Tabs: Left/Right/Home/End navigate enabled tabs; selected state and associated panel are announced. Disabled warrant/final tabs cannot be reached through footer controls.
+- [ ] Forms: location, hideout, and disguise labels are announced. A–D shortcuts do not consume typing or select navigation. Modified keys are ignored.
+- [ ] Dialogs: focus enters, Tab/Shift+Tab wrap, Escape closes, background is inert, and focus returns to a visible control. Test a transition pending behind a dialog.
+- [ ] Screen reader: full briefing, all visual evidence text, answer feedback, lives remaining, hint content, route state, token names, sources, and final-round failure explanation are understandable. Check at least VoiceOver/Safari and another supported browser/AT combination when feasible.
+- [ ] Layout: 320px viewport and 200%/400% zoom; no clipped restart button, tab names, form controls, inventory, or source links. Allow content to wrap and scroll vertically.
+- [ ] Contrast: measure actual composited foreground/background colors for score, accents, inactive/active tabs, disabled controls, focus indicators, option feedback, maps, and high-contrast mode. Do not infer contrast from a palette token alone.
+- [ ] Motion: set the system preference before load and change it while playing; repeat with the in-app setting. Decorative effects disappear and essential feedback remains. No interval-based particles run.
+- [ ] Automated accessibility scan: title, difficulty, all case panels, both dialogs, between screen, finale, and both result states. Evaluate findings; a clean scan is only one part of the evidence.
 
-1. **Automated:** paste axe-core in the console, check for serious/critical violations:
-   ```js
-   var s=document.createElement('script');
-   s.src='https://cdn.jsdelivr.net/npm/axe-core@4/axe.min.js';
-   s.onload=()=>axe.run().then(r=>console.table(r.violations));
-   document.body.appendChild(s);
-   ```
-2. **Keyboard only:** unplug the mouse, play one full case start→report. Every control reachable, visible focus, no trap.
-3. **200% zoom:** Ctrl/Cmd-+ to 200% on title, case file, warrant, result, final report — no clipped or overlapping text.
-4. **Reduced motion:** enable OS "reduce motion," confirm travel animation/particles calm down.
-5. **Mobile width:** DevTools ~375px — labels don't overlap, targets ≥44px.
-
-Tick the matching roadmap boxes after the run.
+Node DOM-double tests do not exercise browser accessibility trees, layout, or actual speech. User testing remains necessary for comprehension and comfort.
