@@ -1,25 +1,7 @@
 const assert = require('node:assert/strict');
 const test = require('node:test');
 
-const SCORE_RULES = {
-  puzzleByAttempt: [100, 75, 50],
-  laterAttempt: 25,
-  hintPenalty: 15,
-  warrant: 50,
-  streakStep: 25,
-  finalConfrontation: 200,
-  remainingLife: 50,
-  perfectGame: 500
-};
-
-function getPuzzleScore(attemptsBeforeSolve, hintsUsed = 0) {
-  const baseScore = SCORE_RULES.puzzleByAttempt[attemptsBeforeSolve] ?? SCORE_RULES.laterAttempt;
-  return Math.max(SCORE_RULES.laterAttempt, baseScore - (hintsUsed * SCORE_RULES.hintPenalty));
-}
-
-function getStreakBonus(streak) {
-  return streak >= 3 ? (streak - 2) * SCORE_RULES.streakStep : 0;
-}
+const { SCORE_RULES, getPuzzleScore, getStreakBonus } = require('../game-core.js');
 
 test('puzzle score decreases predictably by attempt count', () => {
   assert.equal(getPuzzleScore(0), 100);

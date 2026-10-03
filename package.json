@@ -3,9 +3,19 @@
   "private": true,
   "scripts": {
     "test": "node --test tests/*.test.js",
-    "build:css": "tailwindcss -i ./tailwind.input.css -o ./tailwind.build.css --minify"
+    "build:css": "tailwindcss -i ./tailwind.input.css -o ./tailwind.build.css --minify",
+    "build:content": "node scripts/generate-bentonville-content.js && node scripts/build-builtin.cjs",
+    "check:content": "node scripts/check-content.cjs",
+    "check:release": "node scripts/check-content.cjs --release",
+    "check:syntax": "node --check game.js && node --check game-core.js && node --check game-map.js && node --check game-records.js && node --check run-generator.js && node --check map-config.js && node --check scripts/generate-bentonville-content.js && node --check scripts/check-content.cjs",
+    "verify": "npm run check:syntax && npm run check:content && npm test"
   },
   "devDependencies": {
+    "autoprefixer": "^10.6.1",
+    "cssnano": "^6.1.2",
     "tailwindcss": "^3.4.19"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
