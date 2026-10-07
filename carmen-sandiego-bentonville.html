@@ -203,10 +203,7 @@
       <!-- Tab Headers -->
       <div class="case-tabs flex border-b border-white/5 pl-4 gap-1" role="tablist" aria-label="Case file">
         <button id="tabDossier" role="tab" aria-controls="contentDossier" aria-selected="true" tabindex="0" onclick="switchTab('dossier')" class="dossier-tab active px-5 py-3 text-sm font-bold bg-slate-900 border-t border-x border-white/5 text-slate-400 hover:text-white">
-          📂 Dossier Briefing
-        </button>
-        <button id="tabClues" role="tab" aria-controls="contentClues" aria-selected="false" tabindex="-1" onclick="switchTab('clues')" class="dossier-tab px-5 py-3 text-sm font-bold border-t border-x border-white/5 text-slate-400 hover:text-white">
-          🔍 Clue Sheets
+          📂 Case File
         </button>
         <button id="tabPuzzle" role="tab" aria-controls="contentPuzzle" aria-selected="false" tabindex="-1" onclick="switchTab('puzzle')" class="dossier-tab px-5 py-3 text-sm font-bold border-t border-x border-white/5 text-slate-400 hover:text-white" disabled>
           🧩 Puzzle Clue
@@ -262,19 +259,8 @@
                 </p>
               </div>
             </div>
-          </div>
 
-          <div class="mt-8 flex justify-end">
-            <button id="beginInvestigationBtn" onclick="switchTab('clues')" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center gap-2">
-              Begin Field Investigation ➔
-            </button>
-          </div>
-        </div>
-
-        <!-- ================= TAB CONTENT 2: CLUES ================= -->
-        <div id="contentClues" role="tabpanel" aria-labelledby="tabClues" tabindex="0" class="hidden space-y-6 flex-grow flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between border-b border-slate-300 pb-2">
+            <div class="flex items-center justify-between border-b border-slate-300 pb-2 mt-6">
               <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">Field Clue Sheets</span>
             </div>
 
@@ -309,11 +295,8 @@
             </div>
           </div>
 
-          <div class="mt-8 flex justify-between items-center border-t border-slate-300 pt-4">
-            <button onclick="switchTab('dossier')" class="px-4 py-2 border border-slate-400 hover:border-slate-800 rounded font-semibold text-slate-700 hover:text-slate-900 transition-colors">
-              ← View Briefing
-            </button>
-            <button id="goToPuzzleBtn" onclick="unlockAndGoToPuzzle()" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center gap-2">
+          <div class="mt-8 flex justify-end">
+            <button id="beginInvestigationBtn" onclick="switchTab('puzzle')" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-colors flex items-center gap-2">
               Open Puzzle Log ➔
             </button>
           </div>
@@ -350,8 +333,8 @@
           </div>
 
           <div class="mt-4 flex justify-between items-center border-t border-slate-300 pt-4">
-            <button id="reviewCluesBtn" onclick="switchTab('clues')" class="px-4 py-2 border border-slate-400 hover:border-slate-800 rounded font-semibold text-slate-700 hover:text-slate-900 transition-colors">
-              Clues
+            <button id="reviewCluesBtn" onclick="switchTab('dossier')" class="px-4 py-2 border border-slate-400 hover:border-slate-800 rounded font-semibold text-slate-700 hover:text-slate-900 transition-colors">
+              Case file
             </button>
             <div class="flex flex-col sm:flex-row gap-2">
               <button id="hintButton" onclick="requestHint()" class="px-4 py-3 border border-slate-500 hover:border-slate-900 text-slate-800 font-bold rounded-lg transition-colors">
@@ -374,30 +357,33 @@
             </div>
 
             <p class="text-xs text-slate-600 mt-2 mb-4">
-              Enter the correct suspect profile details below to dispatch the field team. Input wrong details, and the warrant is rejected, wasting precious chase time.
+              Use the clue sheets in the Case File to name where the suspect is hiding and what disguise they are wearing. A wrong warrant is rejected and costs one life.
             </p>
 
             <div class="bg-white/50 p-4 rounded-xl border border-slate-200 shadow-inner space-y-4 max-w-md mx-auto">
               <!-- Field 1: Stop -->
               <div>
-                <label for="warrantCity" class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Target Stop</label>
-                <select id="warrantCity" class="w-full bg-white text-slate-900 border border-slate-300 rounded-lg px-3 py-2 font-bold focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
+                <label for="warrantCity" class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Current stop</label>
+                <p id="warrantCityHelp" class="text-xs text-slate-600 mb-1">Already filled in: the suspect is somewhere in this stop.</p>
+                <select id="warrantCity" aria-describedby="warrantCityHelp" class="w-full bg-white text-slate-900 border border-slate-300 rounded-lg px-3 py-2 font-bold focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
                   <!-- Dynamically populated -->
                 </select>
               </div>
 
               <!-- Field 2: Hideout -->
               <div>
-                <label for="warrantHideout" class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Target Hideout</label>
-                <select id="warrantHideout" class="w-full bg-white text-slate-900 border border-slate-300 rounded-lg px-3 py-2 font-bold focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
+                <label for="warrantHideout" class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Hideout</label>
+                <p id="warrantHideoutHelp" class="text-xs text-slate-600 mb-1">The exact place the suspect is holed up. Match it to the places, signs and items the clues mention.</p>
+                <select id="warrantHideout" aria-describedby="warrantHideoutHelp" class="w-full bg-white text-slate-900 border border-slate-300 rounded-lg px-3 py-2 font-bold focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
                   <!-- Dynamically populated -->
                 </select>
               </div>
 
               <!-- Field 3: Disguise -->
               <div>
-                <label for="warrantDisguise" class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Suspect Disguise</label>
-                <select id="warrantDisguise" class="w-full bg-white text-slate-900 border border-slate-300 rounded-lg px-3 py-2 font-bold focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
+                <label for="warrantDisguise" class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Disguise</label>
+                <p id="warrantDisguiseHelp" class="text-xs text-slate-600 mb-1">Who the suspect is posing as. Look for a witness description or the clothing and gear in the clues.</p>
+                <select id="warrantDisguise" aria-describedby="warrantDisguiseHelp" class="w-full bg-white text-slate-900 border border-slate-300 rounded-lg px-3 py-2 font-bold focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
                   <!-- Dynamically populated -->
                 </select>
               </div>

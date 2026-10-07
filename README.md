@@ -15,7 +15,7 @@ Open http://127.0.0.1:8000/ . Static hosting is sufficient; no backend, account,
 ## Play and controls
 
 - Choose a pack, route length, and difficulty. A shorter route follows the first stops in authored order.
-- Read the dossier and three clue sheets. Solve the puzzle, read its explanation, then choose Continue to prepare the warrant. Correct final-report answers also wait for Continue; there is no automatic reading deadline.
+- Read the case file (briefing plus three clue sheets). Solve the puzzle, read its explanation, then choose Continue to prepare the warrant. Correct final-report answers also wait for Continue; there is no automatic reading deadline.
 - Answer buttons visibly read Answer A, Answer B, Answer C, and Answer D, matching their accessible names for voice control. Clues, Hint, Continue, and Submit warrant provide short repeatable action names.
 - Each rejected puzzle answer or warrant costs one life. Incorrect options stay eliminated for that puzzle, including after resume.
 - Rookie has 6 lives and 3 hints per stop. Detective has 5 lives and 2 hints. Inspector has 4 lives and no hints. Clue text and the case pool are shared across difficulties. The established location is filled for everyone; hideout and disguise lists contain only choices for that stop.

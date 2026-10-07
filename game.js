@@ -41,6 +41,8 @@ let ACTIVE_PACK_ENTRY = QUIZ_PACK_MANIFEST.packs[0];
 let QUESTION_BANK = DEFAULT_QUIZ_PACK.questions;
 const SAVE_SCHEMA_VERSION = CarmenCore.SAVE_VERSION;
 const SAVE_KEY = 'carmen_save';
+const WRONG_LOCK_MS = 300;
+const STAMP_MS = 800;
 const LAST_RUN_KEY = 'carmen_lastCaseVariantIds';
 const SETTINGS_KEY = 'carmen_settings';
 const PACK_SELECTION_KEY = 'carmen_selectedQuizPackId';
@@ -723,7 +725,7 @@ function renderCaseHistorySummary() {
 // ROUND SETUP & INITIALIZATION
 // ============================================================
 function startLocation(restoring = false) {
-  const restoredTab = state.activeTab;
+  const restoredTab = state.activeTab === 'clues' ? 'dossier' : state.activeTab; // 'clues' tab merged into dossier; old saves still load
   if (!restoring) resetRound('investigation');
   document.getElementById('submitWarrantBtn').disabled = false;
   document.getElementById('finalContinueBtn').hidden = true;
@@ -731,10 +733,9 @@ function startLocation(restoring = false) {
   document.getElementById('warrantFeedback').textContent = '';
   document.getElementById('beginInvestigationBtn').disabled = false;
   updateHUD(); drawMapGrid();
-  ['Dossier','Clues','Puzzle'].forEach(name => document.getElementById(`tab${name}`).disabled = false);
+  ['Dossier','Puzzle'].forEach(name => document.getElementById(`tab${name}`).disabled = false);
   document.getElementById('tabWarrant').disabled = !state.puzzleSolved;
   document.getElementById('reviewCluesBtn').disabled = false;
-  document.getElementById('goToPuzzleBtn').disabled = false;
   const warrantBtn = document.getElementById('goToWarrantBtn');
   warrantBtn.hidden = false;
   warrantBtn.disabled = !state.puzzleSolved;
@@ -786,11 +787,6 @@ function getRankString(score) {
 // ============================================================
 // TAB NAVIGATION SKELETON
 // ============================================================
-function unlockAndGoToPuzzle() {
-  sound.success();
-  switchTab('puzzle');
-}
-
 function switchTab(tabName) {
   const button = document.getElementById(`tab${tabName.charAt(0).toUpperCase()+tabName.slice(1)}`);
   if (!button || button.disabled || !['investigation','final'].includes(state.phase)) return;
@@ -798,7 +794,7 @@ function switchTab(tabName) {
   state.activeTab = tabName;
   if (!saveGame()) return;
   
-  ['dossier', 'clues', 'puzzle', 'warrant'].forEach(name => {
+  ['dossier', 'puzzle', 'warrant'].forEach(name => {
     const tabBtn = document.getElementById(`tab${name.charAt(0).toUpperCase() + name.slice(1)}`);
     const content = document.getElementById(`content${name.charAt(0).toUpperCase() + name.slice(1)}`);
     
@@ -968,7 +964,7 @@ function selectChoice(index) {
   } else {
     sound.fail(); buttons[index].classList.add('wrong'); state.wrongOptions.push(index); state.puzzleAttempts++; state.lives--;
     updateHUD(); if (!saveGame()) return; announce(`Incorrect answer. ${state.lives} lives remaining.`);
-    schedule(() => { if (state.lives === 0) triggerGameOver(); else { state.inputLocked=false; buttons.forEach((btn,i) => btn.disabled=state.wrongOptions.includes(i)); } },650);
+    schedule(() => { if (state.lives === 0) triggerGameOver(); else { state.inputLocked=false; buttons.forEach((btn,i) => btn.disabled=state.wrongOptions.includes(i)); } },WRONG_LOCK_MS);
   }
 }
 
@@ -1042,9 +1038,8 @@ function submitWarrant() {
     if (!saveGame()) return;
     announce('Warrant approved. Accomplice captured.');
 
-    state.inputLocked=false;
-    document.getElementById('warrantStampOverlay').classList.add('hidden');
-    triggerTransitionRound();
+    // phase is already saved as 'between', so pause/resume during the stamp still lands on the report
+    schedule(() => { overlay.classList.add('hidden'); triggerTransitionRound(); }, shouldReduceMotion() ? 0 : STAMP_MS);
   } else {
     sound.fail();
     overlay.classList.remove('hidden');
@@ -1121,7 +1116,6 @@ function triggerTransitionRound() {
     ${scoreDetails}
 
     ${nextLeadBlock}
-    ${renderExplanation(currentLoc)}
 
     <div class="glass rounded-xl p-5 border border-white/10 text-left max-w-md mx-auto shadow-xl">
       <div class="flex items-center gap-2 border-b border-white/5 pb-2 mb-2">
@@ -1176,7 +1170,6 @@ function startFinalConfrontationRound(restoring = false) {
   document.getElementById('beginInvestigationBtn').disabled = true;
   document.getElementById('reviewCluesBtn').disabled = true;
   document.getElementById('tabDossier').disabled = true;
-  document.getElementById('tabClues').disabled = true;
   document.getElementById('tabPuzzle').disabled = false;
   document.getElementById('tabWarrant').disabled = true;
   
@@ -1242,7 +1235,7 @@ function selectFinalChoice(index, correctIdx) {
   } else {
     sound.fail(); buttons[index].classList.add('wrong'); state.wrongOptions.push(index); state.lives--; updateHUD(); if (!saveGame()) return;
     announce(`Incorrect answer. ${state.lives} lives remaining.`);
-    schedule(() => { if (state.lives === 0) triggerGameOver(); else { state.inputLocked=false; buttons.forEach((btn,i)=>btn.disabled=state.wrongOptions.includes(i)); } },650);
+    schedule(() => { if (state.lives === 0) triggerGameOver(); else { state.inputLocked=false; buttons.forEach((btn,i)=>btn.disabled=state.wrongOptions.includes(i)); } },WRONG_LOCK_MS);
   }
 }
 

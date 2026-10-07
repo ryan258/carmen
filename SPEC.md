@@ -12,10 +12,10 @@ There is one four-option engine. It can present cipher, arithmetic, sequence, ch
 
 `idle → investigation → between → investigation … → final → complete`
 
-- Investigation starts with dossier, clues, and puzzle available. The warrant unlocks only after a correct answer.
+- Investigation starts with the case file (briefing and clues on one tab) and puzzle available. A saved `clues` tab from earlier builds opens the case file. The warrant unlocks only after a correct answer.
 - Correct puzzle and final answers wait for explicit Continue, including after resume. The established location is prefilled for all difficulties; warrant choices are limited to the current stop.
 - Wrong input locks until feedback ends; input handlers enforce phase as well as disabled controls.
-- A successful warrant awards points and records one capture, then saves the **between** phase at the same index. Advancing starts the next stop or the final report.
+- A successful warrant awards points and records one capture, saves the **between** phase at the same index, and shows the APPROVED stamp briefly (none under reduced motion) before the report appears. Advancing starts the next stop or the final report.
 - The final report has three rounds: the selected first case, a selected middle case, and the last selected stop's earned token. It takes place at headquarters, so short routes do not imply visiting skipped locations.
 - Zero lives ends the case. Terminal handlers are idempotent within a session; record/stat writes identify the run.
 - Restart, title navigation, new runs, and pack replacement cancel pending session callbacks. Dialogs pause delayed delivery. Pack loading blocks start/resume until the latest request settles or falls back.
