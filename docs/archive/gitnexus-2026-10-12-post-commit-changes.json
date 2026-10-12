@@ -1,0 +1,1227 @@
+{
+  "summary": {
+    "changed_count": 109,
+    "affected_count": 31,
+    "changed_files": 31,
+    "risk_level": "critical"
+  },
+  "changed_symbols": [
+    {
+      "id": "Section:README.md:L1:Carmen: ACME geography case files",
+      "name": "Carmen: ACME geography case files",
+      "type": "Section",
+      "filePath": "README.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:README.md:L17:Play and controls",
+      "name": "Play and controls",
+      "type": "Section",
+      "filePath": "README.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:README.md:L29:Saves and records",
+      "name": "Saves and records",
+      "type": "Section",
+      "filePath": "README.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:README.md:L37:Architecture and authoring",
+      "name": "Architecture and authoring",
+      "type": "Section",
+      "filePath": "README.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:README.md:L66:Verification",
+      "name": "Verification",
+      "type": "Section",
+      "filePath": "README.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:ROADMAP.md:L1:Remaining work",
+      "name": "Remaining work",
+      "type": "Section",
+      "filePath": "ROADMAP.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:ROADMAP.md:L5:Immediate next action",
+      "name": "Immediate next action",
+      "type": "Section",
+      "filePath": "ROADMAP.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:ROADMAP.md:L9:Learning-tool priorities",
+      "name": "Learning-tool priorities",
+      "type": "Section",
+      "filePath": "ROADMAP.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:ROADMAP.md:L16:Personal comfort and reliability",
+      "name": "Personal comfort and reliability",
+      "type": "Section",
+      "filePath": "ROADMAP.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:ROADMAP.md:L22:Optional enhancements",
+      "name": "Optional enhancements",
+      "type": "Section",
+      "filePath": "ROADMAP.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:SPEC.md:L1:Current implementation contract",
+      "name": "Current implementation contract",
+      "type": "Section",
+      "filePath": "SPEC.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:SPEC.md:L5:Product and content",
+      "name": "Product and content",
+      "type": "Section",
+      "filePath": "SPEC.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:SPEC.md:L13:State transitions",
+      "name": "State transitions",
+      "type": "Section",
+      "filePath": "SPEC.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:SPEC.md:L32:Persistence and boundaries",
+      "name": "Persistence and boundaries",
+      "type": "Section",
+      "filePath": "SPEC.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:SPEC.md:L44:Accessibility and verification boundary",
+      "name": "Accessibility and verification boundary",
+      "type": "Section",
+      "filePath": "SPEC.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Const:builtin-pack.js:CarmenBuiltinPack",
+      "name": "CarmenBuiltinPack",
+      "type": "Const",
+      "filePath": "builtin-pack.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/a11y-qa.md:L1:Accessibility verification",
+      "name": "Accessibility verification",
+      "type": "Section",
+      "filePath": "docs/a11y-qa.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/a11y-qa.md:L5:Short personal check",
+      "name": "Short personal check",
+      "type": "Section",
+      "filePath": "docs/a11y-qa.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/a11y-qa.md:L11:Broader reference matrix",
+      "name": "Broader reference matrix",
+      "type": "Section",
+      "filePath": "docs/a11y-qa.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/content-audit.md:L1:Content audit state — October 12, 2026",
+      "name": "Content audit state — October 12, 2026",
+      "type": "Section",
+      "filePath": "docs/content-audit.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/content-audit.md:L11:Earlier October 3 corrections (historical)",
+      "name": "Earlier October 3 corrections (historical)",
+      "type": "Section",
+      "filePath": "docs/content-audit.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/content-audit.md:L22:Evidence still needed",
+      "name": "Evidence still needed",
+      "type": "Section",
+      "filePath": "docs/content-audit.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/content-audit.md:L30:October 3 authoring improvements",
+      "name": "October 3 authoring improvements",
+      "type": "Section",
+      "filePath": "docs/content-audit.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/content-rubric.md:L1:Editorial rubric",
+      "name": "Editorial rubric",
+      "type": "Section",
+      "filePath": "docs/content-rubric.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/dependency-plan.md:L1:Dependencies and failure behavior",
+      "name": "Dependencies and failure behavior",
+      "type": "Section",
+      "filePath": "docs/dependency-plan.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/dependency-plan.md:L19:Verification evidence",
+      "name": "Verification evidence",
+      "type": "Section",
+      "filePath": "docs/dependency-plan.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/finish-plan.md:L1:Finish the October 12 exemplar pass",
+      "name": "Finish the October 12 exemplar pass",
+      "type": "Section",
+      "filePath": "docs/finish-plan.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/manual-qa.md:L1:Manual regression matrix",
+      "name": "Manual regression matrix",
+      "type": "Section",
+      "filePath": "docs/manual-qa.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/manual-qa.md:L9:Session integrity",
+      "name": "Session integrity",
+      "type": "Section",
+      "filePath": "docs/manual-qa.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/manual-qa.md:L23:Persistence failure and compatibility",
+      "name": "Persistence failure and compatibility",
+      "type": "Section",
+      "filePath": "docs/manual-qa.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/manual-qa.md:L33:Map and layout",
+      "name": "Map and layout",
+      "type": "Section",
+      "filePath": "docs/manual-qa.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/new-location.md:L1:Author a location or pack",
+      "name": "Author a location or pack",
+      "type": "Section",
+      "filePath": "docs/new-location.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/quiz-pack-schema.md:L1:Quiz pack contract",
+      "name": "Quiz pack contract",
+      "type": "Section",
+      "filePath": "docs/quiz-pack-schema.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/quiz-pack-schema.md:L7:Pack fields",
+      "name": "Pack fields",
+      "type": "Section",
+      "filePath": "docs/quiz-pack-schema.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/quiz-pack-schema.md:L19:Case fields",
+      "name": "Case fields",
+      "type": "Section",
+      "filePath": "docs/quiz-pack-schema.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/remediation-status.md:L1:Current remediation status — October 12, 2026",
+      "name": "Current remediation status — October 12, 2026",
+      "type": "Section",
+      "filePath": "docs/remediation-status.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/remediation-status.md:L11:Review for local commits — October 12",
+      "name": "Review for local commits — October 12",
+      "type": "Section",
+      "filePath": "docs/remediation-status.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/remediation-status.md:L35:Eight-case exemplar pass",
+      "name": "Eight-case exemplar pass",
+      "type": "Section",
+      "filePath": "docs/remediation-status.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/remediation-status.md:L45:Exemplar pre-edit impact",
+      "name": "Exemplar pre-edit impact",
+      "type": "Section",
+      "filePath": "docs/remediation-status.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/remediation-status.md:L49:Exemplar graph result — owner run, October 12, 20:27:52 UTC",
+      "name": "Exemplar graph result — owner run, October 12, 20:27:52 UTC",
+      "type": "Section",
+      "filePath": "docs/remediation-status.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/remediation-status.md:L61:Exemplar focused verification — owner run, October 12",
+      "name": "Exemplar focused verification — owner run, October 12",
+      "type": "Section",
+      "filePath": "docs/remediation-status.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/remediation-status.md:L98:Evidence by revision",
+      "name": "Evidence by revision",
+      "type": "Section",
+      "filePath": "docs/remediation-status.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/remediation-status.md:L116:Earlier version 3 focused test coverage",
+      "name": "Earlier version 3 focused test coverage",
+      "type": "Section",
+      "filePath": "docs/remediation-status.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/remediation-status.md:L129:Earlier correction-pass GitNexus result and limits",
+      "name": "Earlier correction-pass GitNexus result and limits",
+      "type": "Section",
+      "filePath": "docs/remediation-status.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/remediation-status.md:L135:Earlier runtime correction pass",
+      "name": "Earlier runtime correction pass",
+      "type": "Section",
+      "filePath": "docs/remediation-status.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/remediation-status.md:L150:Pre-edit impact boundary",
+      "name": "Pre-edit impact boundary",
+      "type": "Section",
+      "filePath": "docs/remediation-status.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/remediation-status.md:L159:Earlier verification commands (historical)",
+      "name": "Earlier verification commands (historical)",
+      "type": "Section",
+      "filePath": "docs/remediation-status.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/remediation-status.md:L180:Remaining evidence",
+      "name": "Remaining evidence",
+      "type": "Section",
+      "filePath": "docs/remediation-status.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/review-reconciliation-2026-10-12.md:L1:Review reconciliation and first correction pass — October 12, 2026",
+      "name": "Review reconciliation and first correction pass — October 12, 2026",
+      "type": "Section",
+      "filePath": "docs/review-reconciliation-2026-10-12.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/review-reconciliation-2026-10-12.md:L9:Findings reconciled against c12e772",
+      "name": "Findings reconciled against c12e772",
+      "type": "Section",
+      "filePath": "docs/review-reconciliation-2026-10-12.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/review-reconciliation-2026-10-12.md:L33:Next steps toward an exceptional learning tool",
+      "name": "Next steps toward an exceptional learning tool",
+      "type": "Section",
+      "filePath": "docs/review-reconciliation-2026-10-12.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/reviewed-exemplar.md:L1:Eight-case reviewed exemplar — October 12, 2026",
+      "name": "Eight-case reviewed exemplar — October 12, 2026",
+      "type": "Section",
+      "filePath": "docs/reviewed-exemplar.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/reviewed-exemplar.md:L7:A short, repeatable learning session",
+      "name": "A short, repeatable learning session",
+      "type": "Section",
+      "filePath": "docs/reviewed-exemplar.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/reviewed-exemplar.md:L28:Evidence of learning to look for",
+      "name": "Evidence of learning to look for",
+      "type": "Section",
+      "filePath": "docs/reviewed-exemplar.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/reviewed-exemplar.md:L41:1. The Producer Rule",
+      "name": "1. The Producer Rule",
+      "type": "Section",
+      "filePath": "docs/reviewed-exemplar.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/reviewed-exemplar.md:L114:2. Two Stores, Two Dates",
+      "name": "2. Two Stores, Two Dates",
+      "type": "Section",
+      "filePath": "docs/reviewed-exemplar.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/reviewed-exemplar.md:L187:3. A Route Through the Evidence",
+      "name": "3. A Route Through the Evidence",
+      "type": "Section",
+      "filePath": "docs/reviewed-exemplar.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/reviewed-exemplar.md:L260:4. What Counts as Adaptive Reuse?",
+      "name": "4. What Counts as Adaptive Reuse?",
+      "type": "Section",
+      "filePath": "docs/reviewed-exemplar.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/reviewed-exemplar.md:L333:5. Repair the Catalog",
+      "name": "5. Repair the Catalog",
+      "type": "Section",
+      "filePath": "docs/reviewed-exemplar.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/reviewed-exemplar.md:L406:6. Stay Within the Evidence",
+      "name": "6. Stay Within the Evidence",
+      "type": "Section",
+      "filePath": "docs/reviewed-exemplar.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/reviewed-exemplar.md:L479:7. Reconstruct the Rail Log",
+      "name": "7. Reconstruct the Rail Log",
+      "type": "Section",
+      "filePath": "docs/reviewed-exemplar.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/reviewed-exemplar.md:L552:8. Part and Whole",
+      "name": "8. Part and Whole",
+      "type": "Section",
+      "filePath": "docs/reviewed-exemplar.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/reviewed-exemplar.md:L624:Authoring and review handoff",
+      "name": "Authoring and review handoff",
+      "type": "Section",
+      "filePath": "docs/reviewed-exemplar.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game-core.js:exposeCore.stopCounts@17:2",
+      "name": "stopCounts",
+      "type": "Function",
+      "filePath": "game-core.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Const:game-map.js:mapLibraryStatus",
+      "name": "mapLibraryStatus",
+      "type": "Const",
+      "filePath": "game-map.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game-map.js:refreshVisibleMap",
+      "name": "refreshVisibleMap",
+      "type": "Function",
+      "filePath": "game-map.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game-map.js:handleMapLibraryLoad",
+      "name": "handleMapLibraryLoad",
+      "type": "Function",
+      "filePath": "game-map.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game-map.js:handleMapLibraryError",
+      "name": "handleMapLibraryError",
+      "type": "Function",
+      "filePath": "game-map.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game-map.js:retryMap",
+      "name": "retryMap",
+      "type": "Function",
+      "filePath": "game-map.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game-map.js:initLeafletMap",
+      "name": "initLeafletMap",
+      "type": "Function",
+      "filePath": "game-map.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game-map.js:renderMapFallback",
+      "name": "renderMapFallback",
+      "type": "Function",
+      "filePath": "game-map.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game-map.js:drawMapGrid",
+      "name": "drawMapGrid",
+      "type": "Function",
+      "filePath": "game-map.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game-map.js:resetMapForPackChange",
+      "name": "resetMapForPackChange",
+      "type": "Function",
+      "filePath": "game-map.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Const:game.js:pendingNewCase",
+      "name": "pendingNewCase",
+      "type": "Const",
+      "filePath": "game.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Const:game.js:state",
+      "name": "state",
+      "type": "Const",
+      "filePath": "game.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Property:game.js:state.settings",
+      "name": "settings",
+      "type": "Property",
+      "filePath": "game.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game.js:loadSettings",
+      "name": "loadSettings",
+      "type": "Function",
+      "filePath": "game.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game.js:applySettings",
+      "name": "applySettings",
+      "type": "Function",
+      "filePath": "game.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game.js:toggleAnswerShortcuts",
+      "name": "toggleAnswerShortcuts",
+      "type": "Function",
+      "filePath": "game.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game.js:selectDifficulty",
+      "name": "selectDifficulty",
+      "type": "Function",
+      "filePath": "game.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game.js:keepSavedCase",
+      "name": "keepSavedCase",
+      "type": "Function",
+      "filePath": "game.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game.js:confirmNewCase",
+      "name": "confirmNewCase",
+      "type": "Function",
+      "filePath": "game.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game.js:startNewCase",
+      "name": "startNewCase",
+      "type": "Function",
+      "filePath": "game.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:game.js:closeModal",
+      "name": "closeModal",
+      "type": "Function",
+      "filePath": "game.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Const:scripts/generate-bentonville-content.js:sources",
+      "name": "sources",
+      "type": "Const",
+      "filePath": "scripts/generate-bentonville-content.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Const:scripts/generate-bentonville-content.js:casesByLocation",
+      "name": "casesByLocation",
+      "type": "Const",
+      "filePath": "scripts/generate-bentonville-content.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Const:scripts/generate-bentonville-content.js:quizPack",
+      "name": "quizPack",
+      "type": "Const",
+      "filePath": "scripts/generate-bentonville-content.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Property:scripts/generate-bentonville-content.js:quizPack.contentVersion",
+      "name": "contentVersion",
+      "type": "Property",
+      "filePath": "scripts/generate-bentonville-content.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Const:tests/first-correction-pass.test.js:test",
+      "name": "test",
+      "type": "Const",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Const:tests/first-correction-pass.test.js:assert",
+      "name": "assert",
+      "type": "Const",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Const:tests/first-correction-pass.test.js:core",
+      "name": "core",
+      "type": "Const",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Const:tests/first-correction-pass.test.js:bentonville",
+      "name": "bentonville",
+      "type": "Const",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Const:tests/first-correction-pass.test.js:argentina",
+      "name": "argentina",
+      "type": "Const",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Property:tests/first-correction-pass.test.js:fn@115:74.activeTab@117:34",
+      "name": "activeTab",
+      "type": "Property",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/first-correction-pass.test.js:installLeaflet",
+      "name": "installLeaflet",
+      "type": "Function",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Property:tests/first-correction-pass.test.js:installLeaflet.maps@155:20",
+      "name": "maps",
+      "type": "Property",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Property:tests/first-correction-pass.test.js:installLeaflet.tileErrors@155:30",
+      "name": "tileErrors",
+      "type": "Property",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/first-correction-pass.test.js:installLeaflet.map@157:4#0",
+      "name": "map",
+      "type": "Method",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/first-correction-pass.test.js:installLeaflet.map@157:4.invalidateSize@158:54#0",
+      "name": "invalidateSize",
+      "type": "Method",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/first-correction-pass.test.js:installLeaflet.map@157:4.remove@158:24#0",
+      "name": "remove",
+      "type": "Method",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/first-correction-pass.test.js:installLeaflet.map@157:4.removeLayer@158:74#0",
+      "name": "removeLayer",
+      "type": "Method",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/first-correction-pass.test.js:installLeaflet.map@157:4.setView@158:91#0",
+      "name": "setView",
+      "type": "Method",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/first-correction-pass.test.js:installLeaflet.tileLayer@161:4#0",
+      "name": "tileLayer",
+      "type": "Method",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/first-correction-pass.test.js:installLeaflet.tileLayer@161:4.addTo@161:95#0",
+      "name": "addTo",
+      "type": "Method",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/first-correction-pass.test.js:installLeaflet.tileLayer@161:4.on@161:25#2",
+      "name": "on",
+      "type": "Method",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/first-correction-pass.test.js:installLeaflet.circleMarker@162:4#0",
+      "name": "circleMarker",
+      "type": "Method",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/first-correction-pass.test.js:installLeaflet.circleMarker@162:4.addTo@162:28#0",
+      "name": "addTo",
+      "type": "Method",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/first-correction-pass.test.js:installLeaflet.circleMarker@162:4.bindTooltip@162:51#0",
+      "name": "bindTooltip",
+      "type": "Method",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/first-correction-pass.test.js:installLeaflet.circleMarker@162:4.openTooltip@162:80#0",
+      "name": "openTooltip",
+      "type": "Method",
+      "filePath": "tests/first-correction-pass.test.js",
+      "change_type": "touched"
+    }
+  ],
+  "affected_processes": [
+    {
+      "id": "proc_0_advancefinalround",
+      "name": "AdvanceFinalRound → Integer",
+      "process_type": "cross_community",
+      "step_count": 9,
+      "changed_steps": [
+        {
+          "symbol": "stopCounts",
+          "step": 8
+        }
+      ]
+    },
+    {
+      "id": "proc_2_retrymap",
+      "name": "RetryMap → GetMapTextAlternative",
+      "process_type": "cross_community",
+      "step_count": 8,
+      "changed_steps": [
+        {
+          "symbol": "drawMapGrid",
+          "step": 4
+        },
+        {
+          "symbol": "renderMapFallback",
+          "step": 6
+        },
+        {
+          "symbol": "initLeafletMap",
+          "step": 5
+        },
+        {
+          "symbol": "retryMap",
+          "step": 1
+        },
+        {
+          "symbol": "handleMapLibraryError",
+          "step": 2
+        },
+        {
+          "symbol": "refreshVisibleMap",
+          "step": 3
+        }
+      ]
+    },
+    {
+      "id": "proc_9_retrymap",
+      "name": "RetryMap → InvalidateMapSize",
+      "process_type": "cross_community",
+      "step_count": 5,
+      "changed_steps": [
+        {
+          "symbol": "drawMapGrid",
+          "step": 4
+        },
+        {
+          "symbol": "retryMap",
+          "step": 1
+        },
+        {
+          "symbol": "handleMapLibraryError",
+          "step": 2
+        },
+        {
+          "symbol": "refreshVisibleMap",
+          "step": 3
+        }
+      ]
+    },
+    {
+      "id": "proc_10_advancefinalround",
+      "name": "AdvanceFinalRound → CloseModal",
+      "process_type": "cross_community",
+      "step_count": 5,
+      "changed_steps": [
+        {
+          "symbol": "closeModal",
+          "step": 5
+        }
+      ]
+    },
+    {
+      "id": "proc_15_selectdifficulty",
+      "name": "SelectDifficulty → Click",
+      "process_type": "cross_community",
+      "step_count": 4,
+      "changed_steps": [
+        {
+          "symbol": "startNewCase",
+          "step": 2
+        },
+        {
+          "symbol": "selectDifficulty",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_16_toggleaudio",
+      "name": "ToggleAudio → ShouldReduceMotion",
+      "process_type": "cross_community",
+      "step_count": 4,
+      "changed_steps": [
+        {
+          "symbol": "applySettings",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_25_toggleaudio",
+      "name": "ToggleAudio → UpdateContrastIcon",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "applySettings",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_26_toggleaudio",
+      "name": "ToggleAudio → UpdateMotionIcon",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "applySettings",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_27_toggleaudio",
+      "name": "ToggleAudio → UpdateSoundIcon",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "applySettings",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_28_selectfinalchoice",
+      "name": "SelectFinalChoice → Integer",
+      "process_type": "cross_community",
+      "step_count": 9,
+      "changed_steps": [
+        {
+          "symbol": "stopCounts",
+          "step": 8
+        }
+      ]
+    },
+    {
+      "id": "proc_29_selectdifficulty",
+      "name": "SelectDifficulty → EvidenceRound",
+      "process_type": "cross_community",
+      "step_count": 8,
+      "changed_steps": [
+        {
+          "symbol": "startNewCase",
+          "step": 2
+        },
+        {
+          "symbol": "selectDifficulty",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_31_selectdifficulty",
+      "name": "SelectDifficulty → GetPuzzleScore",
+      "process_type": "cross_community",
+      "step_count": 7,
+      "changed_steps": [
+        {
+          "symbol": "startNewCase",
+          "step": 2
+        },
+        {
+          "symbol": "selectDifficulty",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_36_selectfinalchoice",
+      "name": "SelectFinalChoice → CloseModal",
+      "process_type": "cross_community",
+      "step_count": 5,
+      "changed_steps": [
+        {
+          "symbol": "closeModal",
+          "step": 5
+        }
+      ]
+    },
+    {
+      "id": "proc_40_togglehighcontrast",
+      "name": "ToggleHighContrast → ShouldReduceMotion",
+      "process_type": "cross_community",
+      "step_count": 4,
+      "changed_steps": [
+        {
+          "symbol": "applySettings",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_41_selectdifficulty",
+      "name": "SelectDifficulty → Success",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "startNewCase",
+          "step": 2
+        },
+        {
+          "symbol": "selectDifficulty",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_44_togglehighcontrast",
+      "name": "ToggleHighContrast → UpdateContrastIcon",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "applySettings",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_45_togglehighcontrast",
+      "name": "ToggleHighContrast → UpdateMotionIcon",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "applySettings",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_46_togglehighcontrast",
+      "name": "ToggleHighContrast → UpdateSoundIcon",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "applySettings",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_47_selectdifficulty",
+      "name": "SelectDifficulty → Integer",
+      "process_type": "cross_community",
+      "step_count": 8,
+      "changed_steps": [
+        {
+          "symbol": "stopCounts",
+          "step": 7
+        },
+        {
+          "symbol": "startNewCase",
+          "step": 2
+        },
+        {
+          "symbol": "selectDifficulty",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_49_selectdifficulty",
+      "name": "SelectDifficulty → GetStartingLives",
+      "process_type": "cross_community",
+      "step_count": 7,
+      "changed_steps": [
+        {
+          "symbol": "startNewCase",
+          "step": 2
+        },
+        {
+          "symbol": "selectDifficulty",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_51_selectdifficulty",
+      "name": "SelectDifficulty → ReadSavedGame",
+      "process_type": "cross_community",
+      "step_count": 6,
+      "changed_steps": [
+        {
+          "symbol": "startNewCase",
+          "step": 2
+        },
+        {
+          "symbol": "selectDifficulty",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_55_resumegame",
+      "name": "ResumeGame → CloseModal",
+      "process_type": "cross_community",
+      "step_count": 4,
+      "changed_steps": [
+        {
+          "symbol": "closeModal",
+          "step": 4
+        }
+      ]
+    },
+    {
+      "id": "proc_58_togglereducedmotion",
+      "name": "ToggleReducedMotion → ShouldReduceMotion",
+      "process_type": "cross_community",
+      "step_count": 4,
+      "changed_steps": [
+        {
+          "symbol": "applySettings",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_60_togglereducedmotion",
+      "name": "ToggleReducedMotion → UpdateContrastIcon",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "applySettings",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_61_togglereducedmotion",
+      "name": "ToggleReducedMotion → UpdateMotionIcon",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "applySettings",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_62_togglereducedmotion",
+      "name": "ToggleReducedMotion → UpdateSoundIcon",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "applySettings",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_63_confirmreset",
+      "name": "ConfirmReset → Integer",
+      "process_type": "cross_community",
+      "step_count": 7,
+      "changed_steps": [
+        {
+          "symbol": "stopCounts",
+          "step": 6
+        }
+      ]
+    },
+    {
+      "id": "proc_68_selectdifficulty",
+      "name": "SelectDifficulty → Announce",
+      "process_type": "cross_community",
+      "step_count": 5,
+      "changed_steps": [
+        {
+          "symbol": "startNewCase",
+          "step": 2
+        },
+        {
+          "symbol": "selectDifficulty",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_69_selectdifficulty",
+      "name": "SelectDifficulty → Schedule",
+      "process_type": "cross_community",
+      "step_count": 5,
+      "changed_steps": [
+        {
+          "symbol": "startNewCase",
+          "step": 2
+        },
+        {
+          "symbol": "selectDifficulty",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_70_selectdifficulty",
+      "name": "SelectDifficulty → CloseModal",
+      "process_type": "cross_community",
+      "step_count": 4,
+      "changed_steps": [
+        {
+          "symbol": "closeModal",
+          "step": 4
+        },
+        {
+          "symbol": "startNewCase",
+          "step": 2
+        },
+        {
+          "symbol": "selectDifficulty",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_71_clearbrokensave",
+      "name": "ClearBrokenSave → Integer",
+      "process_type": "cross_community",
+      "step_count": 6,
+      "changed_steps": [
+        {
+          "symbol": "stopCounts",
+          "step": 5
+        }
+      ]
+    }
+  ]
+}

@@ -8,7 +8,7 @@ The October 5 review examined clean `main` at `e2c6bcb`. This reconciliation exa
 
 ## Findings reconciled against c12e772
 
-These rows preserve the original findings and their disposition. The subsequent review of all accumulated changes found no new blocking defect; the runtime fixes, eight reviewed cases and owner verification evidence hold up for local commits. [The final review record](remediation-status.md#review-for-local-commits--october-12) records newer graph metadata and the one-time commit authorization. The deferred opportunities below remain open.
+These rows preserve the original findings and their disposition. The subsequent review of all accumulated changes found no new blocking defect; the runtime fixes, eight reviewed cases and owner verification evidence were grouped into three commits through `84ae82d`. [The commit review record](remediation-status.md#review-for-local-commits--october-12) preserves that review and authorization. Ryan then refreshed the index successfully at `84ae82d`: 861 nodes, 3,124 edges, 31 clusters and 73 flows. The [post-commit comparison](remediation-status.md#post-commit-graph-reconciliation--october-12) against `c12e772` reports 31 files, 109 symbols and 31 affected flows at critical impact; the full payload has no error, partial or truncation flag. This supplies graph evidence, not a new test result. The follow-up corrects stale status documentation and archives the result; no new runtime defect was identified. The deferred opportunities below remain open.
 
 | October 5 finding | State at c12e772 | This pass and remaining work |
 | --- | --- | --- |

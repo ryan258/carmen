@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — October 12, 2026 post-commit graph reconciliation
+
+- Record Ryan's successful GitNexus refresh at `84ae82d`: 861 nodes, 3,124 edges, 31 clusters and 73 flows. Archive the supplied console text and the complete read-only comparison against `c12e772`: 31 files, 109 symbols and 31 affected flows at critical impact, with no report-level error, partial or truncation flag.
+- Replace stale pre-commit index status in README, roadmap and status/finish/reconciliation docs. Keep graph coverage distinct from the earlier version 4 40-test pass and version 3 50-test pass. No new runtime failure or code correction was identified.
+- Review the clean starting tree and documentation follow-up; no submodules, gitlinks or nested source repositories are present. Ryan authorized a separate local documentation/evidence commit. No tests or GitNexus analyze were run by the agent, and no repeat run is needed solely to record this result.
+
 ## Unreleased — October 12, 2026 review and local commit grouping
 
 - Review all accumulated runtime, test, content, generated-asset, companion-guide and documentation changes after `c12e772`; no new blocking defect found. Reopen the eight exemplar source pages and preserve their scoped review limits.
