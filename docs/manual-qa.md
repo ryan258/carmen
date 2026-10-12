@@ -2,7 +2,7 @@
 
 For personal use, start with the short check in [accessibility QA](a11y-qa.md). This matrix is retained for broader coverage; it is not a requirement that Ryan manually audit every case. Current verification status lives in [remediation status](remediation-status.md).
 
-Status: **not run against the October 2 remediation**. Record date, Git revision/diff identity, browser/version, viewport/device, actions, and actual results. Browser automation can cover many interactions; real-device behavior, assistive-technology output, factual accuracy, and player judgment need their own evidence.
+Status: **not run against the October 12 correction pass after c12e772**. Record date, Git revision/diff identity, browser/version, viewport/device, actions, and actual results. Browser automation can cover many interactions; real-device behavior, assistive-technology output, factual accuracy, and player judgment need their own evidence.
 
 Start with `python3 -m http.server 8000 --bind 127.0.0.1`, then open http://127.0.0.1:8000/ . For browser automation, block or stub live map tile requests; do not automate bulk requests to community tile services.
 
@@ -16,7 +16,7 @@ Start with `python3 -m http.server 8000 --bind 127.0.0.1`, then open http://127.
 - [ ] Reach zero lives and reload before the result transition. Resume shows game over, preserving zero lives; it never grants five fresh lives.
 - [ ] Abort during correct/incorrect puzzle feedback, approved warrant feedback, and a between-stop report. No delayed callback restores the abandoned screen/save.
 - [ ] Complete a final round, reload during its feedback, and resume. The solved round remains visible until Continue; then advance once. Final failure explains that final question rather than the last location puzzle.
-- [ ] In the finale, review-clues/warrant controls are disabled. Start another game: dossier/clues/puzzle work again.
+- [ ] In the finale, Case file/warrant controls are disabled. Start another game: Case File and puzzle work again. An older save with activeTab `clues` opens Case File.
 - [ ] Open an abort dialog during a transition, then cancel. Focus returns appropriately and queued progression resumes. Confirming abort cancels it.
 - [ ] Switch packs while requests are slow or fail. Start and resume stay disabled; only the latest selected response applies. Fallback is clearly named.
 
@@ -28,11 +28,13 @@ Use a disposable browser profile for deliberate storage edits.
 - [ ] Malformed records/statistics do not crash the game. Four-stop and eight-stop scores appear on separate boards.
 - [ ] Deny browser storage or simulate quota exhaustion. A warning appears, play continues in memory, and no persistence claim is made.
 - [ ] Open two playing tabs. A save change in one returns the other to title with an explanation; resume reads the latest save.
+- [ ] Start a new case while a save exists, including one from the other pack. Keep saved case is initially focused and preserves it; Replace saved case starts the chosen route/difficulty. Escape cancels. Change or delete the save in another tab before confirming: the old consent must not replace the new value.
 
 ## Map and layout
 
 - [ ] Current-location zoom fits each pack. OSM attribution remains visible. Pan/zoom controls work with keyboard and pointer.
 - [ ] Block Leaflet or a tile request. A readable route appears and remains usable at later stops. Select Text route while tiles work; reload and confirm the preference persists.
+- [ ] Delay Leaflet until after starting play: the loading route upgrades when the library arrives. For a failed request, unblock it and choose Retry map. A pending retry cannot start duplicates. Repeat with Text route selected and after Pause: late library completion must not switch the chosen route or revive play.
 - [ ] Verify marker coordinates independently against the intended places.
 - [ ] Check Chrome, Firefox, and Safari; phone, tablet, and desktop widths. At 320px, all header controls, tabs, labels, forms, and token names remain reachable.
 - [ ] Follow [accessibility QA](a11y-qa.md), including zoom, motion preferences, and screen-reader output.

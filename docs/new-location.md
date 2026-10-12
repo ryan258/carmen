@@ -6,7 +6,7 @@
 4. Add precise primary-source registry entries. Mark the new case `source-linked-needs-line-review`. Record claim-level review evidence before changing it to `reviewed`.
 5. Supply `nextLead` on a Bentonville variant/location or in its lead registry; hand-authored JSON keeps it in briefing. At a selected run's last stop, the UI replaces the breadcrumb with the headquarters ending. Never assume all stops will be played.
 6. Increment `contentVersion` for a changed existing pack. New packs need at least four locations, three final rounds, and a manifest entry. The shared final resolver uses the actual selected first/middle cases and earned last token.
-7. Run the content and CSS builds, then the focused content/runtime checks in README. Use a representative check with your preferred input method; source and layout checks are separate.
+7. Regenerate Bentonville and its fallback together after changing the Bentonville authoring source. Rebuild CSS if utility classes change. Use the focused content/runtime command in [remediation status](remediation-status.md) for a comparable content edit; README's `npm run verify` is the optional full suite. Use a representative check with your preferred input method; source and layout checks are separate. For this remediation, Ryan runs the verification commands; agents do not run tests or GitNexus analyze.
 
 Example location shape (illustrative values; not a publishable fact claim):
 

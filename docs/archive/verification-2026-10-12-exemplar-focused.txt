@@ -1,0 +1,86 @@
+Using Node v26.7.0
+ryanjohnson@MacBookAir carmen % cd /Users/ryanjohnson/Projects/nonsense/carmen &&
+npm run check:syntax &&
+npm run check:content &&
+node --test tests/authoring.test.js tests/content-validation.test.js tests/core-contracts.test.js tests/run-generation.test.js tests/session-regressions.test.js
+
+> check:syntax
+> node --check game.js && node --check game-core.js && node --check game-map.js && node --check game-records.js && node --check run-generator.js && node --check map-config.js && node --check scripts/generate-bentonville-content.js && node --check scripts/check-content.cjs
+
+
+> check:content
+> node scripts/check-content.cjs
+
+bentonville-carmen, argentina-carmen: structural contracts and fallback accepted.
+80 cases; 72 still need factual/editorial sign-off. The route-based finale inherits those case reviews; its token question uses only the collected inventory.
+✔ generator preserves authored reasoning and review metadata (2.335ms)
+✔ tokens belong to location records, so extending the list cannot exhaust an eight-item array (13.139917ms)
+✔ manifest rejects an empty list, duplicate path and missing default (0.98575ms)
+✔ review claims need evidence, a real calendar date, and reviewed sources (3.067958ms)
+✔ content checker detects manifest omissions and stale fallback content (15.48075ms)
+✔ finale and save validation use the selected case answer, including nonzero correct indexes (21.263667ms)
+✔ manifest and all authored packs satisfy the production loader contract (23.006333ms)
+✔ a new location needs a nonempty pool, not a classic-named case or five variants (5.618292ms)
+✔ every current case has progressive hints and the authored packs remain available (7.367292ms)
+✔ equivalent Argentina sites share a canonical warrant label (2.449792ms)
+✔ runtime pack validator rejects malformed options, sources, identities, coordinates and markup (20.442416ms)
+✔ storage denial preserves the current session without crashing (0.866542ms)
+✔ storage observes external changes instead of caching stale saves (0.120667ms)
+✔ cancelled callbacks cannot revive an old session even if the platform delivers them (0.12875ms)
+✔ generated fallback exactly matches the canonical Bentonville pack (9.322792ms)
+✔ Bentonville visuals and calling cards do not print the puzzle answer (1.258792ms)
+✔ seeded case generation is deterministic (1.863334ms)
+✔ different seeds can produce different case routes (0.145875ms)
+✔ every supported pack offers only routes with enough tokens for four final choices (6.132125ms)
+✔ generated case ids always exist in their location pool (0.190459ms)
+Quiz pack manifest unavailable; using built-in fallback cases. Error: No network in harness
+    at fetch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:52:87)
+    at fetchJson (game.js:155:28)
+    at loadQuizPack (game.js:199:28)
+    at game.js:475:9
+    at dispatch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:47:88)
+    at Object.boot (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:60:14)
+    at TestContext.<anonymous> (/Users/ryanjohnson/Projects/nonsense/carmen/tests/session-regressions.test.js:119:32)
+    at Test.runInAsyncScope (node:async_hooks:214:14)
+    at Test.run (node:internal/test_runner/test:1047:25)
+    at Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+Quiz pack manifest unavailable; using built-in fallback cases. Error: No network in harness
+    at fetch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:52:87)
+    at fetchJson (game.js:155:28)
+    at loadQuizPack (game.js:199:28)
+    at game.js:475:9
+    at dispatch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:47:88)
+    at Object.boot (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:60:14)
+    at TestContext.<anonymous> (/Users/ryanjohnson/Projects/nonsense/carmen/tests/session-regressions.test.js:159:32)
+    at Test.runInAsyncScope (node:async_hooks:214:14)
+    at Test.run (node:internal/test_runner/test:1047:25)
+    at Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+✔ resume preserves hint cost, attempts, eliminated options, and solved score (45.30525ms)
+✔ warrant rejection is locked during feedback; unsolved and final warrants are rejected (8.298542ms)
+✔ approved warrant resumes the between-stop phase once without awarding twice (5.765458ms)
+✔ abort cancels delayed progression and keeps the save deleted (6.4565ms)
+✔ zero-life resume ends the game once without restoring lives (5.396125ms)
+✔ unknown, old, foreign, malformed and unsupported-length saves never migrate (6.014ms)
+✔ records recover from malformed storage and separate route lengths (5.728792ms)
+✔ both packs complete 4/6/8-stop runs and start again with correct controls (47.718083ms)
+✔ final feedback is resumable and a final failure explains the failed final question (4.592208ms)
+✔ pack loading blocks start and resume until the latest request completes (8.812083ms)
+✔ a late earlier pack response cannot replace the latest selection (7.806958ms)
+✔ unavailable map stays a route fallback across stops without reinitializing Leaflet (5.7575ms)
+✔ stale abort confirmation cannot erase another tab save, even before its storage event (4.212792ms)
+✔ actual boot registers storage cancellation and invalidates an open dialog (12.866375ms)
+✔ clearing an old broken-save control preserves a newer valid save (16.074917ms)
+✔ correct-answer feedback waits for Continue and restores without advancing (11.252333ms)
+✔ warrant choices stay local and the established location is filled at every difficulty (13.622167ms)
+✔ actual page bindings expose unique controls, voice labels, pause and text-route preference (7.296917ms)
+✔ keyboard shortcuts execute after boot and ignore focused form controls (5.480084ms)
+✔ a pending storage event cannot let an old tab overwrite a newer save (6.214583ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 370.040333
+ryanjohnson@MacBookAir carmen % 

@@ -1,5 +1,32 @@
 # Changelog
 
+## Unreleased — October 12, 2026 review and local commit grouping
+
+- Review all accumulated runtime, test, content, generated-asset, companion-guide and documentation changes after `c12e772`; no new blocking defect found. Reopen the eight exemplar source pages and preserve their scoped review limits.
+- Reconcile README, roadmap and documentation with the version 4 40-test pass, separate version 3 50-test evidence, newer existing graph metadata and remaining browser/editorial work. Clarify the focused authoring command versus README's optional full suite.
+- Group local commits into runtime reliability, reviewed content with generated assets, and documentation/evidence. No submodules or nested source repositories are present. Ryan authorized these commits once; no push, publication or deployment is included. No tests or GitNexus analyze were run by the agent.
+
+## Unreleased — October 12, 2026 eight-case reviewed exemplar
+
+- Rewrite four cases per pack with primary-source passage evidence, explicit fiction boundaries, observable learning objectives, three hints and explanations for every distractor. Record Codex as the AI-assisted reviewer; 72 case reviews remain pending.
+- Add a self-contained companion guide with the eight prompts, progressive hints, answer keys, source/claim ledger, transfer questions and observation criteria. The regular game still uses its full seeded pools; this is not a new Study mode or case picker.
+- Replace weak geographic decoys with mistakes involving partial evidence, dates/places, missing route links, adaptive reuse, overclaiming, chronology and part/whole distinctions. Remove unsupported details from the selected cases.
+- Advance both pack content versions from 3 to 4 because answers change. Keep schema 5 and stable case IDs; version 3 saves cannot resume against version 4 packs.
+- Regenerate Bentonville JSON and its exact fallback. Make the authoring test's missing-evidence fixture explicit now that its first case is reviewed, and exercise unreviewed-source rejection.
+- Content generation completed. The agent ran no tests, syntax/content checks, browser checks or GitNexus analyze. Ryan's earlier 50/50 result applies to the preceding version 3 correction tree. See [current evidence](docs/remediation-status.md).
+- Ryan subsequently completed the exemplar GitNexus refresh: 856 nodes, 3,113 edges, 31 clusters and 73 flows. The complete read-only change report has 23 tracked changed files, 70 symbols and 31 affected flows, with critical impact and no error/partial/truncation flag. No runtime or content correction follows from the graph output alone.
+- Record Ryan's separate Node v26.7.0 version 4 verification: syntax PASS, content/fallback PASS (80 cases, 72 pending reviews), and 40/40 focused tests PASS with no failures, cancellations, skips or todos. Archive the complete transcript and reconcile status docs. The deliberate `No network in harness` diagnostics accompanied passing fallback scenarios; no code repair is indicated. This follow-up changes documentation/evidence only; full-suite, browser/AT and human-learning evidence remain open.
+
+## Unreleased — October 12, 2026 first correction pass after c12e772
+
+- Preserve c12e772's combined Case File, legacy saved-tab mapping, warrant help and reduced-motion-aware approval stamp.
+- Require explicit saved-case replacement, initially focus Keep saved case, and reject stale or cancelled consent.
+- Add persistent Answer shortcuts, off by default, with typing/modifier/repeat/composition exclusions.
+- Require at least four selected stops for the four-option token finale and save contract.
+- Distinguish pending/failed Leaflet, failed tiles and selected text route; handle late readiness and explicit retry using the pinned script source.
+- Correct warrant difficulty copy, local-accomplice wording and the identified Argentina prompt/headline inconsistencies.
+- Reconcile the review and evidence record; add focused regression cases and browser acceptance steps. Ryan subsequently supplied passing syntax/content checks and 50/50 focused tests, including all 12 new correction regressions. GitNexus rebuilt successfully (835 nodes, 3,079 edges, 31 clusters, 71 flows); change detection reports critical impact across 17 tracked files, 51 symbols and 31 flows. The verification follow-up changed documentation only; the agent ran no tests or analyze. Browser/AT and editorial evidence remain open. See [current evidence](docs/remediation-status.md).
+
 ## Unreleased — October 3, 2026 review remediation
 
 - Protect stale save writes, completion cleanup and abort confirmation; close dialogs when another tab changes progress.

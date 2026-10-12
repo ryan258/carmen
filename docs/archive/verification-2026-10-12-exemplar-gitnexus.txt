@@ -1,0 +1,64 @@
+Using Node v26.7.0
+ryanjohnson@MacBookAir carmen % npx gitnexus analyze    
+
+  GitNexus Analyzer (1.6.12)
+
+  GitNexus Analyzer (1.6.12)
+  ████████████████████████░░░░░░░░░░░░░░░░  59% | Resolving types (complete){"level":40,"time":1791836851160,"name":"gitnexus","truncation":{"truncated"}
+Incremental: changed=14, added=1, deleted=0 (skipping wipe + 37 unchanged file rows preserved)
+  Repository indexed successfully (6.8s)table set (BFS depth ≤ 4)
+  ████████████████████████████████████░░░░  90% | Search indexes ready{"level":30,"time":1791836855938,"name":"gitnexus","msg":"name-fallback resolution}
+  856 nodes | 3,113 edges | 31 clusters | 73 flows
+  /Users/ryanjohnson/Projects/nonsense/carmen0% | Done
+
+ryanjohnson@MacBookAir carmen % cd /Users/ryanjohnson/Projects/nonsense/carmen &&
+node .gitnexus/run.cjs analyze --index-only &&
+node .gitnexus/run.cjs detect-changes --scope all --repo .
+
+  GitNexus Analyzer (1.6.12)
+
+  GitNexus Analyzer (1.6.12)
+analyzer runner identity changed (stamped schema 4, this build uses schema 4); forcing a full rebuild so the index provenance matches the analyzer and d.
+  ████████████████████████░░░░░░░░░░░░░░░░  59% | Resolving types (complete){"level":40,"time":1791836865900,"name":"gitnexus","truncation":{"truncated"}
+  Repository indexed successfully (7.7s)cached parser output for 23 file(s) (parse cache 99+1.6.12). For same-version capture/query development changes,.
+  ██████████████████████████████████░░░░░░  85% | Creating search indexes... (4s){"level":30,"time":1791836872732,"name":"gitnexus","msg":"name-fallback}
+  856 nodes | 3,113 edges | 31 clusters | 73 flowsDone
+  /Users/ryanjohnson/Projects/nonsense/carmen
+
+
+  GitNexus Detect Changes (1.6.12)
+Changes: 23 files, 70 symbols
+Affected processes: 31
+Risk level: critical
+
+Changed symbols:
+  Section Carmen: ACME geography case files → README.md
+  Section Play and controls → README.md
+  Section Saves and records → README.md
+  Section Architecture and authoring → README.md
+  Section Verification → README.md
+  Section Remaining work → ROADMAP.md
+  Section Immediate next action → ROADMAP.md
+  Section Learning-tool priorities → ROADMAP.md
+  Section Personal comfort and reliability → ROADMAP.md
+  Section Optional enhancements → ROADMAP.md
+  Section Current implementation contract → SPEC.md
+  Section Product and content → SPEC.md
+  Section State transitions → SPEC.md
+  Section Persistence and boundaries → SPEC.md
+  Section Accessibility and verification boundary → SPEC.md
+... and 55 more
+
+Affected execution flows:
+  • AdvanceFinalRound → Integer (9 steps) — changed: stopCounts
+  • RetryMap → GetMapTextAlternative (8 steps) — changed: drawMapGrid, renderMapFallback, initLeafletMap, retryMap, handleMapLibraryError, refreshVisibleMap
+  • RetryMap → InvalidateMapSize (5 steps) — changed: drawMapGrid, retryMap, handleMapLibraryError, refreshVisibleMap
+  • AdvanceFinalRound → CloseModal (5 steps) — changed: closeModal
+  • SelectDifficulty → Click (4 steps) — changed: startNewCase, selectDifficulty
+  • ToggleAudio → ShouldReduceMotion (4 steps) — changed: applySettings
+  • ToggleAudio → UpdateContrastIcon (3 steps) — changed: applySettings
+  • ToggleAudio → UpdateMotionIcon (3 steps) — changed: applySettings
+  • ToggleAudio → UpdateSoundIcon (3 steps) — changed: applySettings
+  • SelectFinalChoice → Integer (9 steps) — changed: stopCounts
+... and 21 more
+ryanjohnson@MacBookAir carmen % 

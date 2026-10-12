@@ -6,8 +6,8 @@
 | Pack manifest and JSON | Two first-party content packs | Ten-second request timeout; generated Bentonville snapshot fallback; start/resume blocked during selection |
 | Browser localStorage | One active save, settings, scores, statistics | Session-memory fallback and visible persistence warning |
 | Web Audio | Optional synthetic effects | Unsupported/blocked construction does not stop play; sound setting respected |
-| Leaflet 1.9.4 | Map rendering, pinned CDN assets with integrity | Async optional script; DOM-ready game boot; Text route when unavailable or selected |
-| OpenStreetMap standard tiles | Ordinary browser map viewing | Visible attribution; text route after tile errors; no repeated initialization loop |
+| Leaflet 1.9.4 | Map rendering, pinned CDN assets with integrity | Async optional script; temporary route while loading; late readiness can render the active map; explicit Retry map after failure, using the same pinned source |
+| OpenStreetMap standard tiles | Ordinary browser map viewing | Visible attribution; text route after tile errors; explicit Retry map; selected Text route stays selected |
 | Tailwind 3 | Development-only utility build | Checked-in `tailwind.build.css` loads without the Tailwind runtime CDN |
 
 `map-config.js` contains the public tile URL and attribution. The default uses HTTPS OSM tiles, ordinary browser caching, and browser Referer headers. Do not add tile prefetching, offline downloads, cache bypasses, or referrer suppression. Follow the [OSM tile policy](https://operations.osmfoundation.org/policies/tiles/), which provides best-effort availability rather than a service guarantee. If future usage exceeds personal browsing, revisit provider suitability; no external account or purchase was created by this remediation.
@@ -18,4 +18,4 @@ Do not put private API keys in browser assets. A future provider change must als
 
 ## Verification evidence
 
-The lockfile and dependency versions were not changed in the October 3 remediation. Historical dependency checks are recorded in [October 2 evidence](archive/verification-2026-10-02.md); they do not verify current runtime changes. See [current status](remediation-status.md).
+The lockfile and dependency versions were not changed in the October 12 correction pass. Historical dependency checks are recorded in [October 2 evidence](archive/verification-2026-10-02.md); they do not verify current runtime changes. See [current status](remediation-status.md).

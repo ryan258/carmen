@@ -8,6 +8,8 @@ A personal-use geography and evidence-matching quiz in an unofficial fictional A
 
 There is one four-option engine. It can present cipher, arithmetic, sequence, chronology, and deduction questions as text. Interactive plotting, dragging, typed ciphers, and logic grids are not implemented. Neither ages nor completion-time estimates have been established by a player study.
 
+Eight cases, four per pack, have AI-assisted source/editorial review recorded by Codex on October 12, 2026. The other 72 retain pending status. The [reviewed exemplar](docs/reviewed-exemplar.md) provides exact case IDs, full prompts, progressive hints, reasoning for each distractor, transfer questions and a claim/source ledger. These cases remain in the normal seeded pools; direct case selection and a reviewed-only route are not implemented. Transfer questions are companion activities, not tracked game events. Shared map coordinates and unrelated location metadata were not audited by this bounded case review.
+
 ## State transitions
 
 `idle → investigation → between → investigation … → final → complete`
@@ -19,6 +21,7 @@ There is one four-option engine. It can present cipher, arithmetic, sequence, ch
 - The final report has three rounds: the selected first case, a selected middle case, and the last selected stop's earned token. It takes place at headquarters, so short routes do not imply visiting skipped locations.
 - Zero lives ends the case. Terminal handlers are idempotent within a session; record/stat writes identify the run.
 - Restart, title navigation, new runs, and pack replacement cancel pending session callbacks. Dialogs pause delayed delivery. Pack loading blocks start/resume until the latest request settles or falls back.
+- Any existing save requires an explicit replacement choice before a new case starts. Keep saved case receives initial focus. Confirmation is bound to the exact saved value, selected pack, and route; Escape and storage events invalidate it.
 
 ## Scoring
 
@@ -28,9 +31,13 @@ Records compare only the same pack/content version/difficulty/stop count. They a
 
 ## Persistence and boundaries
 
-Schema 5 stores the explicit phase, pack/content identity, selected route, seeded variants, score ledger, lives, history, tokens, hint/attempt counts, solved state, answer order, eliminated choices, active tab, and warrant selection. Invalid, foreign, unsupported, and older saves are rejected without mutation. Schema 4/contentVersion 2 belongs to the earlier final-report rules and is intentionally incompatible with this revision.
+Schema 5 stores the explicit phase, pack/content identity, selected route, seeded variants, score ledger, lives, history, tokens, hint/attempt counts, solved state, answer order, eliminated choices, active tab, and warrant selection. Invalid, foreign, unsupported, and older saves are rejected without mutation. Both packs now use contentVersion 4 because the exemplar changes answers and evidence; contentVersion 3 saves are incompatible, as are the older schema 4/contentVersion 2 saves. Schema 5 itself is unchanged.
 
 The pack validator checks the runtime shape, identity/version fields, coordinates, options, unique IDs/tokens, source references, metadata, and basic markup restrictions. Only repository-owned pack JSON is supported. The markup restrictions are a guardrail, not a general HTML sanitizer. User-authored uploads require a separate design.
+
+Packs contain 4–100 locations and every supported route contains at least four stops. Route options, save validation, and the token finale share this minimum. The bundled eight-location packs still offer 4/6/8 stops. The exemplar retains case IDs, locations, route order and scoring; pack content versions advance to 4 for the changed case semantics.
+
+The optional map distinguishes a pending library, a failed library, failed tiles, and a deliberately selected text route. Library readiness redraws only an active, visible game. Retry map reuses the pinned CDN URL and integrity attributes, permits only one pending library retry, and respects the Text route preference. Map failures do not change saved progress.
 
 Storage errors switch to session memory with a warning. Save writes, terminal cleanup and abort confirmation check ownership of the saved snapshot; storage events close dialogs and cancel stale sessions. This is a single-save convenience model, not a cross-tab transaction system. No telemetry, server storage, authentication, or external AI calls are part of the game. External map/CDN requests are described in the dependency plan.
 
@@ -38,4 +45,6 @@ Storage errors switch to session memory with a warning. Save writes, terminal cl
 
 Native controls, associated labels, tab semantics, focus movement, modal focus containment, live feedback, reduced motion, readable token labels, surface-specific colors, and a textual route accompany the game. These implementations still require the browser and assistive-technology checks in the QA documents. They do not constitute a conformance claim.
 
-The Node suite exercises production rules and session functions through a DOM double. Browser layout, network-provider behavior, source accuracy, and player comprehension need independent evidence. Current verification and historical results are separated in [remediation status](docs/remediation-status.md). The October 3 changes are awaiting user-run verification. Personal preview use does not require publishing, commercial readiness, or a fresh-player study.
+Character answer shortcuts default to off, with a persistent visible opt-in control. When enabled, A–D/1–4 work only on an unsolved, unlocked, visible puzzle outside dialogs, form controls, links, buttons, and editable text. Modified, repeated, and composing key events are ignored. Native answer buttons remain available with either preference.
+
+The Node suite exercises production rules and session functions through a DOM double. Browser layout, network-provider behavior and player comprehension need independent evidence. Current verification and historical results are separated in [remediation status](docs/remediation-status.md). Ryan's supplied verification for the October 12 runtime corrections after `c12e772` passed syntax/content checks and all 50 tests in the focused run at content version 3. The later exemplar has a separate version 4 pass: syntax/content checks and 40/40 focused tests. These overlapping subsets do not establish a current full-suite or browser/AT result. The eight cases have AI-assisted source/editorial evidence; 72 reviews and human learning evidence remain open. Personal preview use does not require publishing, commercial readiness, or a fresh-player study.

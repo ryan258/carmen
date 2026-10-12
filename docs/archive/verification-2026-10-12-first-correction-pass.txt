@@ -1,0 +1,172 @@
+
+ryanjohnson@MacBookAir carmen % cd /Users/ryanjohnson/Projects/nonsense/carmen &&
+npm run check:syntax &&
+npm run check:content &&
+node --test \
+  tests/core-contracts.test.js \
+  tests/run-generation.test.js \
+  tests/session-regressions.test.js \
+  tests/first-correction-pass.test.js \
+  tests/smoke.test.js
+
+> check:syntax
+> node --check game.js && node --check game-core.js && node --check game-map.js && node --check game-records.js && node --check run-generator.js && node --check map-config.js && node --check scripts/generate-bentonville-content.js && node --check scripts/check-content.cjs
+
+
+> check:content
+> node scripts/check-content.cjs
+
+bentonville-carmen, argentina-carmen: structural contracts and fallback accepted.
+80 cases; 80 still need factual/editorial sign-off. The route-based finale inherits those case reviews; its token question uses only the collected inventory.
+✔ runtime pack validator rejects malformed options, sources, identities, coordinates and markup (7.557209ms)
+✔ storage denial preserves the current session without crashing (0.252792ms)
+✔ storage observes external changes instead of caching stale saves (0.079875ms)
+✔ cancelled callbacks cannot revive an old session even if the platform delivers them (0.112959ms)
+✔ generated fallback exactly matches the canonical Bentonville pack (5.519666ms)
+✔ Bentonville visuals and calling cards do not print the puzzle answer (0.246083ms)
+Quiz pack manifest unavailable; using built-in fallback cases. Error: No network in harness
+    at fetch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:52:87)
+    at fetchJson (game.js:155:28)
+    at loadQuizPack (game.js:199:28)
+    at game.js:475:9
+    at dispatch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:47:88)
+    at Object.boot (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:60:14)
+    at TestContext.<anonymous> (/Users/ryanjohnson/Projects/nonsense/carmen/tests/first-correction-pass.test.js:61:35)
+    at Test.runInAsyncScope (node:async_hooks:214:14)
+    at Test.run (node:internal/test_runner/test:1047:25)
+    at Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+Quiz pack manifest unavailable; using built-in fallback cases. Error: No network in harness
+    at fetch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:52:87)
+    at fetchJson (game.js:155:28)
+    at loadQuizPack (game.js:199:28)
+    at game.js:475:9
+    at dispatch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:47:88)
+    at Object.boot (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:60:14)
+    at TestContext.<anonymous> (/Users/ryanjohnson/Projects/nonsense/carmen/tests/first-correction-pass.test.js:92:35)
+    at Test.runInAsyncScope (node:async_hooks:214:14)
+    at Test.run (node:internal/test_runner/test:1047:25)
+    at Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+✔ new case requires explicit replacement and initially focuses the preserving action (21.514917ms)
+✔ replacement protects another pack and malformed saves until confirmed (13.180875ms)
+✔ a stale replacement confirmation cannot overwrite a newer save or undo its deletion (9.639125ms)
+✔ Escape and storage events invalidate pending replacement consent (6.304166ms)
+✔ replacement consent cannot transfer to a different pack or route (10.542375ms)
+✔ answer shortcuts default off, persist opt-in, and ignore typing and modified input (7.223167ms)
+✔ legacy clues-tab saves reopen the combined Case File from c12e772 (5.769875ms)
+✔ 4/5/6-location packs keep four final options and can resume the inventory question (45.822791ms)
+✔ a delayed Leaflet load upgrades the temporary route without changing the save (10.308292ms)
+✔ failed library retries are explicit, use the pinned source, and cannot duplicate a pending load (5.584958ms)
+✔ tile failure stays on text until Retry map and obsolete tile callbacks cannot remove the new map (4.41375ms)
+✔ late library callbacks respect Text route and do not revive a paused session (3.07325ms)
+✔ seeded case generation is deterministic (1.739833ms)
+✔ different seeds can produce different case routes (0.263375ms)
+✔ every supported pack offers only routes with enough tokens for four final choices (3.846625ms)
+✔ generated case ids always exist in their location pool (0.17075ms)
+Quiz pack manifest unavailable; using built-in fallback cases. Error: No network in harness
+    at fetch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:52:87)
+    at fetchJson (game.js:155:28)
+    at loadQuizPack (game.js:199:28)
+    at game.js:475:9
+    at dispatch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:47:88)
+    at Object.boot (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:60:14)
+    at TestContext.<anonymous> (/Users/ryanjohnson/Projects/nonsense/carmen/tests/session-regressions.test.js:119:32)
+    at Test.runInAsyncScope (node:async_hooks:214:14)
+    at Test.run (node:internal/test_runner/test:1047:25)
+    at Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+Quiz pack manifest unavailable; using built-in fallback cases. Error: No network in harness
+    at fetch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:52:87)
+    at fetchJson (game.js:155:28)
+    at loadQuizPack (game.js:199:28)
+    at game.js:475:9
+    at dispatch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:47:88)
+    at Object.boot (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:60:14)
+    at TestContext.<anonymous> (/Users/ryanjohnson/Projects/nonsense/carmen/tests/session-regressions.test.js:159:32)
+    at Test.runInAsyncScope (node:async_hooks:214:14)
+    at Test.run (node:internal/test_runner/test:1047:25)
+    at Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+✔ resume preserves hint cost, attempts, eliminated options, and solved score (19.265167ms)
+✔ warrant rejection is locked during feedback; unsolved and final warrants are rejected (6.488625ms)
+✔ approved warrant resumes the between-stop phase once without awarding twice (5.422083ms)
+✔ abort cancels delayed progression and keeps the save deleted (4.453834ms)
+✔ zero-life resume ends the game once without restoring lives (7.044667ms)
+✔ unknown, old, foreign, malformed and unsupported-length saves never migrate (3.7845ms)
+✔ records recover from malformed storage and separate route lengths (3.712542ms)
+✔ both packs complete 4/6/8-stop runs and start again with correct controls (68.916333ms)
+✔ final feedback is resumable and a final failure explains the failed final question (7.421708ms)
+✔ pack loading blocks start and resume until the latest request completes (10.662417ms)
+✔ a late earlier pack response cannot replace the latest selection (4.178375ms)
+✔ unavailable map stays a route fallback across stops without reinitializing Leaflet (5.268375ms)
+✔ stale abort confirmation cannot erase another tab save, even before its storage event (5.127ms)
+✔ actual boot registers storage cancellation and invalidates an open dialog (6.377458ms)
+✔ clearing an old broken-save control preserves a newer valid save (4.104875ms)
+✔ correct-answer feedback waits for Continue and restores without advancing (3.299167ms)
+✔ warrant choices stay local and the established location is filled at every difficulty (7.569583ms)
+✔ actual page bindings expose unique controls, voice labels, pause and text-route preference (3.759084ms)
+✔ keyboard shortcuts execute after boot and ignore focused form controls (3.566ms)
+✔ a pending storage event cannot let an old tab overwrite a newer save (4.693625ms)
+✔ html references the split production assets in dependency order (1.372584ms)
+✔ referenced local assets exist (0.732834ms)
+✔ runtime loads the quiz pack manifest instead of a single active pack (0.706417ms)
+✔ built-in fallback pack id remains selectable from the manifest (3.387834ms)
+✔ puzzle answers are shuffled so the correct option is not always first (0.862ms)
+✔ html exposes a quiz pack selector before starting a new investigation (0.576125ms)
+✔ production html does not depend on the Tailwind CDN (0.221833ms)
+✔ optional Leaflet cannot block DOM-ready game startup (1.415958ms)
+ℹ tests 50
+ℹ suites 0
+ℹ pass 50
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 316.547875
+ryanjohnson@MacBookAir carmen % node .gitnexus/run.cjs analyze --index-only &&
+node .gitnexus/run.cjs detect-changes --scope all --repo .
+
+  GitNexus Analyzer (1.6.12)
+
+  GitNexus Analyzer (1.6.12)
+analyzer runner identity changed (stamped schema 4, this build uses schema 4); forcing a full rebuild so the index provenance matches the analyzer and d.
+  ████████████████████████░░░░░░░░░░░░░░░░  59% | Resolving types (complete){"level":40,"time":1791834671908,"name":"gitnexus","truncation":{"truncated"}
+  Repository indexed successfully (10.6s)ached parser output for 14 file(s) (parse cache 99+1.6.12). For same-version capture/query development changes,.
+  ████████████████████████████████████░░░░  90% | Search indexes ready{"level":30,"time":1791834678961,"name":"gitnexus","msg":"name-fallback resolution}
+  835 nodes | 3,079 edges | 31 clusters | 71 flows
+  /Users/ryanjohnson/Projects/nonsense/carmen0% | Done
+
+
+  GitNexus Detect Changes (1.6.12)
+Changes: 17 files, 51 symbols
+Affected processes: 31
+Risk level: critical
+
+Changed symbols:
+  Section Carmen: ACME geography case files → README.md
+  Section Play and controls → README.md
+  Section Saves and records → README.md
+  Section Verification → README.md
+  Section Remaining work → ROADMAP.md
+  Section Immediate next action → ROADMAP.md
+  Section Learning-tool priorities → ROADMAP.md
+  Section Personal comfort and reliability → ROADMAP.md
+  Section Current implementation contract → SPEC.md
+  Section State transitions → SPEC.md
+  Section Persistence and boundaries → SPEC.md
+  Section Accessibility and verification boundary → SPEC.md
+  Section Accessibility verification → docs/a11y-qa.md
+  Section Short personal check → docs/a11y-qa.md
+  Section Broader reference matrix → docs/a11y-qa.md
+... and 36 more
+
+Affected execution flows:
+  • AdvanceFinalRound → Integer (9 steps) — changed: stopCounts
+  • RetryMap → GetMapTextAlternative (8 steps) — changed: drawMapGrid, renderMapFallback, initLeafletMap, retryMap, handleMapLibraryError, refreshVisibleMap
+  • RetryMap → InvalidateMapSize (5 steps) — changed: drawMapGrid, retryMap, handleMapLibraryError, refreshVisibleMap
+  • AdvanceFinalRound → CloseModal (5 steps) — changed: closeModal
+  • SelectDifficulty → Click (4 steps) — changed: startNewCase, selectDifficulty
+  • ToggleAudio → ShouldReduceMotion (4 steps) — changed: applySettings
+  • ToggleAudio → UpdateContrastIcon (3 steps) — changed: applySettings
+  • ToggleAudio → UpdateMotionIcon (3 steps) — changed: applySettings
+  • ToggleAudio → UpdateSoundIcon (3 steps) — changed: applySettings
+  • SelectFinalChoice → Integer (9 steps) — changed: stopCounts
+... and 21 more
+ryanjohnson@MacBookAir carmen % 

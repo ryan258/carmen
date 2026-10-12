@@ -1,0 +1,47 @@
+# Review reconciliation and first correction pass — October 12, 2026
+
+The October 5 review examined clean `main` at `e2c6bcb`. This reconciliation examined clean `main` at `c12e772` before editing. The intervening commit changed README, SPEC, the game HTML, and `game.js`; it combined dossier and clue sheets into Case File, clarified warrant controls, mapped old saved `clues` tabs to `dossier`, and added a brief approved-warrant stamp delay that respects reduced motion.
+
+**Earlier runtime result: the bounded correction pass passed Ryan's syntax/content checks and focused 50-test run, including all 12 new regressions.** GitNexus rebuilt successfully and reported critical change impact. The immediate verification follow-up changed documentation only; no failing runtime check was reported. Browser/AT and learning-effectiveness evidence remain open; the later exemplar below records partial editorial progress. Exact evidence and commands live in [remediation status](remediation-status.md).
+
+**Later content follow-up:** the [eight-case exemplar](reviewed-exemplar.md) is now authored, with AI-assisted primary-source/editorial reviews for four cases per pack, useful distractors, full reasoning and companion transfer activities. The other 72 reviews remain pending. Both packs advance to content version 4; the earlier 50-test result applies to the preceding version 3 tree. Ryan subsequently refreshed GitNexus successfully: 856 nodes, 3,113 edges, 31 clusters, 73 flows; the complete change report has 23 tracked files, 70 symbols and 31 affected flows at critical impact. Ryan then supplied passing version 4 syntax/content checks and 40/40 focused tests, with no failures, cancellations, skips or todos. No code fix follows from that passing result; status docs and the transcript archive are updated. The agent ran no tests or analyze. A current full-suite result, human editorial/learner and browser/AT acceptance remain open.
+
+## Findings reconciled against c12e772
+
+These rows preserve the original findings and their disposition. The subsequent review of all accumulated changes found no new blocking defect; the runtime fixes, eight reviewed cases and owner verification evidence hold up for local commits. [The final review record](remediation-status.md#review-for-local-commits--october-12) records newer graph metadata and the one-time commit authorization. The deferred opportunities below remain open.
+
+| October 5 finding | State at c12e772 | This pass and remaining work |
+| --- | --- | --- |
+| Briefing and clue sheets require separate tabs | Corrected by the commit | Preserve combined Case File; protect old saved-tab compatibility with a regression |
+| Starting a new run silently replaces progress | Still applies, including another pack's save | Implement Keep/Replace confirmation, preserving initial focus, snapshot check, and cancelled/stale consent handling |
+| A–D/1–4 shortcuts cannot be disabled | Still applies | Implement a persistent off-by-default switch; retain visible Answer controls and normal keyboard activation |
+| Four-location packs can offer three stops while finale/save rules require four choices | Still applies to the extensibility contract; bundled eight-stop packs avoid it | Require four selected stops through the shared route function; add small-pack finale/resume coverage |
+| Async Leaflet arrival can leave a permanent fallback | Still applies | Distinguish loading, library failure, tile failure, and chosen text route; late readiness may upgrade the visible map, with explicit retry after failure |
+| Difficulty copy says all three warrant fields must be chosen | Still applies despite improved warrant help | Explain prefilled current stop and two evidence choices in all three difficulty cards |
+| Generic wording targets Carmen while the stop targets an accomplice | Still applies in the clue-sheet introduction | Correct that introduction; broader story coherence remains an editorial task |
+| Argentina evidence is said to be “below” while it is in another panel | Still applies: clue sheets moved into Case File, not beside the puzzle | Remove the five misplaced “below” directions and repair-history “unearned token” wording. The Case file control opens clues during investigation; finale evidence remains inline while that control is disabled |
+| Córdoba headline contradicts the replica-telescope report | Still applies | Align the headline with the existing fictional report; no factual-review status changed |
+| Evidence/source review appears after every capture | That observation became stale: c12e772 removed it from between-stop reports | Correct README; explanations remain after answers, source links in success history and failure evidence review. A persistent learning notebook remains proposed |
+| Documentation disagrees about verification | Applied at reconciliation; evidence record now aligned | Centralize revision-specific evidence; distinguish historical 52-test results, the supplied 32-test baseline run, the version 3 50-test correction run and version 4 40-test exemplar run; retain browser/AT/editorial limits |
+| Harness coverage is mistaken for browser/AT proof | Still requires a clear boundary | Document DOM/map doubles accurately and add focused manual acceptance steps |
+| apply-henchmen.js uses a fixed temporary filename | Still applies; deferred from this runtime pass | Replace it with the shared unique atomic-write helper in an authoring-focused pass; cover interrupted writes/concurrent invocations |
+| Content source links do not constitute factual sign-off | Applied to all 80 cases at c12e772 | Later exemplar records actual AI-assisted source/editorial evidence for eight; preserve pending labels for the other 72 and retain the separate release gate |
+| Controller remains large and adapters share globals | Still applies | Prefer incremental separation of session commands, rendering, persistence, and injected map/storage boundaries when feature work needs it |
+
+The warrant label/help improvements and APPROVED stamp timing are preserved. This pass does not restore the removed capture explanation block: that would change the commit's pacing decision and needs a deliberate learning-feedback design.
+
+## Next steps toward an exceptional learning tool
+
+| Priority | Opportunity | Proposed solution | Acceptance evidence |
+| --- | --- | --- | --- |
+| 1 | Trustworthy learning content | Eight-case exemplar implemented with scoped sources and AI-assisted review records. Extend the same method to 72 pending cases after human feedback | Owner content gate passed; human review, shared map/location audit and observed comprehension remain open |
+| 1 | Useful feedback and transfer | Eight exemplars now explain every distractor; the companion guide adds transfer questions and answer reasoning. Persistent in-game review remains proposed | Learners can explain their choice without repeating answer wording; observed use with manageable effort |
+| 2 | Low-capacity sessions | Add Study mode without lost lives, direct single-case access, a clear resume summary, and explicit stopping points | Keyboard/voice completion, interruption/recovery checks, user comfort |
+| 2 | Durable self-directed learning | Store a local notebook of objectives, evidence, mistakes, hints and reflections; add opt-in spaced review and portable export | History survives restart, has clear delete/export controls, and supports delayed retrieval rather than only completion scores |
+| 2 | Reproducible educator use | Provide one local assignment recipe using pack/content version, route and seed, with a teacher guide, printable activity and answer rationale | Another educator can prepare and run the same activity without developer coaching |
+| 3 | Meaningful progress reporting | Separate game score, accuracy, hint dependence, evidence use, and later recall. Describe what each measure can and cannot establish | Export aligns with actual events; no unsupported mastery claim |
+| 3 | Maintainable feature growth | Extract session commands and view rendering gradually; inject storage/map boundaries; consolidate difficulty configuration when behavior next changes | Focused regression coverage remains understandable; no unnecessary framework migration |
+| 3 | Practical acceptance | Run representative browser, keyboard/voice, zoom/reflow, storage, and map checks; then one autodidact and one educator pilot | Revision-specific observations and corrections; browser/AT and learner findings kept distinct from Node results |
+| Later | Richer interactions and offline use | Consider accessible typed/reorder/grid alternatives and bundled offline resources only when they solve an observed need | Equivalent low-effort controls and evidence that the added mechanic improves the learning task |
+
+The eight-case content/companion-guide work is implemented and its focused version 4 automated gate passed; the remaining rows describe proposals, not additional game functionality or commercial requirements. Representative personal-input/learner checks are the next step before growing the catalog. Ownership of commits, publication, and deployment remains with Ryan.

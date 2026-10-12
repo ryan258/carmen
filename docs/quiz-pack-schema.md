@@ -14,6 +14,8 @@ The executable contracts are `CarmenCore.validateManifest` and `CarmenCore.valid
 - `sources`: registry keyed by source ID, with `title`, `publisher`, HTTPS `url`, and boolean `reviewed`.
 - `finalConfrontation.title` and exactly three structurally valid report descriptors in `rounds`. The live questions come from `CarmenCore.finalRounds`: selected first-case evidence, selected middle-case evidence, and the last completed stop's token. The resolver supplies all written instructions and is also used by save validation. Descriptors do not introduce independent facts or override this shared engine. Editorial evidence comes from the selected cases.
 
+All selectable routes require at least four stops so the final token question has four distinct choices. Shared `CarmenCore.stopCounts` supplies route options and validates saved route lengths; 4/5/6-location packs never offer three-stop routes. The existing eight-location packs retain 4/6/8.
+
 ## Case fields
 
 Every case has a pack-unique `caseId`; `briefing` with `headline`, `report`, `callingCard`, `nextLead`, and `suspect`; exactly three text `clues`; a `puzzle` with `title`, `description`, `question`, four distinct text `options`, zero-based `correctIndex`, and `explanation`; plus `warrantAnswers.city/hideout/disguise` and `funFact`.
@@ -35,6 +37,8 @@ Use `reviewStatus: "source-linked-needs-line-review"` until editorial work is co
 ```
 
 The loader, UI and content checker share the same evidence predicate: actual calendar date, nonempty reviewer and notes, and reviewed source entries. Setting reviewed without that evidence fails the structural contract. The optional sharing gate additionally requires every case to be reviewed. Do not replace a review with a boolean or infer review from structural checks.
+
+The current [eight-case exemplar](reviewed-exemplar.md) shows scoped primary-source IDs, claim-specific notes and explicit AI-assisted reviewer attribution. A source's reviewed flag covers the cited claims; it does not review every passage on that page or automatically review other cases. A metadata-valid review is not human acceptance or proof of learning. Both packs now use contentVersion 4 for rewritten answers; schema 5 saves from contentVersion 3 are incompatible. Keep the companion guide synchronized when editing these cases.
 
 ## HTML and compatibility
 
