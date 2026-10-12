@@ -286,51 +286,51 @@
       {
         "caseId": "obelisco-avenida",
         "briefing": {
-          "headline": "OBELISCO BLUEPRINTS VANISH!",
-          "report": "Fictional theater-district blueprints are missing. Carmen has left Buenos Aires; Tito Trapaza was seen near the tall white monument on Avenida 9 de Julio.",
-          "callingCard": "A torn program from Teatro Colón reads: \"Count the lanes, find the needle. I'm not the one you'll catch tonight.\"",
+          "headline": "A MONUMENT LABEL OUT OF PLACE!",
+          "report": "In this fictional ACME training case, a replica landmark label disappeared in Buenos Aires. Carmen has left the city; Tito Trapaza left two record fragments. Use them to check a catalog entry.",
+          "callingCard": "A fictional card reads: \"Compare the records before choosing a conclusion.\"",
           "suspect": {
             "name": "Tito Trapaza",
             "alias": "El Tanguero",
             "emoji": "🎻",
-            "role": "Forger of opera scores and theater blueprints",
-            "dossierNote": "Trapaza's taxi receipt from Avenida Corrientes ends at a fence he's used twice this month. The Obelisco is his favorite drop point."
+            "role": "Fictional ACME training-case accomplice",
+            "dossierNote": "An invented character using replica props and false labels; no real person or institution is accused."
           },
-          "nextLead": "A folded Mendoza city plan in his bag, with red ink circling Cerro de la Gloria — and the words \"crossroads, midnight\" in the margin."
+          "nextLead": "A fictional sealed envelope points to the next stop in the selected route."
         },
         "clues": [
-          "A taxi receipt lists a drop-off at Avenida Corrientes and 9 de Julio.",
-          "A witness described a white monument rising from a broad avenue.",
-          "A costume tag reads: \"Stagehand blacks, Teatro Colón loading door.\""
+          "City fact card: the Obelisco stands where Avenida Corrientes meets Avenida 9 de Julio. A fictional delivery fragment gives that intersection as the meeting point.",
+          "City fact card: Alberto Prebisch designed the Obelisco, erected in 1936. A second fictional fragment says the handoff is at that monument, not simply anywhere along either avenue.",
+          "The fictional costume inventory identifies Stagehand. The four catalog entries are deliberately mixed-up practice records; incorrect entries are not alternative historical accounts."
         ],
         "puzzle": {
-          "title": "Landmark Deduction",
-          "description": "Use the city clues to identify the Buenos Aires landmark the accomplice chose as a rendezvous.",
-          "question": "Which location is the accomplice pointing to?",
+          "title": "Repair the Catalog",
+          "description": "Compare the intersection, year and architect. Use the written facts; no local knowledge or picture recognition is needed.",
+          "question": "Which proposed entry preserves all three verified details?",
           "options": [
-            "The Obelisco on Avenida 9 de Julio",
-            "Tigre Delta docks",
-            "San Telmo Market",
-            "Retiro bus terminal"
+            "Corrientes and 9 de Julio; 1936; Alberto Prebisch",
+            "Corrientes and 9 de Julio; 1836; Alberto Prebisch",
+            "Corrientes and 9 de Julio; 1936; architect not recorded",
+            "Corrientes only, intersection unknown; 1936; Alberto Prebisch"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"cutout-monument mx-auto\"></div>\n            <p class=\"mt-3 text-xs font-black uppercase tracking-wider text-red-800\">9 de Julio / Corrientes</p>\n          </div>\n        ",
-          "explanation": "The Obelisco on Avenida 9 de Julio follows the evidence: A taxi receipt lists a drop-off at Avenida Corrientes and 9 de Julio. A witness described a white monument rising from a broad avenue. A costume tag reads: \"Stagehand blacks, Teatro Colón loading door.\" A recovered costume label reads: Stagehand.",
+          "visualHtml": "<p class=\"evidence-note\">Training evidence: use the written clue sheets. This is not a visitor map.</p>",
           "hints": [
-            "Combine the named avenue with the white monument.",
-            "The Obelisco is the monument option; the other choices are different kinds of places.",
-            "Answer: The Obelisco on Avenida 9 de Julio. The Obelisco on Avenida 9 de Julio follows the evidence: A taxi receipt lists a drop-off at Avenida Corrientes and 9 de Julio. A witness described a white monument rising from a broad avenue. A costume tag reads: \"Stagehand blacks, Teatro Colón loading door.\" A recovered costume label reads: Stagehand."
-          ]
+            "Check place, date and attribution separately. One correct detail does not validate the whole entry.",
+            "One entry shifts the date by a century; another loses the architect; another loses the intersecting avenue.",
+            "Answer: Corrientes and 9 de Julio; 1936; Alberto Prebisch. It preserves every detail on the fact cards."
+          ],
+          "explanation": "The entry with Corrientes and 9 de Julio, 1936 and Alberto Prebisch preserves all three details. The 1836 entry shifts the year by 100. The entry saying the architect is not recorded discards an explicit attribution. The Corrientes-only entry removes the second avenue and cannot identify the intersection precisely. The delivery and monument fragments together identify the Obelisco hideout, while the costume inventory identifies Stagehand. These are record-comparison skills; recognizing a skyline is unnecessary."
         },
         "warrantAnswers": {
           "city": "Buenos Aires",
           "hideout": "Obelisco",
           "disguise": "Stagehand"
         },
-        "funFact": "The Obelisco stands at the intersection of Avenida 9 de Julio and Corrientes, two major Buenos Aires landmarks.",
-        "learningObjective": "Identify a real Buenos Aires landmark or regional feature from connected cultural and geographic clues.",
+        "funFact": "The Buenos Aires city tourism account credits the Obelisco to architect Alberto Prebisch and dates it to 1936.",
+        "learningObjective": "Check a candidate record field by field and distinguish an incorrect detail from a missing detail.",
         "sources": [
-          "buenos_aires_tourism"
+          "exemplar_obelisco_city"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -339,8 +339,13 @@
           "Buenos Aires"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "All required evidence and instructions are written as text. Which location is the accomplice pointing to?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "accessibilityDescription": "All required facts, fictional records and instructions appear in the written clue sheets; the illustration adds no evidence.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-12",
+          "notes": "Checked the city tourism page opening two paragraphs for Corrientes/9 de Julio, 1936 and Alberto Prebisch. Excluded its street-width superlative, lane count, flag claim and time-sensitive viewing-access paragraph. Delivery/costume/catalog records and suspect are fictional. Compared all three fields in all four choices; removed skyline-based answer leakage. Claim ledger and transfer activity: docs/reviewed-exemplar.md. Review covers this case, not unrelated variants, map coordinates, or human learner acceptance."
+        }
       },
       {
         "caseId": "cafe-tortoni",
@@ -638,51 +643,51 @@
       {
         "caseId": "puente-inca",
         "briefing": {
-          "headline": "MINERAL MAP MISSING!",
-          "report": "In this fictional training case: A mineral survey map vanished from an Andes research office. Vera Vicario mailed back a card showing a natural stone bridge.",
-          "callingCard": "The card says: \"Hot springs, cold trail, golden arch.\"",
+          "headline": "FIELD NOTES, UNSUPPORTED CLAIMS!",
+          "report": "In this fictional ACME training case, a replica field notebook disappeared from an ACME desk in Mendoza. Vera Vicario left a visitor-text summary and several proposed conclusions. The regional hideout is outside the city stop; the game marker is not a field route.",
+          "callingCard": "A fictional card reads: \"Compare the records before choosing a conclusion.\"",
           "suspect": {
             "name": "Vera Vicario",
             "alias": "La Vendimia",
             "emoji": "🍇",
-            "role": "Label forger and irrigation-canal smuggler",
-            "dossierNote": "Trained sommelier. Forges vintage labels and uses high-Andean canal routes to move Carmen's contraband past customs."
+            "role": "Fictional ACME training-case accomplice",
+            "dossierNote": "An invented character using replica props and false labels; no real person or institution is accused."
           },
-          "nextLead": "A high-altitude permit stamped for the colonial salt road north of Salta."
+          "nextLead": "A fictional sealed envelope points to the next stop in the selected route."
         },
         "clues": [
-          "A route note follows the road toward the Chilean border.",
-          "The photo shows a yellow-orange natural bridge over a river.",
-          "A borrowed jacket is labeled \"geology field assistant.\" A recovered costume label reads: Geology assistant."
+          "Source note: the Argentine government visitor text for Uspallata links the formation of Puente del Inca to hot springs and erosion in a mountain climate. This short visitor text does not give a complete geological history.",
+          "Fictional notebook: the handoff is at the feature described by those two natural processes. A second fictional message names Puente del Inca. Neither record supplies a formation date or evidence of human construction.",
+          "The fictional costume label says Geology assistant. A place name, a guess about its age, or a single attractive explanation cannot replace evidence."
         ],
         "puzzle": {
-          "title": "Andes Landmark Match",
-          "description": "Read the mountain clues and identify the correct Mendoza hideout.",
-          "question": "Which landmark is the accomplice using?",
+          "title": "Stay Within the Evidence",
+          "description": "Choose the conclusion supported by the source note. Do not turn a limited summary into a complete scientific explanation.",
+          "question": "Which conclusion can ACME support from the supplied text?",
           "options": [
-            "Puente del Inca",
-            "Plaza Independencia",
-            "Valle de Uco",
-            "General San Martín Park"
+            "The account links formation to both hot springs and erosion",
+            "The account proves hot springs were the only process",
+            "The name proves people built the feature",
+            "The account establishes an exact formation year"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"cutout-arch mx-auto\"></div>\n            <p class=\"mt-3 text-xs font-black uppercase text-amber-900\">Golden bridge / Andes route</p>\n          </div>\n        ",
-          "explanation": "Puente del Inca follows the evidence: A route note follows the road toward the Chilean border. The photo shows a yellow-orange natural bridge over a river. A borrowed jacket is labeled \"geology field assistant.\" A recovered costume label reads: Geology assistant.",
+          "visualHtml": "<p class=\"evidence-note\">Training evidence: use the written clue sheets. This is not a visitor map.</p>",
           "hints": [
-            "Identify the feature shown on the card.",
-            "A natural stone bridge fits the bridge option, not a city plaza.",
-            "Answer: Puente del Inca. Puente del Inca follows the evidence: A route note follows the road toward the Chilean border. The photo shows a yellow-orange natural bridge over a river. A borrowed jacket is labeled \"geology field assistant.\" A recovered costume label reads: Geology assistant."
-          ]
+            "Separate what the text actually supports from what a reader might assume.",
+            "The source names two processes. It does not establish a builder or an exact formation year.",
+            "Answer: The account links formation to both hot springs and erosion. This preserves both factors without claiming the text explains everything."
+          ],
+          "explanation": "The supported conclusion retains both hot springs and erosion and attributes the explanation to the supplied account. Saying hot springs were the only process drops erosion and adds an unsupported exclusion. Inferring human construction from a name is not evidence. An exact formation year cannot be recovered from a text that gives none. This does not settle the full geology or the history of the place name. The two fictional messages identify Puente del Inca as the regional hideout; the costume label gives Geology assistant."
         },
         "warrantAnswers": {
           "city": "Mendoza",
           "hideout": "Puente del Inca",
           "disguise": "Geology assistant"
         },
-        "funFact": "Puente del Inca is known for its naturally formed mineral-colored bridge in the Andes.",
-        "learningObjective": "Identify a real Mendoza landmark or regional feature from connected cultural and geographic clues.",
+        "funFact": "The government visitor account describes Puente del Inca using natural processes. Establishing its full formation history would require more detailed geological evidence.",
+        "learningObjective": "Choose a conclusion proportionate to a source and identify unsupported exclusivity, name-based inference and false precision.",
         "sources": [
-          "mendoza_tourism"
+          "exemplar_puente_processes"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -690,8 +695,13 @@
           "Mendoza"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "All required evidence and instructions are written as text. Which landmark is the accomplice using?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "accessibilityDescription": "All required facts, fictional records and instructions appear in the written clue sheets; the illustration adds no evidence.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-12",
+          "notes": "Read Qué visitar, Puente del Inca paragraph, on Argentina.gob.ar Uspallata page; translated its hot-springs and mountain-erosion statement conservatively. Do not treat the 120 km in Cómo llegar as the bridge distance: that describes Uspallata. Removed mineral-colour mechanism and age claims not established here. Regional hideout is not the city marker. Crime/notes/costume are fictional; every distractor overstates the provided evidence. Claim ledger and transfer activity: docs/reviewed-exemplar.md. Review covers this case, not unrelated variants, map coordinates, or human learner acceptance."
+        }
       },
       {
         "caseId": "uco-valley-irrigation",
@@ -814,52 +824,51 @@
       {
         "caseId": "classic-salta",
         "briefing": {
-          "headline": "CLOUD TRAIN LOCOMOTIVE LOOTED!",
-          "report": "In this fictional training case, a model locomotive disappeared from an ACME display in Salta. The local accomplice left a rail log with three recorded movements.",
-          "callingCard": "A fictional rail log: 09:00 departure, 11:00 viaduct visit, 13:00 return. These are puzzle times, not a visitor timetable.",
+          "headline": "RAIL LOG PAGES OUT OF ORDER!",
+          "report": "In this fictional ACME training case, a model locomotive disappeared from an ACME display in Salta. Saúl Sandoval mixed three pages of a made-up rail log. The viaduct hideout is regional, not at Salta city's map marker.",
+          "callingCard": "A fictional card reads: \"Compare the records before choosing a conclusion.\"",
           "suspect": {
             "name": "Saúl Sandoval",
             "alias": "El Salteño",
             "emoji": "🐎",
-            "role": "Caravan smuggler trafficking colonial relics",
-            "dossierNote": "Former muleteer on the old salt caravans. Now runs Carmen's relic pipeline through the Quebrada de Humahuaca."
+            "role": "Fictional ACME training-case accomplice",
+            "dossierNote": "An invented character using replica props and false labels; no real person or institution is accused."
           },
-          "nextLead": "A torn bookplate from a Jesuit-era manuscript in the Córdoba archives."
+          "nextLead": "A fictional sealed envelope points to the next stop in the selected route."
         },
         "clues": [
-          "09:00: depart San Antonio de los Cobres.",
-          "11:00: visit La Polvorilla Viaduct. A conductor uniform was recovered.",
-          "13:00: return to San Antonio de los Cobres. The suspect stayed at the viaduct after the visit."
+          "Fictional entry, 13:00: the train returned to San Antonio de los Cobres without the suspect. The suspect had stayed at La Polvorilla Viaduct. These times are invented for the puzzle.",
+          "Fictional entry, 09:00: depart San Antonio de los Cobres by train. Separate context: the operator describes a road connection from Salta and a train leg to La Polvorilla; Salta city is not the rail boarding point in that itinerary.",
+          "Fictional entry, 11:00: the train visited La Polvorilla Viaduct. The witness saw the suspect remain there in a Train conductor disguise. All three entries belong to the same day."
         ],
         "puzzle": {
-          "title": "Rail Log Reconstruction",
-          "description": "Put the fictional log entries in time order. The real train runs from San Antonio de los Cobres to La Polvorilla and returns; a Salta connection is by road.",
-          "question": "Which sequence puts the evidence in chronological order?",
+          "title": "Reconstruct the Rail Log",
+          "description": "Put the fictional entries in chronological order. Read the timestamps, not the order of the clue sheets. These are not booking times or a travel timetable.",
+          "question": "Which sequence follows the three timestamps?",
           "options": [
             "San Antonio de los Cobres → La Polvorilla → San Antonio de los Cobres",
-            "La Polvorilla → Salta → Humahuaca",
-            "Humahuaca → La Polvorilla → Salta",
-            "Salta → Humahuaca → La Polvorilla"
+            "La Polvorilla → San Antonio de los Cobres → San Antonio de los Cobres",
+            "San Antonio de los Cobres → San Antonio de los Cobres → La Polvorilla",
+            "Salta city → La Polvorilla → Salta city"
           ],
           "correctIndex": 0,
-          "explanation": "09:00 comes before 11:00, which comes before 13:00. The log therefore runs San Antonio de los Cobres → La Polvorilla → San Antonio de los Cobres. These are fictional puzzle times.",
-          "visualHtml": "<p class=\"evidence-note\">Use the written clues and puzzle instructions. All required evidence is available as text.</p>",
+          "visualHtml": "<p class=\"evidence-note\">Training evidence: use the written clue sheets. This is not a visitor map.</p>",
           "hints": [
-            "Sort the three entries by time, starting at 09:00.",
-            "The departure and return share a place; the viaduct visit belongs between them.",
-            "Answer: San Antonio de los Cobres → La Polvorilla → San Antonio de los Cobres. 09:00 comes before 11:00, which comes before 13:00. The log therefore runs San Antonio de los Cobres → La Polvorilla → San Antonio de los Cobres. These are fictional puzzle times."
-          ]
+            "Find the earliest of the three times before looking at where that page appears.",
+            "09:00 is departure, 11:00 is the viaduct visit, and 13:00 is return. Departure and return share a station.",
+            "Answer: San Antonio de los Cobres → La Polvorilla → San Antonio de los Cobres. Sort 09:00, 11:00, then 13:00."
+          ],
+          "explanation": "09:00 comes before 11:00, which comes before 13:00, so the train leaves San Antonio de los Cobres, visits La Polvorilla, and returns. Starting with La Polvorilla puts the visit before departure. Putting both station entries first moves the return before the visit. Replacing the station with Salta city confuses the city connection with the rail leg and contradicts the log. The 11:00 witness and 13:00 absence both place the suspect at La Polvorilla Viaduct; the witness supplies Train conductor. The invented times say nothing about real journey duration."
         },
         "warrantAnswers": {
           "city": "Salta",
           "hideout": "La Polvorilla Viaduct",
           "disguise": "Train conductor"
         },
-        "funFact": "The Tren a las Nubes reaches heights of 4,220 meters above sea level, making it one of the highest railways in the world.",
-        "learningObjective": "Order three fictional rail-log entries by time.",
+        "funFact": "The operator itinerary separates road and train legs: rail boarding at San Antonio de los Cobres, a visit to La Polvorilla, and a return to that station.",
+        "learningObjective": "Reorder records by time and distinguish the city connection from the train segment.",
         "sources": [
-          "salta_tourism",
-          "train_route"
+          "exemplar_train_operator"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -867,8 +876,13 @@
           "Salta"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "All required evidence and instructions are written as text. Which sequence puts the evidence in chronological order?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "accessibilityDescription": "All required facts, fictional records and instructions appear in the written clue sheets; the illustration adds no evidence.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-12",
+          "notes": "Read operator Recorrido sections La Puna Salteña, Estación de Trenes San Antonio de los Cobres, Viaducto La Polvorilla and San Antonio de los Cobres. Verified transfer to train, viaduct visit, station return and bus connection; did not copy operating times. Removed altitude/superlative. All timestamps/suspect sightings are fictional. Checked each sequence and regional warrant location. Claim ledger and transfer activity: docs/reviewed-exemplar.md. Review covers this case, not unrelated variants, map coordinates, or human learner acceptance."
+        }
       },
       {
         "caseId": "cafayate-guitar",
@@ -1107,7 +1121,7 @@
       {
         "caseId": "classic-cordoba",
         "briefing": {
-          "headline": "JESUIT TREASURE STOLEN!",
+          "headline": "REPLICA TELESCOPE MISSING!",
           "report": "In this fictional training case, a replica telescope disappeared from an ACME study desk in Córdoba. The local accomplice left a set of witness statements.",
           "callingCard": "A library card for the National University of Córdoba under an alias.",
           "suspect": {
@@ -1166,52 +1180,51 @@
       {
         "caseId": "jesuit-block",
         "briefing": {
-          "headline": "UNIVERSITY KEY DISAPPEARS!",
-          "report": "In this fictional training case: An old ceremonial key vanished from the university quarter. Clara Cortázar left notes about courtyards, churches, and early classrooms.",
-          "callingCard": "A stamped card reads: \"The block remembers every lesson.\"",
+          "headline": "ONE HERITAGE SITE, SEVERAL PLACES!",
+          "report": "In this fictional ACME training case, a replica catalog card disappeared from an ACME teaching collection in Córdoba. Clara Cortázar left a heritage summary and a city delivery record. All theft and suspect details are invented.",
+          "callingCard": "A fictional card reads: \"Compare the records before choosing a conclusion.\"",
           "suspect": {
             "name": "Clara Cortázar",
             "alias": "La Cátedra",
             "emoji": "📚",
-            "role": "Rare-book thief and Jesuit-archive impostor",
-            "dossierNote": "Dismissed university archivist with a key to half the Jesuit Block. Forges provenance papers for stolen manuscripts."
+            "role": "Fictional ACME training-case accomplice",
+            "dossierNote": "An invented character using replica props and false labels; no real person or institution is accused."
           },
-          "nextLead": "A soaked map of the Iguazú falls boat route, marked in red ink."
+          "nextLead": "A fictional sealed envelope points to the next stop in the selected route."
         },
         "clues": [
-          "A campus guide has the Jesuit Block underlined.",
-          "A witness saw the accomplice in a professor robe.",
-          "The clue mentions historic classrooms near the city center. A recovered costume label reads: Professor."
+          "UNESCO fact card: the Jesuit Block in Córdoba city includes a university, church, residence and college. The World Heritage property also includes five estancias, historically farming estates, in the province.",
+          "Fictional delivery note: the handoff stayed at the city block with the university and college. A second receipt places the suspect at that block, not on a trip to one of the estates.",
+          "The fictional costume register identifies Professor. The puzzle asks which part of the listed property the record describes, not who deserves sole credit for its history."
         ],
         "puzzle": {
-          "title": "Heritage Deduction",
-          "description": "Use the university and heritage clues to find the accomplice’s hideout.",
-          "question": "Which Córdoba location fits?",
+          "title": "Part and Whole",
+          "description": "A heritage property may include several separate places. Keep the city block distinct from the wider listed property.",
+          "question": "Which interpretation fits both the UNESCO summary and the fictional delivery record?",
           "options": [
-            "Jesuit Block",
-            "Nueva Córdoba",
-            "Villa Carlos Paz",
-            "Alta Gracia clock tower"
+            "The handoff was at the urban Jesuit Block, one part of the wider property",
+            "The handoff was at all five estancias because they are one listed property",
+            "The handoff was at one estancia, so it must contain the city university",
+            "The handoff was outside the listed property because only the estancias count"
           ],
           "correctIndex": 0,
-          "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">📚</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-slate-900\">Old classrooms / city center</p>\n          </div>\n        ",
-          "explanation": "Jesuit Block follows the evidence: A campus guide has the Jesuit Block underlined. A witness saw the accomplice in a professor robe. The clue mentions historic classrooms near the city center. A recovered costume label reads: Professor.",
+          "visualHtml": "<p class=\"evidence-note\">Training evidence: use the written clue sheets. This is not a visitor map.</p>",
           "hints": [
-            "The campus guide names the destination.",
-            "Courtyards and historic classrooms reinforce the underlined Jesuit Block.",
-            "Answer: Jesuit Block. Jesuit Block follows the evidence: A campus guide has the Jesuit Block underlined. A witness saw the accomplice in a professor robe. The clue mentions historic classrooms near the city center. A recovered costume label reads: Professor."
-          ]
+            "Distinguish a whole property from one place within it.",
+            "The university and college identify the city block. The wider listing also includes estates; it does not make those places identical.",
+            "Answer: The handoff was at the urban Jesuit Block, one part of the wider property. The receipt selects that component."
+          ],
+          "explanation": "The university-and-college record selects the urban Jesuit Block, while the UNESCO description places that block within a larger property. A shared listing does not mean a person was at all five estates. Nor does it place the city university inside an estate. Saying only the estates count wrongly excludes the block. The two fictional delivery records support Jesuit Block as the hideout; the costume register gives Professor. Heritage status describes a recognized property, not an endorsement of every aspect of its past."
         },
         "warrantAnswers": {
           "city": "Córdoba",
           "hideout": "Jesuit Block",
           "disguise": "Professor"
         },
-        "funFact": "Córdoba has one of the oldest university traditions in the Americas.",
-        "learningObjective": "Identify a real Córdoba landmark or regional feature from connected cultural and geographic clues.",
+        "funFact": "UNESCO lists the Jesuit Block and five estancias together. Its account also recognizes Indigenous people and enslaved Africans in the labor and knowledge behind this history.",
+        "learningObjective": "Distinguish a component from a larger heritage property and use evidence to select the correct geographic scale.",
         "sources": [
-          "cordoba_tourism",
-          "unesco_cordoba_jesuit"
+          "exemplar_cordoba_unesco"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1219,8 +1232,13 @@
           "Córdoba"
         ],
         "visualType": "inline-html-cutout",
-        "accessibilityDescription": "All required evidence and instructions are written as text. Which Córdoba location fits?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "accessibilityDescription": "All required facts, fictional records and instructions appear in the written clue sheets; the illustration adds no evidence.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-12",
+          "notes": "Checked UNESCO description and Brief synthesis for city block institutions, five estancias and separate urban/rural components; checked its labor/knowledge discussion to avoid a celebratory single-group history. No university ranking, distance, opening hours or new historical attribution. Theft, delivery, suspect and costume are fictional. Every distractor confuses component, location or scope. Claim ledger and transfer activity: docs/reviewed-exemplar.md. Review covers this case, not unrelated variants, map coordinates, or human learner acceptance."
+        }
       },
       {
         "caseId": "sierras-observatory",
@@ -1603,7 +1621,7 @@
         ],
         "puzzle": {
           "title": "River Log Order",
-          "description": "Use the complete written evidence below. Times, counts, and codes are fictional training data.",
+          "description": "Use the three written clues. Times, counts, and codes are fictional training data.",
           "question": "Which sequence puts the fictional sightings in time order?",
           "options": [
             "Harbor → river junction → viewpoint",
@@ -1903,7 +1921,7 @@
         ],
         "puzzle": {
           "title": "Clock Difference",
-          "description": "Use the complete written evidence below. Times, counts, and codes are fictional training data.",
+          "description": "Use the three written clues. Times, counts, and codes are fictional training data.",
           "question": "How many minutes separate the two sightings?",
           "options": [
             "25 minutes",
@@ -1962,7 +1980,7 @@
         ],
         "puzzle": {
           "title": "Dock Parcel Code",
-          "description": "Use the complete written evidence below. Times, counts, and codes are fictional training data.",
+          "description": "Use the three written clues. Times, counts, and codes are fictional training data.",
           "question": "Which number comes next in the locker code?",
           "options": [
             "32",
@@ -2323,7 +2341,7 @@
         ],
         "puzzle": {
           "title": "Glacier Evidence Match",
-          "description": "Compare the walkway, glacier, and guide evidence. This puzzle does not require an unearned token.",
+          "description": "Compare the walkway, glacier, and guide clues.",
           "question": "Which hideout matches the evidence?",
           "options": [
             "Perito Moreno Glacier",
@@ -2503,7 +2521,7 @@
         ],
         "puzzle": {
           "title": "Passenger Log Deduction",
-          "description": "Use the complete written evidence below. Times, counts, and codes are fictional training data.",
+          "description": "Use the three written clues. Times, counts, and codes are fictional training data.",
           "question": "How many passengers should appear at the second check?",
           "options": [
             "7",
@@ -2562,7 +2580,7 @@
         ],
         "puzzle": {
           "title": "Exhibit Label Order",
-          "description": "Use the complete written evidence below. Times, counts, and codes are fictional training data.",
+          "description": "Use the three written clues. Times, counts, and codes are fictional training data.",
           "question": "Which order follows the labels in the exercise?",
           "options": [
             "Snow accumulation → burial and compression → glacier ice",
@@ -2667,7 +2685,31 @@
       "publisher": "La Ruta Natural, Argentina",
       "url": "https://www.larutanatural.gob.ar/es/imperdible/85/tren-a-las-nubes",
       "reviewed": false
+    },
+    "exemplar_obelisco_city": {
+      "title": "Obelisco (the obelisk) — location and architect",
+      "publisher": "Buenos Aires City tourism",
+      "url": "https://turismo.buenosaires.gob.ar/en/atractivo/obelisco-obelisk",
+      "reviewed": true
+    },
+    "exemplar_puente_processes": {
+      "title": "Uspallata, Mendoza — Qué visitar: Puente del Inca",
+      "publisher": "Government of Argentina",
+      "url": "https://www.argentina.gob.ar/node/465223",
+      "reviewed": true
+    },
+    "exemplar_train_operator": {
+      "title": "Recorrido — San Antonio de los Cobres and La Polvorilla",
+      "publisher": "Tren a las Nubes, Servicio Ferroviario Turístico Sociedad del Estado",
+      "url": "https://trenalasnubes.com.ar/recorrido-es/",
+      "reviewed": true
+    },
+    "exemplar_cordoba_unesco": {
+      "title": "Jesuit Block and Estancias of Córdoba — Brief synthesis",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/995/",
+      "reviewed": true
     }
   },
-  "contentVersion": 3
+  "contentVersion": 4
 }

@@ -35,12 +35,17 @@ test('manifest rejects an empty list, duplicate path and missing default',()=>{
 
 test('review claims need evidence, a real calendar date, and reviewed sources',()=>{
   const p=structuredClone(quizPack),item=p.questions[p.locations[0].id][0];item.reviewStatus='reviewed';
+  // The exemplar is already reviewed; remove evidence explicitly for this negative fixture.
+  delete item.reviewEvidence;
   assert.throws(()=>core.validatePack(p),/review evidence/);
   item.reviewEvidence={reviewer:'Example reviewer',date:'2026-02-30',notes:'Example notes'};
   item.sources.forEach(id=>p.sources[id].reviewed=true);
   assert.equal(core.hasReviewEvidence(item,p.sources),false);
   item.reviewEvidence.date='2026-10-03';assert.equal(core.hasReviewEvidence(item,p.sources),true);
   assert.equal(core.validatePack(p),p);
+  p.sources[item.sources[0]].reviewed=false;
+  assert.equal(core.hasReviewEvidence(item,p.sources),false);
+  assert.throws(()=>core.validatePack(p),/review evidence/);
 });
 
 test('content checker detects manifest omissions and stale fallback content',()=>{

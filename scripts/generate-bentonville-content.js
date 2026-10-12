@@ -6,6 +6,30 @@ const {writeAtomic} = require('./content-io.cjs');
 const root = path.resolve(__dirname, '..');
 
 const sources = {
+  "exemplar_market_operator": {
+    "title": "Bentonville Farmers Market — location and producer policy",
+    "publisher": "Downtown Bentonville Inc.",
+    "url": "https://downtownbentonville.org/events/farmers-market",
+    "reviewed": true
+  },
+  "exemplar_walton_history": {
+    "title": "Sam Walton — The Road to Walmart",
+    "publisher": "Walmart",
+    "url": "https://corporate.walmart.com/about/sam-walton",
+    "reviewed": true
+  },
+  "exemplar_crystal_architecture": {
+    "title": "Architecture — Moshe Safdie",
+    "publisher": "Crystal Bridges Museum of American Art",
+    "url": "https://crystalbridges.org/architecture",
+    "reviewed": true
+  },
+  "exemplar_momentary_reuse": {
+    "title": "About the Momentary — Our Space and Fermentation Hall",
+    "publisher": "The Momentary",
+    "url": "https://themomentary.org/about/",
+    "reviewed": true
+  },
   visit_bentonville: {
     title: 'Things to Do in Bentonville AR',
     publisher: 'Visit Bentonville',
@@ -223,24 +247,49 @@ const nextLeadById = {
 const casesByLocation = {
   'downtown-square': [
     {
-      slug: 'classic',
-      headline: 'SQUARE MARKET SWAP!',
-      scene: 'a farmers market stall on the Bentonville Square',
-      item: 'a brass market bell',
-      hideout: 'Farmers Market stalls',
-      disguise: 'Farmers market vendor',
-      clues: [
-        'A canvas tote is stamped with Bentonville Farmers Market and a sketch of the Square fountain.',
-        'The receipt lists local honey, flowers, and a booth number facing Central Avenue.',
-        'A witness saw the courier fold a tent beside boutiques, bakeries, and public art.'
+      "slug": "classic",
+      "headline": "MARKET RECORDS MIX-UP!",
+      "scene": "ACME's imagined outdoor market exercise on the Square",
+      "item": "a training market bell",
+      "hideout": "Farmers Market stalls",
+      "disguise": "Farmers market vendor",
+      "nextLead": "A fictional archive envelope sends ACME to the next stop in the selected route.",
+      "clues": [
+        "Real-world context: the outdoor Bentonville Farmers Market uses the Square. Its operator describes a producer-only market: sellers grow, raise, or make their goods. Fictional receipt: cut flowers, bought directly from the grower at a market stall.",
+        "Fictional stall register: Fern grows cut flowers at stall 12; Basil grows herbs at stall 18; Reed resells cut flowers from another grower at stall 24; Iris makes pressed-flower cards at stall 30. The bell was left beside the stall matching the receipt.",
+        "A fictional witness saw the courier remain among the market stalls wearing the recorded disguise: Farmers market vendor. The names and stall numbers are invented, not real vendor listings."
       ],
-      puzzle: {
-        hints: ["Separate food sales from civic records and park lighting.", "Honey, flowers, and numbered stalls point to an outdoor market.", "Answer: Farmers Market stalls. Honey, flowers, and numbered stalls point to an outdoor market."],
-        title: 'Market Map Match',
-        question: 'Which Square activity matches the stall, receipt, and tent clues?',
-        options: ['Farmers Market stalls', 'County records desk', 'Museum gallery', 'Winter lights display']
+      "puzzle": {
+        "title": "The Producer Rule",
+        "description": "Apply both the receipt and the producer rule to the fictional register. All information needed is in the clue sheets.",
+        "question": "Which stall matches both what was bought and who produced it?",
+        "options": [
+          "Fern, stall 12",
+          "Basil, stall 18",
+          "Reed, stall 24",
+          "Iris, stall 30"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<p class=\"evidence-note\">Training evidence: use the written clue sheets. This is not a visitor map.</p>",
+        "hints": [
+          "Check two conditions: the item must be cut flowers, and the seller must have grown them.",
+          "Reed has cut flowers but did not grow them. Basil and Iris produce different goods.",
+          "Answer: Fern, stall 12. Fern grows the cut flowers that the receipt describes."
+        ],
+        "explanation": "Fern meets both conditions: cut flowers and a seller who grew them. Basil meets the producer rule but sells herbs. Reed sells the right item but fails the direct-from-grower condition. Iris makes her goods, but a pressed-flower card is not the cut flowers on the receipt. These are invented records; they do not accuse any real vendor of breaking a rule. The receipt and witness place the hideout at Farmers Market stalls; the witness identifies the Farmers market vendor disguise."
       },
-      funFact: 'The Bentonville Square hosts community programs including First Fridays, farmers markets, and art markets.'
+      "funFact": "Downtown Bentonville Inc. describes its Farmers Market as a place to buy goods from the people who grow, raise, or make them. Offerings vary by season.",
+      "learningObjective": "Select the one record satisfying two conditions and explain why matching only one is insufficient.",
+      "sources": [
+        "exemplar_market_operator"
+      ],
+      "difficulty": "detective",
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-12",
+        "notes": "Checked the operator FAQ on location, products and producer-only vendors. Qualified the Square as the outdoor setting; omitted hours and season dates. All vendors, transactions, stalls, crime and witness records are fictional. Checked every choice against both conditions; explanation and warrant agree. Claim ledger and transfer activity: docs/reviewed-exemplar.md. Review covers this case, not unrelated variants, map coordinates, or human learner acceptance."
+      }
     },
     {
       slug: 'first-friday',
@@ -325,24 +374,49 @@ const casesByLocation = {
   ],
   'walmart-museum': [
     {
-      slug: 'classic',
-      headline: 'FIVE AND DIME FILE VANISHES!',
-      scene: "Walton's 5&10",
-      item: "a copy of Mr. Sam's first price ledger",
-      hideout: "Walton's 5&10",
-      disguise: 'Dime-store clerk',
-      clues: [
-        'The shelf tag says this humble dime store is where the story began.',
-        'A red price roller marked every label 5 and 10.',
-        'The suspect asked how to get from classic finds to the museum galleries.'
+      "slug": "classic",
+      "headline": "TWO OPENINGS, ONE MIXED-UP FILE!",
+      "scene": "ACME's fictional history display at Walton's 5&10",
+      "item": "a replica timeline card",
+      "hideout": "Walton's 5&10",
+      "disguise": "Dime-store clerk",
+      "nextLead": "A fictional evidence envelope sends ACME to the next stop in the selected route.",
+      "clues": [
+        "Historical fact card, based on Walmart's account: Sam Walton opened Walton's 5&10 in Bentonville in 1950. The first Walmart opened in Rogers in 1962.",
+        "Fictional filing rule: subtract the earlier opening year from the later one, then name the city of the later opening. A delivery slip says the accomplice stayed at the earlier store, not the later store.",
+        "A fictional witness followed the accomplice to Walton's 5&10. Costume inventory identifies the disguise as Dime-store clerk. The filing rule and replica card are ACME inventions."
       ],
-      puzzle: {
-        hints: ["The two prices are a store-name clue, not an encrypted message.", "A dime is ten cents. Look for the historic shop whose name includes 5 and 10.", "Answer: Walton's 5&10. A dime is ten cents. Look for the historic shop whose name includes 5 and 10."],
-        title: 'Dime Store Evidence',
-        question: 'Which museum space is tied to the 5&10 clues?',
-        options: ["Walton's 5&10", 'The Quiver', 'Momentary Green', 'The Hub']
+      "puzzle": {
+        "title": "Two Stores, Two Dates",
+        "description": "Keep the two store identities separate. Calculate the difference between opening years, not an exact anniversary interval.",
+        "question": "Which entry gives the year difference and the city of the later opening?",
+        "options": [
+          "12 years; Rogers",
+          "12 years; Bentonville",
+          "13 years; Rogers",
+          "10 years; Rogers"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<p class=\"evidence-note\">Training evidence: use the written clue sheets. This is not a visitor map.</p>",
+        "hints": [
+          "First identify which event came later; then subtract the two years.",
+          "1962 is later than 1950. The later store was in Rogers; count elapsed years, not both endpoints.",
+          "Answer: 12 years; Rogers. 1962 minus 1950 equals 12."
+        ],
+        "explanation": "1962 − 1950 = 12, and Rogers is the city of the later opening. '12 years; Bentonville' gets the subtraction right but assigns the earlier store's city to the later event. '13 years; Rogers' counts both labeled years instead of their difference. '10 years; Rogers' rounds to a decade and loses two years. This compares opening years, not exact opening dates. For the warrant, the delivery slip points back to the earlier store, Walton's 5&10; the witness confirms that place and the Dime-store clerk disguise."
       },
-      funFact: "The Walmart Museum presents Walton's 5&10 as the small dime store where Walmart's story began."
+      "funFact": "Walton's 5&10 in Bentonville and the first Walmart in Rogers are distinct stores in Walmart's historical account.",
+      "learningObjective": "Calculate a difference between historical years while keeping each date attached to the correct place and event.",
+      "sources": [
+        "exemplar_walton_history"
+      ],
+      "difficulty": "detective",
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-12",
+        "notes": "Checked The Road to Walmart paragraph for 1950/Bentonville/Walton's 5&10 and 1962/Rogers/first Walmart. Independently derived 1962 minus 1950 = 12; no exact anniversary claim. Display, theft, filing rule, delivery and suspect are fictional. Distractors diagnose city conflation, inclusive counting and rounding. Claim ledger and transfer activity: docs/reviewed-exemplar.md. Review covers this case, not unrelated variants, map coordinates, or human learner acceptance."
+      }
     },
     {
       slug: 'spark-cafe',
@@ -529,24 +603,49 @@ const casesByLocation = {
   ],
   'crystal-bridges': [
     {
-      slug: 'classic',
-      headline: 'GLASS BRIDGE GETAWAY!',
-      scene: 'the bridge overlooking the ponds',
-      item: 'a gallery transfer slip',
-      hideout: 'Glass bridge',
-      disguise: 'Art handler',
-      clues: [
-        'The witness saw a crate cross a glass-enclosed bridge over water.',
-        'The transfer slip mentions American art and a museum in an Ozark setting.',
-        'The suspect headed toward pavilions around two spring-fed ponds.'
+      "slug": "classic",
+      "headline": "PAVILION ROUTE MIX-UP!",
+      "scene": "ACME's imaginary museum-route exercise",
+      "item": "a replica transfer card",
+      "hideout": "Bridge pavilion",
+      "disguise": "Art handler",
+      "nextLead": "A fictional performance envelope sends ACME to the next stop in the selected route.",
+      "clues": [
+        "Real-world context: Crystal Bridges describes two spring-fed ponds crossed by bridge structures, with gallery and studio pavilions around them. In this fictional exercise, a crate was left in the Bridge pavilion, the room crossing water.",
+        "Fictional route sheet: Entrance connects to Gallery; Gallery connects to Bridge pavilion; Bridge pavilion connects to Studio. These links work both ways. The direct Entrance–Studio link is closed, and there are no other links. A witness saw the courier stop at the water-crossing room.",
+        "The fictional costume record says Art handler. The route sheet is an invented network for reasoning, not the museum floor plan or an accessibility route."
       ],
-      puzzle: {
-        hints: ["Look for a structure crossing water.", "Glass enclosure and an art transfer identify the bridge.", "Answer: Glass bridge. Glass enclosure and an art transfer identify the bridge."],
-        title: 'Bridge Evidence',
-        question: 'Which Crystal Bridges location matches the water-and-glass clues?',
-        options: ['Glass bridge', 'Momentary Green', 'Square Park', 'Osage boardwalk']
+      "puzzle": {
+        "title": "A Route Through the Evidence",
+        "description": "Use only the open links on the fictional route sheet. Each arrow must follow one listed connection.",
+        "question": "Which route starts at Entrance, visits Bridge pavilion, and ends at Studio without using a closed or missing link?",
+        "options": [
+          "Entrance → Gallery → Bridge pavilion → Studio",
+          "Entrance → Bridge pavilion → Gallery → Studio",
+          "Entrance → Studio → Bridge pavilion → Studio",
+          "Entrance → Gallery → Studio → Bridge pavilion"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<p class=\"evidence-note\">Training evidence: use the written clue sheets. This is not a visitor map.</p>",
+        "hints": [
+          "Check each consecutive pair of rooms, not just whether all the right room names appear.",
+          "The only open first step from Entrance is Gallery. Gallery has no direct link to Studio.",
+          "Answer: Entrance → Gallery → Bridge pavilion → Studio. All three steps use open links."
+        ],
+        "explanation": "Entrance → Gallery → Bridge pavilion → Studio follows three listed open links in order and finishes at Studio. The route starting Entrance → Bridge pavilion invents a link; Gallery → Studio is also missing. The route starting Entrance → Studio uses the closed link. The route ending at Bridge pavilion both invents Gallery → Studio and fails the required destination. The crate record and witness identify Bridge pavilion as the hideout; the costume record gives Art handler. This proves a path only in the fictional network, not a real museum route."
       },
-      funFact: 'Crystal Bridges takes its name from a nearby natural spring and bridge construction in the building.'
+      "funFact": "Architect Moshe Safdie designed Crystal Bridges to relate to its Ozark setting; the museum describes ponds, bridges and pavilions as parts of that design.",
+      "learningObjective": "Check a route one connection at a time, including a closed-link constraint and a required destination.",
+      "sources": [
+        "exemplar_crystal_architecture"
+      ],
+      "difficulty": "detective",
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-12",
+        "notes": "Checked Architecture introduction and Moshe Safdie section for architect, Ozark setting, two spring-fed ponds, bridges and pavilions. No expansion-completion, glass-material, visitor-access or exact floor-plan claim. All route nodes/links, closure, crate and witnesses are fictional. Traced every proposed path; only one satisfies all constraints. Claim ledger and transfer activity: docs/reviewed-exemplar.md. Review covers this case, not unrelated variants, map coordinates, or human learner acceptance."
+      }
     },
     {
       slug: 'trails',
@@ -631,24 +730,49 @@ const casesByLocation = {
   ],
   'the-momentary': [
     {
-      slug: 'classic',
-      headline: 'CHEESE FACTORY CUE SHEET!',
-      scene: 'the repurposed factory floor',
-      item: 'a performance cue sheet',
-      hideout: 'Fermentation Hall',
-      disguise: 'Stage technician',
-      clues: [
-        'The clue names a former cheese factory and a black-box theater.',
-        'The suspect carried gaffer tape and a cue sheet marked Fermentation Hall.',
-        'A floor plan points to a multidisciplinary art space near 8th Street Market.'
+      "slug": "classic",
+      "headline": "FACTORY PLANS, NEW PURPOSE!",
+      "scene": "ACME's imaginary design workshop at the Momentary",
+      "item": "a replica building-use card",
+      "hideout": "Fermentation Hall",
+      "disguise": "Stage technician",
+      "nextLead": "A fictional sealed envelope sends ACME to the next stop in the selected route.",
+      "clues": [
+        "Real-world context: the Momentary reused a former cheese factory for contemporary arts. Its account says the architects kept most of the building, adding elements as needed. Fictional brief: keep the existing structure and give it a new use.",
+        "The venue describes Fermentation Hall as a black box theater. In the fictional case, a sound-check record places the handoff in that theater; a second note names the hall whose name recalls cheese-making.",
+        "A fictional witness placed the courier in the hall named for the factory's former work, wearing the recorded disguise: Stage technician. The four project proposals are invented comparisons, not real construction plans."
       ],
-      puzzle: {
-        hints: ["A cue sheet and gaffer tape suggest a performance venue.", "Match the named hall to the black-box theater clue.", "Answer: Fermentation Hall. Match the named hall to the black-box theater clue."],
-        title: 'Backstage Venue Match',
-        question: 'Which Momentary space fits the theater evidence?',
-        options: ['Fermentation Hall', 'Square Park', 'Walton\'s 5&10', 'Crystal Bridges library']
+      "puzzle": {
+        "title": "What Counts as Adaptive Reuse?",
+        "description": "Adaptive reuse gives an existing building a different use while retaining substantial parts of it. Apply both parts of that idea.",
+        "question": "Which fictional proposal follows the approach described in the brief?",
+        "options": [
+          "Keep the factory structure and adapt it for performances",
+          "Keep the factory structure and continue making cheese",
+          "Demolish the factory and build a new performance venue",
+          "Build a replica factory elsewhere for performances"
+        ],
+        "correctIndex": 0,
+        "visualHtml": "<p class=\"evidence-note\">Training evidence: use the written clue sheets. This is not a visitor map.</p>",
+        "hints": [
+          "Look for both an existing structure retained and a different use.",
+          "Keeping the building alone is insufficient; a new arts venue alone is also insufficient.",
+          "Answer: Keep the factory structure and adapt it for performances. It preserves the building while changing its use."
+        ],
+        "explanation": "Keeping the factory structure and adapting it for performances meets both conditions. Continuing cheese production keeps the structure but not a new use. Demolition creates a new arts venue but removes the existing building. A replica elsewhere copies an appearance without reusing this structure. The sound-check record and witness point to Fermentation Hall; the witness identifies Stage technician. The case does not claim a measured carbon saving or that all original features were retained."
       },
-      funFact: 'The Momentary transformed a decommissioned 63,000-square-foot cheese factory into a contemporary art space.'
+      "funFact": "The Momentary names its conversion from a cheese plant to an arts space as an adaptive reuse project by Wheeler Kearns Architects.",
+      "learningObjective": "Apply a two-part definition to a new proposal and distinguish reuse from continued use, demolition and replication.",
+      "sources": [
+        "exemplar_momentary_reuse"
+      ],
+      "difficulty": "detective",
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-12",
+        "notes": "Checked About introduction, Our Space and Fermentation Hall passages: former cheese factory, contemporary arts, Wheeler Kearns, substantial building retention and black box theater. Omitted size, hours, access and quantified environmental claims. Plans, crime, sound-check and costume evidence are fictional. Compared each proposal with retained structure plus changed use. Claim ledger and transfer activity: docs/reviewed-exemplar.md. Review covers this case, not unrelated variants, map coordinates, or human learner acceptance."
+      }
     },
     {
       slug: 'tower',
@@ -1103,7 +1227,7 @@ const regionData = {
 
 const quizPack = {
   schemaVersion: 1,
-  contentVersion: 3,
+  contentVersion: 4,
   id: 'bentonville-carmen',
   title: 'Where in Bentonville is Carmen Sandiego?',
   subtitle: 'Bentonville Division',
