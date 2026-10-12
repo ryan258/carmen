@@ -20,6 +20,7 @@ let packRequest = 0;
 let activeModal = null;
 let modalReturnFocus = null;
 let resetSaveSnapshot;
+let pendingNewCase = null;
 let sessionSaveSnapshot = null;
 
 const DEFAULT_QUIZ_PACK_ENTRY = {
@@ -357,7 +358,8 @@ let state = {
     sound: true,
     reducedMotion: false,
     highContrast: false,
-    textRoute: false
+    textRoute: false,
+    answerShortcuts: false
   }
 };
 
@@ -451,7 +453,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   
   // Keyboard Event Listeners
   document.addEventListener('keydown', (e) => {
-    if (activeModal || e.ctrlKey || e.metaKey || e.altKey || e.target.closest('input, select, textarea, button, [contenteditable]')) return;
+    if (!state.settings.answerShortcuts || activeModal || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey || e.repeat || e.isComposing || e.target.closest('input, select, textarea, button, a[href], [contenteditable], [role="textbox"], [role="button"]')) return;
     const key = e.key.toLowerCase();
     const puzzleTabActive = (state.activeTab === 'puzzle' && !document.getElementById('gameScreen').classList.contains('hidden'));
     
@@ -461,6 +463,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const idx = indexByKey[key];
         const buttons = document.querySelectorAll('.option-btn');
         if (buttons[idx] && buttons[idx].disabled) return; // respect locked buttons during answer timeout
+        e.preventDefault();
         if (state.isFinalConfrontation) {
           selectFinalChoice(idx, state.activeFinalCorrectIndex);
         } else {
@@ -516,6 +519,7 @@ function loadSettings() {
       state.settings.reducedMotion = parsed.reducedMotion === true;
       state.settings.highContrast = parsed.highContrast === true;
       state.settings.textRoute = parsed.textRoute === true;
+      state.settings.answerShortcuts = parsed.answerShortcuts === true;
     } catch(e) {}
   }
   applySettings();
@@ -534,7 +538,16 @@ function applySettings() {
   const routeButton=document.getElementById('routeToggle');
   routeButton.setAttribute('aria-pressed',String(state.settings.textRoute));
   routeButton.textContent=state.settings.textRoute ? 'Text route: on' : 'Text route: off';
+  const shortcutButton=document.getElementById('shortcutToggle');
+  shortcutButton.setAttribute('aria-pressed',String(state.settings.answerShortcuts));
+  shortcutButton.textContent=state.settings.answerShortcuts ? 'Answer shortcuts: on' : 'Answer shortcuts: off';
   initBgParticles();
+}
+
+function toggleAnswerShortcuts() {
+  state.settings.answerShortcuts = !state.settings.answerShortcuts;
+  saveSettings();
+  applySettings();
 }
 
 function toggleAudio() {
@@ -615,9 +628,41 @@ function goToDifficultySelect() {
 // GAME FLOW INITIATION
 // ============================================================
 function selectDifficulty(diff) {
-  if (packLoading || !['rookie','detective','inspector'].includes(diff)) return;
+  if (packLoading || activeModal || !['rookie','detective','inspector'].includes(diff)) return;
+  const snapshot = storage.getItem(SAVE_KEY);
+  if (snapshot !== null) {
+    pendingNewCase = {difficulty: diff, snapshot, packId: QUIZ_PACK.id, stopCount: state.stopCount};
+    const saved = readSavedGame();
+    const title = QUIZ_PACK_MANIFEST.packs.find(entry => entry.id === saved?.quizPackId)?.title || saved?.quizPackId;
+    document.getElementById('replaceSaveDescription').textContent = `This browser already has a saved case${typeof title === 'string' ? ` for ${title}` : ''}. Starting a new case replaces that progress. Keep saved case returns to the menu without changing it.`;
+    openModal('replaceSaveModal');
+    return;
+  }
+  startNewCase(diff, snapshot);
+}
+
+function keepSavedCase() {
+  closeModal('replaceSaveModal');
+  goToTitle();
+}
+
+function confirmNewCase() {
+  if (activeModal !== 'replaceSaveModal' || !pendingNewCase) return;
+  const pending = pendingNewCase;
+  closeModal('replaceSaveModal');
+  if (packLoading || pending.packId !== QUIZ_PACK.id || pending.stopCount !== state.stopCount) return;
+  startNewCase(pending.difficulty, pending.snapshot);
+}
+
+function startNewCase(diff, snapshot) {
+  // Check again at confirmation time: a queued storage event may not have arrived yet.
+  if (storage.getItem(SAVE_KEY) !== snapshot) {
+    goToTitle();
+    handleSaveChange({key: SAVE_KEY});
+    return;
+  }
   cancelSession();
-  sessionSaveSnapshot=storage.getItem(SAVE_KEY);
+  sessionSaveSnapshot=snapshot;
   sound.success();
   state.stopCount = state.stopCount || QUIZ_PACK.locations.length;
   LOCATIONS = getRunLocationsForStopCount(state.stopCount);
@@ -1520,6 +1565,7 @@ function openModal(id) {
 }
 function closeModal(id) {
   if (id === 'resetModal') resetSaveSnapshot=undefined;
+  if (id === 'replaceSaveModal') pendingNewCase=null;
   document.getElementById(id).classList.add('hidden'); activeModal=null;
   [...document.body.children].forEach(el=>el.inert=false);
   if(modalReturnFocus?.isConnected && !modalReturnFocus.closest('.hidden')) modalReturnFocus.focus();

@@ -100,7 +100,7 @@ test('a late earlier pack response cannot replace the latest selection',async()=
 });
 
 test('unavailable map stays a route fallback across stops without reinitializing Leaflet',()=>{
-  const g=createGame();g.start();assert.equal(g.run('mapUnavailable'),true);
+  const g=createGame();g.start();g.run('handleMapLibraryError()');assert.equal(g.run('mapUnavailable'),true);
   g.context.window.L={map(){throw new Error('Must not reinitialize a failed map');}};
   g.solve();g.warrant();g.flush();g.run('nextRound()');
   assert.match(g.document.getElementById('map').innerHTML,/Route overview/);
@@ -136,7 +136,8 @@ test('correct-answer feedback waits for Continue and restores without advancing'
 });
 
 test('warrant choices stay local and the established location is filled at every difficulty',()=>{
-  const g=createGame();for(const difficulty of ['rookie','detective','inspector']) {
+  for(const difficulty of ['rookie','detective','inspector']) {
+    const g=createGame();
     g.run(`state.stopCount=8;selectDifficulty('${difficulty}')`);
     for(const field of ['hideout','disguise'])assert.ok(g.run(`getAllWarrantChoices('${field}').length`)<=5);
     assert.equal(g.document.getElementById('warrantCity').disabled,true);
@@ -156,6 +157,7 @@ test('actual page bindings expose unique controls, voice labels, pause and text-
 
 test('keyboard shortcuts execute after boot and ignore focused form controls',async()=>{
   const g=createGame();await g.boot();g.start();g.run("switchTab('puzzle')");
+  g.document.getElementById('shortcutToggle').click();
   const key='abcd'[g.state().activePuzzleCorrectIndex];
   await g.dispatchKey(key,g.document.getElementById('warrantHideout'));assert.equal(g.state().puzzleSolved,false);
   await g.dispatchKey(key);assert.equal(g.state().puzzleSolved,true);

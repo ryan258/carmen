@@ -36,6 +36,7 @@
       HC
     </button>
     <button id="routeToggle" onclick="toggleTextRoute()" class="utility-control" aria-pressed="false">Text route: off</button>
+    <button id="shortcutToggle" onclick="toggleAnswerShortcuts()" class="utility-control" aria-pressed="false" title="Enable A–D and 1–4 answer keys outside form controls">Answer shortcuts: off</button>
     <button onclick="goToTitle()" class="utility-control" title="Keep progress and return to the title">Pause</button>
     <button onclick="showResetModal()" class="text-slate-400 hover:text-white transition-colors text-sm font-semibold border border-white/10 px-3 py-1 rounded bg-white/5" title="Discard saved progress">
       Discard Case
@@ -123,7 +124,7 @@
           <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-emerald-500/20">📋</div>
           <div>
             <h4 class="text-white font-bold text-lg group-hover:text-emerald-400 transition-colors">Rookie Detective</h4>
-            <p class="text-slate-400 text-sm mt-1">6 lives and up to 3 hints per stop. The warrant location is filled in for you.</p>
+            <p class="text-slate-400 text-sm mt-1">6 lives and up to 3 hints per stop. The current stop is filled in; choose the hideout and disguise.</p>
           </div>
         </button>
 
@@ -131,7 +132,7 @@
           <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-amber-500/20">🔍</div>
           <div>
             <h4 class="text-white font-bold text-lg group-hover:text-amber-400 transition-colors">Senior Detective</h4>
-            <p class="text-slate-400 text-sm mt-1">5 lives and up to 2 hints per stop. Choose all three warrant fields from the evidence.</p>
+            <p class="text-slate-400 text-sm mt-1">5 lives and up to 2 hints per stop. The current stop is filled in; choose the hideout and disguise.</p>
           </div>
         </button>
 
@@ -139,7 +140,7 @@
           <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-red-500/20">⭐</div>
           <div>
             <h4 class="text-white font-bold text-lg group-hover:text-red-400 transition-colors">Chief Inspector</h4>
-            <p class="text-slate-400 text-sm mt-1">4 lives and no hints. Choose all three warrant fields from the same evidence used in the other difficulties.</p>
+            <p class="text-slate-400 text-sm mt-1">4 lives and no hints. The current stop is filled in; choose the hideout and disguise from the same evidence.</p>
           </div>
         </button>
       </div>
@@ -182,9 +183,10 @@
           <p id="currentCityText" class="text-xs text-white font-bold"></p>
         </div>
         <div class="relative w-full aspect-[4/5] bg-slate-950/40 rounded-xl border border-white/5 overflow-hidden z-10">
-          <div id="map" class="w-full h-full"></div>
+          <div id="map" class="w-full h-full" role="group" aria-label="Tracking map and route overview" aria-describedby="mapTextAlternative" tabindex="-1"></div>
         </div>
         <p id="mapTextAlternative" class="sr-only" aria-live="polite">Map not initialized.</p>
+        <button id="retryMapButton" hidden onclick="retryMap()" class="utility-control">Retry map</button>
       </div>
 
       <!-- Inventory Clue Tokens Card -->
@@ -265,7 +267,7 @@
             </div>
 
             <p class="text-xs text-slate-500 leading-relaxed mt-2">
-              Review the witness reports and evidence slips below to deduce Carmen's hideout and disguise.
+              Review the witness reports and evidence slips below to deduce the local accomplice's hideout and disguise.
             </p>
 
             <div id="cluesGrid" class="grid sm:grid-cols-3 gap-4 mt-4">
@@ -465,6 +467,18 @@
   </div>
 </div>
 
+<!-- Saved-case replacement confirmation -->
+<div id="replaceSaveModal" role="dialog" aria-modal="true" aria-labelledby="replaceSaveTitle" aria-describedby="replaceSaveDescription" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+  <div class="glass max-w-sm w-full rounded-2xl p-6 border border-white/15 text-left">
+    <h4 id="replaceSaveTitle" class="title-font text-xl font-bold">Replace saved case?</h4>
+    <p id="replaceSaveDescription" class="text-sm mt-2"></p>
+    <div class="grid gap-3 mt-6">
+      <button data-initial-focus onclick="keepSavedCase()" class="utility-control">Keep saved case</button>
+      <button onclick="confirmNewCase()" class="utility-control">Replace saved case</button>
+    </div>
+  </div>
+</div>
+
 <!-- Records Modal -->
 <div id="recordsModal" role="dialog" aria-modal="true" aria-labelledby="recordsTitle" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
   <div class="glass max-w-lg w-full rounded-2xl p-6 border border-white/15 text-left fade-in-up">
@@ -488,8 +502,6 @@
   <a href="https://www.openstreetmap.org/fixthemap">Report a map issue</a>.
 </footer>
 
-<!-- Leaflet Map JS -->
-<script async src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="./game-core.js"></script>
 <script src="./builtin-pack.js"></script>
 <script src="./map-config.js"></script>
@@ -497,5 +509,7 @@
 <script src="./game-map.js"></script>
 <script src="./game-records.js"></script>
 <script src="./game.js"></script>
+<!-- Start the optional library after its load/error handlers are defined. -->
+<script async src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" id="leafletScript" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" onload="handleMapLibraryLoad()" onerror="handleMapLibraryError()"></script>
 </body>
 </html>

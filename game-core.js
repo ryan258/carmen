@@ -16,8 +16,9 @@
   function getStreakBonus(streak) { return streak >= 3 ? (streak - 2) * SCORE_RULES.streakStep : 0; }
   function getStartingLives(difficulty) { return difficulty === 'rookie' ? 6 : difficulty === 'inspector' ? 4 : 5; }
   function stopCounts(total) {
-    if (!integer(total, 1, 100)) return [];
-    return [...new Set([Math.ceil(total / 2), Math.ceil(total * .75), total])].filter(n => n >= 3 || n === total).sort((a, b) => a - b);
+    // The inventory finale needs four distinct tokens, just like every other puzzle.
+    if (!integer(total, 4, 100)) return [];
+    return [...new Set([Math.ceil(total / 2), Math.ceil(total * .75), total])].filter(n => n >= 4).sort((a, b) => a - b);
   }
   function escapeHtml(value) {
     return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));

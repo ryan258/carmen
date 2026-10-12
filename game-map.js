@@ -2,15 +2,49 @@
 let map;
 let mapMarkers = [];
 let mapUnavailable = false;
+let mapLibraryStatus = 'loading';
+
+function refreshVisibleMap() {
+  if (['investigation','between','final'].includes(state.phase) && !document.getElementById('gameScreen').classList.contains('hidden')) drawMapGrid();
+}
+
+function handleMapLibraryLoad() {
+  mapLibraryStatus = 'ready';
+  refreshVisibleMap();
+}
+
+function handleMapLibraryError() {
+  mapLibraryStatus = 'failed';
+  mapUnavailable = true;
+  refreshVisibleMap();
+}
+
+function retryMap() {
+  if (state.settings.textRoute || !['investigation','between','final'].includes(state.phase)) return;
+  if (!window.L && mapLibraryStatus === 'loading') return;
+  const restoreFocus = document.activeElement === document.getElementById('retryMapButton');
+  resetMapForPackChange();
+  if (!window.L) {
+    mapLibraryStatus = 'loading';
+    const original = document.getElementById('leafletScript');
+    const retry = document.createElement('script');
+    // Reuse the pinned URL and integrity boundary; do not add another request while loading.
+    for (const name of ['src','integrity','crossorigin']) retry.setAttribute(name, original.getAttribute(name));
+    retry.async = true;
+    retry.onload = () => { retry.remove(); handleMapLibraryLoad(); };
+    retry.onerror = () => { retry.remove(); handleMapLibraryError(); };
+    document.head.appendChild(retry);
+  }
+  drawMapGrid();
+  if (restoreFocus) document.getElementById('map').focus({preventScroll: true});
+}
 
 function initLeafletMap() {
   if (map || mapUnavailable || state.settings.textRoute) return;
-  if (!window.L) {
-    renderMapFallback();
-    return;
-  }
+  if (!window.L) return; // A pending library is not a permanent map failure.
   const mapConfig = QUIZ_PACK.map || DEFAULT_QUIZ_PACK.map;
   const mapCenter = normalizeMapCenter(mapConfig.center);
+  document.getElementById('map').innerHTML = '';
   
   map = L.map('map', {
     center: [mapCenter.lat, mapCenter.lng],
@@ -33,7 +67,7 @@ function initLeafletMap() {
   }).on('tileerror', () => {
     // This callback belongs to the map instance, not a particular round.
     // Leaflet must finish tile delivery before its container is detached.
-    setTimeout(() => { if (map === configuredMap) renderMapFallback(); },0);
+    setTimeout(() => { if (map === configuredMap) { mapUnavailable = true; renderMapFallback(); } },0);
   }).addTo(map);
 }
 
@@ -61,16 +95,19 @@ function updateMapTextAlternative() {
 }
 
 function renderMapFallback() {
-  mapUnavailable = true;
   if (map) map.remove();
   map = null; mapMarkers = [];
   const mapEl = document.getElementById('map');
   if (!mapEl) return;
   const current = LOCATIONS[state.currentLocationIndex];
+  const label = state.settings.textRoute ? 'text route selected'
+    : mapLibraryStatus === 'failed' ? 'map library unavailable'
+    : mapUnavailable ? 'map tiles unavailable' : 'map loading';
+  document.getElementById('retryMapButton').hidden = state.settings.textRoute || (!window.L && mapLibraryStatus === 'loading');
   updateMapTextAlternative();
   mapEl.innerHTML = `
     <div class="map-fallback" role="group" aria-label="Route overview">
-      <p class="text-xs uppercase font-black text-amber-400">Route overview — ${state.settings.textRoute ? 'text route selected' : 'map unavailable'}</p>
+      <p class="text-xs uppercase font-black text-amber-400">Route overview — ${label}</p>
       <p class="text-lg font-black">${escapeHtml(current.emoji || '•')} ${escapeHtml(current.name)}</p>
       <p class="text-sm">${escapeHtml(current.province)}</p>
       <ol class="text-xs leading-relaxed">
@@ -89,6 +126,7 @@ function drawMapGrid() {
     document.getElementById('currentCityText').textContent = `${cur.emoji} ${cur.name} (${cur.province})`;
     return;
   }
+  document.getElementById('retryMapButton').hidden = true;
   invalidateMapSize();
   
   // Remove existing markers
@@ -153,6 +191,7 @@ function resetMapForPackChange() {
 
   const mapEl = document.getElementById('map');
   if (mapEl) mapEl.innerHTML = '';
+  document.getElementById('retryMapButton').hidden = true;
 }
 
 function toggleTextRoute() {

@@ -35,16 +35,16 @@ test('different seeds can produce different case routes', () => {
   });
 });
 
-test('stop count options always include the full pack size and never dip below 3 unless the pack itself is smaller', () => {
-  quizPacks.forEach((quizPack) => {
-    const total = quizPack.locations.length;
+test('every supported pack offers only routes with enough tokens for four final choices', () => {
+  for (let total = 4; total <= 100; total++) {
     const options = computeStopCountOptions(total);
-    assert.ok(options.includes(total), `${quizPack.id} stop options include the full pack size`);
+    assert.ok(options.includes(total), `${total}-location pack includes its full route`);
     options.forEach((count) => {
-      assert.ok(count >= 3 || count === total, `${quizPack.id} stop option ${count} is either >=3 or the full pack`);
+      assert.ok(count >= 4 && count <= total, `${total}-location pack supports ${count} stops`);
     });
-    assert.deepEqual(options, [...options].sort((a, b) => a - b), `${quizPack.id} stop options are ascending`);
-  });
+    assert.deepEqual(options, [...options].sort((a, b) => a - b), `${total}-location pack options are ascending`);
+  }
+  for (const total of [0, 1, 2, 3, 4.5, 101]) assert.deepEqual(computeStopCountOptions(total), []);
 });
 
 test('generated case ids always exist in their location pool', () => {
