@@ -1,6 +1,6 @@
 # Current implementation contract
 
-This file describes the implemented local preview. The [original design](docs/archive/original-spec.md) is preserved as historical product intent; unimplemented mechanics there are not evidence of current functionality.
+This file describes the implemented personal preview, available locally and on [GitHub Pages](https://ryan258.github.io/carmen/). The [deployment guide](docs/deployment.md) describes static hosting and update behavior. The [original design](docs/archive/original-spec.md) is preserved as historical product intent; unimplemented mechanics there are not evidence of current functionality.
 
 ## Product and content
 

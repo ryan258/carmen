@@ -4,6 +4,12 @@ Site address: **https://ryan258.github.io/carmen/**
 
 Ryan requested GitHub Pages hosting on October 12, 2026. The repository uses the official GitHub Actions Pages artifact workflow in [pages.yml](../.github/workflows/pages.yml), with **GitHub Actions** selected as the Pages publishing source. No generated `gh-pages` branch is needed. See [GitHub's custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
+## First publication — October 12, 2026
+
+[Deployment run 38314012679](https://github.com/ryan258/carmen/actions/runs/38314012679) completed successfully for commit `af5c7b41c17e8f0f51b5ef8ed01104bc1891c1eb`. Pages is public with HTTPS enforced. Post-deployment HTTP inspection returned 200 for the site root, all 14 packaged application files and `version.json`; each application file matched its local source bytes, and the version endpoint identified that deployment commit. This records file delivery only, not a browser playthrough or a new test-suite pass.
+
+Later documentation-only commits do not change the deployed game revision. No tests or GitNexus analyze were run during this hosting task.
+
 ## Publishing and updates
 
 Pushing a change to the listed game assets or workflow on `main` publishes the checked-in revision. Documentation-only changes do not trigger deployment. The workflow can also be started from **Actions → Deploy GitHub Pages → Run workflow**, using `main`. The [Actions history](https://github.com/ryan258/carmen/actions/workflows/pages.yml) records each deployment and its revision.

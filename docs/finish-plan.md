@@ -11,13 +11,13 @@ The [focused test transcript](archive/verification-2026-10-12-exemplar-focused.t
 
 The completed focused command is retained in [remediation status](remediation-status.md) for reproducibility. `check:release` should continue to fail for the 72 pending reviews; it was not part of the passing command. No content or CSS rebuild is required for this documentation-only follow-up. A current full-suite result remains unrecorded; no broader automated run is needed just for these docs.
 
-To start the manual check:
+The [hosted preview](https://ryan258.github.io/carmen/) is now available for the manual check; no local server is needed when using it. [Deployment evidence](deployment.md) confirms publication and file delivery, while the input/comfort checks remain open. To use localhost instead:
 
 ```sh
 cd /Users/ryanjohnson/Projects/nonsense/carmen &&
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open http://127.0.0.1:8000/ and use one four-stop route with the preferred input method. Open the companion guide separately for an exact reviewed activity; the game still selects from all case variants. Record specific obstacles rather than auditing all 80 cases. Stop the server with Ctrl+C when finished. Exact evidence, archived reports and future graph-refresh commands are in [remediation status](remediation-status.md). No repeat graph refresh is needed just to archive its results. Ryan separately authorized the local documentation/evidence commit after the earlier three-commit grouping; pushing, publishing and deployment remain outside scope.
+Open http://127.0.0.1:8000/ and use one four-stop route with the preferred input method. Open the companion guide separately for an exact reviewed activity; the game still selects from all case variants. Record specific obstacles rather than auditing all 80 cases. Stop the server with Ctrl+C when finished. Exact evidence, archived reports and future graph-refresh commands are in [remediation status](remediation-status.md). No repeat graph refresh is needed just to archive its results. Ryan authorized the local documentation/evidence commit after the earlier three-commit grouping, then separately requested GitHub Pages publication.
 
-[Review reconciliation](review-reconciliation-2026-10-12.md) records preserved `c12e772` changes, corrected findings, and deferred learning/content/architecture proposals. Eight case reviews are recorded as AI-assisted; 72 remain pending. Human editorial/learner acceptance and the full map/venue review remain open; the game remains a personal local preview.
+[Review reconciliation](review-reconciliation-2026-10-12.md) records preserved `c12e772` changes, corrected findings, and deferred learning/content/architecture proposals. Eight case reviews are recorded as AI-assisted; 72 remain pending. Human editorial/learner acceptance and the full map/venue review remain open; the game remains a personal preview with local and hosted access.

@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — October 12, 2026 GitHub Pages hosting
+
+- Publish the game at https://ryan258.github.io/carmen/ using a pinned official Actions workflow and an explicit runtime-file artifact. Relevant changes on `main` deploy automatically; manual dispatch is also available. Add a deployed-commit endpoint and a hosting/recovery guide.
+- Confirm the first deployment succeeded for `af5c7b4`; the root, 14 application files and version endpoint returned HTTP 200, with matching application bytes and revision. Record this as publication evidence, separate from browser/AT, learner and test-suite results.
+- Keep existing generated content/CSS, pack versions and review limits. Neither the workflow nor the agent runs tests or GitNexus analyze for this deployment. Ryan explicitly requested hosting; the publishing changes were committed and pushed for that purpose.
+
 ## Unreleased — October 12, 2026 post-commit graph reconciliation
 
 - Record Ryan's successful GitNexus refresh at `84ae82d`: 861 nodes, 3,124 edges, 31 clusters and 73 flows. Archive the supplied console text and the complete read-only comparison against `c12e772`: 31 files, 109 symbols and 31 affected flows at critical impact, with no report-level error, partial or truncation flag.

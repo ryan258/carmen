@@ -10,6 +10,12 @@ This is the authoritative revision-specific evidence record. [Review reconciliat
 
 **Latest behavioral verification:** Ryan's focused version 4 run under Node v26.7.0 passed syntax, content/fallback contracts and 40/40 tests, with no failures, cancellations, skips or todos. The [complete transcript](archive/verification-2026-10-12-exemplar-focused.txt) is preserved verbatim. The new graph submission identifies no failed check requiring a code fix. This follow-up updates documentation and archives only; no tests or GitNexus analyze were run by the agent. The next action is a short personal browser/input check, not another automated run solely for these documentation changes.
 
+## GitHub Pages publication — October 12
+
+Ryan subsequently authorized hosting this project on GitHub Pages. The [public preview](https://ryan258.github.io/carmen/) was deployed from `af5c7b41c17e8f0f51b5ef8ed01104bc1891c1eb` by [successful run 38314012679](https://github.com/ryan258/carmen/actions/runs/38314012679). The site root, all 14 packaged application files and `version.json` returned HTTP 200; application bytes matched the local files and the version endpoint matched the deployed commit. HTTPS is enforced. The workflow publishes checked-in assets when relevant files change on `main`, with no npm install, content/CSS rebuild, tests or GitNexus analyze. [Deployment and recovery details](deployment.md) record the configuration and evidence.
+
+This is publication/file-delivery evidence only. Content versions, the eight reviewed cases, 72 pending reviews and prior focused-test results are unchanged; no browser/AT or learner acceptance is claimed. The subsequent documentation-only record does not trigger a new deployment. Earlier authorization limits below describe the respective review tasks, before Ryan separately requested hosting.
+
 ## Post-commit graph reconciliation — October 12
 
 Ryan ran `node .gitnexus/run.cjs analyze --index-only` followed by `node .gitnexus/run.cjs detect-changes --scope compare --base-ref c12e772 --repo .`. Both completed successfully. Local metadata records **October 12, 21:40:44 UTC**, branch `main`, indexed commit **`84ae82df0ceafcbb805d72e617d69d7bec99054b`**. Before this follow-up's documentation edits, read-only status confirmed matching analyzer runner identity and content for **all 53 covered files**. The agent did not rebuild the index.
