@@ -1,0 +1,1970 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 2,
+  "id": "northwest-arkansas-carmen",
+  "title": "Where in Northwest Arkansas is Carmen Sandiego?",
+  "subtitle": "Northwest Arkansas Division",
+  "heroLocation": "NORTHWEST ARKANSAS",
+  "intro": "Carmen has scrambled ACME’s Ozark dispatch archive. Follow fictional accomplices through eight Northwest Arkansas stops, from art and campus landmarks to creekside towns and historic sites. Choose 4, 6, or 8 stops. Map pins are approximate regional orientation points, not entrances or travel directions. All cases can be solved from the written evidence.",
+  "evidenceLabel": "NORTHWEST ARKANSAS DIVISION EVIDENCE",
+  "successMessage": "You recovered the missing dispatches and closed the selected route. ACME can file its Northwest Arkansas report.",
+  "map": {
+    "center": {
+      "lat": 36.25,
+      "lng": -94.15
+    },
+    "zoom": 9,
+    "minZoom": 7,
+    "maxZoom": 16
+  },
+  "finalConfrontation": {
+    "title": "Final Report",
+    "rounds": [
+      {
+        "title": "First-stop evidence review",
+        "description": "Review the written evidence from the first selected case.",
+        "question": "Which answer matches the first case evidence?",
+        "options": [
+          "Selected case answer",
+          "Case alternative 1",
+          "Case alternative 2",
+          "Case alternative 3"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report copies the selected first case, including its choices, correct index, and explanation."
+      },
+      {
+        "title": "Route evidence review",
+        "description": "Review the written evidence from a case in the middle of the selected route.",
+        "question": "Which answer matches the route evidence?",
+        "options": [
+          "Selected case answer",
+          "Case alternative 1",
+          "Case alternative 2",
+          "Case alternative 3"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report copies the selected middle case, including its choices, correct index, and explanation."
+      },
+      {
+        "title": "Route inventory",
+        "description": "Use the collected tokens from your completed route.",
+        "question": "Which token came from the last completed stop?",
+        "options": [
+          "Last stop token",
+          "First stop token",
+          "Second stop token",
+          "Third stop token"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report resolves the last token and three other tokens from the completed route."
+      }
+    ]
+  },
+  "locations": [
+    {
+      "id": "nwa-bentonville",
+      "name": "Bentonville",
+      "province": "Benton County",
+      "lat": 36.3729,
+      "lng": -94.2088,
+      "emoji": "🎨",
+      "tagline": "Art, architecture, and Ozark gardens",
+      "henchman": {
+        "name": "Vera Vellum",
+        "alias": "The Redactor",
+        "emoji": "🎨",
+        "role": "Archive courier swapping architectural labels",
+        "dossierNote": "A fictional ACME training suspect. Archive courier swapping architectural labels. Leaves misleading labels but consistent witness records."
+      },
+      "token": {
+        "name": "Gallery Seal",
+        "char": "🎨"
+      }
+    },
+    {
+      "id": "nwa-rogers",
+      "name": "Rogers",
+      "province": "Benton County",
+      "lat": 36.332,
+      "lng": -94.1185,
+      "emoji": "🚂",
+      "tagline": "Industrial stories and park connections",
+      "henchman": {
+        "name": "Dexter Switch",
+        "alias": "The Sidetrack",
+        "emoji": "🚂",
+        "role": "Dispatch clerk mixing museum and railway records",
+        "dossierNote": "A fictional ACME training suspect. Dispatch clerk mixing museum and railway records. Leaves misleading labels but consistent witness records."
+      },
+      "token": {
+        "name": "Depot Stamp",
+        "char": "🚂"
+      }
+    },
+    {
+      "id": "nwa-springdale",
+      "name": "Springdale",
+      "province": "Washington County",
+      "lat": 36.1867,
+      "lng": -94.1288,
+      "emoji": "📚",
+      "tagline": "Ozark stories and railroad journeys",
+      "henchman": {
+        "name": "Nell Carbon",
+        "alias": "The Duplicate",
+        "emoji": "📚",
+        "role": "Records forger switching exhibit and excursion labels",
+        "dossierNote": "A fictional ACME training suspect. Records forger switching exhibit and excursion labels. Leaves misleading labels but consistent witness records."
+      },
+      "token": {
+        "name": "Archive Key",
+        "char": "📚"
+      }
+    },
+    {
+      "id": "nwa-fayetteville",
+      "name": "Fayetteville",
+      "province": "Washington County",
+      "lat": 36.0626,
+      "lng": -94.1574,
+      "emoji": "🎓",
+      "tagline": "Campus landmarks and names underfoot",
+      "henchman": {
+        "name": "Ada Margin",
+        "alias": "The Footnote",
+        "emoji": "🎓",
+        "role": "Campus courier rearranging names and dates",
+        "dossierNote": "A fictional ACME training suspect. Campus courier rearranging names and dates. Leaves misleading labels but consistent witness records."
+      },
+      "token": {
+        "name": "Campus Rubbing",
+        "char": "🎓"
+      }
+    },
+    {
+      "id": "nwa-siloam",
+      "name": "Siloam Springs",
+      "province": "Benton County",
+      "lat": 36.1881,
+      "lng": -94.5405,
+      "emoji": "💧",
+      "tagline": "Creekside history and river recreation",
+      "henchman": {
+        "name": "Milo Ripple",
+        "alias": "The Watermark",
+        "emoji": "💧",
+        "role": "Map courier swapping creek and river captions",
+        "dossierNote": "A fictional ACME training suspect. Map courier swapping creek and river captions. Leaves misleading labels but consistent witness records."
+      },
+      "token": {
+        "name": "Creek Seal",
+        "char": "💧"
+      }
+    },
+    {
+      "id": "nwa-bella-vista",
+      "name": "Bella Vista",
+      "province": "Benton County",
+      "lat": 36.468,
+      "lng": -94.254,
+      "emoji": "🌲",
+      "tagline": "Woodland architecture and local history",
+      "henchman": {
+        "name": "Cora Canopy",
+        "alias": "The Silhouette",
+        "emoji": "🌲",
+        "role": "Photograph courier replacing landmark captions",
+        "dossierNote": "A fictional ACME training suspect. Photograph courier replacing landmark captions. Leaves misleading labels but consistent witness records."
+      },
+      "token": {
+        "name": "Woodland Lens",
+        "char": "🌲"
+      }
+    },
+    {
+      "id": "nwa-pea-ridge",
+      "name": "Pea Ridge National Military Park",
+      "province": "Benton County",
+      "lat": 36.453,
+      "lng": -94.034,
+      "emoji": "🗂️",
+      "tagline": "Reading a historic landscape carefully",
+      "henchman": {
+        "name": "Ellis Folio",
+        "alias": "The Misprint",
+        "emoji": "🗂️",
+        "role": "Training-archive courier confusing originals and reconstructions",
+        "dossierNote": "A fictional ACME training suspect. Training-archive courier confusing originals and reconstructions. Leaves misleading labels but consistent witness records."
+      },
+      "token": {
+        "name": "History Folio",
+        "char": "🗂️"
+      }
+    },
+    {
+      "id": "nwa-eureka",
+      "name": "Eureka Springs",
+      "province": "Carroll County",
+      "lat": 36.4012,
+      "lng": -93.7379,
+      "emoji": "🔎",
+      "tagline": "Hillside landmarks and woodland glass",
+      "henchman": {
+        "name": "June Facet",
+        "alias": "The Reflection",
+        "emoji": "🔎",
+        "role": "Photo courier switching architectural and park subjects",
+        "dossierNote": "A fictional ACME training suspect. Photo courier switching architectural and park subjects. Leaves misleading labels but consistent witness records."
+      },
+      "token": {
+        "name": "Ozark Prism",
+        "char": "🔎"
+      }
+    }
+  ],
+  "questions": {
+    "nwa-bentonville": [
+      {
+        "caseId": "nwa-bridges",
+        "briefing": {
+          "headline": "THE ARCHITECT’S ENVELOPE",
+          "report": "In this fictional ACME training case, an architectural dispatch has disappeared at Bentonville. Carmen has moved on; The Redactor stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Rogers.",
+          "suspect": {
+            "name": "Vera Vellum",
+            "alias": "The Redactor",
+            "emoji": "🎨",
+            "role": "Archive courier swapping architectural labels",
+            "dossierNote": "A fictional ACME training suspect. Archive courier swapping architectural labels. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The recovered label pairs American art with museum architecture by Moshe Safdie.",
+          "ACME’s reference card assigns Safdie to Crystal Bridges, factory reuse to the Momentary, plants to Compton Gardens, and retail history to the Walmart Museum.",
+          "The witness saw the suspect waiting at the venue matching the architect and art label, holding the museum-commission envelope. Witness identification: Gallery installer."
+        ],
+        "puzzle": {
+          "title": "The Architect’s Envelope",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which venue matches the Safdie commission and American-art label?",
+          "options": [
+            "The Momentary",
+            "Crystal Bridges Museum of American Art",
+            "Compton Gardens & Arboretum",
+            "The Walmart Museum"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Find the architect’s match on the reference card.",
+            "Use the architect assignment on the reference card; sharing a museum category alone is insufficient.",
+            "Answer: Crystal Bridges Museum of American Art. The Safdie commission and American-art label both select Crystal Bridges. The other files describe a reused factory, gardens, or retail history. Warrant: Crystal Bridges Museum of American Art; disguise: Gallery installer."
+          ],
+          "explanation": "The Safdie commission and American-art label both select Crystal Bridges. The other files describe a reused factory, gardens, or retail history. The warrant location is Crystal Bridges Museum of American Art; the witness identifies the Gallery installer disguise."
+        },
+        "warrantAnswers": {
+          "city": "Bentonville",
+          "hideout": "Crystal Bridges Museum of American Art",
+          "disguise": "Gallery installer"
+        },
+        "funFact": "Moshe Safdie designed Crystal Bridges Museum of American Art.",
+        "learningObjective": "Combine architect and institution clues to distinguish Bentonville landmarks.",
+        "sources": [
+          "crystal",
+          "momentary",
+          "compton",
+          "walmart"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Benton County",
+          "Bentonville"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Architecture: Safdie attribution; companion sources cover the three comparison venues. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-momentary",
+        "briefing": {
+          "headline": "A FACTORY’S SECOND ACT",
+          "report": "In this fictional ACME training case, a reuse-project folder has disappeared at Bentonville. Carmen has moved on; The Redactor stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Rogers.",
+          "suspect": {
+            "name": "Vera Vellum",
+            "alias": "The Redactor",
+            "emoji": "🎨",
+            "role": "Archive courier swapping architectural labels",
+            "dossierNote": "A fictional ACME training suspect. Archive courier swapping architectural labels. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The building’s earlier chapter involved making cheese; the new chapter involves contemporary art and performance.",
+          "The filing guide defines adaptive reuse as giving an existing building a new function. New construction creates a new building; the other folders concern transport or plants.",
+          "The witness saw the suspect waiting at the Momentary with its delivery slip. The missing folder is the building’s category, not its address. Witness identification: Stage technician."
+        ],
+        "puzzle": {
+          "title": "A Factory’s Second Act",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which category describes the Momentary’s change from factory to arts venue?",
+          "options": [
+            "New construction",
+            "Rail transport",
+            "Adaptive reuse",
+            "Plant conservation"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Keep both the old purpose and the new purpose in view.",
+            "The structure already existed. Choose the term for changing its use, rather than building a new structure.",
+            "Answer: Adaptive reuse. Adaptive reuse means giving an existing building a new function. The factory-to-arts change meets that definition; it does not describe a new building, train service, or plant collection. Warrant: The Momentary; disguise: Stage technician."
+          ],
+          "explanation": "Adaptive reuse means giving an existing building a new function. The factory-to-arts change meets that definition; it does not describe a new building, train service, or plant collection. The warrant location is The Momentary; the witness identifies the Stage technician disguise."
+        },
+        "warrantAnswers": {
+          "city": "Bentonville",
+          "hideout": "The Momentary",
+          "disguise": "Stage technician"
+        },
+        "funFact": "The Momentary occupies a former cheese factory.",
+        "learningObjective": "Recognize adaptive reuse using a Bentonville arts venue.",
+        "sources": [
+          "momentary"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Benton County",
+          "Bentonville"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "About: former cheese factory and adaptive reuse. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-compton",
+        "briefing": {
+          "headline": "THE GARDEN DISPATCH",
+          "report": "In this fictional ACME training case, a botanical dispatch has disappeared at Bentonville. Carmen has moved on; The Redactor stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Rogers.",
+          "suspect": {
+            "name": "Vera Vellum",
+            "alias": "The Redactor",
+            "emoji": "🎨",
+            "role": "Archive courier swapping architectural labels",
+            "dossierNote": "A fictional ACME training suspect. Archive courier swapping architectural labels. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The dispatch concerns Compton Gardens & Arboretum. In the exercise ledger, its garden delivery is after the gallery delivery and before the theater delivery.",
+          "The gallery delivery is at 10:00 and the theater delivery is at 11:00. Four candidate appointment cards read 09:45, 10:30, 11:00, and 11:15.",
+          "The suspect must use a time strictly between the deliveries. The witness saw the suspect waiting at Compton Gardens & Arboretum with the appointment card; these are invented times. Witness identification: Botanical illustrator."
+        ],
+        "puzzle": {
+          "title": "The Garden Dispatch",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which appointment is strictly after 10:00 and before 11:00?",
+          "options": [
+            "11:00",
+            "09:45",
+            "11:15",
+            "10:30"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Exclude the two endpoints and anything outside them.",
+            "Reject either boundary and every time outside them; equality with 11:00 is not allowed.",
+            "Answer: 10:30. 10:30 is the only listed time after 10:00 and before 11:00. The 11:00 card is equal to the later delivery, so it fails the strict-between rule. Warrant: Compton Gardens & Arboretum; disguise: Botanical illustrator."
+          ],
+          "explanation": "10:30 is the only listed time after 10:00 and before 11:00. The 11:00 card is equal to the later delivery, so it fails the strict-between rule. The warrant location is Compton Gardens & Arboretum; the witness identifies the Botanical illustrator disguise."
+        },
+        "warrantAnswers": {
+          "city": "Bentonville",
+          "hideout": "Compton Gardens & Arboretum",
+          "disguise": "Botanical illustrator"
+        },
+        "funFact": "Compton Gardens & Arboretum is a Bentonville site operated by the Peel Compton Foundation.",
+        "learningObjective": "Use two time constraints without treating a fictional appointment as visitor information.",
+        "sources": [
+          "compton"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Benton County",
+          "Bentonville"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Visit Us: venue identity, Bentonville location and foundation operator only; times invented. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      }
+    ],
+    "nwa-rogers": [
+      {
+        "caseId": "nwa-daisy",
+        "briefing": {
+          "headline": "THE MIGRATING MACHINE CRATE",
+          "report": "In this fictional ACME training case, a factory-history card has disappeared at Rogers. Carmen has moved on; The Sidetrack stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Springdale.",
+          "suspect": {
+            "name": "Dexter Switch",
+            "alias": "The Sidetrack",
+            "emoji": "🚂",
+            "role": "Dispatch clerk mixing museum and railway records",
+            "dossierNote": "A fictional ACME training suspect. Dispatch clerk mixing museum and railway records. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The historical card says Daisy moved manufacturing from Plymouth, Michigan, to Rogers in 1958.",
+          "The fictional museum ledger has four bins: Plymouth departure, Rogers arrival, Fayetteville campus, and Springdale passenger service.",
+          "The crate needs the arrival-city bin. The suspect is hiding at the Rogers Daisy Airgun Museum. Witness identification: Museum cataloguer."
+        ],
+        "puzzle": {
+          "title": "The Migrating Machine Crate",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which ledger bin records the destination of Daisy’s 1958 move?",
+          "options": [
+            "Plymouth departure",
+            "Fayetteville campus",
+            "Rogers arrival",
+            "Springdale passenger service"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Select the receiving city, not the city the machinery left.",
+            "Separate the place the equipment left from the place it arrived.",
+            "Answer: Rogers arrival. The card distinguishes origin from destination: Plymouth is the departure, and Rogers is the arrival. The campus and passenger-service bins concern other subjects. Warrant: Rogers Daisy Airgun Museum; disguise: Museum cataloguer."
+          ],
+          "explanation": "The card distinguishes origin from destination: Plymouth is the departure, and Rogers is the arrival. The campus and passenger-service bins concern other subjects. The warrant location is Rogers Daisy Airgun Museum; the witness identifies the Museum cataloguer disguise."
+        },
+        "warrantAnswers": {
+          "city": "Rogers",
+          "hideout": "Rogers Daisy Airgun Museum",
+          "disguise": "Museum cataloguer"
+        },
+        "funFact": "Daisy relocated manufacturing from Plymouth, Michigan, to Rogers in 1958.",
+        "learningObjective": "Distinguish an industrial move’s origin and destination.",
+        "sources": [
+          "daisy"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Benton County",
+          "Rogers"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "The Daisy Story: April–June 1958 move from Plymouth to Rogers. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-railyard",
+        "briefing": {
+          "headline": "TWO RAILYARDS, ONE CLUE",
+          "report": "In this fictional ACME training case, a bike-park dispatch has disappeared at Rogers. Carmen has moved on; The Sidetrack stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Springdale.",
+          "suspect": {
+            "name": "Dexter Switch",
+            "alias": "The Sidetrack",
+            "emoji": "🚂",
+            "role": "Dispatch clerk mixing museum and railway records",
+            "dossierNote": "A fictional ACME training suspect. Dispatch clerk mixing museum and railway records. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The recovered record describes an off-road bike park with riding features and a paved connection toward Lake Atalanta.",
+          "ACME’s directory separates The Railyard Bike Park, a downtown performance park, a museum, and a railroad ticket office.",
+          "The witness saw the suspect waiting at the park matching both details, with a jump-line inspection clipboard rather than a concert order or passenger ticket. Witness identification: Bike-park marshal."
+        ],
+        "puzzle": {
+          "title": "Two Railyards, One Clue",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which Rogers destination matches the riding features and lake connection?",
+          "options": [
+            "The Railyard Bike Park",
+            "Railyard Park performance stage",
+            "Rogers Daisy Airgun Museum",
+            "Railroad ticket office"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "A shared name does not mean two facilities serve the same purpose.",
+            "Use the bike-park description to distinguish the two similar Railyard names.",
+            "Answer: The Railyard Bike Park. Riding features plus the Lake Atalanta connection identify The Railyard Bike Park. The performance stage shares a similar name but does not fit the bike-park evidence. Warrant: The Railyard Bike Park; disguise: Bike-park marshal."
+          ],
+          "explanation": "Riding features plus the Lake Atalanta connection identify The Railyard Bike Park. The performance stage shares a similar name but does not fit the bike-park evidence. The warrant location is The Railyard Bike Park; the witness identifies the Bike-park marshal disguise."
+        },
+        "warrantAnswers": {
+          "city": "Rogers",
+          "hideout": "The Railyard Bike Park",
+          "disguise": "Bike-park marshal"
+        },
+        "funFact": "Rogers describes a paved connection from The Railyard Bike Park to Lake Atalanta Park.",
+        "learningObjective": "Distinguish similarly named destinations using function and connection evidence.",
+        "sources": [
+          "railyard",
+          "railyard_stage"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Benton County",
+          "Rogers"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Bike-park article: Lake Atalanta connection; separate Railyard Park listing: performance stage. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-atalanta",
+        "briefing": {
+          "headline": "THE LAKE LABEL SHUFFLE",
+          "report": "In this fictional ACME training case, a destination label has disappeared at Rogers. Carmen has moved on; The Sidetrack stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Springdale.",
+          "suspect": {
+            "name": "Dexter Switch",
+            "alias": "The Sidetrack",
+            "emoji": "🚂",
+            "role": "Dispatch clerk mixing museum and railway records",
+            "dossierNote": "A fictional ACME training suspect. Dispatch clerk mixing museum and railway records. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The fictional dispatch lists four word cards: 1 Lake, 2 Park, 3 Atalanta, 4 Railyard.",
+          "The recovered ordering key is 1-3-2. The suspect used that exact three-word destination, reached by the bike park’s paved connection.",
+          "The witness saw the suspect waiting at the destination spelled by the key. Use each chosen word once, in key order. Witness identification: Park photographer."
+        ],
+        "puzzle": {
+          "title": "The Lake Label Shuffle",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "What destination does the 1-3-2 word-card key spell?",
+          "options": [
+            "Railyard Lake Park",
+            "Lake Park Atalanta",
+            "Atalanta Railyard Park",
+            "Lake Atalanta Park"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Read the card numbers as positions, not as a sum.",
+            "Read the numbered cards in key order, not numerical order. Card 4 is unused.",
+            "Answer: Lake Atalanta Park. Read card 1, then 3, then 2: Lake Atalanta Park. The other choices either reorder the cards or introduce card 4. Warrant: Lake Atalanta Park; disguise: Park photographer."
+          ],
+          "explanation": "Read card 1, then 3, then 2: Lake Atalanta Park. The other choices either reorder the cards or introduce card 4. The warrant location is Lake Atalanta Park; the witness identifies the Park photographer disguise."
+        },
+        "warrantAnswers": {
+          "city": "Rogers",
+          "hideout": "Lake Atalanta Park",
+          "disguise": "Park photographer"
+        },
+        "funFact": "Lake Atalanta Park is connected to The Railyard Bike Park by a paved trail.",
+        "learningObjective": "Decode a word-order key while preserving a real Rogers place name.",
+        "sources": [
+          "railyard"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Benton County",
+          "Rogers"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Bike-park article: named paved connection to Lake Atalanta Park; ordering key invented. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      }
+    ],
+    "nwa-springdale": [
+      {
+        "caseId": "nwa-shiloh",
+        "briefing": {
+          "headline": "THE EARLIER NAME",
+          "report": "In this fictional ACME training case, a local-history index has disappeared at Springdale. Carmen has moved on; The Duplicate stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Fayetteville.",
+          "suspect": {
+            "name": "Nell Carbon",
+            "alias": "The Duplicate",
+            "emoji": "📚",
+            "role": "Records forger switching exhibit and excursion labels",
+            "dossierNote": "A fictional ACME training suspect. Records forger switching exhibit and excursion labels. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The source note says Shiloh was an earlier community on the site of present-day Springdale.",
+          "The missing index belongs to a museum about Ozark history, not a baseball venue or a passenger railroad.",
+          "The witness saw the suspect waiting at the museum whose name and collections match both clues, holding the missing index. Witness identification: Archive assistant."
+        ],
+        "puzzle": {
+          "title": "The Earlier Name",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which institution combines the earlier community name with Ozark history?",
+          "options": [
+            "Arvest Ballpark",
+            "Shiloh Museum of Ozark History",
+            "Arkansas & Missouri Railroad",
+            "The Jones Center"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Match both the older name and the kind of collection.",
+            "Choose a history museum whose name repeats the earlier community name.",
+            "Answer: Shiloh Museum of Ozark History. Shiloh supplies the earlier community name, and the history collections supply the institution type. Together they identify the Shiloh Museum of Ozark History. Warrant: Shiloh Museum of Ozark History; disguise: Archive assistant."
+          ],
+          "explanation": "Shiloh supplies the earlier community name, and the history collections supply the institution type. Together they identify the Shiloh Museum of Ozark History. The warrant location is Shiloh Museum of Ozark History; the witness identifies the Archive assistant disguise."
+        },
+        "warrantAnswers": {
+          "city": "Springdale",
+          "hideout": "Shiloh Museum of Ozark History",
+          "disguise": "Archive assistant"
+        },
+        "funFact": "The Shiloh Museum’s name honors the community that preceded modern Springdale.",
+        "learningObjective": "Connect a museum name to local settlement history.",
+        "sources": [
+          "shiloh"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Washington County",
+          "Springdale"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "History of the Museum: Shiloh settlement and Ozark-history mission. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-railroad",
+        "briefing": {
+          "headline": "THE PASSENGER MANIFEST",
+          "report": "In this fictional ACME training case, an excursion manifest has disappeared at Springdale. Carmen has moved on; The Duplicate stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Fayetteville.",
+          "suspect": {
+            "name": "Nell Carbon",
+            "alias": "The Duplicate",
+            "emoji": "📚",
+            "role": "Records forger switching exhibit and excursion labels",
+            "dossierNote": "A fictional ACME training suspect. Records forger switching exhibit and excursion labels. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The real attraction uses restored passenger railcars for excursions through the Ozarks.",
+          "In the fictional manifest, red envelopes go to a museum, blue envelopes go to rail passengers, and green envelopes go to a ballpark.",
+          "The witness saw the suspect waiting at the Arkansas & Missouri Railroad in Springdale with a blue envelope and a carriage-seat list. Witness identification: Carriage attendant."
+        ],
+        "puzzle": {
+          "title": "The Passenger Manifest",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which activity fits both the blue envelope and passenger-seat list?",
+          "options": [
+            "Museum collection",
+            "Rail passenger excursion",
+            "Ballpark event",
+            "Mountain-bike time trial"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Use the envelope rule, then confirm it with the seat list.",
+            "The envelope rule and seating evidence should identify the same kind of transport.",
+            "Answer: Rail passenger excursion. Both the blue-envelope rule and the carriage-seat list point to a rail passenger excursion. The other categories fail the stated envelope assignment or transport evidence. Warrant: Arkansas & Missouri Railroad; disguise: Carriage attendant."
+          ],
+          "explanation": "Both the blue-envelope rule and the carriage-seat list point to a rail passenger excursion. The other categories fail the stated envelope assignment or transport evidence. The warrant location is Arkansas & Missouri Railroad; the witness identifies the Carriage attendant disguise."
+        },
+        "warrantAnswers": {
+          "city": "Springdale",
+          "hideout": "Arkansas & Missouri Railroad",
+          "disguise": "Carriage attendant"
+        },
+        "funFact": "The Arkansas & Missouri Railroad operates passenger excursions from Springdale.",
+        "learningObjective": "Combine a fictional dispatch rule with the purpose of a local attraction.",
+        "sources": [
+          "railroad"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Washington County",
+          "Springdale"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Railroad History: restored passenger cars and excursions from Springdale. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-ballpark",
+        "briefing": {
+          "headline": "THE MISSING INNING CARD",
+          "report": "In this fictional ACME training case, a baseball dispatch has disappeared at Springdale. Carmen has moved on; The Duplicate stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Fayetteville.",
+          "suspect": {
+            "name": "Nell Carbon",
+            "alias": "The Duplicate",
+            "emoji": "📚",
+            "role": "Records forger switching exhibit and excursion labels",
+            "dossierNote": "A fictional ACME training suspect. Records forger switching exhibit and excursion labels. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "ACME’s reference card identifies Arvest Ballpark as the Springdale home of the Northwest Arkansas Naturals.",
+          "The fictional scorebook labels innings 1 through 9. A courier’s card is two innings after inning 4 and one inning before inning 7.",
+          "The witness saw the suspect waiting at Arvest Ballpark with the numbered card. Solve the card, not a real game schedule. Witness identification: Scoreboard operator."
+        ],
+        "puzzle": {
+          "title": "The Missing Inning Card",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which inning card is two after 4 and one before 7?",
+          "options": [
+            "5",
+            "7",
+            "6",
+            "8"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Calculate forward from 4 and backward from 7.",
+            "Calculate 4 + 2 and 7 − 1 separately, then match their common result.",
+            "Answer: 6. Four plus two equals six, and seven minus one also equals six. Both clues identify card 6; 5, 7, and 8 cannot satisfy both. Warrant: Arvest Ballpark; disguise: Scoreboard operator."
+          ],
+          "explanation": "Four plus two equals six, and seven minus one also equals six. Both clues identify card 6; 5, 7, and 8 cannot satisfy both. The warrant location is Arvest Ballpark; the witness identifies the Scoreboard operator disguise."
+        },
+        "warrantAnswers": {
+          "city": "Springdale",
+          "hideout": "Arvest Ballpark",
+          "disguise": "Scoreboard operator"
+        },
+        "funFact": "The Northwest Arkansas Naturals play at Arvest Ballpark in Springdale.",
+        "learningObjective": "Reconcile two independent numerical clues.",
+        "sources": [
+          "naturals"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Washington County",
+          "Springdale"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Ballpark Guide: Naturals’ home and Springdale address; inning puzzle invented. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      }
+    ],
+    "nwa-fayetteville": [
+      {
+        "caseId": "nwa-old-main",
+        "briefing": {
+          "headline": "THE OLDER LANDMARK",
+          "report": "In this fictional ACME training case, a campus chronology has disappeared at Fayetteville. Carmen has moved on; The Footnote stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Siloam Springs.",
+          "suspect": {
+            "name": "Ada Margin",
+            "alias": "The Footnote",
+            "emoji": "🎓",
+            "role": "Campus courier rearranging names and dates",
+            "dossierNote": "A fictional ACME training suspect. Campus courier rearranging names and dates. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The university’s source card dates Old Main to 1875 and the first graduating class represented on Senior Walk to 1876.",
+          "The stolen chronology asks which of those two dates comes first and by how many years.",
+          "The suspect’s hideout is the building in the comparison, Old Main, rather than the campus walkway. Witness identification: Campus archivist."
+        ],
+        "puzzle": {
+          "title": "The Older Landmark",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which comes first, Old Main’s date or the first class represented on Senior Walk, and by how much?",
+          "options": [
+            "Senior Walk’s first class, by one year",
+            "Old Main, by one year",
+            "Old Main, by eleven years",
+            "The dates are the same"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Compare only the two dates actually stated.",
+            "Compare 1875 with 1876, then subtract the smaller year from the larger.",
+            "Answer: Old Main, by one year. 1875 comes before 1876, and 1876 minus 1875 equals one. The clue compares the building’s date with a graduating-class date; it does not date the construction of Senior Walk. Warrant: Old Main; disguise: Campus archivist."
+          ],
+          "explanation": "1875 comes before 1876, and 1876 minus 1875 equals one. The clue compares the building’s date with a graduating-class date; it does not date the construction of Senior Walk. The warrant location is Old Main; the witness identifies the Campus archivist disguise."
+        },
+        "warrantAnswers": {
+          "city": "Fayetteville",
+          "hideout": "Old Main",
+          "disguise": "Campus archivist"
+        },
+        "funFact": "Old Main dates to 1875; Senior Walk includes the names of the first graduating class of 1876.",
+        "learningObjective": "Compare historical dates without confusing a class date with a construction date.",
+        "sources": [
+          "campus"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Washington County",
+          "Fayetteville"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Visit & Explore: Old Main and Senior Walk sections; class date is not walkway construction date. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-senior-walk",
+        "briefing": {
+          "headline": "NAMES BENEATH THE COURIER",
+          "report": "In this fictional ACME training case, a graduation-name rubbing has disappeared at Fayetteville. Carmen has moved on; The Footnote stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Siloam Springs.",
+          "suspect": {
+            "name": "Ada Margin",
+            "alias": "The Footnote",
+            "emoji": "🎓",
+            "role": "Campus courier rearranging names and dates",
+            "dossierNote": "A fictional ACME training suspect. Campus courier rearranging names and dates. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The evidence is a rubbing of graduate names set into a campus walkway.",
+          "The university’s directory describes Senior Walk as graduate names, Old Main as a building, the Greek Theatre as a performance space, and the Peace Fountain as a memorial.",
+          "The witness saw the suspect waiting on the walkway bearing the graduate names, holding the rubbing. Witness identification: Graduation photographer."
+        ],
+        "puzzle": {
+          "title": "Names Beneath the Courier",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Where do the graduate-name rubbing and walkway evidence point?",
+          "options": [
+            "Old Main",
+            "Chi Omega Greek Theatre",
+            "Senior Walk",
+            "Fulbright Peace Fountain"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Use both what the marks say and where they are placed.",
+            "The surface carrying the names is the key distinction: choose a path rather than a building or fountain.",
+            "Answer: Senior Walk. The graduate names and the walkway surface both identify Senior Walk. The other places match a building, performance venue, or fountain rather than the named path. Warrant: Senior Walk; disguise: Graduation photographer."
+          ],
+          "explanation": "The graduate names and the walkway surface both identify Senior Walk. The other places match a building, performance venue, or fountain rather than the named path. The warrant location is Senior Walk; the witness identifies the Graduation photographer disguise."
+        },
+        "warrantAnswers": {
+          "city": "Fayetteville",
+          "hideout": "Senior Walk",
+          "disguise": "Graduation photographer"
+        },
+        "funFact": "Senior Walk records University of Arkansas graduates’ names across campus.",
+        "learningObjective": "Distinguish a campus tradition by its physical form and purpose.",
+        "sources": [
+          "campus"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Washington County",
+          "Fayetteville"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Visit & Explore: Senior Walk, Old Main, Greek Theatre and Fulbright fountain sections. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-greek-theatre",
+        "briefing": {
+          "headline": "THE STAGE DISPATCH",
+          "report": "In this fictional ACME training case, a performance dispatch has disappeared at Fayetteville. Carmen has moved on; The Footnote stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Siloam Springs.",
+          "suspect": {
+            "name": "Ada Margin",
+            "alias": "The Footnote",
+            "emoji": "🎓",
+            "role": "Campus courier rearranging names and dates",
+            "dossierNote": "A fictional ACME training suspect. Campus courier rearranging names and dates. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The reference sheet pairs Chi Omega Greek Theatre with performances and gatherings, Senior Walk with graduate names, and Old Main with classrooms.",
+          "The fictional courier order says: deliver where a performance can be staged; do not use the walkway or classroom building.",
+          "The witness saw the suspect waiting at the venue matching the performance order, carrying a stage cue sheet rather than a graduation list. Witness identification: Stage manager."
+        ],
+        "puzzle": {
+          "title": "The Stage Dispatch",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which campus destination fits the performance order and stage cue sheet?",
+          "options": [
+            "Senior Walk",
+            "Old Main",
+            "Fulbright Peace Fountain",
+            "Chi Omega Greek Theatre"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Find the performance space on the reference sheet.",
+            "Match the performance use to the reference sheet before considering the venue’s name.",
+            "Answer: Chi Omega Greek Theatre. The performance purpose and stage cue sheet identify Chi Omega Greek Theatre. The walkway and classroom building are explicitly excluded, and the fountain is not the performance venue on the reference sheet. Warrant: Chi Omega Greek Theatre; disguise: Stage manager."
+          ],
+          "explanation": "The performance purpose and stage cue sheet identify Chi Omega Greek Theatre. The walkway and classroom building are explicitly excluded, and the fountain is not the performance venue on the reference sheet. The warrant location is Chi Omega Greek Theatre; the witness identifies the Stage manager disguise."
+        },
+        "warrantAnswers": {
+          "city": "Fayetteville",
+          "hideout": "Chi Omega Greek Theatre",
+          "disguise": "Stage manager"
+        },
+        "funFact": "The University of Arkansas lists Chi Omega Greek Theatre as a place for concerts and rallies.",
+        "learningObjective": "Match a venue to a stated use rather than a familiar name.",
+        "sources": [
+          "campus"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Washington County",
+          "Fayetteville"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Visit & Explore: Greek Theatre concerts/rallies and campus comparison landmarks. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      }
+    ],
+    "nwa-siloam": [
+      {
+        "caseId": "nwa-sager",
+        "briefing": {
+          "headline": "THE DOWNTOWN WATERWAY",
+          "report": "In this fictional ACME training case, a creek-name label has disappeared at Siloam Springs. Carmen has moved on; The Watermark stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Bella Vista.",
+          "suspect": {
+            "name": "Milo Ripple",
+            "alias": "The Watermark",
+            "emoji": "💧",
+            "role": "Map courier swapping creek and river captions",
+            "dossierNote": "A fictional ACME training suspect. Map courier swapping creek and river captions. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The city’s history page names the waterway through downtown Siloam Springs as Sager Creek.",
+          "The missing label belongs to the downtown creek, not to the Illinois River kayak-park record or a regional lake.",
+          "The witness saw the suspect waiting beside the downtown creek named by the reference, holding the creekside-handoff sleeve. Witness identification: Creek surveyor."
+        ],
+        "puzzle": {
+          "title": "The Downtown Waterway",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which waterway belongs on the downtown Siloam Springs creek label?",
+          "options": [
+            "Illinois River",
+            "Beaver Lake",
+            "Sager Creek",
+            "Lake Atalanta"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Use the downtown qualifier.",
+            "Use the downtown creek reference, keeping it separate from the kayak park’s river.",
+            "Answer: Sager Creek. Sager Creek is the downtown waterway named in the source card. The Illinois River belongs to the different kayak-park record; the two lake names do not describe this creek. Warrant: Sager Creek downtown; disguise: Creek surveyor."
+          ],
+          "explanation": "Sager Creek is the downtown waterway named in the source card. The Illinois River belongs to the different kayak-park record; the two lake names do not describe this creek. The warrant location is Sager Creek downtown; the witness identifies the Creek surveyor disguise."
+        },
+        "warrantAnswers": {
+          "city": "Siloam Springs",
+          "hideout": "Sager Creek downtown",
+          "disguise": "Creek surveyor"
+        },
+        "funFact": "Sager Creek flows through downtown Siloam Springs.",
+        "learningObjective": "Keep a town’s creek distinct from a nearby recreation river.",
+        "sources": [
+          "sager",
+          "siloam"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Benton County",
+          "Siloam Springs"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "City History: downtown creek; Play: Kayak Park river comparison. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-kayak",
+        "briefing": {
+          "headline": "THE WRONG WATER CAPTION",
+          "report": "In this fictional ACME training case, a river-park caption has disappeared at Siloam Springs. Carmen has moved on; The Watermark stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Bella Vista.",
+          "suspect": {
+            "name": "Milo Ripple",
+            "alias": "The Watermark",
+            "emoji": "💧",
+            "role": "Map courier swapping creek and river captions",
+            "dossierNote": "A fictional ACME training suspect. Map courier swapping creek and river captions. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The regional reference identifies Siloam Springs Kayak Park with the Illinois River.",
+          "The fictional editor must keep both the activity and waterway correct: paddling on the Illinois River, not a downtown Sager Creek label.",
+          "The suspect has a paddle-shaped luggage tag and is hiding at Siloam Springs Kayak Park. Witness identification: Paddling instructor."
+        ],
+        "puzzle": {
+          "title": "The Wrong Water Caption",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which activity-and-waterway caption fits Siloam Springs Kayak Park?",
+          "options": [
+            "Downtown creek / Sager Creek",
+            "Paddling park / Illinois River",
+            "Museum / Beaver Lake",
+            "Rail excursion / Illinois River"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "A correct river name alone is not enough.",
+            "Both halves must match. A correct river paired with an unrelated activity still fails.",
+            "Answer: Paddling park / Illinois River. Only the paddling-park and Illinois River pair preserves both facts. The downtown-creek caption describes another place, and the remaining options change the activity. Warrant: Siloam Springs Kayak Park; disguise: Paddling instructor."
+          ],
+          "explanation": "Only the paddling-park and Illinois River pair preserves both facts. The downtown-creek caption describes another place, and the remaining options change the activity. The warrant location is Siloam Springs Kayak Park; the witness identifies the Paddling instructor disguise."
+        },
+        "warrantAnswers": {
+          "city": "Siloam Springs",
+          "hideout": "Siloam Springs Kayak Park",
+          "disguise": "Paddling instructor"
+        },
+        "funFact": "Siloam Springs Kayak Park is on the Illinois River.",
+        "learningObjective": "Check both halves of a place-and-waterway caption.",
+        "sources": [
+          "siloam",
+          "sager"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Benton County",
+          "Siloam Springs"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Play: Kayak Park section; City History: downtown Sager Creek comparison. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-museum",
+        "briefing": {
+          "headline": "THE LOCAL ARCHIVE SEQUENCE",
+          "report": "In this fictional ACME training case, a town-history folder has disappeared at Siloam Springs. Carmen has moved on; The Watermark stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Bella Vista.",
+          "suspect": {
+            "name": "Milo Ripple",
+            "alias": "The Watermark",
+            "emoji": "💧",
+            "role": "Map courier swapping creek and river captions",
+            "dossierNote": "A fictional ACME training suspect. Map courier swapping creek and river captions. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The Siloam Springs Museum preserves local history. The suspect’s three fictional folders are Arrival, Interview, and Filing.",
+          "The interview must happen after arrival and before filing. The sealed dispatch is in the middle folder.",
+          "The suspect is waiting at the Siloam Springs Museum with the correctly ordered folder stack. Witness identification: Oral-history recorder."
+        ],
+        "puzzle": {
+          "title": "The Local Archive Sequence",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which folder is in the middle of the required sequence?",
+          "options": [
+            "Arrival",
+            "Filing",
+            "Interview",
+            "None of the folders"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Write the required order in words.",
+            "Put Arrival first and Filing last; use the remaining folder between them.",
+            "Answer: Interview. The only order satisfying both relationships is Arrival, Interview, Filing. Interview is therefore the middle folder. These are fictional archive steps, not a museum procedure. Warrant: Siloam Springs Museum; disguise: Oral-history recorder."
+          ],
+          "explanation": "The only order satisfying both relationships is Arrival, Interview, Filing. Interview is therefore the middle folder. These are fictional archive steps, not a museum procedure. The warrant location is Siloam Springs Museum; the witness identifies the Oral-history recorder disguise."
+        },
+        "warrantAnswers": {
+          "city": "Siloam Springs",
+          "hideout": "Siloam Springs Museum",
+          "disguise": "Oral-history recorder"
+        },
+        "funFact": "The Siloam Springs Museum focuses on the area’s local heritage.",
+        "learningObjective": "Resolve a three-step sequence from before-and-after constraints.",
+        "sources": [
+          "siloam"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Benton County",
+          "Siloam Springs"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Play: Siloam Springs Museum local-heritage mission; folder order invented. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      }
+    ],
+    "nwa-bella-vista": [
+      {
+        "caseId": "nwa-cooper",
+        "briefing": {
+          "headline": "ARCHES IN THE TREES",
+          "report": "In this fictional ACME training case, a chapel photograph label has disappeared at Bella Vista. Carmen has moved on; The Silhouette stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Pea Ridge National Military Park.",
+          "suspect": {
+            "name": "Cora Canopy",
+            "alias": "The Silhouette",
+            "emoji": "🌲",
+            "role": "Photograph courier replacing landmark captions",
+            "dossierNote": "A fictional ACME training suspect. Photograph courier replacing landmark captions. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The location is Bella Vista. The photographed chapel uses repeated Gothic arches formed from steel and extensive glass.",
+          "ACME’s reference identifies that Bella Vista building as Mildred B. Cooper Memorial Chapel; Thorncrown Chapel is the Eureka Springs entry.",
+          "The witness saw the suspect waiting at the chapel matching both the town and steel-arch description, trying to substitute the other town’s caption. Witness identification: Architecture photographer."
+        ],
+        "puzzle": {
+          "title": "Arches in the Trees",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which chapel matches Bella Vista and the steel-arch description?",
+          "options": [
+            "Thorncrown Chapel",
+            "Mildred B. Cooper Memorial Chapel",
+            "Old Main",
+            "The Momentary"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Keep the town attached to the building.",
+            "Check the town as well as the building type; the two chapels have different locations.",
+            "Answer: Mildred B. Cooper Memorial Chapel. The Bella Vista location and steel-arch description select Cooper Chapel. Thorncrown is the tempting chapel distractor, but its reference entry names a different town. Warrant: Mildred B. Cooper Memorial Chapel; disguise: Architecture photographer."
+          ],
+          "explanation": "The Bella Vista location and steel-arch description select Cooper Chapel. Thorncrown is the tempting chapel distractor, but its reference entry names a different town. The warrant location is Mildred B. Cooper Memorial Chapel; the witness identifies the Architecture photographer disguise."
+        },
+        "warrantAnswers": {
+          "city": "Bella Vista",
+          "hideout": "Mildred B. Cooper Memorial Chapel",
+          "disguise": "Architecture photographer"
+        },
+        "funFact": "Cooper Chapel in Bella Vista combines steel Gothic arches with glass.",
+        "learningObjective": "Distinguish two regional chapels by town and architectural evidence.",
+        "sources": [
+          "cooper",
+          "cooper_architecture"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Benton County",
+          "Bella Vista"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Chapel and Architecture: steel arches/glass and Bella Vista–Eureka Springs distinction. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-bella-museum",
+        "briefing": {
+          "headline": "RESORT BEFORE VILLAGE",
+          "report": "In this fictional ACME training case, a local-history timeline has disappeared at Bella Vista. Carmen has moved on; The Silhouette stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Pea Ridge National Military Park.",
+          "suspect": {
+            "name": "Cora Canopy",
+            "alias": "The Silhouette",
+            "emoji": "🌲",
+            "role": "Photograph courier replacing landmark captions",
+            "dossierNote": "A fictional ACME training suspect. Photograph courier replacing landmark captions. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The museum’s history summary includes a summer resort opening in 1917 and the beginnings of Bella Vista Village in the 1960s.",
+          "The fictional folder key assigns R to the resort chapter and V to the village chapter. The courier must sort earlier before later.",
+          "The suspect is at the Bella Vista Historical Museum with the reversed stack. Witness identification: Exhibit researcher."
+        ],
+        "puzzle": {
+          "title": "Resort Before Village",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "In what order should the resort and village folders be filed?",
+          "options": [
+            "V, then R",
+            "Both began in 1917",
+            "R, then V",
+            "Both began in the 1960s"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Compare the century’s earlier year with its later decade.",
+            "Translate R and V back to their dates, then place the earlier event first.",
+            "Answer: R, then V. 1917 precedes the 1960s, so the resort chapter R must precede the village chapter V. The two dates do not describe one simultaneous event. Warrant: Bella Vista Historical Museum; disguise: Exhibit researcher."
+          ],
+          "explanation": "1917 precedes the 1960s, so the resort chapter R must precede the village chapter V. The two dates do not describe one simultaneous event. The warrant location is Bella Vista Historical Museum; the witness identifies the Exhibit researcher disguise."
+        },
+        "warrantAnswers": {
+          "city": "Bella Vista",
+          "hideout": "Bella Vista Historical Museum",
+          "disguise": "Exhibit researcher"
+        },
+        "funFact": "Bella Vista’s museum traces the community’s resort era and later village development.",
+        "learningObjective": "Put two local-history eras in order without collapsing them together.",
+        "sources": [
+          "bella_museum"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Benton County",
+          "Bella Vista"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Museum attraction listing: resort opening in 1917 and village beginnings in the 1960s only. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-blowing-springs",
+        "briefing": {
+          "headline": "THE CAMP RECEIPT",
+          "report": "In this fictional ACME training case, a campground dispatch has disappeared at Bella Vista. Carmen has moved on; The Silhouette stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Pea Ridge National Military Park.",
+          "suspect": {
+            "name": "Cora Canopy",
+            "alias": "The Silhouette",
+            "emoji": "🌲",
+            "role": "Photograph courier replacing landmark captions",
+            "dossierNote": "A fictional ACME training suspect. Photograph courier replacing landmark captions. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The Bella Vista visitor reference lists Blowing Springs Park as a campground and trail destination.",
+          "In this fictional exercise, chapel receipts say ceremony, museum receipts say exhibit, and campground receipts say tent. This receipt says tent.",
+          "The witness saw the suspect waiting at the destination matching both the tent receipt and trail setting, holding its trail map. Witness identification: Camp host."
+        ],
+        "puzzle": {
+          "title": "The Camp Receipt",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which destination matches both the tent receipt and trail setting?",
+          "options": [
+            "Mildred B. Cooper Memorial Chapel",
+            "Bella Vista Historical Museum",
+            "Wishing Spring Gallery",
+            "Blowing Springs Park"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Decode the receipt, then match the category.",
+            "The receipt selects a campground; confirm that the reference also connects it with trails.",
+            "Answer: Blowing Springs Park. The tent code identifies the campground category, and the trail map supports Blowing Springs Park. The other listed destinations fit chapel, museum, or gallery records. Warrant: Blowing Springs Park; disguise: Camp host."
+          ],
+          "explanation": "The tent code identifies the campground category, and the trail map supports Blowing Springs Park. The other listed destinations fit chapel, museum, or gallery records. The warrant location is Blowing Springs Park; the witness identifies the Camp host disguise."
+        },
+        "warrantAnswers": {
+          "city": "Bella Vista",
+          "hideout": "Blowing Springs Park",
+          "disguise": "Camp host"
+        },
+        "funFact": "Blowing Springs Park combines camping and trails in Bella Vista.",
+        "learningObjective": "Combine a category code with a local destination description.",
+        "sources": [
+          "bella"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Benton County",
+          "Bella Vista"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Visitor FAQ: Blowing Springs camping and trail references only. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      }
+    ],
+    "nwa-pea-ridge": [
+      {
+        "caseId": "nwa-elkhorn",
+        "briefing": {
+          "headline": "ORIGINAL OR RECONSTRUCTION?",
+          "report": "In this fictional ACME training case, an interpretation card has disappeared at Pea Ridge National Military Park. Carmen has moved on; The Misprint stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Eureka Springs.",
+          "suspect": {
+            "name": "Ellis Folio",
+            "alias": "The Misprint",
+            "emoji": "🗂️",
+            "role": "Training-archive courier confusing originals and reconstructions",
+            "dossierNote": "A fictional ACME training suspect. Training-archive courier confusing originals and reconstructions. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The National Park Service describes the present Elkhorn Tavern as reconstructed from 1880s photographs, retaining the original south fireplace and foundations.",
+          "The fictional archive has categories for an untouched original, a reconstruction, a modern photograph, and a fictional building.",
+          "The missing card classifies the present building. The witness saw the suspect waiting at Elkhorn Tavern with that card. Witness identification: Interpretation volunteer."
+        ],
+        "puzzle": {
+          "title": "Original or Reconstruction?",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which archive category fits the present Elkhorn Tavern?",
+          "options": [
+            "Untouched original",
+            "Modern photograph",
+            "Reconstruction",
+            "Fictional building"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Classify the building, not the evidence used to recreate it.",
+            "Using older photos to recreate a building differs from preserving it untouched; some original material can remain.",
+            "Answer: Reconstruction. Reconstruction fits a building recreated from historical photographs. Retained original material does not make the whole building untouched; a building is not a photograph or an invented place. Warrant: Elkhorn Tavern; disguise: Interpretation volunteer."
+          ],
+          "explanation": "Reconstruction fits a building recreated from historical photographs. Retained original material does not make the whole building untouched; a building is not a photograph or an invented place. The warrant location is Elkhorn Tavern; the witness identifies the Interpretation volunteer disguise."
+        },
+        "warrantAnswers": {
+          "city": "Pea Ridge National Military Park",
+          "hideout": "Elkhorn Tavern",
+          "disguise": "Interpretation volunteer"
+        },
+        "funFact": "Elkhorn Tavern was reconstructed using historical photographs and retains its original south fireplace and foundations.",
+        "learningObjective": "Distinguish a reconstructed historic structure from an original.",
+        "sources": [
+          "elkhorn"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Benton County",
+          "Pea Ridge National Military Park"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Elkhorn Tavern tour stop: reconstruction from 1880s photos with original fireplace/foundations retained. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-overlook",
+        "briefing": {
+          "headline": "THE VIEWPOINT INDEX",
+          "report": "In this fictional ACME training case, a viewpoint caption has disappeared at Pea Ridge National Military Park. Carmen has moved on; The Misprint stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Eureka Springs.",
+          "suspect": {
+            "name": "Ellis Folio",
+            "alias": "The Misprint",
+            "emoji": "🗂️",
+            "role": "Training-archive courier confusing originals and reconstructions",
+            "dossierNote": "A fictional ACME training suspect. Training-archive courier confusing originals and reconstructions. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "ACME’s fictional site index assigns E to East Overlook, T to Elkhorn Tavern, W to Williams Hollow Trail, and V to Visitor Center.",
+          "The recovered note requests the site coded E, and describes a viewpoint rather than a building or trail loop.",
+          "The witness saw the suspect waiting at the viewpoint matching the note. The letters are an exercise key, not trail signage. Witness identification: Landscape photographer."
+        ],
+        "puzzle": {
+          "title": "The Viewpoint Index",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which site matches code E and the viewpoint description?",
+          "options": [
+            "Elkhorn Tavern",
+            "East Overlook",
+            "Williams Hollow Trail",
+            "Visitor Center"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Match the letter and the viewpoint description.",
+            "Decode E with the exercise index, then check that the result is a viewpoint.",
+            "Answer: East Overlook. E maps to East Overlook, and the viewpoint description agrees. The other letters identify the tavern, trail, and visitor center. Warrant: East Overlook; disguise: Landscape photographer."
+          ],
+          "explanation": "E maps to East Overlook, and the viewpoint description agrees. The other letters identify the tavern, trail, and visitor center. The warrant location is East Overlook; the witness identifies the Landscape photographer disguise."
+        },
+        "warrantAnswers": {
+          "city": "Pea Ridge National Military Park",
+          "hideout": "East Overlook",
+          "disguise": "Landscape photographer"
+        },
+        "funFact": "East Overlook is a named tour stop at Pea Ridge National Military Park.",
+        "learningObjective": "Cross-check a fictional index code against the type of place.",
+        "sources": [
+          "overlook"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Benton County",
+          "Pea Ridge National Military Park"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "East Overlook tour-stop page: site identity only; letter key invented. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-williams",
+        "briefing": {
+          "headline": "THE LOOP’S RETURN",
+          "report": "In this fictional ACME training case, a hiking interpretation sheet has disappeared at Pea Ridge National Military Park. Carmen has moved on; The Misprint stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The next recovered dispatch points to Eureka Springs.",
+          "suspect": {
+            "name": "Ellis Folio",
+            "alias": "The Misprint",
+            "emoji": "🗂️",
+            "role": "Training-archive courier confusing originals and reconstructions",
+            "dossierNote": "A fictional ACME training suspect. Training-archive courier confusing originals and reconstructions. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The National Park Service’s Williams Hollow loop description returns hikers to Elkhorn Tavern.",
+          "On ACME’s fictional paper diagram, a loop starts at Tavern, visits Hollow, and must finish where it began. Another arrow to Visitor Center is a decoy.",
+          "The suspect is holding the altered diagram at Williams Hollow Trail. The question asks the loop’s finish, not the suspect’s hideout. Witness identification: Trail interpreter."
+        ],
+        "puzzle": {
+          "title": "The Loop’s Return",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Where must the fictional loop finish?",
+          "options": [
+            "Hollow",
+            "Visitor Center",
+            "Tavern",
+            "A new starting point"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "A loop closes at the node where it began.",
+            "A loop returns to its starting node. The suspect’s location is a separate question.",
+            "Answer: Tavern. The loop must end at its starting node, Tavern. Hollow is an intermediate node; the visitor-center arrow and a new starting point fail the return rule. The diagram is not a navigation map. Warrant: Williams Hollow Trail; disguise: Trail interpreter."
+          ],
+          "explanation": "The loop must end at its starting node, Tavern. Hollow is an intermediate node; the visitor-center arrow and a new starting point fail the return rule. The diagram is not a navigation map. The warrant location is Williams Hollow Trail; the witness identifies the Trail interpreter disguise."
+        },
+        "warrantAnswers": {
+          "city": "Pea Ridge National Military Park",
+          "hideout": "Williams Hollow Trail",
+          "disguise": "Trail interpreter"
+        },
+        "funFact": "The NPS describes a Williams Hollow hiking loop that returns to Elkhorn Tavern.",
+        "learningObjective": "Separate a loop’s destination from a suspect’s stated location.",
+        "sources": [
+          "williams"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Benton County",
+          "Pea Ridge National Military Park"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Williams Hollow Loop Hike: start and return at Elkhorn Tavern; diagram invented. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      }
+    ],
+    "nwa-eureka": [
+      {
+        "caseId": "nwa-thorncrown",
+        "briefing": {
+          "headline": "THE GLASS-AND-WOOD FILE",
+          "report": "In this fictional ACME training case, an architecture dispatch has disappeared at Eureka Springs. Carmen has moved on; The Reflection stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The recovered archive is ready for your closing report at ACME headquarters.",
+          "suspect": {
+            "name": "June Facet",
+            "alias": "The Reflection",
+            "emoji": "🔎",
+            "role": "Photo courier switching architectural and park subjects",
+            "dossierNote": "A fictional ACME training suspect. Photo courier switching architectural and park subjects. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The architecture card names E. Fay Jones and Thorncrown Chapel, in the Eureka Springs area.",
+          "The source describes a woodland chapel with extensive glass. The rival files concern a downtown spring park, a lake park, and a university building.",
+          "The witness saw the suspect waiting at the chapel matching the architecture card, holding a chapel elevation drawing rather than a park plan. Witness identification: Architectural drafter."
+        ],
+        "puzzle": {
+          "title": "The Glass-and-Wood File",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which destination matches the architect, chapel drawing, and woodland setting?",
+          "options": [
+            "Basin Spring Park",
+            "Lake Leatherwood City Park",
+            "Old Main",
+            "Thorncrown Chapel"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Choose the chapel file, then confirm the architect.",
+            "Match the chapel type and named architect; a park plan or campus building will not fit both.",
+            "Answer: Thorncrown Chapel. The named architect, chapel subject, and elevation drawing all support Thorncrown Chapel. The park and university files do not fit the combined evidence. Warrant: Thorncrown Chapel; disguise: Architectural drafter."
+          ],
+          "explanation": "The named architect, chapel subject, and elevation drawing all support Thorncrown Chapel. The park and university files do not fit the combined evidence. The warrant location is Thorncrown Chapel; the witness identifies the Architectural drafter disguise."
+        },
+        "warrantAnswers": {
+          "city": "Eureka Springs",
+          "hideout": "Thorncrown Chapel",
+          "disguise": "Architectural drafter"
+        },
+        "funFact": "E. Fay Jones designed Thorncrown Chapel near Eureka Springs.",
+        "learningObjective": "Identify an architectural subject using creator, place, and document type.",
+        "sources": [
+          "thorncrown",
+          "cooper_architecture",
+          "eureka",
+          "campus"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Carroll County",
+          "Eureka Springs"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Architecture: Jones and woodland glass chapel; companion sources cover location and comparison landmarks. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-basin",
+        "briefing": {
+          "headline": "THE DOWNTOWN PHOTO CROP",
+          "report": "In this fictional ACME training case, a park-photo caption has disappeared at Eureka Springs. Carmen has moved on; The Reflection stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The recovered archive is ready for your closing report at ACME headquarters.",
+          "suspect": {
+            "name": "June Facet",
+            "alias": "The Reflection",
+            "emoji": "🔎",
+            "role": "Photo courier switching architectural and park subjects",
+            "dossierNote": "A fictional ACME training suspect. Photo courier switching architectural and park subjects. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The tourism reference places Basin Spring Park in downtown Eureka Springs and describes a Humpty Dumpty figure on a stone wall.",
+          "The stolen crop shows the wall figure; the dispatch specifically asks for the downtown park, not a chapel or lake setting.",
+          "The witness saw the suspect waiting at the downtown park matching the wall figure, carrying an egg-shaped prop badge and caption notebook. Witness identification: Postcard photographer."
+        ],
+        "puzzle": {
+          "title": "The Downtown Photo Crop",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which downtown park matches the wall-figure photograph?",
+          "options": [
+            "Lake Leatherwood City Park",
+            "Basin Spring Park",
+            "Thorncrown Chapel",
+            "Mildred B. Cooper Memorial Chapel"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "The character detail must match the downtown setting.",
+            "Keep both the downtown setting and wall figure; the lake and chapel categories do not fit.",
+            "Answer: Basin Spring Park. The downtown setting and Humpty Dumpty wall figure together identify Basin Spring Park. The lake and chapel choices do not match that reference description. Warrant: Basin Spring Park; disguise: Postcard photographer."
+          ],
+          "explanation": "The downtown setting and Humpty Dumpty wall figure together identify Basin Spring Park. The lake and chapel choices do not match that reference description. The warrant location is Basin Spring Park; the witness identifies the Postcard photographer disguise."
+        },
+        "warrantAnswers": {
+          "city": "Eureka Springs",
+          "hideout": "Basin Spring Park",
+          "disguise": "Postcard photographer"
+        },
+        "funFact": "Basin Spring Park is a downtown Eureka Springs landmark.",
+        "learningObjective": "Use an unusual detail and a setting together to identify a landmark.",
+        "sources": [
+          "eureka"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Carroll County",
+          "Eureka Springs"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Photo-landmarks article: Basin Spring Park and Humpty Dumpty section. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      },
+      {
+        "caseId": "nwa-leatherwood",
+        "briefing": {
+          "headline": "THE LAKE FILE CHECKSUM",
+          "report": "In this fictional ACME training case, a park dispatch number has disappeared at Eureka Springs. Carmen has moved on; The Reflection stayed behind. Recover the dispatch by comparing the evidence. All thefts, suspects, codes, logs, and timed appointments are invented.",
+          "callingCard": "A red card reads: \"A familiar name is only the beginning. Make the evidence agree.\"",
+          "nextLead": "The recovered archive is ready for your closing report at ACME headquarters.",
+          "suspect": {
+            "name": "June Facet",
+            "alias": "The Reflection",
+            "emoji": "🔎",
+            "role": "Photo courier switching architectural and park subjects",
+            "dossierNote": "A fictional ACME training suspect. Photo courier switching architectural and park subjects. Leaves misleading labels but consistent witness records."
+          }
+        },
+        "clues": [
+          "The suspect’s file is labeled Lake Leatherwood City Park. Four fictional dispatch cards carry numbers 14, 18, 21, and 24.",
+          "The correct number is divisible by both 3 and 4 and is greater than 20.",
+          "The suspect is at Lake Leatherwood City Park. The numbers are archive codes, not trail distances or park measurements. Witness identification: Park naturalist."
+        ],
+        "puzzle": {
+          "title": "The Lake File Checksum",
+          "description": "Use the three written clues. Any numbered records, schedules, or diagram rules belong only to this fictional exercise.",
+          "question": "Which dispatch number is above 20 and divisible by both 3 and 4?",
+          "options": [
+            "18",
+            "24",
+            "14",
+            "21"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Start by ruling out numbers at or below 20.",
+            "After applying the lower bound, check whether each remaining number divides by 4 without a remainder.",
+            "Answer: 24. 24 is greater than 20 and divides evenly by both 3 and 4. Eighteen fails the size and divide-by-4 rules; 14 fails both divisibility rules; 21 fails divide-by-4. Warrant: Lake Leatherwood City Park; disguise: Park naturalist."
+          ],
+          "explanation": "24 is greater than 20 and divides evenly by both 3 and 4. Eighteen fails the size and divide-by-4 rules; 14 fails both divisibility rules; 21 fails divide-by-4. The warrant location is Lake Leatherwood City Park; the witness identifies the Park naturalist disguise."
+        },
+        "warrantAnswers": {
+          "city": "Eureka Springs",
+          "hideout": "Lake Leatherwood City Park",
+          "disguise": "Park naturalist"
+        },
+        "funFact": "Lake Leatherwood City Park is one of Eureka Springs’ outdoor destinations.",
+        "learningObjective": "Apply multiple numerical constraints to a fictional archive code.",
+        "sources": [
+          "eureka"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Northwest Arkansas",
+          "Carroll County",
+          "Eureka Springs"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All evidence, rules, and choices are written text. No image, color distinction, map interaction, or prior local knowledge is needed.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-13",
+          "notes": "Photo-landmarks article: Lake Leatherwood City Park identity only; numerical codes invented. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+        }
+      }
+    ]
+  },
+  "sources": {
+    "crystal": {
+      "title": "Architecture",
+      "publisher": "Crystal Bridges Museum of American Art",
+      "url": "https://crystalbridges.org/architecture",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "momentary": {
+      "title": "About the Momentary",
+      "publisher": "The Momentary",
+      "url": "https://themomentary.org/about/",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "compton": {
+      "title": "Compton Gardens & Arboretum",
+      "publisher": "Peel Compton Foundation",
+      "url": "https://peelcompton.org/compton-gardens-arboretum/visit-us/",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "daisy": {
+      "title": "The Daisy Story",
+      "publisher": "The Rogers Daisy Airgun Museum",
+      "url": "https://daisymuseum.com/history/",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "railyard": {
+      "title": "Rogers’ Premier Bike Park — The Railyard",
+      "publisher": "Destination Rogers",
+      "url": "https://www.destinationrogers.com/uncategorized/rogers-premier-bike-park-railyard/",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "shiloh": {
+      "title": "History of the Museum",
+      "publisher": "Shiloh Museum of Ozark History",
+      "url": "https://shilohmuseum.org/history-of-the-museum/",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "campus": {
+      "title": "Visit & Explore",
+      "publisher": "University of Arkansas",
+      "url": "https://www.uark.edu/about/explore.php",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "sager": {
+      "title": "History of Siloam Springs",
+      "publisher": "City of Siloam Springs",
+      "url": "https://www.siloamsprings.gov/211/History",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "siloam": {
+      "title": "Play in Siloam Springs",
+      "publisher": "Discover Siloam Springs",
+      "url": "https://discoversiloam.com/play/",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "cooper": {
+      "title": "The Chapel",
+      "publisher": "Mildred B. Cooper Memorial Chapel",
+      "url": "https://www.cooperchapel.com/chapel",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "bella_museum": {
+      "title": "Bella Vista Historical Museum",
+      "publisher": "Discover Bella Vista",
+      "url": "https://www.discoverbellavistaar.com/attractions/bella-vista-museum",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "bella": {
+      "title": "Bella Vista visitor FAQ",
+      "publisher": "Discover Bella Vista",
+      "url": "https://www.discoverbellavistaar.com/faq",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "elkhorn": {
+      "title": "Stop 8: Elkhorn Tavern",
+      "publisher": "National Park Service",
+      "url": "https://www.nps.gov/peri/planyourvisit/stop-7-elkhorn-tavern.htm",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "overlook": {
+      "title": "Stop 7: East Overlook — Day 2",
+      "publisher": "National Park Service",
+      "url": "https://www.nps.gov/peri/planyourvisit/stop-7-east-overlook-day-2.htm",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "williams": {
+      "title": "Williams Hollow Loop Hike",
+      "publisher": "National Park Service",
+      "url": "https://www.nps.gov/thingstodo/williams-hollow-loop-hike.htm",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "thorncrown": {
+      "title": "Thorncrown Architecture",
+      "publisher": "Thorncrown Chapel",
+      "url": "https://www.thorncrown.com/architecture",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "eureka": {
+      "title": "Eureka Springs Photo Landmarks",
+      "publisher": "Visit Eureka Springs",
+      "url": "https://www.visiteurekasprings.com/13-must-post-instagrammable-spots-in-eureka-springs/",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "railroad": {
+      "title": "Railroad History",
+      "publisher": "Arkansas & Missouri Railroad",
+      "url": "https://www.amrailroad.com/about/railroad-history",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "naturals": {
+      "title": "Arvest Ballpark Guide",
+      "publisher": "Northwest Arkansas Naturals / MiLB",
+      "url": "https://www.milb.com/northwest-arkansas/ballpark/ballpark-guide",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "cooper_architecture": {
+      "title": "Architecture",
+      "publisher": "Mildred B. Cooper Memorial Chapel",
+      "url": "https://www.cooperchapel.com/architecture",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "walmart": {
+      "title": "Walmart Museum history mission (2022 announcement)",
+      "publisher": "Walmart",
+      "url": "https://corporate.walmart.com/news/2022/10/07/the-walmart-museum-undergoes-renovation-moves-to-temporary-new-space",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    },
+    "railyard_stage": {
+      "title": "Railyard Park",
+      "publisher": "Destination Rogers",
+      "url": "https://www.destinationrogers.com/listings/railyard-park/907/",
+      "reviewed": true,
+      "reviewScope": "Only the case-specific claims and passage locators recorded in reviewEvidence; not the whole page, current conditions, access, operating hours, maps, or route suitability."
+    }
+  }
+}

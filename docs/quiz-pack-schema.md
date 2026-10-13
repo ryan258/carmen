@@ -10,7 +10,7 @@ The executable contracts are `CarmenCore.validateManifest` and `CarmenCore.valid
 - Nonempty `id`, `title`, `subtitle`, `heroLocation`, `intro`, `evidenceLabel`, and `successMessage`.
 - `map.center.lat/lng` in geographic bounds; finite `minZoom ≤ zoom ≤ maxZoom`, between 0 and 20. Tile URL/attribution live in `map-config.js`.
 - `locations`: ordered array, at least 4 and at most 100. Every location has unique `id`, `name`, `province`, `emoji`, numeric `lat/lng`, a canonical `henchman` (`name`, `alias`, `emoji`, `role`, `dossierNote`), and `token: {name, char}`. Token names must be unique in the pack.
-- `questions`: exactly one nonempty array per location ID. Existing packs contain five cases per stop; the runtime contract does not require padding new content with weak variants.
+- `questions`: exactly one nonempty array per location ID. The original packs contain five cases per stop and the two NWA packs contain three; the runtime contract does not require padding new content with weak variants.
 - `sources`: registry keyed by source ID, with `title`, `publisher`, HTTPS `url`, and boolean `reviewed`.
 - `finalConfrontation.title` and exactly three structurally valid report descriptors in `rounds`. The live questions come from `CarmenCore.finalRounds`: selected first-case evidence, selected middle-case evidence, and the last completed stop's token. The resolver supplies all written instructions and is also used by save validation. Descriptors do not introduce independent facts or override this shared engine. Editorial evidence comes from the selected cases.
 
@@ -22,7 +22,7 @@ Every case has a pack-unique `caseId`; `briefing` with `headline`, `report`, `ca
 
 `warrantAnswers.city` equals the parent location name. The disguise and hideout must be recoverable from the evidence. Use one canonical label for equivalent sites within a stop; the same place must not appear under competing names in warrant choices. The UI prefills the established location and offers only current-stop hideouts/disguises. The calling card and decorative visual should not simply print the answer. Keep essential instructions visible as text; do not hide textual evidence behind `role="img"`.
 
-Required metadata: `learningObjective`, source IDs, `difficulty` (`rookie`, `detective`, `inspector`), `mechanic: "deduction-choice"` (the current engine contract), nonempty `regionTags`, `visualType`, `accessibilityDescription`, and `reviewStatus`. The difficulty metadata is descriptive; runtime difficulty does not filter the pool. Optional `puzzle.hints` is an array of nonempty text strings. Both current packs author three: a reasoning nudge, a stronger step, and a worked answer. New cases should do the same.
+Required metadata: `learningObjective`, source IDs, `difficulty` (`rookie`, `detective`, `inspector`), `mechanic: "deduction-choice"` (the current engine contract), nonempty `regionTags`, `visualType`, `accessibilityDescription`, and `reviewStatus`. The difficulty metadata is descriptive; runtime difficulty does not filter the pool. Optional `puzzle.hints` is an array of nonempty text strings. All current packs author three: a reasoning nudge, a stronger step, and a worked answer. New cases should do the same.
 
 Use `reviewStatus: "source-linked-needs-line-review"` until editorial work is complete. To mark `reviewed`, also record:
 
@@ -38,7 +38,7 @@ Use `reviewStatus: "source-linked-needs-line-review"` until editorial work is co
 
 The loader, UI and content checker share the same evidence predicate: actual calendar date, nonempty reviewer and notes, and reviewed source entries. Setting reviewed without that evidence fails the structural contract. The optional sharing gate additionally requires every case to be reviewed. Do not replace a review with a boolean or infer review from structural checks.
 
-The current [eight-case exemplar](reviewed-exemplar.md) shows scoped primary-source IDs, claim-specific notes and explicit AI-assisted reviewer attribution. A source's reviewed flag covers the cited claims; it does not review every passage on that page or automatically review other cases. A metadata-valid review is not human acceptance or proof of learning. Both packs now use contentVersion 4 for rewritten answers; schema 5 saves from contentVersion 3 are incompatible. Keep the companion guide synchronized when editing these cases.
+The current [eight-case exemplar](reviewed-exemplar.md) shows scoped primary-source IDs, claim-specific notes and explicit AI-assisted reviewer attribution. A source's reviewed flag covers the cited claims; it does not review every passage on that page or automatically review other cases. A metadata-valid review is not human acceptance or proof of learning. Bentonville and Argentina use contentVersion 4 for rewritten answers; schema 5 saves from contentVersion 3 are incompatible. Keep the companion guide synchronized when editing these cases. Northwest Arkansas and NWA Mountain Biking use contentVersion 2 after review of all 48 cases; their version 1 saves are incompatible with the revised warrant/evidence semantics. The [NWA ledger](content-audit.md) records the AI-assisted review and its limits.
 
 ## HTML and compatibility
 

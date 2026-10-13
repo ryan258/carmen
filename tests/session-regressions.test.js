@@ -52,10 +52,11 @@ test('records recover from malformed storage and separate route lengths',()=>{
   g.run("state.stopCount=4;state.caseSeed='four-new'");assert.equal(g.run("saveHighScore(120,'Rank').previousBest"),100);
 });
 
-test('both packs complete 4/6/8-stop runs and start again with correct controls',()=>{
+test('all manifest packs complete 4/6/8-stop runs and start again with correct controls',()=>{
   const fs=require('node:fs');const path=require('node:path');
-  for(const packName of ['bentonville','argentina']) for(const count of [4,6,8]) {
-    const g=createGame();g.context.testPack=JSON.parse(fs.readFileSync(path.join(__dirname,`../data/packs/${packName}.json`),'utf8'));
+  const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/quiz-packs.json'),'utf8'));
+  for(const entry of manifest.packs) for(const count of [4,6,8]) {
+    const g=createGame();g.context.testPack=JSON.parse(fs.readFileSync(path.resolve(__dirname,'..',entry.path),'utf8'));
     g.run('applyQuizPack(testPack)');g.start(count);
     for(let i=0;i<count;i++){g.solve();g.warrant();g.flush();assert.equal(g.run('Boolean(getValidSave())'),true);g.run(i===count-1?'triggerFinalConfrontationFlow()':'nextRound()');}
     assert.equal(g.document.getElementById('goToWarrantBtn').disabled,true);

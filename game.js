@@ -174,7 +174,7 @@ async function selectQuizPackById(packId, options = {}) {
     ACTIVE_PACK_ENTRY = entry;
     if (options.persist !== false) storage.setItem(PACK_SELECTION_KEY, entry.id);
     updatePackSelectorUi(entry.id);
-    setPackSelectorStatus(`${entry.description || entry.title} Preview content: factual line review is pending.`);
+    setPackSelectorStatus(`${entry.description || entry.title} Preview content: source links and editorial review status are recorded per case.`);
   } catch (error) {
     if (request !== packRequest) return;
     cancelSession();

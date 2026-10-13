@@ -1,8 +1,8 @@
 # Editorial rubric
 
-Both packs follow the same rules. Sources are embedded in each pack; there is no active legacy question bank or separate source registry.
+All packs follow the same rules. Sources are embedded in each pack; there is no active legacy question bank or separate source registry.
 
-A case is structurally usable when `npm run check:content` accepts it. It is editorially reviewed only when its factual claims, evidence, answer, explanation, and representation have been checked and the scope recorded. The [eight-case exemplar](reviewed-exemplar.md) records AI-assisted review; 72 cases remain pending. That review does not establish human acceptance, measured learning, or the accuracy of shared map/location metadata.
+A case is structurally usable when `npm run check:content` accepts it. It is editorially reviewed only when its factual claims, evidence, answer, explanation, and representation have been checked and the scope recorded. The [eight-case exemplar](reviewed-exemplar.md) and [48-case NWA ledger](content-audit.md) record AI-assisted review; 72 original-pack cases remain pending. That review does not establish human acceptance, measured learning, or the accuracy of shared map/location metadata.
 
 - Distinguish fictional crimes, suspects, receipts, times, codes, and route diagrams from real geography and cultural claims.
 - Make exactly one choice defensible from the evidence. At least two clues should help identify the hideout; disguise evidence must be explicit enough to complete the warrant.

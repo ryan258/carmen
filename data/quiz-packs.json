@@ -13,6 +13,18 @@
       "title": "Where in Argentina is Carmen Sandiego?",
       "description": "The original Argentina case across Buenos Aires, wine country, the north, the lakes, and Patagonia.",
       "path": "./data/packs/argentina.json"
+    },
+    {
+      "id": "northwest-arkansas-carmen",
+      "title": "Where in Northwest Arkansas is Carmen Sandiego?",
+      "description": "Eight Northwest Arkansas stops, with 24 cases about landmarks, local history, and fictional dispatch puzzles.",
+      "path": "./data/packs/northwest-arkansas.json"
+    },
+    {
+      "id": "nwa-mountain-biking-carmen",
+      "title": "Where on the NWA Trails is Carmen Sandiego?",
+      "description": "Eight NWA trail systems and bike parks, with 24 cases about trail names, features, and fictional courier records.",
+      "path": "./data/packs/nwa-mountain-biking.json"
     }
   ]
 }
