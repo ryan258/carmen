@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — October 13, 2026 Northwest Arkansas packs
+
+- Review the complete working tree and correct the selector’s blanket pending-review warning. Reconcile README, roadmap, finish plan, QA, deployment and dependency guidance with the four-pack state while preserving historical evidence. Confirm no submodules or nested Git repositories.
+
+- Add Northwest Arkansas and NWA Mountain Biking packs to the selector: eight stops and 24 cases each, now at content version 2 after editorial review, text-only evidence, three hints per case, unique tokens, fictional suspects, and source registries.
+- Mix regional landmark/history clues with explicitly fictional ordering, arithmetic, and dispatch-code puzzles. Distinguish trail names and design history from live riding conditions or navigation guidance.
+- Review all 48 new cases against official sources; record scoped AI-assisted review evidence. The catalogue now has 128 cases, 56 reviewed and 72 pending. Preserve the original packs, content versions, and generated fallback.
+- Replace generic questions and answer-revealing second hints; connect witnesses to inferred hideouts, correct the Railyard destination/hideout mismatch, distinguish Elkhorn reconstruction from retained material and the Back 40 Loop from its network. Repair source links and add a case ledger plus transfer activities. Version 1 saves for the new packs are incompatible with version 2.
+- Record Ryan’s October 13 index refresh; file-level impacts remain UNKNOWN, with loader/hint/finale references confirmed directly.
+- Extend the existing manifest-content assertion and route-completion test to include the new packs. Tests and browser checks remain for Ryan to run; no agent tests or GitNexus analyze. Ryan subsequently authorized the full-change review and logically grouped local commits; no push or publication is included.
+
 ## Unreleased — October 12, 2026 GitHub Pages hosting
 
 - Publish the game at https://ryan258.github.io/carmen/ using a pinned official Actions workflow and an explicit runtime-file artifact. Relevant changes on `main` deploy automatically; manual dispatch is also available. Add a deployed-commit endpoint and a hosting/recovery guide.

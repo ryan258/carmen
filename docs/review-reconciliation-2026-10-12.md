@@ -1,5 +1,7 @@
 # Review reconciliation and first correction pass — October 12, 2026
 
+This document preserves the October 12 two-pack review and proposals. The later October 13 additions bring the catalogue to four packs and 128 cases, with 56 AI-assisted reviews and 72 pending. See [current status](remediation-status.md), [the NWA ledger](content-audit.md) and [the roadmap](../ROADMAP.md) for current work and next steps. Earlier test and graph results below retain their original scope.
+
 The October 5 review examined clean `main` at `e2c6bcb`. This reconciliation examined clean `main` at `c12e772` before editing. The intervening commit changed README, SPEC, the game HTML, and `game.js`; it combined dossier and clue sheets into Case File, clarified warrant controls, mapped old saved `clues` tabs to `dossier`, and added a brief approved-warrant stamp delay that respects reduced motion.
 
 **Earlier runtime result: the bounded correction pass passed Ryan's syntax/content checks and focused 50-test run, including all 12 new regressions.** GitNexus rebuilt successfully and reported critical change impact. The immediate verification follow-up changed documentation only; no failing runtime check was reported. Browser/AT and learning-effectiveness evidence remain open; the later exemplar below records partial editorial progress. Exact evidence and commands live in [remediation status](remediation-status.md).

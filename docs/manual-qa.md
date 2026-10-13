@@ -2,13 +2,13 @@
 
 For personal use, start with the short check in [accessibility QA](a11y-qa.md). This matrix is retained for broader coverage; it is not a requirement that Ryan manually audit every case. Current verification status lives in [remediation status](remediation-status.md).
 
-Status: **not run against the October 12 correction pass after c12e772**. Record date, Git revision/diff identity, browser/version, viewport/device, actions, and actual results. Browser automation can cover many interactions; real-device behavior, assistive-technology output, factual accuracy, and player judgment need their own evidence.
+Status: **not run against the current four-pack tree, including the October 13 additions**. Record date, Git revision/diff identity, browser/version, viewport/device, actions, and actual results. Browser automation can cover many interactions; real-device behavior, assistive-technology output, factual accuracy, and player judgment need their own evidence.
 
 Start with `python3 -m http.server 8000 --bind 127.0.0.1`, then open http://127.0.0.1:8000/ . For browser automation, block or stub live map tile requests; do not automate bulk requests to community tile services.
 
 ## Session integrity
 
-- [ ] Both packs: complete 4-, 6-, and 8-stop runs. Confirm the stop selector, displayed count, inventory, transition lead, final report, and records agree.
+- [ ] All four packs: complete 4-, 6-, and 8-stop runs. Confirm the stop selector, displayed count, inventory, transition lead, final report, and records agree.
 - [ ] Use a hint and choose a wrong answer. Reload/resume: hint count, score penalty, attempts, order, eliminated option, and lives persist.
 - [ ] Solve a puzzle, submit a wrong warrant, then reload. The puzzle stays solved and cannot award points again.
 - [ ] Submit a wrong warrant repeatedly during feedback. One life is lost. The button unlocks after feedback when lives remain.

@@ -1,23 +1,29 @@
-# Finish the October 12 exemplar pass
+# Finish the Northwest Arkansas pack additions
 
-The eight-case AI-assisted source/editorial exemplar is authored and its Bentonville outputs regenerated. **Ryan passed the version 4 syntax/content checks and all 40 focused tests, then completed the post-commit graph refresh at `84ae82d`. The next action is a short personal browser/input check.** The [exemplar guide](reviewed-exemplar.md) provides direct access to the eight activities.
+The two new packs each contain eight stops and 24 cases at content version 2. Their factual/editorial review is recorded in the [48-case ledger](content-audit.md). The source review also corrected the selector’s blanket pending-review warning. Changes are grouped into local commits; the new packs are not published.
 
-The [focused test transcript](archive/verification-2026-10-12-exemplar-focused.txt) records Node v26.7.0, accepted structural/fallback contracts for 80 cases, 72 pending editorial reviews and 40 passing tests with no failures, cancellations, skips or todos. The two deliberate `No network in harness` diagnostics accompanied passing fallback scenarios. The [later graph transcript](archive/verification-2026-10-12-post-commit-gitnexus.txt) records successful indexing and comparison, with no new test run. No code repair or repeat automated run is required merely to record these results.
+## Next owner-run check
 
-1. **Focused gate passed:** authoring 6/6, content validation 4/4, core contracts 6/6, run generation 4/4 and session regressions 20/20. This is a focused result, not a current full-suite pass. The earlier 50/50 passing result covers the preceding version 3 runtime correction tree, including all 12 correction regressions. The version 4 run did not include `first-correction-pass.test.js`, `smoke.test.js` or `scoring.test.js`; do not combine these overlapping run totals.
-2. **Source and graph review recorded:** the final source review found no new blocking defect. Ryan's subsequent index at `84ae82d` has 861 nodes, 3,124 edges, 31 clusters and 73 flows, with all 53 covered files matching before this follow-up's docs edits. The complete comparison against `c12e772` reports 31 files, 109 symbols and 31 affected flows at critical impact, with no report-level error, partial or truncation flag. The earlier pre-commit reports remain historical evidence. Symbol entries resolve for 20 of the 31 files; the full file count does not establish complete graph coverage. No analyze was run by the agent.
-3. **Content scope recorded:** four cases per pack have primary-source passage records, useful distractors and worked reasoning; 72 still await review. Transfer questions and observation guidance are in the companion guide. Both packs use content version 4, so version 3 saves cannot resume; save schema 5 is unchanged.
-4. **Next personal check:** try one activity and the short input check in [accessibility QA](a11y-qa.md): saved-case replacement, Answer shortcuts, Case file, and Text route/Retry map. Assess reading effort as well as correctness. Actual focus, speech, rendering and comfort remain unverified by the DOM harness.
-
-The completed focused command is retained in [remediation status](remediation-status.md) for reproducibility. `check:release` should continue to fail for the 72 pending reviews; it was not part of the passing command. No content or CSS rebuild is required for this documentation-only follow-up. A current full-suite result remains unrecorded; no broader automated run is needed just for these docs.
-
-The [hosted preview](https://ryan258.github.io/carmen/) is now available for the manual check; no local server is needed when using it. [Deployment evidence](deployment.md) confirms publication and file delivery, while the input/comfort checks remain open. To use localhost instead:
+No automated verification has been run for this four-pack tree. Ryan’s prior syntax/content and 40/40 focused pass applies to the original two-pack version 4 tree; the [historical transcript](archive/verification-2026-10-12-exemplar-focused.txt) remains unchanged. Run the targeted command:
 
 ```sh
-cd /Users/ryanjohnson/Projects/nonsense/carmen &&
+cd /Users/ryanjohnson/Projects/nonsense/carmen
+npm run check:content && node --test tests/content-validation.test.js tests/run-generation.test.js tests/session-regressions.test.js
+```
+
+The command covers manifest/pack/fallback contracts, seeded case selection and 4/6/8-stop session completion for every manifest pack. It does not establish factual accuracy, layout, speech output or learning effectiveness. No content/CSS build is needed for these hand-authored text-only packs. The optional `check:release` remains expected to fail for the 72 pending original-case reviews.
+
+## Short personal check
+
+Use localhost for the new packs; the last recorded hosted deployment predates them:
+
+```sh
+cd /Users/ryanjohnson/Projects/nonsense/carmen
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open http://127.0.0.1:8000/ and use one four-stop route with the preferred input method. Open the companion guide separately for an exact reviewed activity; the game still selects from all case variants. Record specific obstacles rather than auditing all 80 cases. Stop the server with Ctrl+C when finished. Exact evidence, archived reports and future graph-refresh commands are in [remediation status](remediation-status.md). No repeat graph refresh is needed just to archive its results. Ryan authorized the local documentation/evidence commit after the earlier three-commit grouping, then separately requested GitHub Pages publication.
+Open http://127.0.0.1:8000/ . Select each new pack and try a four-stop route with the preferred input method. Use a hint, solve a puzzle, choose its warrant and pause/resume. Confirm the text is manageable and that the pack selector no longer labels every case pending. Stop the server with Ctrl+C when finished. [Accessibility QA](a11y-qa.md) offers a short input check; [manual QA](manual-qa.md) retains an optional broader matrix.
 
-[Review reconciliation](review-reconciliation-2026-10-12.md) records preserved `c12e772` changes, corrected findings, and deferred learning/content/architecture proposals. Eight case reviews are recorded as AI-assisted; 72 remain pending. Human editorial/learner acceptance and the full map/venue review remain open; the game remains a personal preview with local and hosted access.
+The NWA packs reject their old content-version-1 saves after the warrant/evidence revisions. Bentonville and Argentina remain at content version 4; save schema 5 is unchanged. The normal game still draws from all variants in the selected pack. All NWA variants have AI-assisted review; the original packs include pending cases. Companion activities are untracked and do not require repeated game restarts.
+
+[Current status](remediation-status.md) records the owner-run graph refresh and source review. The older [eight-case exemplar](reviewed-exemplar.md) and [October 12 reconciliation](review-reconciliation-2026-10-12.md) remain historical evidence. Shared map accuracy, current trail conditions and human editorial/input/learning acceptance remain open. Pushing or publishing requires a separate instruction.

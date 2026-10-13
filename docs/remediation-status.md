@@ -1,6 +1,38 @@
-# Current remediation status — October 12, 2026
+# Current remediation status — October 13, 2026
 
-**Current state: eight cases have AI-assisted source/editorial review, four per pack; 72 remain pending. Both packs are content version 4. Ryan completed the exemplar graph refresh, syntax/content checks and focused tests: 40/40 passed.** The [exemplar guide](reviewed-exemplar.md) contains exact case IDs, full prompts, worked answers, transfer activities, claim/source passages and review limits. The reviewer is Codex, explicitly identified as AI-assisted; this is not Ryan's or an educator's sign-off.
+## Northwest Arkansas pack additions — October 13
+
+Two new local packs are registered in the manifest: `northwest-arkansas-carmen` and `nwa-mountain-biking-carmen`, each now at content version 2 with eight stops and three variants per stop. The catalogue now contains 128 cases, with 56 cases reviewed and 72 original-pack cases pending. The new content includes text-only evidence, three progressive hints, fictional suspects, distinct inventory tokens, worked explanations, and per-case source links. All 48 new cases now have claim-specific AI-assisted editorial review dated October 13, attributed to Codex. The [case ledger](content-audit.md) records exact IDs, keys, source-passage scope, corrections and companion transfer activities. The review covers facts, clues, all answer choices, hints, explanations and warrants; source flags cover those claims only. Version 1 saves for these new packs are incompatible after the warrant/evidence revisions. This is not human sign-off.
+
+Bentonville and Argentina remain at content version 4. Their JSON, the generated fallback and CSS were not changed. The subsequent full-change review changes only the selector’s blanket pending-review status message in runtime code. The existing content test now requires the new pack IDs, and the existing session-completion test reads every manifest entry for 4/6/8-stop runs.
+
+Read-only GitNexus query found the pack loading/validation flows. File-level impact for the manifest and two edited test files returned `UNKNOWN`, not a clean risk result. Current-source references confirmed the manifest-driven loader, checker, test entry points, and deployment glob. Ryan subsequently ran `npx gitnexus analyze`. Metadata records indexed commit `2367b903192e49d472cbae64c2a1eae46715993b` at `2026-10-13T18:18:41.116Z`, with 60 files, 878 nodes, 3,156 edges and 74 processes. This refreshed index recognizes both new pack files, but their file-level impacts still return UNKNOWN. Current-source inspection confirms the manifest loader, hint consumer and selected-case finale reuse. The agent did not reindex.
+
+**Verification pending:** no tests, syntax/content checks, browser checks, or GitNexus analyze were run by the agent. The changes are grouped into local commits and remain unpublished. Earlier results below apply to the original two-pack tree only. Ryan can run:
+
+```sh
+cd /Users/ryanjohnson/Projects/nonsense/carmen
+npm run check:content && node --test tests/content-validation.test.js tests/run-generation.test.js tests/session-regressions.test.js
+```
+
+For a short personal browser check, select each new pack, start four stops, use a hint, solve a puzzle, issue its warrant, and pause/resume using the preferred input method. Approximate map pins, current trail conditions and human acceptance remain outside the completed case review.
+
+## Full-change review and local commits — October 13
+
+Ryan explicitly authorized reviewing the entire working tree, reconciling documentation and grouping all approved changes into logical local commits. The review found one remaining UI inconsistency: `selectQuizPackById` always labeled factual review pending. Its status text now points to per-case source links and editorial status. The existing per-case review predicate remains authoritative; no save, scoring or route behavior changes.
+
+Reviewed the two pack files and prior 48-case source ledger, manifest identities and paths, production loader/validator and finale/hint consumers, the two test diffs, generated-fallback ownership, deployment glob, and documentation. The new packs require no generated Bentonville or CSS changes. No additional blocking issue was found by source inspection. This is a source review, not a test pass; the focused command above and browser/input checks remain unrun for the four-pack tree.
+
+Ryan’s second October 13 refresh records `2026-10-13T18:53:50.394Z` at `2367b903192e49d472cbae64c2a1eae46715993b`: 60 files, 884 nodes, 3,173 edges, 31 communities and 75 processes. Read-only impact for the selector function returned LOW, with direct callers `loadQuizPack` and `selectQuizPackFromControl`. Documentation impact resolved README → roadmap → finish-plan links; UNKNOWN file results were confirmed against current source references.
+
+The full structured pre-commit `scope: all` report, after staging the new JSON files and before this final status addition, reported **22 files, 41 symbols, one affected flow and medium risk**. All 41 symbol entries and the one `SelectQuizPackById → SetTextIfPresent` flow were inspected; there was no result-level error, partial or truncation flag. The symbol list covers Markdown sections and the selector function, not the contents of pack JSON or all changed test code. Direct source review supplies that missing coverage; the graph is not proof of factual or behavioral correctness. The index predates the review’s final edits and will retain its indexed commit until an owner-run refresh; no immediate reindex is required to record local commits.
+
+The two commit groups are: (1) reviewed NWA packs, manifest/test integration, corrected selector copy, content ledger and authoring contracts; (2) README, roadmap, specification, changelog and operational/QA/status documentation. Historical transcripts retain their original results. There are no registered submodules, tracked gitlinks, nested Git checkouts or active standard commit hooks. The agent ran no tests, syntax/content gates, builds or GitNexus analyze. Local whitespace checks were clean. No push, deployment or publication is included.
+
+## Original two-pack evidence — October 12
+
+
+**October 12 state: eight cases have AI-assisted source/editorial review, four per pack; 72 remain pending. Both packs are content version 4. Ryan completed the exemplar graph refresh, syntax/content checks and focused tests: 40/40 passed.** The [exemplar guide](reviewed-exemplar.md) contains exact case IDs, full prompts, worked answers, transfer activities, claim/source passages and review limits. The reviewer is Codex, explicitly identified as AI-assisted; this is not Ryan's or an educator's sign-off.
 
 The preceding runtime correction pass after `c12e772` passed Ryan's focused automated verification at content version 3: syntax PASS, content/fallback contracts PASS, and 50/50 tests PASS, including all 12 new correction regressions. No failing check in that supplied output required a runtime fix. A documentation-only follow-up recorded those results; the later exemplar is a separate content change and does not inherit that pass as fresh verification.
 
@@ -222,4 +254,4 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 Open http://127.0.0.1:8000/ and use one short route with the preferred input method. Browser acceptance has not been recorded merely because the automated gate passed.
 
-Eight cases now have AI-assisted factual/editorial review and **72 remain pending**. `npm run check:release` is intentionally separate and should continue to report missing review evidence. The route-based report inherits the selected cases' editorial status; a random route can still include pending cases. Neither the exemplar nor the passing focused tests establish learning effectiveness, accessibility conformance, a complete human editorial review or public-release readiness.
+At the October 12 checkpoint, eight cases had AI-assisted factual/editorial review and **72 remained pending**. The current catalogue adds 48 reviewed NWA cases, as recorded above. `npm run check:release` is intentionally separate and should continue to report missing review evidence. The route-based report inherits the selected cases' editorial status; a random route can still include pending cases. Neither the exemplar nor the passing focused tests establish learning effectiveness, accessibility conformance, a complete human editorial review or public-release readiness.

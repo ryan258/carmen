@@ -6,7 +6,7 @@ The remediation adds associated warrant labels, tab/panel semantics, keyboard ta
 
 Use the input method you normally prefer on one short route. Confirm that Answer A–D, Case file, Hint, Continue, Submit warrant, Pause and Resume work with manageable effort, and that solved feedback stays until Continue. Answer shortcuts should start off; enable them only if useful and confirm the preference survives reload. Pause, start another case, and confirm Keep saved case initially receives focus and preserves progress. Text route should persist after reload; Cancel should initially receive focus in Discard Case. If one thing is awkward, report that specific obstacle. You do not need to manually audit every case.
 
-The broader matrix below is optional coverage for later sharing. None of these browser/AT outcomes has been verified for the current October 12 correction pass. See [revision-specific evidence](remediation-status.md).
+The broader matrix below is optional coverage for later sharing. None of these browser/AT outcomes has been verified for the current four-pack tree, including the October 13 additions. See [revision-specific evidence](remediation-status.md).
 
 ## Broader reference matrix
 
