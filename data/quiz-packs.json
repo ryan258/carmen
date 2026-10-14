@@ -25,6 +25,18 @@
       "title": "Where on the NWA Trails is Carmen Sandiego?",
       "description": "Eight NWA trail systems and bike parks, with 24 cases about trail names, features, and fictional courier records.",
       "path": "./data/packs/nwa-mountain-biking.json"
+    },
+    {
+      "id": "arkansas-state-parks-carmen",
+      "title": "Where in Arkansas State Parks is Carmen Sandiego?",
+      "description": "Eight Arkansas state parks, with 24 investigations into geology, water, building history and living traditions.",
+      "path": "./data/packs/arkansas-state-parks.json"
+    },
+    {
+      "id": "route-66-carmen",
+      "title": "Where on Route 66 is Carmen Sandiego?",
+      "description": "Eight states westward, with 24 investigations into roadside buildings, changing uses, provenance and transport records.",
+      "path": "./data/packs/route-66.json"
     }
   ]
 }

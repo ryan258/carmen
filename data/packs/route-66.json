@@ -1,0 +1,1872 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 1,
+  "id": "route-66-carmen",
+  "title": "Where on Route 66 is Carmen Sandiego?",
+  "subtitle": "Route 66 Division",
+  "heroLocation": "ROUTE 66",
+  "intro": "Follow altered archive files westward through one stop in each of Route 66’s eight states: Illinois, Missouri, Kansas, Oklahoma, Texas, New Mexico, Arizona and California. Each stop has three investigative case variants. These selected landmarks are not the highway’s endpoints or a complete drivable alignment. All ACME desks and records are fictional. Map pins are approximate orientation points, not entrances. Investigate Rock Fountain Court through documents; it is not open to the public. All evidence is written text.",
+  "evidenceLabel": "ROUTE 66 EVIDENCE",
+  "successMessage": "You recovered the altered files and completed the final ACME report for your selected route.",
+  "map": {
+    "center": {
+      "lat": 35.9,
+      "lng": -103.4
+    },
+    "zoom": 4,
+    "minZoom": 3,
+    "maxZoom": 16
+  },
+  "finalConfrontation": {
+    "title": "Final Report",
+    "rounds": [
+      {
+        "title": "First-stop evidence review",
+        "description": "Review the written evidence from the first selected case.",
+        "question": "Which answer matches the first case evidence?",
+        "options": [
+          "Selected case answer",
+          "Case alternative 1",
+          "Case alternative 2",
+          "Case alternative 3"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report copies the selected first case, including its choices, correct index, and explanation."
+      },
+      {
+        "title": "Route evidence review",
+        "description": "Review the written evidence from a case in the middle of the selected route.",
+        "question": "Which answer matches the route evidence?",
+        "options": [
+          "Selected case answer",
+          "Case alternative 1",
+          "Case alternative 2",
+          "Case alternative 3"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report copies the selected middle case, including its choices, correct index, and explanation."
+      },
+      {
+        "title": "Route inventory",
+        "description": "Use the collected tokens from your completed route.",
+        "question": "Which token came from the last completed stop?",
+        "options": [
+          "Last stop token",
+          "First stop token",
+          "Second stop token",
+          "Third stop token"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report resolves the last token and three other tokens from the completed route."
+      }
+    ]
+  },
+  "locations": [
+    {
+      "id": "route-66-dwight",
+      "name": "Dwight",
+      "province": "Illinois",
+      "lat": 41.095,
+      "lng": -88.426,
+      "emoji": "⛽",
+      "tagline": "Ambler’s Texaco and the house-like station",
+      "henchman": {
+        "name": "Vince Veneer",
+        "alias": "The Facade",
+        "emoji": "⛽",
+        "role": "Fictional archive courier altering evidence labels",
+        "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+      },
+      "token": {
+        "name": "Canopy Evidence Seal",
+        "char": "⛽"
+      }
+    },
+    {
+      "id": "route-66-springfield",
+      "name": "Springfield",
+      "province": "Missouri",
+      "lat": 37.209,
+      "lng": -93.326,
+      "emoji": "🪨",
+      "tagline": "Rock Fountain Court and misleading appearances",
+      "henchman": {
+        "name": "Opal Overlay",
+        "alias": "The Veneer",
+        "emoji": "🪨",
+        "role": "Fictional archive courier altering evidence labels",
+        "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+      },
+      "token": {
+        "name": "Cabin Court Seal",
+        "char": "🪨"
+      }
+    },
+    {
+      "id": "route-66-brush-creek",
+      "name": "Brush Creek Bridge",
+      "province": "Kansas",
+      "lat": 37.074,
+      "lng": -94.742,
+      "emoji": "🌉",
+      "tagline": "A design patent and a later bridge",
+      "henchman": {
+        "name": "Marsh Margin",
+        "alias": "The Arch Rival",
+        "emoji": "🌉",
+        "role": "Fictional archive courier altering evidence labels",
+        "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+      },
+      "token": {
+        "name": "Paired Arch Seal",
+        "char": "🌉"
+      }
+    },
+    {
+      "id": "route-66-arcadia",
+      "name": "Arcadia",
+      "province": "Oklahoma",
+      "lat": 35.659,
+      "lng": -97.326,
+      "emoji": "🔴",
+      "tagline": "The Round Barn before the highway",
+      "henchman": {
+        "name": "Oakley Curve",
+        "alias": "The Bender",
+        "emoji": "🔴",
+        "role": "Fictional archive courier altering evidence labels",
+        "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+      },
+      "token": {
+        "name": "Round Barn Rafter Seal",
+        "char": "🔴"
+      }
+    },
+    {
+      "id": "route-66-shamrock",
+      "name": "Shamrock",
+      "province": "Texas",
+      "lat": 35.225,
+      "lng": -100.249,
+      "emoji": "🏮",
+      "tagline": "Tower Station and a plan that changed",
+      "henchman": {
+        "name": "Della Draft",
+        "alias": "The Revision",
+        "emoji": "🏮",
+        "role": "Fictional archive courier altering evidence labels",
+        "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+      },
+      "token": {
+        "name": "Tower Plan Seal",
+        "char": "🏮"
+      }
+    },
+    {
+      "id": "route-66-tucumcari",
+      "name": "Tucumcari",
+      "province": "New Mexico",
+      "lat": 35.172,
+      "lng": -103.718,
+      "emoji": "🛎️",
+      "tagline": "The Blue Swallow’s rooms and garages",
+      "henchman": {
+        "name": "Lena Lantern",
+        "alias": "The Glow",
+        "emoji": "🛎️",
+        "role": "Fictional archive courier altering evidence labels",
+        "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+      },
+      "token": {
+        "name": "Motor Court Seal",
+        "char": "🛎️"
+      }
+    },
+    {
+      "id": "route-66-painted-desert",
+      "name": "Painted Desert Inn",
+      "province": "Arizona",
+      "lat": 35.084,
+      "lng": -109.79,
+      "emoji": "🏜️",
+      "tagline": "Reading the layers of a building",
+      "henchman": {
+        "name": "Stucco Scribe",
+        "alias": "The Overcoat",
+        "emoji": "🏜️",
+        "role": "Fictional archive courier altering evidence labels",
+        "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+      },
+      "token": {
+        "name": "Desert Building Seal",
+        "char": "🏜️"
+      }
+    },
+    {
+      "id": "route-66-barstow",
+      "name": "Barstow",
+      "province": "California",
+      "lat": 34.904,
+      "lng": -117.024,
+      "emoji": "🚂",
+      "tagline": "Casa del Desierto and advance dispatches",
+      "henchman": {
+        "name": "Harper Handoff",
+        "alias": "The Late Arrival",
+        "emoji": "🚂",
+        "role": "Fictional archive courier altering evidence labels",
+        "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+      },
+      "token": {
+        "name": "Railway Dispatch Seal",
+        "char": "🚂"
+      }
+    }
+  ],
+  "questions": {
+    "route-66-dwight": [
+      {
+        "caseId": "route-66-dwight-function",
+        "briefing": {
+          "headline": "A HOUSE WITH A FUEL CANOPY",
+          "report": "At Dwight, The Facade has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Springfield.",
+          "suspect": {
+            "name": "Vince Veneer",
+            "alias": "The Facade",
+            "emoji": "⛽",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "Ambler’s Texaco in Dwight combined a house-like office with a canopy over fuel pumps. Its early-1940s service bay used concrete block.",
+          "A fictional inventory calls the building a private house because its office has residential styling. A second note records the pump canopy. This dossier is assigned to the fictional ACME Evidence Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Evidence Desk\". Witness identification: Document photographer."
+        ],
+        "puzzle": {
+          "title": "A house with a fuel canopy",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which conclusion accounts for appearance and equipment?",
+          "options": [
+            "The house-like styling proves residential use only",
+            "The fuel canopy proves it was a railway platform",
+            "A fuel station could use house-like styling",
+            "Concrete block proves it was never a station"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Distinguish visual style from what a building does.",
+            "Ask which interpretation can include both the house-like office and the pumps.",
+            "Answer: A fuel station could use house-like styling. The station combines domestic appearance with fuel-service equipment. Residential styling alone does not establish exclusive residential use; pumps do not indicate a railway platform, and concrete block does not rule out a station. Warrant: Dwight; ACME Evidence Desk; Document photographer."
+          ],
+          "explanation": "The station combines domestic appearance with fuel-service equipment. Residential styling alone does not establish exclusive residential use; pumps do not indicate a railway platform, and concrete block does not rule out a station. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Dwight; ACME Evidence Desk; Document photographer."
+        },
+        "warrantAnswers": {
+          "city": "Dwight",
+          "hideout": "ACME Evidence Desk",
+          "disguise": "Document photographer"
+        },
+        "funFact": "Ambler’s Texaco in Dwight combined a house-like office with a canopy over fuel pumps. Its early-1940s service bay used concrete block.",
+        "learningObjective": "Infer use from equipment without mistaking architectural style for function.",
+        "sources": [
+          "ambler"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Illinois",
+          "Dwight"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Ambler historical paragraphs: domestic office/canopy and concrete-block service addition. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-dwight-phases",
+        "briefing": {
+          "headline": "THE ADDITION IN THE ORIGINAL PHOTOGRAPH",
+          "report": "At Dwight, The Facade has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Springfield.",
+          "suspect": {
+            "name": "Vince Veneer",
+            "alias": "The Facade",
+            "emoji": "⛽",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "Ambler’s original office and canopy date to 1933; the concrete-block service bay was added in the early 1940s.",
+          "An unaltered photograph has a capture-date caption of 1933 and shows the completed later bay. Assume the source dates and identification of the visible bay are correct. This dossier is assigned to the fictional ACME Timeline Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Timeline Desk\". Witness identification: Ledger binder."
+        ],
+        "puzzle": {
+          "title": "The addition in the original photograph",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which part of the label must be reconsidered?",
+          "options": [
+            "The 1933 photograph date",
+            "The fact that an office existed in 1933",
+            "The statement that a later addition came after the original",
+            "The location in Dwight"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Use the visible addition as a limit on the photograph’s date.",
+            "An image cannot show a completed feature before the supplied construction period.",
+            "Answer: The 1933 photograph date. A photograph showing the later bay cannot depict the completed site in 1933 under the stated dates. The original office, chronological relationship and town are not contradicted by the evidence. Warrant: Dwight; ACME Timeline Desk; Ledger binder."
+          ],
+          "explanation": "A photograph showing the later bay cannot depict the completed site in 1933 under the stated dates. The original office, chronological relationship and town are not contradicted by the evidence. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Dwight; ACME Timeline Desk; Ledger binder."
+        },
+        "warrantAnswers": {
+          "city": "Dwight",
+          "hideout": "ACME Timeline Desk",
+          "disguise": "Ledger binder"
+        },
+        "funFact": "Ambler’s original office and canopy date to 1933; the concrete-block service bay was added in the early 1940s.",
+        "learningObjective": "Use construction phases to find an impossible photograph date.",
+        "sources": [
+          "ambler"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Illinois",
+          "Dwight"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Ambler: 1933 original and early-1940s bay; reproduced photograph fictional. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-dwight-materials",
+        "briefing": {
+          "headline": "THE REPAIR ORDER WITH TWO CLUES",
+          "report": "At Dwight, The Facade has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Springfield.",
+          "suspect": {
+            "name": "Vince Veneer",
+            "alias": "The Facade",
+            "emoji": "⛽",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "At Ambler’s, the original office used wood clapboard; the later service bay used concrete block.",
+          "ACME repair orders are invented. A: original office / concrete block. B: later bay / wood clapboard. C: original office / wood clapboard. D: later bay / concrete block. The recovered work note names the later addition; an independent material note names concrete block. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Comparison Desk\". Witness identification: Map illustrator."
+        ],
+        "puzzle": {
+          "title": "The repair order with two clues",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which order matches both notes?",
+          "options": [
+            "Order A",
+            "Order B",
+            "Order C",
+            "Order D"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Match the building phase before matching its material.",
+            "Keep both conditions; either one alone leaves a plausible-looking wrong order.",
+            "Answer: Order D. D matches phase and material. A has the material but the wrong phase; B the phase but the wrong material; C neither. The records do not establish present repair needs. Warrant: Dwight; ACME Comparison Desk; Map illustrator."
+          ],
+          "explanation": "D matches phase and material. A has the material but the wrong phase; B the phase but the wrong material; C neither. The records do not establish present repair needs. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Dwight; ACME Comparison Desk; Map illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Dwight",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Map illustrator"
+        },
+        "funFact": "At Ambler’s, the original office used wood clapboard; the later service bay used concrete block.",
+        "learningObjective": "Corroborate construction-phase and material evidence.",
+        "sources": [
+          "ambler"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Illinois",
+          "Dwight"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Ambler material and addition paragraphs; repair orders fictional. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      }
+    ],
+    "route-66-springfield": [
+      {
+        "caseId": "route-66-springfield-layout",
+        "briefing": {
+          "headline": "THE WRONG ROOFLINE",
+          "report": "At Springfield, The Veneer has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Brush Creek Bridge.",
+          "suspect": {
+            "name": "Opal Overlay",
+            "alias": "The Veneer",
+            "emoji": "🪨",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "Rock Fountain Court was built in 1945 with nine freestanding cabins arranged around a semicircular court.",
+          "An ACME sketch caption describes all rooms under a single continuous roof. The accompanying inventory instead lists separate cabin structures around a court. This is a document investigation; the real property is not open to the public. This dossier is assigned to the fictional ACME Evidence Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Evidence Desk\". Witness identification: Document photographer."
+        ],
+        "puzzle": {
+          "title": "The wrong roofline",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which correction fits the source and inventory?",
+          "options": [
+            "Keep a single continuous roof over every room",
+            "Describe separate cabins around a court",
+            "Describe a train with nine cars",
+            "Describe one nine-story tower"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Compare the relationship between the units, not just their number.",
+            "The key distinction is separate structures versus units under one roof.",
+            "Answer: Describe separate cabins around a court. Separate cabins fit both the source and inventory. A continuous roof erases that separation; train cars and a tall tower have no support in these building records. Warrant: Springfield; ACME Evidence Desk; Document photographer."
+          ],
+          "explanation": "Separate cabins fit both the source and inventory. A continuous roof erases that separation; train cars and a tall tower have no support in these building records. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Springfield; ACME Evidence Desk; Document photographer."
+        },
+        "warrantAnswers": {
+          "city": "Springfield",
+          "hideout": "ACME Evidence Desk",
+          "disguise": "Document photographer"
+        },
+        "funFact": "Rock Fountain Court was built in 1945 with nine freestanding cabins arranged around a semicircular court.",
+        "learningObjective": "Distinguish lodging layouts using spatial relationships in text.",
+        "sources": [
+          "rock"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Missouri",
+          "Springfield"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Rock Fountain first, second and courtyard paragraphs: 1945, nine freestanding cabins, semicircle; explicit no-public-access notice. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-springfield-style",
+        "briefing": {
+          "headline": "AN OLD-FASHIONED STYLE IS NOT A DATE",
+          "report": "At Springfield, The Veneer has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Brush Creek Bridge.",
+          "suspect": {
+            "name": "Opal Overlay",
+            "alias": "The Veneer",
+            "emoji": "🪨",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "Rock Fountain Court was built in 1945, using a freestanding cabin layout associated with earlier roadside lodging.",
+          "A courier dates a photograph to the 1920s solely because that layout was popular then. The construction record dates these particular cabins to 1945. This dossier is assigned to the fictional ACME Timeline Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Timeline Desk\". Witness identification: Ledger binder."
+        ],
+        "puzzle": {
+          "title": "An old-fashioned style is not a date",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which report handles the conflict correctly?",
+          "options": [
+            "The cabins must have been built in the 1920s",
+            "The photograph must show a different country",
+            "Popularity of a style overrides construction records",
+            "The earlier style does not establish an earlier construction date"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Separate the history of a style from the history of one building.",
+            "A builder can choose an older design; resemblance does not overrule the supplied construction record.",
+            "Answer: The earlier style does not establish an earlier construction date. A style can remain in use after its peak popularity. The 1945 construction record dates these cabins; stylistic resemblance alone cannot move construction to the 1920s or identify a different country. Warrant: Springfield; ACME Timeline Desk; Ledger binder."
+          ],
+          "explanation": "A style can remain in use after its peak popularity. The 1945 construction record dates these cabins; stylistic resemblance alone cannot move construction to the 1920s or identify a different country. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Springfield; ACME Timeline Desk; Ledger binder."
+        },
+        "warrantAnswers": {
+          "city": "Springfield",
+          "hideout": "ACME Timeline Desk",
+          "disguise": "Ledger binder"
+        },
+        "funFact": "Rock Fountain Court was built in 1945, using a freestanding cabin layout associated with earlier roadside lodging.",
+        "learningObjective": "Reject a dating inference based only on style.",
+        "sources": [
+          "rock"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Missouri",
+          "Springfield"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Rock Fountain first two historical paragraphs distinguish earlier layout fashion from 1945 construction. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-springfield-structure",
+        "briefing": {
+          "headline": "STONE ON THE SURFACE",
+          "report": "At Springfield, The Veneer has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Brush Creek Bridge.",
+          "suspect": {
+            "name": "Opal Overlay",
+            "alias": "The Veneer",
+            "emoji": "🪨",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "NPS describes Rock Fountain Court as frame cabins with Ozark sandstone veneer. A veneer is a facing, not a statement that every wall is solid stone.",
+          "A fictional photograph transcript notes stone on the visible face. An independent construction card says \"frame structure.\" The altered caption insists that these observations cannot both be true. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Comparison Desk\". Witness identification: Map illustrator."
+        ],
+        "puzzle": {
+          "title": "Stone on the surface",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which interpretation reconciles both observations?",
+          "options": [
+            "A frame cabin can have a stone facing",
+            "Every wall must be solid stone",
+            "The frame record must be erased",
+            "The photograph proves there is no frame"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Distinguish what is visible from what supports it.",
+            "Consider whether a surface material can differ from the underlying construction.",
+            "Answer: A frame cabin can have a stone facing. A stone facing can cover a frame structure, so the two records agree. Surface appearance does not prove solid stone walls or justify deleting the frame record. The photograph does not reveal every underlying layer. Warrant: Springfield; ACME Comparison Desk; Map illustrator."
+          ],
+          "explanation": "A stone facing can cover a frame structure, so the two records agree. Surface appearance does not prove solid stone walls or justify deleting the frame record. The photograph does not reveal every underlying layer. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Springfield; ACME Comparison Desk; Map illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Springfield",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Map illustrator"
+        },
+        "funFact": "NPS describes Rock Fountain Court as frame cabins with Ozark sandstone veneer. A veneer is a facing, not a statement that every wall is solid stone.",
+        "learningObjective": "Reconcile surface observations with structural evidence.",
+        "sources": [
+          "rock"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Missouri",
+          "Springfield"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Rock Fountain Ozark sandstone paragraph explicitly says frame cabins and veneer; no inference about unseen present-day condition. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      }
+    ],
+    "route-66-brush-creek": [
+      {
+        "caseId": "route-66-brush-creek-structure",
+        "briefing": {
+          "headline": "THE NATURAL-ARCH CAPTION",
+          "report": "At Brush Creek Bridge, The Arch Rival has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Arcadia.",
+          "suspect": {
+            "name": "Marsh Margin",
+            "alias": "The Arch Rival",
+            "emoji": "🌉",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "Brush Creek Bridge is a built reinforced-concrete bridge with paired arches, associated with James Barney Marsh’s design.",
+          "A fictional caption calls the paired arches natural rock formations. An engineering note describes reinforcement and concrete construction. This dossier is assigned to the fictional ACME Evidence Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Evidence Desk\". Witness identification: Document photographer."
+        ],
+        "puzzle": {
+          "title": "The natural-arch caption",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which interpretation follows the engineering evidence?",
+          "options": [
+            "Two naturally eroded rock arches",
+            "A wooden footbridge without arches",
+            "An engineered concrete bridge",
+            "A river bend without a structure"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Look for evidence of construction rather than a resemblance in shape.",
+            "The described material and reinforcement matter more than the arch silhouette alone.",
+            "Answer: An engineered concrete bridge. Concrete construction and reinforcement support an engineered bridge. Natural rock, a wooden structure and an unbuilt river bend do not fit those material and structural observations. Warrant: Brush Creek Bridge; ACME Evidence Desk; Document photographer."
+          ],
+          "explanation": "Concrete construction and reinforcement support an engineered bridge. Natural rock, a wooden structure and an unbuilt river bend do not fit those material and structural observations. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Brush Creek Bridge; ACME Evidence Desk; Document photographer."
+        },
+        "warrantAnswers": {
+          "city": "Brush Creek Bridge",
+          "hideout": "ACME Evidence Desk",
+          "disguise": "Document photographer"
+        },
+        "funFact": "Brush Creek Bridge is a built reinforced-concrete bridge with paired arches, associated with James Barney Marsh’s design.",
+        "learningObjective": "Distinguish an engineered structure from a similar natural shape.",
+        "sources": [
+          "brush"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Kansas",
+          "Brush Creek Bridge"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Brush Creek Bridge historical description: Marsh, reinforced concrete and paired arches. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-brush-creek-patent",
+        "briefing": {
+          "headline": "THE DATE STAMPED ON THE DESIGN",
+          "report": "At Brush Creek Bridge, The Arch Rival has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Arcadia.",
+          "suspect": {
+            "name": "Marsh Margin",
+            "alias": "The Arch Rival",
+            "emoji": "🌉",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "Marsh patented his bridge design in 1912. Brush Creek Bridge was constructed in 1923.",
+          "An ACME label uses the patent date as this bridge’s construction date. The source distinguishes the invention’s paperwork from construction of this example. This dossier is assigned to the fictional ACME Timeline Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Timeline Desk\". Witness identification: Ledger binder."
+        ],
+        "puzzle": {
+          "title": "The date stamped on the design",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which chronological entry repairs the mistake?",
+          "options": [
+            "1912 bridge construction → 1923 patent",
+            "1912 design patent → 1923 bridge construction",
+            "Both events happened in 1912",
+            "Both events happened in 1923"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Attach each date to the right event.",
+            "A design can exist before a particular structure is built from it.",
+            "Answer: 1912 design patent → 1923 bridge construction. The design patent precedes construction of this bridge by eleven years. Swapping the event names or merging them into one year contradicts the separate dated records. Warrant: Brush Creek Bridge; ACME Timeline Desk; Ledger binder."
+          ],
+          "explanation": "The design patent precedes construction of this bridge by eleven years. Swapping the event names or merging them into one year contradicts the separate dated records. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Brush Creek Bridge; ACME Timeline Desk; Ledger binder."
+        },
+        "warrantAnswers": {
+          "city": "Brush Creek Bridge",
+          "hideout": "ACME Timeline Desk",
+          "disguise": "Ledger binder"
+        },
+        "funFact": "Marsh patented his bridge design in 1912. Brush Creek Bridge was constructed in 1923.",
+        "learningObjective": "Separate design history from the construction history of an example.",
+        "sources": [
+          "brush"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Kansas",
+          "Brush Creek Bridge"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Brush Creek Bridge: 1912 patent and 1923 construction; eleven-year difference derived from those dates. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-brush-creek-reconcile",
+        "briefing": {
+          "headline": "THE INCOMPLETE BRIDGE SKETCH",
+          "report": "At Brush Creek Bridge, The Arch Rival has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Arcadia.",
+          "suspect": {
+            "name": "Marsh Margin",
+            "alias": "The Arch Rival",
+            "emoji": "🌉",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "Brush Creek Bridge uses paired arches and reinforced concrete. Reinforced concrete combines concrete with embedded reinforcement; a silhouette alone does not expose that reinforcement.",
+          "Two independent fictional records must agree: a photo transcript shows two arches; a construction record specifies reinforced concrete. Candidate files: K has two arches/reinforced concrete; L has one arch/reinforced concrete; M has two arches/timber; N has one arch/timber. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Comparison Desk\". Witness identification: Map illustrator."
+        ],
+        "puzzle": {
+          "title": "The incomplete bridge sketch",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which file preserves both the visible form and the construction record?",
+          "options": [
+            "File M",
+            "File L",
+            "File N",
+            "File K"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Ask what the photograph shows and what the construction record adds.",
+            "A matching outline is insufficient when the material record disagrees; keep both constraints.",
+            "Answer: File K. K matches the paired arches and reinforced concrete. M matches form but changes material; L matches material but changes form; N changes both. The photograph alone cannot establish the embedded reinforcement; the construction record supplies that evidence. Warrant: Brush Creek Bridge; ACME Comparison Desk; Map illustrator."
+          ],
+          "explanation": "K matches the paired arches and reinforced concrete. M matches form but changes material; L matches material but changes form; N changes both. The photograph alone cannot establish the embedded reinforcement; the construction record supplies that evidence. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Brush Creek Bridge; ACME Comparison Desk; Map illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Brush Creek Bridge",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Map illustrator"
+        },
+        "funFact": "Brush Creek Bridge uses paired arches and reinforced concrete. Reinforced concrete combines concrete with embedded reinforcement; a silhouette alone does not expose that reinforcement.",
+        "learningObjective": "Combine visible form with construction evidence that a silhouette cannot supply.",
+        "sources": [
+          "brush"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Kansas",
+          "Brush Creek Bridge"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Brush Creek Bridge: paired reinforced-concrete arches, strengthened with steel. All candidate records fictional; no inference about current structural condition. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      }
+    ],
+    "route-66-arcadia": [
+      {
+        "caseId": "route-66-arcadia-purpose",
+        "briefing": {
+          "headline": "A BARN WITH ANOTHER CHAPTER",
+          "report": "At Arcadia, The Bender has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Shamrock.",
+          "suspect": {
+            "name": "Oakley Curve",
+            "alias": "The Bender",
+            "emoji": "🔴",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "Arcadia’s Round Barn was completed in 1898. It served agricultural purposes and also hosted dances and community gatherings.",
+          "An altered ACME catalogue claims \"agricultural use means community use was impossible.\" A second record lists both kinds of activity. This dossier is assigned to the fictional ACME Evidence Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Evidence Desk\". Witness identification: Document photographer."
+        ],
+        "puzzle": {
+          "title": "A barn with another chapter",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which conclusion preserves the evidence?",
+          "options": [
+            "The barn could support both agricultural and community uses",
+            "Dances prove it was never a barn",
+            "Agricultural use proves gatherings never occurred",
+            "Both records must be discarded"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Look for an unnecessary either-or assumption.",
+            "Different purposes can belong to the same building without occurring simultaneously.",
+            "Answer: The barn could support both agricultural and community uses. The documented uses can coexist across spaces or occasions. Neither activity erases the other, and the source gives no reason to discard both. The evidence does not claim that every use happened at the same moment. Warrant: Arcadia; ACME Evidence Desk; Document photographer."
+          ],
+          "explanation": "The documented uses can coexist across spaces or occasions. Neither activity erases the other, and the source gives no reason to discard both. The evidence does not claim that every use happened at the same moment. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Arcadia; ACME Evidence Desk; Document photographer."
+        },
+        "warrantAnswers": {
+          "city": "Arcadia",
+          "hideout": "ACME Evidence Desk",
+          "disguise": "Document photographer"
+        },
+        "funFact": "Arcadia’s Round Barn was completed in 1898. It served agricultural purposes and also hosted dances and community gatherings.",
+        "learningObjective": "Recognize multiple uses without imposing a false contradiction.",
+        "sources": [
+          "round"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Oklahoma",
+          "Arcadia"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Arcadia Round Barn historical paragraphs: 1898 and agricultural/community uses. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-arcadia-before-road",
+        "briefing": {
+          "headline": "BUILT FOR A ROAD THAT ARRIVED LATER?",
+          "report": "At Arcadia, The Bender has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Shamrock.",
+          "suspect": {
+            "name": "Oakley Curve",
+            "alias": "The Bender",
+            "emoji": "🔴",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "The Round Barn was completed in 1898. Route 66’s alignment through Arcadia dates to 1928.",
+          "A courier labels the barn \"built in 1898 specifically for the Route 66 traffic that arrived in 1928.\" The only supporting evidence is the two dates. This dossier is assigned to the fictional ACME Timeline Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Timeline Desk\". Witness identification: Ledger binder."
+        ],
+        "puzzle": {
+          "title": "Built for a road that arrived later?",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which conclusion is supported?",
+          "options": [
+            "The road arrived before the barn",
+            "The barn predates the Route 66 alignment through town",
+            "The dates prove both were built together",
+            "The barn must have been built in 1928"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Put the building and the road on the same timeline.",
+            "Earlier existence and later roadside fame are different parts of a place’s story.",
+            "Answer: The barn predates the Route 66 alignment through town. 1898 precedes 1928 by thirty years. The dates establish that the barn already existed before that alignment; they do not support the courier’s claimed original highway purpose. Reversing, merging or changing the dates contradicts the record. Warrant: Arcadia; ACME Timeline Desk; Ledger binder."
+          ],
+          "explanation": "1898 precedes 1928 by thirty years. The dates establish that the barn already existed before that alignment; they do not support the courier’s claimed original highway purpose. Reversing, merging or changing the dates contradicts the record. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Arcadia; ACME Timeline Desk; Ledger binder."
+        },
+        "warrantAnswers": {
+          "city": "Arcadia",
+          "hideout": "ACME Timeline Desk",
+          "disguise": "Ledger binder"
+        },
+        "funFact": "The Round Barn was completed in 1898. Route 66’s alignment through Arcadia dates to 1928.",
+        "learningObjective": "Test a claimed original purpose against chronology.",
+        "sources": [
+          "round"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Oklahoma",
+          "Arcadia"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Arcadia Round Barn: 1898 completion and 1928 Route 66 alignment; thirty years derived. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-arcadia-rafters",
+        "briefing": {
+          "headline": "THE BENT-TIMBER NOTEBOOK",
+          "report": "At Arcadia, The Bender has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Shamrock.",
+          "suspect": {
+            "name": "Oakley Curve",
+            "alias": "The Bender",
+            "emoji": "🔴",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "The barn’s curved rafters were made by soaking burr oak timbers and bending them into a mold.",
+          "Two fictional notebook fragments identify preparation with water and shaping in a mold. Candidate reconstructions either keep both actions, skip soaking, skip bending, or reverse their order. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Comparison Desk\". Witness identification: Map illustrator."
+        ],
+        "puzzle": {
+          "title": "The bent-timber notebook",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which reconstruction is supported by both fragments and the source?",
+          "options": [
+            "Bend first, then soak",
+            "Soak only; never bend",
+            "Soak, then bend into a mold",
+            "Bend dry timber; omit water"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Identify preparation and shaping as different steps.",
+            "The source explains which step prepares the wood for the next.",
+            "Answer: Soak, then bend into a mold. Soaking followed by bending retains the preparation and shaping in the stated order. Soaking alone omits the shaping; dry bending omits preparation; bending first reverses the described method. This is historical interpretation, not building instructions. Warrant: Arcadia; ACME Comparison Desk; Map illustrator."
+          ],
+          "explanation": "Soaking followed by bending retains the preparation and shaping in the stated order. Soaking alone omits the shaping; dry bending omits preparation; bending first reverses the described method. This is historical interpretation, not building instructions. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Arcadia; ACME Comparison Desk; Map illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Arcadia",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Map illustrator"
+        },
+        "funFact": "The barn’s curved rafters were made by soaking burr oak timbers and bending them into a mold.",
+        "learningObjective": "Reconstruct a historical method from two complementary observations.",
+        "sources": [
+          "round"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Oklahoma",
+          "Arcadia"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Round Barn burr oak soaking and mold-bending passage. No assertion of tornado resistance or structural suitability. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      }
+    ],
+    "route-66-shamrock": [
+      {
+        "caseId": "route-66-shamrock-receipts",
+        "briefing": {
+          "headline": "ONE BUILDING, TWO SERVICES",
+          "report": "At Shamrock, The Revision has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Tucumcari.",
+          "suspect": {
+            "name": "Della Draft",
+            "alias": "The Revision",
+            "emoji": "🏮",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "Shamrock’s 1936 Art Deco landmark combined Tower Station’s fuel service with the U-Drop Inn Cafe’s food service.",
+          "Two fictional receipts from the combined property list gasoline on one and a meal on the other. A courier says the different purchases prove one receipt belongs to a different landmark. This dossier is assigned to the fictional ACME Evidence Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Evidence Desk\". Witness identification: Document photographer."
+        ],
+        "puzzle": {
+          "title": "One building, two services",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which interpretation best fits the supplied history?",
+          "options": [
+            "Both receipts must be for meals",
+            "The landmark provided both services, so the receipts need not conflict",
+            "Fuel service proves the cafe never existed",
+            "Both receipts must be for fuel"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Check the range of functions before treating the purchases as incompatible.",
+            "The source describes two services in the same landmark.",
+            "Answer: The landmark provided both services, so the receipts need not conflict. A combined station and cafe can account for fuel and meal receipts. The records alone do not prove either receipt false, and changing both to one purchase type erases evidence. Warrant: Shamrock; ACME Evidence Desk; Document photographer."
+          ],
+          "explanation": "A combined station and cafe can account for fuel and meal receipts. The records alone do not prove either receipt false, and changing both to one purchase type erases evidence. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Shamrock; ACME Evidence Desk; Document photographer."
+        },
+        "warrantAnswers": {
+          "city": "Shamrock",
+          "hideout": "ACME Evidence Desk",
+          "disguise": "Document photographer"
+        },
+        "funFact": "Shamrock’s 1936 Art Deco landmark combined Tower Station’s fuel service with the U-Drop Inn Cafe’s food service.",
+        "learningObjective": "Reconcile different transaction types using a building’s combined functions.",
+        "sources": [
+          "tower"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Texas",
+          "Shamrock"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Tower Station: 1936 Art Deco and station/cafe combination; receipts are invented. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-shamrock-plan",
+        "briefing": {
+          "headline": "THE SHOP THAT REMAINED ON PAPER",
+          "report": "At Shamrock, The Revision has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Tucumcari.",
+          "suspect": {
+            "name": "Della Draft",
+            "alias": "The Revision",
+            "emoji": "🏮",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "A third space at Tower Station and U-Drop Inn was planned for retail but was used for overflow cafe seating.",
+          "ACME has a planning drawing marked \"shop\" and a later use record marked \"extra cafe seats.\" The courier insists that a plan proves what actually operated. This dossier is assigned to the fictional ACME Timeline Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Timeline Desk\". Witness identification: Ledger binder."
+        ],
+        "puzzle": {
+          "title": "The shop that remained on paper",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which report correctly distinguishes intention from outcome?",
+          "options": [
+            "Retail was planned; cafe seating was the actual use described",
+            "The plan proves a shop operated",
+            "The later use proves the plan never existed",
+            "Both records describe a fuel pump"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Identify which document records an intention and which records an outcome.",
+            "Plans can change; preserve the time and purpose of each record.",
+            "Answer: Retail was planned; cafe seating was the actual use described. The drawing records intended retail use; the later record describes cafe seating. A plan does not guarantee execution, and later changes do not erase the earlier plan. Neither record describes a pump. Warrant: Shamrock; ACME Timeline Desk; Ledger binder."
+          ],
+          "explanation": "The drawing records intended retail use; the later record describes cafe seating. A plan does not guarantee execution, and later changes do not erase the earlier plan. Neither record describes a pump. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Shamrock; ACME Timeline Desk; Ledger binder."
+        },
+        "warrantAnswers": {
+          "city": "Shamrock",
+          "hideout": "ACME Timeline Desk",
+          "disguise": "Ledger binder"
+        },
+        "funFact": "A third space at Tower Station and U-Drop Inn was planned for retail but was used for overflow cafe seating.",
+        "learningObjective": "Distinguish planned use from documented actual use.",
+        "sources": [
+          "tower"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Texas",
+          "Shamrock"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Tower Station paragraph on third space planned as retail and used as cafe overflow. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-shamrock-decision",
+        "briefing": {
+          "headline": "THE ROOM-USE VERDICT",
+          "report": "At Shamrock, The Revision has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Tucumcari.",
+          "suspect": {
+            "name": "Della Draft",
+            "alias": "The Revision",
+            "emoji": "🏮",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "The third space in the Shamrock landmark was intended for retail, then used for additional cafe seating.",
+          "Two fictional observations concern the later room: a seating list places diners there, and meal-service slips identify that same room. A retained old drawing still says \"retail.\" This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Comparison Desk\". Witness identification: Map illustrator."
+        ],
+        "puzzle": {
+          "title": "The room-use verdict",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which verdict gives the strongest weight to evidence of actual use?",
+          "options": [
+            "A retail shop operated because the old drawing says so",
+            "The room was unused because the documents differ",
+            "The room was a fuel-storage area",
+            "Cafe seating is supported by both later observations"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Compare what the documents were created to record.",
+            "Two accounts of use can agree even when an older plan names another purpose.",
+            "Answer: Cafe seating is supported by both later observations. The seating list and meal slips independently support cafe use. The old drawing establishes intention, not operation. Neither unused space nor fuel storage is supported by the observations. Warrant: Shamrock; ACME Comparison Desk; Map illustrator."
+          ],
+          "explanation": "The seating list and meal slips independently support cafe use. The old drawing establishes intention, not operation. Neither unused space nor fuel storage is supported by the observations. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Shamrock; ACME Comparison Desk; Map illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Shamrock",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Map illustrator"
+        },
+        "funFact": "The third space in the Shamrock landmark was intended for retail, then used for additional cafe seating.",
+        "learningObjective": "Weigh corroborating use records against an earlier proposal.",
+        "sources": [
+          "tower"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Texas",
+          "Shamrock"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Tower Station planned retail/actual overflow distinction; seating lists and service slips are fictional, not surviving archives. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      }
+    ],
+    "route-66-tucumcari": [
+      {
+        "caseId": "route-66-tucumcari-rooms",
+        "briefing": {
+          "headline": "THE GARAGE COUNTED AS A BEDROOM",
+          "report": "At Tucumcari, The Glow has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Painted Desert Inn.",
+          "suspect": {
+            "name": "Lena Lantern",
+            "alias": "The Glow",
+            "emoji": "🛎️",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "NPS describes the Blue Swallow Motel’s L-shaped plan with garages between sleeping units.",
+          "A fictional inventory classifies every space behind a door as a sleeping room. A second record identifies some of those spaces as garages. This dossier is assigned to the fictional ACME Evidence Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Evidence Desk\". Witness identification: Document photographer."
+        ],
+        "puzzle": {
+          "title": "The garage counted as a bedroom",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which revision respects the documented distinction?",
+          "options": [
+            "Count every doorway as a bedroom",
+            "Treat every space as a garage",
+            "Separate sleeping units from garages in the inventory",
+            "Delete the L-shaped plan"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Check function rather than assuming every similar opening means the same thing.",
+            "The second record gives a use for spaces that the first inventory lumped together.",
+            "Answer: Separate sleeping units from garages in the inventory. The source distinguishes garages from sleeping units. A door alone does not identify a bedroom; classifying every space as either type loses the distinction. The floor-plan shape need not be erased. Warrant: Tucumcari; ACME Evidence Desk; Document photographer."
+          ],
+          "explanation": "The source distinguishes garages from sleeping units. A door alone does not identify a bedroom; classifying every space as either type loses the distinction. The floor-plan shape need not be erased. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Tucumcari; ACME Evidence Desk; Document photographer."
+        },
+        "warrantAnswers": {
+          "city": "Tucumcari",
+          "hideout": "ACME Evidence Desk",
+          "disguise": "Document photographer"
+        },
+        "funFact": "NPS describes the Blue Swallow Motel’s L-shaped plan with garages between sleeping units.",
+        "learningObjective": "Avoid inferring room function from a superficial shared feature.",
+        "sources": [
+          "swallow"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "New Mexico",
+          "Tucumcari"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Blue Swallow first historical paragraph: L-shaped plan and interspersed garages. No current unit count or opening-year claim. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-tucumcari-preservation",
+        "briefing": {
+          "headline": "LISTING IS NOT CONSTRUCTION",
+          "report": "At Tucumcari, The Glow has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Painted Desert Inn.",
+          "suspect": {
+            "name": "Lena Lantern",
+            "alias": "The Glow",
+            "emoji": "🛎️",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "The Blue Swallow was listed in the National Register of Historic Places in 1993 and received an NPS restoration grant in 2007.",
+          "A courier labels 1993 as its construction date and 2007 as the listing date. The supplied source dates refer to preservation events. This dossier is assigned to the fictional ACME Timeline Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Timeline Desk\". Witness identification: Ledger binder."
+        ],
+        "puzzle": {
+          "title": "Listing is not construction",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which timeline retains the actual event labels?",
+          "options": [
+            "1993 construction → 2007 listing",
+            "1993 listing → 2007 restoration grant",
+            "2007 listing → 1993 restoration grant",
+            "1993 grant → 2007 construction"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Keep the event names attached to their dates.",
+            "Neither supplied record is a construction certificate; do not turn preservation paperwork into a building date.",
+            "Answer: 1993 listing → 2007 restoration grant. The source dates listing in 1993 and a grant in 2007. None of these records dates construction; each alternative swaps an event, substitutes construction, or reverses chronology. A grant date also does not by itself prove work completion that year. Warrant: Tucumcari; ACME Timeline Desk; Ledger binder."
+          ],
+          "explanation": "The source dates listing in 1993 and a grant in 2007. None of these records dates construction; each alternative swaps an event, substitutes construction, or reverses chronology. A grant date also does not by itself prove work completion that year. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Tucumcari; ACME Timeline Desk; Ledger binder."
+        },
+        "warrantAnswers": {
+          "city": "Tucumcari",
+          "hideout": "ACME Timeline Desk",
+          "disguise": "Ledger binder"
+        },
+        "funFact": "The Blue Swallow was listed in the National Register of Historic Places in 1993 and received an NPS restoration grant in 2007.",
+        "learningObjective": "Distinguish construction, designation and funding events.",
+        "sources": [
+          "swallow"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "New Mexico",
+          "Tucumcari"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Blue Swallow closing historical paragraph: 1993 listing and 2007 grant; grant distinguished from completed restoration. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-tucumcari-plan-match",
+        "briefing": {
+          "headline": "THE TWO-PART FLOOR-PLAN CHECK",
+          "report": "At Tucumcari, The Glow has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Painted Desert Inn.",
+          "suspect": {
+            "name": "Lena Lantern",
+            "alias": "The Glow",
+            "emoji": "🛎️",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "The Blue Swallow’s documented plan is L-shaped, with garages located between sleeping units.",
+          "ACME’s candidate plans are fictional: A has an L and interspersed garages; B has an L and a detached garage block; C has a straight row and interspersed garages; D has a straight row and a detached garage block. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Comparison Desk\". Witness identification: Map illustrator."
+        ],
+        "puzzle": {
+          "title": "The two-part floor-plan check",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which plan matches both independent features?",
+          "options": [
+            "Plan A",
+            "Plan B",
+            "Plan C",
+            "Plan D"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Check overall shape separately from where the garages sit.",
+            "A plan needs both the right outline and the right internal relationship.",
+            "Answer: Plan A. A preserves both the L shape and garages among sleeping units. B matches shape only; C matches garage arrangement only; D matches neither. These are comparison sketches, not visitor floor plans. Warrant: Tucumcari; ACME Comparison Desk; Map illustrator."
+          ],
+          "explanation": "A preserves both the L shape and garages among sleeping units. B matches shape only; C matches garage arrangement only; D matches neither. These are comparison sketches, not visitor floor plans. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Tucumcari; ACME Comparison Desk; Map illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Tucumcari",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Map illustrator"
+        },
+        "funFact": "The Blue Swallow’s documented plan is L-shaped, with garages located between sleeping units.",
+        "learningObjective": "Authenticate a diagram through overall form and internal arrangement.",
+        "sources": [
+          "swallow"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "New Mexico",
+          "Tucumcari"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Blue Swallow first paragraph: L shape and garages between sleeping units; no navigational or room-access claims. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      }
+    ],
+    "route-66-painted-desert": [
+      {
+        "caseId": "route-66-painted-desert-layers",
+        "briefing": {
+          "headline": "A SURFACE HIDING AN EARLIER CHAPTER",
+          "report": "At Painted Desert Inn, The Overcoat has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Barstow.",
+          "suspect": {
+            "name": "Stucco Scribe",
+            "alias": "The Overcoat",
+            "emoji": "🏜️",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "The CCC remodeled an existing stone Painted Desert Inn, adding stucco and wooden roof beams called vigas.",
+          "A fictional caption says the stucco appearance proves no earlier stone building existed. A construction note explicitly describes work on an existing stone structure. This dossier is assigned to the fictional ACME Evidence Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Evidence Desk\". Witness identification: Document photographer."
+        ],
+        "puzzle": {
+          "title": "A surface hiding an earlier chapter",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which interpretation accounts for both records?",
+          "options": [
+            "The surface proves the earlier building never existed",
+            "The beams prove it was only a wooden tent",
+            "The stone building must have been invented by the courier",
+            "A later exterior can cover an earlier building"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Separate the visible finish from the building’s earlier fabric.",
+            "The source uses remodeling language, which assumes an existing structure.",
+            "Answer: A later exterior can cover an earlier building. Remodeling can add a new exterior to an existing structure. Stucco does not erase evidence of earlier stonework, and beams alone do not establish a tent. The construction note directly supports the earlier building. Warrant: Painted Desert Inn; ACME Evidence Desk; Document photographer."
+          ],
+          "explanation": "Remodeling can add a new exterior to an existing structure. Stucco does not erase evidence of earlier stonework, and beams alone do not establish a tent. The construction note directly supports the earlier building. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Painted Desert Inn; ACME Evidence Desk; Document photographer."
+        },
+        "warrantAnswers": {
+          "city": "Painted Desert Inn",
+          "hideout": "ACME Evidence Desk",
+          "disguise": "Document photographer"
+        },
+        "funFact": "The CCC remodeled an existing stone Painted Desert Inn, adding stucco and wooden roof beams called vigas.",
+        "learningObjective": "Infer a layered building history from surface and construction evidence.",
+        "sources": [
+          "painted"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Arizona",
+          "Painted Desert Inn"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS CCC at Petrified Forest, Painted Desert Inn passage: existing stone building, stucco and vigas. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-painted-desert-chronology",
+        "briefing": {
+          "headline": "THE REMODEL BEFORE THE PURCHASE",
+          "report": "At Painted Desert Inn, The Overcoat has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Barstow.",
+          "suspect": {
+            "name": "Stucco Scribe",
+            "alias": "The Overcoat",
+            "emoji": "🏜️",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "NPS purchased the Painted Desert Inn in 1936. CCC remodeling work took place from 1937 through 1940.",
+          "An altered ACME timeline places completion of this CCC work before the NPS purchase. The archive must retain the supplied event dates. This dossier is assigned to the fictional ACME Timeline Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Timeline Desk\". Witness identification: Ledger binder."
+        ],
+        "puzzle": {
+          "title": "The remodel before the purchase",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which sequence corrects it?",
+          "options": [
+            "CCC completion → NPS purchase → CCC start",
+            "NPS purchase → CCC start → CCC completion",
+            "CCC start → CCC completion → NPS purchase",
+            "NPS purchase and CCC completion both in 1936"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Identify the acquisition, the start and the end as three events.",
+            "A date range has a beginning and an end; keep the purchase before both in this record.",
+            "Answer: NPS purchase → CCC start → CCC completion. The sequence is purchase in 1936, work starting in 1937, then completion in 1940. The alternatives reverse those dated events or collapse them into an unsupported single year. Warrant: Painted Desert Inn; ACME Timeline Desk; Ledger binder."
+          ],
+          "explanation": "The sequence is purchase in 1936, work starting in 1937, then completion in 1940. The alternatives reverse those dated events or collapse them into an unsupported single year. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Painted Desert Inn; ACME Timeline Desk; Ledger binder."
+        },
+        "warrantAnswers": {
+          "city": "Painted Desert Inn",
+          "hideout": "ACME Timeline Desk",
+          "disguise": "Ledger binder"
+        },
+        "funFact": "NPS purchased the Painted Desert Inn in 1936. CCC remodeling work took place from 1937 through 1940.",
+        "learningObjective": "Order acquisition and a multi-year work period without conflating them.",
+        "sources": [
+          "painted"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Arizona",
+          "Painted Desert Inn"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS CCC Painted Desert Inn section: 1936 acquisition and 1937–1940 work. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-painted-desert-original-copy",
+        "briefing": {
+          "headline": "THE LANTERN THAT LOOKED OLD",
+          "report": "At Painted Desert Inn, The Overcoat has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "The next recovered file points to Barstow.",
+          "suspect": {
+            "name": "Stucco Scribe",
+            "alias": "The Overcoat",
+            "emoji": "🏜️",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "CCC workers made punched-tin lanterns for the Painted Desert Inn.",
+          "Two ACME training props look like punched-tin lanterns. Prop A has a fictional accession card reading \"CCC-era object\" and a matching historical inventory number. Prop B has a card reading \"recent teaching reproduction\" and no historical inventory match. Appearance alone does not authenticate either prop. Assume these exercise records are reliable. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Comparison Desk\". Witness identification: Map illustrator."
+        ],
+        "puzzle": {
+          "title": "The lantern that looked old",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which conclusion is warranted within the exercise?",
+          "options": [
+            "Both are original solely because they look alike",
+            "Prop B is original because it looks newer",
+            "Only Prop A has the two records supporting historical provenance",
+            "Neither can be described because replicas exist"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Compare documentation separately from resemblance.",
+            "Look for agreement between the accession description and the independent inventory, using the exercise’s reliability assumption.",
+            "Answer: Only Prop A has the two records supporting historical provenance. A’s accession description and matching inventory independently support its recorded provenance under the stated reliability assumption. B is explicitly a reproduction. Similar appearance proves neither shared age nor shared origin; the existence of replicas does not erase reliable records. Warrant: Painted Desert Inn; ACME Comparison Desk; Map illustrator."
+          ],
+          "explanation": "A’s accession description and matching inventory independently support its recorded provenance under the stated reliability assumption. B is explicitly a reproduction. Similar appearance proves neither shared age nor shared origin; the existence of replicas does not erase reliable records. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Painted Desert Inn; ACME Comparison Desk; Map illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Painted Desert Inn",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Map illustrator"
+        },
+        "funFact": "CCC workers made punched-tin lanterns for the Painted Desert Inn.",
+        "learningObjective": "Distinguish resemblance from provenance and state the reliability assumption.",
+        "sources": [
+          "painted"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "Arizona",
+          "Painted Desert Inn"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS CCC passage: handmade punched-tin lanterns. Props, accession cards and inventory numbers entirely fictional; no claim of authenticating real objects. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      }
+    ],
+    "route-66-barstow": [
+      {
+        "caseId": "route-66-barstow-transport",
+        "briefing": {
+          "headline": "A ROADSIDE FILE WITH RAILWAY ROOTS",
+          "report": "At Barstow, The Late Arrival has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "Return to headquarters with the evidence from your selected route.",
+          "suspect": {
+            "name": "Harper Handoff",
+            "alias": "The Late Arrival",
+            "emoji": "🚂",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "Barstow’s Harvey House Railroad Depot, called Casa del Desierto, served railway travelers. Route 66’s 1926 alignment ran beside it.",
+          "A courier claims that being beside Route 66 proves the establishment originally served only motorists. A second document describes railway hospitality at the depot. This dossier is assigned to the fictional ACME Evidence Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Evidence Desk\". Witness identification: Document photographer."
+        ],
+        "puzzle": {
+          "title": "A roadside file with railway roots",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which account preserves both kinds of evidence?",
+          "options": [
+            "Its railway role could coexist with a later roadside setting",
+            "Its roadside setting erases all railway history",
+            "A depot cannot be beside a road",
+            "The railway document proves Route 66 never passed nearby"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Distinguish a place’s original role from a later route beside it.",
+            "Transport networks can overlap; their records need not contradict each other.",
+            "Answer: Its railway role could coexist with a later roadside setting. The railway role and adjacent road are compatible. Later roadside context does not erase earlier railway service, and neither form of transport rules out the other’s proximity. Warrant: Barstow; ACME Evidence Desk; Document photographer."
+          ],
+          "explanation": "The railway role and adjacent road are compatible. Later roadside context does not erase earlier railway service, and neither form of transport rules out the other’s proximity. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Barstow; ACME Evidence Desk; Document photographer."
+        },
+        "warrantAnswers": {
+          "city": "Barstow",
+          "hideout": "ACME Evidence Desk",
+          "disguise": "Document photographer"
+        },
+        "funFact": "Barstow’s Harvey House Railroad Depot, called Casa del Desierto, served railway travelers. Route 66’s 1926 alignment ran beside it.",
+        "learningObjective": "Recognize overlapping transportation histories without erasing earlier uses.",
+        "sources": [
+          "barstow",
+          "route"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "California",
+          "Barstow"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Harvey House: railway hospitality, Casa del Desierto name, adjacent 1926 alignment. Route overview confirms California as eighth state westward. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-barstow-replacement",
+        "briefing": {
+          "headline": "THE BUILDING IN THE WRONG YEAR",
+          "report": "At Barstow, The Late Arrival has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "Return to headquarters with the evidence from your selected route.",
+          "suspect": {
+            "name": "Harper Handoff",
+            "alias": "The Late Arrival",
+            "emoji": "🚂",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "The earlier Barstow Harvey House burned in 1908. The replacement building was constructed from 1910 to 1913.",
+          "An unaltered photograph shows the replacement already complete but has a capture-date caption of 1909. Assume the photograph is an actual observation, not a proposal or rendering, and both the building identification and source dates are correct. This dossier is assigned to the fictional ACME Timeline Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Timeline Desk\". Witness identification: Ledger binder."
+        ],
+        "puzzle": {
+          "title": "The building in the wrong year",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which conclusion follows?",
+          "options": [
+            "The replacement was complete in 1908",
+            "The photograph proves the fire never occurred",
+            "The replacement construction must have begun in 1909",
+            "The 1909 caption conflicts with the completed replacement shown"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Use the building’s identity and completion period together.",
+            "The caption predates even the stated start of replacement construction.",
+            "Answer: The 1909 caption conflicts with the completed replacement shown. An unaltered photograph cannot observe the replacement already complete in 1909 if it was built during 1910–1913. It does not overturn the fire record or establish an earlier construction start. The capture-date caption is the conflicting field. Warrant: Barstow; ACME Timeline Desk; Ledger binder."
+          ],
+          "explanation": "An unaltered photograph cannot observe the replacement already complete in 1909 if it was built during 1910–1913. It does not overturn the fire record or establish an earlier construction start. The capture-date caption is the conflicting field. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Barstow; ACME Timeline Desk; Ledger binder."
+        },
+        "warrantAnswers": {
+          "city": "Barstow",
+          "hideout": "ACME Timeline Desk",
+          "disguise": "Ledger binder"
+        },
+        "funFact": "The earlier Barstow Harvey House burned in 1908. The replacement building was constructed from 1910 to 1913.",
+        "learningObjective": "Use a replacement chronology to reject a misdated depiction.",
+        "sources": [
+          "barstow",
+          "route"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "California",
+          "Barstow"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Harvey House building-history paragraph: 1908 fire and 1910–1913 construction. Architect attribution omitted; photograph and caption invented, with an explicit observation-not-proposal assumption. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      },
+      {
+        "caseId": "route-66-barstow-telegram",
+        "briefing": {
+          "headline": "THE WARNING THAT ARRIVED TOO LATE",
+          "report": "At Barstow, The Late Arrival has altered an ACME evidence file. Recover the supported conclusion. All crimes, couriers, case records, captions, desk assignments and witness accounts in this exercise are fictional. ACME desks exist only in the story; they are not real park or business facilities.",
+          "callingCard": "A card reads: \"An attractive story is not enough. Check what the records support.\"",
+          "nextLead": "Return to headquarters with the evidence from your selected route.",
+          "suspect": {
+            "name": "Harper Handoff",
+            "alias": "The Late Arrival",
+            "emoji": "🚂",
+            "role": "Fictional archive courier altering evidence labels",
+            "dossierNote": "An invented ACME training character. No real person or institution is accused of a crime."
+          }
+        },
+        "clues": [
+          "Harvey House operations used telegrams sent ahead from approaching trains so staff could prepare for arriving passengers.",
+          "Two independent fictional logs agree: train arrival at 12:00; message received at 12:05. A courier claims this message provided advance notice for that arrival. All times are the same day and clock, with no transmission-delay correction needed. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Comparison Desk\". Witness identification: Map illustrator."
+        ],
+        "puzzle": {
+          "title": "The warning that arrived too late",
+          "description": "Compare the source note with the fictional case records. Everything needed is in the written clues; no map interaction or outside lookup is required.",
+          "question": "Which conclusion follows from both logs?",
+          "options": [
+            "The message arrived five minutes before the train",
+            "This message could not be advance notice for the 12:00 arrival",
+            "The logs prove no earlier message could have existed",
+            "The message proves the train arrived at 12:10"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Compare the receipt time with the event it supposedly warned about.",
+            "Limit the conclusion to this message; two records cannot prove that no other message ever existed.",
+            "Answer: This message could not be advance notice for the 12:00 arrival. 12:05 is five minutes after 12:00, so this particular message was not advance notice for that arrival. The records do not exclude a different earlier message and do not change the train’s logged arrival time. Warrant: Barstow; ACME Comparison Desk; Map illustrator."
+          ],
+          "explanation": "12:05 is five minutes after 12:00, so this particular message was not advance notice for that arrival. The records do not exclude a different earlier message and do not change the train’s logged arrival time. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Barstow; ACME Comparison Desk; Map illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Barstow",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Map illustrator"
+        },
+        "funFact": "Harvey House operations used telegrams sent ahead from approaching trains so staff could prepare for arriving passengers.",
+        "learningObjective": "Test a causal claim against independent timestamps while limiting the conclusion.",
+        "sources": [
+          "barstow",
+          "route"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "ROUTE 66",
+          "California",
+          "Barstow"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "Evidence, comparisons, sequences, choices and witness identification are written text. Color, images, sound, maps, travel experience and prior local knowledge are unnecessary.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Harvey House operations paragraph: advance telegrams; all clocks, message events and train logs fictional. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+        }
+      }
+    ]
+  },
+  "sources": {
+    "ambler": {
+      "title": "Ambler’s Texaco Gas Station",
+      "publisher": "National Park Service",
+      "url": "https://home.nps.gov/places/amblers-texaco-gas-station.htm",
+      "reviewed": true,
+      "reviewScope": "Historical description: 1933 office/canopy with domestic styling; early-1940s concrete-block service bay. No current services or opening hours."
+    },
+    "rock": {
+      "title": "Rock Fountain Court",
+      "publisher": "National Park Service",
+      "url": "https://www.nps.gov/places/rock-fountain-court.htm",
+      "reviewed": true,
+      "reviewScope": "Historical description: 1945 construction, nine freestanding cabins around a semicircular court, Ozark sandstone veneer on frame construction. Style alone cannot date construction; property is not open to the public."
+    },
+    "brush": {
+      "title": "Brush Creek Bridge",
+      "publisher": "National Park Service",
+      "url": "https://www.nps.gov/places/brush-creek-bridge.htm",
+      "reviewed": true,
+      "reviewScope": "Marsh reinforced-concrete paired arches, 1912 design patent and 1923 construction. Excludes bypass chronology and current traffic permissions."
+    },
+    "round": {
+      "title": "Arcadia Round Barn",
+      "publisher": "National Park Service",
+      "url": "https://home.nps.gov/places/arcadia-round-barn.htm",
+      "reviewed": true,
+      "reviewScope": "1898 completion; soaked/bent burr oak rafters; agricultural and community uses; Route 66 through Arcadia in 1928. Circular form does not establish storm resistance."
+    },
+    "tower": {
+      "title": "Tower Station and U-Drop Inn Cafe",
+      "publisher": "National Park Service",
+      "url": "https://www.nps.gov/places/tower-station-and-u-drop-inn-cafe.htm",
+      "reviewed": true,
+      "reviewScope": "1936 Art Deco building; fuel station and cafe; third space planned for retail but used for overflow cafe seating. No live business/service claims."
+    },
+    "swallow": {
+      "title": "Blue Swallow Motel",
+      "publisher": "National Park Service",
+      "url": "https://www.nps.gov/places/blue-swallow-motel.htm",
+      "reviewed": true,
+      "reviewScope": "Physical description: L-shaped plan, garages between sleeping units, stucco and stepped parapet; 1993 National Register listing and 2007 restoration grant. No construction/opening-date or current room-count claims."
+    },
+    "painted": {
+      "title": "Civilian Conservation Corps at Petrified Forest",
+      "publisher": "National Park Service",
+      "url": "https://www.nps.gov/pefo/learn/historyculture/civilian-conservation-corps.htm",
+      "reviewed": true,
+      "reviewScope": "Painted Desert Inn: 1936 NPS purchase, CCC 1937–1940 work, stucco and vigas added to existing stone building, handmade punched-tin lanterns. No Indigenous design reproduction or attribution beyond this scope."
+    },
+    "barstow": {
+      "title": "Harvey House Railroad Depot",
+      "publisher": "National Park Service",
+      "url": "https://www.nps.gov/places/harvey-house-railroad-depot.htm",
+      "reviewed": true,
+      "reviewScope": "Barstow/Casa del Desierto: railway hospitality, advance telegrams, 1908 fire and 1910–1913 replacement, adjacent 1926 Route 66 alignment. Excludes disputed architect attribution and current museum hours."
+    },
+    "route": {
+      "title": "Route 66 Overview",
+      "publisher": "National Park Service",
+      "url": "https://home.nps.gov/articles/route-66-overview.htm",
+      "reviewed": true,
+      "reviewScope": "Eight-state order: Illinois, Missouri, Kansas, Oklahoma, Texas, New Mexico, Arizona and California. Selected stops are not endpoints or a complete drivable alignment."
+    }
+  }
+}

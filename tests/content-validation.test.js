@@ -20,7 +20,7 @@ test('a new location needs a nonempty pool, not a classic-named case or five var
   pack.questions[pack.locations[0].id]=[];assert.throws(()=>core.validatePack(pack));
 });
 test('every current case has progressive hints and the authored packs remain available',()=>{
-  assert.deepEqual(manifest.packs.map(p=>p.id).sort(),['argentina-carmen','bentonville-carmen','northwest-arkansas-carmen','nwa-mountain-biking-carmen']);
+  assert.deepEqual(manifest.packs.map(p=>p.id).sort(),['argentina-carmen','arkansas-state-parks-carmen','bentonville-carmen','northwest-arkansas-carmen','nwa-mountain-biking-carmen','route-66-carmen']);
   for(const entry of manifest.packs){
     const pack=JSON.parse(fs.readFileSync(path.join(root,entry.path),'utf8'));
     for(const item of Object.values(pack.questions).flat())assert.equal(item.puzzle.hints.length,3,item.caseId);
