@@ -32,9 +32,9 @@ For a content or runtime regression, revert the affected change on `main` and pu
 
 ## Preview boundaries
 
-The October 13 NWA additions are local commits only. The last recorded deployment above contains the original two packs; no deployment of the four-pack tree has been verified. Use localhost to preview the additions.
+The October 13 NWA and October 14 parks/Route 66 additions are local commits and remain unpublished. The last recorded deployment above contains the original two packs. No deployment of the current six-pack tree has been verified. Use localhost to preview the additions.
 
-Hosting does not change the content or verification status: the Bentonville and Argentina packs are content version 4 (eight cases reviewed, 72 pending), and the Northwest Arkansas and NWA Mountain Biking packs are content version 2 (all 48 cases AI-assisted reviewed). The normal game still uses all case variants. Read the [reviewed exemplar guide](reviewed-exemplar.md) in the repository for the original eight activities (the [NWA case ledger](content-audit.md) covers the new packs); the Markdown guide is not part of the game site.
+Hosting does not change content or verification status: Bentonville and Argentina are content version 4 (eight reviewed cases, 72 pending); the two NWA packs are version 2 (48 AI-assisted reviewed); Arkansas State Parks and Route 66 are version 1 (48 AI-assisted reviewed). The normal game still uses all variants within the chosen pack. The [original exemplar](reviewed-exemplar.md), [NWA ledger](content-audit.md) and [parks/highway ledger](parks-route66-review.md) are repository companion documents, not game-site pages.
 
 Leaflet and map tiles still use network providers, with Text route/Retry map as documented. Saves and settings belong to the browser origin: localhost progress does not automatically transfer to `https://ryan258.github.io`. GitHub project sites under that same origin share browser storage; this game retains its existing Carmen storage keys.
 

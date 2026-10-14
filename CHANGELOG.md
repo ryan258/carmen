@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-14 — Arkansas State Parks and Route 66
+
+- Add two hand-authored content-version-1 packs, each with eight stops and three cases per stop. Route 66 selects one stop per state westward; the parks pack covers landscapes, buildings and living traditions.
+- Add 48 text-only investigations using timelines, conflicting captions, paired records and evidence limits. Every case includes three progressive hints, worked distractor reasoning and a witness-supported fictional desk/disguise warrant.
+- Record primary-source factual/editorial review attributed to Codex, with a complete case ledger and 16 companion transfer activities. The six-pack catalogue has 176 cases: 104 AI-assisted reviewed, 72 original cases pending.
+- Register both pack paths, extend the existing catalog assertion and synchronize current documentation. Existing route/session tests already enumerate manifest packs; no runtime or generated asset changes.
+- Review the complete accumulated diff; clarify the Jacksonport source excerpt, Mammoth Spring flow arrows and Ozark Folk Center log-correction question. Ryan refreshed GitNexus; the agent used read-only graph/source inspection and grouped the reviewed changes into local commits. Tests, content gates and browser checks remain for Ryan; the additions are unpublished.
+
 ## Unreleased — October 13, 2026 Northwest Arkansas packs
 
 - Review the complete working tree and correct the selector’s blanket pending-review warning. Reconcile README, roadmap, finish plan, QA, deployment and dependency guidance with the four-pack state while preserving historical evidence. Confirm no submodules or nested Git repositories.

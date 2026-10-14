@@ -3,7 +3,7 @@
 | Dependency | Current use | Failure behavior |
 | --- | --- | --- |
 | Local HTML/JS/CSS | Static application assets | Required; deploy/build them together |
-| Pack manifest and JSON | Four first-party content packs | Ten-second request timeout; generated Bentonville snapshot fallback; start/resume blocked during selection |
+| Pack manifest and JSON | Six first-party content packs | Ten-second request timeout; generated Bentonville snapshot fallback; start/resume blocked during selection |
 | Browser localStorage | One active save, settings, scores, statistics | Session-memory fallback and visible persistence warning |
 | Web Audio | Optional synthetic effects | Unsupported/blocked construction does not stop play; sound setting respected |
 | Leaflet 1.9.4 | Map rendering, pinned CDN assets with integrity | Async optional script; temporary route while loading; late readiness can render the active map; explicit Retry map after failure, using the same pinned source |

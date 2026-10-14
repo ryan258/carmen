@@ -1,6 +1,6 @@
 # Content audit state — October 13, 2026
 
-Both new packs have received a complete **48-case AI-assisted factual/editorial review** by Codex on October 13, 2026 and now use content version 2. The catalogue contains 128 cases: **56 reviewed, 72 pending**. The eight previously reviewed cases belong to the original packs. Their earlier automated results do not validate these additions.
+The Northwest Arkansas and NWA Mountain Biking packs received a complete **48-case AI-assisted factual/editorial review** by Codex on October 13, 2026 and use content version 2. This ledger retains that scope. The [October 14 parks/highway ledger](parks-route66-review.md) adds another 48 reviews; the current catalogue contains 176 cases: **104 reviewed, 72 pending**. Eight reviewed cases belong to the original packs. Earlier automated results do not validate these additions.
 
 This pass read the sources for the claims used in the clues, comparison choices and fun facts; checked each answer and distractor against the written evidence; and reconciled questions, explanations, all three hints, disguise and hideout. Some tourism pages were intermittently unavailable to direct browsing; their official indexed text supplied the relevant name/feature passages. The Slaughter Pen names are explicitly tied to the city’s July 2020 map, not a current trail-status assertion. Source flags cover the cited claims only. No tests, syntax/content gates, browser playthrough, assistive-technology acceptance or human learning evaluation were performed by the agent.
 
@@ -8,7 +8,7 @@ Corrections include specific questions for all 48 cases; intermediate hints that
 
 Ryan reported running `npx gitnexus analyze`; current index metadata records October 13. Read-only file impacts still returned UNKNOWN with no resolved callers. Source confirmation traced manifest loading, selected-case finale reuse and hint consumption. That graph limitation is not a low-risk verdict. That case-review pass changed content and documentation. The subsequent full-change review also corrected the selector’s blanket pending-review warning; it leaves case semantics unchanged. Shared coordinates, county coverage and map-pin accuracy are outside this case review; pins remain approximate orientation points.
 
-## New-pack case ledger
+## NWA case ledger
 
 The answer column is the authored key. The source column links the supporting pages; the locator column limits what was reviewed. Fictional codes, arithmetic, witnesses and props are judged for internal consistency, not attributed to those sources. Full questions, options, worked explanations and hints live in each JSON case.
 

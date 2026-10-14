@@ -2,7 +2,7 @@
 
 **Four Bentonville cases and four Argentina cases, in content version 4.** This is a bounded AI-assisted source and editorial review by Codex, not a human educator sign-off or a measured learning outcome. The other 72 cases in those two original packs remain `source-linked-needs-line-review`. The source passages below were read on October 12, 2026; the source registry’s reviewed flags apply only to the listed claims, not every statement on each website.
 
-The later [October 13 NWA ledger](content-audit.md) adds 48 reviewed cases across two new packs; the catalogue total is now 56 reviewed and 72 pending. This guide retains its original eight-case scope and version-specific verification evidence.
+The [October 13 NWA ledger](content-audit.md) and [October 14 parks/highway ledger](parks-route66-review.md) each add 48 reviewed cases across two additional packs. The catalogue total is now 104 reviewed and 72 pending. This guide retains its original eight-case scope and version-specific verification evidence.
 
 The eight rewritten cases are in the normal game pools. The game still chooses variants by seed and has no direct case picker or reviewed-only route. A four-stop Bentonville run cannot reach the Momentary, the fifth stop. Use this companion activity to work through exactly these eight cases without repeatedly restarting the game. The game and this guide use the same evidence and answer text; choice order here is varied and the game shuffles choices.
 
