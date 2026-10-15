@@ -1298,7 +1298,7 @@
           }
         },
         "clues": [
-          "The museum’s history summary includes a summer resort opening in 1917 and the beginnings of Bella Vista Village in the 1960s.",
+          "The museum’s history summary includes a summer resort opening in 1917 and the 1960s beginnings of its present history, later developed as Bella Vista Village.",
           "The fictional folder key assigns R to the resort chapter and V to the village chapter. The courier must sort earlier before later.",
           "The suspect is at the Bella Vista Historical Museum with the reversed stack. Witness identification: Exhibit researcher."
         ],
@@ -1344,7 +1344,7 @@
         "reviewEvidence": {
           "reviewer": "Codex (AI-assisted editorial review)",
           "date": "2026-10-13",
-          "notes": "Museum attraction listing: resort opening in 1917 and village beginnings in the 1960s only. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+          "notes": "Museum attraction listing: resort opening in 1917 and the 1960s beginnings of its present history (later Bella Vista Village) only. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
         }
       },
       {

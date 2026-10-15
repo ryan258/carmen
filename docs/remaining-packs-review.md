@@ -22,7 +22,7 @@ All essential evidence is written text. No image, color, audio, map manipulation
 - Fallingwater’s 1939 milestone describes completion of a group of structures; it does not assign every component the same individual completion year. Taliesin’s 1911 beginning does not establish that every surviving component is original.
 - SUE’s cast skull is a component-level claim, not an all-cast claim or a biological-sex determination. Rosa Parks bus restoration retains its documented mix of retained and replacement material.
 - The Babbage exhibit is explicitly the historical May 2008–January 2016 display. No current exhibition availability is inferred. The 1991 reconstruction and the object shown in the 2008 exhibit are not conflated.
-- Distinguish represented work from representation: design versus photograph credit, original versus cast/replica, historical event versus later display location, archive coverage versus a person’s lifespan.
+- Distinguish represented work from representation: original versus cast/replica, historical event versus later display location, archive coverage versus a person’s lifespan.
 - Explain distractors by content or fixed record names so runtime answer shuffling cannot invalidate an explanation. Calling cards contain no answer key.
 
 Some USACE project passages were available through official indexed text when direct opening or in-page search failed. The Museum of Flight’s shipyard scope note and linked collection abstract were also opened directly for the final review. Source notes limit the claims used; no unrelated third-party summaries supply those claims.
@@ -693,7 +693,7 @@ Scope: Building owner’s architectural description and source-page context revi
 
 ### Museums & Missing Labels — The Catalogue Caper
 
-Pack: `museums-missing-labels-carmen`, content version 1.
+Pack: `museums-missing-labels-carmen`, content version 2 (the Exploratorium entry case was replaced after its photographer credit could not be confirmed against the catalogue PDF).
 
 #### National Air and Space Museum
 
@@ -763,17 +763,17 @@ Scope: CHM historical exhibit page: design versus later construction, explicitly
 
 Sources: [Over the Water: Fujiko Nakaya](https://www.exploratorium.edu/sites/default/files/pdfs/over-the-water-catalog-nakaya.pdf).
 
-Scope: Official Over the Water catalogue: installation identity/year and separate artist/photo credits.
+Scope: Official Over the Water catalogue: installation identity (Fog Bridge #72494), year (2013) and artist (Fujiko Nakaya). No photograph credit is used.
 
 | Case | Supported answer | Worked reasoning |
 | --- | --- | --- |
 | `museums-missing-labels-exploratorium-interpretation` | An art installation can also support inquiry into perception | The catalogue connects art and physical/perceptual experience. Those roles can coexist; neither excluding art nor substituting a vehicle preserves the described installation. |
 | `museums-missing-labels-exploratorium-proposal` | A proposal can predate a later installation | A proposal records an intention before completion. The later installation date does not rule out earlier planning or make every sketch an observation of a finished work. These sheets are invented, not actual project-history claims. |
-| `museums-missing-labels-exploratorium-credits` | Artist: Fujiko Nakaya; photograph: Amy Snyder | Nakaya/artwork and Snyder/photograph preserves both attributions. Reversal misattributes the work; using one person for both erases a distinct documented role. No image is reproduced in this text-only exercise. |
+| `museums-missing-labels-exploratorium-credits` | Fog Bridge #72494; 2013; Fujiko Nakaya | Only this entry keeps title/number, year and artist together. The 1913 entry shifts the year by a century, #72949 alters the catalogue number, and “artist not recorded” discards an explicit attribution. No image is reproduced in this text-only exercise. |
 
-**Transfer:** Can an artwork be documented by a photograph with a different creator credit?
+**Transfer:** A copied catalogue entry has the right title and artist but the wrong year. Is it still accurate?
 
-**Expected reasoning:** Yes. Keep the artwork’s artist and the photograph’s author as separate roles.
+**Expected reasoning:** No. Title, number, year and artist each need to match the source.
 
 #### Science Museum of Minnesota
 

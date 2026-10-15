@@ -32,7 +32,7 @@ The answer column is the authored key. The source column links the supporting pa
 | `nwa-kayak` | Paddling park / Illinois River | Play: Kayak Park section; City History: downtown Sager Creek comparison. | [siloam](https://discoversiloam.com/play/), [sager](https://www.siloamsprings.gov/211/History) |
 | `nwa-museum` | Interview | Play: Siloam Springs Museum local-heritage mission; folder order invented. | [siloam](https://discoversiloam.com/play/) |
 | `nwa-cooper` | Mildred B. Cooper Memorial Chapel | Chapel and Architecture: steel arches/glass and Bella Vista–Eureka Springs distinction. | [cooper](https://www.cooperchapel.com/chapel), [cooper_architecture](https://www.cooperchapel.com/architecture) |
-| `nwa-bella-museum` | R, then V | Museum attraction listing: resort opening in 1917 and village beginnings in the 1960s only. | [bella_museum](https://www.discoverbellavistaar.com/attractions/bella-vista-museum) |
+| `nwa-bella-museum` | R, then V | Museum attraction listing: resort opening in 1917 and the 1960s beginnings of its present history (later Bella Vista Village) only. | [bella_museum](https://www.discoverbellavistaar.com/attractions/bella-vista-museum) |
 | `nwa-blowing-springs` | Blowing Springs Park | Visitor FAQ: Blowing Springs camping and trail references only. | [bella](https://www.discoverbellavistaar.com/faq) |
 | `nwa-elkhorn` | Reconstruction | Elkhorn Tavern tour stop: reconstruction from 1880s photos with original fireplace/foundations retained. | [elkhorn](https://www.nps.gov/peri/planyourvisit/stop-7-elkhorn-tavern.htm) |
 | `nwa-overlook` | East Overlook | East Overlook tour-stop page: site identity only; letter key invented. | [overlook](https://www.nps.gov/peri/planyourvisit/stop-7-east-overlook-day-2.htm) |

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 1,
+  "contentVersion": 2,
   "id": "museums-missing-labels-carmen",
   "title": "Where in the Museum Files is Carmen Sandiego?",
   "subtitle": "Museums & Missing Labels — The Catalogue Caper",
@@ -1029,7 +1029,7 @@
           }
         },
         "clues": [
-          "Source note: The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) by artist Fujiko Nakaya and credits a photograph to Amy Snyder. It interprets perception and physical experience through an art installation.",
+          "Source note: The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) as an artwork by Fujiko Nakaya. It interprets perception and physical experience through an art installation.",
           "ACME exercise: An invented exhibit brief describes an art installation used to explore perception and physical experience. A courier deletes its interpretive purpose because it is also art. This dossier is assigned to the fictional ACME Records Desk.",
           "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
         ],
@@ -1057,7 +1057,7 @@
           "hideout": "ACME Records Desk",
           "disguise": "Archive photographer"
         },
-        "funFact": "The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) by artist Fujiko Nakaya and credits a photograph to Amy Snyder. It interprets perception and physical experience through an art installation.",
+        "funFact": "The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) as an artwork by Fujiko Nakaya. It interprets perception and physical experience through an art installation.",
         "learningObjective": "Recognize complementary artistic and scientific interpretation.",
         "sources": [
           "exploratorium"
@@ -1075,7 +1075,7 @@
         "reviewEvidence": {
           "reviewer": "Codex (AI-assisted editorial review)",
           "date": "2026-10-14",
-          "notes": "Official Over the Water catalogue: installation identity/year and separate artist/photo credits. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+          "notes": "Official Over the Water catalogue: installation identity, year and artist. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
         }
       },
       {
@@ -1094,7 +1094,7 @@
           }
         },
         "clues": [
-          "Source note: The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) by artist Fujiko Nakaya and credits a photograph to Amy Snyder. It interprets perception and physical experience through an art installation.",
+          "Source note: The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) as an artwork by Fujiko Nakaya. It interprets perception and physical experience through an art installation.",
           "ACME exercise: ACME’s fictional packet labels one sheet a 2010 proposal sketch and another a 2013 installation record. A courier rejects the earlier sketch because the installation is dated 2013. This dossier is assigned to the fictional ACME Dispatch Desk.",
           "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
         ],
@@ -1122,7 +1122,7 @@
           "hideout": "ACME Dispatch Desk",
           "disguise": "Dispatch clerk"
         },
-        "funFact": "The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) by artist Fujiko Nakaya and credits a photograph to Amy Snyder. It interprets perception and physical experience through an art installation.",
+        "funFact": "The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) as an artwork by Fujiko Nakaya. It interprets perception and physical experience through an art installation.",
         "learningObjective": "Distinguish a proposal from an installation record.",
         "sources": [
           "exploratorium"
@@ -1140,13 +1140,13 @@
         "reviewEvidence": {
           "reviewer": "Codex (AI-assisted editorial review)",
           "date": "2026-10-14",
-          "notes": "Official Over the Water catalogue: installation identity/year and separate artist/photo credits. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+          "notes": "Official Over the Water catalogue: installation identity, year and artist. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
         }
       },
       {
         "caseId": "museums-missing-labels-exploratorium-credits",
         "briefing": {
-          "headline": "THE PHOTOGRAPHER CREDITED AS THE ARTIST",
+          "headline": "THE ALTERED CATALOGUE ENTRY",
           "report": "At Exploratorium, ACME’s copied dossier has been altered. The Credit Merger was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
           "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
           "nextLead": "The next copied dossier points to Science Museum of Minnesota.",
@@ -1159,36 +1159,36 @@
           }
         },
         "clues": [
-          "Source note: The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) by artist Fujiko Nakaya and credits a photograph to Amy Snyder. It interprets perception and physical experience through an art installation.",
-          "ACME exercise: Two copied credit fields identify Fujiko Nakaya as artist and Amy Snyder as photographer. A courier merges them into one creator field with the roles reversed. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "Source note: The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) as an artwork by Fujiko Nakaya. It interprets perception and physical experience through an art installation.",
+          "ACME exercise: A copied catalogue entry reads Fog Bridge #72494; 2013; Fujiko Nakaya. A courier’s version changes one detail without any source. This dossier is assigned to the fictional ACME Comparison Desk.",
           "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
         ],
         "puzzle": {
-          "title": "The photographer credited as the artist",
+          "title": "The altered catalogue entry",
           "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
-          "question": "Which credit line preserves the catalogue’s roles?",
+          "question": "Which entry preserves every detail in the source note?",
           "options": [
-            "Artist: Amy Snyder; photograph: Fujiko Nakaya",
-            "Artist: Fujiko Nakaya; photograph: Amy Snyder",
-            "Both fields must name the photographer only",
-            "Both fields must name the artist only"
+            "Fog Bridge #72494; 1913; Fujiko Nakaya",
+            "Fog Bridge #72494; 2013; Fujiko Nakaya",
+            "Fog Bridge #72494; 2013; artist not recorded",
+            "Fog Bridge #72949; 2013; Fujiko Nakaya"
           ],
           "correctIndex": 1,
           "visualHtml": "",
           "hints": [
-            "Ask which work each credit describes.",
-            "Artwork authorship and photograph authorship are separate.",
-            "Answer: Artist: Fujiko Nakaya; photograph: Amy Snyder. Nakaya/artwork and Snyder/photograph preserves both attributions. Reversal misattributes the work; using one person for both erases a distinct documented role. No image is reproduced in this text-only exercise. Warrant: Exploratorium; ACME Comparison Desk; Catalogue illustrator."
+            "Check title, number, year and artist separately.",
+            "One entry shifts the year by a century; another alters the catalogue number; another drops the artist.",
+            "Answer: Fog Bridge #72494; 2013; Fujiko Nakaya. It preserves every detail in the source note. The 1913 entry shifts the year by a century, the #72949 entry alters the catalogue number, and the unrecorded-artist entry discards an explicit attribution. No image is reproduced in this text-only exercise. Warrant: Exploratorium; ACME Comparison Desk; Catalogue illustrator."
           ],
-          "explanation": "Nakaya/artwork and Snyder/photograph preserves both attributions. Reversal misattributes the work; using one person for both erases a distinct documented role. No image is reproduced in this text-only exercise. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Exploratorium; ACME Comparison Desk; Catalogue illustrator."
+          "explanation": "The entry with #72494, 2013 and Fujiko Nakaya preserves every detail in the source note. The 1913 entry shifts the year by a century, the #72949 entry alters the catalogue number, and the unrecorded-artist entry discards an explicit attribution. No image is reproduced in this text-only exercise. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Exploratorium; ACME Comparison Desk; Catalogue illustrator."
         },
         "warrantAnswers": {
           "city": "Exploratorium",
           "hideout": "ACME Comparison Desk",
           "disguise": "Catalogue illustrator"
         },
-        "funFact": "The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) by artist Fujiko Nakaya and credits a photograph to Amy Snyder. It interprets perception and physical experience through an art installation.",
-        "learningObjective": "Preserve attribution when one creative work represents another.",
+        "funFact": "The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) as an artwork by Fujiko Nakaya. It interprets perception and physical experience through an art installation.",
+        "learningObjective": "Keep an artwork’s title, number, year and artist together in one catalogue entry.",
         "sources": [
           "exploratorium"
         ],
@@ -1205,7 +1205,7 @@
         "reviewEvidence": {
           "reviewer": "Codex (AI-assisted editorial review)",
           "date": "2026-10-14",
-          "notes": "Official Over the Water catalogue: installation identity/year and separate artist/photo credits. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+          "notes": "Official Over the Water catalogue: installation identity, year and artist. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
         }
       }
     ],
@@ -1835,7 +1835,7 @@
       "url": "https://www.exploratorium.edu/sites/default/files/pdfs/over-the-water-catalog-nakaya.pdf",
       "publisher": "Exploratorium",
       "reviewed": true,
-      "reviewScope": "Catalogue: Fog Bridge #72494, 2013; artist Fujiko Nakaya and photo credit Amy Snyder; art/perception/physics interpretation. No current fog timetable, weather or access promise."
+      "reviewScope": "Catalogue: Fog Bridge #72494, 2013; artist Fujiko Nakaya; art/perception/physics interpretation. No current fog timetable, weather or access promise."
     },
     "science-minnesota": {
       "title": "About the Science Museum of Minnesota",
