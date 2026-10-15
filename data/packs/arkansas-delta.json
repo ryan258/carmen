@@ -1,0 +1,1862 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 1,
+  "id": "arkansas-delta-carmen",
+  "title": "Where in the Arkansas Delta is Carmen Sandiego?",
+  "subtitle": "The River & Radio Caper",
+  "heroLocation": "ARKANSAS DELTA",
+  "intro": "Repair ACME’s copied Delta history and music files across eight stops. Keep communities, labor, institutions and changing landscapes in their documented context. All altered records, characters and ACME desks are fictional. The investigations concern teaching copies; no real cultural object is missing, handled or removed, and no testimony is invented for historical people. Map pins are approximate orientation points, not entrances or directions. Choose 4, 6 or 8 stops; one of three case variants is selected at each stop.",
+  "evidenceLabel": "ARKANSAS DELTA EVIDENCE",
+  "successMessage": "You recovered the corrected files and completed the final report for your selected route.",
+  "map": {
+    "center": {
+      "lat": 35.0,
+      "lng": -90.8
+    },
+    "zoom": 7,
+    "minZoom": 3,
+    "maxZoom": 16
+  },
+  "finalConfrontation": {
+    "title": "Final Report",
+    "rounds": [
+      {
+        "title": "First-stop evidence review",
+        "description": "Review the written evidence from the first selected case.",
+        "question": "Which answer matches the first case evidence?",
+        "options": [
+          "Selected case answer",
+          "Case alternative 1",
+          "Case alternative 2",
+          "Case alternative 3"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report copies the selected first case, including its choices, correct index, and explanation."
+      },
+      {
+        "title": "Route evidence review",
+        "description": "Review the written evidence from a case in the middle of the selected route.",
+        "question": "Which answer matches the route evidence?",
+        "options": [
+          "Selected case answer",
+          "Case alternative 1",
+          "Case alternative 2",
+          "Case alternative 3"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report copies the selected middle case, including its choices, correct index, and explanation."
+      },
+      {
+        "title": "Route inventory",
+        "description": "Use the collected tokens from your completed route.",
+        "question": "Which token came from the last completed stop?",
+        "options": [
+          "Last stop token",
+          "First stop token",
+          "Second stop token",
+          "Third stop token"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report resolves the last token and three other tokens from the completed route."
+      }
+    ]
+  },
+  "locations": [
+    {
+      "id": "arkansas-delta-cultural-center",
+      "name": "Delta Cultural Center",
+      "province": "Helena-West Helena, Arkansas",
+      "lat": 34.525,
+      "lng": -90.585,
+      "emoji": "📻",
+      "tagline": "Match an exhibit’s documented purpose with a research request.",
+      "henchman": {
+        "name": "Cora Carbon",
+        "alias": "The Crossfade",
+        "emoji": "📻",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Cultural Center Seal",
+        "char": "📻"
+      }
+    },
+    {
+      "id": "arkansas-delta-hampson",
+      "name": "Hampson Archeological Museum",
+      "province": "Wilson, Arkansas",
+      "lat": 35.568,
+      "lng": -90.042,
+      "emoji": "🏺",
+      "tagline": "Distinguish collection provenance from display address.",
+      "henchman": {
+        "name": "Nadine Notch",
+        "alias": "The Mislabel",
+        "emoji": "🏺",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Hampson Seal",
+        "char": "🏺"
+      }
+    },
+    {
+      "id": "arkansas-delta-parkin",
+      "name": "Parkin Archeological State Park",
+      "province": "Parkin, Arkansas",
+      "lat": 35.267,
+      "lng": -90.554,
+      "emoji": "📜",
+      "tagline": "Preserve uncertainty when copying an archaeological interpretation.",
+      "henchman": {
+        "name": "Perry Perhaps",
+        "alias": "The Certifier",
+        "emoji": "📜",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Parkin Seal",
+        "char": "📜"
+      }
+    },
+    {
+      "id": "arkansas-delta-lakeport",
+      "name": "Lakeport Plantation Museum",
+      "province": "Chicot County, Arkansas",
+      "lat": 33.256,
+      "lng": -91.154,
+      "emoji": "🏠",
+      "tagline": "Identify an omission that narrows a historical interpretation.",
+      "henchman": {
+        "name": "Sage Sidebar",
+        "alias": "The Omission",
+        "emoji": "🏠",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Lakeport Seal",
+        "char": "🏠"
+      }
+    },
+    {
+      "id": "arkansas-delta-dyess",
+      "name": "Historic Dyess Colony",
+      "province": "Dyess, Arkansas",
+      "lat": 35.598,
+      "lng": -90.215,
+      "emoji": "🎸",
+      "tagline": "Avoid projecting later fame backward onto a place’s origin.",
+      "henchman": {
+        "name": "Della Date",
+        "alias": "The Backdate",
+        "emoji": "🎸",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Dyess Seal",
+        "char": "🎸"
+      }
+    },
+    {
+      "id": "arkansas-delta-arkansas-post",
+      "name": "Arkansas Post National Memorial",
+      "province": "Arkansas",
+      "lat": 34.023,
+      "lng": -91.349,
+      "emoji": "🗺️",
+      "tagline": "Preserve a pre-existing community when describing a later institution.",
+      "henchman": {
+        "name": "Quinn Quarto",
+        "alias": "The Relocator",
+        "emoji": "🗺️",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Arkansas Post Seal",
+        "char": "🗺️"
+      }
+    },
+    {
+      "id": "arkansas-delta-mississippi-river",
+      "name": "Mississippi River State Park",
+      "province": "Marianna area, Arkansas",
+      "lat": 34.722,
+      "lng": -90.695,
+      "emoji": "🌳",
+      "tagline": "Recognize a partnership without inferring merged ownership.",
+      "henchman": {
+        "name": "Ridge Redline",
+        "alias": "The Divider",
+        "emoji": "🌳",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Mississippi River Seal",
+        "char": "🌳"
+      }
+    },
+    {
+      "id": "arkansas-delta-purchase",
+      "name": "Louisiana Purchase State Park",
+      "province": "Eastern Arkansas",
+      "lat": 34.645,
+      "lng": -91.051,
+      "emoji": "📐",
+      "tagline": "Distinguish political acquisition from later measurement.",
+      "henchman": {
+        "name": "Basil Baseline",
+        "alias": "The Axis Swap",
+        "emoji": "📐",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Purchase Seal",
+        "char": "📐"
+      }
+    }
+  ],
+  "questions": {
+    "arkansas-delta-cultural-center": [
+      {
+        "caseId": "arkansas-delta-cultural-center-subject",
+        "briefing": {
+          "headline": "A MUSIC FILE IN THE FLOOD DRAWER",
+          "report": "At Delta Cultural Center, ACME’s copied dossier has been altered. The Crossfade was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Hampson Archeological Museum.",
+          "suspect": {
+            "name": "Cora Carbon",
+            "alias": "The Crossfade",
+            "emoji": "📻",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The Delta Cultural Center interprets regional history in A Heritage of Determination at its Depot Museum, and Delta music through Delta Sounds at its Visitors Center.",
+          "ACME exercise: A fictional reference request concerns the region’s musical traditions. One copied caption calls Delta Sounds only a flood-history exhibit. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "A music file in the flood drawer",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which subject restores the documented scope?",
+          "options": [
+            "Delta music",
+            "Only dam construction",
+            "Only weather instruments",
+            "Only locomotive design"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Use the requested subject and the exhibit description together.",
+            "The name is less useful than the stated interpretive purpose.",
+            "Answer: Delta music. Delta Sounds concerns Delta music. The other subjects substitute unrelated exclusive topics and discard the supplied exhibit description. Warrant: Delta Cultural Center; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "Delta Sounds concerns Delta music. The other subjects substitute unrelated exclusive topics and discard the supplied exhibit description. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Delta Cultural Center; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Delta Cultural Center",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "The Delta Cultural Center interprets regional history in A Heritage of Determination at its Depot Museum, and Delta music through Delta Sounds at its Visitors Center.",
+        "learningObjective": "Match an exhibit’s documented purpose with a research request.",
+        "sources": [
+          "cultural-center"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Helena-West Helena, Arkansas",
+          "Delta Cultural Center"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Permanent Exhibits: named exhibit, subject and venue relationships. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-cultural-center-broadcast",
+        "briefing": {
+          "headline": "THE MASTER THAT AIRED BEFORE IT WAS CHECKED",
+          "report": "At Delta Cultural Center, ACME’s copied dossier has been altered. The Crossfade was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Hampson Archeological Museum.",
+          "suspect": {
+            "name": "Cora Carbon",
+            "alias": "The Crossfade",
+            "emoji": "📻",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The Delta Cultural Center interprets regional history in A Heritage of Determination at its Depot Museum, and Delta music through Delta Sounds at its Visitors Center.",
+          "ACME exercise: ACME’s invented radio exercise records an interview Monday, makes a transcript Tuesday, and approves that transcript Wednesday, all in one week. A courier claims the approved transcript aired Tuesday. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The master that aired before it was checked",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which conclusion fits this custody sequence?",
+          "options": [
+            "Approval happened before recording",
+            "The transcript could not exist Tuesday",
+            "The approved-transcript claim precedes recorded approval",
+            "The building dates the broadcast"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Distinguish a draft from its approved version.",
+            "Check when the particular version in the claim first exists.",
+            "Answer: The approved-transcript claim precedes recorded approval. The transcript can exist Tuesday, but approval is not logged until Wednesday. The broadcast claim concerns the approved version; reversing approval and recording or using a building’s age cannot repair it. These are fictional media records. Warrant: Delta Cultural Center; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "The transcript can exist Tuesday, but approval is not logged until Wednesday. The broadcast claim concerns the approved version; reversing approval and recording or using a building’s age cannot repair it. These are fictional media records. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Delta Cultural Center; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Delta Cultural Center",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "The Delta Cultural Center interprets regional history in A Heritage of Determination at its Depot Museum, and Delta music through Delta Sounds at its Visitors Center.",
+        "learningObjective": "Track a version through a fictional media-production chain.",
+        "sources": [
+          "cultural-center"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Helena-West Helena, Arkansas",
+          "Delta Cultural Center"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Permanent Exhibits: named exhibit, subject and venue relationships. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-cultural-center-venues",
+        "briefing": {
+          "headline": "THE TWO-ADDRESS EXHIBIT CARD",
+          "report": "At Delta Cultural Center, ACME’s copied dossier has been altered. The Crossfade was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Hampson Archeological Museum.",
+          "suspect": {
+            "name": "Cora Carbon",
+            "alias": "The Crossfade",
+            "emoji": "📻",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The Delta Cultural Center interprets regional history in A Heritage of Determination at its Depot Museum, and Delta music through Delta Sounds at its Visitors Center.",
+          "ACME exercise: Two independent copied fields require Delta Sounds as the music exhibit and Visitors Center as its venue. Card J has both; K says Delta Sounds/Depot; L says A Heritage of Determination/Visitors Center; M says A Heritage of Determination/Depot. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The two-address exhibit card",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which card preserves both fields for this request?",
+          "options": [
+            "Card M",
+            "Card K",
+            "Card L",
+            "Card J"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "A real pairing can still be the wrong answer to a particular request.",
+            "Check the exhibit identity before accepting its venue.",
+            "Answer: Card J. J retains the requested exhibit and its venue. K changes its venue, L changes its exhibit, and M describes a different valid pairing that does not meet this request. Warrant: Delta Cultural Center; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "J retains the requested exhibit and its venue. K changes its venue, L changes its exhibit, and M describes a different valid pairing that does not meet this request. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Delta Cultural Center; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Delta Cultural Center",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "The Delta Cultural Center interprets regional history in A Heritage of Determination at its Depot Museum, and Delta music through Delta Sounds at its Visitors Center.",
+        "learningObjective": "Keep exhibit identity, subject and venue connected.",
+        "sources": [
+          "cultural-center"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Helena-West Helena, Arkansas",
+          "Delta Cultural Center"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Permanent Exhibits: named exhibit, subject and venue relationships. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "arkansas-delta-hampson": [
+      {
+        "caseId": "arkansas-delta-hampson-places",
+        "briefing": {
+          "headline": "THE DISPLAY ADDRESS BECOMES A FINDSPOT",
+          "report": "At Hampson Archeological Museum, ACME’s copied dossier has been altered. The Mislabel was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Parkin Archeological State Park.",
+          "suspect": {
+            "name": "Nadine Notch",
+            "alias": "The Mislabel",
+            "emoji": "🏺",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Hampson’s museum in Wilson exhibits material from the Nodena site, interpreting a farming and trading community of the 1400–1650 period.",
+          "ACME exercise: A fictional catalogue changes a Nodena-origin field to Wilson solely because Wilson is the museum’s location. No new excavation evidence is supplied. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The display address becomes a findspot",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which record preserves both locations’ roles?",
+          "options": [
+            "Wilson must be the excavation location",
+            "Nodena is collection origin; Wilson is museum location",
+            "Every object was made in the museum",
+            "Delete collection origin"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Separate where an object is displayed from where it came from.",
+            "A collection can move while its archaeological provenance remains the same.",
+            "Answer: Nodena is collection origin; Wilson is museum location. The source distinguishes material from Nodena and display at Wilson. Museum address alone does not establish an excavation or manufacturing location; deleting origin loses provenance. Warrant: Hampson Archeological Museum; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The source distinguishes material from Nodena and display at Wilson. Museum address alone does not establish an excavation or manufacturing location; deleting origin loses provenance. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Hampson Archeological Museum; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Hampson Archeological Museum",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Hampson’s museum in Wilson exhibits material from the Nodena site, interpreting a farming and trading community of the 1400–1650 period.",
+        "learningObjective": "Distinguish collection provenance from display address.",
+        "sources": [
+          "hampson"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Wilson, Arkansas",
+          "Hampson Archeological Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "What to know: museum location, collection origin, agriculture/trading and interpreted period. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-hampson-period",
+        "briefing": {
+          "headline": "THE CATALOGUE DATE BECOMES THE OBJECT’S AGE",
+          "report": "At Hampson Archeological Museum, ACME’s copied dossier has been altered. The Mislabel was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Parkin Archeological State Park.",
+          "suspect": {
+            "name": "Nadine Notch",
+            "alias": "The Mislabel",
+            "emoji": "🏺",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Hampson’s museum in Wilson exhibits material from the Nodena site, interpreting a farming and trading community of the 1400–1650 period.",
+          "ACME exercise: ACME’s invented teaching card describes a replica of a Nodena-period object and says the replica was catalogued in 2020. A courier uses 2020 as the historical community’s occupation date. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The catalogue date becomes the object’s age",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction respects the fields?",
+          "options": [
+            "Move the community’s period to 2020",
+            "Call the catalogue date the excavation date",
+            "Use 2020 only for the fictional catalogue event",
+            "Claim the replica itself is a 1400s original"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Identify which event the modern date actually records.",
+            "A replica’s catalogue entry is different from the historical period it represents.",
+            "Answer: Use 2020 only for the fictional catalogue event. The 2020 date records a fictional modern cataloguing event. It does not date the historical community, an excavation or the replica’s ancient manufacture. The reference period belongs to the interpreted community. Warrant: Hampson Archeological Museum; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "The 2020 date records a fictional modern cataloguing event. It does not date the historical community, an excavation or the replica’s ancient manufacture. The reference period belongs to the interpreted community. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Hampson Archeological Museum; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Hampson Archeological Museum",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Hampson’s museum in Wilson exhibits material from the Nodena site, interpreting a farming and trading community of the 1400–1650 period.",
+        "learningObjective": "Separate an object representation, a historical period and a catalogue event.",
+        "sources": [
+          "hampson"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Wilson, Arkansas",
+          "Hampson Archeological Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "What to know: museum location, collection origin, agriculture/trading and interpreted period. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-hampson-livelihood",
+        "briefing": {
+          "headline": "ONE ECONOMY, TWO KINDS OF EVIDENCE",
+          "report": "At Hampson Archeological Museum, ACME’s copied dossier has been altered. The Mislabel was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Parkin Archeological State Park.",
+          "suspect": {
+            "name": "Nadine Notch",
+            "alias": "The Mislabel",
+            "emoji": "🏺",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Hampson’s museum in Wilson exhibits material from the Nodena site, interpreting a farming and trading community of the 1400–1650 period.",
+          "ACME exercise: Two fictional exhibit summaries note crop cultivation and a trading network. A draft label says farming makes trade impossible. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "One economy, two kinds of evidence",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which interpretation accommodates both observations?",
+          "options": [
+            "A farming community could also participate in trade",
+            "Trade proves there were no crops",
+            "Crops prove there was no trade",
+            "Neither observation can be recorded"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Check whether the two activities actually exclude one another.",
+            "A livelihood description can include more than one activity.",
+            "Answer: A farming community could also participate in trade. Cultivating crops and participating in trade are compatible activities, both described by the source. The alternatives discard one or both observations without evidence. Warrant: Hampson Archeological Museum; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "Cultivating crops and participating in trade are compatible activities, both described by the source. The alternatives discard one or both observations without evidence. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Hampson Archeological Museum; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Hampson Archeological Museum",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Hampson’s museum in Wilson exhibits material from the Nodena site, interpreting a farming and trading community of the 1400–1650 period.",
+        "learningObjective": "Reconcile complementary evidence about a historical community.",
+        "sources": [
+          "hampson"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Wilson, Arkansas",
+          "Hampson Archeological Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "What to know: museum location, collection origin, agriculture/trading and interpreted period. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "arkansas-delta-parkin": [
+      {
+        "caseId": "arkansas-delta-parkin-certainty",
+        "briefing": {
+          "headline": "MAY BECOMES DEFINITELY",
+          "report": "At Parkin Archeological State Park, ACME’s copied dossier has been altered. The Certifier was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Lakeport Plantation Museum.",
+          "suspect": {
+            "name": "Perry Perhaps",
+            "alias": "The Certifier",
+            "emoji": "📜",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Parkin preserves a Mississippian-period village site. Archeologists report evidence that de Soto may have visited in 1541; the site also has later lumber-company and African American school history.",
+          "ACME exercise: An ACME copy changes the reference’s may have visited into definitely visited. No additional evidence accompanies the stronger wording. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "May becomes definitely",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which edit keeps the original level of certainty?",
+          "options": [
+            "Declare all research worthless",
+            "Keep definitely because it sounds clearer",
+            "Use may have visited, as the reference does",
+            "Claim there was no village"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Compare how strongly the two versions make their claim.",
+            "A stronger conclusion needs stronger evidence, not just more confident wording.",
+            "Answer: Use may have visited, as the reference does. May have visited preserves a supported possibility without converting it into certainty. Uncertainty about the visit does not erase research or the village evidence. Warrant: Parkin Archeological State Park; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "May have visited preserves a supported possibility without converting it into certainty. Uncertainty about the visit does not erase research or the village evidence. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Parkin Archeological State Park; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Parkin Archeological State Park",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Parkin preserves a Mississippian-period village site. Archeologists report evidence that de Soto may have visited in 1541; the site also has later lumber-company and African American school history.",
+        "learningObjective": "Preserve uncertainty when copying an archaeological interpretation.",
+        "sources": [
+          "parkin"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Parkin, Arkansas",
+          "Parkin Archeological State Park"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "What to know: qualified 1541 interpretation and later Northern Ohio School/1920s industrial history. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-parkin-layers",
+        "briefing": {
+          "headline": "THE LATER SCHOOL ERASES AN EARLIER SITE",
+          "report": "At Parkin Archeological State Park, ACME’s copied dossier has been altered. The Certifier was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Lakeport Plantation Museum.",
+          "suspect": {
+            "name": "Perry Perhaps",
+            "alias": "The Certifier",
+            "emoji": "📜",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Parkin preserves a Mississippian-period village site. Archeologists report evidence that de Soto may have visited in 1541; the site also has later lumber-company and African American school history.",
+          "ACME exercise: A fictional file has a village-history section and a later school-history section. A courier removes the earlier section because the school occupied the same site later. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The later school erases an earlier site",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction preserves the layered history?",
+          "options": [
+            "Keep only the newest occupation",
+            "Keep only the oldest occupation",
+            "Merge all events into 1541",
+            "Keep the different periods as successive chapters"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Distinguish sharing a place from sharing a date.",
+            "A site can record successive communities and uses.",
+            "Answer: Keep the different periods as successive chapters. Later use does not invalidate earlier occupation. Keeping both chapters preserves their separate periods; deleting either or forcing all events into one date loses evidence. Warrant: Parkin Archeological State Park; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "Later use does not invalidate earlier occupation. Keeping both chapters preserves their separate periods; deleting either or forcing all events into one date loses evidence. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Parkin Archeological State Park; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Parkin Archeological State Park",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Parkin preserves a Mississippian-period village site. Archeologists report evidence that de Soto may have visited in 1541; the site also has later lumber-company and African American school history.",
+        "learningObjective": "Recognize multiple historical periods at one place.",
+        "sources": [
+          "parkin"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Parkin, Arkansas",
+          "Parkin Archeological State Park"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "What to know: qualified 1541 interpretation and later Northern Ohio School/1920s industrial history. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-parkin-evidence",
+        "briefing": {
+          "headline": "TWO SOURCES, ONE QUALIFIED REPORT",
+          "report": "At Parkin Archeological State Park, ACME’s copied dossier has been altered. The Certifier was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Lakeport Plantation Museum.",
+          "suspect": {
+            "name": "Perry Perhaps",
+            "alias": "The Certifier",
+            "emoji": "📜",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Parkin preserves a Mississippian-period village site. Archeologists report evidence that de Soto may have visited in 1541; the site also has later lumber-company and African American school history.",
+          "ACME exercise: An invented teaching packet contains an archaeological summary and an expedition-text summary. Both support a possible visit but neither says identification is certain. A courier labels the pair absolute proof. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "Two sources, one qualified report",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which report accurately combines the summaries?",
+          "options": [
+            "Two uncertain sources automatically create certainty",
+            "The summaries support a possible visit; certainty is not established",
+            "Discard both because they are different source types",
+            "A written account makes material evidence irrelevant"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Read the limits of each source as well as its agreement with the other.",
+            "Combining evidence does not justify wording stronger than the evidence supports.",
+            "Answer: The summaries support a possible visit; certainty is not established. Agreement can strengthen a possible interpretation without removing every uncertainty. Different source types can be complementary; neither automatically makes the other irrelevant or turns the claim into absolute proof. Warrant: Parkin Archeological State Park; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "Agreement can strengthen a possible interpretation without removing every uncertainty. Different source types can be complementary; neither automatically makes the other irrelevant or turns the claim into absolute proof. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Parkin Archeological State Park; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Parkin Archeological State Park",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Parkin preserves a Mississippian-period village site. Archeologists report evidence that de Soto may have visited in 1541; the site also has later lumber-company and African American school history.",
+        "learningObjective": "Combine complementary sources while preserving their stated limits.",
+        "sources": [
+          "parkin"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Parkin, Arkansas",
+          "Parkin Archeological State Park"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "What to know: qualified 1541 interpretation and later Northern Ohio School/1920s industrial history. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "arkansas-delta-lakeport": [
+      {
+        "caseId": "arkansas-delta-lakeport-scope",
+        "briefing": {
+          "headline": "THE LABEL THAT LEFT OUT THE WORKERS",
+          "report": "At Lakeport Plantation Museum, ACME’s copied dossier has been altered. The Omission was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Historic Dyess Colony.",
+          "suspect": {
+            "name": "Sage Sidebar",
+            "alias": "The Omission",
+            "emoji": "🏠",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Lakeport’s house dates to 1859. The museum interprets enslaved people’s lives as well as plantation owners and later sharecropping; the property was given to Arkansas State University in 2001.",
+          "ACME exercise: An invented exhibit draft describes only the owners’ house and says that fully represents the museum’s historical scope. The reference also identifies enslaved people and sharecropping history. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The label that left out the workers",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction preserves the documented scope?",
+          "options": [
+            "Keep the owners-only claim",
+            "Erase the house’s construction history",
+            "Include the house alongside enslaved labor and later social history",
+            "Replace the exhibit with an unrelated transport story"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Compare the draft’s coverage with every part of the source description.",
+            "A building’s appearance is only one part of the history interpreted here.",
+            "Answer: Include the house alongside enslaved labor and later social history. The source describes a broader history than the owners’ house alone. Including labor and later social history preserves that scope without deleting the building history. No fictional testimony is attributed to real historical people. Warrant: Lakeport Plantation Museum; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The source describes a broader history than the owners’ house alone. Including labor and later social history preserves that scope without deleting the building history. No fictional testimony is attributed to real historical people. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Lakeport Plantation Museum; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Lakeport Plantation Museum",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Lakeport’s house dates to 1859. The museum interprets enslaved people’s lives as well as plantation owners and later sharecropping; the property was given to Arkansas State University in 2001.",
+        "learningObjective": "Identify an omission that narrows a historical interpretation.",
+        "sources": [
+          "lakeport"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Chicot County, Arkansas",
+          "Lakeport Plantation Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "A-State introduction/history/gift passages; labor history is retained, not reduced to architecture. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-lakeport-dates",
+        "briefing": {
+          "headline": "BUILT IS NOT DONATED",
+          "report": "At Lakeport Plantation Museum, ACME’s copied dossier has been altered. The Omission was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Historic Dyess Colony.",
+          "suspect": {
+            "name": "Sage Sidebar",
+            "alias": "The Omission",
+            "emoji": "🏠",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Lakeport’s house dates to 1859. The museum interprets enslaved people’s lives as well as plantation owners and later sharecropping; the property was given to Arkansas State University in 2001.",
+          "ACME exercise: Two copied entries read house built: 1859 and property given to A-State: 2001. The courier replaces both event labels with built. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "Built is not donated",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which timeline retains the documented events?",
+          "options": [
+            "1859 construction → 2001 gift",
+            "2001 construction → 1859 gift",
+            "Both buildings constructed in 2001",
+            "Both events in 1859"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Attach the event name to its year.",
+            "Transfer of a property does not date its original construction.",
+            "Answer: 1859 construction → 2001 gift. 1859 dates the house and 2001 the gift. Substituting construction for the gift, reversing the dates or merging them into one year changes the documented events. Warrant: Lakeport Plantation Museum; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "1859 dates the house and 2001 the gift. Substituting construction for the gift, reversing the dates or merging them into one year changes the documented events. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Lakeport Plantation Museum; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Lakeport Plantation Museum",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Lakeport’s house dates to 1859. The museum interprets enslaved people’s lives as well as plantation owners and later sharecropping; the property was given to Arkansas State University in 2001.",
+        "learningObjective": "Separate building history from institutional acquisition.",
+        "sources": [
+          "lakeport"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Chicot County, Arkansas",
+          "Lakeport Plantation Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "A-State introduction/history/gift passages; labor history is retained, not reduced to architecture. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-lakeport-representation",
+        "briefing": {
+          "headline": "THE VIEW IS NOT THE WHOLE HISTORY",
+          "report": "At Lakeport Plantation Museum, ACME’s copied dossier has been altered. The Omission was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Historic Dyess Colony.",
+          "suspect": {
+            "name": "Sage Sidebar",
+            "alias": "The Omission",
+            "emoji": "🏠",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Lakeport’s house dates to 1859. The museum interprets enslaved people’s lives as well as plantation owners and later sharecropping; the property was given to Arkansas State University in 2001.",
+          "ACME exercise: Two fictional research requests concern the building’s construction and the people who labored at the plantation. A draft response supplies only a facade description and claims to answer both. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The view is not the whole history",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which verdict follows?",
+          "options": [
+            "The facade alone answers every labor-history question",
+            "Labor history proves the building has no date",
+            "The requests must refer to different properties",
+            "The facade description leaves the labor-history request unanswered"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Match each request to the evidence actually supplied.",
+            "A visually detailed answer can still omit an entire research question.",
+            "Answer: The facade description leaves the labor-history request unanswered. A facade description can address architecture while leaving a question about people’s labor unanswered. The source interprets both subjects; neither subject erases the other or proves they concern different properties. Warrant: Lakeport Plantation Museum; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "A facade description can address architecture while leaving a question about people’s labor unanswered. The source interprets both subjects; neither subject erases the other or proves they concern different properties. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Lakeport Plantation Museum; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Lakeport Plantation Museum",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Lakeport’s house dates to 1859. The museum interprets enslaved people’s lives as well as plantation owners and later sharecropping; the property was given to Arkansas State University in 2001.",
+        "learningObjective": "Assess whether an exhibit response answers every stated question.",
+        "sources": [
+          "lakeport"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Chicot County, Arkansas",
+          "Lakeport Plantation Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "A-State introduction/history/gift passages; labor history is retained, not reduced to architecture. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "arkansas-delta-dyess": [
+      {
+        "caseId": "arkansas-delta-dyess-origin",
+        "briefing": {
+          "headline": "THE FAMOUS RESIDENT BECOMES THE FOUNDER",
+          "report": "At Historic Dyess Colony, ACME’s copied dossier has been altered. The Backdate was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Arkansas Post National Memorial.",
+          "suspect": {
+            "name": "Della Date",
+            "alias": "The Backdate",
+            "emoji": "🎸",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Dyess was established in 1934 as an agricultural resettlement colony. The Cash family arrived in 1935; the planned layout combined a town center with surrounding farmsteads.",
+          "ACME exercise: An altered ACME caption says the colony was established only because Johnny Cash was already a famous musician. The reference instead describes an agricultural resettlement project predating the family’s arrival. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The famous resident becomes the founder",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which origin statement matches the source?",
+          "options": [
+            "An agricultural resettlement colony established in 1934",
+            "A concert venue founded after Cash became famous",
+            "A recording studio with no farms",
+            "A settlement created in 1935 by the Cash family"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Separate a place’s founding purpose from a later resident’s fame.",
+            "Check what the community was created to do before the family arrived.",
+            "Answer: An agricultural resettlement colony established in 1934. The source identifies the 1934 resettlement project. Later fame does not explain its original establishment, and the studio or family-founder alternatives contradict the supplied purpose and chronology. Warrant: Historic Dyess Colony; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The source identifies the 1934 resettlement project. Later fame does not explain its original establishment, and the studio or family-founder alternatives contradict the supplied purpose and chronology. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Historic Dyess Colony; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Historic Dyess Colony",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Dyess was established in 1934 as an agricultural resettlement colony. The Cash family arrived in 1935; the planned layout combined a town center with surrounding farmsteads.",
+        "learningObjective": "Avoid projecting later fame backward onto a place’s origin.",
+        "sources": [
+          "dyess"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Dyess, Arkansas",
+          "Historic Dyess Colony"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "A-State colony history and family-arrival account; no later departure year asserted. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-dyess-chronology",
+        "briefing": {
+          "headline": "THE ARRIVAL BEFORE THE COLONY",
+          "report": "At Historic Dyess Colony, ACME’s copied dossier has been altered. The Backdate was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Arkansas Post National Memorial.",
+          "suspect": {
+            "name": "Della Date",
+            "alias": "The Backdate",
+            "emoji": "🎸",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Dyess was established in 1934 as an agricultural resettlement colony. The Cash family arrived in 1935; the planned layout combined a town center with surrounding farmsteads.",
+          "ACME exercise: ACME has copied dates for colony establishment in 1934 and Cash family arrival in 1935. A timeline reverses their event labels. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The arrival before the colony",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which order repairs it?",
+          "options": [
+            "1935 establishment → 1934 arrival",
+            "Both events in 1935",
+            "1934 establishment → 1935 family arrival",
+            "Both events in 1934"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Keep event labels attached to their dates.",
+            "The community existed before this family’s recorded arrival.",
+            "Answer: 1934 establishment → 1935 family arrival. Establishment in 1934 precedes arrival in 1935. Reversing the labels or merging the dates loses a distinct event. Warrant: Historic Dyess Colony; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "Establishment in 1934 precedes arrival in 1935. Reversing the labels or merging the dates loses a distinct event. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Historic Dyess Colony; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Historic Dyess Colony",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Dyess was established in 1934 as an agricultural resettlement colony. The Cash family arrived in 1935; the planned layout combined a town center with surrounding farmsteads.",
+        "learningObjective": "Reconstruct a community timeline from different event types.",
+        "sources": [
+          "dyess"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Dyess, Arkansas",
+          "Historic Dyess Colony"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "A-State colony history and family-arrival account; no later departure year asserted. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-dyess-layout",
+        "briefing": {
+          "headline": "THE MISSING FARMSTEADS",
+          "report": "At Historic Dyess Colony, ACME’s copied dossier has been altered. The Backdate was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Arkansas Post National Memorial.",
+          "suspect": {
+            "name": "Della Date",
+            "alias": "The Backdate",
+            "emoji": "🎸",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Dyess was established in 1934 as an agricultural resettlement colony. The Cash family arrived in 1935; the planned layout combined a town center with surrounding farmsteads.",
+          "ACME exercise: Two fictional layout notes describe a central town area and farms extending around it. A copied diagram retains only a compact town block, with no farmsteads. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The missing farmsteads",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction preserves both notes?",
+          "options": [
+            "Retain only the compact block",
+            "Include the town center and the surrounding farmsteads",
+            "Remove the town center",
+            "Call every farmstead a separate unrelated colony"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Check both parts of the planned relationship.",
+            "A center-and-farmstead plan requires its central area and its outward agricultural pattern.",
+            "Answer: Include the town center and the surrounding farmsteads. The described plan includes center and surrounding farms. Keeping only one part or declaring the farms unrelated fails the stated relationship. This is a simplified archive diagram, not property or travel guidance. Warrant: Historic Dyess Colony; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "The described plan includes center and surrounding farms. Keeping only one part or declaring the farms unrelated fails the stated relationship. This is a simplified archive diagram, not property or travel guidance. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Historic Dyess Colony; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Historic Dyess Colony",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Dyess was established in 1934 as an agricultural resettlement colony. The Cash family arrived in 1935; the planned layout combined a town center with surrounding farmsteads.",
+        "learningObjective": "Read a settlement plan as a relationship between its parts.",
+        "sources": [
+          "dyess"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Dyess, Arkansas",
+          "Historic Dyess Colony"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "A-State colony history and family-arrival account; no later departure year asserted. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "arkansas-delta-arkansas-post": [
+      {
+        "caseId": "arkansas-delta-arkansas-post-community",
+        "briefing": {
+          "headline": "A BEGINNING THAT ERASED AN EARLIER COMMUNITY",
+          "report": "At Arkansas Post National Memorial, ACME’s copied dossier has been altered. The Relocator was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Mississippi River State Park.",
+          "suspect": {
+            "name": "Quinn Quarto",
+            "alias": "The Relocator",
+            "emoji": "🗺️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: In 1686 de Tonti established a French trading post at the existing Quapaw village of Osotouy. The post later relocated because of flooding; it became a US possession in 1803 and territorial capital in 1819.",
+          "ACME exercise: A copied caption says no community existed before the trading post. The source explicitly places that post at an existing Quapaw village. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "A beginning that erased an earlier community",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which account preserves the supplied evidence?",
+          "options": [
+            "The village began only after the trading post",
+            "The trading post was established at an existing Quapaw community",
+            "No one lived there before 1686",
+            "The trading post was a nineteenth-century invention"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Ask what was already present when the new trading post was established.",
+            "An institution’s founding date is not necessarily the start of a place’s human history.",
+            "Answer: The trading post was established at an existing Quapaw community. The reference identifies the Quapaw village as already present. Treating the trading post as the first human community, dating the village afterward or moving the post into the nineteenth century contradicts the supplied account. Warrant: Arkansas Post National Memorial; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The reference identifies the Quapaw village as already present. Treating the trading post as the first human community, dating the village afterward or moving the post into the nineteenth century contradicts the supplied account. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Arkansas Post National Memorial; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Arkansas Post National Memorial",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "In 1686 de Tonti established a French trading post at the existing Quapaw village of Osotouy. The post later relocated because of flooding; it became a US possession in 1803 and territorial capital in 1819.",
+        "learningObjective": "Preserve a pre-existing community when describing a later institution.",
+        "sources": [
+          "arkansas-post"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Arkansas",
+          "Arkansas Post National Memorial"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS opening history paragraphs; existing Quapaw community and relocations explicitly retained. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-arkansas-post-timeline",
+        "briefing": {
+          "headline": "THE CAPITAL BEFORE THE TRANSFER",
+          "report": "At Arkansas Post National Memorial, ACME’s copied dossier has been altered. The Relocator was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Mississippi River State Park.",
+          "suspect": {
+            "name": "Quinn Quarto",
+            "alias": "The Relocator",
+            "emoji": "🗺️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: In 1686 de Tonti established a French trading post at the existing Quapaw village of Osotouy. The post later relocated because of flooding; it became a US possession in 1803 and territorial capital in 1819.",
+          "ACME exercise: ACME’s copied records distinguish the 1686 trading post, 1803 US acquisition and 1819 territorial-capital role. A courier places territorial capital before US acquisition. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The capital before the transfer",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which sequence matches the records?",
+          "options": [
+            "1819 capital → 1803 acquisition → 1686 post",
+            "1803 post → 1686 capital → 1819 acquisition",
+            "1686 capital → 1803 post → 1819 acquisition",
+            "1686 post → 1803 acquisition → 1819 capital"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Sort each named event with its attached date.",
+            "The capital role comes after the acquisition in these records.",
+            "Answer: 1686 post → 1803 acquisition → 1819 capital. Post, acquisition, then territorial capital preserves all dated events. The other orders reverse chronology or swap the events assigned to the years. Warrant: Arkansas Post National Memorial; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "Post, acquisition, then territorial capital preserves all dated events. The other orders reverse chronology or swap the events assigned to the years. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Arkansas Post National Memorial; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Arkansas Post National Memorial",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "In 1686 de Tonti established a French trading post at the existing Quapaw village of Osotouy. The post later relocated because of flooding; it became a US possession in 1803 and territorial capital in 1819.",
+        "learningObjective": "Keep founding, political transfer and administrative role distinct.",
+        "sources": [
+          "arkansas-post"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Arkansas",
+          "Arkansas Post National Memorial"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS opening history paragraphs; existing Quapaw community and relocations explicitly retained. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-arkansas-post-locations",
+        "briefing": {
+          "headline": "ONE NAME ON SEVERAL MAP SHEETS",
+          "report": "At Arkansas Post National Memorial, ACME’s copied dossier has been altered. The Relocator was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Mississippi River State Park.",
+          "suspect": {
+            "name": "Quinn Quarto",
+            "alias": "The Relocator",
+            "emoji": "🗺️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: In 1686 de Tonti established a French trading post at the existing Quapaw village of Osotouy. The post later relocated because of flooding; it became a US possession in 1803 and territorial capital in 1819.",
+          "ACME exercise: Two fictional maps from different periods place the post at different sites. The history records relocations due to flooding. A courier says one map must be false solely because both use the same post name. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "One name on several map sheets",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which conclusion best fits?",
+          "options": [
+            "One institution’s name can persist through relocation",
+            "The name proves every map must show one fixed spot",
+            "A relocation erases all earlier records",
+            "Different locations prove the maps describe different rivers"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Distinguish a continuing institution from an unchanging physical site.",
+            "Check the dates and the source’s relocation history before rejecting a map.",
+            "Answer: One institution’s name can persist through relocation. Documented relocation allows the same post identity at different sites over time. A stable name does not establish a fixed coordinate, erase earlier records or prove different rivers. Warrant: Arkansas Post National Memorial; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "Documented relocation allows the same post identity at different sites over time. A stable name does not establish a fixed coordinate, erase earlier records or prove different rivers. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Arkansas Post National Memorial; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Arkansas Post National Memorial",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "In 1686 de Tonti established a French trading post at the existing Quapaw village of Osotouy. The post later relocated because of flooding; it became a US possession in 1803 and territorial capital in 1819.",
+        "learningObjective": "Reconcile a stable name with movement over time.",
+        "sources": [
+          "arkansas-post"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Arkansas",
+          "Arkansas Post National Memorial"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS opening history paragraphs; existing Quapaw community and relocations explicitly retained. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "arkansas-delta-mississippi-river": [
+      {
+        "caseId": "arkansas-delta-mississippi-river-partners",
+        "briefing": {
+          "headline": "TWO AGENCY NAMES, ONE PROJECT",
+          "report": "At Mississippi River State Park, ACME’s copied dossier has been altered. The Divider was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Louisiana Purchase State Park.",
+          "suspect": {
+            "name": "Ridge Redline",
+            "alias": "The Divider",
+            "emoji": "🌳",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Mississippi River State Park works in partnership with the St. Francis National Forest. The interpreted landscape includes the river, Crowley’s Ridge and the Arkansas Delta.",
+          "ACME exercise: A fictional brochure credits a state park and a national forest partnership. A courier deletes one credit because state and federal names supposedly cannot belong together. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "Two agency names, one project",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction preserves the reference?",
+          "options": [
+            "Keep only the state name",
+            "Keep only the federal name",
+            "Retain both partners and their distinct roles",
+            "Treat the partnership as proof of identical ownership everywhere"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Distinguish cooperation from organizational identity.",
+            "Different agencies can work together without becoming the same agency.",
+            "Answer: Retain both partners and their distinct roles. The reference explicitly describes a partnership. Keeping both roles preserves it; deleting a partner loses evidence, while shared work alone does not establish identical ownership of all land. Warrant: Mississippi River State Park; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The reference explicitly describes a partnership. Keeping both roles preserves it; deleting a partner loses evidence, while shared work alone does not establish identical ownership of all land. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Mississippi River State Park; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Mississippi River State Park",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Mississippi River State Park works in partnership with the St. Francis National Forest. The interpreted landscape includes the river, Crowley’s Ridge and the Arkansas Delta.",
+        "learningObjective": "Recognize a partnership without inferring merged ownership.",
+        "sources": [
+          "mississippi-river"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Marianna area, Arkansas",
+          "Mississippi River State Park"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "What to know: partnership and river/ridge/Delta landscape; no ownership or access inference. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-mississippi-river-dispatch",
+        "briefing": {
+          "headline": "THE DRAFT RELEASED BEFORE REVISION",
+          "report": "At Mississippi River State Park, ACME’s copied dossier has been altered. The Divider was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Louisiana Purchase State Park.",
+          "suspect": {
+            "name": "Ridge Redline",
+            "alias": "The Divider",
+            "emoji": "🌳",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Mississippi River State Park works in partnership with the St. Francis National Forest. The interpreted landscape includes the river, Crowley’s Ridge and the Arkansas Delta.",
+          "ACME exercise: In a fictional ACME exercise, a park text is drafted at 10:00, corrected at 10:15 and released at 10:30 on the same day and clock. A courier says the corrected version was released at 10:05. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The draft released before revision",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which statement is inconsistent?",
+          "options": [
+            "The draft existed at 10:00",
+            "The corrected version was released at 10:05",
+            "The correction followed drafting",
+            "The release followed correction"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Track which version each time refers to.",
+            "A corrected version cannot be released before that correction exists under the stated log.",
+            "Answer: The corrected version was released at 10:05. The corrected version is not recorded until 10:15 and release is at 10:30. The 10:05 claim precedes the required correction. The other statements preserve the log. Warrant: Mississippi River State Park; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "The corrected version is not recorded until 10:15 and release is at 10:30. The 10:05 claim precedes the required correction. The other statements preserve the log. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Mississippi River State Park; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Mississippi River State Park",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Mississippi River State Park works in partnership with the St. Francis National Forest. The interpreted landscape includes the river, Crowley’s Ridge and the Arkansas Delta.",
+        "learningObjective": "Check the timing of a versioned document.",
+        "sources": [
+          "mississippi-river"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Marianna area, Arkansas",
+          "Mississippi River State Park"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "What to know: partnership and river/ridge/Delta landscape; no ownership or access inference. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-mississippi-river-landscape",
+        "briefing": {
+          "headline": "THE RIDGE MISSING FROM THE LANDSCAPE FILE",
+          "report": "At Mississippi River State Park, ACME’s copied dossier has been altered. The Divider was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Louisiana Purchase State Park.",
+          "suspect": {
+            "name": "Ridge Redline",
+            "alias": "The Divider",
+            "emoji": "🌳",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Mississippi River State Park works in partnership with the St. Francis National Forest. The interpreted landscape includes the river, Crowley’s Ridge and the Arkansas Delta.",
+          "ACME exercise: Two independent fictional notes identify Crowley’s Ridge and the Arkansas Delta. A courier removes the ridge because a Delta region must contain no nearby raised land. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The ridge missing from the landscape file",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which report preserves both observations?",
+          "options": [
+            "A regional label erases every local variation",
+            "Ridge evidence proves there is no Delta context",
+            "Delete both because their names differ",
+            "Retain river, ridge and Delta as parts of the described landscape"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Separate a regional label from the variety of landforms it can include.",
+            "Use the source’s actual combination rather than a rigid assumption about one name.",
+            "Answer: Retain river, ridge and Delta as parts of the described landscape. The park reference deliberately connects river, ridge and Delta. A broad regional name does not erase a documented nearby landform; neither observation requires deleting the other. Warrant: Mississippi River State Park; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "The park reference deliberately connects river, ridge and Delta. A broad regional name does not erase a documented nearby landform; neither observation requires deleting the other. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Mississippi River State Park; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Mississippi River State Park",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Mississippi River State Park works in partnership with the St. Francis National Forest. The interpreted landscape includes the river, Crowley’s Ridge and the Arkansas Delta.",
+        "learningObjective": "Preserve local landscape variation within a regional description.",
+        "sources": [
+          "mississippi-river"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Marianna area, Arkansas",
+          "Mississippi River State Park"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "What to know: partnership and river/ridge/Delta landscape; no ownership or access inference. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "arkansas-delta-purchase": [
+      {
+        "caseId": "arkansas-delta-purchase-event",
+        "briefing": {
+          "headline": "THE PURCHASE SIGNED IN A SWAMP?",
+          "report": "At Louisiana Purchase State Park, ACME’s copied dossier has been altered. The Axis Swap was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "Return to headquarters with the corrected files from your selected route.",
+          "suspect": {
+            "name": "Basil Baseline",
+            "alias": "The Axis Swap",
+            "emoji": "📐",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The Louisiana Purchase occurred in 1803. In 1815 Robbins surveyed a north–south meridian and Brown a westward baseline; their intersection established an initial survey point.",
+          "ACME exercise: A fictional label dates the land purchase to 1815 because that year appears in the survey account. The source distinguishes the 1803 purchase from the later survey. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The purchase signed in a swamp?",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction preserves both events?",
+          "options": [
+            "1815 purchase and no earlier event",
+            "1803 survey and 1815 purchase",
+            "Both events in 1803",
+            "1803 purchase followed by the 1815 survey"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Attach the year to the specific event.",
+            "A survey of acquired land can occur after the acquisition.",
+            "Answer: 1803 purchase followed by the 1815 survey. 1803 dates the purchase and 1815 the later survey. Swapping the event labels or merging them into a single date changes the supplied history. Warrant: Louisiana Purchase State Park; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "1803 dates the purchase and 1815 the later survey. Swapping the event labels or merging them into a single date changes the supplied history. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Louisiana Purchase State Park; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Louisiana Purchase State Park",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "The Louisiana Purchase occurred in 1803. In 1815 Robbins surveyed a north–south meridian and Brown a westward baseline; their intersection established an initial survey point.",
+        "learningObjective": "Distinguish political acquisition from later measurement.",
+        "sources": [
+          "purchase"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Eastern Arkansas",
+          "Louisiana Purchase State Park"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Official boardwalk guide, survey-history passage; exercise diagrams have no legal or navigation authority. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-purchase-intersection",
+        "briefing": {
+          "headline": "THE POINT BEFORE THE LINES",
+          "report": "At Louisiana Purchase State Park, ACME’s copied dossier has been altered. The Axis Swap was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "Return to headquarters with the corrected files from your selected route.",
+          "suspect": {
+            "name": "Basil Baseline",
+            "alias": "The Axis Swap",
+            "emoji": "📐",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The Louisiana Purchase occurred in 1803. In 1815 Robbins surveyed a north–south meridian and Brown a westward baseline; their intersection established an initial survey point.",
+          "ACME exercise: ACME’s simplified diagram requires establishing a meridian and baseline before marking their intersection. A copied sequence places the intersection marker before either line is established. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The point before the lines",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which sequence respects the dependency?",
+          "options": [
+            "Establish the two lines → identify their crossing → record initial point",
+            "Record initial point → establish lines → identify crossing",
+            "Identify crossing → establish lines → erase point",
+            "Record point → identify crossing → establish lines"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Find what the initial point is defined in relation to.",
+            "An intersection requires two established lines in this model.",
+            "Answer: Establish the two lines → identify their crossing → record initial point. The crossing depends on the two lines, and the initial point is recorded at that crossing. Each alternative tries to use the point or crossing before its required reference lines exist. Warrant: Louisiana Purchase State Park; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "The crossing depends on the two lines, and the initial point is recorded at that crossing. Each alternative tries to use the point or crossing before its required reference lines exist. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Louisiana Purchase State Park; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Louisiana Purchase State Park",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "The Louisiana Purchase occurred in 1803. In 1815 Robbins surveyed a north–south meridian and Brown a westward baseline; their intersection established an initial survey point.",
+        "learningObjective": "Reconstruct a surveying dependency from a text diagram.",
+        "sources": [
+          "purchase"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Eastern Arkansas",
+          "Louisiana Purchase State Park"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Official boardwalk guide, survey-history passage; exercise diagrams have no legal or navigation authority. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "arkansas-delta-purchase-axes",
+        "briefing": {
+          "headline": "THE SURVEYORS’ SWAPPED HEADINGS",
+          "report": "At Louisiana Purchase State Park, ACME’s copied dossier has been altered. The Axis Swap was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "Return to headquarters with the corrected files from your selected route.",
+          "suspect": {
+            "name": "Basil Baseline",
+            "alias": "The Axis Swap",
+            "emoji": "📐",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The Louisiana Purchase occurred in 1803. In 1815 Robbins surveyed a north–south meridian and Brown a westward baseline; their intersection established an initial survey point.",
+          "ACME exercise: Two copied assignment records identify Robbins with the north–south meridian and Brown with the westward baseline. A new legend switches the names. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The surveyors’ swapped headings",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which legend restores both assignments?",
+          "options": [
+            "Robbins: westward baseline; Brown: north–south meridian",
+            "Robbins: north–south meridian; Brown: westward baseline",
+            "Both: north–south meridian only",
+            "Both: westward baseline only"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Check each person’s assignment separately.",
+            "The record distinguishes direction and line type for each survey party.",
+            "Answer: Robbins: north–south meridian; Brown: westward baseline. Robbins/meridian and Brown/baseline preserves both assignments. Switching them or assigning both parties one line discards the documented pairing. These are historical roles, not instructions to locate property boundaries. Warrant: Louisiana Purchase State Park; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "Robbins/meridian and Brown/baseline preserves both assignments. Switching them or assigning both parties one line discards the documented pairing. These are historical roles, not instructions to locate property boundaries. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Louisiana Purchase State Park; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Louisiana Purchase State Park",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "The Louisiana Purchase occurred in 1803. In 1815 Robbins surveyed a north–south meridian and Brown a westward baseline; their intersection established an initial survey point.",
+        "learningObjective": "Cross-check people, directions and line types without swapping roles.",
+        "sources": [
+          "purchase"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The River & Radio Caper",
+          "Eastern Arkansas",
+          "Louisiana Purchase State Park"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Official boardwalk guide, survey-history passage; exercise diagrams have no legal or navigation authority. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ]
+  },
+  "sources": {
+    "cultural-center": {
+      "title": "Delta Cultural Center permanent exhibits",
+      "url": "https://www.arkansasheritage.com/delta-cultural-center/exhibits/permanent-exhibits",
+      "publisher": "Arkansas Heritage",
+      "reviewed": true,
+      "reviewScope": "A Heritage of Determination in Depot Museum; Delta Sounds in Visitors Center. Broad regional history and music interpretation, not a current performance schedule."
+    },
+    "hampson": {
+      "title": "Hampson Archeological Museum State Park",
+      "url": "https://www.arkansas.com/state-parks/explore/parks/hampson-archeological-museum-state-park",
+      "publisher": "Arkansas State Parks",
+      "reviewed": true,
+      "reviewScope": "What to know: collection from Nodena, museum at Wilson, farming/trade and the interpreted 1400–1650 period. No claim that museum location equals excavation location or that descendant communities disappeared."
+    },
+    "parkin": {
+      "title": "Parkin Archeological State Park",
+      "url": "https://www.arkansas.com/state-parks/explore/parks/parkin-archeological-state-park",
+      "publisher": "Arkansas State Parks",
+      "reviewed": true,
+      "reviewScope": "What to know: Mississippian village; evidence de Soto may have visited in 1541; later Northern Ohio School and 1920s lumber-company history. Preserve uncertainty; do not reconcile differing published occupation ranges by inventing a date."
+    },
+    "lakeport": {
+      "title": "Lakeport Plantation Museum",
+      "url": "https://www.astate.edu/outreach/history-and-heritage/heritage-sites/lakeport-plantation-museum/",
+      "publisher": "Arkansas State University",
+      "reviewed": true,
+      "reviewScope": "Intro/history: 1859 house, lives of enslaved people and owners, slavery/sharecropping interpretation, gift to A-State in 2001. No invented testimony or claim that all fabric is original."
+    },
+    "dyess": {
+      "title": "History of Dyess Colony",
+      "url": "https://www.astate.edu/outreach/history-and-heritage/heritage-sites/dyess-cash/history.html",
+      "publisher": "Arkansas State University",
+      "reviewed": true,
+      "reviewScope": "History: 1934 agricultural resettlement colony, town-center/farmstead layout, Cash family arrival in 1935. Avoid conflicting later departure/dedication dates."
+    },
+    "arkansas-post": {
+      "title": "Arkansas Post: History and Culture",
+      "url": "https://www.nps.gov/arpo/learn/historyculture/index.htm",
+      "publisher": "National Park Service",
+      "reviewed": true,
+      "reviewScope": "Opening: de Tonti trading post at existing Quapaw village of Osotouy in 1686, relocations due to flooding, US acquisition 1803 and territorial capital 1819. No empty-land or unchanged-location claim."
+    },
+    "mississippi-river": {
+      "title": "Mississippi River State Park",
+      "url": "https://www.arkansas.com/state-parks/explore/parks/mississippi-river-state-park",
+      "publisher": "Arkansas State Parks",
+      "reviewed": true,
+      "reviewScope": "What to know: partnership with St. Francis National Forest, river/ridge/Delta landscape and named Great River Road/Crowley’s Ridge Parkway. No visitor access promises or ownership inference."
+    },
+    "purchase": {
+      "title": "Louisiana Purchase survey boardwalk guide",
+      "url": "https://www.arkansas.com/sites/default/files/2025-12/4d4ecb59e64ea6fd04ccc8f688879d23_louisianapurchaseboardwalkguidebook.pdf",
+      "publisher": "Arkansas State Parks",
+      "reviewed": true,
+      "reviewScope": "Survey-history passage: 1803 purchase versus 1815 survey, Robbins north–south meridian and Brown westward baseline, intersection as initial point. Fictional diagrams are not legal property surveys."
+    }
+  }
+}

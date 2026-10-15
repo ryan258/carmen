@@ -1,0 +1,1862 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 1,
+  "id": "museums-missing-labels-carmen",
+  "title": "Where in the Museum Files is Carmen Sandiego?",
+  "subtitle": "Museums & Missing Labels — The Catalogue Caper",
+  "heroLocation": "MUSEUMS MISSING LABELS",
+  "intro": "Repair ACME’s copied collection labels at eight US museums. Distinguish originals, casts, reconstructions, catalogue dates, artistic credits and historical context. All disputed labels, teaching props, witnesses and desks are fictional. Historical exhibitions are dated archive examples, not promises of current display. No real artifact is missing or handled, and every question is solvable from text. Map pins are approximate orientation points, not entrances or directions. Choose 4, 6 or 8 stops; one of three case variants is selected at each stop.",
+  "evidenceLabel": "MUSEUMS MISSING LABELS EVIDENCE",
+  "successMessage": "You recovered the corrected files and completed the final report for your selected route.",
+  "map": {
+    "center": {
+      "lat": 39.0,
+      "lng": -100.0
+    },
+    "zoom": 4,
+    "minZoom": 3,
+    "maxZoom": 16
+  },
+  "finalConfrontation": {
+    "title": "Final Report",
+    "rounds": [
+      {
+        "title": "First-stop evidence review",
+        "description": "Review the written evidence from the first selected case.",
+        "question": "Which answer matches the first case evidence?",
+        "options": [
+          "Selected case answer",
+          "Case alternative 1",
+          "Case alternative 2",
+          "Case alternative 3"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report copies the selected first case, including its choices, correct index, and explanation."
+      },
+      {
+        "title": "Route evidence review",
+        "description": "Review the written evidence from a case in the middle of the selected route.",
+        "question": "Which answer matches the route evidence?",
+        "options": [
+          "Selected case answer",
+          "Case alternative 1",
+          "Case alternative 2",
+          "Case alternative 3"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report copies the selected middle case, including its choices, correct index, and explanation."
+      },
+      {
+        "title": "Route inventory",
+        "description": "Use the collected tokens from your completed route.",
+        "question": "Which token came from the last completed stop?",
+        "options": [
+          "Last stop token",
+          "First stop token",
+          "Second stop token",
+          "Third stop token"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report resolves the last token and three other tokens from the completed route."
+      }
+    ]
+  },
+  "locations": [
+    {
+      "id": "museums-missing-labels-air-space",
+      "name": "National Air and Space Museum",
+      "province": "Washington, DC",
+      "lat": 38.888,
+      "lng": -77.02,
+      "emoji": "🛩️",
+      "tagline": "Distinguish historical event location from institutional location.",
+      "henchman": {
+        "name": "Avery Accession",
+        "alias": "The Copy Count",
+        "emoji": "🛩️",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Air Space Seal",
+        "char": "🛩️"
+      }
+    },
+    {
+      "id": "museums-missing-labels-field",
+      "name": "Field Museum",
+      "province": "Chicago, Illinois",
+      "lat": 41.867,
+      "lng": -87.617,
+      "emoji": "🦖",
+      "tagline": "Avoid extending a part-level material claim to an entire display.",
+      "henchman": {
+        "name": "Fossil Finn",
+        "alias": "The Whole Cast",
+        "emoji": "🦖",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Field Seal",
+        "char": "🦖"
+      }
+    },
+    {
+      "id": "museums-missing-labels-henry-ford",
+      "name": "The Henry Ford",
+      "province": "Dearborn, Michigan",
+      "lat": 42.303,
+      "lng": -83.234,
+      "emoji": "🚌",
+      "tagline": "Preserve historical context through an object’s later relocation.",
+      "henchman": {
+        "name": "Rory Record",
+        "alias": "The Untouched Label",
+        "emoji": "🚌",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Henry Ford Seal",
+        "char": "🚌"
+      }
+    },
+    {
+      "id": "museums-missing-labels-computer-history",
+      "name": "Computer History Museum",
+      "province": "Mountain View, California",
+      "lat": 37.414,
+      "lng": -122.077,
+      "emoji": "⚙️",
+      "tagline": "Distinguish design age from the age of a reconstruction.",
+      "henchman": {
+        "name": "Dot Difference",
+        "alias": "The Antique Claim",
+        "emoji": "⚙️",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Computer History Seal",
+        "char": "⚙️"
+      }
+    },
+    {
+      "id": "museums-missing-labels-exploratorium",
+      "name": "Exploratorium",
+      "province": "San Francisco, California",
+      "lat": 37.801,
+      "lng": -122.397,
+      "emoji": "🌫️",
+      "tagline": "Recognize complementary artistic and scientific interpretation.",
+      "henchman": {
+        "name": "Fia Focus",
+        "alias": "The Credit Merger",
+        "emoji": "🌫️",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Exploratorium Seal",
+        "char": "🌫️"
+      }
+    },
+    {
+      "id": "museums-missing-labels-science-minnesota",
+      "name": "Science Museum of Minnesota",
+      "province": "St. Paul, Minnesota",
+      "lat": 44.942,
+      "lng": -93.098,
+      "emoji": "🔬",
+      "tagline": "Distinguish institutional origin from a facility milestone.",
+      "henchman": {
+        "name": "Merriam Memo",
+        "alias": "The New Beginning",
+        "emoji": "🔬",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Science Minnesota Seal",
+        "char": "🔬"
+      }
+    },
+    {
+      "id": "museums-missing-labels-jazz",
+      "name": "American Jazz Museum",
+      "province": "Kansas City, Missouri",
+      "lat": 39.089,
+      "lng": -94.562,
+      "emoji": "🎷",
+      "tagline": "Avoid treating curatorial selection as historical exhaustiveness.",
+      "henchman": {
+        "name": "Jazzy Jules",
+        "alias": "The Complete List",
+        "emoji": "🎷",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Jazz Seal",
+        "char": "🎷"
+      }
+    },
+    {
+      "id": "museums-missing-labels-flight",
+      "name": "The Museum of Flight",
+      "province": "Seattle, Washington",
+      "lat": 47.518,
+      "lng": -122.296,
+      "emoji": "🛫",
+      "tagline": "Recognize adaptive reuse through successive function records.",
+      "henchman": {
+        "name": "Boe Beacon",
+        "alias": "The Lifespan Slip",
+        "emoji": "🛫",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Flight Seal",
+        "char": "🛫"
+      }
+    }
+  ],
+  "questions": {
+    "museums-missing-labels-air-space": [
+      {
+        "caseId": "museums-missing-labels-air-space-places",
+        "briefing": {
+          "headline": "THE DISPLAY ADDRESS BECOMES THE FLIGHT SITE",
+          "report": "At National Air and Space Museum, ACME’s copied dossier has been altered. The Copy Count was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Field Museum.",
+          "suspect": {
+            "name": "Avery Accession",
+            "alias": "The Copy Count",
+            "emoji": "🛩️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The museum’s 1903 Wright Flyer record concerns the aircraft’s North Carolina flights in 1903. The collection record and display institution are distinct from the historical flight location.",
+          "ACME exercise: ACME’s copied label changes the historical flight location to Washington solely because the museum is there. Its attached historical reference identifies North Carolina. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The display address becomes the flight site",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction keeps the two locations’ roles?",
+          "options": [
+            "The museum address proves the flights occurred there",
+            "North Carolina is historical flight context; Washington is museum context",
+            "The object was necessarily built in the museum",
+            "Erase the historical location"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Separate where an event occurred from where its record or object is held.",
+            "Objects and documents can move after an event.",
+            "Answer: North Carolina is historical flight context; Washington is museum context. The source ties the flights to North Carolina. A museum address is not automatically the event or manufacturing location; deleting the historical field loses context. Warrant: National Air and Space Museum; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The source ties the flights to North Carolina. A museum address is not automatically the event or manufacturing location; deleting the historical field loses context. The dossier assignment and waiting witness identify the same fictional desk. Warrant: National Air and Space Museum; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "National Air and Space Museum",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "The museum’s 1903 Wright Flyer record concerns the aircraft’s North Carolina flights in 1903. The collection record and display institution are distinct from the historical flight location.",
+        "learningObjective": "Distinguish historical event location from institutional location.",
+        "sources": [
+          "air-space"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Washington, DC",
+          "National Air and Space Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Smithsonian object record: aircraft identity and historical flight context. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-air-space-identifier",
+        "briefing": {
+          "headline": "A NUMBER MASQUERADING AS A DATE",
+          "report": "At National Air and Space Museum, ACME’s copied dossier has been altered. The Copy Count was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Field Museum.",
+          "suspect": {
+            "name": "Avery Accession",
+            "alias": "The Copy Count",
+            "emoji": "🛩️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The museum’s 1903 Wright Flyer record concerns the aircraft’s North Carolina flights in 1903. The collection record and display institution are distinct from the historical flight location.",
+          "ACME exercise: A fictional ACME copy is numbered R2019-17. No identifier schema is supplied. A courier treats 2019 as proof of the original aircraft’s manufacture date despite the historical 1903 reference. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "A number masquerading as a date",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which conclusion is supported?",
+          "options": [
+            "Every four-digit identifier segment is a manufacture year",
+            "The historical reference must be erased",
+            "The opaque copy ID does not independently date the original aircraft",
+            "The copy ID proves a 2019 first flight"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Ask what the identifier is documented to encode.",
+            "A number resembling a year is not automatically a date field.",
+            "Answer: The opaque copy ID does not independently date the original aircraft. Without an identifier schema, its digits do not establish an original manufacture or flight date. The ID belongs to a fictional copy record; it does not override the historical reference. Warrant: National Air and Space Museum; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "Without an identifier schema, its digits do not establish an original manufacture or flight date. The ID belongs to a fictional copy record; it does not override the historical reference. The dossier assignment and waiting witness identify the same fictional desk. Warrant: National Air and Space Museum; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "National Air and Space Museum",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "The museum’s 1903 Wright Flyer record concerns the aircraft’s North Carolina flights in 1903. The collection record and display institution are distinct from the historical flight location.",
+        "learningObjective": "Avoid inferring dates from an undocumented identifier.",
+        "sources": [
+          "air-space"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Washington, DC",
+          "National Air and Space Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Smithsonian object record: aircraft identity and historical flight context. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-air-space-copies",
+        "briefing": {
+          "headline": "TWO PICTURES BECOME TWO AIRCRAFT",
+          "report": "At National Air and Space Museum, ACME’s copied dossier has been altered. The Copy Count was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Field Museum.",
+          "suspect": {
+            "name": "Avery Accession",
+            "alias": "The Copy Count",
+            "emoji": "🛩️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The museum’s 1903 Wright Flyer record concerns the aircraft’s North Carolina flights in 1903. The collection record and display institution are distinct from the historical flight location.",
+          "ACME exercise: Two fictional teaching files reproduce the same object record with different image crops. Both retain the same aircraft identity. A courier counts them as evidence of two original aircraft solely because there are two files. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "Two pictures become two aircraft",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which verdict respects the records?",
+          "options": [
+            "Two representations do not by themselves establish two original aircraft",
+            "Each file must be a different original aircraft",
+            "A different crop proves a different flight date",
+            "The number of files establishes the aircraft’s age"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Count represented identities separately from files.",
+            "Two copies of one record can still describe one object.",
+            "Answer: Two representations do not by themselves establish two original aircraft. Multiple representations can refer to one object. File count or crop differences alone establish neither a second original, a different event date nor the object’s age. Warrant: National Air and Space Museum; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "Multiple representations can refer to one object. File count or crop differences alone establish neither a second original, a different event date nor the object’s age. The dossier assignment and waiting witness identify the same fictional desk. Warrant: National Air and Space Museum; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "National Air and Space Museum",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "The museum’s 1903 Wright Flyer record concerns the aircraft’s North Carolina flights in 1903. The collection record and display institution are distinct from the historical flight location.",
+        "learningObjective": "Distinguish the number of representations from the number of represented objects.",
+        "sources": [
+          "air-space"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Washington, DC",
+          "National Air and Space Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Smithsonian object record: aircraft identity and historical flight context. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "museums-missing-labels-field": [
+      {
+        "caseId": "museums-missing-labels-field-mount",
+        "briefing": {
+          "headline": "A CAST PART MAKES EVERYTHING A CAST?",
+          "report": "At Field Museum, ACME’s copied dossier has been altered. The Whole Cast was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to The Henry Ford.",
+          "suspect": {
+            "name": "Fossil Finn",
+            "alias": "The Whole Cast",
+            "emoji": "🦖",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The Field Museum’s SUE specimen record describes its body mounted with a cast skull. The original specimen, a cast component and the assembled display are distinct categories.",
+          "ACME exercise: An ACME copy correctly notes a cast skull, then changes the whole body mount to all cast without evidence about the other components. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "A cast part makes everything a cast?",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction preserves the supplied scope?",
+          "options": [
+            "Every component must be a cast",
+            "A cast skull proves no fossil exists",
+            "Record the cast skull without extending that label to every component",
+            "Delete the specimen identity"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Check the physical scope of the material label.",
+            "A statement about one component is not automatically a statement about the whole assembly.",
+            "Answer: Record the cast skull without extending that label to every component. The source specifically identifies the cast skull. That component-level description does not classify every other part or erase the fossil specimen. Warrant: Field Museum; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The source specifically identifies the cast skull. That component-level description does not classify every other part or erase the fossil specimen. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Field Museum; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Field Museum",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "The Field Museum’s SUE specimen record describes its body mounted with a cast skull. The original specimen, a cast component and the assembled display are distinct categories.",
+        "learningObjective": "Avoid extending a part-level material claim to an entire display.",
+        "sources": [
+          "field"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Chicago, Illinois",
+          "Field Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Current collection record: post-cranium mounted with cast skull; no floor or sex claim. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-field-process",
+        "briefing": {
+          "headline": "THE COPY BEFORE ITS REFERENCE IN THE EXERCISE",
+          "report": "At Field Museum, ACME’s copied dossier has been altered. The Whole Cast was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to The Henry Ford.",
+          "suspect": {
+            "name": "Fossil Finn",
+            "alias": "The Whole Cast",
+            "emoji": "🦖",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The Field Museum’s SUE specimen record describes its body mounted with a cast skull. The original specimen, a cast component and the assembled display are distinct categories.",
+          "ACME exercise: ACME’s invented model sequence records a reference specimen, makes a scan from that specimen, then produces a cast from the scan. A courier claims the scan-derived cast existed before the scan. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The copy before its reference in the exercise",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which sequence respects the stated dependencies?",
+          "options": [
+            "Cast → scan → reference",
+            "Scan → cast → reference",
+            "Reference → cast → scan",
+            "Reference → scan → cast"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Trace each derived item back to its stated source.",
+            "A cast specified as derived from a scan needs that scan first in this model.",
+            "Answer: Reference → scan → cast. Reference, scan, cast preserves the model’s dependencies. The alternatives create a derived item before its specified source exists. This is an exercise process, not a claim about the manufacture method of SUE’s actual cast. Warrant: Field Museum; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "Reference, scan, cast preserves the model’s dependencies. The alternatives create a derived item before its specified source exists. This is an exercise process, not a claim about the manufacture method of SUE’s actual cast. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Field Museum; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Field Museum",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "The Field Museum’s SUE specimen record describes its body mounted with a cast skull. The original specimen, a cast component and the assembled display are distinct categories.",
+        "learningObjective": "Reconstruct a representation chain while distinguishing it from an actual museum process.",
+        "sources": [
+          "field"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Chicago, Illinois",
+          "Field Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Current collection record: post-cranium mounted with cast skull; no floor or sex claim. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-field-name",
+        "briefing": {
+          "headline": "THE SPECIMEN NAME BECOMES A BIOLOGICAL RESULT",
+          "report": "At Field Museum, ACME’s copied dossier has been altered. The Whole Cast was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to The Henry Ford.",
+          "suspect": {
+            "name": "Fossil Finn",
+            "alias": "The Whole Cast",
+            "emoji": "🦖",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The Field Museum’s SUE specimen record describes its body mounted with a cast skull. The original specimen, a cast component and the assembled display are distinct categories.",
+          "ACME exercise: Two fictional copied records agree on the specimen name SUE. Neither supplies biological-sex evidence. A courier treats agreement on the name as proof of sex. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The specimen name becomes a biological result",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which report stays within those records?",
+          "options": [
+            "The name alone proves biological sex",
+            "Agreement on a specimen name does not itself establish biological sex",
+            "A name proves the specimen has no identity",
+            "Two matching names prove two different species"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Identify what the two records actually agree about.",
+            "A proper name is different from evidence supporting a biological determination.",
+            "Answer: Agreement on a specimen name does not itself establish biological sex. The records agree on a label, not a biological determination. Repetition of that label supplies no additional sex evidence and does not erase identity or establish different species. This case makes no claim about SUE’s actual biological sex. Warrant: Field Museum; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "The records agree on a label, not a biological determination. Repetition of that label supplies no additional sex evidence and does not erase identity or establish different species. This case makes no claim about SUE’s actual biological sex. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Field Museum; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Field Museum",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "The Field Museum’s SUE specimen record describes its body mounted with a cast skull. The original specimen, a cast component and the assembled display are distinct categories.",
+        "learningObjective": "Keep a specimen label separate from a biological claim.",
+        "sources": [
+          "field"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Chicago, Illinois",
+          "Field Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Current collection record: post-cranium mounted with cast skull; no floor or sex claim. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "museums-missing-labels-henry-ford": [
+      {
+        "caseId": "museums-missing-labels-henry-ford-event",
+        "briefing": {
+          "headline": "THE COLLECTION ADDRESS REWRITES THE EVENT",
+          "report": "At The Henry Ford, ACME’s copied dossier has been altered. The Untouched Label was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Computer History Museum.",
+          "suspect": {
+            "name": "Rory Record",
+            "alias": "The Untouched Label",
+            "emoji": "🚌",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The museum interprets Rosa Parks’s 1955 resistance to segregation on a Montgomery bus. Archived information helped identify bus 2857; its restoration retained original material where possible and used matching replacement parts.",
+          "ACME exercise: A copied label changes the 1955 event location to the museum’s Michigan location solely because the bus is in its collection. The historical source identifies Montgomery. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The collection address rewrites the event",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction preserves the event context?",
+          "options": [
+            "The event must have occurred at the museum",
+            "Museum custody proves the event never occurred",
+            "The bus’s display location determines every earlier journey",
+            "Keep Montgomery as the historical event location"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Separate later custody from historical context.",
+            "A museum can preserve an object associated with an event elsewhere.",
+            "Answer: Keep Montgomery as the historical event location. The historical event location does not change when an object moves into a collection. Current custody neither relocates nor disproves an earlier event. Warrant: The Henry Ford; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The historical event location does not change when an object moves into a collection. Current custody neither relocates nor disproves an earlier event. The dossier assignment and waiting witness identify the same fictional desk. Warrant: The Henry Ford; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "The Henry Ford",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "The museum interprets Rosa Parks’s 1955 resistance to segregation on a Montgomery bus. Archived information helped identify bus 2857; its restoration retained original material where possible and used matching replacement parts.",
+        "learningObjective": "Preserve historical context through an object’s later relocation.",
+        "sources": [
+          "henry-ford"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Dearborn, Michigan",
+          "The Henry Ford"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Museum bus-identification and restoration account; real historical testimony is not fictionalized. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-henry-ford-provenance",
+        "briefing": {
+          "headline": "A FAMILY STORY WITHOUT ITS CORROBORATION",
+          "report": "At The Henry Ford, ACME’s copied dossier has been altered. The Untouched Label was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Computer History Museum.",
+          "suspect": {
+            "name": "Rory Record",
+            "alias": "The Untouched Label",
+            "emoji": "🚌",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The museum interprets Rosa Parks’s 1955 resistance to segregation on a Montgomery bus. Archived information helped identify bus 2857; its restoration retained original material where possible and used matching replacement parts.",
+          "ACME exercise: In an invented ACME comparison, one copy preserves only an owner’s identification story. Another includes that story plus a matched contemporary archival note. Assume both copies describe the same request and the note is reliable. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "A family story without its corroboration",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which copy offers stronger documented corroboration?",
+          "options": [
+            "The story plus the matched archival note",
+            "The story alone because extra records never help",
+            "Neither, because written records are always irrelevant",
+            "The copy with the larger typeface"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Compare the kinds of support, not how confidently the copy is presented.",
+            "An independent matched record can corroborate a later identification account.",
+            "Answer: The story plus the matched archival note. The matched archival note provides an additional independent check on the identification story. Typeface is not provenance, and the exercise supplies no basis to disregard all written records. These are teaching copies, not invented real testimony. Warrant: The Henry Ford; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "The matched archival note provides an additional independent check on the identification story. Typeface is not provenance, and the exercise supplies no basis to disregard all written records. These are teaching copies, not invented real testimony. The dossier assignment and waiting witness identify the same fictional desk. Warrant: The Henry Ford; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "The Henry Ford",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "The museum interprets Rosa Parks’s 1955 resistance to segregation on a Montgomery bus. Archived information helped identify bus 2857; its restoration retained original material where possible and used matching replacement parts.",
+        "learningObjective": "Weigh independent documentary corroboration in an identification claim.",
+        "sources": [
+          "henry-ford"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Dearborn, Michigan",
+          "The Henry Ford"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Museum bus-identification and restoration account; real historical testimony is not fictionalized. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-henry-ford-restoration",
+        "briefing": {
+          "headline": "RESTORED BECOMES UNTOUCHED",
+          "report": "At The Henry Ford, ACME’s copied dossier has been altered. The Untouched Label was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Computer History Museum.",
+          "suspect": {
+            "name": "Rory Record",
+            "alias": "The Untouched Label",
+            "emoji": "🚌",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The museum interprets Rosa Parks’s 1955 resistance to segregation on a Montgomery bus. Archived information helped identify bus 2857; its restoration retained original material where possible and used matching replacement parts.",
+          "ACME exercise: Two copied restoration fields report retained original material and matching replacement parts. A courier changes that to every component untouched since 1955. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "Restored becomes untouched",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which label preserves both fields?",
+          "options": [
+            "Every component untouched",
+            "Documented restoration with retained and replacement material",
+            "Entirely new with no retained material",
+            "No historical association remains"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Keep the two material histories separate within the same object.",
+            "Restoration can preserve an object without making every component unchanged.",
+            "Answer: Documented restoration with retained and replacement material. Retained and replacement material together support a restored object with a documented history. They support neither universal untouched originality nor an entirely new object without retained material, and they do not erase the historical association. Warrant: The Henry Ford; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "Retained and replacement material together support a restored object with a documented history. They support neither universal untouched originality nor an entirely new object without retained material, and they do not erase the historical association. The dossier assignment and waiting witness identify the same fictional desk. Warrant: The Henry Ford; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "The Henry Ford",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "The museum interprets Rosa Parks’s 1955 resistance to segregation on a Montgomery bus. Archived information helped identify bus 2857; its restoration retained original material where possible and used matching replacement parts.",
+        "learningObjective": "Describe restoration without overstating component originality.",
+        "sources": [
+          "henry-ford"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Dearborn, Michigan",
+          "The Henry Ford"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Museum bus-identification and restoration account; real historical testimony is not fictionalized. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "museums-missing-labels-computer-history": [
+      {
+        "caseId": "museums-missing-labels-computer-history-design-age",
+        "briefing": {
+          "headline": "AN OLD DESIGN MAKES EVERY MACHINE OLD?",
+          "report": "At Computer History Museum, ACME’s copied dossier has been altered. The Antique Claim was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Exploratorium.",
+          "suspect": {
+            "name": "Dot Difference",
+            "alias": "The Antique Claim",
+            "emoji": "⚙️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Babbage designed Difference Engine No.2 in 1847–1849 but did not complete it in his lifetime. Modern working reconstructions followed; the museum’s referenced exhibit is dated May 2008–January 2016.",
+          "ACME exercise: A fictional label calls a modern reconstruction an untouched nineteenth-century machine solely because it follows Babbage’s nineteenth-century plans. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "An old design makes every machine old?",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction preserves design and manufacture as different fields?",
+          "options": [
+            "Every machine made from old plans is equally old",
+            "A modern construction proves the old plans never existed",
+            "A modern reconstruction can implement an older design",
+            "A design date guarantees lifetime completion"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Separate the plan from the object built from it.",
+            "Design history and physical construction history can be far apart.",
+            "Answer: A modern reconstruction can implement an older design. An older design can be implemented in a later physical machine. Manufacture does not automatically share the design date, and later reconstruction neither erases the plans nor proves Babbage completed the machine. Warrant: Computer History Museum; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "An older design can be implemented in a later physical machine. Manufacture does not automatically share the design date, and later reconstruction neither erases the plans nor proves Babbage completed the machine. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Computer History Museum; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Computer History Museum",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Babbage designed Difference Engine No.2 in 1847–1849 but did not complete it in his lifetime. Modern working reconstructions followed; the museum’s referenced exhibit is dated May 2008–January 2016.",
+        "learningObjective": "Distinguish design age from the age of a reconstruction.",
+        "sources": [
+          "computer-history"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Mountain View, California",
+          "Computer History Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "CHM historical exhibit page: design versus later construction, explicitly dated exhibit period. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-computer-history-timeline",
+        "briefing": {
+          "headline": "THE EXHIBIT DATE REPLACES THE DESIGN DATE",
+          "report": "At Computer History Museum, ACME’s copied dossier has been altered. The Antique Claim was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Exploratorium.",
+          "suspect": {
+            "name": "Dot Difference",
+            "alias": "The Antique Claim",
+            "emoji": "⚙️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Babbage designed Difference Engine No.2 in 1847–1849 but did not complete it in his lifetime. Modern working reconstructions followed; the museum’s referenced exhibit is dated May 2008–January 2016.",
+          "ACME exercise: ACME has design records from 1847–1849 and a historical exhibit beginning in May 2008. A courier relabels 2008 as when Babbage designed the engine. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The exhibit date replaces the design date",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which timeline preserves the event labels?",
+          "options": [
+            "2008 design → 1847 exhibit",
+            "Both events in 2008",
+            "Both events in 1849",
+            "1847–1849 design → 2008 historical exhibit opening"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Check whether the dated record concerns a plan, a physical object or a display.",
+            "An exhibit can open long after the design it interprets.",
+            "Answer: 1847–1849 design → 2008 historical exhibit opening. The design predates the exhibit. The 2008 display milestone is neither Babbage’s design date nor proof of the exact construction date of every reconstruction. Reversal or merger changes the event fields. Warrant: Computer History Museum; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "The design predates the exhibit. The 2008 display milestone is neither Babbage’s design date nor proof of the exact construction date of every reconstruction. Reversal or merger changes the event fields. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Computer History Museum; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Computer History Museum",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Babbage designed Difference Engine No.2 in 1847–1849 but did not complete it in his lifetime. Modern working reconstructions followed; the museum’s referenced exhibit is dated May 2008–January 2016.",
+        "learningObjective": "Keep design chronology separate from an exhibition milestone.",
+        "sources": [
+          "computer-history"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Mountain View, California",
+          "Computer History Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "CHM historical exhibit page: design versus later construction, explicitly dated exhibit period. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-computer-history-current",
+        "briefing": {
+          "headline": "A HISTORICAL EXHIBITION BECOMES A CURRENT PROMISE",
+          "report": "At Computer History Museum, ACME’s copied dossier has been altered. The Antique Claim was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Exploratorium.",
+          "suspect": {
+            "name": "Dot Difference",
+            "alias": "The Antique Claim",
+            "emoji": "⚙️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Babbage designed Difference Engine No.2 in 1847–1849 but did not complete it in his lifetime. Modern working reconstructions followed; the museum’s referenced exhibit is dated May 2008–January 2016.",
+          "ACME exercise: Two fictional copied archive fields reproduce the exhibit’s stated start in 2008 and end in January 2016. A courier uses them alone to promise the same display is open today. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "A historical exhibition becomes a current promise",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which conclusion stays within the records?",
+          "options": [
+            "The dated archive alone does not establish current display status",
+            "The 2008 date proves a permanent display",
+            "The end date proves the museum has closed",
+            "Every modern reconstruction was destroyed in 2016"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Read the end date as well as the start date.",
+            "An archived exhibition page is not automatically a current visitor listing.",
+            "Answer: The dated archive alone does not establish current display status. The archive establishes a historical exhibit period, not today’s display, museum closure or object destruction. A current-display claim needs current evidence. Warrant: Computer History Museum; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "The archive establishes a historical exhibit period, not today’s display, museum closure or object destruction. A current-display claim needs current evidence. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Computer History Museum; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Computer History Museum",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Babbage designed Difference Engine No.2 in 1847–1849 but did not complete it in his lifetime. Modern working reconstructions followed; the museum’s referenced exhibit is dated May 2008–January 2016.",
+        "learningObjective": "Avoid turning historical exhibition evidence into a current availability claim.",
+        "sources": [
+          "computer-history"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Mountain View, California",
+          "Computer History Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "CHM historical exhibit page: design versus later construction, explicitly dated exhibit period. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "museums-missing-labels-exploratorium": [
+      {
+        "caseId": "museums-missing-labels-exploratorium-interpretation",
+        "briefing": {
+          "headline": "ART CANNOT ASK A SCIENCE QUESTION?",
+          "report": "At Exploratorium, ACME’s copied dossier has been altered. The Credit Merger was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Science Museum of Minnesota.",
+          "suspect": {
+            "name": "Fia Focus",
+            "alias": "The Credit Merger",
+            "emoji": "🌫️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) by artist Fujiko Nakaya and credits a photograph to Amy Snyder. It interprets perception and physical experience through an art installation.",
+          "ACME exercise: An invented exhibit brief describes an art installation used to explore perception and physical experience. A courier deletes its interpretive purpose because it is also art. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "Art cannot ask a science question?",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which description preserves both roles?",
+          "options": [
+            "Art makes perception irrelevant",
+            "Only a machine can support an observation",
+            "An art installation can also support inquiry into perception",
+            "The catalogue describes a freight car"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Check whether the source actually treats the two roles as exclusive.",
+            "A designed experience can be both an artwork and a prompt for observation.",
+            "Answer: An art installation can also support inquiry into perception. The catalogue connects art and physical/perceptual experience. Those roles can coexist; neither excluding art nor substituting a vehicle preserves the described installation. Warrant: Exploratorium; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The catalogue connects art and physical/perceptual experience. Those roles can coexist; neither excluding art nor substituting a vehicle preserves the described installation. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Exploratorium; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Exploratorium",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) by artist Fujiko Nakaya and credits a photograph to Amy Snyder. It interprets perception and physical experience through an art installation.",
+        "learningObjective": "Recognize complementary artistic and scientific interpretation.",
+        "sources": [
+          "exploratorium"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "San Francisco, California",
+          "Exploratorium"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Official Over the Water catalogue: installation identity/year and separate artist/photo credits. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-exploratorium-proposal",
+        "briefing": {
+          "headline": "THE EARLIER SKETCH CALLED IMPOSSIBLE",
+          "report": "At Exploratorium, ACME’s copied dossier has been altered. The Credit Merger was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Science Museum of Minnesota.",
+          "suspect": {
+            "name": "Fia Focus",
+            "alias": "The Credit Merger",
+            "emoji": "🌫️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) by artist Fujiko Nakaya and credits a photograph to Amy Snyder. It interprets perception and physical experience through an art installation.",
+          "ACME exercise: ACME’s fictional packet labels one sheet a 2010 proposal sketch and another a 2013 installation record. A courier rejects the earlier sketch because the installation is dated 2013. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The earlier sketch called impossible",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which conclusion follows from the document types?",
+          "options": [
+            "A proposal can predate a later installation",
+            "A 2013 installation proves no earlier planning existed",
+            "Every sketch depicts a completed installation",
+            "Both dates must identify the same event"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Identify whether the earlier sheet records a proposal or an observed finished work.",
+            "Planning and installation are distinct events.",
+            "Answer: A proposal can predate a later installation. A proposal records an intention before completion. The later installation date does not rule out earlier planning or make every sketch an observation of a finished work. These sheets are invented, not actual project-history claims. Warrant: Exploratorium; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "A proposal records an intention before completion. The later installation date does not rule out earlier planning or make every sketch an observation of a finished work. These sheets are invented, not actual project-history claims. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Exploratorium; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Exploratorium",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) by artist Fujiko Nakaya and credits a photograph to Amy Snyder. It interprets perception and physical experience through an art installation.",
+        "learningObjective": "Distinguish a proposal from an installation record.",
+        "sources": [
+          "exploratorium"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "San Francisco, California",
+          "Exploratorium"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Official Over the Water catalogue: installation identity/year and separate artist/photo credits. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-exploratorium-credits",
+        "briefing": {
+          "headline": "THE PHOTOGRAPHER CREDITED AS THE ARTIST",
+          "report": "At Exploratorium, ACME’s copied dossier has been altered. The Credit Merger was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Science Museum of Minnesota.",
+          "suspect": {
+            "name": "Fia Focus",
+            "alias": "The Credit Merger",
+            "emoji": "🌫️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) by artist Fujiko Nakaya and credits a photograph to Amy Snyder. It interprets perception and physical experience through an art installation.",
+          "ACME exercise: Two copied credit fields identify Fujiko Nakaya as artist and Amy Snyder as photographer. A courier merges them into one creator field with the roles reversed. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The photographer credited as the artist",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which credit line preserves the catalogue’s roles?",
+          "options": [
+            "Artist: Amy Snyder; photograph: Fujiko Nakaya",
+            "Artist: Fujiko Nakaya; photograph: Amy Snyder",
+            "Both fields must name the photographer only",
+            "Both fields must name the artist only"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Ask which work each credit describes.",
+            "Artwork authorship and photograph authorship are separate.",
+            "Answer: Artist: Fujiko Nakaya; photograph: Amy Snyder. Nakaya/artwork and Snyder/photograph preserves both attributions. Reversal misattributes the work; using one person for both erases a distinct documented role. No image is reproduced in this text-only exercise. Warrant: Exploratorium; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "Nakaya/artwork and Snyder/photograph preserves both attributions. Reversal misattributes the work; using one person for both erases a distinct documented role. No image is reproduced in this text-only exercise. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Exploratorium; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Exploratorium",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "The Exploratorium’s catalogue identifies Fog Bridge #72494 (2013) by artist Fujiko Nakaya and credits a photograph to Amy Snyder. It interprets perception and physical experience through an art installation.",
+        "learningObjective": "Preserve attribution when one creative work represents another.",
+        "sources": [
+          "exploratorium"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "San Francisco, California",
+          "Exploratorium"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Official Over the Water catalogue: installation identity/year and separate artist/photo credits. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "museums-missing-labels-science-minnesota": [
+      {
+        "caseId": "museums-missing-labels-science-minnesota-institution",
+        "briefing": {
+          "headline": "TWO OPENING DATES",
+          "report": "At Science Museum of Minnesota, ACME’s copied dossier has been altered. The New Beginning was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to American Jazz Museum.",
+          "suspect": {
+            "name": "Merriam Memo",
+            "alias": "The New Beginning",
+            "emoji": "🔬",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The institution was founded in 1907 as the St. Paul Institute of Science and Letters, has used the Science Museum of Minnesota name since 1970, and opened its riverfront facility in 1999.",
+          "ACME exercise: A copied caption says the institution first began in 1999 because that is when its riverfront facility opened. The source separately gives a 1907 founding. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "Two opening dates",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction preserves the distinction?",
+          "options": [
+            "The institution and its newest building must share one beginning",
+            "The 1907 founding can precede the 1999 facility opening",
+            "A move proves a different institution was created",
+            "The building date erases the institution’s history"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Separate an organization from the building it occupies.",
+            "A museum can be older than its current facility.",
+            "Answer: The 1907 founding can precede the 1999 facility opening. Institutional founding and facility opening are different events. An older institution can move; a new facility does not alone create a new institutional identity or erase its history. Warrant: Science Museum of Minnesota; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "Institutional founding and facility opening are different events. An older institution can move; a new facility does not alone create a new institutional identity or erase its history. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Science Museum of Minnesota; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Science Museum of Minnesota",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "The institution was founded in 1907 as the St. Paul Institute of Science and Letters, has used the Science Museum of Minnesota name since 1970, and opened its riverfront facility in 1999.",
+        "learningObjective": "Distinguish institutional origin from a facility milestone.",
+        "sources": [
+          "science-minnesota"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "St. Paul, Minnesota",
+          "Science Museum of Minnesota"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Museum About/History chronology: institution, naming and facility milestones. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-science-minnesota-name",
+        "briefing": {
+          "headline": "THREE MILESTONES, ONE SCRAMBLED LABEL",
+          "report": "At Science Museum of Minnesota, ACME’s copied dossier has been altered. The New Beginning was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to American Jazz Museum.",
+          "suspect": {
+            "name": "Merriam Memo",
+            "alias": "The New Beginning",
+            "emoji": "🔬",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The institution was founded in 1907 as the St. Paul Institute of Science and Letters, has used the Science Museum of Minnesota name since 1970, and opened its riverfront facility in 1999.",
+          "ACME exercise: ACME’s copied chronology lists 1907 founding, 1970 museum-name adoption and 1999 riverfront-facility opening. A courier calls all three original construction dates. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "Three milestones, one scrambled label",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which sequence preserves event labels?",
+          "options": [
+            "1999 founding → 1907 naming → 1970 opening",
+            "1970 founding → 1999 naming → 1907 opening",
+            "All events were construction in 1907",
+            "1907 founding → 1970 name → 1999 facility"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Attach the event verb to each date before sorting.",
+            "Founding, renaming and moving into a facility are not interchangeable.",
+            "Answer: 1907 founding → 1970 name → 1999 facility. The source supplies three different event types in that order. Reversing or relabeling them as one construction event loses both chronology and meaning. Warrant: Science Museum of Minnesota; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "The source supplies three different event types in that order. Reversing or relabeling them as one construction event loses both chronology and meaning. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Science Museum of Minnesota; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Science Museum of Minnesota",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "The institution was founded in 1907 as the St. Paul Institute of Science and Letters, has used the Science Museum of Minnesota name since 1970, and opened its riverfront facility in 1999.",
+        "learningObjective": "Preserve distinct institutional milestones in a timeline.",
+        "sources": [
+          "science-minnesota"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "St. Paul, Minnesota",
+          "Science Museum of Minnesota"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Museum About/History chronology: institution, naming and facility milestones. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-science-minnesota-continuity",
+        "briefing": {
+          "headline": "DIFFERENT NAMES, INCOMPATIBLE RECORDS?",
+          "report": "At Science Museum of Minnesota, ACME’s copied dossier has been altered. The New Beginning was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to American Jazz Museum.",
+          "suspect": {
+            "name": "Merriam Memo",
+            "alias": "The New Beginning",
+            "emoji": "🔬",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The institution was founded in 1907 as the St. Paul Institute of Science and Letters, has used the Science Museum of Minnesota name since 1970, and opened its riverfront facility in 1999.",
+          "ACME exercise: Two fictional teaching copies use the earlier institute name and later museum name, and both carry a reliable continuity note identifying the same institution. A courier rejects one solely because the names differ. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "Different names, incompatible records?",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which conclusion respects the continuity note?",
+          "options": [
+            "A documented name change can explain the different names",
+            "Different names always prove unrelated institutions",
+            "The earlier institution must never have existed",
+            "The later name must be a building material"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Read the continuity record before treating name differences as a contradiction.",
+            "A name can change while an institution continues.",
+            "Answer: A documented name change can explain the different names. A documented name change allows different names across time for one institution. Difference alone does not override the explicit continuity note or classify a name as material. Warrant: Science Museum of Minnesota; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "A documented name change allows different names across time for one institution. Difference alone does not override the explicit continuity note or classify a name as material. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Science Museum of Minnesota; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Science Museum of Minnesota",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "The institution was founded in 1907 as the St. Paul Institute of Science and Letters, has used the Science Museum of Minnesota name since 1970, and opened its riverfront facility in 1999.",
+        "learningObjective": "Reconcile different historical names using documented continuity.",
+        "sources": [
+          "science-minnesota"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "St. Paul, Minnesota",
+          "Science Museum of Minnesota"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Museum About/History chronology: institution, naming and facility milestones. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "museums-missing-labels-jazz": [
+      {
+        "caseId": "museums-missing-labels-jazz-selection",
+        "briefing": {
+          "headline": "FOUR FEATURED ARTISTS BECOME EVERYONE IN JAZZ",
+          "report": "At American Jazz Museum, ACME’s copied dossier has been altered. The Complete List was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to The Museum of Flight.",
+          "suspect": {
+            "name": "Jazzy Jules",
+            "alias": "The Complete List",
+            "emoji": "🎷",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The American Jazz Museum’s permanent-gallery reference features Louis Armstrong, Charlie Parker, Ella Fitzgerald and Duke Ellington through artifacts, photographs and listening stations.",
+          "ACME exercise: A copied label changes four featured jazz masters into the only four people who ever shaped jazz. No broader historical evidence is supplied. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "Four featured artists become everyone in jazz",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction preserves the exhibit’s stated scope?",
+          "options": [
+            "The four names form an exhaustive list of all jazz musicians",
+            "The selected exhibit proves no other artist mattered",
+            "Describe four featured artists without claiming an exhaustive history",
+            "Delete all artist names"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Distinguish a selection from a complete inventory.",
+            "An exhibit’s focus does not establish the absence of everyone outside it.",
+            "Answer: Describe four featured artists without claiming an exhaustive history. A curated selection is not an exhaustive history. The source identifies featured artists, not the only contributors; neither excluding everyone else nor deleting the selection preserves its scope. Warrant: American Jazz Museum; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "A curated selection is not an exhaustive history. The source identifies featured artists, not the only contributors; neither excluding everyone else nor deleting the selection preserves its scope. The dossier assignment and waiting witness identify the same fictional desk. Warrant: American Jazz Museum; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "American Jazz Museum",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "The American Jazz Museum’s permanent-gallery reference features Louis Armstrong, Charlie Parker, Ella Fitzgerald and Duke Ellington through artifacts, photographs and listening stations.",
+        "learningObjective": "Avoid treating curatorial selection as historical exhaustiveness.",
+        "sources": [
+          "jazz"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Kansas City, Missouri",
+          "American Jazz Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Museum Exhibits/Four Jazz Masters: selected featured artists and media types, not an exhaustive history of jazz. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-jazz-log",
+        "briefing": {
+          "headline": "THE SEGMENT RELEASED BEFORE ITS TRANSCRIPT",
+          "report": "At American Jazz Museum, ACME’s copied dossier has been altered. The Complete List was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to The Museum of Flight.",
+          "suspect": {
+            "name": "Jazzy Jules",
+            "alias": "The Complete List",
+            "emoji": "🎷",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The American Jazz Museum’s permanent-gallery reference features Louis Armstrong, Charlie Parker, Ella Fitzgerald and Duke Ellington through artifacts, photographs and listening stations.",
+          "ACME exercise: In ACME’s fictional text-only broadcast exercise, an interview is recorded at 14:00, transcribed at 14:20 and its transcript approved at 14:30. A courier says the approved transcript was released at 14:10, all on one day and clock. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The segment released before its transcript",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which claim conflicts with the stated process?",
+          "options": [
+            "The interview was recorded first",
+            "A draft transcript could exist after 14:20",
+            "Approval followed transcription",
+            "The approved transcript was released at 14:10"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Track the version named in the release claim.",
+            "Approval must exist before an approved version can be released in this exercise.",
+            "Answer: The approved transcript was released at 14:10. 14:10 precedes both transcription and approval, so that approved-version release conflicts with the log. The other statements preserve the sequence. These are invented production times, with no audio recognition required. Warrant: American Jazz Museum; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "14:10 precedes both transcription and approval, so that approved-version release conflicts with the log. The other statements preserve the sequence. These are invented production times, with no audio recognition required. The dossier assignment and waiting witness identify the same fictional desk. Warrant: American Jazz Museum; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "American Jazz Museum",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "The American Jazz Museum’s permanent-gallery reference features Louis Armstrong, Charlie Parker, Ella Fitzgerald and Duke Ellington through artifacts, photographs and listening stations.",
+        "learningObjective": "Check a media-release claim against versioned timestamps.",
+        "sources": [
+          "jazz"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Kansas City, Missouri",
+          "American Jazz Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Museum Exhibits/Four Jazz Masters: selected featured artists and media types, not an exhaustive history of jazz. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-jazz-medium",
+        "briefing": {
+          "headline": "THE RIGHT ARTIST IN THE WRONG MEDIUM",
+          "report": "At American Jazz Museum, ACME’s copied dossier has been altered. The Complete List was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to The Museum of Flight.",
+          "suspect": {
+            "name": "Jazzy Jules",
+            "alias": "The Complete List",
+            "emoji": "🎷",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The American Jazz Museum’s permanent-gallery reference features Louis Armstrong, Charlie Parker, Ella Fitzgerald and Duke Ellington through artifacts, photographs and listening stations.",
+          "ACME exercise: Two independent fictional request fields specify Ella Fitzgerald and photograph. J: Fitzgerald/audio; K: Fitzgerald/photo; L: Parker/photo; M: Parker/audio. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The right artist in the wrong medium",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which item satisfies identity and medium?",
+          "options": [
+            "Item J",
+            "Item K",
+            "Item L",
+            "Item M"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Check who is represented and what kind of record it is.",
+            "Subject identity and medium are separate catalogue fields.",
+            "Answer: Item K. K preserves artist and photograph medium. J keeps only the artist, L only the medium and M neither. A matching subject does not make audio a photograph. These are invented item cards, not claims about particular collection holdings. Warrant: American Jazz Museum; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "K preserves artist and photograph medium. J keeps only the artist, L only the medium and M neither. A matching subject does not make audio a photograph. These are invented item cards, not claims about particular collection holdings. The dossier assignment and waiting witness identify the same fictional desk. Warrant: American Jazz Museum; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "American Jazz Museum",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "The American Jazz Museum’s permanent-gallery reference features Louis Armstrong, Charlie Parker, Ella Fitzgerald and Duke Ellington through artifacts, photographs and listening stations.",
+        "learningObjective": "Cross-check a represented person with the requested record medium.",
+        "sources": [
+          "jazz"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Kansas City, Missouri",
+          "American Jazz Museum"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Museum Exhibits/Four Jazz Masters: selected featured artists and media types, not an exhaustive history of jazz. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "museums-missing-labels-flight": [
+      {
+        "caseId": "museums-missing-labels-flight-reuse",
+        "briefing": {
+          "headline": "THE AIRCRAFT FACTORY WITH NO SHIPYARD PAST",
+          "report": "At The Museum of Flight, ACME’s copied dossier has been altered. The Lifespan Slip was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "Return to headquarters with the corrected files from your selected route.",
+          "suspect": {
+            "name": "Boe Beacon",
+            "alias": "The Lifespan Slip",
+            "emoji": "🛫",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The museum’s archive describes the Red Barn’s 1909 shipyard origins and aircraft production there from 1917. William E. Boeing lived 1881–1956; his papers include material with wider date coverage.",
+          "ACME exercise: A copied caption says a building associated with aircraft manufacture could never have had a boat-building use. The supplied archive records its earlier shipyard role. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The aircraft factory with no shipyard past",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which interpretation preserves both uses?",
+          "options": [
+            "An earlier shipyard could later serve aircraft manufacture",
+            "Aircraft use proves no earlier use existed",
+            "Boat building proves no aircraft were made there",
+            "Every function must begin on the building’s first day"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Put the uses on a timeline before treating them as incompatible.",
+            "A building can change function without becoming a different historical subject.",
+            "Answer: An earlier shipyard could later serve aircraft manufacture. Successive uses can belong to one building. Later aircraft production does not erase shipyard origins, and the earlier role does not rule out later reuse. Warrant: The Museum of Flight; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "Successive uses can belong to one building. Later aircraft production does not erase shipyard origins, and the earlier role does not rule out later reuse. The dossier assignment and waiting witness identify the same fictional desk. Warrant: The Museum of Flight; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "The Museum of Flight",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "The museum’s archive describes the Red Barn’s 1909 shipyard origins and aircraft production there from 1917. William E. Boeing lived 1881–1956; his papers include material with wider date coverage.",
+        "learningObjective": "Recognize adaptive reuse through successive function records.",
+        "sources": [
+          "flight"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Seattle, Washington",
+          "The Museum of Flight"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Heath Shipyard scope note and linked Boeing Papers abstract/date coverage; no current building access claim. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-flight-building",
+        "briefing": {
+          "headline": "THE SHIPYARD DATES THE COMPANY",
+          "report": "At The Museum of Flight, ACME’s copied dossier has been altered. The Lifespan Slip was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "Return to headquarters with the corrected files from your selected route.",
+          "suspect": {
+            "name": "Boe Beacon",
+            "alias": "The Lifespan Slip",
+            "emoji": "🛫",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The museum’s archive describes the Red Barn’s 1909 shipyard origins and aircraft production there from 1917. William E. Boeing lived 1881–1956; his papers include material with wider date coverage.",
+          "ACME exercise: ACME copies the archive’s 1909 shipyard construction, 1916 Boeing company founding and 1917 aircraft-production use at the former shipyard. A courier makes 1909 the company-founding date. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The shipyard dates the company",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which chronology keeps the subjects separate?",
+          "options": [
+            "1909 company founding → 1916 shipyard → 1917 first building",
+            "1909 shipyard → 1916 company founding → 1917 aircraft-production use",
+            "All events in 1917",
+            "All events in 1909"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Check whether each date concerns a building, an organization or a use.",
+            "A company can occupy a structure that predates the company.",
+            "Answer: 1909 shipyard → 1916 company founding → 1917 aircraft-production use. The 1909 date belongs to the shipyard, 1916 to the company and 1917 to the recorded aircraft-production use there. Swapping or merging the subjects changes the archive’s chronology. Warrant: The Museum of Flight; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "The 1909 date belongs to the shipyard, 1916 to the company and 1917 to the recorded aircraft-production use there. Swapping or merging the subjects changes the archive’s chronology. The dossier assignment and waiting witness identify the same fictional desk. Warrant: The Museum of Flight; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "The Museum of Flight",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "The museum’s archive describes the Red Barn’s 1909 shipyard origins and aircraft production there from 1917. William E. Boeing lived 1881–1956; his papers include material with wider date coverage.",
+        "learningObjective": "Separate building construction, company founding and later occupancy.",
+        "sources": [
+          "flight"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Seattle, Washington",
+          "The Museum of Flight"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Heath Shipyard scope note and linked Boeing Papers abstract/date coverage; no current building access claim. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "museums-missing-labels-flight-coverage",
+        "briefing": {
+          "headline": "THE ARCHIVE SPAN BECOMES A LIFESPAN",
+          "report": "At The Museum of Flight, ACME’s copied dossier has been altered. The Lifespan Slip was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "Return to headquarters with the corrected files from your selected route.",
+          "suspect": {
+            "name": "Boe Beacon",
+            "alias": "The Lifespan Slip",
+            "emoji": "🛫",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The museum’s archive describes the Red Barn’s 1909 shipyard origins and aircraft production there from 1917. William E. Boeing lived 1881–1956; his papers include material with wider date coverage.",
+          "ACME exercise: A fictional copy retains the archive’s approximate coverage of 1783–2008 but relabels it as William E. Boeing’s lifespan. A separate biographical field gives 1881–1956. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The archive span becomes a lifespan",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction preserves both kinds of dates?",
+          "options": [
+            "The collection span proves he lived 225 years",
+            "Discard the biographical field because the collection is larger",
+            "Keep 1783–2008 as record coverage and 1881–1956 as lifespan",
+            "Use the midpoint as a birth year"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Identify what the date range describes.",
+            "The years covered by papers can extend beyond the life of the person associated with them.",
+            "Answer: Keep 1783–2008 as record coverage and 1881–1956 as lifespan. Collection coverage can include earlier or later material and is not a person’s lifespan. Keeping both date types preserves the record; substituting or averaging them invents biographical claims. Warrant: The Museum of Flight; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "Collection coverage can include earlier or later material and is not a person’s lifespan. Keeping both date types preserves the record; substituting or averaging them invents biographical claims. The dossier assignment and waiting witness identify the same fictional desk. Warrant: The Museum of Flight; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "The Museum of Flight",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "The museum’s archive describes the Red Barn’s 1909 shipyard origins and aircraft production there from 1917. William E. Boeing lived 1881–1956; his papers include material with wider date coverage.",
+        "learningObjective": "Distinguish archive coverage from biographical dates.",
+        "sources": [
+          "flight"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Museums & Missing Labels — The Catalogue Caper",
+          "Seattle, Washington",
+          "The Museum of Flight"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Heath Shipyard scope note and linked Boeing Papers abstract/date coverage; no current building access claim. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ]
+  },
+  "sources": {
+    "air-space": {
+      "title": "1903 Wright Flyer",
+      "url": "https://airandspace.si.edu/collection-objects/1903-wright-flyer/nasm_A19610048000",
+      "publisher": "Smithsonian National Air and Space Museum",
+      "reviewed": true,
+      "reviewScope": "Object identity, 1903 flight in North Carolina and museum collection context; fictional copy IDs are not decoded as real accession or manufacture dates."
+    },
+    "field": {
+      "title": "SUE collection record",
+      "url": "https://www.fieldmuseum.org/collection-item-iconic/sue",
+      "publisher": "Field Museum",
+      "reviewed": true,
+      "reviewScope": "SUE specimen record: post-cranium mounted with cast skull. No original-versus-cast claim about every bone, floor location, sex or current room arrangement."
+    },
+    "henry-ford": {
+      "title": "Rosa Parks Bus: Curating and Preserving",
+      "url": "https://corporate.thehenryford.org/explore/inside/rosa-parks-bus",
+      "publisher": "The Henry Ford",
+      "reviewed": true,
+      "reviewScope": "1955 Montgomery event; identification using archived scrapbook information; restoration retained original material where possible and used parts from matching buses. No invented testimony or untouched-originality claim."
+    },
+    "computer-history": {
+      "title": "The Babbage Engine historical exhibit",
+      "url": "https://computerhistory.org/exhibits/babbage/",
+      "publisher": "Computer History Museum",
+      "reviewed": true,
+      "reviewScope": "1847–1849 design, incomplete construction in Babbage’s lifetime, later working reconstruction; historical exhibit explicitly dated May 2008–January 2016. No current display promise or conflation of the 1991 and 2008 engines."
+    },
+    "exploratorium": {
+      "title": "Over the Water: Fujiko Nakaya",
+      "url": "https://www.exploratorium.edu/sites/default/files/pdfs/over-the-water-catalog-nakaya.pdf",
+      "publisher": "Exploratorium",
+      "reviewed": true,
+      "reviewScope": "Catalogue: Fog Bridge #72494, 2013; artist Fujiko Nakaya and photo credit Amy Snyder; art/perception/physics interpretation. No current fog timetable, weather or access promise."
+    },
+    "science-minnesota": {
+      "title": "About the Science Museum of Minnesota",
+      "url": "https://smm.org/about/",
+      "publisher": "Science Museum of Minnesota",
+      "reviewed": true,
+      "reviewScope": "History section: founded 1907 as St. Paul Institute of Science and Letters, museum name since 1970, riverfront facility opening 1999. No historic superlatives or current gallery claim."
+    },
+    "jazz": {
+      "title": "American Jazz Museum exhibits",
+      "url": "https://americanjazzmuseum.org/exhibits/",
+      "publisher": "American Jazz Museum",
+      "reviewed": true,
+      "reviewScope": "Permanent gallery: four featured masters Armstrong/Parker/Fitzgerald/Ellington, artifacts/photos/listening stations and musical-process interpretation. No claim of a complete history of all jazz or a current performance schedule."
+    },
+    "flight": {
+      "title": "Heath Shipyard archive scope note",
+      "url": "https://archives.museumofflight.org/subjects/45",
+      "publisher": "The Museum of Flight Archives",
+      "reviewed": true,
+      "reviewScope": "1909 shipyard, Boeing company founded 1916, aircraft production at former shipyard from 1917; William E. Boeing Sr. Papers date coverage versus 1881–1956 lifespan. No current building-access claim."
+    }
+  }
+}

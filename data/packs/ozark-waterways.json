@@ -1,0 +1,1862 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 1,
+  "id": "ozark-waterways-carmen",
+  "title": "Where in the Ozark Waterways is Carmen Sandiego?",
+  "subtitle": "The Watershed Files",
+  "heroLocation": "OZARK WATERWAYS",
+  "intro": "Recover ACME’s altered watershed files at eight Ozark river, lake and spring stops. Compare drainage links, distinguish natural sources from reservoirs, and preserve sample provenance. This curated archive route is not a boating itinerary. All model readings, sample logs, witnesses and ACME desks are fictional; no field sampling or water-safety conclusion is required. Map pins are approximate orientation points, not entrances or directions. Choose 4, 6 or 8 stops; one of three case variants is selected at each stop.",
+  "evidenceLabel": "OZARK WATERWAYS EVIDENCE",
+  "successMessage": "You recovered the corrected files and completed the final report for your selected route.",
+  "map": {
+    "center": {
+      "lat": 36.35,
+      "lng": -92.15
+    },
+    "zoom": 7,
+    "minZoom": 3,
+    "maxZoom": 16
+  },
+  "finalConfrontation": {
+    "title": "Final Report",
+    "rounds": [
+      {
+        "title": "First-stop evidence review",
+        "description": "Review the written evidence from the first selected case.",
+        "question": "Which answer matches the first case evidence?",
+        "options": [
+          "Selected case answer",
+          "Case alternative 1",
+          "Case alternative 2",
+          "Case alternative 3"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report copies the selected first case, including its choices, correct index, and explanation."
+      },
+      {
+        "title": "Route evidence review",
+        "description": "Review the written evidence from a case in the middle of the selected route.",
+        "question": "Which answer matches the route evidence?",
+        "options": [
+          "Selected case answer",
+          "Case alternative 1",
+          "Case alternative 2",
+          "Case alternative 3"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report copies the selected middle case, including its choices, correct index, and explanation."
+      },
+      {
+        "title": "Route inventory",
+        "description": "Use the collected tokens from your completed route.",
+        "question": "Which token came from the last completed stop?",
+        "options": [
+          "Last stop token",
+          "First stop token",
+          "Second stop token",
+          "Third stop token"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report resolves the last token and three other tokens from the completed route."
+      }
+    ]
+  },
+  "locations": [
+    {
+      "id": "ozark-waterways-buffalo",
+      "name": "Buffalo National River",
+      "province": "Arkansas",
+      "lat": 35.985,
+      "lng": -92.758,
+      "emoji": "🛶",
+      "tagline": "Distinguish a free-flowing river from an impounded reservoir.",
+      "henchman": {
+        "name": "Mira Margin",
+        "alias": "The Watermark",
+        "emoji": "🛶",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Buffalo Seal",
+        "char": "🛶"
+      }
+    },
+    {
+      "id": "ozark-waterways-beaver",
+      "name": "Beaver Lake",
+      "province": "Arkansas",
+      "lat": 36.421,
+      "lng": -93.85,
+      "emoji": "🏞️",
+      "tagline": "Classify a water body by its origin.",
+      "henchman": {
+        "name": "Dax Draft",
+        "alias": "The Impounder",
+        "emoji": "🏞️",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Beaver Seal",
+        "char": "🏞️"
+      }
+    },
+    {
+      "id": "ozark-waterways-bull-shoals",
+      "name": "Bull Shoals Lake",
+      "province": "Arkansas and Missouri",
+      "lat": 36.365,
+      "lng": -92.578,
+      "emoji": "⚙️",
+      "tagline": "Reject a false either-or interpretation of infrastructure.",
+      "henchman": {
+        "name": "Vera Valve",
+        "alias": "The Spillover",
+        "emoji": "⚙️",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Bull Shoals Seal",
+        "char": "⚙️"
+      }
+    },
+    {
+      "id": "ozark-waterways-norfork",
+      "name": "Norfork Lake",
+      "province": "Arkansas",
+      "lat": 36.25,
+      "lng": -92.24,
+      "emoji": "🔎",
+      "tagline": "Preserve source-specific names for linked features.",
+      "henchman": {
+        "name": "Nell Notation",
+        "alias": "The Splitter",
+        "emoji": "🔎",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Norfork Seal",
+        "char": "🔎"
+      }
+    },
+    {
+      "id": "ozark-waterways-mammoth",
+      "name": "Mammoth Spring",
+      "province": "Arkansas",
+      "lat": 36.497,
+      "lng": -91.535,
+      "emoji": "💧",
+      "tagline": "Distinguish a spring from its receiving lake.",
+      "henchman": {
+        "name": "Wade Wells",
+        "alias": "The Refill",
+        "emoji": "💧",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Mammoth Seal",
+        "char": "💧"
+      }
+    },
+    {
+      "id": "ozark-waterways-greer",
+      "name": "Greer Spring",
+      "province": "Missouri",
+      "lat": 36.793,
+      "lng": -91.332,
+      "emoji": "🌿",
+      "tagline": "Repair a single wrong connector in a drainage diagram.",
+      "henchman": {
+        "name": "Reed Ripple",
+        "alias": "The Connector",
+        "emoji": "🌿",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Greer Seal",
+        "char": "🌿"
+      }
+    },
+    {
+      "id": "ozark-waterways-big-spring",
+      "name": "Big Spring",
+      "province": "Missouri",
+      "lat": 36.952,
+      "lng": -90.995,
+      "emoji": "🫧",
+      "tagline": "Distinguish a documented flow relationship from an unsupported source claim.",
+      "henchman": {
+        "name": "Lena Ledger",
+        "alias": "The Mean Streak",
+        "emoji": "🫧",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Big Spring Seal",
+        "char": "🫧"
+      }
+    },
+    {
+      "id": "ozark-waterways-alley",
+      "name": "Alley Spring and Mill",
+      "province": "Missouri",
+      "lat": 37.153,
+      "lng": -91.444,
+      "emoji": "🛞",
+      "tagline": "Use functional evidence rather than nearby geography to identify a power source.",
+      "henchman": {
+        "name": "Millie Millrace",
+        "alias": "The Repaint",
+        "emoji": "🛞",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Alley Seal",
+        "char": "🛞"
+      }
+    }
+  ],
+  "questions": {
+    "ozark-waterways-buffalo": [
+      {
+        "caseId": "ozark-waterways-buffalo-classification",
+        "briefing": {
+          "headline": "THE RESERVOIR LABEL",
+          "report": "At Buffalo National River, ACME’s copied dossier has been altered. The Watermark was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Beaver Lake.",
+          "suspect": {
+            "name": "Mira Margin",
+            "alias": "The Watermark",
+            "emoji": "🛶",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The free-flowing Buffalo River begins in the Boston Mountains and joins the White River. Only part of its watershed is managed by the National Park Service.",
+          "ACME exercise: A copied ACME caption says this river was created by a storage dam. Its attached reference instead identifies a free-flowing river. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The reservoir label",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction fits the reference?",
+          "options": [
+            "Keep the storage-reservoir claim",
+            "Describe a free-flowing river",
+            "Call it an ocean inlet",
+            "Erase the river classification"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Compare the caption with the stated origin of the water feature.",
+            "A river and a dam-created storage lake are different categories.",
+            "Answer: Describe a free-flowing river. The supplied reference identifies the Buffalo as free-flowing. A dam-created reservoir, ocean inlet or deleted classification does not preserve that evidence. Warrant: Buffalo National River; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The supplied reference identifies the Buffalo as free-flowing. A dam-created reservoir, ocean inlet or deleted classification does not preserve that evidence. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Buffalo National River; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Buffalo National River",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "The free-flowing Buffalo River begins in the Boston Mountains and joins the White River. Only part of its watershed is managed by the National Park Service.",
+        "learningObjective": "Distinguish a free-flowing river from an impounded reservoir.",
+        "sources": [
+          "buffalo"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Arkansas",
+          "Buffalo National River"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Opening river/watershed paragraphs. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-buffalo-connection",
+        "briefing": {
+          "headline": "THE BACKWARDS CONNECTOR",
+          "report": "At Buffalo National River, ACME’s copied dossier has been altered. The Watermark was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Beaver Lake.",
+          "suspect": {
+            "name": "Mira Margin",
+            "alias": "The Watermark",
+            "emoji": "🛶",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The free-flowing Buffalo River begins in the Boston Mountains and joins the White River. Only part of its watershed is managed by the National Park Service.",
+          "ACME exercise: A text diagram means water flows from the left feature to the right. One copied arrow reads White River → Buffalo River, while the reference identifies the Buffalo joining the White. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The backwards connector",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which connector restores that relationship?",
+          "options": [
+            "White River → Boston Mountains",
+            "White River → Buffalo River",
+            "Buffalo River → White River",
+            "Boston Mountains → ocean inlet"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Identify which river supplies the other at the meeting point.",
+            "An arrow must preserve the roles of tributary and receiving river.",
+            "Answer: Buffalo River → White River. Buffalo → White preserves the stated confluence direction. The reversed pair switches tributary and receiving river; the other connectors do not represent the relationship being checked. Warrant: Buffalo National River; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "Buffalo → White preserves the stated confluence direction. The reversed pair switches tributary and receiving river; the other connectors do not represent the relationship being checked. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Buffalo National River; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Buffalo National River",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "The free-flowing Buffalo River begins in the Boston Mountains and joins the White River. Only part of its watershed is managed by the National Park Service.",
+        "learningObjective": "Check the direction of a tributary relationship from text.",
+        "sources": [
+          "buffalo"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Arkansas",
+          "Buffalo National River"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Opening river/watershed paragraphs. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-buffalo-boundary",
+        "briefing": {
+          "headline": "OUTSIDE THE PARK, INSIDE THE WATERSHED",
+          "report": "At Buffalo National River, ACME’s copied dossier has been altered. The Watermark was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Beaver Lake.",
+          "suspect": {
+            "name": "Mira Margin",
+            "alias": "The Watermark",
+            "emoji": "🛶",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The free-flowing Buffalo River begins in the Boston Mountains and joins the White River. Only part of its watershed is managed by the National Park Service.",
+          "ACME exercise: Two fictional sample logs place sites upstream in the Buffalo watershed. One is inside the park boundary and the other outside it. A courier says the outside site cannot belong to the same watershed. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "Outside the park, inside the watershed",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which conclusion respects both the logs and reference?",
+          "options": [
+            "Every watershed site must be inside the park",
+            "The outside sample must be seawater",
+            "The logs prove the whole basin is NPS land",
+            "A watershed can extend beyond a park boundary"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Compare a natural drainage boundary with an administrative boundary.",
+            "Being outside a park does not by itself place a site outside its river basin.",
+            "Answer: A watershed can extend beyond a park boundary. Watershed and administrative boundaries describe different things. The reference explicitly limits NPS management to part of the basin. The logs establish neither seawater nor ownership of the entire watershed. Warrant: Buffalo National River; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "Watershed and administrative boundaries describe different things. The reference explicitly limits NPS management to part of the basin. The logs establish neither seawater nor ownership of the entire watershed. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Buffalo National River; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Buffalo National River",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "The free-flowing Buffalo River begins in the Boston Mountains and joins the White River. Only part of its watershed is managed by the National Park Service.",
+        "learningObjective": "Distinguish drainage relationships from land-management boundaries.",
+        "sources": [
+          "buffalo"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Arkansas",
+          "Buffalo National River"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Opening river/watershed paragraphs. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "ozark-waterways-beaver": [
+      {
+        "caseId": "ozark-waterways-beaver-origin",
+        "briefing": {
+          "headline": "A LAKE OLDER THAN ITS DAM?",
+          "report": "At Beaver Lake, ACME’s copied dossier has been altered. The Impounder was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Bull Shoals Lake.",
+          "suspect": {
+            "name": "Dax Draft",
+            "alias": "The Impounder",
+            "emoji": "🏞️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Beaver Dam impounds the White River. Its construction ran from 1960 through 1966.",
+          "ACME exercise: An ACME reference card classifies the present lake as water impounded by a dam. A swapped caption calls the same feature a naturally formed lake with no impoundment. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "A lake older than its dam?",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which classification keeps the documented origin?",
+          "options": [
+            "A dam-created reservoir",
+            "An undammed river reach only",
+            "A tidal lagoon",
+            "A natural lake with no impoundment"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Ask what process created the water body described.",
+            "A constructed barrier holding river water identifies a reservoir.",
+            "Answer: A dam-created reservoir. A reservoir retains the dam-created origin. The undammed and natural-lake descriptions deny impoundment, and tidal origin has no supporting evidence. Warrant: Beaver Lake; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "A reservoir retains the dam-created origin. The undammed and natural-lake descriptions deny impoundment, and tidal origin has no supporting evidence. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Beaver Lake; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Beaver Lake",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Beaver Dam impounds the White River. Its construction ran from 1960 through 1966.",
+        "learningObjective": "Classify a water body by its origin.",
+        "sources": [
+          "beaver"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Arkansas",
+          "Beaver Lake"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "USACE FAQ sections naming White River dams and construction dates. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-beaver-dates",
+        "briefing": {
+          "headline": "THE COMPLETION STAMP ON A FOUNDATION PHOTO",
+          "report": "At Beaver Lake, ACME’s copied dossier has been altered. The Impounder was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Bull Shoals Lake.",
+          "suspect": {
+            "name": "Dax Draft",
+            "alias": "The Impounder",
+            "emoji": "🏞️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Beaver Dam impounds the White River. Its construction ran from 1960 through 1966.",
+          "ACME exercise: A fictional archive pairs a 1960 construction-start record with a 1966 completion record. A courier labels the start record as proof the entire dam was already complete in 1960. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The completion stamp on a foundation photo",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which timeline repairs that claim?",
+          "options": [
+            "1966 start → 1960 completion",
+            "Both events in 1960",
+            "1960 start → 1966 completion",
+            "Both events in 1966"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Attach the event to its date before comparing years.",
+            "Beginning construction does not establish completion in that same year.",
+            "Answer: 1960 start → 1966 completion. Start and completion are separate events: 1960 precedes 1966. Reversing or merging them loses one of the supplied records. Warrant: Beaver Lake; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "Start and completion are separate events: 1960 precedes 1966. Reversing or merging them loses one of the supplied records. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Beaver Lake; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Beaver Lake",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Beaver Dam impounds the White River. Its construction ran from 1960 through 1966.",
+        "learningObjective": "Separate a construction start from completion.",
+        "sources": [
+          "beaver"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Arkansas",
+          "Beaver Lake"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "USACE FAQ sections naming White River dams and construction dates. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-beaver-label",
+        "briefing": {
+          "headline": "TWO FIELDS ON THE SAMPLE CARD",
+          "report": "At Beaver Lake, ACME’s copied dossier has been altered. The Impounder was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Bull Shoals Lake.",
+          "suspect": {
+            "name": "Dax Draft",
+            "alias": "The Impounder",
+            "emoji": "🏞️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Beaver Dam impounds the White River. Its construction ran from 1960 through 1966.",
+          "ACME exercise: Two fictional custody notes identify water from the White River impoundment above Beaver Dam. Cards J and K name the White River; L and M name an invented East Fork. J and L say below the dam; K and M say above it. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "Two fields on the sample card",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which card preserves river and sampling side?",
+          "options": [
+            "Card J",
+            "Card K",
+            "Card L",
+            "Card M"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Check each field independently.",
+            "A correct river name does not fix an incorrect position relative to the dam.",
+            "Answer: Card K. K alone retains White River and above-dam location. J changes the side, M changes the river, and L changes both. These fictional sampling labels say nothing about water quality. Warrant: Beaver Lake; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "K alone retains White River and above-dam location. J changes the side, M changes the river, and L changes both. These fictional sampling labels say nothing about water quality. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Beaver Lake; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Beaver Lake",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Beaver Dam impounds the White River. Its construction ran from 1960 through 1966.",
+        "learningObjective": "Use two custody fields to detect a sample-label substitution.",
+        "sources": [
+          "beaver"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Arkansas",
+          "Beaver Lake"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "USACE FAQ sections naming White River dams and construction dates. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "ozark-waterways-bull-shoals": [
+      {
+        "caseId": "ozark-waterways-bull-shoals-purpose",
+        "briefing": {
+          "headline": "ONE PURPOSE ERASED",
+          "report": "At Bull Shoals Lake, ACME’s copied dossier has been altered. The Spillover was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Norfork Lake.",
+          "suspect": {
+            "name": "Vera Valve",
+            "alias": "The Spillover",
+            "emoji": "⚙️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Bull Shoals is a White River reservoir project in Arkansas and Missouri, serving flood control and hydroelectric generation.",
+          "ACME exercise: A fictional catalogue deletes flood control because the project also generates electricity. The reference lists both purposes. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "One purpose erased",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which entry preserves the documented functions?",
+          "options": [
+            "Power generation only",
+            "Flood control only",
+            "Neither purpose",
+            "Flood control and power generation"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Check whether the two purposes actually conflict.",
+            "A multiple-purpose project can serve more than one function.",
+            "Answer: Flood control and power generation. Both functions are documented and compatible. Keeping only one discards evidence; deleting both discards all the stated purpose information. Warrant: Bull Shoals Lake; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "Both functions are documented and compatible. Keeping only one discards evidence; deleting both discards all the stated purpose information. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Bull Shoals Lake; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Bull Shoals Lake",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Bull Shoals is a White River reservoir project in Arkansas and Missouri, serving flood control and hydroelectric generation.",
+        "learningObjective": "Reject a false either-or interpretation of infrastructure.",
+        "sources": [
+          "bull-shoals"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Arkansas and Missouri",
+          "Bull Shoals Lake"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "USACE master-plan cover and introductory purpose statement. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-bull-shoals-sequence",
+        "briefing": {
+          "headline": "THE MODEL DISPATCH THAT LEFT TOO SOON",
+          "report": "At Bull Shoals Lake, ACME’s copied dossier has been altered. The Spillover was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Norfork Lake.",
+          "suspect": {
+            "name": "Vera Valve",
+            "alias": "The Spillover",
+            "emoji": "⚙️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Bull Shoals is a White River reservoir project in Arkansas and Missouri, serving flood control and hydroelectric generation.",
+          "ACME exercise: In ACME’s tabletop model, a reading is recorded at 09:00, checked at 09:10, then dispatched at 09:20, all on one clock and day. A courier claims that checked dispatch was sent at 09:05. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The model dispatch that left too soon",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which claim conflicts with the model log?",
+          "options": [
+            "The reading existed at 09:00",
+            "The checked dispatch was sent at 09:05",
+            "Checking followed recording",
+            "Dispatch followed checking"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Follow the item through its required stages.",
+            "A checked report must exist before that checked report can be dispatched.",
+            "Answer: The checked dispatch was sent at 09:05. The checked item did not exist until 09:10 and its dispatch is logged at 09:20. A 09:05 checked dispatch contradicts those stages; the other statements preserve the order. This model is not a dam operating schedule. Warrant: Bull Shoals Lake; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "The checked item did not exist until 09:10 and its dispatch is logged at 09:20. A 09:05 checked dispatch contradicts those stages; the other statements preserve the order. This model is not a dam operating schedule. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Bull Shoals Lake; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Bull Shoals Lake",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Bull Shoals is a White River reservoir project in Arkansas and Missouri, serving flood control and hydroelectric generation.",
+        "learningObjective": "Test a fictional handoff against prerequisite timestamps.",
+        "sources": [
+          "bull-shoals"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Arkansas and Missouri",
+          "Bull Shoals Lake"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "USACE master-plan cover and introductory purpose statement. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-bull-shoals-extent",
+        "briefing": {
+          "headline": "THE STATE-LINE MIX-UP",
+          "report": "At Bull Shoals Lake, ACME’s copied dossier has been altered. The Spillover was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Norfork Lake.",
+          "suspect": {
+            "name": "Vera Valve",
+            "alias": "The Spillover",
+            "emoji": "⚙️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Bull Shoals is a White River reservoir project in Arkansas and Missouri, serving flood control and hydroelectric generation.",
+          "ACME exercise: A reservoir outline in a fictional dossier crosses Arkansas and Missouri. A separate project label identifies the White River. A courier says crossing a state line makes the waterway identification impossible. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The state-line mix-up",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which report preserves both records?",
+          "options": [
+            "Missouri means it cannot be the White River",
+            "The state line proves two unrelated reservoirs",
+            "A White River project can extend across two states",
+            "Erase the Arkansas part of the outline"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Separate geographic continuity from a political boundary.",
+            "One water project can occupy more than one state.",
+            "Answer: A White River project can extend across two states. A political border does not split a reservoir into unrelated systems. The source identifies both states and the White River project; the other answers delete or contradict one of those facts. Warrant: Bull Shoals Lake; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "A political border does not split a reservoir into unrelated systems. The source identifies both states and the White River project; the other answers delete or contradict one of those facts. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Bull Shoals Lake; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Bull Shoals Lake",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Bull Shoals is a White River reservoir project in Arkansas and Missouri, serving flood control and hydroelectric generation.",
+        "learningObjective": "Reconcile a water-system identity with a cross-border extent.",
+        "sources": [
+          "bull-shoals"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Arkansas and Missouri",
+          "Bull Shoals Lake"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "USACE master-plan cover and introductory purpose statement. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "ozark-waterways-norfork": [
+      {
+        "caseId": "ozark-waterways-norfork-names",
+        "briefing": {
+          "headline": "THE SPELLING CORRECTION THAT BROKE THE RECORD",
+          "report": "At Norfork Lake, ACME’s copied dossier has been altered. The Splitter was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Mammoth Spring.",
+          "suspect": {
+            "name": "Nell Notation",
+            "alias": "The Splitter",
+            "emoji": "🔎",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944; powerhouse and switchyard completion is recorded separately in 1949.",
+          "ACME exercise: A copied river field reads North Fork River. The courier changes it to Norfork River merely to match the spelling of Norfork Dam. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The spelling correction that broke the record",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which action best preserves the source fields?",
+          "options": [
+            "Rename the dam North Fork Dam",
+            "Change both names to White Dam",
+            "Erase the river field",
+            "Keep Norfork Dam and North Fork River distinct"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Check which name belongs to which feature.",
+            "Related features can have names that are similar without being identical.",
+            "Answer: Keep Norfork Dam and North Fork River distinct. The supplied reference uses different spellings for dam and river. A spelling resemblance is not authority to rename either one or delete the river field. Warrant: Norfork Lake; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The supplied reference uses different spellings for dam and river. A spelling resemblance is not authority to rename either one or delete the river field. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Norfork Lake; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Norfork Lake",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944; powerhouse and switchyard completion is recorded separately in 1949.",
+        "learningObjective": "Preserve source-specific names for linked features.",
+        "sources": [
+          "norfork"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Arkansas",
+          "Norfork Lake"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "USACE Location and Construction sections; distinct event dates. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-norfork-milestones",
+        "briefing": {
+          "headline": "TWO COMPLETION DATES, DIFFERENT WORK",
+          "report": "At Norfork Lake, ACME’s copied dossier has been altered. The Splitter was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Mammoth Spring.",
+          "suspect": {
+            "name": "Nell Notation",
+            "alias": "The Splitter",
+            "emoji": "🔎",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944; powerhouse and switchyard completion is recorded separately in 1949.",
+          "ACME exercise: Two copied records read dam complete: 1944 and powerhouse/switchyard complete: 1949. A courier averages them to create one construction date. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "Two completion dates, different work",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which replacement respects the recorded milestones?",
+          "options": [
+            "Keep 1944 and 1949 attached to their different work",
+            "Use only the midpoint year",
+            "Date all work to 1944",
+            "Date all work to 1949"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Compare the subjects of the dates before treating them as inconsistent.",
+            "Dam works and later powerhouse/switchyard works need not share a completion date.",
+            "Answer: Keep 1944 and 1949 attached to their different work. The dates describe different scopes of work. Keeping both event labels preserves the record; averaging creates an unrecorded event, and one date for everything erases the distinction. Warrant: Norfork Lake; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "The dates describe different scopes of work. Keeping both event labels preserves the record; averaging creates an unrecorded event, and one date for everything erases the distinction. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Norfork Lake; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Norfork Lake",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944; powerhouse and switchyard completion is recorded separately in 1949.",
+        "learningObjective": "Resolve different completion dates by checking their scopes.",
+        "sources": [
+          "norfork"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Arkansas",
+          "Norfork Lake"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "USACE Location and Construction sections; distinct event dates. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-norfork-matching",
+        "briefing": {
+          "headline": "THE TWO-PART ENGINEERING INDEX",
+          "report": "At Norfork Lake, ACME’s copied dossier has been altered. The Splitter was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Mammoth Spring.",
+          "suspect": {
+            "name": "Nell Notation",
+            "alias": "The Splitter",
+            "emoji": "🔎",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944; powerhouse and switchyard completion is recorded separately in 1949.",
+          "ACME exercise: A fictional index requires dam name Norfork and river name North Fork. Card P has both; Q has Norfork/White; R has invented Hill Dam/North Fork; S has Hill Dam/White. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The two-part engineering index",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which card preserves the documented pair?",
+          "options": [
+            "Card S",
+            "Card Q",
+            "Card P",
+            "Card R"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Treat the two fields as separate requirements.",
+            "Do not stop after finding only a familiar dam or a familiar river.",
+            "Answer: Card P. P matches both fields. Q keeps only the dam, R only the river, and S neither. Similar spelling cannot replace this paired-source check. Warrant: Norfork Lake; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "P matches both fields. Q keeps only the dam, R only the river, and S neither. Similar spelling cannot replace this paired-source check. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Norfork Lake; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Norfork Lake",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944; powerhouse and switchyard completion is recorded separately in 1949.",
+        "learningObjective": "Authenticate a location record with two linked names.",
+        "sources": [
+          "norfork"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Arkansas",
+          "Norfork Lake"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "USACE Location and Construction sections; distinct event dates. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "ozark-waterways-mammoth": [
+      {
+        "caseId": "ozark-waterways-mammoth-feature",
+        "briefing": {
+          "headline": "THE LAKE FILED AS THE SOURCE",
+          "report": "At Mammoth Spring, ACME’s copied dossier has been altered. The Refill was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Greer Spring.",
+          "suspect": {
+            "name": "Wade Wells",
+            "alias": "The Refill",
+            "emoji": "💧",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Mammoth Spring feeds a lake and then the Spring River. The park’s Frisco train depot dates to 1886.",
+          "ACME exercise: A fictional observation describes water emerging from underground before it enters the lake. A courier labels the emergence point as the entire lake. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The lake filed as the source",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which distinction repairs the record?",
+          "options": [
+            "The spring is the source feature; the lake receives its water",
+            "The lake and emergence point must be identical",
+            "The emergence is an ocean tide",
+            "A train depot generates the spring"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Separate the point where water emerges from the water body it enters.",
+            "Adjacent connected features can still belong to different categories.",
+            "Answer: The spring is the source feature; the lake receives its water. The spring’s emergence is distinct from the receiving lake. The reference supplies that relationship, while neither a tide nor the depot explains it. Warrant: Mammoth Spring; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The spring’s emergence is distinct from the receiving lake. The reference supplies that relationship, while neither a tide nor the depot explains it. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Mammoth Spring; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Mammoth Spring",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Mammoth Spring feeds a lake and then the Spring River. The park’s Frisco train depot dates to 1886.",
+        "learningObjective": "Distinguish a spring from its receiving lake.",
+        "sources": [
+          "mammoth"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Arkansas",
+          "Mammoth Spring"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Park What to know: water relationship and dated depot only. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-mammoth-date-scope",
+        "briefing": {
+          "headline": "AN ANCIENT SPRING WITH A DEPOT DATE",
+          "report": "At Mammoth Spring, ACME’s copied dossier has been altered. The Refill was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Greer Spring.",
+          "suspect": {
+            "name": "Wade Wells",
+            "alias": "The Refill",
+            "emoji": "💧",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Mammoth Spring feeds a lake and then the Spring River. The park’s Frisco train depot dates to 1886.",
+          "ACME exercise: An altered label says the spring formed in 1886. Its sole attached dated document describes the Frisco depot. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "An ancient spring with a depot date",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which edit is supported?",
+          "options": [
+            "Keep 1886 as the spring’s formation date",
+            "Apply 1886 to the depot and leave spring formation undated here",
+            "Move the spring’s formation to 1986",
+            "Claim both features formed together"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Ask what object the dated record describes.",
+            "A nearby building’s date is not the age of a natural feature.",
+            "Answer: Apply 1886 to the depot and leave spring formation undated here. The date belongs to the depot, not the natural spring. The supplied record gives no spring-formation year; changing the year or forcing simultaneous origins adds unsupported information. Warrant: Mammoth Spring; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "The date belongs to the depot, not the natural spring. The supplied record gives no spring-formation year; changing the year or forcing simultaneous origins adds unsupported information. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Mammoth Spring; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Mammoth Spring",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Mammoth Spring feeds a lake and then the Spring River. The park’s Frisco train depot dates to 1886.",
+        "learningObjective": "Keep a date attached to the feature it actually describes.",
+        "sources": [
+          "mammoth"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Arkansas",
+          "Mammoth Spring"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Park What to know: water relationship and dated depot only. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-mammoth-custody",
+        "briefing": {
+          "headline": "WHERE WAS THE BOTTLE FILLED?",
+          "report": "At Mammoth Spring, ACME’s copied dossier has been altered. The Refill was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Greer Spring.",
+          "suspect": {
+            "name": "Wade Wells",
+            "alias": "The Refill",
+            "emoji": "💧",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Mammoth Spring feeds a lake and then the Spring River. The park’s Frisco train depot dates to 1886.",
+          "ACME exercise: Two fictional records concern bottle P: its serial matches a receipt marked lake sample, and its collector log also says filled at the lake. Its new label says collected directly at the spring emergence. Assume the two records are reliable. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "Where was the bottle filled?",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which provenance is best supported?",
+          "options": [
+            "The new label overrides both logs",
+            "The sample came from the train depot",
+            "The bottle was filled at the lake",
+            "The records establish drinking-water safety"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Compare the new label with both independent records.",
+            "Trace this bottle’s serial number and recorded collection point.",
+            "Answer: The bottle was filled at the lake. The matched receipt and collector log independently support lake collection. The new label conflicts with both, a depot origin is unsupported, and collection location alone establishes no safety conclusion. Warrant: Mammoth Spring; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "The matched receipt and collector log independently support lake collection. The new label conflicts with both, a depot origin is unsupported, and collection location alone establishes no safety conclusion. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Mammoth Spring; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Mammoth Spring",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Mammoth Spring feeds a lake and then the Spring River. The park’s Frisco train depot dates to 1886.",
+        "learningObjective": "Use corroborating custody records without inferring sample safety.",
+        "sources": [
+          "mammoth"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Arkansas",
+          "Mammoth Spring"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Park What to know: water relationship and dated depot only. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "ozark-waterways-greer": [
+      {
+        "caseId": "ozark-waterways-greer-recipient",
+        "briefing": {
+          "headline": "THE WRONG RECEIVING RIVER",
+          "report": "At Greer Spring, ACME’s copied dossier has been altered. The Connector was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Big Spring.",
+          "suspect": {
+            "name": "Reed Ripple",
+            "alias": "The Connector",
+            "emoji": "🌿",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Greer Spring’s branch flows into the Eleven Point River in Missouri.",
+          "ACME exercise: A copied text diagram reads Greer Spring branch → Current River. The reference instead names the Eleven Point River. Arrows mean water flows into the next named feature. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The wrong receiving river",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which connector should replace it?",
+          "options": [
+            "Current River → Greer Spring",
+            "Greer Spring branch → Eleven Point River",
+            "Eleven Point River → ocean inlet",
+            "Greer Spring branch → invented Mill Lake"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Check the receiving waterway, not just the spring name.",
+            "The reference explicitly names the river that receives the branch.",
+            "Answer: Greer Spring branch → Eleven Point River. Greer Spring branch → Eleven Point preserves the documented recipient. Reversing the flow or substituting another recipient does not. Warrant: Greer Spring; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "Greer Spring branch → Eleven Point preserves the documented recipient. Reversing the flow or substituting another recipient does not. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Greer Spring; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Greer Spring",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Greer Spring’s branch flows into the Eleven Point River in Missouri.",
+        "learningObjective": "Repair a single wrong connector in a drainage diagram.",
+        "sources": [
+          "greer"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Missouri",
+          "Greer Spring"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "MDC natural-area description of spring branch and receiving river; no flow-rate or access claims. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-greer-timing",
+        "briefing": {
+          "headline": "DISTANCE IS NOT A TRAVEL CLOCK",
+          "report": "At Greer Spring, ACME’s copied dossier has been altered. The Connector was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Big Spring.",
+          "suspect": {
+            "name": "Reed Ripple",
+            "alias": "The Connector",
+            "emoji": "🌿",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Greer Spring’s branch flows into the Eleven Point River in Missouri.",
+          "ACME exercise: ACME’s fictional stream model assigns a path length of two model units. No speed or travel-time observations are supplied. A courier states that a marked parcel must arrive in exactly two minutes. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "Distance is not a travel clock",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which conclusion is justified?",
+          "options": [
+            "Two units always means two minutes",
+            "The parcel must arrive instantly",
+            "The branch cannot flow",
+            "The stated length alone does not establish travel time"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "List the quantities actually supplied.",
+            "A distance and a duration are different kinds of measurement.",
+            "Answer: The stated length alone does not establish travel time. A length does not specify elapsed time without an additional speed or timing record. The exact-minute, instant-arrival and no-flow conclusions all add unsupported assumptions. Warrant: Greer Spring; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "A length does not specify elapsed time without an additional speed or timing record. The exact-minute, instant-arrival and no-flow conclusions all add unsupported assumptions. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Greer Spring; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Greer Spring",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Greer Spring’s branch flows into the Eleven Point River in Missouri.",
+        "learningObjective": "Recognize the missing evidence in a travel-time inference.",
+        "sources": [
+          "greer"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Missouri",
+          "Greer Spring"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "MDC natural-area description of spring branch and receiving river; no flow-rate or access claims. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-greer-index",
+        "briefing": {
+          "headline": "THE PAIRED REGIONAL LABEL",
+          "report": "At Greer Spring, ACME’s copied dossier has been altered. The Connector was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Big Spring.",
+          "suspect": {
+            "name": "Reed Ripple",
+            "alias": "The Connector",
+            "emoji": "🌿",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Greer Spring’s branch flows into the Eleven Point River in Missouri.",
+          "ACME exercise: Two independent fictional index fields require Missouri and Eleven Point River. J: Missouri/Eleven Point; K: Missouri/White; L: Arkansas/Eleven Point; M: Arkansas/White. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The paired regional label",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which entry passes both checks?",
+          "options": [
+            "Entry J",
+            "Entry K",
+            "Entry L",
+            "Entry M"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Check region and waterway separately.",
+            "A correct state does not repair an incorrect receiving-river field.",
+            "Answer: Entry J. J preserves region and receiving river. K keeps only region, L only river, and M neither. These are invented indexing alternatives. Warrant: Greer Spring; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "J preserves region and receiving river. K keeps only region, L only river, and M neither. These are invented indexing alternatives. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Greer Spring; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Greer Spring",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Greer Spring’s branch flows into the Eleven Point River in Missouri.",
+        "learningObjective": "Cross-check region and hydrological relationship in a label.",
+        "sources": [
+          "greer"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Missouri",
+          "Greer Spring"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "MDC natural-area description of spring branch and receiving river; no flow-rate or access claims. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "ozark-waterways-big-spring": [
+      {
+        "caseId": "ozark-waterways-big-spring-emergence",
+        "briefing": {
+          "headline": "THE REVERSED ORIGIN STORY",
+          "report": "At Big Spring, ACME’s copied dossier has been altered. The Mean Streak was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Alley Spring and Mill.",
+          "suspect": {
+            "name": "Lena Ledger",
+            "alias": "The Mean Streak",
+            "emoji": "🫧",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Big Spring contributes groundwater to the Current River. NPS describes dye-tracing evidence for connections through underground passages.",
+          "ACME exercise: An ACME label calls the spring simply a river flowing underground from the nearby bank. Its supplied reference describes groundwater emerging through passages and adding water to the Current River. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The reversed origin story",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which relationship should the case report preserve?",
+          "options": [
+            "The river is the only possible source of all spring water",
+            "The spring contributes groundwater to the river",
+            "The spring is a seawater inlet",
+            "Groundwater cannot reach the surface"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Look at what the source says is emerging and where it goes.",
+            "Do not replace a documented contribution with an unsupported exclusive origin.",
+            "Answer: The spring contributes groundwater to the river. The reference supports emerging groundwater contributing to the river. It does not establish the river as the exclusive source, a seawater connection or an inability of groundwater to emerge. Warrant: Big Spring; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The reference supports emerging groundwater contributing to the river. It does not establish the river as the exclusive source, a seawater connection or an inability of groundwater to emerge. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Big Spring; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Big Spring",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Big Spring contributes groundwater to the Current River. NPS describes dye-tracing evidence for connections through underground passages.",
+        "learningObjective": "Distinguish a documented flow relationship from an unsupported source claim.",
+        "sources": [
+          "big-spring"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Missouri",
+          "Big Spring"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Springs and Seeps, Big Spring profile; no exact discharge or travel-time claims. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-big-spring-tracer",
+        "briefing": {
+          "headline": "THE DYE RESULT THAT PROVED TOO MUCH",
+          "report": "At Big Spring, ACME’s copied dossier has been altered. The Mean Streak was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Alley Spring and Mill.",
+          "suspect": {
+            "name": "Lena Ledger",
+            "alias": "The Mean Streak",
+            "emoji": "🫧",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Big Spring contributes groundwater to the Current River. NPS describes dye-tracing evidence for connections through underground passages.",
+          "ACME exercise: In a fictional tabletop model, dye introduced at inlet P is later detected at outlet Q. No tests at any other inlet are reported. A courier claims every drop at Q must originate at P. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The dye result that proved too much",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which report stays within the observation?",
+          "options": [
+            "No connection exists between P and Q",
+            "Every drop at Q must come from P",
+            "The test establishes the age of the spring",
+            "The result supports a P-to-Q connection, not an exclusive source"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Distinguish evidence for a connection from evidence that excludes every alternative.",
+            "One positive connection test does not establish that there are no other contributing sources.",
+            "Answer: The result supports a P-to-Q connection, not an exclusive source. Detection supports a connection from P to Q in the model. It does not test all other sources or date the spring. Denying the observed connection also discards evidence. No real dye release is proposed. Warrant: Big Spring; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "Detection supports a connection from P to Q in the model. It does not test all other sources or date the spring. Denying the observed connection also discards evidence. No real dye release is proposed. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Big Spring; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Big Spring",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Big Spring contributes groundwater to the Current River. NPS describes dye-tracing evidence for connections through underground passages.",
+        "learningObjective": "Limit a tracer inference to the connection actually tested.",
+        "sources": [
+          "big-spring"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Missouri",
+          "Big Spring"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Springs and Seeps, Big Spring profile; no exact discharge or travel-time claims. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-big-spring-average",
+        "briefing": {
+          "headline": "THE AVERAGE COPIED AS EVERY READING",
+          "report": "At Big Spring, ACME’s copied dossier has been altered. The Mean Streak was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Alley Spring and Mill.",
+          "suspect": {
+            "name": "Lena Ledger",
+            "alias": "The Mean Streak",
+            "emoji": "🫧",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Big Spring contributes groundwater to the Current River. NPS describes dye-tracing evidence for connections through underground passages.",
+          "ACME exercise: Two invented model readings are 10 and 14 flow tokens on two observation cards. Their average is 12. A new label claims both original readings were 12. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The average copied as every reading",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction preserves the observations and summary?",
+          "options": [
+            "Replace both readings with 12",
+            "Change the average to 24",
+            "Keep readings 10 and 14, and label 12 as their average",
+            "Keep only the larger reading"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Keep observed values distinct from a statistic calculated from them.",
+            "A correct average need not be one of the individual readings.",
+            "Answer: Keep readings 10 and 14, and label 12 as their average. The mean is (10 + 14) / 2 = 12, but it does not replace either observation. Using 24 omits division; retaining only the larger reading discards data. Model tokens are not actual spring discharge. Warrant: Big Spring; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "The mean is (10 + 14) / 2 = 12, but it does not replace either observation. Using 24 omits division; retaining only the larger reading discards data. Model tokens are not actual spring discharge. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Big Spring; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Big Spring",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Big Spring contributes groundwater to the Current River. NPS describes dye-tracing evidence for connections through underground passages.",
+        "learningObjective": "Preserve original measurements when reporting an average.",
+        "sources": [
+          "big-spring"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Missouri",
+          "Big Spring"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Springs and Seeps, Big Spring profile; no exact discharge or travel-time claims. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "ozark-waterways-alley": [
+      {
+        "caseId": "ozark-waterways-alley-power",
+        "briefing": {
+          "headline": "THE NEARBY RIVER GETS THE CREDIT",
+          "report": "At Alley Spring and Mill, ACME’s copied dossier has been altered. The Repaint was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "Return to headquarters with the corrected files from your selected route.",
+          "suspect": {
+            "name": "Millie Millrace",
+            "alias": "The Repaint",
+            "emoji": "🛞",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Alley Mill used spring water for power. The present building dates to 1893–1894 and replaced an earlier mill; it was initially unpainted, later white with green trim, and later red.",
+          "ACME exercise: Two fictional notes identify a mill’s motive water as the spring flow, while a decorative map shows a river nearby. A courier treats proximity as proof that the river supplied the machinery. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The nearby river gets the credit",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which account fits the operational notes?",
+          "options": [
+            "The river must power anything nearby",
+            "The mill used electricity only",
+            "The spring supplied the mill’s water power",
+            "The mill had no power source"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Separate proximity from a documented working connection.",
+            "Identify the water actually routed to the machinery in the notes.",
+            "Answer: The spring supplied the mill’s water power. The source and operational notes identify spring water. A nearby river on a map does not override that relationship, and neither electricity-only nor no power is supported. Warrant: Alley Spring and Mill; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The source and operational notes identify spring water. A nearby river on a map does not override that relationship, and neither electricity-only nor no power is supported. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Alley Spring and Mill; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Alley Spring and Mill",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Alley Mill used spring water for power. The present building dates to 1893–1894 and replaced an earlier mill; it was initially unpainted, later white with green trim, and later red.",
+        "learningObjective": "Use functional evidence rather than nearby geography to identify a power source.",
+        "sources": [
+          "alley"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Missouri",
+          "Alley Spring and Mill"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Alley Mill construction, paint-history and water-power passages. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-alley-replacement",
+        "briefing": {
+          "headline": "THE FIRST MILL AND THIS MILL",
+          "report": "At Alley Spring and Mill, ACME’s copied dossier has been altered. The Repaint was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "Return to headquarters with the corrected files from your selected route.",
+          "suspect": {
+            "name": "Millie Millrace",
+            "alias": "The Repaint",
+            "emoji": "🛞",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Alley Mill used spring water for power. The present building dates to 1893–1894 and replaced an earlier mill; it was initially unpainted, later white with green trim, and later red.",
+          "ACME exercise: A copied file dates an earlier mill to no later than 1868 and the present building to 1893–1894. A courier calls the two dates impossible because one site can have only one building date. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The first mill and this mill",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction preserves the sequence?",
+          "options": [
+            "Keep an earlier mill and a later replacement as different events",
+            "Use 1868 for the present building",
+            "Use 1894 for the first mill on the site",
+            "Average the dates into one event"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Check whether the dates refer to the same physical building.",
+            "A shared site does not make an earlier structure and its replacement identical.",
+            "Answer: Keep an earlier mill and a later replacement as different events. A site can hold successive buildings. The earlier mill and later replacement are distinct events; substituting one date for both or averaging them loses that distinction. Warrant: Alley Spring and Mill; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "A site can hold successive buildings. The earlier mill and later replacement are distinct events; substituting one date for both or averaging them loses that distinction. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Alley Spring and Mill; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Alley Spring and Mill",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Alley Mill used spring water for power. The present building dates to 1893–1894 and replaced an earlier mill; it was initially unpainted, later white with green trim, and later red.",
+        "learningObjective": "Reconcile successive structures at one site.",
+        "sources": [
+          "alley"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Missouri",
+          "Alley Spring and Mill"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Alley Mill construction, paint-history and water-power passages. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "ozark-waterways-alley-paint",
+        "briefing": {
+          "headline": "THE SURFACE THAT CHANGED",
+          "report": "At Alley Spring and Mill, ACME’s copied dossier has been altered. The Repaint was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "Return to headquarters with the corrected files from your selected route.",
+          "suspect": {
+            "name": "Millie Millrace",
+            "alias": "The Repaint",
+            "emoji": "🛞",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Alley Mill used spring water for power. The present building dates to 1893–1894 and replaced an earlier mill; it was initially unpainted, later white with green trim, and later red.",
+          "ACME exercise: ACME has fictional paint-history cards: bare wood first, white with green trim second, red later. A red appearance today is being used to claim the building was red from its first construction. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The surface that changed",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which verdict fits the documented sequence?",
+          "options": [
+            "Red appearance proves original red paint",
+            "All earlier paint records must be false",
+            "A paint color establishes the construction year",
+            "Later red paint can coexist with an earlier unpainted stage"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Separate a present surface from the building’s whole history.",
+            "A finish can change while the underlying building continues to exist.",
+            "Answer: Later red paint can coexist with an earlier unpainted stage. The documented sequence allows later red paint over earlier finishes. Present appearance does not establish the initial finish or date construction, and it does not invalidate earlier stages. Warrant: Alley Spring and Mill; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "The documented sequence allows later red paint over earlier finishes. Present appearance does not establish the initial finish or date construction, and it does not invalidate earlier stages. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Alley Spring and Mill; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Alley Spring and Mill",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Alley Mill used spring water for power. The present building dates to 1893–1894 and replaced an earlier mill; it was initially unpainted, later white with green trim, and later red.",
+        "learningObjective": "Avoid inferring an original appearance from a later finish.",
+        "sources": [
+          "alley"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "The Watershed Files",
+          "Missouri",
+          "Alley Spring and Mill"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS Alley Mill construction, paint-history and water-power passages. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ]
+  },
+  "sources": {
+    "buffalo": {
+      "title": "Buffalo National River: Learn About the Park",
+      "url": "https://www.nps.gov/buff/learn/index.htm",
+      "publisher": "National Park Service",
+      "reviewed": true,
+      "reviewScope": "Opening: free-flowing river, Boston Mountains origin, White River confluence, and only part of the watershed under NPS management. No live levels or float suitability."
+    },
+    "beaver": {
+      "title": "White River dams: Table Rock Lake FAQs",
+      "url": "https://www.swl.usace.army.mil/Missions/Recreation/Lakes/Table-Rock-Lake/FAQs/",
+      "publisher": "US Army Corps of Engineers",
+      "reviewed": true,
+      "reviewScope": "Where are the dams / construction timeline: Beaver on White River, 1960–1966; Bull Shoals 1947–1951; Norfork on North Fork River. Upstream/downstream order is a simplified reference, not navigation."
+    },
+    "bull-shoals": {
+      "title": "Bull Shoals Lake master plan",
+      "url": "https://www.swl.usace.army.mil/LinkClick.aspx?fileticket=rU9Qz5W47OM%3D&portalid=50&tabid=18088",
+      "publisher": "US Army Corps of Engineers",
+      "reviewed": true,
+      "reviewScope": "Cover and introduction: White River, Arkansas/Missouri, multiple-purpose flood-control and power project; initial master plan approved 1951. Official indexed text used; no live operation claims."
+    },
+    "norfork": {
+      "title": "Norfork Lake: Dam and Lake",
+      "url": "https://www.swl.usace.army.mil/Missions/Recreation/Lakes/Norfork-Lake/Dam-and-Lake/",
+      "publisher": "US Army Corps of Engineers",
+      "reviewed": true,
+      "reviewScope": "Location and construction: North Fork River; dam begun 1941, finished 1944; powerhouse/switchyard completion 1949 and generation beginning 1944 are distinct events. No release schedules."
+    },
+    "mammoth": {
+      "title": "Mammoth Spring State Park",
+      "url": "https://www.arkansas.com/state-parks/explore/parks/mammoth-spring-state-park",
+      "publisher": "Arkansas State Parks",
+      "reviewed": true,
+      "reviewScope": "What to know: spring feeds lake then Spring River; 1886 Frisco depot. No spring formation date or current flow value inferred."
+    },
+    "greer": {
+      "title": "Greer Spring Natural Area",
+      "url": "https://mdc.mo.gov/discover-nature/places/natural-areas/greer-spring",
+      "publisher": "Missouri Department of Conservation",
+      "reviewed": true,
+      "reviewScope": "Description: spring branch flows into Eleven Point River in Missouri. No ranking, discharge, hiking or fishing guidance."
+    },
+    "big-spring": {
+      "title": "Springs and Seeps",
+      "url": "https://www.nps.gov/ozar/learn/nature/springs.htm",
+      "publisher": "National Park Service",
+      "reviewed": true,
+      "reviewScope": "Big Spring profile: groundwater passages, dye tracing and contribution to Current River; general flow observations are not live conditions."
+    },
+    "alley": {
+      "title": "Alley Mill",
+      "url": "https://www.nps.gov/ozar/learn/historyculture/alley-mill.htm",
+      "publisher": "National Park Service",
+      "reviewed": true,
+      "reviewScope": "Construction 1893–1894, earlier mill by 1868; spring water powers machinery; unpainted, then white/green, then red paint history. No current access or machinery operation claims."
+    }
+  }
+}

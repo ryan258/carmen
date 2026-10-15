@@ -1,0 +1,1872 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 1,
+  "id": "architecture-hidden-details-carmen",
+  "title": "Where in the Blueprints is Carmen Sandiego?",
+  "subtitle": "Architecture & Hidden Details — The Blueprint Switch",
+  "heroLocation": "ARCHITECTURE HIDDEN DETAILS",
+  "intro": "Recover ACME’s altered building dossiers at eight US architectural landmarks. Compare form, materials, attribution, design dates and later changes. All drawings, image captions, component reports and ACME desks are fictional teaching records. The route provides approximate orientation, not access to buildings, structural advice or a visitor itinerary. Map pins are approximate orientation points, not entrances or directions. Choose 4, 6 or 8 stops; one of three case variants is selected at each stop.",
+  "evidenceLabel": "ARCHITECTURE HIDDEN DETAILS EVIDENCE",
+  "successMessage": "You recovered the corrected files and completed the final report for your selected route.",
+  "map": {
+    "center": {
+      "lat": 39.0,
+      "lng": -100.0
+    },
+    "zoom": 4,
+    "minZoom": 3,
+    "maxZoom": 16
+  },
+  "finalConfrontation": {
+    "title": "Final Report",
+    "rounds": [
+      {
+        "title": "First-stop evidence review",
+        "description": "Review the written evidence from the first selected case.",
+        "question": "Which answer matches the first case evidence?",
+        "options": [
+          "Selected case answer",
+          "Case alternative 1",
+          "Case alternative 2",
+          "Case alternative 3"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report copies the selected first case, including its choices, correct index, and explanation."
+      },
+      {
+        "title": "Route evidence review",
+        "description": "Review the written evidence from a case in the middle of the selected route.",
+        "question": "Which answer matches the route evidence?",
+        "options": [
+          "Selected case answer",
+          "Case alternative 1",
+          "Case alternative 2",
+          "Case alternative 3"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report copies the selected middle case, including its choices, correct index, and explanation."
+      },
+      {
+        "title": "Route inventory",
+        "description": "Use the collected tokens from your completed route.",
+        "question": "Which token came from the last completed stop?",
+        "options": [
+          "Last stop token",
+          "First stop token",
+          "Second stop token",
+          "Third stop token"
+        ],
+        "correctIndex": 0,
+        "explanation": "The live report resolves the last token and three other tokens from the completed route."
+      }
+    ]
+  },
+  "locations": [
+    {
+      "id": "architecture-hidden-details-robie",
+      "name": "Frederick C. Robie House",
+      "province": "Chicago, Illinois",
+      "lat": 41.79,
+      "lng": -87.596,
+      "emoji": "🧱",
+      "tagline": "Match a caption to documented architectural form.",
+      "henchman": {
+        "name": "Rowan Roofline",
+        "alias": "The Vertical Edit",
+        "emoji": "🧱",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Robie Seal",
+        "char": "🧱"
+      }
+    },
+    {
+      "id": "architecture-hidden-details-taliesin",
+      "name": "Taliesin",
+      "province": "Spring Green, Wisconsin",
+      "lat": 43.142,
+      "lng": -90.07,
+      "emoji": "🏡",
+      "tagline": "Reconcile multiple documented functions at one place.",
+      "henchman": {
+        "name": "Bryn Brow",
+        "alias": "The First Draft",
+        "emoji": "🏡",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Taliesin Seal",
+        "char": "🏡"
+      }
+    },
+    {
+      "id": "architecture-hidden-details-fallingwater",
+      "name": "Fallingwater",
+      "province": "Mill Run, Pennsylvania",
+      "lat": 39.906,
+      "lng": -79.468,
+      "emoji": "🌊",
+      "tagline": "Preserve a specific building/landscape relationship.",
+      "henchman": {
+        "name": "Faye Facade",
+        "alias": "The Distant View",
+        "emoji": "🌊",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Fallingwater Seal",
+        "char": "🌊"
+      }
+    },
+    {
+      "id": "architecture-hidden-details-gateway-arch",
+      "name": "Gateway Arch",
+      "province": "St. Louis, Missouri",
+      "lat": 38.625,
+      "lng": -90.185,
+      "emoji": "🌉",
+      "tagline": "Distinguish an engineered structure from a similar natural form.",
+      "henchman": {
+        "name": "Elias Elevation",
+        "alias": "The Reference Shift",
+        "emoji": "🌉",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Gateway Arch Seal",
+        "char": "🌉"
+      }
+    },
+    {
+      "id": "architecture-hidden-details-gamble",
+      "name": "Gamble House",
+      "province": "Pasadena, California",
+      "lat": 34.152,
+      "lng": -118.161,
+      "emoji": "🪚",
+      "tagline": "Recognize craftsmanship and assembly as architectural evidence.",
+      "henchman": {
+        "name": "Willa Woodgrain",
+        "alias": "The Credit Swap",
+        "emoji": "🪚",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Gamble Seal",
+        "char": "🪚"
+      }
+    },
+    {
+      "id": "architecture-hidden-details-glass-house",
+      "name": "The Glass House",
+      "province": "New Canaan, Connecticut",
+      "lat": 41.141,
+      "lng": -73.53,
+      "emoji": "🪟",
+      "tagline": "Avoid inferring universal material composition from a name.",
+      "henchman": {
+        "name": "Pip Pane",
+        "alias": "The Universal",
+        "emoji": "🪟",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Glass House Seal",
+        "char": "🪟"
+      }
+    },
+    {
+      "id": "architecture-hidden-details-marin",
+      "name": "Marin County Civic Center",
+      "province": "San Rafael, California",
+      "lat": 38.003,
+      "lng": -122.531,
+      "emoji": "🏛️",
+      "tagline": "Classify a building by its own documented function.",
+      "henchman": {
+        "name": "Civic Cypher",
+        "alias": "The Commission",
+        "emoji": "🏛️",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Marin Seal",
+        "char": "🏛️"
+      }
+    },
+    {
+      "id": "architecture-hidden-details-bradbury",
+      "name": "Bradbury Building",
+      "province": "Los Angeles, California",
+      "lat": 34.051,
+      "lng": -118.248,
+      "emoji": "🏢",
+      "tagline": "Recognize what an observed lighting feature establishes and what it does not.",
+      "henchman": {
+        "name": "Atrium Ada",
+        "alias": "The Screen Role",
+        "emoji": "🏢",
+        "role": "Fictional ACME training suspect altering teaching copies",
+        "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+      },
+      "token": {
+        "name": "Bradbury Seal",
+        "char": "🏢"
+      }
+    }
+  ],
+  "questions": {
+    "architecture-hidden-details-robie": [
+      {
+        "caseId": "architecture-hidden-details-robie-form",
+        "briefing": {
+          "headline": "THE VERTICAL TOWER CAPTION",
+          "report": "At Frederick C. Robie House, ACME’s copied dossier has been altered. The Vertical Edit was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Taliesin.",
+          "suspect": {
+            "name": "Rowan Roofline",
+            "alias": "The Vertical Edit",
+            "emoji": "🧱",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Frank Lloyd Wright’s Robie House was completed in 1910. Its Prairie design emphasizes horizontal lines, brick and limestone, with projecting cantilevered roofs.",
+          "ACME exercise: A fictional architectural transcript records low horizontal bands and projecting roofs. A copied caption calls those observations a narrow vertical tower. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The vertical tower caption",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction matches the written evidence?",
+          "options": [
+            "Retain the vertical-tower description",
+            "Describe the horizontal composition and projecting roofs",
+            "Call it a natural cave",
+            "Remove all material information"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Compare the dominant direction in the description.",
+            "A long horizontal emphasis is different from a narrow vertical silhouette.",
+            "Answer: Describe the horizontal composition and projecting roofs. The recorded form matches horizontal composition and roof projections. A vertical tower conflicts with it; a cave changes a built house into a natural feature, and deletion does not correct the caption. Warrant: Frederick C. Robie House; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The recorded form matches horizontal composition and roof projections. A vertical tower conflicts with it; a cave changes a built house into a natural feature, and deletion does not correct the caption. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Frederick C. Robie House; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Frederick C. Robie House",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Frank Lloyd Wright’s Robie House was completed in 1910. Its Prairie design emphasizes horizontal lines, brick and limestone, with projecting cantilevered roofs.",
+        "learningObjective": "Match a caption to documented architectural form.",
+        "sources": [
+          "robie"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "Chicago, Illinois",
+          "Frederick C. Robie House"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Trust Robie House description: date, attribution, material and roofline. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-robie-photo",
+        "briefing": {
+          "headline": "THE COMPLETED HOUSE BEFORE COMPLETION",
+          "report": "At Frederick C. Robie House, ACME’s copied dossier has been altered. The Vertical Edit was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Taliesin.",
+          "suspect": {
+            "name": "Rowan Roofline",
+            "alias": "The Vertical Edit",
+            "emoji": "🧱",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Frank Lloyd Wright’s Robie House was completed in 1910. Its Prairie design emphasizes horizontal lines, brick and limestone, with projecting cantilevered roofs.",
+          "ACME exercise: An invented unaltered photograph is identified as showing the completed 1910 house, but its capture-date caption reads 1890. Treat the identification, completion date and observation-not-rendering assumption as reliable. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The completed house before completion",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which field must be reconsidered?",
+          "options": [
+            "The capture-date caption of 1890",
+            "The fact that the building has a designer",
+            "The existence of horizontal lines",
+            "The use of a roof"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Use the completed building as a limit on the possible observation date.",
+            "An actual photograph is different from a proposal or imaginative rendering.",
+            "Answer: The capture-date caption of 1890. An actual photograph cannot observe this completed 1910 house in 1890 under the stated assumptions. The conflicting date does not invalidate the unrelated designer or form fields. Warrant: Frederick C. Robie House; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "An actual photograph cannot observe this completed 1910 house in 1890 under the stated assumptions. The conflicting date does not invalidate the unrelated designer or form fields. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Frederick C. Robie House; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Frederick C. Robie House",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Frank Lloyd Wright’s Robie House was completed in 1910. Its Prairie design emphasizes horizontal lines, brick and limestone, with projecting cantilevered roofs.",
+        "learningObjective": "Identify an impossible capture date under explicit reliability assumptions.",
+        "sources": [
+          "robie"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "Chicago, Illinois",
+          "Frederick C. Robie House"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Trust Robie House description: date, attribution, material and roofline. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-robie-identity",
+        "briefing": {
+          "headline": "THE DESIGNER AND YEAR FIELDS SEPARATE",
+          "report": "At Frederick C. Robie House, ACME’s copied dossier has been altered. The Vertical Edit was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Taliesin.",
+          "suspect": {
+            "name": "Rowan Roofline",
+            "alias": "The Vertical Edit",
+            "emoji": "🧱",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Frank Lloyd Wright’s Robie House was completed in 1910. Its Prairie design emphasizes horizontal lines, brick and limestone, with projecting cantilevered roofs.",
+          "ACME exercise: Two independent copied fields require Wright as designer and 1910 as completion. J: Wright/1900; K: invented Vale/1910; L: Wright/1910; M: Vale/1900. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The designer and year fields separate",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which record preserves both fields?",
+          "options": [
+            "Record J",
+            "Record K",
+            "Record L",
+            "Record M"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Check both identity and event date.",
+            "A single correct field is insufficient for a paired record.",
+            "Answer: Record L. L retains designer and date. J keeps only the designer, K only the date, and M neither. The other records are fictional catalogue substitutions. Warrant: Frederick C. Robie House; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "L retains designer and date. J keeps only the designer, K only the date, and M neither. The other records are fictional catalogue substitutions. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Frederick C. Robie House; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Frederick C. Robie House",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Frank Lloyd Wright’s Robie House was completed in 1910. Its Prairie design emphasizes horizontal lines, brick and limestone, with projecting cantilevered roofs.",
+        "learningObjective": "Corroborate authorship with a separate completion-date field.",
+        "sources": [
+          "robie"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "Chicago, Illinois",
+          "Frederick C. Robie House"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Trust Robie House description: date, attribution, material and roofline. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "architecture-hidden-details-taliesin": [
+      {
+        "caseId": "architecture-hidden-details-taliesin-functions",
+        "briefing": {
+          "headline": "THE STUDIO THAT COULD NOT BE A HOME",
+          "report": "At Taliesin, ACME’s copied dossier has been altered. The First Draft was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Fallingwater.",
+          "suspect": {
+            "name": "Bryn Brow",
+            "alias": "The First Draft",
+            "emoji": "🏡",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Taliesin’s first house dates to 1911 and evolved through three iterations. Wright used it as home and studio, with local limestone and Wisconsin River sand among its materials.",
+          "ACME exercise: Two fictional records describe residential rooms and architectural work at Taliesin. A courier says these uses must belong to unrelated sites. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The studio that could not be a home",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which interpretation fits the supplied history?",
+          "options": [
+            "A residence can never include a studio",
+            "A studio proves no one lived there",
+            "The records erase each other",
+            "Home and studio uses can coexist at Taliesin"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Check whether the reference treats the functions as compatible.",
+            "One complex can include living and working spaces.",
+            "Answer: Home and studio uses can coexist at Taliesin. The source explicitly describes home and studio. Those functions can coexist; neither observation proves separate sites, an impossible residence or invalid records. Warrant: Taliesin; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The source explicitly describes home and studio. Those functions can coexist; neither observation proves separate sites, an impossible residence or invalid records. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Taliesin; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Taliesin",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Taliesin’s first house dates to 1911 and evolved through three iterations. Wright used it as home and studio, with local limestone and Wisconsin River sand among its materials.",
+        "learningObjective": "Reconcile multiple documented functions at one place.",
+        "sources": [
+          "taliesin"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "Spring Green, Wisconsin",
+          "Taliesin"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Taliesin History: home/studio description, local materials, Taliesin I and later iterations. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-taliesin-iterations",
+        "briefing": {
+          "headline": "1911 ASSIGNED TO EVERY SURVIVING PART",
+          "report": "At Taliesin, ACME’s copied dossier has been altered. The First Draft was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Fallingwater.",
+          "suspect": {
+            "name": "Bryn Brow",
+            "alias": "The First Draft",
+            "emoji": "🏡",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Taliesin’s first house dates to 1911 and evolved through three iterations. Wright used it as home and studio, with local limestone and Wisconsin River sand among its materials.",
+          "ACME exercise: A copied record dates Taliesin’s beginning to 1911 and notes later iterations. A courier declares every present component must be unchanged from 1911. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "1911 assigned to every surviving part",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which conclusion stays within the record?",
+          "options": [
+            "The beginning date does not establish every component’s age or originality",
+            "Every component must be original to 1911",
+            "Later changes prove the original never existed",
+            "All iterations happened in one day"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Separate the origin of a complex from the age of each component.",
+            "Later iterations mean component histories need their own evidence.",
+            "Answer: The beginning date does not establish every component’s age or originality. A beginning date and later iterations describe an evolving complex. They do not date every component, erase the earlier building or compress changes into one day. Warrant: Taliesin; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "A beginning date and later iterations describe an evolving complex. They do not date every component, erase the earlier building or compress changes into one day. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Taliesin; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Taliesin",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Taliesin’s first house dates to 1911 and evolved through three iterations. Wright used it as home and studio, with local limestone and Wisconsin River sand among its materials.",
+        "learningObjective": "Avoid equating a site’s founding date with universal fabric originality.",
+        "sources": [
+          "taliesin"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "Spring Green, Wisconsin",
+          "Taliesin"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Taliesin History: home/studio description, local materials, Taliesin I and later iterations. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-taliesin-materials",
+        "briefing": {
+          "headline": "THE SOURCE OF THE STONE BECOMES THE ARCHITECT",
+          "report": "At Taliesin, ACME’s copied dossier has been altered. The First Draft was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Fallingwater.",
+          "suspect": {
+            "name": "Bryn Brow",
+            "alias": "The First Draft",
+            "emoji": "🏡",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Taliesin’s first house dates to 1911 and evolved through three iterations. Wright used it as home and studio, with local limestone and Wisconsin River sand among its materials.",
+          "ACME exercise: A fictional material slip says local limestone and Wisconsin River sand; an independent design credit names Wright. A courier turns the river name into the architect’s identity. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The source of the stone becomes the architect",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which record preserves the different roles?",
+          "options": [
+            "Wisconsin River is the architect",
+            "Wright is designer; local stone and river sand are material-source information",
+            "All materials must have been invented by Wright",
+            "Material source proves no designer existed"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Identify what question each record answers.",
+            "Who designed it and where materials came from are different fields.",
+            "Answer: Wright is designer; local stone and river sand are material-source information. The design credit identifies the designer, while the material slip identifies resources. A source name is not an architect, and neither material provenance nor authorship erases the other. Warrant: Taliesin; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "The design credit identifies the designer, while the material slip identifies resources. A source name is not an architect, and neither material provenance nor authorship erases the other. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Taliesin; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Taliesin",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Taliesin’s first house dates to 1911 and evolved through three iterations. Wright used it as home and studio, with local limestone and Wisconsin River sand among its materials.",
+        "learningObjective": "Separate authorship from material provenance.",
+        "sources": [
+          "taliesin"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "Spring Green, Wisconsin",
+          "Taliesin"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Taliesin History: home/studio description, local materials, Taliesin I and later iterations. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "architecture-hidden-details-fallingwater": [
+      {
+        "caseId": "architecture-hidden-details-fallingwater-setting",
+        "briefing": {
+          "headline": "BESIDE BECOMES ABOVE",
+          "report": "At Fallingwater, ACME’s copied dossier has been altered. The Distant View was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Gateway Arch.",
+          "suspect": {
+            "name": "Faye Facade",
+            "alias": "The Distant View",
+            "emoji": "🌊",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Wright designed Fallingwater in 1935 above a waterfall, using native sandstone. Construction of the main house, guest house and service wing was complete as a group by 1939.",
+          "ACME exercise: ACME’s fictional placement note says the house rises above the waterfall, while a copied caption says its relationship to water is only a distant view. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "Beside becomes above",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which description preserves the documented relationship?",
+          "options": [
+            "A distant view is the only relationship",
+            "The house stands in a desert without water",
+            "The house is built above the waterfall",
+            "The waterfall was a room inside the house"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Compare the spatial relationship, not just the presence of water.",
+            "Above, beside and far away describe different relationships.",
+            "Answer: The house is built above the waterfall. The source identifies a house above the waterfall. A distant-view-only caption weakens that relationship, while desert and indoor-waterfall alternatives invent different settings. Warrant: Fallingwater; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The source identifies a house above the waterfall. A distant-view-only caption weakens that relationship, while desert and indoor-waterfall alternatives invent different settings. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Fallingwater; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Fallingwater",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Wright designed Fallingwater in 1935 above a waterfall, using native sandstone. Construction of the main house, guest house and service wing was complete as a group by 1939.",
+        "learningObjective": "Preserve a specific building/landscape relationship.",
+        "sources": [
+          "fallingwater"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "Mill Run, Pennsylvania",
+          "Fallingwater"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Conservancy What is Fallingwater paragraphs; 1939 applies to the completed group, not every individual phase. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-fallingwater-scope",
+        "briefing": {
+          "headline": "A DESIGN DATE USED AS FINISHED CONSTRUCTION",
+          "report": "At Fallingwater, ACME’s copied dossier has been altered. The Distant View was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Gateway Arch.",
+          "suspect": {
+            "name": "Faye Facade",
+            "alias": "The Distant View",
+            "emoji": "🌊",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Wright designed Fallingwater in 1935 above a waterfall, using native sandstone. Construction of the main house, guest house and service wing was complete as a group by 1939.",
+          "ACME exercise: A copied timeline has design in 1935 and completion of the main-house/guest-house/service-wing group in 1939. A courier labels both events design only. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "A design date used as finished construction",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which timeline preserves the record?",
+          "options": [
+            "1939 design → 1935 group completion",
+            "All construction complete in 1935",
+            "1935 group completion → 1939 design",
+            "1935 design → group complete by 1939"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Keep event type and scope attached to each date.",
+            "Completion of a group is different from the design date and from every component’s individual finish date.",
+            "Answer: 1935 design → group complete by 1939. The record separates design in 1935 from completion of the group by 1939. Reversal or assigning completion to 1935 changes the source. It also does not require every individual phase to have finished in 1939. Warrant: Fallingwater; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "The record separates design in 1935 from completion of the group by 1939. Reversal or assigning completion to 1935 changes the source. It also does not require every individual phase to have finished in 1939. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Fallingwater; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Fallingwater",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Wright designed Fallingwater in 1935 above a waterfall, using native sandstone. Construction of the main house, guest house and service wing was complete as a group by 1939.",
+        "learningObjective": "Distinguish design, group completion and component scope.",
+        "sources": [
+          "fallingwater"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "Mill Run, Pennsylvania",
+          "Fallingwater"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Conservancy What is Fallingwater paragraphs; 1939 applies to the completed group, not every individual phase. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-fallingwater-pair",
+        "briefing": {
+          "headline": "THE MATERIAL AND SETTING NOTES DISAGREE",
+          "report": "At Fallingwater, ACME’s copied dossier has been altered. The Distant View was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Gateway Arch.",
+          "suspect": {
+            "name": "Faye Facade",
+            "alias": "The Distant View",
+            "emoji": "🌊",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Wright designed Fallingwater in 1935 above a waterfall, using native sandstone. Construction of the main house, guest house and service wing was complete as a group by 1939.",
+          "ACME exercise: Two fictional notes require native sandstone and an above-waterfall setting. J has sandstone/above waterfall; K has sandstone/distant dry site; L has invented metal-only/above waterfall; M has metal-only/dry site. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The material and setting notes disagree",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which record passes both checks?",
+          "options": [
+            "Record J",
+            "Record K",
+            "Record L",
+            "Record M"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Check setting and material independently.",
+            "A correct setting does not repair a changed material field.",
+            "Answer: Record J. J preserves material and setting. K changes the setting, L the material, and M both. These are invented candidate descriptions, not alternative construction claims. Warrant: Fallingwater; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "J preserves material and setting. K changes the setting, L the material, and M both. These are invented candidate descriptions, not alternative construction claims. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Fallingwater; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Fallingwater",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Wright designed Fallingwater in 1935 above a waterfall, using native sandstone. Construction of the main house, guest house and service wing was complete as a group by 1939.",
+        "learningObjective": "Combine material evidence with a spatial relationship.",
+        "sources": [
+          "fallingwater"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "Mill Run, Pennsylvania",
+          "Fallingwater"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Conservancy What is Fallingwater paragraphs; 1939 applies to the completed group, not every individual phase. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "architecture-hidden-details-gateway-arch": [
+      {
+        "caseId": "architecture-hidden-details-gateway-arch-made",
+        "briefing": {
+          "headline": "THE NATURAL-ARCH CAPTION",
+          "report": "At Gateway Arch, ACME’s copied dossier has been altered. The Reference Shift was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Gamble House.",
+          "suspect": {
+            "name": "Elias Elevation",
+            "alias": "The Reference Shift",
+            "emoji": "🌉",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Eero Saarinen’s stainless steel Gateway Arch design was selected in 1947–1948. Construction ran from 1963 to 1965; the arch is 630 feet tall.",
+          "ACME exercise: A fictional transcript identifies stainless steel panels and a construction record. A courier calls the structure a naturally eroded rock opening because both have arch shapes. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The natural-arch caption",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which classification follows the material and construction evidence?",
+          "options": [
+            "A natural sandstone arch",
+            "A built stainless steel monument",
+            "An unmodified cave",
+            "An ocean wave"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Separate resemblance in shape from evidence of origin.",
+            "Material and construction records establish that this arch was made.",
+            "Answer: A built stainless steel monument. Steel panels and construction evidence support a built monument. Shared shape alone does not establish natural rock, a cave or a wave. Warrant: Gateway Arch; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "Steel panels and construction evidence support a built monument. Shared shape alone does not establish natural rock, a cave or a wave. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Gateway Arch; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Gateway Arch",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Eero Saarinen’s stainless steel Gateway Arch design was selected in 1947–1948. Construction ran from 1963 to 1965; the arch is 630 feet tall.",
+        "learningObjective": "Distinguish an engineered structure from a similar natural form.",
+        "sources": [
+          "gateway-arch"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "St. Louis, Missouri",
+          "Gateway Arch"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS History and Culture design/structure paragraph; no structural-performance advice. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-gateway-arch-phases",
+        "briefing": {
+          "headline": "THE SELECTED DESIGN ALREADY FINISHED?",
+          "report": "At Gateway Arch, ACME’s copied dossier has been altered. The Reference Shift was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Gamble House.",
+          "suspect": {
+            "name": "Elias Elevation",
+            "alias": "The Reference Shift",
+            "emoji": "🌉",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Eero Saarinen’s stainless steel Gateway Arch design was selected in 1947–1948. Construction ran from 1963 to 1965; the arch is 630 feet tall.",
+          "ACME exercise: ACME copies design selection in 1947–1948 and construction in 1963–1965. A courier treats winning the design competition as proof the arch was already complete. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The selected design already finished?",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which sequence preserves the supplied milestones?",
+          "options": [
+            "Construction completion → design selection",
+            "All events in 1948",
+            "Design selection → construction start → completion",
+            "Construction start → design selection → completion"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Distinguish a decision to build from physical construction.",
+            "A winning design can precede construction by many years.",
+            "Answer: Design selection → construction start → completion. Selection precedes the 1963 start and 1965 completion. A selected design is not itself a completed structure; reversal or merging dates discards the milestones. Warrant: Gateway Arch; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "Selection precedes the 1963 start and 1965 completion. A selected design is not itself a completed structure; reversal or merging dates discards the milestones. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Gateway Arch; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Gateway Arch",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Eero Saarinen’s stainless steel Gateway Arch design was selected in 1947–1948. Construction ran from 1963 to 1965; the arch is 630 feet tall.",
+        "learningObjective": "Separate design selection from construction milestones.",
+        "sources": [
+          "gateway-arch"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "St. Louis, Missouri",
+          "Gateway Arch"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS History and Culture design/structure paragraph; no structural-performance advice. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-gateway-arch-reference",
+        "briefing": {
+          "headline": "HEIGHT MEASURED FROM THE WRONG ZERO",
+          "report": "At Gateway Arch, ACME’s copied dossier has been altered. The Reference Shift was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Gamble House.",
+          "suspect": {
+            "name": "Elias Elevation",
+            "alias": "The Reference Shift",
+            "emoji": "🌉",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Eero Saarinen’s stainless steel Gateway Arch design was selected in 1947–1948. Construction ran from 1963 to 1965; the arch is 630 feet tall.",
+          "ACME exercise: The source gives 630 feet as the arch’s height. A fictional copy changes that to elevation above sea level without any survey record. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "Height measured from the wrong zero",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction retains the measured quantity?",
+          "options": [
+            "Keep elevation because every vertical number is elevation",
+            "Call it the river’s depth",
+            "Call it a horizontal travel distance",
+            "Retain 630 feet as structure height"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Read the measurement’s object and reference.",
+            "Height and elevation are different quantities.",
+            "Answer: Retain 630 feet as structure height. The source measures structure height, not sea-level elevation, river depth or travel distance. Changing the reference changes the claim even if the number remains the same. Warrant: Gateway Arch; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "The source measures structure height, not sea-level elevation, river depth or travel distance. Changing the reference changes the claim even if the number remains the same. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Gateway Arch; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Gateway Arch",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Eero Saarinen’s stainless steel Gateway Arch design was selected in 1947–1948. Construction ran from 1963 to 1965; the arch is 630 feet tall.",
+        "learningObjective": "Preserve the reference of a numerical measurement.",
+        "sources": [
+          "gateway-arch"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "St. Louis, Missouri",
+          "Gateway Arch"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "NPS History and Culture design/structure paragraph; no structural-performance advice. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "architecture-hidden-details-gamble": [
+      {
+        "caseId": "architecture-hidden-details-gamble-craft",
+        "briefing": {
+          "headline": "THE JOINERY ERASED AS DECORATION ONLY",
+          "report": "At Gamble House, ACME’s copied dossier has been altered. The Credit Swap was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to The Glass House.",
+          "suspect": {
+            "name": "Willa Woodgrain",
+            "alias": "The Credit Swap",
+            "emoji": "🪚",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The 1908 Gamble House was designed by Charles and Henry Greene. Its Arts and Crafts architecture emphasizes wood, expressed structure and joinery.",
+          "ACME exercise: A fictional transcript records wood connections and expressed structure. A copied caption removes the making details and calls the reference only a list of paint colors. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "The joinery erased as decoration only",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction preserves the described emphasis?",
+          "options": [
+            "Retain wood structure and joinery as part of the architectural evidence",
+            "Treat paint color as the only recorded feature",
+            "Call it an all-glass pavilion",
+            "Erase the wood references"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Look at how the material is put together, not only its surface appearance.",
+            "Joinery records connections between parts.",
+            "Answer: Retain wood structure and joinery as part of the architectural evidence. The source emphasizes wood, structure and joinery. Paint alone does not preserve those making details; an all-glass description and deletion conflict with the recorded material. Warrant: Gamble House; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The source emphasizes wood, structure and joinery. Paint alone does not preserve those making details; an all-glass description and deletion conflict with the recorded material. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Gamble House; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Gamble House",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "The 1908 Gamble House was designed by Charles and Henry Greene. Its Arts and Crafts architecture emphasizes wood, expressed structure and joinery.",
+        "learningObjective": "Recognize craftsmanship and assembly as architectural evidence.",
+        "sources": [
+          "gamble"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "Pasadena, California",
+          "Gamble House"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Conservancy About page: date, designers and wood craftsmanship. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-gamble-repair",
+        "briefing": {
+          "headline": "A REPAIR LABEL BECOMES THE WHOLE HOUSE’S BIRTHDAY",
+          "report": "At Gamble House, ACME’s copied dossier has been altered. The Credit Swap was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to The Glass House.",
+          "suspect": {
+            "name": "Willa Woodgrain",
+            "alias": "The Credit Swap",
+            "emoji": "🪚",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The 1908 Gamble House was designed by Charles and Henry Greene. Its Arts and Crafts architecture emphasizes wood, expressed structure and joinery.",
+          "ACME exercise: In ACME’s invented exercise, a wooden teaching component is repaired in 2024. The building reference dates the house to 1908. A courier uses the component’s repair year as the house’s original construction year. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "A repair label becomes the whole house’s birthday",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which report preserves the different events?",
+          "options": [
+            "The house must have been built in 2024",
+            "A repair date does not replace the house’s origin date",
+            "The repair proves every part was replaced",
+            "The 1908 record proves no later repair can occur"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Check the physical scope of the repair record.",
+            "One repaired component is different from construction of the entire house.",
+            "Answer: A repair date does not replace the house’s origin date. A component repair and original construction are different events. A repair does not date the whole house, establish universal replacement or contradict later work on an older building. Warrant: Gamble House; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "A component repair and original construction are different events. A repair does not date the whole house, establish universal replacement or contradict later work on an older building. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Gamble House; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Gamble House",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "The 1908 Gamble House was designed by Charles and Henry Greene. Its Arts and Crafts architecture emphasizes wood, expressed structure and joinery.",
+        "learningObjective": "Keep component maintenance separate from building origin.",
+        "sources": [
+          "gamble"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "Pasadena, California",
+          "Gamble House"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Conservancy About page: date, designers and wood craftsmanship. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-gamble-credit",
+        "briefing": {
+          "headline": "THE PHOTOGRAPH CREDIT BECOMES THE DESIGN CREDIT",
+          "report": "At Gamble House, ACME’s copied dossier has been altered. The Credit Swap was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to The Glass House.",
+          "suspect": {
+            "name": "Willa Woodgrain",
+            "alias": "The Credit Swap",
+            "emoji": "🪚",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The 1908 Gamble House was designed by Charles and Henry Greene. Its Arts and Crafts architecture emphasizes wood, expressed structure and joinery.",
+          "ACME exercise: A fictional image record credits ACME photographer Quinn Vale. A separate historical source credits Charles and Henry Greene as designers. A courier replaces the design field with the photographer’s name. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "The photograph credit becomes the design credit",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which credit line preserves both roles?",
+          "options": [
+            "Quinn Vale designed the house",
+            "The Greenes necessarily took the modern photograph",
+            "Design: Charles and Henry Greene; exercise photograph: Quinn Vale",
+            "The two credits prove one record false"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Identify which work each person is credited for.",
+            "Making a photograph of a building is different from designing it.",
+            "Answer: Design: Charles and Henry Greene; exercise photograph: Quinn Vale. The historical designers and fictional photographer have different roles. Swapping them or treating separate roles as a contradiction misattributes the work. No real photograph or photographer credit is fabricated. Warrant: Gamble House; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "The historical designers and fictional photographer have different roles. Swapping them or treating separate roles as a contradiction misattributes the work. No real photograph or photographer credit is fabricated. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Gamble House; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Gamble House",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "The 1908 Gamble House was designed by Charles and Henry Greene. Its Arts and Crafts architecture emphasizes wood, expressed structure and joinery.",
+        "learningObjective": "Preserve role-specific attribution across different media.",
+        "sources": [
+          "gamble"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "Pasadena, California",
+          "Gamble House"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Conservancy About page: date, designers and wood craftsmanship. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "architecture-hidden-details-glass-house": [
+      {
+        "caseId": "architecture-hidden-details-glass-house-name",
+        "briefing": {
+          "headline": "EVERYTHING MUST BE GLASS?",
+          "report": "At The Glass House, ACME’s copied dossier has been altered. The Universal was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Marin County Civic Center.",
+          "suspect": {
+            "name": "Pip Pane",
+            "alias": "The Universal",
+            "emoji": "🪟",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Philip Johnson’s Glass House was designed in 1945–1948 and completed in 1949. Its transparency contrasts with the companion Brick House; they were conceived as a paired composition.",
+          "ACME exercise: An ACME catalogue infers from the name Glass House that every structural and furnishing component must be glass. The supplied reference describes transparency and a paired composition, not an all-component material inventory. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "Everything must be glass?",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which conclusion is supported?",
+          "options": [
+            "Every component is proven glass by the name",
+            "The name establishes the age of all furniture",
+            "The name proves the Brick House does not exist",
+            "The name alone does not establish every component’s material"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Separate a prominent material from an exhaustive inventory.",
+            "A descriptive name can emphasize one quality without naming everything present.",
+            "Answer: The name alone does not establish every component’s material. A building name and a description of transparency do not inventory every component. They also do not date furniture or erase the companion building. Warrant: The Glass House; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "A building name and a description of transparency do not inventory every component. They also do not date furniture or erase the companion building. The dossier assignment and waiting witness identify the same fictional desk. Warrant: The Glass House; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "The Glass House",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Philip Johnson’s Glass House was designed in 1945–1948 and completed in 1949. Its transparency contrasts with the companion Brick House; they were conceived as a paired composition.",
+        "learningObjective": "Avoid inferring universal material composition from a name.",
+        "sources": [
+          "glass-house",
+          "brick-house"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "New Canaan, Connecticut",
+          "The Glass House"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Glass House and Brick House official descriptions; no claim of all-glass fabric or interior access. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-glass-house-design",
+        "briefing": {
+          "headline": "THE DRAWING PERIOD BECOMES OCCUPANCY",
+          "report": "At The Glass House, ACME’s copied dossier has been altered. The Universal was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Marin County Civic Center.",
+          "suspect": {
+            "name": "Pip Pane",
+            "alias": "The Universal",
+            "emoji": "🪟",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Philip Johnson’s Glass House was designed in 1945–1948 and completed in 1949. Its transparency contrasts with the companion Brick House; they were conceived as a paired composition.",
+          "ACME exercise: A copied record gives design work in 1945–1948 and completion in 1949. A courier labels the entire design period as proof the finished house already existed. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The drawing period becomes occupancy",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which sequence retains the events?",
+          "options": [
+            "1945–1948 design → 1949 completion",
+            "1949 design → 1945 completion",
+            "Every event in 1945",
+            "Every event in 1948"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Keep design work separate from a completed building.",
+            "A range of drawing dates does not automatically describe years of finished occupancy.",
+            "Answer: 1945–1948 design → 1949 completion. The source distinguishes the design period and later completion. Reversing or merging the events changes the record; a design date alone does not establish finished occupancy. Warrant: The Glass House; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "The source distinguishes the design period and later completion. Reversing or merging the events changes the record; a design date alone does not establish finished occupancy. The dossier assignment and waiting witness identify the same fictional desk. Warrant: The Glass House; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "The Glass House",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Philip Johnson’s Glass House was designed in 1945–1948 and completed in 1949. Its transparency contrasts with the companion Brick House; they were conceived as a paired composition.",
+        "learningObjective": "Distinguish design chronology from completed construction.",
+        "sources": [
+          "glass-house",
+          "brick-house"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "New Canaan, Connecticut",
+          "The Glass House"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Glass House and Brick House official descriptions; no claim of all-glass fabric or interior access. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-glass-house-contrast",
+        "briefing": {
+          "headline": "DIFFERENT MATERIALS, ONE COMPOSITION",
+          "report": "At The Glass House, ACME’s copied dossier has been altered. The Universal was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Marin County Civic Center.",
+          "suspect": {
+            "name": "Pip Pane",
+            "alias": "The Universal",
+            "emoji": "🪟",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Philip Johnson’s Glass House was designed in 1945–1948 and completed in 1949. Its transparency contrasts with the companion Brick House; they were conceived as a paired composition.",
+          "ACME exercise: Two fictional notes identify the transparent Glass House and more enclosed Brick House. A courier deletes one because their different appearances supposedly make a paired design impossible. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "Different materials, one composition",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which interpretation fits the reference?",
+          "options": [
+            "Matching appearance is required for any paired design",
+            "Contrasting buildings can form one intentional composition",
+            "The difference proves one building is imaginary",
+            "Erase both names and retain no relationship"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Check the documented relationship before assuming what a pair must look like.",
+            "Contrast can be an intentional part of a composition.",
+            "Answer: Contrasting buildings can form one intentional composition. The official description treats the contrasting buildings as one composition. A design relationship does not require identical appearance, and difference alone does not establish fiction or justify deleting the pair. Warrant: The Glass House; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "The official description treats the contrasting buildings as one composition. A design relationship does not require identical appearance, and difference alone does not establish fiction or justify deleting the pair. The dossier assignment and waiting witness identify the same fictional desk. Warrant: The Glass House; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "The Glass House",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Philip Johnson’s Glass House was designed in 1945–1948 and completed in 1949. Its transparency contrasts with the companion Brick House; they were conceived as a paired composition.",
+        "learningObjective": "Recognize a documented design relationship across contrasting forms.",
+        "sources": [
+          "glass-house",
+          "brick-house"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "New Canaan, Connecticut",
+          "The Glass House"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Glass House and Brick House official descriptions; no claim of all-glass fabric or interior access. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "architecture-hidden-details-marin": [
+      {
+        "caseId": "architecture-hidden-details-marin-function",
+        "briefing": {
+          "headline": "EVERY WRIGHT BUILDING CALLED A PRIVATE HOUSE",
+          "report": "At Marin County Civic Center, ACME’s copied dossier has been altered. The Commission was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Bradbury Building.",
+          "suspect": {
+            "name": "Civic Cypher",
+            "alias": "The Commission",
+            "emoji": "🏛️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Marin County commissioned Wright’s Civic Center in 1957; its initial opening was in 1962. The county describes it as a public architectural project.",
+          "ACME exercise: An ACME classification calls the Civic Center a private residence solely because its designer also designed houses. The source describes a county public project. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "Every Wright building called a private house",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which classification preserves the building’s documented role?",
+          "options": [
+            "A private residence because of the architect’s other work",
+            "A county civic/public project",
+            "A natural landform",
+            "A passenger locomotive"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Use this building’s record rather than a stereotype about its designer.",
+            "One architect can design different types of buildings.",
+            "Answer: A county civic/public project. The source identifies a public county project. An architect’s other commissions do not determine this building’s use; the landform and vehicle categories are unsupported. Warrant: Marin County Civic Center; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The source identifies a public county project. An architect’s other commissions do not determine this building’s use; the landform and vehicle categories are unsupported. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Marin County Civic Center; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Marin County Civic Center",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "Marin County commissioned Wright’s Civic Center in 1957; its initial opening was in 1962. The county describes it as a public architectural project.",
+        "learningObjective": "Classify a building by its own documented function.",
+        "sources": [
+          "marin"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "San Rafael, California",
+          "Marin County Civic Center"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "County anniversary historical summary; excludes event schedules and later campus-phase completion claims. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-marin-commission",
+        "briefing": {
+          "headline": "THE COMMISSION FILED AS THE OPENING",
+          "report": "At Marin County Civic Center, ACME’s copied dossier has been altered. The Commission was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Bradbury Building.",
+          "suspect": {
+            "name": "Civic Cypher",
+            "alias": "The Commission",
+            "emoji": "🏛️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Marin County commissioned Wright’s Civic Center in 1957; its initial opening was in 1962. The county describes it as a public architectural project.",
+          "ACME exercise: Two copied entries distinguish commission in 1957 from initial opening in 1962. A courier merges them into a 1957 completed opening. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The commission filed as the opening",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which timeline preserves the two milestones?",
+          "options": [
+            "1962 commission → 1957 opening",
+            "Both events in 1962",
+            "1957 commission → 1962 initial opening",
+            "Both events in 1957"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Attach the right action to each date.",
+            "Being commissioned is different from being open.",
+            "Answer: 1957 commission → 1962 initial opening. The commission precedes the initial opening. It is a decision/appointment event, not proof of a completed building. The other timelines reverse or merge the milestones. Warrant: Marin County Civic Center; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "The commission precedes the initial opening. It is a decision/appointment event, not proof of a completed building. The other timelines reverse or merge the milestones. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Marin County Civic Center; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Marin County Civic Center",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "Marin County commissioned Wright’s Civic Center in 1957; its initial opening was in 1962. The county describes it as a public architectural project.",
+        "learningObjective": "Separate commissioning from a building’s first opening.",
+        "sources": [
+          "marin"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "San Rafael, California",
+          "Marin County Civic Center"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "County anniversary historical summary; excludes event schedules and later campus-phase completion claims. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-marin-scope",
+        "briefing": {
+          "headline": "ONE OPENING DATES THE WHOLE CAMPUS",
+          "report": "At Marin County Civic Center, ACME’s copied dossier has been altered. The Commission was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "The next copied dossier points to Bradbury Building.",
+          "suspect": {
+            "name": "Civic Cypher",
+            "alias": "The Commission",
+            "emoji": "🏛️",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: Marin County commissioned Wright’s Civic Center in 1957; its initial opening was in 1962. The county describes it as a public architectural project.",
+          "ACME exercise: A fictional campus index contains an initial-opening record and several undated component records. A courier assigns the initial year to every component without checking construction phases. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "One opening dates the whole campus",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which verdict stays within the evidence?",
+          "options": [
+            "Every component must share the first opening year",
+            "Undated components must not exist",
+            "The opening date proves no later additions",
+            "The initial opening does not independently date every component"
+          ],
+          "correctIndex": 3,
+          "visualHtml": "",
+          "hints": [
+            "Compare a campus-wide milestone with component-level records.",
+            "Each component needs its own dating evidence.",
+            "Answer: The initial opening does not independently date every component. A complex’s initial opening is not a construction date for each component. Missing dates do not prove nonexistence, and opening does not rule out later additions. Warrant: Marin County Civic Center; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "A complex’s initial opening is not a construction date for each component. Missing dates do not prove nonexistence, and opening does not rule out later additions. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Marin County Civic Center; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Marin County Civic Center",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "Marin County commissioned Wright’s Civic Center in 1957; its initial opening was in 1962. The county describes it as a public architectural project.",
+        "learningObjective": "Avoid applying a complex’s initial milestone to every part.",
+        "sources": [
+          "marin"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "San Rafael, California",
+          "Marin County Civic Center"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "County anniversary historical summary; excludes event schedules and later campus-phase completion claims. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ],
+    "architecture-hidden-details-bradbury": [
+      {
+        "caseId": "architecture-hidden-details-bradbury-light",
+        "briefing": {
+          "headline": "SKYLIT REWRITTEN AS NO DAYLIGHT",
+          "report": "At Bradbury Building, ACME’s copied dossier has been altered. The Screen Role was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "Return to headquarters with the corrected files from your selected route.",
+          "suspect": {
+            "name": "Atrium Ada",
+            "alias": "The Screen Role",
+            "emoji": "🏢",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The Bradbury Building is documented for its skylit atrium and intricate ironwork. Its source page also describes workspace and filming uses.",
+          "ACME exercise: A fictional interior transcript identifies a skylight admitting daylight into the atrium. A copied caption says the description proves only artificial lighting exists. This dossier is assigned to the fictional ACME Records Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
+        ],
+        "puzzle": {
+          "title": "Skylit rewritten as no daylight",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which correction preserves the observation?",
+          "options": [
+            "The skylight provides a daylight path into the atrium",
+            "Every lamp must be absent",
+            "Only artificial light is possible",
+            "A skylight proves the building is outdoors"
+          ],
+          "correctIndex": 0,
+          "visualHtml": "",
+          "hints": [
+            "Separate evidence for one light source from a claim excluding every other source.",
+            "Daylight and artificial lighting can coexist.",
+            "Answer: The skylight provides a daylight path into the atrium. The observation establishes a path for daylight. It neither rules out additional lamps nor makes the interior outdoors; an artificial-only caption denies the supplied skylight evidence. Warrant: Bradbury Building; ACME Records Desk; Archive photographer."
+          ],
+          "explanation": "The observation establishes a path for daylight. It neither rules out additional lamps nor makes the interior outdoors; an artificial-only caption denies the supplied skylight evidence. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Bradbury Building; ACME Records Desk; Archive photographer."
+        },
+        "warrantAnswers": {
+          "city": "Bradbury Building",
+          "hideout": "ACME Records Desk",
+          "disguise": "Archive photographer"
+        },
+        "funFact": "The Bradbury Building is documented for its skylit atrium and intricate ironwork. Its source page also describes workspace and filming uses.",
+        "learningObjective": "Recognize what an observed lighting feature establishes and what it does not.",
+        "sources": [
+          "bradbury"
+        ],
+        "difficulty": "rookie",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "Los Angeles, California",
+          "Bradbury Building"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Building owner’s architectural description and source-page context reviewed October 14; no access promise. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-bradbury-image-date",
+        "briefing": {
+          "headline": "THE DRAMATIC STYLE ASSIGNED AN EXACT YEAR",
+          "report": "At Bradbury Building, ACME’s copied dossier has been altered. The Screen Role was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "Return to headquarters with the corrected files from your selected route.",
+          "suspect": {
+            "name": "Atrium Ada",
+            "alias": "The Screen Role",
+            "emoji": "🏢",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The Bradbury Building is documented for its skylit atrium and intricate ironwork. Its source page also describes workspace and filming uses.",
+          "ACME exercise: ACME receives an undated fictional image transcript of ornate ironwork. A courier assigns an exact construction year solely because the detail looks old. No dated construction record is in the exercise. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
+        ],
+        "puzzle": {
+          "title": "The dramatic style assigned an exact year",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which report is justified?",
+          "options": [
+            "The exact year follows from ornate appearance alone",
+            "The detail can be described, but the exercise does not establish an exact year",
+            "Every ornate detail is a modern imitation",
+            "The transcript proves there is no ironwork"
+          ],
+          "correctIndex": 1,
+          "visualHtml": "",
+          "hints": [
+            "Distinguish a descriptive feature from a dated record.",
+            "Style can suggest a line of inquiry without supplying an exact year.",
+            "Answer: The detail can be described, but the exercise does not establish an exact year. The transcript describes form and material but supplies no exact construction date. Old-looking detail does not uniquely date construction or prove imitation; missing a date does not erase the observation. Warrant: Bradbury Building; ACME Dispatch Desk; Dispatch clerk."
+          ],
+          "explanation": "The transcript describes form and material but supplies no exact construction date. Old-looking detail does not uniquely date construction or prove imitation; missing a date does not erase the observation. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Bradbury Building; ACME Dispatch Desk; Dispatch clerk."
+        },
+        "warrantAnswers": {
+          "city": "Bradbury Building",
+          "hideout": "ACME Dispatch Desk",
+          "disguise": "Dispatch clerk"
+        },
+        "funFact": "The Bradbury Building is documented for its skylit atrium and intricate ironwork. Its source page also describes workspace and filming uses.",
+        "learningObjective": "Avoid assigning exact dates from appearance alone.",
+        "sources": [
+          "bradbury"
+        ],
+        "difficulty": "detective",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "Los Angeles, California",
+          "Bradbury Building"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Building owner’s architectural description and source-page context reviewed October 14; no access promise. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      },
+      {
+        "caseId": "architecture-hidden-details-bradbury-film",
+        "briefing": {
+          "headline": "A SCREEN ROLE BECOMES A REAL-WORLD IDENTITY",
+          "report": "At Bradbury Building, ACME’s copied dossier has been altered. The Screen Role was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
+          "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
+          "nextLead": "Return to headquarters with the corrected files from your selected route.",
+          "suspect": {
+            "name": "Atrium Ada",
+            "alias": "The Screen Role",
+            "emoji": "🏢",
+            "role": "Fictional ACME training suspect altering teaching copies",
+            "dossierNote": "An invented character in a training investigation. Historical people named in source notes are not suspects."
+          }
+        },
+        "clues": [
+          "Source note: The Bradbury Building is documented for its skylit atrium and intricate ironwork. Its source page also describes workspace and filming uses.",
+          "ACME exercise: A fictional film uses an office-building model as a police-station set. Independent ACME records identify its modelled workspace function. A courier copies the screen role into the real-building function field. This dossier is assigned to the fictional ACME Comparison Desk.",
+          "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
+        ],
+        "puzzle": {
+          "title": "A screen role becomes a real-world identity",
+          "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
+          "question": "Which report preserves the distinction?",
+          "options": [
+            "The fictional screen role proves the real building was always a police station",
+            "All workspace records must be discarded",
+            "A film role does not by itself establish the building’s actual historical use",
+            "A filming location cannot have another use"
+          ],
+          "correctIndex": 2,
+          "visualHtml": "",
+          "hints": [
+            "Separate what a place depicts from what it actually is.",
+            "A location can play a fictional role without acquiring that role in its history.",
+            "Answer: A film role does not by itself establish the building’s actual historical use. A represented screen role is different from documented actual use. It does not erase workspace records, establish an always-police history or make multiple uses impossible. The film and role are invented. Warrant: Bradbury Building; ACME Comparison Desk; Catalogue illustrator."
+          ],
+          "explanation": "A represented screen role is different from documented actual use. It does not erase workspace records, establish an always-police history or make multiple uses impossible. The film and role are invented. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Bradbury Building; ACME Comparison Desk; Catalogue illustrator."
+        },
+        "warrantAnswers": {
+          "city": "Bradbury Building",
+          "hideout": "ACME Comparison Desk",
+          "disguise": "Catalogue illustrator"
+        },
+        "funFact": "The Bradbury Building is documented for its skylit atrium and intricate ironwork. Its source page also describes workspace and filming uses.",
+        "learningObjective": "Distinguish a fictional representation from a building-use record.",
+        "sources": [
+          "bradbury"
+        ],
+        "difficulty": "inspector",
+        "mechanic": "deduction-choice",
+        "regionTags": [
+          "Architecture & Hidden Details — The Blueprint Switch",
+          "Los Angeles, California",
+          "Bradbury Building"
+        ],
+        "visualType": "text-only",
+        "accessibilityDescription": "All source notes, record comparisons, measurements, ordering rules, options and warrant evidence are written text. No color distinction, audio recognition, diagram interaction, travel or prior local knowledge is required.",
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted editorial review)",
+          "date": "2026-10-14",
+          "notes": "Building owner’s architectural description and source-page context reviewed October 14; no access promise. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+        }
+      }
+    ]
+  },
+  "sources": {
+    "robie": {
+      "title": "Frederick C. Robie House",
+      "url": "https://www.flwright.org/explore/frederick-c-robie-house",
+      "publisher": "Frank Lloyd Wright Trust",
+      "reviewed": true,
+      "reviewScope": "Completion 1910, Wright attribution, horizontal Prairie composition, brick/limestone and cantilevered roofs. No structural-load or visitor-access advice."
+    },
+    "taliesin": {
+      "title": "Taliesin History",
+      "url": "https://www.taliesinpreservation.org/taliesin-history",
+      "publisher": "Taliesin Preservation",
+      "reviewed": true,
+      "reviewScope": "1911 Taliesin I; three iterations; home/studio, local limestone and Wisconsin River sand. Excludes violent events and does not claim all present fabric dates to 1911."
+    },
+    "fallingwater": {
+      "title": "What is Fallingwater?",
+      "url": "https://fallingwater.org/what-is-fallingwater/",
+      "publisher": "Western Pennsylvania Conservancy",
+      "reviewed": true,
+      "reviewScope": "Designed by Wright in 1935 over waterfall; native sandstone; main house, guest house and service-wing construction complete as a group in 1939. Do not assign group completion to every individual phase."
+    },
+    "gateway-arch": {
+      "title": "Gateway Arch: History and Culture",
+      "url": "https://home.nps.gov/jeff/learn/historyculture/index.htm",
+      "publisher": "National Park Service",
+      "reviewed": true,
+      "reviewScope": "Eero Saarinen design chosen 1947–1948, construction 1963–1965, 630-foot stainless steel arch. Height distinguished from elevation; no wind/earthquake suitability claims."
+    },
+    "gamble": {
+      "title": "About the Gamble House",
+      "url": "https://gamblehouse.org/about/",
+      "publisher": "Gamble House Conservancy",
+      "reviewed": true,
+      "reviewScope": "1908, Charles and Henry Greene, Arts and Crafts, expressed wood structure/joinery. No assertion that every component is untouched original fabric."
+    },
+    "glass-house": {
+      "title": "The Glass House",
+      "url": "https://theglasshouse.org/explore/the-glass-house/",
+      "publisher": "The Glass House, National Trust for Historic Preservation",
+      "reviewed": true,
+      "reviewScope": "Philip Johnson, design 1945–1948, completion 1949, transparent pavilion/open plan; paired composition with Brick House. No claim that all materials are glass."
+    },
+    "brick-house": {
+      "title": "The Brick House",
+      "url": "https://theglasshouse.org/explore/brick-house/",
+      "publisher": "The Glass House, National Trust for Historic Preservation",
+      "reviewed": true,
+      "reviewScope": "Paired composition and contrasting brick enclosure/transparency. No interior access or current opening claims."
+    },
+    "marin": {
+      "title": "Civic Center’s 60th Anniversary",
+      "url": "https://www.marincounty.gov/news-releases/county-mark-civic-centers-60th-anniversary",
+      "publisher": "County of Marin",
+      "reviewed": true,
+      "reviewScope": "Historical summary: Wright public project commissioned 1957, initial opening 1962. Event listings ignored; no claim that every campus building opened together."
+    },
+    "bradbury": {
+      "title": "Bradbury Building",
+      "url": "https://thebradburybuilding.com/",
+      "publisher": "Bradbury Building ownership and management",
+      "reviewed": true,
+      "reviewScope": "Architectural description: skylit atrium and intricate ironwork. Workspace/filming context is source-page context reviewed October 14, not visitor access or a claim that a film establishes original construction."
+    }
+  }
+}

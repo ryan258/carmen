@@ -37,6 +37,42 @@
       "title": "Where on Route 66 is Carmen Sandiego?",
       "description": "Eight states westward, with 24 investigations into roadside buildings, changing uses, provenance and transport records.",
       "path": "./data/packs/route-66.json"
+    },
+    {
+      "id": "ozark-waterways-carmen",
+      "title": "Where in the Ozark Waterways is Carmen Sandiego?",
+      "description": "The Watershed Files. Eight stops and 24 text-based investigations with source notes, progressive hints and evidence-supported warrants.",
+      "path": "./data/packs/ozark-waterways.json"
+    },
+    {
+      "id": "arkansas-delta-carmen",
+      "title": "Where in the Arkansas Delta is Carmen Sandiego?",
+      "description": "The River & Radio Caper. Eight stops and 24 text-based investigations with source notes, progressive hints and evidence-supported warrants.",
+      "path": "./data/packs/arkansas-delta.json"
+    },
+    {
+      "id": "american-national-parks-carmen",
+      "title": "Where in American National Parks is Carmen Sandiego?",
+      "description": "The Ranger’s Missing Notebook. Eight stops and 24 text-based investigations with source notes, progressive hints and evidence-supported warrants.",
+      "path": "./data/packs/american-national-parks.json"
+    },
+    {
+      "id": "railroads-depots-carmen",
+      "title": "Where on the Railroads is Carmen Sandiego?",
+      "description": "The Switched Manifest. Eight stops and 24 text-based investigations with source notes, progressive hints and evidence-supported warrants.",
+      "path": "./data/packs/railroads-depots.json"
+    },
+    {
+      "id": "architecture-hidden-details-carmen",
+      "title": "Where in the Blueprints is Carmen Sandiego?",
+      "description": "Architecture & Hidden Details — The Blueprint Switch. Eight stops and 24 text-based investigations with source notes, progressive hints and evidence-supported warrants.",
+      "path": "./data/packs/architecture-hidden-details.json"
+    },
+    {
+      "id": "museums-missing-labels-carmen",
+      "title": "Where in the Museum Files is Carmen Sandiego?",
+      "description": "Museums & Missing Labels — The Catalogue Caper. Eight stops and 24 text-based investigations with source notes, progressive hints and evidence-supported warrants.",
+      "path": "./data/packs/museums-missing-labels.json"
     }
   ]
 }
