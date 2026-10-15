@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — Six remaining game-pack concepts
+
+- Add Ozark Waterways, Arkansas Delta, American National Parks, Railroads & Depots, Architecture & Hidden Details, and Museums & Missing Labels. Each has eight stops and 24 cases at content version 1, adding 144 cases across 48 stops.
+- Use text-only investigations into drainage, document conflicts, chronology, corroboration, measurements, attribution, material scope and provenance. Every case has three hints, worked reasoning and explicit warrant evidence.
+- Record scoped AI-assisted source/editorial review for all 144 additions and 48 companion transfer activities. The 12-pack catalog has 320 cases: 248 reviewed and 72 original cases pending.
+- Register the packs, extend the existing catalog assertion and reconcile current docs. Existing route/session tests already enumerate the manifest; no runtime or generated asset changes.
+- Preserve live-condition, historical-exhibition and component-originality limits. All exercise records and ACME suspects/desks are fictional; historical testimony is not invented.
+- No tests, content/syntax gate, browser checks or GitNexus analyze were run by the agent. Ryan reviewed all changes, authorized documentation reconciliation and logically grouped local commits. Pushing and publication remain separate actions.
+
 ## 2026-10-14 — Arkansas State Parks and Route 66
 
 - Add two hand-authored content-version-1 packs, each with eight stops and three cases per stop. Route 66 selects one stop per state westward; the parks pack covers landscapes, buildings and living traditions.

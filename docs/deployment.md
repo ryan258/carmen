@@ -32,9 +32,9 @@ For a content or runtime regression, revert the affected change on `main` and pu
 
 ## Preview boundaries
 
-The October 13 NWA and October 14 parks/Route 66 additions are local commits and remain unpublished. The last recorded deployment above contains the original two packs. No deployment of the current six-pack tree has been verified. Use localhost to preview the additions.
+All ten additional packs (NWA, parks, Route 66 and the six concept packs) are in local commits; pushing and publication remain separate actions. The last recorded deployment above contains the original two packs; no publication or deployment verification is part of the six-concept authoring. Use localhost for the current 12-pack catalog.
 
-Hosting does not change content or verification status: Bentonville and Argentina are content version 4 (eight reviewed cases, 72 pending); the two NWA packs are version 2 (48 AI-assisted reviewed); Arkansas State Parks and Route 66 are version 1 (48 AI-assisted reviewed). The normal game still uses all variants within the chosen pack. The [original exemplar](reviewed-exemplar.md), [NWA ledger](content-audit.md) and [parks/highway ledger](parks-route66-review.md) are repository companion documents, not game-site pages.
+Hosting does not change content or verification status: Bentonville and Argentina use version 4 (eight reviewed cases, 72 pending); the NWA packs use version 2 (48 reviewed); the other eight packs use version 1 (192 reviewed). The normal game draws from all variants in the chosen pack. The [original exemplar](reviewed-exemplar.md), [NWA](content-audit.md), [parks/highway](parks-route66-review.md) and [six-concept](remaining-packs-review.md) ledgers are repository companions, not game-site pages.
 
 Leaflet and map tiles still use network providers, with Text route/Retry map as documented. Saves and settings belong to the browser origin: localhost progress does not automatically transfer to `https://ryan258.github.io`. GitHub project sites under that same origin share browser storage; this game retains its existing Carmen storage keys.
 

@@ -1,6 +1,6 @@
 # Review reconciliation and first correction pass — October 12, 2026
 
-This document preserves the October 12 two-pack review and proposals. Later NWA, Arkansas State Parks and Route 66 additions bring the catalogue to six packs and 176 cases, with 104 AI-assisted reviews and 72 pending. See [current status](remediation-status.md), [the NWA ledger](content-audit.md), [the parks/highway ledger](parks-route66-review.md) and [the roadmap](../ROADMAP.md) for current work. Earlier test and graph results below retain their original scope.
+This document preserves the October 12 two-pack review. Later additions bring the local catalog to 12 packs and 320 cases, with 248 AI-assisted reviews and 72 pending. See [current status](remediation-status.md), [the latest completion ledger](remaining-packs-review.md) and [the roadmap](../ROADMAP.md) for current work. Earlier results below retain their original scope.
 
 The October 5 review examined clean `main` at `e2c6bcb`. This reconciliation examined clean `main` at `c12e772` before editing. The intervening commit changed README, SPEC, the game HTML, and `game.js`; it combined dossier and clue sheets into Case File, clarified warrant controls, mapped old saved `clues` tabs to `dossier`, and added a brief approved-warrant stamp delay that respects reduced motion.
 
