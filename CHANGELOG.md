@@ -1,6 +1,14 @@
 # Changelog
 
-## Unreleased — Six remaining game-pack concepts
+## Unreleased — All-pack fact check and review completion (October 15, 2026)
+
+- Complete AI-assisted source/editorial review for the remaining 72 cases across the original two packs: 36 cases in Bentonville and 36 cases in Argentina, bringing the active catalogue to 320 reviewed cases across 12 packs (0 pending).
+- Advance Argentina from content version 4 to 5 following clue, distractor, and explanation corrections across Buenos Aires, Córdoba, Bariloche, Ushuaia, El Calafate, and Iguazú.
+- Extract Bentonville's 36 case reviews and 13 cited source records into an authoring sidecar (`scripts/bentonville-review-evidence.json`), merged during pack generation by `scripts/generate-bentonville-content.js`; synchronize the exact built-in fallback (`builtin-pack.js`).
+- Reconcile documentation across `README.md`, `ROADMAP.md`, `SPEC.md`, and `docs/*` to record the 320/320 review state, version increments, and verified absence of submodules.
+- No test suites, syntax/content gates, or GitNexus analyze were run by the agent. Ryan reviewed all changes, authorized documentation reconciliation and logically grouped local commits. Pushing and publication remain separate actions.
+
+## 2026-10-14 — Six remaining game-pack concepts
 
 - Add Ozark Waterways, Arkansas Delta, American National Parks, Railroads & Depots, Architecture & Hidden Details, and Museums & Missing Labels. Five packs start at content version 1 and Museums & Missing Labels uses content version 2 after replacing its Exploratorium entry case, adding 144 cases across 48 stops.
 - Refine Argentina Aconcagua and Iguazú fun facts with survey and water-level variation notes; qualify the Bella Vista museum resort/village chronology in Northwest Arkansas.

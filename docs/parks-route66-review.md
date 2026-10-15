@@ -1,6 +1,6 @@
 # Arkansas State Parks and Route 66 review
 
-Codex completed a scoped **48-case AI-assisted factual and editorial review on October 14, 2026**: eight stops and three cases per stop in each pack at content version 1. At that review the catalog had six packs and 176 cases. The later [six-concept completion](remaining-packs-review.md) brings the current catalog to 12 packs and 320 cases: 248 reviewed and 72 original cases pending. This ledger retains its original 48-case scope. No tests, content gate, browser session or GitNexus analyze were run by the agent.
+Codex completed a scoped **48-case AI-assisted factual and editorial review on October 14, 2026**: eight stops and three cases per stop in each pack at content version 1. At that review the catalog had six packs and 176 cases. The later [six-concept completion](remaining-packs-review.md) brought the catalog to 12 packs and 320 cases. At the October 14 checkpoint, 248 were reviewed and 72 original cases were pending; the [October 15 all-pack fact check](all-packs-fact-check.md) records completion of those 72. This ledger retains its original 48-case scope. No tests, content gate, browser session or GitNexus analyze were run by the agent.
 
 ## Investigation design and review scope
 

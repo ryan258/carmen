@@ -1,6 +1,6 @@
 # Remaining work
 
-The local catalogue now has 12 packs and 320 cases. Bentonville and Argentina each have 40 cases at version 4; the two NWA packs and Museums & Missing Labels each have 24 at version 2; Arkansas State Parks, Route 66 and the other five concept packs each have 24 at version 1. There are 248 AI-assisted reviewed cases and 72 original-pack cases pending. The [144-case completion ledger](docs/remaining-packs-review.md), [parks/highway ledger](docs/parks-route66-review.md), [NWA ledger](docs/content-audit.md) and [original exemplar](docs/reviewed-exemplar.md) record source scope and transfer activities.
+The local catalogue now has 12 packs and 320 cases. Bentonville has 40 cases at version 4; Argentina has 40 cases at version 5; the two NWA packs and Museums & Missing Labels each have 24 at version 2; Arkansas State Parks, Route 66 and the other five concept packs each have 24 at version 1. All 320 cases carry recorded AI-assisted review evidence (0 pending). The [October 15 all-pack fact-check ledger](docs/all-packs-fact-check.md) completes the original-pack reviews, alongside the [144-case completion ledger](docs/remaining-packs-review.md), [parks/highway ledger](docs/parks-route66-review.md), [NWA ledger](docs/content-audit.md) and [original exemplar](docs/reviewed-exemplar.md).
 
 The six remaining ideas are now implemented: Ozark Waterways, Arkansas Delta, American National Parks, Railroads & Depots, Architecture & Hidden Details, and Museums & Missing Labels. Their 144 cases use the existing engine and save contract. No automated or browser result is claimed for these additions. The [current evidence](docs/remediation-status.md) keeps the original two-pack test results separate; [SPEC.md](SPEC.md) describes the implementation.
 
@@ -10,7 +10,7 @@ Run the focused command in [the finish plan](docs/finish-plan.md), then try one 
 
 ## Learning-tool priorities
 
-1. Use one of the reviewed activities to identify confusing wording or excessive reading effort. Continue claim-level review of the remaining 72 original cases as useful. Human feedback and observed learning remain open across all packs.
+1. Use one of the reviewed activities to identify confusing wording or excessive reading effort. While claim-level AI-assisted review is recorded across all 320 cases, human feedback, educator evaluation and observed learning remain open across all packs.
 2. Add Study mode, single-case access, a resume summary and a local learning notebook with optional spaced review and export.
 3. Extend the companion guides into reproducible in-game assignments using pack/version/route/seed, and verify a printable format. Transfer prompts and answer reasoning exist; an in-game case picker or assignment interface does not.
 4. Use representative browser/input and zoom checks to guide further changes. Wider educator/autodidact pilots are optional if wanted; they are not prerequisites for personal use.

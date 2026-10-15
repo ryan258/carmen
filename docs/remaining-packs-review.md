@@ -1,6 +1,6 @@
 # Six remaining game-pack concepts: review and companion activities
 
-This completes the six remaining concepts recovered from the earlier chat: Ozark Waterways, Arkansas Delta, American National Parks, Railroads & Depots, Architecture & Hidden Details, and Museums & Missing Labels. Each new pack starts at content version 1 with eight stops and three cases per stop: **144 new cases across 48 stops**. The catalogue now has 12 packs and 320 cases: **248 AI-assisted reviewed, 72 original-pack cases pending**.
+This completes the six remaining concepts recovered from the earlier chat: Ozark Waterways, Arkansas Delta, American National Parks, Railroads & Depots, Architecture & Hidden Details, and Museums & Missing Labels. Each new pack starts at content version 1 with eight stops and three cases per stop: **144 new cases across 48 stops**. At this ledger's October 14 checkpoint, the catalogue had 12 packs and 320 cases: **248 AI-assisted reviewed, 72 original-pack cases pending**. The October 15 [all-pack fact check](all-packs-fact-check.md) records review of those final 72 cases.
 
 Codex conducted the scoped factual/editorial review on October 14, 2026. Each case was read as one chain: source claim, fictional record, question, four options, unique key, two narrowing hints, worked third hint, explanation and warrant. Source registries record the specific passage and excluded claims. This records AI-assisted editorial work, not human approval, learning effectiveness or a runtime test result.
 
