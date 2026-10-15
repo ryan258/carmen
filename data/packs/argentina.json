@@ -240,7 +240,7 @@
           "nextLead": "A coded telegram pulled from Trapaza's coat lining: \"MAY 8 / SAN MARTÍN PARK / SHE EXPECTS COMPANY.\" The park is in Mendoza."
         },
         "clues": [
-          "A restaurant receipt from \"El Caminito\" in the colorful La Boca neighborhood.",
+          "A café receipt from a restaurant near Caminito, the colorful street museum in the La Boca neighborhood.",
           "A tango lyric sheet with the words \"El Choclo\" circled and a note: \"Dress code: Tango Dancer.\"",
           "A metro ticket stub showing a trip ending at Plaza de Mayo, near the pink Casa Rosada presidential palace. A recovered costume label reads: Tango dancer."
         ],
@@ -271,7 +271,8 @@
         "funFact": "Buenos Aires is known for its bookstores, literary culture, and historic neighborhoods.",
         "learningObjective": "Decode a Caesar cipher by shifting letters three places left.",
         "sources": [
-          "buenos_aires_tourism"
+          "ba_caminito",
+          "ba_city_literature"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -281,7 +282,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. What does the cipher \"FDPLQLWR WDQJR RXWILW\" decode to?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Caminito is the La Boca street museum; the fictional clue was corrected to a receipt from a café near Caminito, avoiding the false implication that Caminito itself is a restaurant. The city tourism pages confirm the La Boca setting and city literary/café context. The Caesar code was independently decoded. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "obelisco-avenida",
@@ -394,7 +400,7 @@
         "funFact": "Café Tortoni is one of Buenos Aires most famous historic cafes and has long been associated with writers and artists.",
         "learningObjective": "Identify a real Buenos Aires landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "buenos_aires_tourism"
+          "ba_cafe_tortoni"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -404,7 +410,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Where should the warrant team go?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "The Buenos Aires tourism page identifies Café Tortoni at Avenida de Mayo 825 and records its historic cultural association with writers and artists. The fictional receipt and poet are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "teatro-colon-score",
@@ -453,7 +464,7 @@
         "funFact": "Teatro Colón is one of Buenos Aires most important performance landmarks and is internationally known for opera and classical music.",
         "learningObjective": "Connect place-based clues to a real Argentina location in the buenos aires case pool.",
         "sources": [
-          "buenos_aires_tourism"
+          "ba_teatro_colon"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -462,7 +473,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout matches the rehearsal evidence?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "The city tourism page identifies Teatro Colón as an opera house renowned for its acoustics and gives the venue address. Backstage pass, score, and usher evidence are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "recoleta-mausoleum",
@@ -511,7 +527,7 @@
         "funFact": "Recoleta Cemetery is known for elaborate mausoleums and is one of Buenos Aires best-known heritage sites.",
         "learningObjective": "Connect place-based clues to a real Argentina location in the buenos aires case pool.",
         "sources": [
-          "buenos_aires_tourism"
+          "ba_recoleta"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -520,7 +536,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Where is the accomplice hiding the token?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "The city tourism page confirms Recoleta Cemetery’s narrow walkways and marble mausoleums. Flowers, guidebook, token, and witness are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       }
     ],
     "mendoza": [
@@ -571,7 +592,7 @@
         "funFact": "Mendoza is home to Aconcagua, the highest mountain in both the Western and Southern Hemispheres at roughly 6,960 m (published surveys differ by a few metres).",
         "learningObjective": "Identify a real Mendoza landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "mendoza_tourism"
+          "mendoza_aconcagua"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -580,7 +601,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout matches the permit and equipment?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Mendoza’s Aconcagua Park page places the mountain in Mendoza and lists its elevation as 6,962 m, highest in the Western Hemisphere. The approximate 6,960 m fun fact is accurate. Expedition permit and vineyard-worker evidence are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "vendimia-plaza",
@@ -629,7 +655,8 @@
         "funFact": "Mendoza is closely associated with Argentina wine country and the annual grape harvest festival, Vendimia.",
         "learningObjective": "Identify a real Mendoza landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "mendoza_tourism"
+          "mendoza_vendimia",
+          "mendoza_vendimia_plaza"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -638,7 +665,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout matches the evidence?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Mendoza’s official Vendimia materials confirm the annual grape-harvest festival; the government also documents Vendimia activities at Plaza Independencia. The case does not claim the main festival gala occurs in the plaza. Sash, footprints, and suspect are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "puente-inca",
@@ -750,7 +782,8 @@
         "funFact": "Mendoza wine regions use Andes snowmelt and irrigation canals to support vineyards in an otherwise dry climate.",
         "learningObjective": "Connect place-based clues to a real Argentina location in the mendoza case pool.",
         "sources": [
-          "mendoza_tourism"
+          "mendoza_uco_irrigation",
+          "mendoza_water_cycle"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -759,7 +792,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout fits the route?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Mendoza’s irrigation department documents Valle de Uco irrigation works on the Tunuyán system; its water-history page explains Andes snow/glacier melt and irrigation distribution in arid Mendoza. Tunuyán and high-altitude vineyards correctly locate the regional clue. Harvest note and technician are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "san-martin-park-gates",
@@ -808,7 +846,7 @@
         "funFact": "General San Martín Park is a major public green space in Mendoza city.",
         "learningObjective": "Connect place-based clues to a real Argentina location in the mendoza case pool.",
         "sources": [
-          "mendoza_tourism"
+          "mendoza_san_martin"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -817,7 +855,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Where should ACME search?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "The Mendoza government identifies the Portones as entrance gates to Parque General San Martín. The clue says ornamental gates, which is supported. Gardener and missing crest are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       }
     ],
     "salta": [
@@ -931,7 +974,7 @@
         "funFact": "Cafayate is known for dramatic valley landscapes and high-altitude wine production.",
         "learningObjective": "Identify a real Salta landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "salta_tourism"
+          "salta_cafayate"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -940,7 +983,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Where is the hideout?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Visit Salta confirms Cafayate is 192 km from Salta, is reached through red-rock scenery, and is known for high-altitude wines. The guitar, zamba witness, and folk-singer disguise are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "cabildo-archive",
@@ -989,7 +1037,7 @@
         "funFact": "Salta preserves notable colonial architecture around its central square.",
         "learningObjective": "Identify a real Salta landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "salta_tourism"
+          "salta_cabildo"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -998,7 +1046,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout should ACME search?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "The National Museum of the North documents the Salta Cabildo and its historic arcade/recova. The archive seal, archivist badge, and route are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "cerro-san-bernardo",
@@ -1047,7 +1100,7 @@
         "funFact": "Cerro San Bernardo is a well-known viewpoint above Salta city.",
         "learningObjective": "Connect place-based clues to a real Argentina location in the salta case pool.",
         "sources": [
-          "salta_tourism"
+          "salta_teleferico"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1056,7 +1109,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which location is the accomplice using?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Official Salta tourism confirms the cable car leaves Parque San Martín and arrives at Cerro San Bernardo’s summit overlooking the city. Token and photographer evidence are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "salinas-compass",
@@ -1105,7 +1163,7 @@
         "funFact": "The high Andean northwest includes striking salt-flat landscapes that are commonly visited from Salta and Jujuy routes.",
         "learningObjective": "Connect place-based clues to a real Argentina location in the salta case pool.",
         "sources": [
-          "salta_tourism"
+          "salinas_grandes"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1114,7 +1172,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout fits the clues?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Jujuy Tourism’s guide identifies Salinas Grandes as a high-altitude salt plain spanning Jujuy and Salta, including La Poma in Salta. The regional route and salt-crystal clues are geographically sound; compass and driver are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       }
     ],
     "cordoba": [
@@ -1165,8 +1228,8 @@
         "funFact": "The National University of Córdoba was founded in 1613 and is one of the oldest universities in the Americas.",
         "learningObjective": "Combine a location exclusion, receipt, and disguise statement.",
         "sources": [
-          "cordoba_tourism",
-          "unesco_cordoba_jesuit"
+          "cordoba_unc_history",
+          "cordoba_nueva"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1175,7 +1238,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which combination matches the suspect's profile in Córdoba?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "UNC records its 1613 founding and its standing as Argentina’s oldest and one of the Americas’ earliest universities; Córdoba Tourism describes Nueva Córdoba’s student/cultural setting. The logic statement and receipts are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "jesuit-block",
@@ -1265,30 +1333,29 @@
           "description": "Follow the star-chart and mountain-road evidence.",
           "question": "Where is the accomplice hiding?",
           "options": [
-            "Sierras observatory overlook",
+            "Bosque Alegre Astrophysical Station",
             "Nueva Córdoba bookstore",
             "Jesuit Block courtyard",
             "Córdoba bus terminal"
           ],
           "correctIndex": 0,
           "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">✦</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-slate-900\">Star chart / mountain road</p>\n          </div>\n        ",
-          "explanation": "Sierras observatory overlook follows the evidence: The car receipt points west toward the Sierras de Córdoba. A telescope lens cap was found in the accomplice’s red coat pocket. A witness saw her dressed as a night guide. A recovered costume label reads: Night guide.",
+          "explanation": "Bosque Alegre Astrophysical Station follows the evidence: The car receipt points west toward the Sierras de Córdoba. A telescope lens cap was found in the accomplice’s red coat pocket. A witness saw her dressed as a night guide. A recovered costume label reads: Night guide.",
           "hints": [
             "Combine the mountain road with astronomy equipment.",
-            "A lens cap and night guide support the observatory overlook.",
-            "Answer: Sierras observatory overlook. Sierras observatory overlook follows the evidence: The car receipt points west toward the Sierras de Córdoba. A telescope lens cap was found in the accomplice’s red coat pocket. A witness saw her dressed as a night guide. A recovered costume label reads: Night guide."
+            "A lens cap and night guide support the Bosque Alegre Astrophysical Station.",
+            "Answer: Bosque Alegre Astrophysical Station. Bosque Alegre Astrophysical Station follows the evidence: The car receipt points west toward the Sierras de Córdoba. A telescope lens cap was found in the accomplice’s red coat pocket. A witness saw her dressed as a night guide. A recovered costume label reads: Night guide."
           ]
         },
         "warrantAnswers": {
           "city": "Córdoba",
-          "hideout": "Sierras observatory overlook",
+          "hideout": "Bosque Alegre Astrophysical Station",
           "disguise": "Night guide"
         },
         "funFact": "The Sierras de Córdoba are a defining landscape around the province.",
         "learningObjective": "Identify a real Córdoba landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "cordoba_tourism",
-          "unesco_cordoba_jesuit"
+          "cordoba_bosque_alegre"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1297,7 +1364,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Where is the accomplice hiding?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "The previous answer label “Sierras observatory overlook” was not a named site. It is corrected to Bosque Alegre Astrophysical Station, an actual UNC-operated astronomy station reached on Camino a Falda del Carmen in the Sierras. Lens cap and witness are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "alta-gracia-estancia",
@@ -1346,8 +1418,7 @@
         "funFact": "The Jesuit Block and Estancias of Córdoba are recognized by UNESCO for their historical and architectural significance.",
         "learningObjective": "Connect place-based clues to a real Argentina location in the cordoba case pool.",
         "sources": [
-          "cordoba_tourism",
-          "unesco_cordoba_jesuit"
+          "cordoba_unesco"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1356,7 +1427,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Where is the missing bell?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "UNESCO includes Alta Gracia among the Jesuit estancias in the Córdoba World Heritage property. The clue correctly treats it as outside Córdoba city. Bell, route note, and docent are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "buen-pastor-mural",
@@ -1405,8 +1481,8 @@
         "funFact": "Nueva Córdoba is associated with student life and cultural activity near the city center.",
         "learningObjective": "Connect place-based clues to a real Argentina location in the cordoba case pool.",
         "sources": [
-          "cordoba_tourism",
-          "unesco_cordoba_jesuit"
+          "cordoba_buen_pastor",
+          "cordoba_nueva"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1415,7 +1491,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout fits?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Córdoba Tourism places Paseo del Buen Pastor in Nueva Córdoba and describes it as a cultural/event complex. The mural, student card, and witness are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       }
     ],
     "iguazu": [
@@ -1463,11 +1544,11 @@
           "hideout": "Garganta del Diablo",
           "disguise": "Park ranger"
         },
-        "funFact": "Iguazú Falls consists of roughly 275 individual waterfalls (the count varies with water level) spread across about 2.7 kilometers of the Iguazú River.",
+        "funFact": "The Iguazú Falls consist of roughly 275 waterfalls along a front about 2.7 kilometers wide on the Iguazú River.",
         "learningObjective": "Extend an additive sequence and connect it to a named viewpoint.",
         "sources": [
-          "unesco_iguazu",
-          "national_parks_argentina"
+          "iguazu_activities",
+          "iguazu_falls"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1477,7 +1558,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. What is the next code number, paired with the viewpoint named by the witness?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Argentina’s park authority confirms Garganta del Diablo access and park walkways; the official tourism source gives roughly 275 falls and an official government report gives a 2.7 km front. The Fibonacci sequence was checked as 1,1,2,3,5→8; all puzzle numbers are marked fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "lower-circuit",
@@ -1526,8 +1612,7 @@
         "funFact": "Iguazú National Park has multiple walkways that reveal the falls from different levels.",
         "learningObjective": "Identify a real Puerto Iguazú landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "unesco_iguazu",
-          "national_parks_argentina"
+          "iguazu_activities"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1537,7 +1622,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout matches the evidence?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "The National Parks page describes the Lower Walk as Circuito Inferior and says visitors can feel spray from the falls along its walkway. Field notes and biologist disguise are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "three-frontiers",
@@ -1586,8 +1676,7 @@
         "funFact": "Puerto Iguazú sits near the border area shared by Argentina, Brazil, and Paraguay.",
         "learningObjective": "Identify a real Puerto Iguazú landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "unesco_iguazu",
-          "national_parks_argentina"
+          "iguazu_frontier"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1597,7 +1686,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Where is the accomplice heading?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Visit Iguazú identifies the viewpoint where Argentina, Brazil, and Paraguay meet. Ribbons and witness are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "triple-frontier-marker",
@@ -1646,8 +1740,7 @@
         "funFact": "Puerto Iguazu is near the meeting area of Argentina, Brazil, and Paraguay.",
         "learningObjective": "Put fictional witness observations in chronological order.",
         "sources": [
-          "unesco_iguazu",
-          "national_parks_argentina"
+          "iguazu_frontier"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1656,7 +1749,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which sequence puts the fictional sightings in time order?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "The official tourism page confirms the Triple Frontier landmark. All log times and the order puzzle are explicitly fictional and internally consistent. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "jungle-train-pass",
@@ -1705,8 +1803,7 @@
         "funFact": "Iguazu National Park protects subtropical forest around one of the world's great waterfall systems.",
         "learningObjective": "Connect place-based clues to a real Argentina location in the iguazu case pool.",
         "sources": [
-          "unesco_iguazu",
-          "national_parks_argentina"
+          "iguazu_activities"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1715,7 +1812,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout is correct?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "National Parks identifies the Tren Ecológico de la Selva and its Central, Cataratas, and Garganta stations. Platform note and sound log are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       }
     ],
     "bariloche": [
@@ -1766,8 +1868,8 @@
         "funFact": "San Carlos de Bariloche lies beside Nahuel Huapi Lake in the Argentine Andes.",
         "learningObjective": "Identify a real San Carlos de Bariloche landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "bariloche_tourism",
-          "national_parks_argentina"
+          "bariloche_otto",
+          "bariloche_lake_tours"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1777,7 +1879,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which landmark matches the written evidence?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Bariloche Tourism confirms the Cerro Otto cable car and rotating summit café, and the city’s lakeside setting. The photo, ski whistle, receipt, and suspect are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "nahuel-huapi",
@@ -1796,7 +1903,7 @@
         },
         "clues": [
           "The wrapper came from a chocolate shop on Mitre Street.",
-          "A boat schedule points across Nahuel Huapi Lake.",
+          "A boat schedule names Puerto Pañuelo, a departure point for excursions on Nahuel Huapi Lake.",
           "The accomplice purchased a captain cap. A recovered costume label reads: Boat captain."
         ],
         "puzzle": {
@@ -1804,30 +1911,30 @@
           "description": "Use the boat and chocolate clues to locate the Bariloche hideout.",
           "question": "Where should ACME search?",
           "options": [
-            "Nahuel Huapi dock",
+            "Puerto Pañuelo",
             "Cerro Otto",
             "Cafayate",
             "Recoleta"
           ],
           "correctIndex": 0,
           "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">⛵</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-blue-900\">Lake chart / chocolate wrapper</p>\n          </div>\n        ",
-          "explanation": "Nahuel Huapi dock follows the evidence: The wrapper came from a chocolate shop on Mitre Street. A boat schedule points across Nahuel Huapi Lake. The accomplice purchased a captain cap. A recovered costume label reads: Boat captain.",
+          "explanation": "Puerto Pañuelo follows the evidence: The wrapper came from a chocolate shop on Mitre Street. A boat schedule points across Nahuel Huapi Lake. The accomplice purchased a captain cap. A recovered costume label reads: Boat captain.",
           "hints": [
             "Combine the lake chart with the boat clue.",
-            "A dock on Nahuel Huapi fits the evidence.",
-            "Answer: Nahuel Huapi dock. Nahuel Huapi dock follows the evidence: The wrapper came from a chocolate shop on Mitre Street. A boat schedule points across Nahuel Huapi Lake. The accomplice purchased a captain cap. A recovered costume label reads: Boat captain."
+            "Puerto Pañuelo, an excursion port on Nahuel Huapi fits the evidence.",
+            "Answer: Puerto Pañuelo. Puerto Pañuelo follows the evidence: The wrapper came from a chocolate shop on Mitre Street. A boat schedule points across Nahuel Huapi Lake. The accomplice purchased a captain cap. A recovered costume label reads: Boat captain."
           ]
         },
         "warrantAnswers": {
           "city": "San Carlos de Bariloche",
-          "hideout": "Nahuel Huapi dock",
+          "hideout": "Puerto Pañuelo",
           "disguise": "Boat captain"
         },
         "funFact": "Nahuel Huapi Lake is central to Bariloche scenery and tourism.",
         "learningObjective": "Identify a real San Carlos de Bariloche landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "bariloche_tourism",
-          "national_parks_argentina"
+          "bariloche_panuelo",
+          "bariloche_lake_tours"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1837,7 +1944,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Where should ACME search?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "“Nahuel Huapi dock” was too generic to verify as a named departure site. The destination is corrected to Puerto Pañuelo, the official departure point for lake excursions on Nahuel Huapi. The fictional boat schedule now names that port. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "civic-center",
@@ -1886,8 +1998,7 @@
         "funFact": "Bariloche civic architecture is known for its alpine-inspired stone and timber character.",
         "learningObjective": "Identify a real San Carlos de Bariloche landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "bariloche_tourism",
-          "national_parks_argentina"
+          "bariloche_civic"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1897,7 +2008,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which Bariloche hideout fits?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Bariloche Tourism confirms the Civic Center is in the city center and built with local cypress/larch wood and tufa, with mountain-region European/North American influence. Photo and municipal-guide clue are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "civic-center-clock",
@@ -1946,8 +2062,7 @@
         "funFact": "Bariloche Civic Center is a recognizable stone-and-wood landmark in the city center.",
         "learningObjective": "Calculate the elapsed minutes between two sightings in the same hour.",
         "sources": [
-          "bariloche_tourism",
-          "national_parks_argentina"
+          "bariloche_civic"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -1956,13 +2071,18 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. How many minutes separate the two sightings?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "The official tourism page confirms the Civic Center as Bariloche’s central landmark. Sightings, clock reading, and elapsed-time puzzle are fictional; 10:45−10:20=25 minutes. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "nahuel-huapi-dock",
         "briefing": {
           "headline": "LAKE CHART SNATCHED!",
-          "report": "In this fictional training case: A navigation chart disappeared from a boat office. Berta Brügger fled toward a dock on Nahuel Huapi Lake.",
+          "report": "In this fictional training case: A navigation chart disappeared from a boat office. Berta Brügger fled toward Puerto Pañuelo, a departure port for Nahuel Huapi Lake tours.",
           "callingCard": "The card says: \"Blue water, dark forest, red coat.\"",
           "suspect": {
             "name": "Berta Brügger",
@@ -1976,7 +2096,7 @@
         "clues": [
           "The fictional dock locker uses a code: 2, 4, 8, 16.",
           "Each number doubles the previous one.",
-          "A boat captain collected the coded parcel at Nahuel Huapi dock."
+          "A boat captain collected the coded parcel at Puerto Pañuelo."
         ],
         "puzzle": {
           "title": "Dock Parcel Code",
@@ -1990,23 +2110,23 @@
           ],
           "correctIndex": 0,
           "visualHtml": "<p>Consult the three written clues. This training puzzle does not represent a real timetable or visitor route.</p>",
-          "explanation": "The code doubles at each step. After 16 comes 16 × 2 = 32. The dock location is given by the written witness evidence.",
+          "explanation": "The code doubles at each step. After 16 comes 16 × 2 = 32. The departure port is identified by the written witness evidence.",
           "hints": [
             "Compare each code number to the previous one.",
             "The sequence doubles each time; multiply the last number by two.",
-            "Answer: 32. The code doubles at each step. After 16 comes 16 × 2 = 32. The dock location is given by the written witness evidence."
+            "Answer: 32. The code doubles at each step. After 16 comes 16 × 2 = 32. The departure port is identified by the written witness evidence."
           ]
         },
         "warrantAnswers": {
           "city": "San Carlos de Bariloche",
-          "hideout": "Nahuel Huapi dock",
+          "hideout": "Puerto Pañuelo",
           "disguise": "Boat captain"
         },
         "funFact": "Nahuel Huapi Lake is central to Bariloche scenery and national-park tourism.",
         "learningObjective": "Recognize and extend a doubling pattern.",
         "sources": [
-          "bariloche_tourism",
-          "national_parks_argentina"
+          "bariloche_panuelo",
+          "bariloche_lake_tours"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -2015,7 +2135,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which number comes next in the locker code?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "The generic “Nahuel Huapi dock” label was corrected to Puerto Pañuelo, which Bariloche Tourism identifies as the departure point for lake tours. The 2,4,8,16 sequence is fictional and doubles to 32. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       }
     ],
     "ushuaia": [
@@ -2066,8 +2191,8 @@
         "funFact": "Ushuaia is a city on the Beagle Channel in Tierra del Fuego, in southern Argentina.",
         "learningObjective": "Apply row and column movement on a fictional coordinate grid.",
         "sources": [
-          "ushuaia_tourism",
-          "national_parks_argentina"
+          "ushuaia_lighthouse",
+          "ushuaia_beagle"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -2077,7 +2202,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which landmark coordinate is the final destination?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Ushuaia Tourism confirms Les Eclaireurs Lighthouse is reached by boats departing Ushuaia harbor on the Beagle Channel. Grid coordinates are explicitly fictional and are not navigation guidance. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "beagle-channel",
@@ -2126,8 +2256,7 @@
         "funFact": "The Beagle Channel is one of Ushuaia most recognizable maritime settings.",
         "learningObjective": "Identify a real Ushuaia landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "ushuaia_tourism",
-          "national_parks_argentina"
+          "ushuaia_beagle"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -2137,7 +2266,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Where is the accomplice going?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Ushuaia Tourism identifies Beagle Channel boat tours and the harbor setting. Boat manifest and sailor witness are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "end-world-post",
@@ -2155,7 +2289,7 @@
           "nextLead": "A glaciology permit forged with last week's date, addressed to El Calafate."
         },
         "clues": [
-          "The clue points to end-of-the-world tourism routes.",
+          "The route plan places the stop at Ensenada Zaratiegui inside Tierra del Fuego National Park, outside Ushuaia city.",
           "A stack of postcards is tied with red thread.",
           "The accomplice wore a postal clerk disguise."
         ],
@@ -2186,8 +2320,7 @@
         "funFact": "Ushuaia is strongly associated with the phrase Fin del Mundo, or End of the World.",
         "learningObjective": "Identify a real Ushuaia landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "ushuaia_tourism",
-          "national_parks_argentina"
+          "ushuaia_correo"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -2197,7 +2330,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Where should the warrant team search?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "The official Ushuaia brochure places the Correo del Fin del Mundo at Ensenada Zaratiegui inside Tierra del Fuego National Park, outside Ushuaia city. The clue now says so explicitly; it remains a regional stop. Postcards and theft are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "end-of-world-train",
@@ -2246,8 +2384,7 @@
         "funFact": "Ushuaia is strongly associated with the End of the World identity and Tierra del Fuego landscapes.",
         "learningObjective": "Connect place-based clues to a real Argentina location in the ushuaia case pool.",
         "sources": [
-          "ushuaia_tourism",
-          "national_parks_argentina"
+          "ushuaia_train"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -2256,7 +2393,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Where did the accomplice go?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Ushuaia Tourism places the End of the World Train 8 km from the city toward Tierra del Fuego National Park and describes its route through the forest. Ticket and rail-guide clues are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "martial-glacier-cache",
@@ -2305,8 +2447,7 @@
         "funFact": "Martial Glacier sits above Ushuaia and is associated with mountain views over the city and Beagle Channel.",
         "learningObjective": "Connect place-based clues to a real Argentina location in the ushuaia case pool.",
         "sources": [
-          "ushuaia_tourism",
-          "national_parks_argentina"
+          "ushuaia_martial"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -2315,7 +2456,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout matches?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Ushuaia Tourism confirms Martial Glacier is about 7 km from the city and offers views toward Ushuaia and the Beagle Channel. Cache and guide are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       }
     ],
     "el-calafate": [
@@ -2366,8 +2512,7 @@
         "funFact": "Perito Moreno is one of the glaciers in Los Glaciares National Park, a UNESCO World Heritage site.",
         "learningObjective": "Identify a real El Calafate landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "unesco_los_glaciares",
-          "national_parks_argentina"
+          "los_glaciares_activities"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -2377,7 +2522,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout matches the evidence?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Los Glaciares National Park confirms the Perito Moreno walkway and glacier routes. The note correctly locates the case beside the glacier, not in the museum. Permit, harness, and tour guide are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "glaciarium",
@@ -2396,7 +2546,7 @@
         },
         "clues": [
           "A museum ticket is stamped Glaciarium.",
-          "The note references glacier science, not a boat dock.",
+          "The note references glacier science, not the lake-excursion port Puerto Pañuelo.",
           "The accomplice wore a museum educator badge."
         ],
         "puzzle": {
@@ -2407,15 +2557,15 @@
             "Glaciarium",
             "Perito Moreno catwalk",
             "El Chalten trailhead",
-            "Nahuel Huapi dock"
+            "Puerto Pañuelo"
           ],
           "correctIndex": 0,
           "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">❄</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-blue-900\">Science exhibit / frost envelope</p>\n          </div>\n        ",
-          "explanation": "Glaciarium follows the evidence: A museum ticket is stamped Glaciarium. The note references glacier science, not a boat dock. The accomplice wore a museum educator badge. A recovered costume label reads: Museum educator.",
+          "explanation": "Glaciarium follows the evidence: A museum ticket is stamped Glaciarium. The note references glacier science, not the lake-excursion port Puerto Pañuelo. The accomplice wore a museum educator badge. A recovered costume label reads: Museum educator.",
           "hints": [
             "A formation diagram and exhibit label belong to a museum.",
             "Use the Glaciarium name in the exhibit evidence.",
-            "Answer: Glaciarium. Glaciarium follows the evidence: A museum ticket is stamped Glaciarium. The note references glacier science, not a boat dock. The accomplice wore a museum educator badge. A recovered costume label reads: Museum educator."
+            "Answer: Glaciarium. Glaciarium follows the evidence: A museum ticket is stamped Glaciarium. The note references glacier science, not the lake-excursion port Puerto Pañuelo. The accomplice wore a museum educator badge. A recovered costume label reads: Museum educator."
           ]
         },
         "warrantAnswers": {
@@ -2426,8 +2576,8 @@
         "funFact": "El Calafate is a gateway for visitors learning about and visiting Patagonian glaciers.",
         "learningObjective": "Identify a real El Calafate landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "unesco_los_glaciares",
-          "national_parks_argentina"
+          "glaciarium",
+          "bariloche_panuelo"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -2437,7 +2587,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Where is the accomplice hiding?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Glaciarium’s official site describes its glaciological interpretation centre and permanent exhibition in El Calafate. The distractor uses the official name Puerto Pañuelo for the Nahuel Huapi lake-excursion port. Ticket, label, and museum educator are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "lago-argentino",
@@ -2455,7 +2610,7 @@
           "nextLead": "Send the recovered evidence and collected tokens to ACME headquarters for the final report."
         },
         "clues": [
-          "The boat ticket references Lago Argentino.",
+          "The boat ticket lists Puerto Punta Bandera for a Lago Argentino glacier excursion.",
           "The clue mentions ice floating on a large Patagonian lake.",
           "The accomplice borrowed a deckhand coat."
         ],
@@ -2464,30 +2619,30 @@
           "description": "Use the boat-route clues around El Calafate.",
           "question": "Which hideout fits the evidence?",
           "options": [
-            "Lago Argentino pier",
+            "Puerto Punta Bandera",
             "Glaciarium",
             "Cerro Otto",
             "Triple Frontier viewpoint"
           ],
           "correctIndex": 0,
           "visualHtml": "\n          <div class=\"cutout-evidence text-center\">\n            <div class=\"text-5xl\">▰</div>\n            <p class=\"mt-2 text-xs font-bold uppercase text-blue-900\">Lake route / floating ice</p>\n          </div>\n        ",
-          "explanation": "Lago Argentino pier follows the evidence: The boat ticket references Lago Argentino. The clue mentions ice floating on a large Patagonian lake. The accomplice borrowed a deckhand coat. A recovered costume label reads: Deckhand.",
+          "explanation": "Puerto Punta Bandera follows the evidence: The boat ticket references Lago Argentino. The clue mentions ice floating on a large Patagonian lake. The accomplice borrowed a deckhand coat. A recovered costume label reads: Deckhand.",
           "hints": [
             "Follow the lake-route ticket.",
-            "Boat and floating-ice clues support the Lago Argentino pier.",
-            "Answer: Lago Argentino pier. Lago Argentino pier follows the evidence: The boat ticket references Lago Argentino. The clue mentions ice floating on a large Patagonian lake. The accomplice borrowed a deckhand coat. A recovered costume label reads: Deckhand."
+            "Boat and floating-ice clues support the Puerto Punta Bandera.",
+            "Answer: Puerto Punta Bandera. Puerto Punta Bandera follows the evidence: The boat ticket references Lago Argentino. The clue mentions ice floating on a large Patagonian lake. The accomplice borrowed a deckhand coat. A recovered costume label reads: Deckhand."
           ]
         },
         "warrantAnswers": {
           "city": "El Calafate",
-          "hideout": "Lago Argentino pier",
+          "hideout": "Puerto Punta Bandera",
           "disguise": "Deckhand"
         },
         "funFact": "Lago Argentino is the large lake associated with glacier routes near El Calafate.",
         "learningObjective": "Identify a real El Calafate landmark or regional feature from connected cultural and geographic clues.",
         "sources": [
-          "unesco_los_glaciares",
-          "national_parks_argentina"
+          "los_glaciares_activities",
+          "los_glaciares_ports"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -2497,7 +2652,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which hideout fits the evidence?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "The lake name alone did not verify a public “Lago Argentino pier” at El Calafate. The destination is corrected to Puerto Punta Bandera, the official boat-excursion port 47 km from El Calafate; the ticket clue now names the port. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "lago-argentino-ferry",
@@ -2517,7 +2677,7 @@
         "clues": [
           "The fictional pier log lists 6 passengers at the first check.",
           "Two passengers leave and three arrive before the second check.",
-          "A boat naturalist is waiting with the missing parcel at Lago Argentino pier."
+          "A boat naturalist waits with the missing parcel at Puerto Punta Bandera, the glacier-excursion port 47 km from El Calafate."
         ],
         "puzzle": {
           "title": "Passenger Log Deduction",
@@ -2531,23 +2691,22 @@
           ],
           "correctIndex": 0,
           "visualHtml": "<p>Consult the three written clues. This training puzzle does not represent a real timetable or visitor route.</p>",
-          "explanation": "6 − 2 + 3 = 7 passengers at the second check. The boat naturalist and Lago Argentino pier are identified by the witness clue.",
+          "explanation": "6 − 2 + 3 = 7 passengers at the second check. The boat naturalist and Puerto Punta Bandera are identified by the witness clue.",
           "hints": [
             "Track departures and arrivals separately.",
             "Start with 6; subtract the 2 who leave, then add the 3 who arrive.",
-            "Answer: 7. 6 − 2 + 3 = 7 passengers at the second check. The boat naturalist and Lago Argentino pier are identified by the witness clue."
+            "Answer: 7. 6 − 2 + 3 = 7 passengers at the second check. The boat naturalist and Puerto Punta Bandera are identified by the witness clue."
           ]
         },
         "warrantAnswers": {
           "city": "El Calafate",
-          "hideout": "Lago Argentino pier",
+          "hideout": "Puerto Punta Bandera",
           "disguise": "Boat naturalist"
         },
         "funFact": "El Calafate is a gateway for visits to Lago Argentino and the glaciers of Los Glaciares National Park.",
         "learningObjective": "Subtract departures and add arrivals in a fictional passenger log.",
         "sources": [
-          "unesco_los_glaciares",
-          "national_parks_argentina"
+          "los_glaciares_ports"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -2556,7 +2715,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. How many passengers should appear at the second check?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "The fictional case’s generic “Lago Argentino pier” is corrected to Puerto Punta Bandera, which the National Parks Administration identifies as the launch port for Lago Argentino glacier excursions 47 km from El Calafate. Passenger counts remain fictional; 6−2+3=7. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       },
       {
         "caseId": "glaciarium-lab",
@@ -2605,8 +2769,8 @@
         "funFact": "Glacier museums and park exhibits help visitors understand ice, climate, and Patagonian landscapes.",
         "learningObjective": "Order stages using the sequence given in the exhibit labels.",
         "sources": [
-          "unesco_los_glaciares",
-          "national_parks_argentina"
+          "glacier_formation",
+          "glaciarium"
         ],
         "difficulty": "detective",
         "mechanic": "deduction-choice",
@@ -2615,7 +2779,12 @@
         ],
         "visualType": "inline-html-cutout",
         "accessibilityDescription": "All required evidence and instructions are written as text. Which order follows the labels in the exercise?",
-        "reviewStatus": "source-linked-needs-line-review"
+        "reviewStatus": "reviewed",
+        "reviewEvidence": {
+          "reviewer": "Codex (AI-assisted source and editorial review)",
+          "date": "2026-10-15",
+          "notes": "Argentina’s official glaciology teaching resource explains snow accumulation followed by burial, compaction, and recrystallization into glacier ice. The case’s shorter three-stage sequence is sound; exhibit labels are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+        }
       }
     ]
   },
@@ -2709,7 +2878,223 @@
       "publisher": "UNESCO World Heritage Centre",
       "url": "https://whc.unesco.org/en/list/995/",
       "reviewed": true
+    },
+    "ba_caminito": {
+      "title": "Caminito",
+      "publisher": "Government of the City of Buenos Aires",
+      "url": "https://turismo.buenosaires.gob.ar/en/otros-establecimientos/caminito",
+      "reviewed": true
+    },
+    "ba_city_literature": {
+      "title": "A city of theatre, film, literature and music",
+      "publisher": "Government of the City of Buenos Aires",
+      "url": "https://turismo.buenosaires.gob.ar/en/article/city-theatre-film-literature-and-music",
+      "reviewed": true
+    },
+    "ba_cafe_tortoni": {
+      "title": "Café Tortoni",
+      "publisher": "Government of the City of Buenos Aires",
+      "url": "https://turismo.buenosaires.gob.ar/en/node/41006",
+      "reviewed": true
+    },
+    "ba_teatro_colon": {
+      "title": "Teatro Colón",
+      "publisher": "Government of the City of Buenos Aires",
+      "url": "https://turismo.buenosaires.gob.ar/en/otros-establecimientos/teatro-col%C3%B3n",
+      "reviewed": true
+    },
+    "ba_recoleta": {
+      "title": "Recoleta Cemetery",
+      "publisher": "Government of the City of Buenos Aires",
+      "url": "https://turismo.buenosaires.gob.ar/en/otros-establecimientos/recoleta-cemetery",
+      "reviewed": true
+    },
+    "mendoza_aconcagua": {
+      "title": "Aconcagua Provincial Park",
+      "publisher": "Government of Mendoza, Ministry of Energy and Environment",
+      "url": "https://informacionoficial.mendoza.gob.ar/energiayambiente/aconcagua/",
+      "reviewed": true
+    },
+    "mendoza_vendimia": {
+      "title": "Fiesta Nacional de la Vendimia",
+      "publisher": "Government of Mendoza",
+      "url": "https://www.mendoza.gob.ar/vendimia/",
+      "reviewed": true
+    },
+    "mendoza_vendimia_plaza": {
+      "title": "Vendimia visitor activities at Plaza Independencia",
+      "publisher": "Government of Mendoza, EMETUR",
+      "url": "https://prensa.mendoza.gob.ar/el-emetur-recibe-a-los-turistas-que-nos-visitan-en-vendimia/",
+      "reviewed": true
+    },
+    "mendoza_uco_irrigation": {
+      "title": "Valle de Uco irrigation modernization",
+      "publisher": "Government of Mendoza",
+      "url": "https://prensa.mendoza.gob.ar/510260-2/",
+      "reviewed": true
+    },
+    "mendoza_water_cycle": {
+      "title": "Mendoza rivers and water distribution",
+      "publisher": "Mendoza Department General of Irrigation",
+      "url": "https://www.irrigacion.gov.ar/archivo_historico/2022/12/14/mendoza-sus-rios-y-la-red-de-distribucion-que-origina-nuestros-oasis/",
+      "reviewed": true
+    },
+    "mendoza_san_martin": {
+      "title": "General San Martín Park entrance gates",
+      "publisher": "Government of Mendoza",
+      "url": "https://www.mendoza.gov.ar/prensa/los-emblematicos-portones-del-parque-general-san-martin-ya-estan-restaurados/",
+      "reviewed": true
+    },
+    "salta_cafayate": {
+      "title": "Cafayate",
+      "publisher": "Government of Salta Tourism",
+      "url": "https://visit.turismosalta.gov.ar/post/cafayate/",
+      "reviewed": true
+    },
+    "salta_cabildo": {
+      "title": "The history of Salta Cabildo",
+      "publisher": "Argentina National Ministry of Culture, Museum of the North",
+      "url": "https://museodelnorte.cultura.gob.ar/noticia/la-historia-del-cabildo-de-salta/",
+      "reviewed": true
+    },
+    "salta_teleferico": {
+      "title": "Teleférico San Bernardo",
+      "publisher": "Government of Salta Tourism",
+      "url": "https://visit.turismosalta.gov.ar/post/teleferico-san-bernardo/",
+      "reviewed": true
+    },
+    "salinas_grandes": {
+      "title": "Salinas Grandes guide and regional location",
+      "publisher": "Government of Jujuy Tourism",
+      "url": "https://www.turismo.jujuy.gob.ar/wp-content/uploads/Manual-para-Guias-Idoneos_v5.pdf",
+      "reviewed": true
+    },
+    "cordoba_unc_history": {
+      "title": "Historical Overview",
+      "publisher": "National University of Córdoba",
+      "url": "https://www.unc.edu.ar/english/historical-overview",
+      "reviewed": true
+    },
+    "cordoba_nueva": {
+      "title": "Barrio Nueva Córdoba",
+      "publisher": "Government of Córdoba Tourism",
+      "url": "https://cordobaturismo.gov.ar/experiencias/barrio-nueva-cordoba/",
+      "reviewed": true
+    },
+    "cordoba_bosque_alegre": {
+      "title": "Bosque Alegre Astrophysical Station visits",
+      "publisher": "National University of Córdoba Astronomical Observatory",
+      "url": "https://oac.unc.edu.ar/actividades-para-todo-publico/visitas-guiadas/",
+      "reviewed": true
+    },
+    "cordoba_unesco": {
+      "title": "Jesuit Block and Estancias of Córdoba",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/995/",
+      "reviewed": true
+    },
+    "cordoba_buen_pastor": {
+      "title": "Media Legua de Oro Cultural: Paseo del Buen Pastor",
+      "publisher": "Government of Córdoba Tourism",
+      "url": "https://cordobaturismo.gov.ar/experiencias/media-legua-de-oro-cultural/",
+      "reviewed": true
+    },
+    "iguazu_activities": {
+      "title": "Iguazú National Park activities",
+      "publisher": "Argentina National Parks Administration",
+      "url": "https://www.argentina.gob.ar/parquesnacionales/nea/parque-nacional-iguazu/actividades",
+      "reviewed": true
+    },
+    "iguazu_falls": {
+      "title": "Iguazú Falls: location and waterfall count",
+      "publisher": "Government of Argentina Tourism",
+      "url": "https://www.argentina.gob.ar/jefatura/turismo/viaja-por-argentina/conocer-las-cataratas-del-iguazu",
+      "reviewed": true
+    },
+    "iguazu_frontier": {
+      "title": "Triple Frontier viewpoint",
+      "publisher": "Visit Iguazú",
+      "url": "https://visitiguazu.travel/atractivos/paseo-artesanal-hito-tres-fronteras/",
+      "reviewed": true
+    },
+    "bariloche_otto": {
+      "title": "Cerro Otto",
+      "publisher": "Municipality of San Carlos de Bariloche Tourism",
+      "url": "https://www.barilocheturismo.gob.ar/es/actividades-cerro-otto",
+      "reviewed": true
+    },
+    "bariloche_panuelo": {
+      "title": "Puerto Pañuelo",
+      "publisher": "Municipality of San Carlos de Bariloche Tourism",
+      "url": "https://www.barilocheturismo.gob.ar/es/puerto-panuelo",
+      "reviewed": true
+    },
+    "bariloche_civic": {
+      "title": "Civic Center",
+      "publisher": "Municipality of San Carlos de Bariloche Tourism",
+      "url": "https://www.barilocheturismo.gob.ar/es/centro-civico",
+      "reviewed": true
+    },
+    "bariloche_lake_tours": {
+      "title": "Lake excursions on Nahuel Huapi",
+      "publisher": "Municipality of San Carlos de Bariloche Tourism",
+      "url": "https://www.barilocheturismo.gob.ar/es/excursiones-lacustres",
+      "reviewed": true
+    },
+    "ushuaia_lighthouse": {
+      "title": "Les Eclaireurs Lighthouse",
+      "publisher": "Municipality of Ushuaia Tourism",
+      "url": "https://turismoushuaia.com/actividad/faro-les-eclaireurs/",
+      "reviewed": true
+    },
+    "ushuaia_beagle": {
+      "title": "Beagle Channel",
+      "publisher": "Municipality of Ushuaia Tourism",
+      "url": "https://turismoushuaia.com/zonas/canal-beagle/",
+      "reviewed": true
+    },
+    "ushuaia_correo": {
+      "title": "End of the World Post Office location",
+      "publisher": "Municipality of Ushuaia Tourism",
+      "url": "https://turismoushuaia.com/wp-content/uploads/2021/07/PDF-UNIFICADO-ESP-11.03.24.pdf",
+      "reviewed": true
+    },
+    "ushuaia_train": {
+      "title": "End of the World Train",
+      "publisher": "Municipality of Ushuaia Tourism",
+      "url": "https://turismoushuaia.com/prestador/tren-del-fin-del-mundo/",
+      "reviewed": true
+    },
+    "ushuaia_martial": {
+      "title": "Martial Glacier",
+      "publisher": "Municipality of Ushuaia Tourism",
+      "url": "https://turismoushuaia.com/actividad/glaciar-martial/",
+      "reviewed": true
+    },
+    "los_glaciares_activities": {
+      "title": "Los Glaciares National Park activities",
+      "publisher": "Argentina National Parks Administration",
+      "url": "https://www.argentina.gob.ar/parquesnacionales/patagonia-austral/parque-nacional-los-glaciares/actividades",
+      "reviewed": true
+    },
+    "los_glaciares_ports": {
+      "title": "Los Glaciares National Park concessionaires and boat departures",
+      "publisher": "Argentina National Parks Administration",
+      "url": "https://www.argentina.gob.ar/parquesnacionales/patagonia-austral/parque-nacional-los-glaciares/concesionarios",
+      "reviewed": true
+    },
+    "glaciarium": {
+      "title": "Glaciarium Ice Museum and Glaciological Interpretation Centre",
+      "publisher": "Glaciarium",
+      "url": "https://www.glaciarium.com/",
+      "reviewed": true
+    },
+    "glacier_formation": {
+      "title": "Glaciers: Water of the Future — snow accumulation and glacier ice formation",
+      "publisher": "Government of Argentina educational resource",
+      "url": "https://www.argentina.gob.ar/sites/default/files/secuencia_didactica._glaciares_agua_del_futuro.pdf",
+      "reviewed": true
     }
   },
-  "contentVersion": 4
+  "contentVersion": 5
 }

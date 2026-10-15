@@ -1,0 +1,484 @@
+{
+  "sources": {
+    "a_street_promenade": {
+      "title": "A Street Promenade & outdoor dining",
+      "publisher": "Visit Bentonville",
+      "url": "https://www.visitbentonville.com/blog/stories/post/outdoor-dining-patios-around-bentonville/",
+      "reviewed": true
+    },
+    "benton_county_locations": {
+      "title": "Benton County Government contact and locations",
+      "publisher": "Benton County Government",
+      "url": "https://bentoncountyar.gov/contact/",
+      "reviewed": true
+    },
+    "coler_campground_peel": {
+      "title": "Coler Campground",
+      "publisher": "Peel Compton Foundation",
+      "url": "https://www.peelcompton.org/coler-mountain-bike-preserve/coler-campground/",
+      "reviewed": true
+    },
+    "coler_campground_visitbentonville": {
+      "title": "Coler Mountain Bike Preserve",
+      "publisher": "Visit Bentonville",
+      "url": "https://www.visitbentonville.com/things-to-do/parks-trails-lakes/coler/",
+      "reviewed": true
+    },
+    "coler_hub_platform": {
+      "title": "Coler Mountain Bike Preserve: The Hub",
+      "publisher": "Walton Family Foundation",
+      "url": "https://www.waltonfamilyfoundation.org/stories/home-region/coler-mountain-bike-preserve-set-to-soar",
+      "reviewed": true
+    },
+    "coler_trails_peel": {
+      "title": "Mountain Biking at Coler Mountain Bike Preserve",
+      "publisher": "Peel Compton Foundation",
+      "url": "https://peelcompton.org/coler-mountain-bike-preserve/mountain-biking/",
+      "reviewed": true
+    },
+    "compton_gardens": {
+      "title": "Compton Gardens & Arboretum",
+      "publisher": "Peel Compton Foundation",
+      "url": "https://peelcompton.org/compton-gardens-arboretum/",
+      "reviewed": true
+    },
+    "crystal_bridges": {
+      "title": "About Crystal Bridges Museum of American Art",
+      "publisher": "Crystal Bridges Museum of American Art",
+      "url": "https://crystalbridges.org/about",
+      "reviewed": true
+    },
+    "momentary": {
+      "title": "About the Momentary",
+      "publisher": "The Momentary",
+      "url": "https://themomentary.org/about/",
+      "reviewed": true
+    },
+    "osage_park": {
+      "title": "Osage Park",
+      "publisher": "Peel Compton Foundation",
+      "url": "https://peelcompton.org/osage-park/",
+      "reviewed": true
+    },
+    "visit_bentonville_square": {
+      "title": "Downtown Square",
+      "publisher": "Visit Bentonville",
+      "url": "https://www.visitbentonville.com/things-to-do/parks-trails-lakes/downtown-square/",
+      "reviewed": true
+    },
+    "walmart_home_office": {
+      "title": "New Home Office",
+      "publisher": "Walmart",
+      "url": "https://corporate.walmart.com/about/newhomeoffice",
+      "reviewed": true
+    },
+    "walmart_museum": {
+      "title": "Walmart Museum & History",
+      "publisher": "Walmart",
+      "url": "https://corporate.walmart.com/about/walmart-museum/",
+      "reviewed": true
+    }
+  },
+  "cases": {
+    "downtown-square-first-friday": {
+      "sources": [
+        "visit_bentonville_square",
+        "a_street_promenade"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Checked the official Square page for First Fridays, public art, businesses, and events; Visit Bentonville identifies A Street Promenade as a pedestrian-only route with nearby restaurants. First Friday flyers, receipt, witness, and suspect are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "downtown-square-courthouse": {
+      "sources": [
+        "visit_bentonville_square",
+        "benton_county_locations"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Benton County Government lists the County Courthouse at 100 NE A Street, Bentonville; the Square page establishes the downtown context. Fictional court records and witness details are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "downtown-square-winter-lights": {
+      "sources": [
+        "visit_bentonville_square"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Visit Bentonville states that the community gathers on the Square each winter for holiday lights. The fictional schedule, footprints, and witness are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "downtown-square-art-market": {
+      "sources": [
+        "visit_bentonville_square"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Visit Bentonville identifies Art Markets among Square community programs and public artwork. The fictional vendor booth, catalog, and witness are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "walmart-museum-spark-cafe": {
+      "sources": [
+        "walmart_museum"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Walmart’s official Museum page identifies Spark Café and Sam Walton’s favorite butter pecan ice cream. The receipt and sundae order are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "walmart-museum-galleries": {
+      "sources": [
+        "walmart_museum"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Walmart’s official Museum page describes the galleries and their history from the Walton 5&10 to Walmart. The fictional exhibit labels and witness are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "walmart-museum-archive-keys": {
+      "sources": [
+        "walmart_museum"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Walmart’s official Museum page includes “From the archives” material. The key, catalog, and archive-prop records are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "walmart-museum-free-admission": {
+      "sources": [
+        "walmart_museum"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Walmart’s official Museum page states admission is free. No changeable opening-hour claim was used. The fictional ticket and suspect are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "classic-walmart-home-office": {
+      "sources": [
+        "walmart_home_office"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Walmart’s official New Home Office page describes the campus, named public spaces, and interactive campus map. The fictional map desk and clues are not claims about a real kiosk. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "walmart-home-office-sam-walton-hall": {
+      "sources": [
+        "walmart_home_office"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Walmart’s official campus page names Sam Walton Hall. The fictional room assignment and evidence are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "walmart-home-office-8th-plate": {
+      "sources": [
+        "walmart_home_office"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Walmart’s official campus page names 8th & Plate. The fictional menu, receipt, and witness are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "walmart-home-office-whole-health": {
+      "sources": [
+        "walmart_home_office"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Walmart’s official campus page names Walton Family Whole Health & Fitness. The fictional fitness badge and clue are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "walmart-home-office-office-buildings": {
+      "sources": [
+        "walmart_home_office"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Walmart’s official campus page describes twelve buildings on the campus. The fictional building tally and delivery record are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "crystal-bridges-trails": {
+      "sources": [
+        "crystal_bridges"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Crystal Bridges’ official About page identifies five miles of walking and sculpture trails. The fictional trail token and ranger record are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "crystal-bridges-library": {
+      "sources": [
+        "crystal_bridges"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Crystal Bridges’ official About page states its library has more than 50,000 volumes. The fictional catalog card and librarian are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "crystal-bridges-pavilions": {
+      "sources": [
+        "crystal_bridges"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Crystal Bridges’ official About page describes pavilions around two spring-fed ponds. The fictional pavilion map and witness are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "crystal-bridges-collection": {
+      "sources": [
+        "crystal_bridges"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Crystal Bridges’ official About page says its permanent collection spans five centuries of American art and is free to view. The fictional inventory and witness are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "the-momentary-tower": {
+      "sources": [
+        "momentary"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "The Momentary’s official About page describes its 70-foot Tower and multiple mezzanines. The fictional elevator log is invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "the-momentary-green": {
+      "sources": [
+        "momentary"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "The Momentary’s official About page names Momentary Green. The fictional event pass and witness are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "the-momentary-galleries": {
+      "sources": [
+        "momentary"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "The Momentary’s official About page describes gallery spaces for changing exhibitions. The fictional installation clue is invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "the-momentary-box-office": {
+      "sources": [
+        "momentary"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "The Momentary’s official About page locates the Box Office at the main entrance and lists visitor information functions. The duplicate badge is fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "classic-compton-gardens": {
+      "sources": [
+        "compton_gardens"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Peel Compton’s official page describes Compton Gardens’ seven-acre native plant collection and Ozark conservation mission. Plant tags, seed packet, and witness are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "compton-gardens-exhibit-room": {
+      "sources": [
+        "compton_gardens"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Peel Compton’s current page lists the Exhibit Room at 312 N. Main Street with weekday hours. The map loss and docent evidence are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "compton-gardens-trails": {
+      "sources": [
+        "compton_gardens"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Peel Compton’s official page describes walking/biking trails among native plants and trees. The altered marker and bicycle bell are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "compton-gardens-dr-compton": {
+      "sources": [
+        "compton_gardens"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Peel Compton’s official page identifies Dr. Neil Compton and his Ozark conservation legacy. The missing quotation frame and witness are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "compton-gardens-house": {
+      "sources": [
+        "compton_gardens"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Peel Compton’s official page describes the mid-century modern Compton home and private-event use. The event ledger and floor plan are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "classic-coler-preserve": {
+      "sources": [
+        "coler_hub_platform",
+        "coler_trails_peel"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "The Walton Family Foundation’s Coler feature identifies the 20-foot steel-and-cedar Hub launch platform; Peel Compton’s trail page describes the downhill trail choices. The token and courier are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "coler-preserve-campground": {
+      "sources": [
+        "coler_campground_visitbentonville",
+        "coler_campground_peel"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Visit Bentonville and Peel Compton identify Coler’s campsite types/counts and trail access. The pass, wagon clue, and repair ticket are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "coler-preserve-westside": {
+      "sources": [
+        "coler_trails_peel"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Peel Compton’s official trail page distinguishes trail difficulty and identifies the Westside/Eastside trail areas. The altered sign and coaching record are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "coler-preserve-eastside": {
+      "sources": [
+        "coler_trails_peel"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Peel Compton’s official trail page documents Coler’s advanced technical, rocky, and jump features. The route card and spotter are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "coler-preserve-airship": {
+      "sources": [
+        "coler_campground_peel"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Peel Compton’s official campground page lists Airship Coffee at Coler and direct trail access. The coded receipt and barista are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "classic-osage-park": {
+      "sources": [
+        "osage_park"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Peel Compton’s official Osage Park page documents the wetland, boardwalks, and park features used here. The compass bearing and field record are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "osage-park-quiver": {
+      "sources": [
+        "osage_park"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Peel Compton identifies The Quiver archery range and its intended range of experience levels. The scorecard and marshal are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "osage-park-pickleball": {
+      "sources": [
+        "osage_park"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Peel Compton’s official Osage Park page lists the eight-court pickleball facility. The tournament tile and bracket are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "osage-park-art-park": {
+      "sources": [
+        "osage_park"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Peel Compton documents art installations throughout Osage Park. The label, courier route, and docent badge are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    },
+    "osage-park-dog-park": {
+      "sources": [
+        "osage_park"
+      ],
+      "reviewStatus": "reviewed",
+      "reviewEvidence": {
+        "reviewer": "Codex (AI-assisted source and editorial review)",
+        "date": "2026-10-15",
+        "notes": "Peel Compton identifies the Osage Park dog-park/Park & Play area. The permit, leash hook, and volunteer record are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+      }
+    }
+  }
+}

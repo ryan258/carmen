@@ -86,6 +86,11 @@ const sources = {
   }
 };
 
+// Keep case-scoped source/review evidence in an authoring sidecar so rebuilding
+// the generated pack preserves the completed fact-check records.
+const caseReviewMetadata = require('./bentonville-review-evidence.json');
+Object.assign(sources, caseReviewMetadata.sources);
+
 const locations = [
   {
     id: 'downtown-square',
@@ -1171,6 +1176,8 @@ function createCase(location, variant, index) {
   const caseId = variant.slug === 'classic' ? `classic-${location.id}` : `${location.id}-${variant.slug}`;
   const correctIndex = variant.puzzle.correctIndex ?? 0;
   const mechanic = 'deduction-choice';
+  const caseReview = caseReviewMetadata.cases[caseId];
+  const reviewEvidence = variant.reviewEvidence ?? caseReview?.reviewEvidence;
 
   return {
     caseId,
@@ -1203,14 +1210,14 @@ function createCase(location, variant, index) {
     },
     funFact: variant.funFact,
     learningObjective: variant.learningObjective ?? `Identify a real Bentonville landmark or district feature from connected clues about ${location.name}.`,
-    sources: variant.sources ?? [location.source],
+    sources: variant.sources ?? caseReview?.sources ?? [location.source],
     difficulty: variant.difficulty ?? (index === 0 ? 'detective' : ['rookie', 'detective', 'inspector', 'detective'][(index - 1) % 4]),
     mechanic,
     regionTags: [...new Set([location.province, location.name])],
     visualType: 'inline-html-cutout',
     accessibilityDescription: `Evidence card for ${location.name}. Use the three clue sheets to solve the case.`,
-    reviewStatus: variant.reviewStatus ?? 'source-linked-needs-line-review',
-    ...(variant.reviewEvidence ? {reviewEvidence: {...variant.reviewEvidence}} : {})
+    reviewStatus: variant.reviewStatus ?? caseReview?.reviewStatus ?? 'source-linked-needs-line-review',
+    ...(reviewEvidence ? {reviewEvidence: {...reviewEvidence}} : {})
   };
 }
 
