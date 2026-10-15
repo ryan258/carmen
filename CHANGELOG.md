@@ -2,7 +2,8 @@
 
 ## Unreleased — Six remaining game-pack concepts
 
-- Add Ozark Waterways, Arkansas Delta, American National Parks, Railroads & Depots, Architecture & Hidden Details, and Museums & Missing Labels. Each has eight stops and 24 cases at content version 1, adding 144 cases across 48 stops.
+- Add Ozark Waterways, Arkansas Delta, American National Parks, Railroads & Depots, Architecture & Hidden Details, and Museums & Missing Labels. Five packs start at content version 1 and Museums & Missing Labels uses content version 2 after replacing its Exploratorium entry case, adding 144 cases across 48 stops.
+- Refine Argentina Aconcagua and Iguazú fun facts with survey and water-level variation notes; qualify the Bella Vista museum resort/village chronology in Northwest Arkansas.
 - Use text-only investigations into drainage, document conflicts, chronology, corroboration, measurements, attribution, material scope and provenance. Every case has three hints, worked reasoning and explicit warrant evidence.
 - Record scoped AI-assisted source/editorial review for all 144 additions and 48 companion transfer activities. The 12-pack catalog has 320 cases: 248 reviewed and 72 original cases pending.
 - Register the packs, extend the existing catalog assertion and reconcile current docs. Existing route/session tests already enumerate the manifest; no runtime or generated asset changes.

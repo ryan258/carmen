@@ -1,6 +1,6 @@
 # Finish the 12-pack catalog additions
 
-The six remaining concepts are implemented at eight stops and three cases per stop: Ozark Waterways, Arkansas Delta, American National Parks, Railroads & Depots, Architecture & Hidden Details, and Museums & Missing Labels. All six start at content version 1. Their [144-case ledger](remaining-packs-review.md) records source scope, answer/distractor reasoning and 48 companion transfer activities. The catalog has 320 cases: 248 AI-assisted reviewed and 72 original-pack cases pending. All ten additional packs are in local commits; pushing and publication remain separate actions. The last recorded deployment contains the original two packs.
+The six remaining concepts are implemented at eight stops and three cases per stop: Ozark Waterways, Arkansas Delta, American National Parks, Railroads & Depots, Architecture & Hidden Details, and Museums & Missing Labels. Five packs start at content version 1, and Museums & Missing Labels uses content version 2 after replacing its Exploratorium entry case. Their [144-case ledger](remaining-packs-review.md) records source scope, answer/distractor reasoning and 48 companion transfer activities. The catalog has 320 cases: 248 AI-assisted reviewed and 72 original-pack cases pending. All ten additional packs are in local commits; pushing and publication remain separate actions. The last recorded deployment contains the original two packs.
 
 ## Next owner-run check
 
