@@ -1,10 +1,25 @@
-# Current remediation status — October 15, 2026
+# Current remediation status — October 17, 2026
+
+## Editorial follow-up to supplied independent review — October 17
+
+Applied the supplied review's seven wording/source-scope findings across six packs and their companion ledgers. The [all-pack amendment](all-packs-fact-check.md#october-17-editorial-follow-up) records the exact corrections, unresolved source limits and provenance. It does not claim a second online review. Norfork's milestones now distinguish the previously reviewed construction start in 1941 from completion in 1944; its unconfirmed 1949 component-completion claim is removed. Barstow's 1910–1913 range is explicitly NPS's chronology. Bentonville's source and review sidecar regenerate its pack/fallback together.
+
+Current content versions are Bentonville 5, Argentina 6, Northwest Arkansas 3, Route 66 2, Ozark Waterways 2 and Railroads & Depots 2. Earlier saves for those six edited packs are incompatible; case IDs and correct-option indices remain stable. Catalog size remains 12 packs and 320 cases. Other pack versions and save schema 5 are unchanged.
+
+Read-only GitNexus impact found LOW for `createCase` with a callable-value caveat; other edited data/constant/fallback targets were UNKNOWN or absent. The index is two commits behind HEAD. Source references confirmed the dynamic consumers and save guard. No analyze was run. No tests, separate syntax/content/release gates, browser checks, staging, commits, pushing or publication were run. The short content build's intrinsic `validatePack` calls ran while writing the generated Bentonville artifacts. The focused owner-run command is in the [finish plan](finish-plan.md); no separate verification result is asserted for this amendment.
+
+
+### Final consistency review — October 17
+
+Static review covered the six pack diffs, relevant case/source records, Bentonville's authoring inputs, generated pack/fallback, and companion documentation. No further gameplay change was needed. The fallback JSON payload exactly matches the full 40-case Bentonville pack at content version 5; sidecar overrides match generated metadata. Remaining documentation corrections align README versions/save guidance, per-pack ledger version labels, historical counts and the October 15 source-read scope. The [all-pack final-review note](all-packs-fact-check.md#final-consistency-review--october-17) records the limits.
+
+This final pass ran no tests, browser checks, builds, validators, app modules, content/release gates or GitNexus analyze. Read-only documentation impacts were MEDIUM for the linked ledgers/status, UNKNOWN for README, and absent/UNKNOWN for the all-pack ledger; no runtime processes were resolved. Current source/link inspection supplied the missing confirmation; the index remains two commits stale. No changes were staged or committed.
 
 ## Latest all-pack fact check — October 15
 
-The current active pack data has **320 cases with AI-assisted source/editorial review evidence and zero pending cases**. The [all-pack fact-check ledger](all-packs-fact-check.md) records the 72 newly completed cases, primary sources, corrections and review limits. Argentina advanced from content version 4 to 5 because answer/clue semantics changed; Bentonville remains at version 4. Version-4 Argentina saves are incompatible. Ryan supplied a read-only `createCase` impact result rated LOW with a lower-bound callable-value caveat; source inspection confirmed the registration and authoring-test references. Bentonville's review metadata now lives in an authoring sidecar consumed by its generator, and the generated pack/fallback were synchronized. No tests, `check:content`/release gate, GitNexus analyze, staging, commits or publication were performed. The content generator's own `validatePack` check ran as part of `npm run build:content`.
+At the October 15 checkpoint, the active pack data had **320 cases with AI-assisted source/editorial review evidence and zero pending cases**. The [all-pack fact-check ledger](all-packs-fact-check.md) records the 72 newly completed cases, primary sources, corrections and review limits. Argentina advanced from content version 4 to 5 because answer/clue semantics changed; Bentonville remains at version 4. Version-4 Argentina saves are incompatible. Ryan supplied a read-only `createCase` impact result rated LOW with a lower-bound callable-value caveat; source inspection confirmed the registration and authoring-test references. Bentonville's review metadata now lives in an authoring sidecar consumed by its generator, and the generated pack/fallback were synchronized. No tests, `check:content`/release gate, GitNexus analyze, staging, commits or publication were performed. The content generator's own `validatePack` check ran as part of `npm run build:content`.
 
-The sections below preserve their dated historical checkpoints. Their pending-review counts and version-4 references describe those earlier states and are superseded by the October 15 ledger where the current workspace is concerned.
+The sections below preserve their dated historical checkpoints. Their pending-review counts and version-4 references describe those earlier states and are superseded by the October 15 ledger and October 17 amendment where the current workspace is concerned.
 
 ## Remaining six pack concepts — October 14
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 1,
+  "contentVersion": 2,
   "id": "ozark-waterways-carmen",
   "title": "Where in the Ozark Waterways is Carmen Sandiego?",
   "subtitle": "The Watershed Files",
@@ -832,7 +832,7 @@
           }
         },
         "clues": [
-          "Source note: Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944; powerhouse and switchyard completion is recorded separately in 1949.",
+          "Source note: Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944.",
           "ACME exercise: A copied river field reads North Fork River. The courier changes it to Norfork River merely to match the spelling of Norfork Dam. This dossier is assigned to the fictional ACME Records Desk.",
           "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
         ],
@@ -860,7 +860,7 @@
           "hideout": "ACME Records Desk",
           "disguise": "Archive photographer"
         },
-        "funFact": "Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944; powerhouse and switchyard completion is recorded separately in 1949.",
+        "funFact": "Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944.",
         "learningObjective": "Preserve source-specific names for linked features.",
         "sources": [
           "norfork"
@@ -878,13 +878,13 @@
         "reviewEvidence": {
           "reviewer": "Codex (AI-assisted editorial review)",
           "date": "2026-10-14",
-          "notes": "USACE Location and Construction sections; distinct event dates. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+          "notes": "USACE Location and Construction sections; distinct event dates. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md. Editorial amendment 2026-10-17, based on the supplied independent review without a fresh source fetch: removed the unconfirmed powerhouse/switchyard completion claim; retained the previously reviewed dam location and 1941 construction start / 1944 completion."
         }
       },
       {
         "caseId": "ozark-waterways-norfork-milestones",
         "briefing": {
-          "headline": "TWO COMPLETION DATES, DIFFERENT WORK",
+          "headline": "TWO CONSTRUCTION MILESTONES MERGED",
           "report": "At Norfork Lake, ACME’s copied dossier has been altered. The Splitter was seen handling the teaching copy. Investigate the supplied records. Suspects, witnesses, desk assignments and disputed case records are fictional; no real collection object is missing.",
           "callingCard": "A card reads: \"A convincing label still needs evidence. Keep the record’s meaning intact.\"",
           "nextLead": "The next copied dossier points to Mammoth Spring.",
@@ -897,36 +897,36 @@
           }
         },
         "clues": [
-          "Source note: Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944; powerhouse and switchyard completion is recorded separately in 1949.",
-          "ACME exercise: Two copied records read dam complete: 1944 and powerhouse/switchyard complete: 1949. A courier averages them to create one construction date. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "Source note: Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944.",
+          "ACME exercise: Two copied records read dam construction began: 1941 and dam construction finished: 1944. A courier averages them to create one construction date. This dossier is assigned to the fictional ACME Dispatch Desk.",
           "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
         ],
         "puzzle": {
-          "title": "Two completion dates, different work",
+          "title": "Two construction milestones merged",
           "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
           "question": "Which replacement respects the recorded milestones?",
           "options": [
-            "Keep 1944 and 1949 attached to their different work",
+            "Keep 1941 as construction start and 1944 as completion",
             "Use only the midpoint year",
             "Date all work to 1944",
-            "Date all work to 1949"
+            "Date all work to 1941"
           ],
           "correctIndex": 0,
           "visualHtml": "",
           "hints": [
-            "Compare the subjects of the dates before treating them as inconsistent.",
-            "Dam works and later powerhouse/switchyard works need not share a completion date.",
-            "Answer: Keep 1944 and 1949 attached to their different work. The dates describe different scopes of work. Keeping both event labels preserves the record; averaging creates an unrecorded event, and one date for everything erases the distinction. Warrant: Norfork Lake; ACME Dispatch Desk; Dispatch clerk."
+            "Compare the event labels before treating the dates as inconsistent.",
+            "Construction can begin in one year and finish in another.",
+            "Answer: Keep 1941 as construction start and 1944 as completion. The dates describe the beginning and end of construction. Keeping both event labels preserves the record; averaging creates an unrecorded event, and one date for everything erases the distinction. Warrant: Norfork Lake; ACME Dispatch Desk; Dispatch clerk."
           ],
-          "explanation": "The dates describe different scopes of work. Keeping both event labels preserves the record; averaging creates an unrecorded event, and one date for everything erases the distinction. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Norfork Lake; ACME Dispatch Desk; Dispatch clerk."
+          "explanation": "The dates describe the beginning and end of construction. Keeping both event labels preserves the record; averaging creates an unrecorded event, and one date for everything erases the distinction. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Norfork Lake; ACME Dispatch Desk; Dispatch clerk."
         },
         "warrantAnswers": {
           "city": "Norfork Lake",
           "hideout": "ACME Dispatch Desk",
           "disguise": "Dispatch clerk"
         },
-        "funFact": "Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944; powerhouse and switchyard completion is recorded separately in 1949.",
-        "learningObjective": "Resolve different completion dates by checking their scopes.",
+        "funFact": "Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944.",
+        "learningObjective": "Distinguish construction start from construction completion.",
         "sources": [
           "norfork"
         ],
@@ -943,7 +943,7 @@
         "reviewEvidence": {
           "reviewer": "Codex (AI-assisted editorial review)",
           "date": "2026-10-14",
-          "notes": "USACE Location and Construction sections; distinct event dates. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+          "notes": "USACE Location and Construction sections; distinct event dates. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md. Editorial amendment 2026-10-17, based on the supplied independent review without a fresh source fetch: removed the unconfirmed powerhouse/switchyard completion claim; rebuilt the milestone comparison around the previously reviewed 1941 construction start and 1944 completion, retaining the case ID, correct option index and warrant."
         }
       },
       {
@@ -962,7 +962,7 @@
           }
         },
         "clues": [
-          "Source note: Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944; powerhouse and switchyard completion is recorded separately in 1949.",
+          "Source note: Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944.",
           "ACME exercise: A fictional index requires dam name Norfork and river name North Fork. Card P has both; Q has Norfork/White; R has invented Hill Dam/North Fork; S has Hill Dam/White. This dossier is assigned to the fictional ACME Comparison Desk.",
           "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
         ],
@@ -990,7 +990,7 @@
           "hideout": "ACME Comparison Desk",
           "disguise": "Catalogue illustrator"
         },
-        "funFact": "Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944; powerhouse and switchyard completion is recorded separately in 1949.",
+        "funFact": "Norfork Dam is on the North Fork River. Dam construction began in 1941 and finished in 1944.",
         "learningObjective": "Authenticate a location record with two linked names.",
         "sources": [
           "norfork"
@@ -1008,7 +1008,7 @@
         "reviewEvidence": {
           "reviewer": "Codex (AI-assisted editorial review)",
           "date": "2026-10-14",
-          "notes": "USACE Location and Construction sections; distinct event dates. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+          "notes": "USACE Location and Construction sections; distinct event dates. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md. Editorial amendment 2026-10-17, based on the supplied independent review without a fresh source fetch: removed the unconfirmed powerhouse/switchyard completion claim; retained the previously reviewed dam location and 1941 construction start / 1944 completion."
         }
       }
     ],
@@ -1828,7 +1828,7 @@
       "url": "https://www.swl.usace.army.mil/Missions/Recreation/Lakes/Norfork-Lake/Dam-and-Lake/",
       "publisher": "US Army Corps of Engineers",
       "reviewed": true,
-      "reviewScope": "Location and construction: North Fork River; dam begun 1941, finished 1944; powerhouse/switchyard completion 1949 and generation beginning 1944 are distinct events. No release schedules."
+      "reviewScope": "Location and construction: North Fork River; dam begun 1941, finished 1944. The unconfirmed powerhouse/switchyard completion claim was removed in the 2026-10-17 editorial amendment based on the supplied independent review; no fresh source fetch. No generation milestones or release schedules."
     },
     "mammoth": {
       "title": "Mammoth Spring State Park",

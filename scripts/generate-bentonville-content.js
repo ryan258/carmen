@@ -341,7 +341,7 @@ const casesByLocation = {
       headline: 'HOLIDAY LIGHTS GO DARK!',
       scene: 'a winter light display around the downtown plaza',
       item: 'the timer key for the Square lights',
-      hideout: 'Square Park',
+      hideout: 'Park on the Square',
       disguise: 'Holiday-light electrician',
       clues: [
         'The evidence bag contains zip ties, light clips, and a winter event schedule.',
@@ -349,10 +349,10 @@ const casesByLocation = {
         'The footprint trail circles the central park instead of leaving downtown.'
       ],
       puzzle: {
-        hints: ["Consider where public lights and a community gathering would be managed.", "The light clips and central green-space clue identify the park on the Square.", "Answer: Square Park. The light clips and central green-space clue identify the park on the Square."],
+        hints: ["Consider where public lights and a community gathering would be managed.", "The light clips and central green-space clue identify the park on the Square.", "Answer: Park on the Square. The light clips and central green-space clue identify the park on the Square."],
         title: 'Light Timer Logic',
         question: 'Where did the courier hide the timer key?',
-        options: ['Square Park', 'Sam Walton Hall', 'Momentary Green', 'Crystal Bridges library']
+        options: ['Park on the Square', 'Sam Walton Hall', 'Momentary Green', 'Crystal Bridges library']
       },
       funFact: 'The Square is illuminated with holiday lights each winter.'
     },
@@ -877,7 +877,7 @@ const casesByLocation = {
         hints: ["The missing objects are labels for living plants.", "Native plant beds fit the seed packet and planting tags.", "Answer: Native plant beds. Native plant beds fit the seed packet and planting tags."],
         title: 'Plant Tag Sort',
         question: 'Which Compton Gardens hideout matches the native-plant clues?',
-        options: ['Native plant beds', 'The Hub', 'Momentary Green', 'Square Park']
+        options: ['Native plant beds', 'The Hub', 'Momentary Green', 'Park on the Square']
       },
       funFact: 'Compton Gardens & Arboretum showcases native Ozark plants in a seven-acre downtown greenspace.'
     },
@@ -972,16 +972,16 @@ const casesByLocation = {
       disguise: 'Bike mechanic',
       clues: [
         'The clue names a 20-foot steel and wood launch structure.',
-        'Three downhill run names are scratched into a tire lever.',
+        'Downhill trail names are scratched into a tire lever.',
         'The courier carried a repair stand tag marked Fire Line.'
       ],
       puzzle: {
-        hints: ["The object is a launch structure, not a whole trail network.", "Three downhill runs leave from the Hub.", "Answer: The Hub. Three downhill runs leave from the Hub."],
+        hints: ["The object is a launch structure, not a whole trail network.", "Look for the elevated launch point for downhill trails.", "Answer: The Hub. The Hub is the elevated launch point for downhill trails."],
         title: 'Trail Launch Deduction',
         question: 'Which Coler feature is the launch point?',
         options: ['The Hub', 'Momentary Tower', 'Downtown Square', 'Osage pavilion']
       },
-      funFact: 'At the top of Coler Mountain, The Hub launches riders toward three downhill runs.'
+      funFact: 'At the top of Coler Mountain, The Hub is an elevated launch point for downhill trails.'
     },
     {
       slug: 'campground',
@@ -1019,7 +1019,7 @@ const casesByLocation = {
         hints: ["Beginner-friendly and advanced routes are contrasted.", "Choose the Westside option for beginner and intermediate riders.", "Answer: Westside trails. Choose the Westside option for beginner and intermediate riders."],
         title: 'Trail Level Logic',
         question: 'Which trail area matches beginner and intermediate riders?',
-        options: ['Westside trails', 'Eastside trails', 'Momentary Green', 'Square Park']
+        options: ['Westside trails', 'Eastside trails', 'Momentary Green', 'Park on the Square']
       },
       funFact: 'Coler is divided into Westside trails for beginner and intermediate riders and Eastside trails for more experienced riders.'
     },
@@ -1234,7 +1234,7 @@ const regionData = {
 
 const quizPack = {
   schemaVersion: 1,
-  contentVersion: 4,
+  contentVersion: 5,
   id: 'bentonville-carmen',
   title: 'Where in Bentonville is Carmen Sandiego?',
   subtitle: 'Bentonville Division',

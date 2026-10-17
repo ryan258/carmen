@@ -1544,7 +1544,7 @@
           "hideout": "Garganta del Diablo",
           "disguise": "Park ranger"
         },
-        "funFact": "The Iguazú Falls consist of roughly 275 waterfalls along a front about 2.7 kilometers wide on the Iguazú River.",
+        "funFact": "The Iguazú Falls consist of roughly 275 waterfalls on the Iguazú River.",
         "learningObjective": "Extend an additive sequence and connect it to a named viewpoint.",
         "sources": [
           "iguazu_activities",
@@ -1562,7 +1562,7 @@
         "reviewEvidence": {
           "reviewer": "Codex (AI-assisted source and editorial review)",
           "date": "2026-10-15",
-          "notes": "Argentina’s park authority confirms Garganta del Diablo access and park walkways; the official tourism source gives roughly 275 falls and an official government report gives a 2.7 km front. The Fibonacci sequence was checked as 1,1,2,3,5→8; all puzzle numbers are marked fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence."
+          "notes": "Argentina’s park authority confirms Garganta del Diablo access and park walkways; the official tourism source gives roughly 275 falls. The Fibonacci sequence was checked as 1,1,2,3,5→8; all puzzle numbers are marked fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Checked answer choice, key, hints, explanation, and warrant together; fictional ACME records were not treated as historical evidence. This AI-assisted review is not human educator sign-off or observed learning evidence. 2026-10-17 editorial follow-up based on Ryan’s supplied independent review: removed the optional 2.7 km width because the registered tourism citation did not establish it, and removed the earlier note’s unsupported reference to a separate government report. No source was newly fetched for this follow-up."
         }
       },
       {
@@ -3096,5 +3096,5 @@
       "reviewed": true
     }
   },
-  "contentVersion": 5
+  "contentVersion": 6
 }

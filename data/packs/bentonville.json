@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 4,
+  "contentVersion": 5,
   "id": "bentonville-carmen",
   "title": "Where in Bentonville is Carmen Sandiego?",
   "subtitle": "Bentonville Division",
@@ -444,7 +444,7 @@
           "description": "Use the three written clues to identify the Downtown Square hideout.",
           "question": "Where did the courier hide the timer key?",
           "options": [
-            "Square Park",
+            "Park on the Square",
             "Sam Walton Hall",
             "Momentary Green",
             "Crystal Bridges library"
@@ -454,13 +454,13 @@
           "hints": [
             "Consider where public lights and a community gathering would be managed.",
             "The light clips and central green-space clue identify the park on the Square.",
-            "Answer: Square Park. The light clips and central green-space clue identify the park on the Square."
+            "Answer: Park on the Square. The light clips and central green-space clue identify the park on the Square."
           ],
-          "explanation": "Square Park matches the evidence: The evidence bag contains zip ties, light clips, and a winter event schedule. A witness heard the courier say the community gathers here when the Square is illuminated. The footprint trail circles the central park instead of leaving downtown. The witness evidence identifies the Holiday-light electrician disguise."
+          "explanation": "Park on the Square matches the evidence: The evidence bag contains zip ties, light clips, and a winter event schedule. A witness heard the courier say the community gathers here when the Square is illuminated. The footprint trail circles the central park instead of leaving downtown. The witness evidence identifies the Holiday-light electrician disguise."
         },
         "warrantAnswers": {
           "city": "Downtown Square",
-          "hideout": "Square Park",
+          "hideout": "Park on the Square",
           "disguise": "Holiday-light electrician"
         },
         "funFact": "The Square is illuminated with holiday lights each winter.",
@@ -480,7 +480,7 @@
         "reviewEvidence": {
           "reviewer": "Codex (AI-assisted source and editorial review)",
           "date": "2026-10-15",
-          "notes": "Visit Bentonville states that the community gathers on the Square each winter for holiday lights. The fictional schedule, footprints, and witness are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+          "notes": "Visit Bentonville states that the community gathers on the Square each winter for holiday lights. The fictional schedule, footprints, and witness are invented. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence. Editorial follow-up 2026-10-17 (Codex), based on the supplied independent review: Replaced the unsupported proper-name label Square Park with the descriptive label Park on the Square in answer, hint, explanation and warrant; matching distractors elsewhere use the same label. No source pages were reopened for this amendment; the original source-review date above is retained."
         }
       },
       {
@@ -1865,7 +1865,7 @@
             "Native plant beds",
             "The Hub",
             "Momentary Green",
-            "Square Park"
+            "Park on the Square"
           ],
           "correctIndex": 0,
           "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Compton Gardens</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Compare the three clue sheets</p></div>",
@@ -2176,7 +2176,7 @@
         },
         "clues": [
           "The clue names a 20-foot steel and wood launch structure.",
-          "Three downhill run names are scratched into a tire lever.",
+          "Downhill trail names are scratched into a tire lever.",
           "The courier carried a repair stand tag marked Fire Line. Witness identification: Bike mechanic."
         ],
         "puzzle": {
@@ -2193,17 +2193,17 @@
           "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Coler Mountain Bike Preserve</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Compare the three clue sheets</p></div>",
           "hints": [
             "The object is a launch structure, not a whole trail network.",
-            "Three downhill runs leave from the Hub.",
-            "Answer: The Hub. Three downhill runs leave from the Hub."
+            "Look for the elevated launch point for downhill trails.",
+            "Answer: The Hub. The Hub is the elevated launch point for downhill trails."
           ],
-          "explanation": "The Hub matches the evidence: The clue names a 20-foot steel and wood launch structure. Three downhill run names are scratched into a tire lever. The courier carried a repair stand tag marked Fire Line. The witness evidence identifies the Bike mechanic disguise."
+          "explanation": "The Hub matches the evidence: The clue names a 20-foot steel and wood launch structure. Downhill trail names are scratched into a tire lever. The courier carried a repair stand tag marked Fire Line. The witness evidence identifies the Bike mechanic disguise."
         },
         "warrantAnswers": {
           "city": "Coler Mountain Bike Preserve",
           "hideout": "The Hub",
           "disguise": "Bike mechanic"
         },
-        "funFact": "At the top of Coler Mountain, The Hub launches riders toward three downhill runs.",
+        "funFact": "At the top of Coler Mountain, The Hub is an elevated launch point for downhill trails.",
         "learningObjective": "Identify a real Bentonville landmark or district feature from connected clues about Coler Mountain Bike Preserve.",
         "sources": [
           "coler_hub_platform",
@@ -2221,7 +2221,7 @@
         "reviewEvidence": {
           "reviewer": "Codex (AI-assisted source and editorial review)",
           "date": "2026-10-15",
-          "notes": "The Walton Family Foundation’s Coler feature identifies the 20-foot steel-and-cedar Hub launch platform; Peel Compton’s trail page describes the downhill trail choices. The token and courier are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence."
+          "notes": "The Walton Family Foundation’s Coler feature identifies the 20-foot steel-and-cedar Hub launch platform; Peel Compton’s trail page describes the downhill trail choices. The token and courier are fictional. Case-level findings and review limits: docs/all-packs-fact-check.md. Reviewed this case’s source-supported claims, answer choices, key, hints, explanation, warrant, and fictional-record boundaries. This AI-assisted review is not human educator sign-off or observed learning evidence. Editorial follow-up 2026-10-17 (Codex), based on the supplied independent review: Removed the fixed downhill-run count from clue, hints, explanation and fun fact because the supplied independent review reports differing trail counts. The launch-platform answer remains the same. No source pages were reopened for this amendment; the original source-review date above is retained."
         }
       },
       {
@@ -2317,7 +2317,7 @@
             "Westside trails",
             "Eastside trails",
             "Momentary Green",
-            "Square Park"
+            "Park on the Square"
           ],
           "correctIndex": 0,
           "visualHtml": "<div class=\"cutout-evidence text-center\"><div class=\"text-4xl\">📍</div><p class=\"mt-2 typewriter-font text-xs bg-white/70 p-2 rounded\">Coler Mountain Bike Preserve</p><p class=\"mt-2 text-[10px] font-bold uppercase tracking-wider text-red-800\">Compare the three clue sheets</p></div>",

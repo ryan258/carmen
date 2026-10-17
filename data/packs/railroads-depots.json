@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 1,
+  "contentVersion": 2,
   "id": "railroads-depots-carmen",
   "title": "Where on the Railroads is Carmen Sandiego?",
   "subtitle": "The Switched Manifest",
@@ -1226,14 +1226,14 @@
           }
         },
         "clues": [
-          "Source note: Kansas City’s Union Station opened in 1914 with passenger and service functions. Its later renovation was completed in 1999.",
-          "ACME exercise: ACME’s reference describes a station complex with passenger, baggage and other service spaces. A courier insists a baggage record must belong to another building because the complex also served passengers. This dossier is assigned to the fictional ACME Records Desk.",
+          "Source note: Kansas City’s Union Station was built in 1914. Its later renovation was completed in 1999.",
+          "ACME exercise: ACME’s fictional model station includes passenger, baggage and other service spaces. A courier insists a baggage record must belong to another building because the model complex also served passengers. This dossier is assigned to the fictional ACME Records Desk.",
           "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Records Desk\". Witness identification: Archive photographer."
         ],
         "puzzle": {
           "title": "A service room mistaken for a separate station",
           "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
-          "question": "Which interpretation fits the documented scope?",
+          "question": "Which interpretation fits the fictional station record?",
           "options": [
             "Passenger and baggage functions can belong to one station complex",
             "A passenger station cannot handle baggage",
@@ -1245,16 +1245,16 @@
           "hints": [
             "Compare the full complex with the function of an individual space.",
             "One building complex can include several services.",
-            "Answer: Passenger and baggage functions can belong to one station complex. The station’s documented functions can coexist within one complex. The alternatives impose exclusions or address requirements that the evidence does not supply. Warrant: Union Station Kansas City; ACME Records Desk; Archive photographer."
+            "Answer: Passenger and baggage functions can belong to one station complex. The fictional station’s listed functions can coexist within one complex. The alternatives impose exclusions or address requirements that the evidence does not supply. Warrant: Union Station Kansas City; ACME Records Desk; Archive photographer."
           ],
-          "explanation": "The station’s documented functions can coexist within one complex. The alternatives impose exclusions or address requirements that the evidence does not supply. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Union Station Kansas City; ACME Records Desk; Archive photographer."
+          "explanation": "The fictional station’s listed functions can coexist within one complex. The alternatives impose exclusions or address requirements that the evidence does not supply. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Union Station Kansas City; ACME Records Desk; Archive photographer."
         },
         "warrantAnswers": {
           "city": "Union Station Kansas City",
           "hideout": "ACME Records Desk",
           "disguise": "Archive photographer"
         },
-        "funFact": "Kansas City’s Union Station opened in 1914 with passenger and service functions. Its later renovation was completed in 1999.",
+        "funFact": "Kansas City’s Union Station was built in 1914. Its later renovation was completed in 1999.",
         "learningObjective": "Reconcile different functional records within one institution.",
         "sources": [
           "union-station"
@@ -1272,7 +1272,7 @@
         "reviewEvidence": {
           "reviewer": "Codex (AI-assisted editorial review)",
           "date": "2026-10-14",
-          "notes": "Union Station About Us history: original rail use and 1999 renovation; precise first-train day excluded. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+          "notes": "Union Station About Us history: original rail use and 1999 renovation; precise first-train day excluded. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md. Editorial amendment 2026-10-17, based on the supplied independent review without a fresh source fetch: narrowed the historical claim to built in 1914 and renovation completed in 1999; passenger/baggage/service functions now belong explicitly to a fictional model station."
         }
       },
       {
@@ -1291,8 +1291,8 @@
           }
         },
         "clues": [
-          "Source note: Kansas City’s Union Station opened in 1914 with passenger and service functions. Its later renovation was completed in 1999.",
-          "ACME exercise: A copied timeline lists original opening in 1914 and renovation completion in 1999. A courier labels 1999 as the station’s first opening. This dossier is assigned to the fictional ACME Dispatch Desk.",
+          "Source note: Kansas City’s Union Station was built in 1914. Its later renovation was completed in 1999.",
+          "ACME exercise: A copied timeline lists original construction in 1914 and renovation completion in 1999. A courier labels 1999 as the station’s original construction. This dossier is assigned to the fictional ACME Dispatch Desk.",
           "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Dispatch Desk\". Witness identification: Dispatch clerk."
         ],
         "puzzle": {
@@ -1300,27 +1300,27 @@
           "description": "Compare the written source note with the ACME exercise records. Every rule and measurement needed is supplied in text. No map, image, sound or outside lookup is required.",
           "question": "Which timeline corrects the event labels?",
           "options": [
-            "1999 original opening → 1914 renovation",
-            "Both openings in 1999",
-            "1914 original opening → 1999 renovation completion",
+            "1999 original construction → 1914 renovation",
+            "Both construction and renovation in 1999",
+            "1914 original construction → 1999 renovation completion",
             "No station existed before 1999"
           ],
           "correctIndex": 2,
           "visualHtml": "",
           "hints": [
-            "Separate the first opening from a later restoration milestone.",
+            "Separate original construction from a later renovation milestone.",
             "A renovated building can retain a much earlier origin.",
-            "Answer: 1914 original opening → 1999 renovation completion. 1914 dates the original opening and 1999 the renovation completion. Reversal, merger or erasure of the earlier station confuses different events in the building’s life. Warrant: Union Station Kansas City; ACME Dispatch Desk; Dispatch clerk."
+            "Answer: 1914 original construction → 1999 renovation completion. 1914 dates original construction and 1999 the renovation completion. Reversal, merger or erasure of the earlier station confuses different events in the building’s life. Warrant: Union Station Kansas City; ACME Dispatch Desk; Dispatch clerk."
           ],
-          "explanation": "1914 dates the original opening and 1999 the renovation completion. Reversal, merger or erasure of the earlier station confuses different events in the building’s life. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Union Station Kansas City; ACME Dispatch Desk; Dispatch clerk."
+          "explanation": "1914 dates original construction and 1999 the renovation completion. Reversal, merger or erasure of the earlier station confuses different events in the building’s life. The dossier assignment and waiting witness identify the same fictional desk. Warrant: Union Station Kansas City; ACME Dispatch Desk; Dispatch clerk."
         },
         "warrantAnswers": {
           "city": "Union Station Kansas City",
           "hideout": "ACME Dispatch Desk",
           "disguise": "Dispatch clerk"
         },
-        "funFact": "Kansas City’s Union Station opened in 1914 with passenger and service functions. Its later renovation was completed in 1999.",
-        "learningObjective": "Distinguish original opening from later renovation.",
+        "funFact": "Kansas City’s Union Station was built in 1914. Its later renovation was completed in 1999.",
+        "learningObjective": "Distinguish original construction from later renovation.",
         "sources": [
           "union-station"
         ],
@@ -1337,7 +1337,7 @@
         "reviewEvidence": {
           "reviewer": "Codex (AI-assisted editorial review)",
           "date": "2026-10-14",
-          "notes": "Union Station About Us history: original rail use and 1999 renovation; precise first-train day excluded. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+          "notes": "Union Station About Us history: original rail use and 1999 renovation; precise first-train day excluded. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md. Editorial amendment 2026-10-17, based on the supplied independent review without a fresh source fetch: used built in 1914 rather than an opening claim, and revised the timeline comparison to distinguish original construction from renovation completion, retaining the case ID, correct option index and warrant."
         }
       },
       {
@@ -1356,7 +1356,7 @@
           }
         },
         "clues": [
-          "Source note: Kansas City’s Union Station opened in 1914 with passenger and service functions. Its later renovation was completed in 1999.",
+          "Source note: Kansas City’s Union Station was built in 1914. Its later renovation was completed in 1999.",
           "ACME exercise: Two independent fictional receipts require bag number 42 and destination Model North. J: 42/Model South; K: 24/Model North; L: 24/Model South; M: 42/Model North. This dossier is assigned to the fictional ACME Comparison Desk.",
           "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The sign read \"ACME Comparison Desk\". Witness identification: Catalogue illustrator."
         ],
@@ -1384,7 +1384,7 @@
           "hideout": "ACME Comparison Desk",
           "disguise": "Catalogue illustrator"
         },
-        "funFact": "Kansas City’s Union Station opened in 1914 with passenger and service functions. Its later renovation was completed in 1999.",
+        "funFact": "Kansas City’s Union Station was built in 1914. Its later renovation was completed in 1999.",
         "learningObjective": "Use identity and destination together to detect a baggage-label swap.",
         "sources": [
           "union-station"
@@ -1402,7 +1402,7 @@
         "reviewEvidence": {
           "reviewer": "Codex (AI-assisted editorial review)",
           "date": "2026-10-14",
-          "notes": "Union Station About Us history: original rail use and 1999 renovation; precise first-train day excluded. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md."
+          "notes": "Union Station About Us history: original rail use and 1999 renovation; precise first-train day excluded. Checked source claims, unique key and all distractors, clue sufficiency, two progressive reasoning hints, worked third hint, explanation and explicit desk/disguise warrant together. Model records, numbers and disputed labels are fictional; source notes retain their stated scope. AI-assisted review, not human acceptance. See docs/remaining-packs-review.md. Editorial amendment 2026-10-17, based on the supplied independent review without a fresh source fetch: narrowed the historical claim to built in 1914 and renovation completed in 1999; the bag receipts and model destinations remain fictional."
         }
       }
     ],
@@ -1842,7 +1842,7 @@
       "url": "https://unionstation.org/about-union-station-kansas-city/",
       "publisher": "Union Station Kansas City",
       "reviewed": true,
-      "reviewScope": "1914 station; original passenger/baggage/service functions; renovation completed 1999. Avoid conflicting precise first-train dates and current schedules."
+      "reviewScope": "Station built in 1914; renovation completed 1999. The 2026-10-17 editorial amendment, based on the supplied independent review without a fresh source fetch, narrows the historical scope; passenger/baggage/service functions in the exercise belong to a fictional model station. No opening-date claim or current schedules."
     },
     "golden-spike": {
       "title": "Golden Spike: Horse of a Different Color",

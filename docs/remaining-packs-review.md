@@ -4,6 +4,8 @@ This completes the six remaining concepts recovered from the earlier chat: Ozark
 
 Codex conducted the scoped factual/editorial review on October 14, 2026. Each case was read as one chain: source claim, fictional record, question, four options, unique key, two narrowing hints, worked third hint, explanation and warrant. Source registries record the specific passage and excluded claims. This records AI-assisted editorial work, not human approval, learning effectiveness or a runtime test result.
 
+Editorial amendment, October 17, 2026: the supplied independent review identified an unconfirmed Norfork powerhouse/switchyard completion claim and gaps between the Union Station wording and its cited page. This amendment makes no fresh source fetch. Norfork now compares its previously reviewed 1941 construction start with 1944 completion. Union Station uses the narrower claim that it was built in 1914, distinguishes construction from the 1999 renovation, and makes passenger/baggage/service functions explicitly part of a fictional model station. Ozark Waterways and Railroads & Depots are now at content version 2; case IDs, correct option indices and warrants are retained. Their version 1 saves are incompatible with the revised case evidence. The October 14 review history remains above and in the case review records.
+
 ## Shared investigation contract
 
 The interaction remains the existing four-option deduction-choice engine. Most stops offer an approachable interpretation case, a process/chronology/comparison case, and a corroboration or evidence-limit case. A run selects one variant per stop; an eight-stop run plays eight of that pack’s 24 cases. Difficulty changes lives and hint allowance rather than the case pool.
@@ -18,7 +20,7 @@ All essential evidence is written text. No image, color, audio, map manipulation
 - Separate origin, design, construction start, component completion, opening, acquisition, renaming, renovation, exhibition dates and collection coverage. Never transfer a date merely because it appears beside the same place name.
 - Preserve the Delta’s pre-existing Native communities, enslaved labor and later social history. Parkin’s possible de Soto visit stays qualified; differing published village-occupation ranges are not converted into a false precise chronology. Historical testimony is not invented.
 - The Yellowstone and Hawaiʻi cases make no current eruption or hazard claim. Yosemite cases omit current glacier count/status and use invented measurement examples. Salamander comparison cases are text exercises rather than animal-identification/handling instructions.
-- Use the national rail museum’s current source branding for the Mount Clare record while keeping historical building names. Kansas City’s conflicting precise first-train dates are excluded; the well-supported 1914 opening year remains.
+- Use the national rail museum’s current source branding for the Mount Clare record while keeping historical building names. Kansas City’s precise first-train dates and opening claim are excluded; the source-scoped construction year is 1914.
 - Fallingwater’s 1939 milestone describes completion of a group of structures; it does not assign every component the same individual completion year. Taliesin’s 1911 beginning does not establish that every surviving component is original.
 - SUE’s cast skull is a component-level claim, not an all-cast claim or a biological-sex determination. Rosa Parks bus restoration retains its documented mix of retained and replacement material.
 - The Babbage exhibit is explicitly the historical May 2008–January 2016 display. No current exhibition availability is inferred. The 1991 reconstruction and the object shown in the 2008 exhibit are not conflated.
@@ -33,7 +35,7 @@ Keys use answer text, because the runtime shuffles answer positions. The full so
 
 ### The Watershed Files
 
-Pack: `ozark-waterways-carmen`, content version 1.
+Pack: `ozark-waterways-carmen`, content version 2 after the October 17 Norfork amendment.
 
 #### Buffalo National River
 
@@ -87,12 +89,12 @@ Scope: USACE master-plan cover and introductory purpose statement.
 
 Sources: [Norfork Lake: Dam and Lake](https://www.swl.usace.army.mil/Missions/Recreation/Lakes/Norfork-Lake/Dam-and-Lake/).
 
-Scope: USACE Location and Construction sections; distinct event dates.
+Scope: USACE Location and Construction sections; Norfork Dam on the North Fork River, construction begun in 1941 and finished in 1944. The October 17 editorial amendment removes the unconfirmed powerhouse/switchyard completion claim without a fresh source fetch.
 
 | Case | Supported answer | Worked reasoning |
 | --- | --- | --- |
 | `ozark-waterways-norfork-names` | Keep Norfork Dam and North Fork River distinct | The supplied reference uses different spellings for dam and river. A spelling resemblance is not authority to rename either one or delete the river field. |
-| `ozark-waterways-norfork-milestones` | Keep 1944 and 1949 attached to their different work | The dates describe different scopes of work. Keeping both event labels preserves the record; averaging creates an unrecorded event, and one date for everything erases the distinction. |
+| `ozark-waterways-norfork-milestones` | Keep 1941 as construction start and 1944 as completion | The dates describe the beginning and end of construction. Keeping both event labels preserves the record; averaging creates an unrecorded event, and one date for everything erases the distinction. |
 | `ozark-waterways-norfork-matching` | Card P | P matches both fields. Q keeps only the dam, R only the river, and S neither. Similar spelling cannot replace this paired-source check. |
 
 **Transfer:** A bridge and a town have slightly different spellings. Should a copy editor silently make them match?
@@ -429,7 +431,7 @@ Scope: NPS Volcanoes: island building, named volcanoes and magma sequence; no cu
 
 ### The Switched Manifest
 
-Pack: `railroads-depots-carmen`, content version 1.
+Pack: `railroads-depots-carmen`, content version 2 after the October 17 Union Station amendment.
 
 #### Steamtown National Historic Site
 
@@ -515,15 +517,15 @@ Scope: Museum About Us, founding and mission paragraphs.
 
 Sources: [About Union Station Kansas City](https://unionstation.org/about-union-station-kansas-city/).
 
-Scope: Union Station About Us history: original rail use and 1999 renovation; precise first-train day excluded.
+Scope: Union Station About Us history: built in 1914 and renovation completed in 1999. The October 17 editorial amendment uses this narrower historical wording without a fresh source fetch; passenger/baggage/service functions belong explicitly to the fictional model station. Opening dates and current schedules are excluded.
 
 | Case | Supported answer | Worked reasoning |
 | --- | --- | --- |
-| `railroads-depots-union-station-purpose` | Passenger and baggage functions can belong to one station complex | The station’s documented functions can coexist within one complex. The alternatives impose exclusions or address requirements that the evidence does not supply. |
-| `railroads-depots-union-station-renovation` | 1914 original opening → 1999 renovation completion | 1914 dates the original opening and 1999 the renovation completion. Reversal, merger or erasure of the earlier station confuses different events in the building’s life. |
+| `railroads-depots-union-station-purpose` | Passenger and baggage functions can belong to one station complex | The fictional station’s listed functions can coexist within one complex. The alternatives impose exclusions or address requirements that the evidence does not supply. |
+| `railroads-depots-union-station-renovation` | 1914 original construction → 1999 renovation completion | 1914 dates original construction and 1999 the renovation completion. Reversal, merger or erasure of the earlier station confuses different events in the building’s life. |
 | `railroads-depots-union-station-baggage` | Tag M | M preserves bag identity and destination. J changes destination, K changes identity, and L changes both. These model destinations are not actual station routes. |
 
-**Transfer:** Does a station’s renovation date establish its original opening date?
+**Transfer:** Does a station’s renovation date establish its original construction date?
 
 **Expected reasoning:** No. Keep the two events and their evidence separate.
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 2,
+  "contentVersion": 3,
   "id": "northwest-arkansas-carmen",
   "title": "Where in Northwest Arkansas is Carmen Sandiego?",
   "subtitle": "Northwest Arkansas Division",
@@ -1232,7 +1232,7 @@
           }
         },
         "clues": [
-          "The location is Bella Vista. The photographed chapel uses repeated Gothic arches formed from steel and extensive glass.",
+          "The location is Bella Vista. The photographed chapel uses repeated arches formed from steel and extensive glass.",
           "ACME’s reference identifies that Bella Vista building as Mildred B. Cooper Memorial Chapel; Thorncrown Chapel is the Eureka Springs entry.",
           "The witness saw the suspect waiting at the chapel matching both the town and steel-arch description, trying to substitute the other town’s caption. Witness identification: Architecture photographer."
         ],
@@ -1260,7 +1260,7 @@
           "hideout": "Mildred B. Cooper Memorial Chapel",
           "disguise": "Architecture photographer"
         },
-        "funFact": "Cooper Chapel in Bella Vista combines steel Gothic arches with glass.",
+        "funFact": "Cooper Chapel in Bella Vista combines steel arches with glass.",
         "learningObjective": "Distinguish two regional chapels by town and architectural evidence.",
         "sources": [
           "cooper",
@@ -1279,7 +1279,7 @@
         "reviewEvidence": {
           "reviewer": "Codex (AI-assisted editorial review)",
           "date": "2026-10-13",
-          "notes": "Chapel and Architecture: steel arches/glass and Bella Vista–Eureka Springs distinction. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities."
+          "notes": "Chapel and Architecture: steel arches/glass and Bella Vista–Eureka Springs distinction. Reviewed clues, unique answer, distractors, explanation, progressive hints and witness-supported warrant together. Fictional records are not real visitor or riding information. See docs/content-audit.md for scope and transfer activities. 2026-10-17 editorial follow-up based on Ryan’s supplied independent review: removed the uncited Gothic style label from the clue and fun fact; retained the steel arches, glass, town and answer. No source was newly fetched for this follow-up."
         }
       },
       {

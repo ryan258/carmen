@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 1,
+  "contentVersion": 2,
   "id": "route-66-carmen",
   "title": "Where on Route 66 is Carmen Sandiego?",
   "subtitle": "Route 66 Division",
@@ -1686,7 +1686,7 @@
           }
         },
         "clues": [
-          "The earlier Barstow Harvey House burned in 1908. The replacement building was constructed from 1910 to 1913.",
+          "The National Park Service dates the earlier Barstow Harvey House fire to 1908 and describes replacement construction as 1910–1913.",
           "An unaltered photograph shows the replacement already complete but has a capture-date caption of 1909. Assume the photograph is an actual observation, not a proposal or rendering, and both the building identification and source dates are correct. This dossier is assigned to the fictional ACME Timeline Desk.",
           "The witness followed this dossier to its assigned desk and saw the suspect waiting there. The desk sign read \"ACME Timeline Desk\". Witness identification: Ledger binder."
         ],
@@ -1703,18 +1703,18 @@
           "correctIndex": 3,
           "visualHtml": "",
           "hints": [
-            "Use the building’s identity and completion period together.",
-            "The caption predates even the stated start of replacement construction.",
-            "Answer: The 1909 caption conflicts with the completed replacement shown. An unaltered photograph cannot observe the replacement already complete in 1909 if it was built during 1910–1913. It does not overturn the fire record or establish an earlier construction start. The capture-date caption is the conflicting field. Warrant: Barstow; ACME Timeline Desk; Ledger binder."
+            "Use the building’s identity and the supplied source chronology together.",
+            "In the NPS chronology, the caption predates even the stated start of replacement construction.",
+            "Answer: The 1909 caption conflicts with the completed replacement shown. Under the supplied NPS chronology, a photograph dated 1909 cannot show the completed replacement. It does not overturn the fire record or establish an earlier construction start. The capture-date caption is the conflicting field. Warrant: Barstow; ACME Timeline Desk; Ledger binder."
           ],
-          "explanation": "An unaltered photograph cannot observe the replacement already complete in 1909 if it was built during 1910–1913. It does not overturn the fire record or establish an earlier construction start. The capture-date caption is the conflicting field. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Barstow; ACME Timeline Desk; Ledger binder."
+          "explanation": "Under the supplied NPS chronology, a photograph dated 1909 cannot show the completed replacement. It does not overturn the fire record or establish an earlier construction start. The capture-date caption is the conflicting field. The dossier assignment and witness place the suspect at the same fictional desk. Warrant: Barstow; ACME Timeline Desk; Ledger binder."
         },
         "warrantAnswers": {
           "city": "Barstow",
           "hideout": "ACME Timeline Desk",
           "disguise": "Ledger binder"
         },
-        "funFact": "The earlier Barstow Harvey House burned in 1908. The replacement building was constructed from 1910 to 1913.",
+        "funFact": "The National Park Service dates the earlier Barstow Harvey House fire to 1908 and describes replacement construction as 1910–1913.",
         "learningObjective": "Use a replacement chronology to reject a misdated depiction.",
         "sources": [
           "barstow",
@@ -1733,7 +1733,7 @@
         "reviewEvidence": {
           "reviewer": "Codex (AI-assisted editorial review)",
           "date": "2026-10-14",
-          "notes": "NPS Harvey House building-history paragraph: 1908 fire and 1910–1913 construction. Architect attribution omitted; photograph and caption invented, with an explicit observation-not-proposal assumption. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md."
+          "notes": "NPS Harvey House building-history paragraph: 1908 fire and 1910–1913 construction. Architect attribution omitted; photograph and caption invented, with an explicit observation-not-proposal assumption. Reviewed the supplied facts, unique answer, each distractor, two narrowing hints, worked third hint, explanation and desk/disguise warrant together. All case records and desks are invented. Review does not establish current visitor access or human learning outcomes. See docs/parks-route66-review.md. Editorial follow-up 2026-10-17 (Codex), based on the supplied independent review: the 1910–1913 range is now explicitly attributed to NPS rather than presented as an uncontested construction date. The reported 1911 completion accounts were not independently adjudicated. No source pages were reopened for this amendment; the original source-review date above is retained."
         }
       },
       {
@@ -1859,7 +1859,7 @@
       "publisher": "National Park Service",
       "url": "https://www.nps.gov/places/harvey-house-railroad-depot.htm",
       "reviewed": true,
-      "reviewScope": "Barstow/Casa del Desierto: railway hospitality, advance telegrams, 1908 fire and 1910–1913 replacement, adjacent 1926 Route 66 alignment. Excludes disputed architect attribution and current museum hours."
+      "reviewScope": "NPS account of Barstow/Casa del Desierto: railway hospitality, advance telegrams, 1908 fire, its stated 1910–1913 replacement-construction range, and adjacent 1926 Route 66 alignment. The construction range is attributed to NPS; reported 1911 completion accounts remain unreconciled. Excludes disputed architect attribution and current museum hours."
     },
     "route": {
       "title": "Route 66 Overview",
