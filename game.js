@@ -105,7 +105,7 @@ function updateStopCountOptions() {
   select.innerHTML = options
     .map((count) => `<option value="${count}">${count} Stop${count === 1 ? '' : 's'}${count === total ? ' (All)' : ''}</option>`)
     .join('');
-  const preferred = options.includes(state.stopCount) ? state.stopCount : total;
+  const preferred = options.includes(state.stopCount) ? state.stopCount : options[0];
   select.value = preferred;
   state.stopCount = preferred;
 }
@@ -149,6 +149,11 @@ function setPackSelectorStatus(message) {
 }
 
 async function fetchJson(path) {
+  if (window.CarmenOfflinePacks) {
+    const key = path.replace(/^\.\//, '');
+    if (!Object.hasOwn(window.CarmenOfflinePacks, key)) throw new Error('This file is not included in the offline edition.');
+    return JSON.parse(JSON.stringify(window.CarmenOfflinePacks[key]));
+  }
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 10000);
   try {
@@ -215,7 +220,7 @@ async function loadQuizPack() {
 
 const SCORE_RULES = CarmenCore.SCORE_RULES;
 
-function getPuzzleScore(attemptsBeforeSolve, hintsUsed = 0) { return CarmenCore.getPuzzleScore(attemptsBeforeSolve, hintsUsed); }
+function getPuzzleScore(attemptsBeforeSolve, hintsUsed = state.scoringHintsUsedInRound) { return CarmenCore.getPuzzleScore(attemptsBeforeSolve, hintsUsed); }
 
 function getStreakBonus(streak) { return CarmenCore.getStreakBonus(streak); }
 
@@ -231,7 +236,7 @@ function addRoundPoints(kind, points) {
 }
 
 function isPerfectGame() {
-  return state.history.length === LOCATIONS.length &&
+  return !state.assisted && state.history.length === LOCATIONS.length &&
          state.history.every(result => result.success && result.attempts === 1) &&
          state.lives === getStartingLives(state.difficulty);
 }
@@ -249,7 +254,24 @@ function createCaseSeed() {
 }
 
 function createRunCaseVariantIds(seed = createCaseSeed()) {
-  return CarmenRunGenerator.createRunCaseVariantIds(LOCATIONS, getLocationCasePool, seed);
+  const recent = readRecentCaseIds();
+  const getKind = item => state.quizStyle === 'mixed' ? CarmenActivities.getCaseActivity(QUIZ_PACK, item, state.activityCatalogVersion)?.kind || 'choice' : 'choice';
+  const selectionPool = location => CarmenRunGenerator.challengeCasePool(getLocationCasePool(location), state.challenge);
+  return ensureActivityInRun(CarmenRunGenerator.createRunCaseVariantIds(LOCATIONS, selectionPool, seed, recent, getKind), seed, recent);
+}
+
+function recentCaseStorageKey() { return `carmen_recentCases_${QUIZ_PACK.id}_v${QUIZ_PACK.contentVersion}`; }
+
+function readRecentCaseIds() {
+  try { return CarmenRunGenerator.recentCaseIds(JSON.parse(storage.getItem(recentCaseStorageKey())), QUIZ_PACK); }
+  catch { return []; }
+}
+
+function rememberVisitedCase() {
+  const caseId = state.caseVariantIds[state.currentLocationIndex];
+  const previous = readRecentCaseIds();
+  const next = CarmenRunGenerator.rememberCase(previous, QUIZ_PACK, caseId);
+  if (!CarmenRunGenerator.arraysMatch(previous, next)) storage.setItem(recentCaseStorageKey(), JSON.stringify(next));
 }
 
 function readLastRunCaseVariantIds() {
@@ -264,14 +286,18 @@ function readLastRunCaseVariantIds() {
 function createDistinctRun() {
   const lastRun = readLastRunCaseVariantIds();
   let seed = createCaseSeed();
+  let routeStart = CarmenRunGenerator.chooseRouteStart(QUIZ_PACK.locations.length, state.stopCount, seed);
+  LOCATIONS = getRunLocationsForStopCount(state.stopCount, routeStart);
   let caseVariantIds = createRunCaseVariantIds(seed);
   
   for (let attempt = 0; attempt < 5 && CarmenRunGenerator.arraysMatch(caseVariantIds, lastRun); attempt++) {
     seed = createCaseSeed();
+    routeStart = CarmenRunGenerator.chooseRouteStart(QUIZ_PACK.locations.length, state.stopCount, seed);
+    LOCATIONS = getRunLocationsForStopCount(state.stopCount, routeStart);
     caseVariantIds = createRunCaseVariantIds(seed);
   }
   
-  return { seed, caseVariantIds };
+  return { seed, routeStart, caseVariantIds };
 }
 
 function ensureRunCaseVariants() {
@@ -287,11 +313,15 @@ function getLocationCase(locationIndex) {
   const pool = getLocationCasePool(location);
   const selectedCase = pool.find(item => item.caseId === state.caseVariantIds[locationIndex]) || pool[0];
 
-  return { ...location, ...selectedCase };
+  return { ...location, ...CarmenCaseDesign.resolveCase(QUIZ_PACK, selectedCase, state.activityCatalogVersion) };
 }
 
 function getSuspect(loc) {
   return (loc.briefing && loc.briefing.suspect) || loc.henchman || null;
+}
+
+function displayCaseText(loc, value) {
+  return CarmenPractice.presentCaseText(QUIZ_PACK, loc, value, state.activityCatalogVersion);
 }
 
 function renderSuspectCard(loc) {
@@ -329,6 +359,9 @@ function getAllWarrantChoices(field) {
 // ============================================================
 let state = {
   phase: 'idle',
+  quizStyle: 'classic',
+  activityCatalogVersion: 3,
+  activityProgress: null,
   inputLocked: false,
   optionOrder: [],
   wrongOptions: [],
@@ -342,11 +375,18 @@ let state = {
   puzzleAttempts: 0,
   hintsUsedInRound: 0,
   totalHintsUsed: 0,
+  scoringHintsUsedInRound: 0,
+  assisted: false,
+  supportEnabled: false,
+  challenge: 'standard',
+  episodeId: null,
+  evidenceMarks: [],
   roundScore: createRoundScore(),
   warrantIssued: false,
   clueTokens: [],
   history: [],
   stopCount: null,
+  routeStart: 0,
   caseSeed: '',
   caseVariantIds: [],
   activeTab: 'dossier',
@@ -453,7 +493,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   
   // Keyboard Event Listeners
   document.addEventListener('keydown', (e) => {
-    if (!state.settings.answerShortcuts || activeModal || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey || e.repeat || e.isComposing || e.target.closest('input, select, textarea, button, a[href], [contenteditable], [role="textbox"], [role="button"]')) return;
+    if (!state.settings.answerShortcuts || activeModal || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey || e.repeat || e.isComposing || e.target.closest('input, select, textarea, a[href], [contenteditable], [role="textbox"]')) return;
+    // Opted-in shortcuts work from the puzzle's tabs/cards, where normal focus lands.
+    const focusedButton = e.target.closest('button, [role="button"]');
+    if (focusedButton && !focusedButton.matches('[role="tab"], .option-btn, .activity-card')) return;
     const key = e.key.toLowerCase();
     const puzzleTabActive = (state.activeTab === 'puzzle' && !document.getElementById('gameScreen').classList.contains('hidden'));
     
@@ -461,6 +504,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       const indexByKey = { a: 0, 1: 0, b: 1, 2: 1, c: 2, 3: 2, d: 3, 4: 3 };
       if (key in indexByKey) {
         const idx = indexByKey[key];
+        if (getCurrentActivity()) {
+          const cards = document.querySelectorAll('.activity-card');
+          if (!cards[idx] || cards[idx].disabled) return;
+          e.preventDefault(); cards[idx].click(); return;
+        }
         const buttons = document.querySelectorAll('.option-btn');
         if (buttons[idx] && buttons[idx].disabled) return; // respect locked buttons during answer timeout
         e.preventDefault();
@@ -491,11 +539,16 @@ function checkResumeState() {
   const hasSave = storage.getItem(SAVE_KEY) !== null;
   const validSave = getValidSave();
   const saveBelongsToOtherPack = Boolean(rawSave?.quizPackId && rawSave.quizPackId !== QUIZ_PACK.id);
-  if (validSave && !packLoading) {
-    document.getElementById('resumeButton').classList.remove('hidden');
-  } else {
-    document.getElementById('resumeButton').classList.add('hidden');
-  }
+  const savedEntry = QUIZ_PACK_MANIFEST.packs.find(entry => entry.id === rawSave?.quizPackId);
+  const canResume = Boolean(validSave || (saveBelongsToOtherPack && savedEntry));
+  setTextIfPresent('resumeSummary', validSave ? CarmenStudy.describeResume(validSave, QUIZ_PACK)
+    : saveBelongsToOtherPack && savedEntry ? `Your saved case is in ${savedEntry.title}. Continue opens that pack and checks your saved progress.` : '');
+  const resume = document.getElementById('resumeButton');
+  resume.classList.toggle('hidden', !canResume);
+  resume.disabled = packLoading || !canResume;
+  resume.textContent = saveBelongsToOtherPack && savedEntry ? `Continue ${savedEntry.title}` : 'Continue case';
+  document.getElementById('resumeCard').hidden = !canResume;
+  document.getElementById('resumeSummary').hidden = !canResume;
   const clearButton = document.getElementById('clearBrokenSaveButton');
   if (clearButton) {
     clearButton.classList.toggle('hidden', !hasSave || Boolean(validSave) || saveBelongsToOtherPack);
@@ -520,6 +573,7 @@ function loadSettings() {
       state.settings.highContrast = parsed.highContrast === true;
       state.settings.textRoute = parsed.textRoute === true;
       state.settings.answerShortcuts = parsed.answerShortcuts === true;
+      state.settings.compactWarrant = parsed.compactWarrant !== false;
     } catch(e) {}
   }
   applySettings();
@@ -530,17 +584,24 @@ function saveSettings() {
 }
 
 function applySettings() {
+  if (window.CarmenOfflinePacks) state.settings.textRoute = true;
   document.body.classList.toggle('reduced-motion', state.settings.reducedMotion);
   document.body.classList.toggle('high-contrast', state.settings.highContrast);
   updateSoundIcon();
   updateMotionIcon();
   updateContrastIcon();
   const routeButton=document.getElementById('routeToggle');
+  routeButton.disabled = Boolean(window.CarmenOfflinePacks);
   routeButton.setAttribute('aria-pressed',String(state.settings.textRoute));
-  routeButton.textContent=state.settings.textRoute ? 'Text route: on' : 'Text route: off';
+  routeButton.textContent=window.CarmenOfflinePacks ? 'Text route: offline edition' : state.settings.textRoute ? 'Text route: on' : 'Text route: off';
   const shortcutButton=document.getElementById('shortcutToggle');
   shortcutButton.setAttribute('aria-pressed',String(state.settings.answerShortcuts));
   shortcutButton.textContent=state.settings.answerShortcuts ? 'Answer shortcuts: on' : 'Answer shortcuts: off';
+  const shortcutHelp = document.getElementById('answerShortcutHelp');
+  if (shortcutHelp) shortcutHelp.textContent = state.settings.answerShortcuts
+    ? 'Answer shortcuts are on: use A–D or 1–4 while working in the puzzle. Form fields keep their normal keys.'
+    : 'Answer shortcuts are off. You can turn them on in Reading and controls.';
+  applyWarrantLayout();
   initBgParticles();
 }
 
@@ -559,7 +620,7 @@ function toggleAudio() {
 
 function updateSoundIcon() {
   const icon = document.getElementById('soundToggle');
-  icon.textContent = state.settings.sound ? '🔊' : '🔇';
+  icon.textContent = state.settings.sound ? 'Sound: on' : 'Sound: off';
   icon.setAttribute('aria-label', state.settings.sound ? 'Turn sound off' : 'Turn sound on');
   icon.classList.toggle('text-slate-400', !state.settings.sound);
   icon.classList.toggle('text-white', state.settings.sound);
@@ -575,7 +636,7 @@ function toggleReducedMotion() {
 function updateMotionIcon() {
   const icon = document.getElementById('motionToggle');
   if (!icon) return;
-  icon.textContent = state.settings.reducedMotion ? 'NO MOT' : 'MOT';
+  icon.textContent = state.settings.reducedMotion ? 'Reduced motion: on' : 'Reduced motion: off';
   icon.setAttribute('aria-label', state.settings.reducedMotion ? 'Turn reduced motion off' : 'Turn reduced motion on');
   icon.classList.toggle('text-amber-400', state.settings.reducedMotion);
   icon.classList.toggle('text-slate-400', !state.settings.reducedMotion);
@@ -591,7 +652,7 @@ function toggleHighContrast() {
 function updateContrastIcon() {
   const icon = document.getElementById('contrastToggle');
   if (!icon) return;
-  icon.textContent = state.settings.highContrast ? 'HC ON' : 'HC';
+  icon.textContent = state.settings.highContrast ? 'High contrast: on' : 'High contrast: off';
   icon.setAttribute('aria-label', state.settings.highContrast ? 'Turn high contrast off' : 'Turn high contrast on');
   icon.classList.toggle('text-amber-400', state.settings.highContrast);
   icon.classList.toggle('text-slate-400', !state.settings.highContrast);
@@ -602,6 +663,7 @@ function shouldReduceMotion() {
 }
 
 function showScreen(screenId) {
+  stopCaseSpeech();
   ['titleScreen','difficultyScreen','gameScreen','betweenScreen','resultsScreen'].forEach(id => document.getElementById(id).classList.toggle('hidden',id !== screenId));
   const target = document.getElementById(screenId);
   target.tabIndex = -1;
@@ -627,18 +689,50 @@ function goToDifficultySelect() {
 // ============================================================
 // GAME FLOW INITIATION
 // ============================================================
-function selectDifficulty(diff) {
+function selectedChallenge() {
+  return document.getElementById('challengeSelect').value === 'advanced' ? 'advanced' : 'standard';
+}
+
+function startQuickCase() {
+  if (packLoading || activeModal) return;
+  state.stopCount = CarmenCore.stopCounts(QUIZ_PACK.locations.length)[0];
+  document.getElementById('stopCountSelect').value = String(state.stopCount);
+  document.getElementById('quizStyleSelect').value = 'mixed';
+  document.getElementById('challengeSelect').value = 'standard';
+  selectDifficulty('rookie');
+}
+
+async function startStoryCase() {
+  if (packLoading || activeModal) return;
+  const before = storage.getItem(SAVE_KEY);
+  if (QUIZ_PACK.id !== 'bentonville-carmen') {
+    if (!QUIZ_PACK_MANIFEST.packs.some(entry => entry.id === 'bentonville-carmen')) return;
+    await selectQuizPackById('bentonville-carmen');
+  }
+  if (packLoading || activeModal || storage.getItem(SAVE_KEY) !== before) { checkResumeState(); return; }
+  const episode = CarmenCaseDesign.getEpisode(QUIZ_PACK, 'bentonville-paper-trail-v1');
+  if (!episode) { announce('This story needs the current Bentonville pack.'); return; }
+  state.stopCount = episode.stopCount;
+  document.getElementById('stopCountSelect').value = String(state.stopCount);
+  document.getElementById('quizStyleSelect').value = 'mixed';
+  document.getElementById('challengeSelect').value = 'standard';
+  selectDifficulty('rookie', episode.id);
+}
+
+function selectDifficulty(diff, episodeId = null) {
   if (packLoading || activeModal || !['rookie','detective','inspector'].includes(diff)) return;
+  if (episodeId && !CarmenCaseDesign.getEpisode(QUIZ_PACK, episodeId)) return;
+  const options = {challenge: selectedChallenge(), episodeId};
   const snapshot = storage.getItem(SAVE_KEY);
   if (snapshot !== null) {
-    pendingNewCase = {difficulty: diff, snapshot, packId: QUIZ_PACK.id, stopCount: state.stopCount};
+    pendingNewCase = {difficulty: diff, snapshot, packId: QUIZ_PACK.id, stopCount: state.stopCount, quizStyle: selectedQuizStyle(), ...options};
     const saved = readSavedGame();
     const title = QUIZ_PACK_MANIFEST.packs.find(entry => entry.id === saved?.quizPackId)?.title || saved?.quizPackId;
     document.getElementById('replaceSaveDescription').textContent = `This browser already has a saved case${typeof title === 'string' ? ` for ${title}` : ''}. Starting a new case replaces that progress. Keep saved case returns to the menu without changing it.`;
     openModal('replaceSaveModal');
     return;
   }
-  startNewCase(diff, snapshot);
+  startNewCase(diff, snapshot, options);
 }
 
 function keepSavedCase() {
@@ -650,11 +744,11 @@ function confirmNewCase() {
   if (activeModal !== 'replaceSaveModal' || !pendingNewCase) return;
   const pending = pendingNewCase;
   closeModal('replaceSaveModal');
-  if (packLoading || pending.packId !== QUIZ_PACK.id || pending.stopCount !== state.stopCount) return;
-  startNewCase(pending.difficulty, pending.snapshot);
+  if (packLoading || pending.packId !== QUIZ_PACK.id || pending.stopCount !== state.stopCount || pending.quizStyle !== selectedQuizStyle() || pending.challenge !== selectedChallenge()) return;
+  startNewCase(pending.difficulty, pending.snapshot, pending);
 }
 
-function startNewCase(diff, snapshot) {
+function startNewCase(diff, snapshot, options = {}) {
   // Check again at confirmation time: a queued storage event may not have arrived yet.
   if (storage.getItem(SAVE_KEY) !== snapshot) {
     goToTitle();
@@ -664,15 +758,27 @@ function startNewCase(diff, snapshot) {
   cancelSession();
   sessionSaveSnapshot=snapshot;
   sound.success();
-  state.stopCount = state.stopCount || QUIZ_PACK.locations.length;
-  LOCATIONS = getRunLocationsForStopCount(state.stopCount);
-  const run = createDistinctRun();
+  state.stopCount = state.stopCount || CarmenCore.stopCounts(QUIZ_PACK.locations.length)[0];
+  state.quizStyle = selectedQuizStyle();
+  state.activityCatalogVersion = 3;
+  state.challenge = options.challenge === 'advanced' ? 'advanced' : 'standard';
+  state.episodeId = options.episodeId || null;
+  const episode = CarmenCaseDesign.getEpisode(QUIZ_PACK, state.episodeId);
+  if (state.episodeId && !episode) { goToTitle(); return; }
+  if (episode) state.stopCount = episode.stopCount;
+  const run = episode ? {seed: createCaseSeed(), routeStart: episode.routeStart, caseVariantIds: [...episode.caseVariantIds]} : createDistinctRun();
+  state.routeStart = run.routeStart;
+  LOCATIONS = getRunLocationsForStopCount(state.stopCount, state.routeStart);
   state.difficulty = diff;
   state.currentLocationIndex = 0;
   state.score = 0;
   state.streak = 0;
   state.hintsUsedInRound = 0;
   state.totalHintsUsed = 0;
+  state.scoringHintsUsedInRound = 0;
+  state.assisted = false;
+  state.supportEnabled = false;
+  state.evidenceMarks = [];
   state.roundScore = createRoundScore();
   state.clueTokens = [];
   state.history = [];
@@ -686,24 +792,36 @@ function startNewCase(diff, snapshot) {
   startLocation();
 }
 
-function resumeGame() {
-  if (packLoading) return;
+async function resumeGame() {
+  if (packLoading || activeModal) return;
   const snapshot = storage.getItem(SAVE_KEY);
   let parsed;
   try { parsed = JSON.parse(snapshot); } catch { checkResumeState(); return; }
+  if (parsed?.quizPackId !== QUIZ_PACK.id) {
+    const entry = QUIZ_PACK_MANIFEST.packs.find(item => item.id === parsed?.quizPackId);
+    if (!entry) { checkResumeState(); return; }
+    await selectQuizPackById(entry.id);
+    if (packLoading || activeModal || storage.getItem(SAVE_KEY) !== snapshot || QUIZ_PACK.id !== entry.id) { checkResumeState(); return; }
+  }
   if (!CarmenCore.validateSave(parsed, QUIZ_PACK)) { checkResumeState(); return; }
   cancelSession();
   sessionSaveSnapshot=snapshot;
   if (!ownsCurrentSave()) return;
   // Only copy persisted game fields, never settings or runtime handles.
   SAVE_FIELDS.forEach(key => { state[key] = parsed[key]; });
-  LOCATIONS = getRunLocationsForStopCount(state.stopCount);
+  if (parsed.schemaVersion === 5) { state.quizStyle = 'classic'; state.activityProgress = null; }
+  if (parsed.schemaVersion < 7) { state.routeStart = 0; state.activityCatalogVersion = 1; }
+  if (parsed.schemaVersion < 8) {
+    state.assisted = false; state.supportEnabled = false; state.challenge = 'standard'; state.episodeId = null;
+    state.evidenceMarks = []; state.scoringHintsUsedInRound = state.hintsUsedInRound;
+  }
+  LOCATIONS = getRunLocationsForStopCount(state.stopCount, state.routeStart);
   state.inputLocked = false;
-  if (state.lives === 0) { triggerGameOver(); return; }
   if (state.phase === 'between') { triggerTransitionRound(); return; }
   if (state.phase === 'final') {
     startFinalConfrontationRound(true);
   } else startLocation(true);
+  if (state.lives === 0) triggerGameOver();
 }
 
 function readSavedGame() {
@@ -716,9 +834,8 @@ function readSavedGame() {
 
 
 
-function getRunLocationsForStopCount(stopCount) {
-  if (!CarmenCore.stopCounts(QUIZ_PACK.locations.length).includes(stopCount)) throw new Error('Invalid run length.');
-  return QUIZ_PACK.locations.slice(0, stopCount);
+function getRunLocationsForStopCount(stopCount, routeStart = 0) {
+  return CarmenCore.routeLocations(QUIZ_PACK, stopCount, routeStart);
 }
 
 function getValidSave() {
@@ -729,8 +846,9 @@ function getValidSave() {
 
 
 const SAVE_FIELDS = ['phase','difficulty','currentLocationIndex','score','lives','streak','puzzleSolved','puzzleAttempts',
-  'hintsUsedInRound','totalHintsUsed','roundScore','warrantIssued','clueTokens','history','stopCount','caseSeed',
-  'caseVariantIds','isFinalConfrontation','finalConfrontationRound','optionOrder','wrongOptions','activeTab','warrantSelection'];
+  'hintsUsedInRound','totalHintsUsed','roundScore','warrantIssued','clueTokens','history','stopCount','routeStart','caseSeed',
+  'caseVariantIds','isFinalConfrontation','finalConfrontationRound','optionOrder','wrongOptions','activeTab','warrantSelection','quizStyle','activityProgress','activityCatalogVersion',
+  'assisted','supportEnabled','challenge','episodeId','evidenceMarks','scoringHintsUsedInRound'];
 
 function ownsCurrentSave() {
   if (storage.getItem(SAVE_KEY) === sessionSaveSnapshot) return true;
@@ -788,21 +906,27 @@ function startLocation(restoring = false) {
   warrantBtn.classList.toggle('cursor-not-allowed', !state.puzzleSolved);
   resetHintPanel();
   const loc = getLocationCase(state.currentLocationIndex);
+  const presentation = state.activityCatalogVersion === 1 ? null : CarmenPractice.getCasePractice(QUIZ_PACK, loc, state.activityCatalogVersion);
   document.getElementById('caseCityNumber').textContent = `Location ${state.currentLocationIndex+1} of ${LOCATIONS.length}`;
-  document.getElementById('briefingHeadline').textContent = loc.briefing.headline;
-  document.getElementById('briefingReport').textContent = loc.briefing.report;
-  document.getElementById('callingCardNote').textContent = loc.briefing.callingCard;
+  document.getElementById('briefingHeadline').textContent = displayCaseText(loc, loc.briefing.headline);
+  document.getElementById('briefingReport').textContent = displayCaseText(loc, presentation?.briefing || loc.briefing.report);
+  document.getElementById('callingCardNote').textContent = displayCaseText(loc, presentation ? presentation.callingCard : loc.briefing.callingCard);
+  document.getElementById('callingCardPanel').hidden = presentation?.callingCard === '';
+  const fiction = document.getElementById('fictionNotice');
+  fiction.textContent = presentation?.fictionNotice || ''; fiction.hidden = !fiction.textContent;
   renderSuspectCard(loc);
-  loc.clues.forEach((clue,i) => document.getElementById(`clueText${i}`).textContent = clue);
+  loc.clues.forEach((clue,i) => document.getElementById(`clueText${i}`).textContent = displayCaseText(loc, clue));
   document.getElementById('puzzleTitleText').textContent = loc.puzzle.title;
-  document.getElementById('puzzleDescription').textContent = loc.puzzle.description;
-  document.getElementById('puzzleQuestionText').textContent = loc.puzzle.question;
+  document.getElementById('puzzleDescription').textContent = displayCaseText(loc, presentation?.description || loc.puzzle.description);
+  document.getElementById('puzzleQuestionText').textContent = displayCaseText(loc, loc.puzzle.question);
   renderPuzzleVisual(loc); buildPuzzleOptions(loc.puzzle); updateHintButton(); buildWarrantDropdowns(loc);
+  prepareActivity();
   document.getElementById('warrantStampOverlay').classList.add('hidden');
   if (state.hintsUsedInRound) showUsedHints(loc);
   renderTokenGrid(); showScreen('gameScreen'); switchTab(restoring ? restoredTab : 'dossier');
-  if (state.puzzleSolved) document.getElementById('puzzleFeedback').textContent='Puzzle solved. '+loc.puzzle.explanation+' Choose Continue to prepare the warrant.';
+  if (state.puzzleSolved) document.getElementById('puzzleFeedback').textContent='Puzzle solved. '+currentPuzzleExplanation()+' Choose Continue to prepare the warrant.';
   if (!saveGame()) return;
+  rememberVisitedCase();
 }
 
 function updateHUD() {
@@ -811,8 +935,9 @@ function updateHUD() {
   
   const container = document.getElementById('livesContainer');
   container.innerHTML = '';
-  container.setAttribute('aria-label', `${state.lives} lives remaining`);
-  for (let i = 0; i < state.lives; i++) {
+  container.setAttribute('aria-label', state.assisted ? 'Assisted case. Mistakes do not cost lives.' : `${state.lives} lives remaining`);
+  if (state.assisted) container.textContent = 'Assisted';
+  for (let i = 0; i < (state.assisted ? 0 : state.lives); i++) {
     const magnifier = document.createElement('span');
     magnifier.className = 'text-amber-400 text-sm';
     magnifier.textContent = '🔍';
@@ -822,6 +947,8 @@ function updateHUD() {
 }
 
 function getRankString(score) {
+  if (state.activityCatalogVersion >= 3) return state.phase !== 'complete' && state.history.length === LOCATIONS.length
+    ? 'Final report in progress' : CarmenCore.getCompletionRank({history: state.history, stopCount: state.stopCount || LOCATIONS.length, assisted: state.assisted});
   if (score >= 2000) return '🏆 Chief Inspector';
   if (score >= 1500) return '⭐ Senior Detective';
   if (score >= 1000) return '🔍 Detective';
@@ -835,6 +962,7 @@ function getRankString(score) {
 function switchTab(tabName) {
   const button = document.getElementById(`tab${tabName.charAt(0).toUpperCase()+tabName.slice(1)}`);
   if (!button || button.disabled || !['investigation','final'].includes(state.phase)) return;
+  stopCaseSpeech();
   sound.click();
   state.activeTab = tabName;
   if (!saveGame()) return;
@@ -854,6 +982,7 @@ function switchTab(tabName) {
     }
   });
   if (!activeModal) button.focus({preventScroll: true});
+  renderCaseWorkspace();
 }
 
 // ============================================================
@@ -873,14 +1002,14 @@ function renderPuzzleVisual(loc) {
   const symbol = loc.token || LOCATION_SYMBOLS[loc.id] || { char: '📍', name: loc.name };
   container.innerHTML = `
     <div class="w-full text-center space-y-2">
-      <div class="text-5xl" aria-hidden="true">${symbol.char}</div>
+      <div class="text-5xl" aria-hidden="true">${escapeHtml(symbol.char)}</div>
       <div class="typewriter-font text-[10px] bg-slate-950 text-amber-400 p-2 rounded border border-slate-700 leading-tight uppercase font-bold text-left shadow-inner">
-        ${QUIZ_PACK.evidenceLabel}<br>
-        STOP: ${loc.name}<br>
-        TOKEN: ${symbol.name}
+        ${escapeHtml(QUIZ_PACK.evidenceLabel)}<br>
+        STOP: ${escapeHtml(loc.name)}<br>
+        TOKEN: ${escapeHtml(symbol.name)}
       </div>
       <div class="typewriter-font text-xs font-bold border-2 border-dashed border-red-700 p-3 rounded text-red-900 bg-red-50 inline-block rotate-[-2deg]">
-        ${loc.puzzle.title}
+        ${escapeHtml(loc.puzzle.title)}
       </div>
     </div>
   `;
@@ -888,14 +1017,26 @@ function renderPuzzleVisual(loc) {
 }
 
 function getHintLimit() {
+  if (state.supportEnabled) return 3;
+  if (state.isFinalConfrontation) return 0;
   if (state.difficulty === 'rookie') return 3;
   if (state.difficulty === 'detective') return 2;
   return 0;
 }
 
 function getHintTexts(loc) {
+  const activity = getCurrentActivity();
+  if (activity) return activityHints(activity).map(value => displayCaseText(loc, value));
+  if (state.isFinalConfrontation) {
+    const round = getFinalConfrontationRounds()[state.finalConfrontationRound - 1];
+    return round.hints?.length ? round.hints : [
+      'Compare each choice against the written case evidence or the collected route inventory.',
+      round.description,
+      `Worked answer: ${round.options[round.correctIndex]}. ${round.explanation}`
+    ];
+  }
   if (Array.isArray(loc.puzzle.hints) && loc.puzzle.hints.length > 0) {
-    return loc.puzzle.hints;
+    return loc.puzzle.hints.map(value => displayCaseText(loc, value));
   }
   
   const correctOption = loc.puzzle.options[loc.puzzle.correctIndex];
@@ -903,7 +1044,7 @@ function getHintTexts(loc) {
     loc.learningObjective || 'Use at least two evidence clues together before choosing an answer.',
     `Focus on evidence pointing to ${loc.warrantAnswers.hideout} and the ${loc.warrantAnswers.disguise} disguise.`,
     `The strongest match is ${correctOption}.`
-  ];
+  ].map(value => displayCaseText(loc, value));
 }
 
 function resetHintPanel() {
@@ -918,9 +1059,10 @@ function updateHintButton() {
   const hintButton = document.getElementById('hintButton');
   if (!hintButton) return;
   
-  if (state.isFinalConfrontation) {
+  if (state.isFinalConfrontation && !state.supportEnabled) {
     hintButton.disabled = true;
-    hintButton.textContent = 'No Hints In Final';
+    hintButton.textContent = 'Enable support for hints';
+    hintButton.setAttribute('aria-label', 'Hints are available by choosing Help me through this case.');
     hintButton.classList.add('opacity-50', 'cursor-not-allowed');
     return;
   }
@@ -933,11 +1075,11 @@ function updateHintButton() {
     : `Hint (${hintsRemaining}/${limit})`;
   hintButton.classList.toggle('opacity-50', hintButton.disabled);
   hintButton.classList.toggle('cursor-not-allowed', hintButton.disabled);
-  hintButton.setAttribute('aria-label', `Hint. ${hintsRemaining} hints remaining. Each hint costs ${SCORE_RULES.hintPenalty} points.`);
+  hintButton.setAttribute('aria-label', `Hint. ${hintsRemaining} hints remaining. ${state.supportEnabled ? 'Support hints cost no points.' : `Each hint costs ${SCORE_RULES.hintPenalty} points.`}`);
 }
 
 function requestHint() {
-  if (state.phase !== 'investigation' || state.inputLocked || state.puzzleSolved || state.isFinalConfrontation) return;
+  if (activeModal || !['investigation','final'].includes(state.phase) || state.inputLocked || state.puzzleSolved) return;
   
   const limit = getHintLimit();
   if (state.hintsUsedInRound >= limit) {
@@ -952,13 +1094,56 @@ function requestHint() {
   
   state.hintsUsedInRound++;
   state.totalHintsUsed++;
+  if (!state.supportEnabled) state.scoringHintsUsedInRound++;
   if (!saveGame()) return;
   
   const panel = document.getElementById('hintPanel');
   panel.classList.remove('hidden');
-  panel.innerHTML = `<strong>Hint ${state.hintsUsedInRound}:</strong> ${escapeHtml(hintText)} <span class="block mt-1 text-[10px] uppercase font-bold text-red-800">-${SCORE_RULES.hintPenalty} potential puzzle points</span>`;
+  panel.innerHTML = `<strong>Hint ${state.hintsUsedInRound}:</strong> ${escapeHtml(hintText)} <span class="block mt-1">${state.supportEnabled ? 'Support hint — no points lost.' : `-${SCORE_RULES.hintPenalty} potential puzzle points`}</span>`;
   announce(`Hint ${state.hintsUsedInRound}: ${hintText}`);
   updateHintButton();
+}
+
+function loseCaseLife() {
+  if (!state.assisted) state.lives = Math.max(0, state.lives - 1);
+}
+
+function mistakeStatus() {
+  return state.assisted ? ' Revise your answer; this assisted case does not lose lives.' : ` ${state.lives} lives remaining. Support is available if you want to continue without life penalties.`;
+}
+
+function choiceFeedback(index, final = false) {
+  const loc = getLocationCase(state.currentLocationIndex);
+  const puzzle = final ? getFinalConfrontationRounds()[state.finalConfrontationRound - 1] : loc.puzzle;
+  const canonical = state.optionOrder[index];
+  const feedback = puzzle.optionFeedback?.[canonical] || puzzle.hints?.[0] ||
+    'Compare the selected answer with each written condition in the evidence. A matching detail does not establish every part of the answer.';
+  return displayCaseText(loc, feedback);
+}
+
+function enableCaseSupport() {
+  if (activeModal || !['investigation','between','final'].includes(state.phase) || state.inputLocked || state.supportEnabled || !ownsCurrentSave()) return;
+  state.supportEnabled = true;
+  state.assisted = true;
+  state.lives = Math.max(1, state.lives);
+  if (!saveGame()) return;
+  updateHUD(); updateHintButton(); applyWarrantLayout(); renderCaseWorkspace();
+  if (getCurrentActivity()) renderActivity();
+  announce('Support enabled. Future hints cost no points and mistakes cost no lives. Your case and earlier work are preserved; the result is recorded as assisted.');
+}
+
+function continueAssistedCase() {
+  if (activeModal !== 'assistanceModal' || !['investigation','final'].includes(state.phase) || !ownsCurrentSave()) return;
+  state.supportEnabled = true; state.assisted = true; state.lives = Math.max(1, state.lives); state.inputLocked = false;
+  if (!saveGame()) return;
+  closeModal('assistanceModal');
+  if (state.phase === 'final') startFinalConfrontationRound(true);
+  else startLocation(true);
+  announce('Case continued with assistance. Your discoveries and selections are preserved. Further mistakes cost no lives.');
+}
+
+function declineCaseAssistance() {
+  if (activeModal === 'assistanceModal') closeModal('assistanceModal');
 }
 
 // Fisher-Yates: return options reordered with the new index of the correct answer.
@@ -980,6 +1165,7 @@ function buildPuzzleOptions(puzzle) {
   const shuffled = shuffleOptions(puzzle.options, puzzle.correctIndex);
   state.activePuzzleCorrectIndex = shuffled.correctIndex;
   shuffled.options.forEach((opt, idx) => {
+    opt = displayCaseText(getLocationCase(state.currentLocationIndex), opt);
     const letters = ['A', 'B', 'C', 'D'];
     const btn = document.createElement('button');
     btn.className = 'option-btn w-full text-left p-3 border border-slate-300 bg-white/70 hover:bg-white text-slate-900 rounded-lg text-xs md:text-sm font-semibold flex items-center shadow-sm';
@@ -994,21 +1180,24 @@ function buildPuzzleOptions(puzzle) {
 }
 
 function selectChoice(index) {
+  if (getCurrentActivity() || activeModal) return;
   const buttons = document.querySelectorAll('.option-btn');
   if (state.phase !== 'investigation' || state.inputLocked || state.puzzleSolved || !buttons[index] || buttons[index].disabled) return;
   state.inputLocked = true;
   buttons.forEach(btn => btn.disabled = true);
   if (index === state.activePuzzleCorrectIndex) {
     sound.success(); buttons[index].classList.add('correct'); state.puzzleSolved = true;
-    addRoundPoints('puzzle',getPuzzleScore(state.puzzleAttempts,state.hintsUsedInRound)); updateHintButton();
+    addRoundPoints('puzzle',getPuzzleScore(state.puzzleAttempts)); updateHintButton();
     document.getElementById('tabWarrant').disabled = false;
     const btn = document.getElementById('goToWarrantBtn'); btn.disabled = false; btn.classList.remove('opacity-50','cursor-not-allowed');
     state.inputLocked=false; if (!saveGame()) return;
-    const message='Puzzle solved. '+getLocationCase(state.currentLocationIndex).puzzle.explanation+' Choose Continue to prepare the warrant.';
+    const loc = getLocationCase(state.currentLocationIndex);
+    const message='Puzzle solved. '+displayCaseText(loc, loc.puzzle.explanation)+' Choose Continue to prepare the warrant.';
     document.getElementById('puzzleFeedback').textContent=message; announce(message);
+    renderCaseWorkspace();
   } else {
-    sound.fail(); buttons[index].classList.add('wrong'); state.wrongOptions.push(index); state.puzzleAttempts++; state.lives--;
-    updateHUD(); if (!saveGame()) return; announce(`Incorrect answer. ${state.lives} lives remaining.`);
+    sound.fail(); buttons[index].classList.add('wrong'); state.wrongOptions.push(index); state.puzzleAttempts++; loseCaseLife();
+    updateHUD(); if (!saveGame()) return; announce(choiceFeedback(index) + mistakeStatus());
     schedule(() => { if (state.lives === 0) triggerGameOver(); else { state.inputLocked=false; buttons.forEach((btn,i) => btn.disabled=state.wrongOptions.includes(i)); } },WRONG_LOCK_MS);
   }
 }
@@ -1016,21 +1205,9 @@ function selectChoice(index) {
 // ============================================================
 // WARRANT DATABASE (TAB 4)
 // ============================================================
-function buildWarrantDropdowns(currentLoc) {
-  ['city','hideout','disguise'].forEach(field => {
-    const select = document.getElementById(`warrant${field[0].toUpperCase()+field.slice(1)}`);
-    select.innerHTML = '';
-    const placeholder = document.createElement('option'); placeholder.value=''; placeholder.textContent=`Select ${field}`; select.appendChild(placeholder);
-    getAllWarrantChoices(field).forEach(value => { const option=document.createElement('option'); option.value=value; option.textContent=value; select.appendChild(option); });
-    select.disabled=field === 'city';
-    select.value=select.disabled ? currentLoc.warrantAnswers.city : state.warrantSelection[field] || '';
-    if (select.disabled) state.warrantSelection[field]=select.value;
-    select.onchange=() => {state.warrantSelection[field]=select.value; if (!saveGame()) return;};
-  });
-}
-
 function submitWarrant() {
-  if (state.phase !== 'investigation' || state.isFinalConfrontation || !state.puzzleSolved || state.warrantIssued || state.inputLocked) return;
+  if (activeModal || state.phase !== 'investigation' || state.isFinalConfrontation || !state.puzzleSolved || state.warrantIssued || state.inputLocked || (!state.assisted && state.lives === 0)) return;
+  if (state.activityCatalogVersion >= 3) fillConfirmedWarrant(getLocationCase(state.currentLocationIndex));
   const cityVal = document.getElementById('warrantCity').value;
   const hideoutVal = document.getElementById('warrantHideout').value;
   const disguiseVal = document.getElementById('warrantDisguise').value;
@@ -1045,6 +1222,7 @@ function submitWarrant() {
   
   state.inputLocked = true;
   document.getElementById('submitWarrantBtn').disabled = true;
+  updateWarrantControlLock();
   const matches = (cityVal === currentLoc.warrantAnswers.city &&
                    hideoutVal === currentLoc.warrantAnswers.hideout &&
                    disguiseVal === currentLoc.warrantAnswers.disguise);
@@ -1090,9 +1268,10 @@ function submitWarrant() {
     overlay.classList.remove('hidden');
     stamp.className = 'stamp text-5xl font-black px-8 py-3 rounded-xl border-4 transform -rotate-12 bg-white/95 shadow-2xl border-red-600 text-red-600 stamp-anim';
     stamp.textContent = 'REJECTED';
-    announce('Warrant rejected. One life lost. Review the evidence.');
+    const fields = ['hideout','disguise'].filter(field => document.getElementById(`warrant${field[0].toUpperCase()+field.slice(1)}`).value !== currentLoc.warrantAnswers[field]);
     
-    state.lives--;
+    loseCaseLife();
+    announce(`Review the ${fields.join(' and ')} against the witness and assignment clues.` + mistakeStatus());
     state.streak = 0;
     updateHUD();
     if (!saveGame()) return;
@@ -1106,6 +1285,7 @@ function submitWarrant() {
         overlay.classList.add('hidden');
         state.inputLocked = false;
         document.getElementById('submitWarrantBtn').disabled = false;
+        updateWarrantControlLock();
       }, 1500);
     }
   }
@@ -1138,6 +1318,8 @@ function triggerTransitionRound() {
   </div>`;
 
   const suspect = getSuspect(currentLoc);
+  const episode = CarmenCaseDesign.getEpisode(QUIZ_PACK, state.episodeId);
+  const storyStop = episode?.stops[state.currentLocationIndex];
   const headline = suspect ? `${suspect.alias || suspect.name} APPREHENDED!` : 'ACCOMPLICE BOOKED!';
   const successCopy = suspect
     ? `<span class="text-amber-400 font-extrabold">${escapeHtml(suspect.name)}</span> is in ACME custody. Carmen's network in <span class="text-amber-400 font-extrabold">${escapeHtml(currentLoc.name)}</span> just lost an operative.`
@@ -1145,7 +1327,7 @@ function triggerTransitionRound() {
   const nextLeadBlock = (currentLoc.briefing && currentLoc.briefing.nextLead)
     ? `<div class="glass rounded-xl p-4 text-left max-w-md mx-auto shadow-xl">
         <p class="text-[10px] uppercase tracking-widest font-black text-amber-700 mb-1">Seized From Suspect — Next Lead</p>
-        <p class="text-slate-900 text-xs leading-relaxed italic">${state.currentLocationIndex === LOCATIONS.length-1 ? 'Your selected route is complete. Return to ACME headquarters for the final report.' : escapeHtml(currentLoc.briefing.nextLead)}</p>
+        <p class="text-slate-900 text-xs leading-relaxed italic">${escapeHtml(storyStop?.nextLead || (state.currentLocationIndex === LOCATIONS.length-1 ? 'Your selected route is complete. Return to ACME headquarters for the final report.' : currentLoc.briefing.nextLead))}</p>
       </div>`
     : '';
 
@@ -1158,9 +1340,10 @@ function triggerTransitionRound() {
       ${successCopy}
     </p>
 
-    ${scoreDetails}
+    <section class="case-result"><h4>${storyStop ? 'Record recovered' : 'What your evidence established'}</h4><p>${escapeHtml(storyStop?.result || displayCaseText(currentLoc, currentLoc.puzzle.explanation))}</p>${storyStop ? `<p>${escapeHtml(storyStop.evidence)}</p>` : ''}</section>
 
     ${nextLeadBlock}
+    ${scoreDetails}
 
     <div class="glass rounded-xl p-5 border border-white/10 text-left max-w-md mx-auto shadow-xl">
       <div class="flex items-center gap-2 border-b border-white/5 pb-2 mb-2">
@@ -1219,7 +1402,6 @@ function startFinalConfrontationRound(restoring = false) {
   document.getElementById('tabWarrant').disabled = true;
   
   showScreen('gameScreen');
-  switchTab('puzzle');
   resetHintPanel();
   updateHintButton();
   
@@ -1239,12 +1421,21 @@ function startFinalConfrontationRound(restoring = false) {
   container.innerHTML = round.visualHtml || '';
   puzzleQuestion.textContent = round.question;
   buildCustomOptions(round.options, round.correctIndex);
-  document.getElementById('puzzleFeedback').textContent=state.puzzleSolved ? round.explanation+' Choose Continue when ready.' : '';
+  prepareActivity();
+  switchTab('puzzle');
+  if (state.hintsUsedInRound) showUsedHints(getLocationCase(state.currentLocationIndex));
+  document.getElementById('puzzleFeedback').textContent=state.puzzleSolved ? currentPuzzleExplanation()+' Choose Continue when ready.' : '';
   if (!saveGame()) return;
 }
 
 function getFinalConfrontationRounds() {
-  return CarmenCore.finalRounds(QUIZ_PACK, LOCATIONS, state.caseVariantIds);
+  if (state.episodeId) return CarmenCore.finalRounds(QUIZ_PACK, LOCATIONS, state.caseVariantIds, state.activityCatalogVersion, state.episodeId);
+  return CarmenCore.finalRounds(QUIZ_PACK, LOCATIONS, state.caseVariantIds, state.activityCatalogVersion).map((round, index) => {
+    if (index > 1) return round;
+    const loc = getLocationCase(index === 0 ? 0 : Math.floor(LOCATIONS.length / 2));
+    return {...round, description: displayCaseText(loc, round.description), question: displayCaseText(loc, round.question),
+      explanation: displayCaseText(loc, round.explanation), options: round.options.map(value => displayCaseText(loc, value))};
+  });
 }
 
 function buildCustomOptions(options, correctIdx) {
@@ -1268,6 +1459,7 @@ function buildCustomOptions(options, correctIdx) {
 }
 
 function selectFinalChoice(index, correctIdx) {
+  if (getCurrentActivity() || activeModal) return;
   const buttons=document.querySelectorAll('.option-btn');
   if (state.phase !== 'final' || state.puzzleSolved || state.inputLocked || !buttons[index] || buttons[index].disabled) return;
   state.inputLocked=true; buttons.forEach(btn=>btn.disabled=true);
@@ -1277,9 +1469,10 @@ function selectFinalChoice(index, correctIdx) {
     state.inputLocked=false;
     document.getElementById('puzzleFeedback').textContent=getFinalConfrontationRounds()[state.finalConfrontationRound-1].explanation+' Choose Continue when ready.';
     document.getElementById('finalContinueBtn').hidden=false;
+    updateHintButton(); renderCaseWorkspace();
   } else {
-    sound.fail(); buttons[index].classList.add('wrong'); state.wrongOptions.push(index); state.lives--; updateHUD(); if (!saveGame()) return;
-    announce(`Incorrect answer. ${state.lives} lives remaining.`);
+    sound.fail(); buttons[index].classList.add('wrong'); state.wrongOptions.push(index); loseCaseLife(); updateHUD(); if (!saveGame()) return;
+    announce(choiceFeedback(index, true) + mistakeStatus());
     schedule(() => { if (state.lives === 0) triggerGameOver(); else { state.inputLocked=false; buttons.forEach((btn,i)=>btn.disabled=state.wrongOptions.includes(i)); } },WRONG_LOCK_MS);
   }
 }
@@ -1309,10 +1502,11 @@ function triggerGameSuccess() {
   container.innerHTML = `
     <div class="text-7xl mb-4">🏆</div>
     <h3 class="title-font text-5xl font-black text-amber-400 uppercase tracking-wide">CASE CLOSED</h3>
-    <p class="text-slate-200 text-lg mt-2">${escapeHtml(QUIZ_PACK.successMessage)}</p>
+    <p class="text-slate-200 text-lg mt-2">${escapeHtml(CarmenCaseDesign.getEpisode(QUIZ_PACK, state.episodeId)?.successMessage || QUIZ_PACK.successMessage)}</p>
+    <p class="completion-meaning">${state.assisted ? 'Case closed with assistance. Your discoveries and completed route count; this result has its own assisted record.' : `${total} stops completed. Your commendation reflects the accuracy of this route, whatever its length.`}</p>
     <p class="text-2xl font-bold text-sky-400 mt-4">${rank}</p>
     <p class="text-sm font-bold ${scoreRecord.isHighScore ? 'text-emerald-400' : 'text-slate-400'} mt-2">
-      ${scoreRecord.isHighScore ? 'New high score for this difficulty and route length' : `Best ${state.difficulty}, ${state.stopCount}-stop score remains ${scoreRecord.previousBest}`}
+      ${scoreRecord.isHighScore ? 'New high score for this format, difficulty, and route' : `Best score for this format, difficulty, and route remains ${scoreRecord.previousBest}`}
     </p>
     <p class="typewriter-font text-[10px] text-slate-400 uppercase tracking-widest mt-3">Case ID: ${escapeHtml(state.caseSeed)}</p>
 
@@ -1344,11 +1538,21 @@ function triggerGameSuccess() {
 }
 
 function triggerGameOver() {
+  if (!['investigation','final'].includes(state.phase) || state.lives !== 0 || !ownsCurrentSave() || activeModal) return;
+  sessionScheduler.cancel();
+  state.inputLocked = true;
+  if (!saveGame()) return;
+  openModal('assistanceModal');
+}
+
+function finishEscapedCase() {
+  if (activeModal !== 'assistanceModal') return;
   if (!['investigation','between','final'].includes(state.phase) || state.lives !== 0 || !ownsCurrentSave()) return;
   sessionScheduler.cancel();
   state.phase = 'complete';
+  closeModal('assistanceModal');
   sound.fail();
-  const rank = getRankString(state.score);
+  const rank = 'Investigation ended before case closure';
   const scoreRecord = saveHighScore(state.score, rank);
   updateStats('escape');
   storage.setItem(LAST_RUN_KEY, JSON.stringify(state.caseVariantIds));
@@ -1361,7 +1565,7 @@ function triggerGameOver() {
     <p class="text-slate-200 text-lg mt-2">Carmen Sandiego slipped past your perimeter. You ran out of backup lives!</p>
     <p class="text-sm text-slate-400 mt-2">Better luck next time, detective.</p>
     <p class="text-sm font-bold ${scoreRecord.isHighScore ? 'text-emerald-400' : 'text-slate-400'} mt-2">
-      ${scoreRecord.isHighScore ? 'New high score for this difficulty and route length' : `Best ${state.difficulty}, ${state.stopCount}-stop score remains ${scoreRecord.previousBest}`}
+      ${scoreRecord.isHighScore ? 'New high score for this format, difficulty, and route' : `Best score for this format, difficulty, and route remains ${scoreRecord.previousBest}`}
     </p>
     <p class="typewriter-font text-[10px] text-slate-400 uppercase tracking-widest mt-3">Case ID: ${escapeHtml(state.caseSeed)}</p>
 
@@ -1386,6 +1590,10 @@ function triggerGameOver() {
 }
 
 function renderEscapedAnswersPanel() {
+  const activity = getCurrentActivity();
+  if (activity && state.isFinalConfrontation) {
+    return `<section class="glass p-5 mt-6 explanation"><h4>${escapeHtml(activity.title)} — evidence review</h4><p>${escapeHtml(CarmenCore.activityAnswer(activity))}</p></section>`;
+  }
   if (state.isFinalConfrontation) {
     const round = getFinalConfrontationRounds()[state.finalConfrontationRound-1];
     return `<div class="glass p-5 mt-6"><h4>Final report — round ${state.finalConfrontationRound}</h4><p>${escapeHtml(round.options[round.correctIndex])}</p><p>${escapeHtml(round.explanation)}</p></div>`;
@@ -1393,14 +1601,14 @@ function renderEscapedAnswersPanel() {
   const loc = getLocationCase(state.currentLocationIndex);
   if (!loc || !loc.warrantAnswers) return '';
 
-  const puzzleAnswer = (loc.puzzle && Array.isArray(loc.puzzle.options))
+  const puzzleAnswer = (!activity && loc.puzzle && Array.isArray(loc.puzzle.options))
     ? loc.puzzle.options[loc.puzzle.correctIndex]
     : '';
 
   const rows = [
     ['Stop', loc.warrantAnswers.city],
-    ['Hideout', loc.warrantAnswers.hideout],
-    ['Disguise', loc.warrantAnswers.disguise]
+    ['Hideout', CarmenPractice.warrantLabel(QUIZ_PACK, loc.id, 'hideout', loc.warrantAnswers.hideout, state.activityCatalogVersion)],
+    ['Disguise', CarmenPractice.warrantLabel(QUIZ_PACK, loc.id, 'disguise', loc.warrantAnswers.disguise, state.activityCatalogVersion)]
   ];
 
   return `
@@ -1418,7 +1626,7 @@ function renderEscapedAnswersPanel() {
       ${puzzleAnswer ? `
         <div class="mt-3 pt-3 border-t border-slate-900/10">
           <p class="text-[10px] uppercase tracking-widest font-bold text-slate-700 mb-1">Puzzle Answer</p>
-          <p class="text-xs italic text-slate-900">${escapeHtml(puzzleAnswer)}</p>
+          <p class="text-xs italic text-slate-900">${escapeHtml(displayCaseText(loc, puzzleAnswer))}</p>
         </div>
       ` : ''}
       ${renderExplanation(loc)}
@@ -1518,6 +1726,8 @@ function initBgParticles() {
 
 // Session lifecycle: all delayed game work belongs to a cancellable generation.
 function cancelSession() {
+  if (typeof stopStudySpeech === 'function') stopStudySpeech();
+  stopCaseSpeech();
   sessionScheduler.cancel();
   state.phase = 'idle';
   state.inputLocked = false;
@@ -1529,6 +1739,8 @@ function resetRound(phase) {
   state.phase=phase; state.inputLocked=false; state.puzzleSolved=false;
   state.puzzleAttempts=0; state.hintsUsedInRound=0; state.roundScore=createRoundScore();
   state.warrantIssued=false; state.optionOrder=[]; state.wrongOptions=[]; state.warrantSelection={};
+  state.activityProgress=null;
+  state.scoringHintsUsedInRound=0; state.evidenceMarks=[];
   state.activeTab=phase === 'final' ? 'puzzle' : 'dossier';
   state.isFinalConfrontation=phase === 'final';
 }
@@ -1539,7 +1751,7 @@ function advanceFinalRound() {
 }
 function setPackLoading(loading) {
   packLoading=loading;
-  ['startButton','resumeButton','recordsButton'].forEach(id => { const el=document.getElementById(id); if(el) el.disabled=loading; });
+  ['startButton','quickCaseButton','storyCaseButton','resumeButton','recordsButton','studyButton'].forEach(id => { const el=document.getElementById(id); if(el) el.disabled=loading; });
   const select=document.getElementById('packSelector');
   if(select) select.disabled=loading || QUIZ_PACK_MANIFEST.packs.length <= 1;
 }
@@ -1553,31 +1765,48 @@ function showUsedHints(loc) {
   panel.textContent=getHintTexts(loc).slice(0,state.hintsUsedInRound).map((hint,i)=>`Hint ${i+1}: ${hint}`).join(' ');
 }
 function renderExplanation(loc) {
+  const activity = state.quizStyle === 'mixed' ? CarmenActivities.getCaseActivity(QUIZ_PACK, loc, state.activityCatalogVersion) : null;
+  const activityReview = activity ? `<p><strong>${escapeHtml(activity.title)}:</strong> ${escapeHtml(CarmenCore.activityAnswer(activity))}</p>` : '';
   const links=(loc.sources || []).map(id=>QUIZ_PACK.sources[id]).filter(Boolean).map(source => `<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.title)}</a>`).join(' · ');
-  return `<section class="glass p-5 text-left explanation"><h4>Evidence review</h4><p>${escapeHtml(loc.puzzle.explanation)}</p><p>Sources: ${links}</p><p class="review-note">${CarmenCore.hasReviewEvidence(loc, QUIZ_PACK.sources) ? 'Editorial review recorded.' : 'Preview: source links are provided; factual line review is pending.'}</p></section>`;
+  return `<section class="glass p-5 text-left explanation"><h4>Evidence review</h4>${activityReview}<p>${escapeHtml(displayCaseText(loc, loc.puzzle.explanation))}</p><p>Sources: ${links}</p><p class="review-note">${CarmenCore.hasReviewEvidence(loc, QUIZ_PACK.sources) ? loc.designRevision ? 'Source case review recorded. This puzzle uses an adapted reasoning exercise.' : 'Editorial review recorded.' : 'Preview: source links are provided; factual line review is pending.'}</p></section>`;
 }
 function openModal(id) {
   if(activeModal) return;
+  stopCaseSpeech();
   modalReturnFocus=document.activeElement; activeModal=id;
   const modal=document.getElementById(id); modal.classList.remove('hidden');
   [...document.body.children].forEach(el => {if(el!==modal && !['SCRIPT','STYLE'].includes(el.tagName)) el.inert=true;});
   (modal.querySelector('[data-initial-focus]') || modal.querySelector('button'))?.focus();
 }
 function closeModal(id) {
+  const pauseForSupport = id === 'assistanceModal' && ['investigation','final'].includes(state.phase) && state.lives === 0;
+  if (id === 'studyModal') cleanupStudy();
   if (id === 'resetModal') resetSaveSnapshot=undefined;
   if (id === 'replaceSaveModal') pendingNewCase=null;
   document.getElementById(id).classList.add('hidden'); activeModal=null;
   [...document.body.children].forEach(el=>el.inert=false);
   if(modalReturnFocus?.isConnected && !modalReturnFocus.closest('.hidden')) modalReturnFocus.focus();
   else document.querySelector('#app > :not(.hidden)')?.focus();
+  if (pauseForSupport) goToTitle();
+}
+function modalControlVisible(element) {
+  if (element.disabled) return false;
+  let child = element;
+  for (let current = element; current; current = current.parentElement) {
+    if (current.hidden || current.inert || current.classList.contains('hidden')) return false;
+    if (current.tagName === 'DETAILS' && current.getAttribute('open') === null && child.tagName !== 'SUMMARY') return false;
+    child = current;
+  }
+  return true;
 }
 function initializeAccessibility() {
   document.addEventListener('keydown',event=>{
     if(activeModal) {
       if(event.key==='Escape') {event.preventDefault(); closeModal(activeModal); return;}
       if(event.key==='Tab') {
-        const buttons=[...document.getElementById(activeModal).querySelectorAll('button, a[href], input, select, [tabindex="0"]')].filter(el=>!el.disabled);
+        const buttons=[...document.getElementById(activeModal).querySelectorAll('button, a[href], input, select, textarea, summary, [tabindex="0"]')].filter(modalControlVisible);
         const first=buttons[0], last=buttons[buttons.length-1];
+        if (!first) { event.preventDefault(); return; }
         if(event.shiftKey && document.activeElement===first) {event.preventDefault(); last.focus();}
         else if(!event.shiftKey && document.activeElement===last) {event.preventDefault(); first.focus();}
       }

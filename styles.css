@@ -1,4 +1,5 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  .map-scope-note { font-size: .8rem; line-height: 1.5; color: #cbd5e1; margin-top: .5rem; }
   body {
     font-family: system-ui, sans-serif;
     background: #0c1222;
@@ -426,3 +427,105 @@ header, header > div:last-child { flex-wrap: wrap; }
 .action-feedback { margin-block: .8rem; line-height: 1.6; font-weight: 600; }
 .action-feedback:empty { display: none; }
 #contentPuzzle > div:last-child { flex-wrap: wrap; gap: .8rem; }
+
+/* Mixed activities use large native controls; no dragging or precise targeting. */
+.quiz-style-control { margin-block: 1.5rem; text-align: left; }
+.quiz-style-control label { display: block; font-weight: 800; margin-bottom: .5rem; }
+#quizStyleSelect { width: 100%; padding: .7rem; background: #17130f; color: #fff3d6; border: 2px solid #fff3d6; }
+.quiz-style-control p { margin-top: .6rem; line-height: 1.5; }
+.activity-prompt { font-weight: 800; margin-bottom: .7rem; }
+.activity-selections { list-style: decimal; padding-left: 1.5rem; margin-block: .75rem; }
+.activity-selections li { margin-block: .4rem; overflow-wrap: anywhere; }
+.activity-cards { display: grid; gap: .6rem; }
+.activity-card, .activity-actions button {
+  min-height: 44px; padding: .75rem; border: 2px solid #514537;
+  background: #fff3d6; color: #17130f; font: inherit; font-weight: 700;
+  text-align: left; overflow-wrap: anywhere;
+}
+.activity-card[aria-pressed="true"] { border-style: dashed; background: #ded4c4; }
+.activity-card[aria-pressed="true"]::after { content: ' — placed'; }
+.activity-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-block: .8rem; }
+.activity-actions button { flex: 1 1 7rem; text-align: center; }
+.activity-actions button:disabled { opacity: .65; }
+#activityCheck { background: #17130f; color: #fff3d6; }
+.activity-help { font-size: .85rem; line-height: 1.5; }
+
+/* Study remains a readable, native-control surface at narrow widths and zoom. */
+.resume-summary { margin: 1rem auto; max-width: 42rem; line-height: 1.6; }
+.study-modal { position: fixed; inset: 0; z-index: 60; display: flex; align-items: center; justify-content: center; padding: 1rem; background: #000b; }
+/* Closing Study must override its flex layout, including at initial load. */
+.study-modal.hidden { display: none; }
+.study-sheet { width: min(100%, 58rem); padding: clamp(1rem, 3vw, 2rem); border: 2px solid #514537; overflow-wrap: anywhere; }
+.study-sheet h2 { font-size: 1.7rem; font-weight: 900; }
+.study-sheet h3 { font-size: 1.25rem; font-weight: 800; margin-block: 1rem .6rem; }
+.study-sheet h4, .study-pack-title, .study-question { font-weight: 800; }
+.study-sheet p { line-height: 1.65; margin-block: .7rem; }
+.study-heading, .study-actions { display: flex; gap: .6rem; flex-wrap: wrap; align-items: center; margin-block: .6rem; }
+.study-heading { justify-content: space-between; }
+.study-sheet button, .study-sheet select, .study-sheet input, .study-sheet textarea, #warrantPair { font: inherit; min-height: 44px; border: 2px solid #514537; padding: .65rem; background: #fff3d6; color: #17130f; max-width: 100%; }
+.study-sheet button { font-weight: 700; text-align: left; }
+.study-sheet button:disabled { opacity: .65; }
+.study-sheet button[aria-pressed="true"] { background: #17130f; color: #fff3d6; }
+.study-sheet label { display: block; font-weight: 800; margin-top: .7rem; }
+.study-sheet select, .study-sheet textarea, #warrantPair { width: 100%; }
+.study-selectors { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,15rem),1fr)); gap: .8rem; }
+.study-choices { display: grid; gap: .6rem; margin-block: .8rem; }
+.study-text { white-space: pre-wrap; }
+.study-answer, .study-import-preview { border-left: 4px solid #514537; padding-left: 1rem; }
+.study-speech, .study-backup, #studyTransfer { border-top: 2px solid #514537; padding-top: .8rem; margin-top: 1.2rem; }
+.study-speech summary { min-height: 44px; padding: .65rem; cursor: pointer; font-weight: 800; }
+#studyStatus { font-weight: 700; }
+#warrantPairHelp { line-height: 1.5; margin-block: .5rem; }
+.offline-notice { background: #fff3d6; color: #17130f; padding: .8rem 1rem; border-bottom: 2px solid #514537; line-height: 1.6; }
+
+/* Keep the current decision first in both reading order and visual order. */
+.play-tools, .task-actions, .secondary-actions { display: flex; flex-wrap: wrap; gap: .65rem; align-items: center; }
+.reading-controls { max-width: 100%; }
+.reading-controls summary, .route-details summary { min-height: 44px; padding: .7rem .9rem; font-weight: 800; cursor: pointer; }
+.reading-controls-panel { display: flex; flex-wrap: wrap; gap: .6rem; padding: .8rem; border: 2px solid #fff3d6; margin-top: .5rem; max-width: 44rem; }
+.reading-controls-panel p { flex-basis: 100%; line-height: 1.5; }
+.primary-action, .secondary-action { min-height: 44px; padding: .8rem 1rem; font: inherit; font-weight: 800; border: 2px solid #fff3d6; overflow-wrap: anywhere; }
+.primary-action { background: #f4c34a; color: #17130f; border-color: #17130f; }
+.secondary-action { background: #17130f; color: #fff3d6; }
+.primary-action:disabled, .secondary-action:disabled { opacity: .65; }
+.resume-card { padding: 1.2rem; margin-block: 1.2rem 2rem; border: 3px solid #f4c34a; text-align: left; }
+.resume-card h3 { font-size: 1.35rem; font-weight: 800; }
+.resume-card .resume-summary { margin: .75rem 0; }
+.resume-card .primary-action { width: 100%; }
+.start-actions { display: grid; gap: .8rem; text-align: left; }
+.start-actions p, .setup-help { line-height: 1.6; margin-bottom: .7rem; }
+.secondary-actions > button { flex: 1 1 12rem; }
+.setup-heading { font-weight: 800; font-size: 1.25rem; text-align: left; }
+.setup-help { text-align: left; }
+#challengeSelect { width: 100%; padding: .7rem; background: #17130f; color: #fff3d6; border: 2px solid #fff3d6; }
+.case-workspace { display: grid; grid-template-columns: minmax(0,1fr); gap: 1.5rem; align-items: start; }
+.case-workspace.hidden { display: none; }
+.task-context { grid-column: 1 / -1; padding: 1rem; background: #fff3d6; color: #17130f; border: 3px solid #17130f; }
+#currentTask { font-weight: 900; font-size: 1.15rem; line-height: 1.5; }
+.task-context p + .task-actions, .case-guidance { margin-top: .75rem; }
+.case-guidance, #caseReadingStatus, #answerShortcutHelp { line-height: 1.6; margin-block: .65rem; }
+.case-main, .case-sidebar { min-width: 0; }
+.route-details-content { padding: 0 1rem 1rem; }
+.route-details .map-scope-note { color: #34302a; }
+.decision-evidence { margin-block: 1rem; padding: .9rem; border: 2px solid #514537; background: #fff3d6; }
+.decision-evidence h4 { font-weight: 900; }
+.evidence-help { font-size: .9rem; line-height: 1.5; margin-top: .4rem; }
+.evidence-list { list-style: none; display: grid; gap: .7rem; margin-top: .7rem; }
+.evidence-list li { border-top: 1px solid #76644e; padding-top: .7rem; line-height: 1.6; }
+.evidence-list p { white-space: pre-line; }
+.evidence-mark { min-height: 44px; margin-top: .5rem; padding: .5rem .7rem; border: 2px solid #514537; color: #17130f; background: #fff3d6; font: inherit; font-weight: 700; }
+.evidence-mark[aria-pressed="true"] { background: #17130f; color: #fff3d6; }
+.warrant-confirmation { border: 3px solid #176c72; padding: 1rem; background: #fff3d6; line-height: 1.6; }
+.warrant-confirmation h4 { font-weight: 900; }
+.warrant-confirmation p { margin-top: .65rem; }
+.assistance-sheet { width: min(100%,32rem); padding: 1.5rem; line-height: 1.6; }
+.assistance-sheet h2 { font-weight: 900; font-size: 1.5rem; }
+.case-result { max-width: 42rem; margin: 1rem auto; padding: 1rem; background: #fff3d6; color: #17130f; border: 2px solid #514537; text-align: left; line-height: 1.65; }
+.case-result h4 { font-weight: 900; }
+.case-result p + p { margin-top: .7rem; }
+.completion-meaning { max-width: 42rem; margin: 1rem auto; line-height: 1.65; }
+.activity-selections .evidence-fit, .activity-selections .evidence-review { padding: .5rem; border-left: 4px solid #176c72; }
+.activity-selections .evidence-review { border-left-color: #7a341e; border-left-style: dashed; }
+@media (min-width: 1024px) {
+  .case-workspace { grid-template-columns: minmax(0,7fr) minmax(17rem,4fr); }
+}

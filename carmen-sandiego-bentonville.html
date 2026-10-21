@@ -24,24 +24,22 @@
       <p id="packSubtitle" class="text-xs text-sky-400 font-semibold tracking-widest uppercase">Bentonville Division</p>
     </div>
   </div>
-  <!-- Settings Bar -->
-  <div class="flex items-center gap-2 sm:gap-4">
-    <button onclick="toggleAudio()" id="soundToggle" class="text-slate-400 hover:text-white transition-colors text-lg min-w-11 min-h-11 flex items-center justify-center rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" title="Toggle Sound" aria-label="Toggle sound">
-      🔊
-    </button>
-    <button onclick="toggleReducedMotion()" id="motionToggle" class="text-slate-400 hover:text-white transition-colors text-xs font-bold min-w-11 min-h-11 flex items-center justify-center rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" title="Toggle reduced motion" aria-label="Toggle reduced motion">
-      MOT
-    </button>
-    <button onclick="toggleHighContrast()" id="contrastToggle" class="text-slate-400 hover:text-white transition-colors text-xs font-bold min-w-11 min-h-11 flex items-center justify-center rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" title="Toggle high contrast" aria-label="Toggle high contrast">
-      HC
-    </button>
-    <button id="routeToggle" onclick="toggleTextRoute()" class="utility-control" aria-pressed="false">Text route: off</button>
-    <button id="shortcutToggle" onclick="toggleAnswerShortcuts()" class="utility-control" aria-pressed="false" title="Enable A–D and 1–4 answer keys outside form controls">Answer shortcuts: off</button>
+  <nav class="play-tools" aria-label="Case and reading controls">
     <button onclick="goToTitle()" class="utility-control" title="Keep progress and return to the title">Pause</button>
-    <button onclick="showResetModal()" class="text-slate-400 hover:text-white transition-colors text-sm font-semibold border border-white/10 px-3 py-1 rounded bg-white/5" title="Discard saved progress">
-      Discard Case
-    </button>
-  </div>
+    <button id="studyButton" disabled onclick="openStudy()" class="utility-control">Study / Notebook</button>
+    <details class="reading-controls">
+      <summary>Reading &amp; controls</summary>
+      <div class="reading-controls-panel">
+        <button onclick="toggleAudio()" id="soundToggle" class="utility-control" aria-label="Toggle sound">Sound: on</button>
+        <button onclick="toggleReducedMotion()" id="motionToggle" class="utility-control" aria-label="Toggle reduced motion">Reduced motion: off</button>
+        <button onclick="toggleHighContrast()" id="contrastToggle" class="utility-control" aria-label="Toggle high contrast">High contrast: off</button>
+        <button id="routeToggle" onclick="toggleTextRoute()" class="utility-control" aria-pressed="false">Text route: off</button>
+        <button id="shortcutToggle" onclick="toggleAnswerShortcuts()" class="utility-control" aria-pressed="false">Answer shortcuts: off</button>
+        <p>Answer shortcuts use A–D or 1–4 outside form fields. All activities also work with buttons.</p>
+        <button onclick="showResetModal()" class="utility-control">Discard saved case…</button>
+      </div>
+    </details>
+  </nav>
 </header>
 
 <p id="storageStatus" class="storage-status" role="status" hidden></p>
@@ -75,6 +73,12 @@
         A fictional ACME training mystery across Bentonville landmarks. Choose a route, compare clues, and complete the final report at headquarters.
       </p>
 
+      <section id="resumeCard" class="resume-card" aria-labelledby="resumeHeading" hidden>
+        <h3 id="resumeHeading">Your current case</h3>
+        <p id="resumeSummary" class="resume-summary" hidden></p>
+        <button id="resumeButton" disabled onclick="resumeGame()" class="hidden primary-action">Continue my case</button>
+      </section>
+
       <div class="max-w-md mx-auto mb-8 text-left">
         <label for="packSelector" class="block text-xs font-bold uppercase tracking-[0.25em] text-sky-300 mb-2">Quiz Pack</label>
         <select id="packSelector" disabled onchange="selectQuizPackFromControl(this.value)" class="w-full bg-slate-950/80 border border-white/15 text-white rounded-lg px-4 py-3 font-bold focus:outline-none focus:ring-2 focus:ring-amber-400">
@@ -83,16 +87,15 @@
         <p id="packSelectorStatus" class="mt-2 text-xs text-slate-400" aria-live="polite">Loading quiz packs...</p>
       </div>
 
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <button id="startButton" disabled onclick="goToDifficultySelect()" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-slate-900 text-lg font-bold rounded-xl shadow-lg shadow-amber-500/20 transition-all duration-300 transform active:scale-95">
-          📁 START NEW INVESTIGATION
-        </button>
-        <button id="resumeButton" disabled onclick="resumeGame()" class="hidden w-full sm:w-auto px-8 py-4 glass text-white hover:bg-white/10 text-lg font-bold rounded-xl transition-all duration-300 transform active:scale-95 border border-white/20">
-          💼 RESUME CURRENT CASE
-        </button>
-        <button id="recordsButton" disabled onclick="showRecordsModal()" class="w-full sm:w-auto px-8 py-4 glass text-white hover:bg-white/10 text-lg font-bold rounded-xl transition-all duration-300 transform active:scale-95 border border-white/20">
-          🏅 VIEW RECORDS
-        </button>
+      <div class="start-actions">
+        <button id="quickCaseButton" disabled onclick="startQuickCase()" class="primary-action">Start a quick case</button>
+        <p>Four stops, mixed activities, and generous hints. Read the evidence, solve the clue, then confirm the arrest.</p>
+        <button id="storyCaseButton" disabled onclick="startStoryCase()" class="secondary-action">Play The Swapped Dispatch</button>
+        <p id="storyCaseSummary">Four connected Bentonville stops. Recover the parcel records and repair the final dispatch.</p>
+        <div class="secondary-actions">
+          <button id="startButton" disabled onclick="goToDifficultySelect()" class="secondary-action">Customize a new case</button>
+          <button id="recordsButton" disabled onclick="showRecordsModal()" class="secondary-action">View records</button>
+        </div>
       </div>
       <button id="clearBrokenSaveButton" onclick="clearBrokenSave()" class="hidden mt-4 text-sm font-bold text-amber-300 underline underline-offset-4">
         Clear incompatible or unreadable saved case
@@ -109,8 +112,8 @@
   <!-- ================= SCREEN 2: DIFFICULTY SELECT ================= -->
   <div id="difficultyScreen" class="hidden w-full flex flex-col items-center justify-center py-6 fade-in-up">
     <div class="max-w-xl w-full text-center">
-      <p class="text-amber-400 text-xs font-bold tracking-[0.3em] uppercase mb-2">CLEARANCE AUTHENTICATION</p>
-      <h3 class="title-font text-3xl md:text-4xl font-extrabold text-white mb-8">Establish Detective Rank</h3>
+      <p class="text-amber-400 text-xs font-bold tracking-[0.3em] uppercase mb-2">YOUR NEXT INVESTIGATION</p>
+      <h3 class="title-font text-3xl md:text-4xl font-extrabold text-white mb-8">Choose your case</h3>
 
       <div class="max-w-xs mx-auto mb-8 text-left">
         <label for="stopCountSelect" class="block text-xs font-bold uppercase tracking-[0.25em] text-sky-300 mb-2">Number Of Stops</label>
@@ -119,28 +122,47 @@
         </select>
       </div>
 
+      <div class="quiz-style-control">
+        <label for="quizStyleSelect">Quiz format</label>
+        <select id="quizStyleSelect" aria-describedby="quizStyleHelp">
+          <option value="mixed" selected>Mixed activities</option>
+          <option value="classic">Classic four choices</option>
+        </select>
+        <p id="quizStyleHelp">Mixed adds ordering and matching where the case supports them, plus two route activities in the final report. Use buttons; no typing or dragging. Classic keeps four answer buttons throughout. Saved cases keep their format.</p>
+      </div>
+
+      <div class="quiz-style-control">
+        <label for="challengeSelect">Reasoning challenge</label>
+        <select id="challengeSelect" aria-describedby="challengeHelp">
+          <option value="standard" selected>Standard — varied cases</option>
+          <option value="advanced">Advanced — prefer deeper cases</option>
+        </select>
+        <p id="challengeHelp">Advanced prefers the highest authored difficulty available at each stop. The available cases vary by pack. Help remains available in either setting.</p>
+      </div>
+      <h4 class="setup-heading">Choose support and begin</h4>
+      <p class="setup-help">These choices change hints and room for mistakes. You can turn on guided support during a case.</p>
       <div class="space-y-4 text-left">
         <button onclick="selectDifficulty('rookie')" class="w-full glass rounded-2xl p-5 text-left border border-white/10 hover:border-emerald-400/40 transition-all duration-300 group flex items-start gap-4">
           <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-emerald-500/20">📋</div>
           <div>
-            <h4 class="text-white font-bold text-lg group-hover:text-emerald-400 transition-colors">Rookie Detective</h4>
-            <p class="text-slate-400 text-sm mt-1">6 lives and up to 3 hints per stop. The current stop is filled in; choose the hideout and disguise.</p>
+            <h4 class="text-white font-bold text-lg group-hover:text-emerald-400 transition-colors">Generous support</h4>
+            <p class="text-slate-400 text-sm mt-1">6 lives and up to 3 hints per stop. Recommended for a first case.</p>
           </div>
         </button>
 
         <button onclick="selectDifficulty('detective')" class="w-full glass rounded-2xl p-5 text-left border border-white/10 hover:border-amber-400/40 transition-all duration-300 group flex items-start gap-4">
           <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-amber-500/20">🔍</div>
           <div>
-            <h4 class="text-white font-bold text-lg group-hover:text-amber-400 transition-colors">Senior Detective</h4>
-            <p class="text-slate-400 text-sm mt-1">5 lives and up to 2 hints per stop. The current stop is filled in; choose the hideout and disguise.</p>
+            <h4 class="text-white font-bold text-lg group-hover:text-amber-400 transition-colors">Balanced support</h4>
+            <p class="text-slate-400 text-sm mt-1">5 lives and up to 2 hints per stop.</p>
           </div>
         </button>
 
         <button onclick="selectDifficulty('inspector')" class="w-full glass rounded-2xl p-5 text-left border border-white/10 hover:border-red-400/40 transition-all duration-300 group flex items-start gap-4">
           <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-red-500/20">⭐</div>
           <div>
-            <h4 class="text-white font-bold text-lg group-hover:text-red-400 transition-colors">Chief Inspector</h4>
-            <p class="text-slate-400 text-sm mt-1">4 lives and no hints. The current stop is filled in; choose the hideout and disguise from the same evidence.</p>
+            <h4 class="text-white font-bold text-lg group-hover:text-red-400 transition-colors">Independent challenge</h4>
+            <p class="text-slate-400 text-sm mt-1">4 lives and no initial hints. Guided support remains available if you want it.</p>
           </div>
         </button>
       </div>
@@ -152,55 +174,22 @@
   </div>
 
   <!-- ================= SCREEN 3: GAME SCREEN ================= -->
-  <div id="gameScreen" class="hidden w-full max-w-6xl mx-auto grid lg:grid-cols-12 gap-6 items-start fade-in">
+  <div id="gameScreen" class="hidden w-full max-w-6xl mx-auto case-workspace fade-in">
     
-    <!-- Left Column: Map and HUD (5 cols) -->
-    <div class="lg:col-span-5 space-y-4">
-      
-      <!-- HUD Card -->
-      <div class="glass rounded-2xl p-4 flex justify-between items-center border border-white/5 shadow-xl">
-        <div class="flex items-center gap-3">
-          <div class="text-2xl text-amber-400">🕵️‍♂️</div>
-          <div>
-            <p id="hudRank" class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Detective</p>
-            <p id="hudScore" class="text-white font-black text-lg" aria-live="polite">Score: <span class="text-amber-400">0000</span></p>
-          </div>
-        </div>
-        
-        <!-- Lives Indicator (Magnifying Glasses) -->
-        <div class="text-right">
-          <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-1">Backup Lives</p>
-          <div id="livesContainer" role="img" aria-label="Lives remaining" class="flex gap-1 justify-end">
-            <!-- Rendered via JS -->
-          </div>
-        </div>
+    <section class="task-context" aria-label="Current task">
+      <p id="currentTask" aria-live="polite"></p>
+      <p id="caseGuidance" class="case-guidance" hidden></p>
+      <div class="task-actions">
+        <button id="caseReadButton" onclick="readCurrentCase()" class="secondary-action">Read this case</button>
+        <button onclick="stopCaseSpeech()" class="secondary-action">Stop reading</button>
+        <button id="caseSupportButton" onclick="enableCaseSupport()" class="secondary-action">Help me through this case</button>
       </div>
-
-      <!-- Real Map Card -->
-      <div class="glass rounded-2xl p-4 border border-white/5 shadow-xl relative overflow-hidden">
-        <div class="flex items-center justify-between mb-2 border-b border-white/5 pb-2">
-          <p class="text-xs font-bold text-sky-400 uppercase tracking-wider">ACME Tracking Map</p>
-          <p id="currentCityText" class="text-xs text-white font-bold"></p>
-        </div>
-        <div class="relative w-full aspect-[4/5] bg-slate-950/40 rounded-xl border border-white/5 overflow-hidden z-10">
-          <div id="map" class="w-full h-full" role="group" aria-label="Tracking map and route overview" aria-describedby="mapTextAlternative" tabindex="-1"></div>
-        </div>
-        <p id="mapTextAlternative" class="sr-only" aria-live="polite">Map not initialized.</p>
-        <button id="retryMapButton" hidden onclick="retryMap()" class="utility-control">Retry map</button>
-      </div>
-
-      <!-- Inventory Clue Tokens Card -->
-      <div class="glass rounded-2xl p-4 border border-white/5 shadow-xl">
-        <p class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Collected Clue Tokens</p>
-        <div id="tokenGrid" class="grid grid-cols-4 gap-2">
-          <!-- Populated by JS -->
-        </div>
-      </div>
-
-    </div>
+      <p id="caseReadingStatus" role="status" hidden></p>
+      <p id="answerShortcutHelp" hidden></p>
+    </section>
 
     <!-- Right Column: Case File tabbed interface (7 cols) -->
-    <div id="caseFileColumn" class="lg:col-span-7 flex flex-col min-h-[580px] shadow-2xl">
+    <div id="caseFileColumn" class="case-main flex flex-col shadow-2xl">
       
       <!-- Tab Headers -->
       <div class="case-tabs flex border-b border-white/5 pl-4 gap-1" role="tablist" aria-label="Case file">
@@ -233,6 +222,7 @@
               <p id="briefingReport" class="typewriter-font text-sm leading-relaxed text-slate-800 bg-white/60 p-4 rounded border border-slate-200 shadow-inner">
                 Loading police dispatch report...
               </p>
+              <p id="fictionNotice" class="text-sm leading-relaxed" hidden></p>
             </div>
 
             <!-- Suspect Dossier (Henchman) -->
@@ -249,7 +239,7 @@
             </div>
 
             <!-- Visual Calling Card Section -->
-            <div class="mt-6 flex flex-col sm:flex-row gap-4 items-center bg-white/40 p-4 rounded-xl border border-slate-200 shadow-sm">
+            <div id="callingCardPanel" class="mt-6 flex flex-col sm:flex-row gap-4 items-center bg-white/40 p-4 rounded-xl border border-slate-200 shadow-sm">
               <div class="w-16 h-16 bg-red-700 text-white rounded-lg flex items-center justify-center font-bold text-2xl flex-shrink-0 shadow-md">
                 🕵️‍♀️
               </div>
@@ -309,9 +299,14 @@
           <div>
             <div class="flex items-center justify-between border-b border-slate-300 pb-2">
               <span id="puzzleTitleText" class="text-xs font-bold tracking-widest text-slate-500 uppercase">Tango Cipher Decode</span>
-              <span class="text-xs font-extrabold text-amber-700 bg-amber-500/10 px-2 py-0.5 rounded uppercase tracking-wider">Deduction Puzzle</span>
+              <span id="puzzleModeLabel" class="text-xs font-extrabold text-amber-700 bg-amber-500/10 px-2 py-0.5 rounded uppercase tracking-wider">Four choices</span>
             </div>
 
+            <section class="decision-evidence" aria-labelledby="puzzleEvidenceHeading">
+              <h4 id="puzzleEvidenceHeading">Evidence at hand</h4>
+              <p class="evidence-help">Keep useful clues marked while you work. Marks are yours; they do not reveal an answer.</p>
+              <ol id="puzzleEvidence" class="evidence-list"></ol>
+            </section>
             <p id="puzzleDescription" class="text-xs text-slate-600 mt-2 mb-4">
               Decipher the clue using the information gathered below, then select the matching A, B, C, or D option.
             </p>
@@ -328,6 +323,17 @@
                 <div id="puzzleOptionsGrid" class="space-y-2">
                   <!-- Option buttons generated dynamically -->
                 </div>
+                <section id="activityPanel" aria-label="Puzzle activity" hidden>
+                  <p id="activityPrompt" class="activity-prompt"></p>
+                  <ol id="activitySelections" class="activity-selections" aria-label="Your work"></ol>
+                  <div id="activityCards" class="activity-cards"></div>
+                  <div class="activity-actions">
+                    <button id="activityUndo" onclick="undoActivity()">Undo last</button>
+                    <button id="activityReset" onclick="resetActivitySelection()">Clear work</button>
+                    <button id="activityCheck" onclick="checkActivity()">Check work</button>
+                  </div>
+                  <p id="activityHelp" class="activity-help">Follow the activity prompt, then choose Check work. Undo last and Clear work cost nothing. Your selections save as you go.</p>
+                </section>
               </div>
             </div>
             <p id="puzzleFeedback" class="action-feedback"></p>
@@ -358,11 +364,20 @@
               <span class="text-xs font-extrabold text-red-700 bg-red-500/10 px-2 py-0.5 rounded uppercase tracking-wider">Case Authority</span>
             </div>
 
-            <p class="text-xs text-slate-600 mt-2 mb-4">
-              Use the clue sheets in the Case File to name where the suspect is hiding and what disguise they are wearing. A wrong warrant is rejected and costs one life.
+            <p id="warrantInstructions" class="text-xs text-slate-600 mt-2 mb-4">
+              Review the case evidence and the arrest details below before continuing.
             </p>
 
-            <div class="bg-white/50 p-4 rounded-xl border border-slate-200 shadow-inner space-y-4 max-w-md mx-auto">
+            <section class="decision-evidence" aria-labelledby="warrantEvidenceHeading">
+              <h4 id="warrantEvidenceHeading">Evidence for the arrest</h4>
+              <ol id="warrantEvidence" class="evidence-list"></ol>
+            </section>
+            <section id="warrantConfirmation" class="warrant-confirmation" hidden aria-labelledby="warrantConfirmationHeading">
+              <h4 id="warrantConfirmationHeading">Your deduction is ready</h4>
+              <p id="warrantConfirmationSummary"></p>
+              <p>Review the evidence, then confirm the arrest below.</p>
+            </section>
+            <div id="warrantManualFields" class="bg-white/50 p-4 rounded-xl border border-slate-200 shadow-inner space-y-4 max-w-md mx-auto">
               <!-- Field 1: Stop -->
               <div>
                 <label for="warrantCity" class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Current stop</label>
@@ -372,6 +387,13 @@
                 </select>
               </div>
 
+              <button id="warrantCompactToggle" onclick="toggleCompactWarrant()" class="utility-control" aria-pressed="false">One selection for hideout and disguise</button>
+              <div id="warrantCompactFields" hidden>
+                <label for="warrantPair" class="block font-bold">Hideout and disguise</label>
+                <p id="warrantPairHelp">Choose both details together. The choices contain every combination from the separate fields.</p>
+                <select id="warrantPair" aria-describedby="warrantPairHelp" onchange="selectWarrantPair()"></select>
+              </div>
+              <div id="warrantSeparateFields" class="space-y-4">
               <!-- Field 2: Hideout -->
               <div>
                 <label for="warrantHideout" class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-1">Hideout</label>
@@ -389,6 +411,7 @@
                   <!-- Dynamically populated -->
                 </select>
               </div>
+              </div>
             </div>
           </div>
 
@@ -401,8 +424,8 @@
           </div>
 
           <div class="mt-8 flex justify-between items-center border-t border-slate-300 pt-4">
-            <button onclick="switchTab('puzzle')" class="px-4 py-2 border border-slate-400 hover:border-slate-800 rounded font-semibold text-slate-700 hover:text-slate-900 transition-colors">
-              ← Return to Puzzle
+            <button onclick="switchTab('dossier')" class="px-4 py-2 border border-slate-400 hover:border-slate-800 rounded font-semibold text-slate-700 hover:text-slate-900 transition-colors">
+              Review case file
             </button>
             <button id="submitWarrantBtn" onclick="submitWarrant()" class="px-6 py-3 bg-red-700 hover:bg-red-800 text-white font-extrabold rounded-lg transition-colors flex items-center gap-2 shadow-md">
               Submit warrant
@@ -412,6 +435,54 @@
 
       </div>
     </div>
+    <!-- Supporting route information follows the active task in reading order. -->
+    <aside class="case-sidebar space-y-4" aria-label="Route and case progress">
+      
+      <!-- HUD Card -->
+      <div class="glass rounded-2xl p-4 flex justify-between items-center border border-white/5 shadow-xl">
+        <div class="flex items-center gap-3">
+          <div class="text-2xl text-amber-400">🕵️‍♂️</div>
+          <div>
+            <p id="hudRank" class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Detective</p>
+            <p id="hudScore" class="text-white font-black text-lg" aria-live="polite">Score: <span class="text-amber-400">0000</span></p>
+          </div>
+        </div>
+        
+        <!-- Lives Indicator (Magnifying Glasses) -->
+        <div class="text-right">
+          <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-1">Backup Lives</p>
+          <div id="livesContainer" role="img" aria-label="Lives remaining" class="flex gap-1 justify-end">
+            <!-- Rendered via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Real Map Card -->
+      <details id="routeDetails" class="glass route-details">
+        <summary>Route map and stops</summary>
+        <div class="route-details-content">
+        <div class="flex items-center justify-between mb-2 border-b border-white/5 pb-2">
+          <p class="text-xs font-bold text-sky-400 uppercase tracking-wider">ACME Tracking Map</p>
+          <p id="currentCityText" class="text-xs text-white font-bold"></p>
+        </div>
+        <div class="relative w-full aspect-[4/5] bg-slate-950/40 rounded-xl border border-white/5 overflow-hidden z-10">
+          <div id="map" class="w-full h-full" role="group" aria-label="Tracking map and route overview" aria-describedby="mapTextAlternative" tabindex="-1"></div>
+        </div>
+        <p id="mapTextAlternative" class="sr-only" aria-live="polite">Map not initialized.</p>
+        <p class="map-scope-note">Map pins are approximate orientation points, not entrances or travel directions. The text route identifies every game stop.</p>
+        <button id="retryMapButton" hidden onclick="retryMap()" class="utility-control">Retry map</button>
+        </div>
+      </details>
+
+      <!-- Inventory Clue Tokens Card -->
+      <div class="glass rounded-2xl p-4 border border-white/5 shadow-xl">
+        <p class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Collected Clue Tokens</p>
+        <div id="tokenGrid" class="grid grid-cols-4 gap-2">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+    </aside>
   </div>
 
   <!-- ================= SCREEN 4: BETWEEN ROUNDS (TRAVEL / BRIEFING) ================= -->
@@ -479,6 +550,20 @@
   </div>
 </div>
 
+<!-- Keep the investigation available when the challenge becomes a barrier. -->
+<div id="assistanceModal" role="dialog" aria-modal="true" aria-labelledby="assistanceTitle" aria-describedby="assistanceDescription" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4">
+  <div class="glass assistance-sheet">
+    <h2 id="assistanceTitle">Keep investigating?</h2>
+    <p id="assistanceDescription">Continue this same case with guided support. Your evidence and completed stops stay with you, and the case will be recorded as assisted.</p>
+    <div class="study-actions">
+      <button data-initial-focus onclick="continueAssistedCase()" class="primary-action">Continue with support</button>
+        <button onclick="declineCaseAssistance()" class="secondary-action">Pause and keep case</button>
+    </div>
+    <p>Closing the case records this attempt and ends its resumable progress.</p>
+    <button onclick="finishEscapedCase()" class="secondary-action">Close case with current result</button>
+  </div>
+</div>
+
 <!-- Records Modal -->
 <div id="recordsModal" role="dialog" aria-modal="true" aria-labelledby="recordsTitle" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
   <div class="glass max-w-lg w-full rounded-2xl p-6 border border-white/15 text-left fade-in-up">
@@ -495,6 +580,59 @@
   </div>
 </div>
 
+<!-- Local study and notebook; opening pauses the investigation first. -->
+<div id="studyModal" role="dialog" aria-modal="true" aria-labelledby="studyTitle" aria-describedby="studyIntro" class="hidden study-modal">
+  <div class="glass study-sheet">
+    <div class="study-heading">
+      <h2 id="studyTitle">Study / Notebook</h2>
+      <div class="study-actions"><button id="studyReturnButton" hidden onclick="returnToCaseFromStudy()">Return to my case</button><button data-initial-focus onclick="closeStudy()">Close Study</button></div>
+    </div>
+    <p id="studyIntro">Unscored practice and saved learning notes. Your investigation stays paused. Return to your case when ready, or close Study to visit the menu. To study another pack, use the menu’s Quiz Pack selector.</p>
+    <p id="studyPackTitle" class="study-pack-title"></p>
+    <p id="studyStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+    <div class="study-selectors">
+      <div><label for="studyFilter">Show cases</label><select id="studyFilter" onchange="renderStudyLocations()"><option value="all">All cases</option><option value="starred">Saved cases</option><option value="due">Reviews due</option></select></div>
+      <div><label for="studyLocation">Location</label><select id="studyLocation" onchange="renderStudyCases()"></select></div>
+      <div><label for="studyCase">Case</label><select id="studyCase" onchange="renderStudyCase()"></select></div>
+    </div>
+    <p id="studyEmpty" hidden>No matching cases in this pack. Choose All cases to browse, save a case, or schedule a review.</p>
+    <section id="studyCaseContent" aria-labelledby="studyCaseTitle" hidden>
+      <h3 id="studyCaseTitle"></h3>
+      <p id="studyEvidence" class="study-text"></p>
+      <p id="studyQuestion" class="study-question"></p>
+      <div id="studyChoices" class="study-choices"></div>
+      <p id="studyChoiceFeedback" role="status" aria-live="polite"></p>
+      <button id="studyReveal" onclick="revealStudyAnswer()">Reveal answer and explanation</button>
+      <p id="studyAnswer" class="study-text study-answer" hidden></p>
+      <section id="studyTransfer" hidden aria-labelledby="studyTransferTitle">
+        <h4 id="studyTransferTitle">Try the idea in another setting</h4>
+        <p id="studyTransferPrompt"></p>
+        <button id="studyTransferReveal" onclick="revealStudyAnswer(true)">Reveal suggested reasoning</button>
+        <p id="studyTransferAnswer" class="study-text study-answer" hidden></p>
+      </section>
+      <div class="study-actions"><button id="studyStar" aria-pressed="false" onclick="toggleStudyStar()">Save this case</button><button id="studyAgain" disabled onclick="rateStudyCase('again')">Again</button><button id="studyGotIt" disabled onclick="rateStudyCase('got-it')">Got it</button></div>
+      <p id="studyReviewStatus"></p>
+      <label for="studyNote">Optional note — saves as you write</label>
+      <textarea id="studyNote" rows="3" maxlength="2000" oninput="saveStudyNote()" aria-describedby="studyNoteHelp"></textarea>
+      <p id="studyNoteHelp">No note is required. Voice dictation and text expansion work here. Notes stay in this browser and are included in your local backup.</p>
+      <button onclick="saveStudyNote()">Retry note save</button>
+      <details class="study-speech"><summary>Read this case aloud</summary><p id="studySpeechHelp"></p><label for="studyVoice">Installed local voice</label><select id="studyVoice"></select><div class="study-actions"><button onclick="refreshStudyVoices()">Refresh voices</button><button id="studyRead" disabled onclick="readStudyCase()">Read case</button><button onclick="stopStudySpeech()">Stop reading</button></div></details>
+    </section>
+    <section class="study-backup" aria-labelledby="studyBackupTitle">
+      <h3 id="studyBackupTitle">Local backup and restore</h3>
+      <p>Export the latest notebook and saved investigation as a JSON file, including a saved case from another pack. To restore a saved case, first select its matching pack and version. Backups are limited to 10 MB. Restore actions show a preview and replace only the data named by the button. Imported files cannot supply quiz questions or executable content.</p>
+      <div class="study-actions"><button onclick="exportStudyBackup()">Export notebook and saved case</button><button onclick="reloadStudyNotebook()">Reload notebook</button></div>
+      <label for="studyImportFile">Inspect a Carmen backup file</label>
+      <input id="studyImportFile" type="file" accept=".json,application/json" onchange="previewStudyImport(this.files[0])">
+      <div id="studyImportPreview" class="study-import-preview" hidden>
+        <p id="studyImportDescription"></p>
+        <p>These actions replace existing local data. Export the current data first if you want to keep both versions.</p>
+        <div class="study-actions"><button id="studyRestoreNotebook" onclick="restoreStudyNotebook()">Confirm: replace notebook</button><button id="studyRestoreSave" onclick="restoreStudySavedCase()">Confirm: replace saved case</button><button onclick="cleanupStudy()">Cancel import</button></div>
+      </div>
+    </section>
+  </div>
+</div>
+
 <!-- Footer -->
 <footer class="relative z-10 w-full text-center py-4 text-[10px] text-slate-500 tracking-wider uppercase border-t border-white/5 bg-slate-950/20 mt-8">
   <span id="packFooterTitle">Where in Bentonville is Carmen Sandiego?</span> — Unofficial fan-made training game. All crimes and suspects are fictional.
@@ -502,13 +640,22 @@
   <a href="https://www.openstreetmap.org/fixthemap">Report a map issue</a>.
 </footer>
 
+<script src="./quiz-activities.js"></script>
+<script src="./quiz-practice.js"></script>
+<script src="./case-design.js"></script>
 <script src="./game-core.js"></script>
+<script src="./study-core.js"></script>
 <script src="./builtin-pack.js"></script>
 <script src="./map-config.js"></script>
 <script src="./run-generator.js"></script>
 <script src="./game-map.js"></script>
 <script src="./game-records.js"></script>
+<script src="./game-activities.js"></script>
+<script src="./game-session.js"></script>
+<script src="./game-warrant.js"></script>
+<script src="./game-study.js"></script>
 <script src="./game.js"></script>
+<script src="./game-experience.js"></script>
 <!-- Start the optional library after its load/error handlers are defined. -->
 <script async src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" id="leafletScript" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" onload="handleMapLibraryLoad()" onerror="handleMapLibraryError()"></script>
 </body>

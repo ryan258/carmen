@@ -164,7 +164,7 @@ function drawMapGrid() {
     }).addTo(map);
     
     if (isCurrent) {
-      marker.bindTooltip(loc.name, {
+      marker.bindTooltip(escapeHtml(loc.name), {
         permanent: true,
         direction: 'top',
         className: 'leaflet-tooltip-carmen'
