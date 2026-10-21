@@ -31,9 +31,13 @@ test('abort cancels delayed progression and keeps the save deleted',()=>{
   assert.equal(g.document.getElementById('titleScreen').classList.contains('hidden'),false);
 });
 
-test('zero-life resume ends the game once without restoring lives',()=>{
+test('zero-life resume preserves the case for a support decision and closes only on request',()=>{
   const g=createGame();g.start();const save=g.snapshot();save.lives=0;g.backing.set('carmen_save',JSON.stringify(save));
-  g.run('goToTitle(); resumeGame(); triggerGameOver()');assert.equal(g.state().lives,0);assert.equal(g.state().phase,'complete');
+  g.run('goToTitle(); resumeGame(); triggerGameOver()');assert.equal(g.state().lives,0);assert.equal(g.state().phase,'investigation');
+  assert.equal(g.run('activeModal'),'assistanceModal');assert.equal(g.snapshot().lives,0);
+  assert.equal(g.run('getStats().gamesPlayed'),0);
+  g.run('finishEscapedCase(); finishEscapedCase()');assert.equal(g.state().phase,'complete');
+  assert.equal(g.backing.has('carmen_save'),false);
   assert.equal(g.run('getStats().gamesPlayed'),1);
 });
 
@@ -76,7 +80,9 @@ test('final feedback is resumable and a final failure explains the failed final 
   g.run('selectFinalChoice(state.activeFinalCorrectIndex,state.activeFinalCorrectIndex); goToTitle(); resumeGame()');
   assert.equal(g.state().finalConfrontationRound,1);assert.equal(g.state().puzzleSolved,true);
   g.document.getElementById('finalContinueBtn').click();assert.equal(g.state().finalConfrontationRound,2);assert.equal(g.state().puzzleSolved,false);
-  g.run('state.lives=0;triggerGameOver()');assert.match(g.document.getElementById('resultsContent').innerHTML,/Final report — round 2/);
+  g.run('state.lives=0;triggerGameOver()');assert.equal(g.run('activeModal'),'assistanceModal');
+  assert.equal(g.snapshot().finalConfrontationRound,2);
+  g.run('finishEscapedCase()');assert.match(g.document.getElementById('resultsContent').innerHTML,/Final report — round 2/);
 });
 
 test('pack loading blocks start and resume until the latest request completes',async()=>{

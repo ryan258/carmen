@@ -55,7 +55,9 @@ function createGame() {
   const run=code=>vm.runInContext(code,context);
   for(const match of html.matchAll(/<script[^>]*src="\.\/([^"]+)"[^>]*>/g))vm.runInContext(fs.readFileSync(path.join(root,match[1]),'utf8'),context,{filename:match[1]});
   for(const el of tree.querySelectorAll('[onclick]'))el.onclick=()=>run(el.getAttribute('onclick'));
-  run('state.settings.sound=false; packLoading=false; applyQuizPack(DEFAULT_QUIZ_PACK);');
+  // Existing regression fixtures intentionally exercise Classic. Mixed tests set
+  // this real control explicitly; the shipped page defaults to Mixed.
+  run('state.settings.sound=false; packLoading=false; applyQuizPack(DEFAULT_QUIZ_PACK); document.getElementById("quizStyleSelect").value="classic";');
   return {run,document,backing,context,
     boot:()=>dispatch(docEvents,'DOMContentLoaded',{}),
     dispatchWindow:(type,event)=>dispatch(windowEvents,type,event),
@@ -63,7 +65,12 @@ function createGame() {
     state:()=>JSON.parse(run('JSON.stringify(state)')),
     snapshot:()=>JSON.parse(backing.get('carmen_save')),
     flush(){let count=0;while(timers.size){if(++count>200)throw new Error('Timer loop');const [id,{fn,due}]=[...timers.entries()].sort((a,b)=>a[1].due-b[1].due)[0];timers.delete(id);clock=due;fn();}},
-    start(count=4){run(`state.stopCount=${count}; selectDifficulty('detective');`);},
+    // Historical regressions intentionally retain catalog 2 answer/warrant rules.
+    // New design tests pass 3, or invoke the real Quick/story entry buttons.
+    start(count=4,catalogVersion=2){
+      run(`state.stopCount=${count}; selectDifficulty('detective');`);
+      if(catalogVersion===2 && run("state.phase === 'investigation'")) run('state.activityCatalogVersion=2; startLocation();');
+    },
     solve(){run('selectChoice(state.activePuzzleCorrectIndex)');this.flush();document.getElementById('goToWarrantBtn').click();},
     warrant(correct=true){const answer=JSON.parse(run('JSON.stringify(getLocationCase(state.currentLocationIndex).warrantAnswers)'));for(const field of ['city','hideout','disguise'])document.getElementById(`warrant${field[0].toUpperCase()+field.slice(1)}`).value=correct?answer[field]:'wrong';run('submitWarrant()');}
   };
