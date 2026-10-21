@@ -1,0 +1,176 @@
+Using Node v26.7.0
+ryanjohnson@MacBookAir carmen % cd /Users/ryanjohnson/Projects/nonsense/carmen
+npm run verify:design && npm run build:offline
+
+> verify:design
+> npm run check:syntax && npm run check:content && node --test tests/design-core.test.js tests/design-content.test.js tests/design-flow.test.js tests/design-ux.test.js tests/activities.test.js tests/route-variety.test.js tests/session-regressions.test.js tests/harmony.test.js tests/study.test.js
+
+
+> check:syntax
+> node --check game.js && node --check game-core.js && node --check case-design.js && node --check game-experience.js && node --check quiz-activities.js && node --check quiz-practice.js && node --check study-core.js && node --check game-activities.js && node --check game-study.js && node --check game-session.js && node --check game-warrant.js && node --check game-map.js && node --check game-records.js && node --check run-generator.js && node --check map-config.js && node --check builtin-pack.js && node --check scripts/generate-bentonville-content.js && node --check scripts/check-content.cjs && node --check scripts/apply-henchmen.js && node --check scripts/build-offline.cjs
+
+
+> check:content
+> node scripts/check-content.cjs
+
+bentonville-carmen, argentina-carmen, northwest-arkansas-carmen, nwa-mountain-biking-carmen, arkansas-state-parks-carmen, route-66-carmen, ozark-waterways-carmen, arkansas-delta-carmen, american-national-parks-carmen, railroads-depots-carmen, architecture-hidden-details-carmen, museums-missing-labels-carmen: structural contracts and fallback accepted.
+320 cases; 0 still need factual/editorial sign-off. The route-based finale inherits those case reviews; its token question uses only the collected inventory.
+Quiz pack manifest unavailable; using built-in fallback cases. Error: No network in harness
+    at fetch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:52:87)
+    at fetchJson (game.js:160:28)
+    at loadQuizPack (game.js:204:28)
+    at game.js:523:9
+    at dispatch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:47:88)
+    at Object.boot (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:62:14)
+    at TestContext.<anonymous> (/Users/ryanjohnson/Projects/nonsense/carmen/tests/activities.test.js:181:14)
+    at Test.runInAsyncScope (node:async_hooks:214:14)
+    at Test.run (node:internal/test_runner/test:1047:25)
+    at Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+✔ current authored activity coverage is version-bound and preserves reusable answer descriptors (7.348084ms)
+✔ match partial work survives pause/resume with stable card labels and free revisions (48.754916ms)
+✔ sequence partial work survives pause/resume with stable card labels and free revisions (42.922959ms)
+✔ one rejected complete arrangement costs one life across repeated checks and resume (22.312834ms)
+✔ accepted activity awards once, retains explanation, and waits for Continue after resume (21.730084ms)
+✔ enabled shortcuts operate from the focused puzzle tab and activity card (15.046459ms)
+✔ historical schema-5 progress resumes as Classic without reinterpreting its chosen cases (15.14475ms)
+✔ current saves reject corrupt, substituted, or incompatible activity progress (10.658917ms)
+✔ filter answers are unordered and imported reversed rejections never charge twice (23.66625ms)
+✔ fragment assembly caps input at its answer length and preserves ordered partial work (13.6275ms)
+✔ every supported pack and route length has bounded route-order and token-match finales (0.870792ms)
+✔ a mixed short route completes all three finale formats with resumable work and explicit Continue (29.145333ms)
+✔ score boards separate Mixed from Classic and retain unlabelled historical records as Classic (5.629542ms)
+✔ mixed generation deterministically includes a pilot when the selected route has one (209.7825ms)
+✔ mixed activity result reviews retain warrant answers and the reconstructed work (15.599416ms)
+✔ both warrant layouts lock their editable fields during rejection and restore after pause (5.073916ms)
+✔ the page and existing Pages package include both activity modules in dependency order (0.483666ms)
+✔ reasoning overlays preserve catalog-1/2 saves and the original source-review record (9.508208ms)
+✔ Buffalo requires the two supported fields and diagnoses which field was changed (4.256667ms)
+✔ corroboration requires independent and relevant evidence with all file relationships visible (1.263209ms)
+✔ catalog 3 market activity asks for the seller satisfying both conditions without changing older matching work (2.34125ms)
+✔ episode is anchored to exactly four current cases and reveals only recovered records (4.019458ms)
+✔ episode finale synthesizes receipt identity, overwrite timing, and an open route with all evidence present (1.082833ms)
+✔ schema 8 preserves exact historical save contracts and accepts zero-life recovery decisions (1.934333ms)
+✔ assistance and evidence marks are strict persisted state, not unchecked import flags (4.594292ms)
+✔ enabling assistance preserves points earned before it and waives only subsequent hint costs (0.935916ms)
+✔ assisted multi-part retries survive resume beyond the original life allowance (3.181917ms)
+✔ episode saves pin authored cases and use their synthesis finale in both formats (3.521292ms)
+✔ commendations recognize accuracy equally on short and long completed routes (0.447083ms)
+✔ reasoning selection is independent of assistance and preserves fallback content (0.199375ms)
+✔ records separate assisted, reasoning, episode, and redesigned Classic scores from legacy boards (5.330708ms)
+✔ quick entry creates a four-stop current Mixed case and resume visibly describes its next action (35.34825ms)
+✔ new warrants confirm the solved case once while historical catalog keeps its independent fields (32.178125ms)
+✔ assistance preserves paid hints and earned work while waiving only future hint costs (22.943916ms)
+✔ zero lives offers durable recovery, Pause keeps it, then assistance resumes the same case (15.141625ms)
+✔ assistance and confirmation cannot replace progress changed in another tab (12.00925ms)
+✖ story reveals recovered records in order and completes its synthesis finale with a short-route commendation (6.708375ms)
+✔ Continue across packs loads only a manifest pack and refuses a stale saved snapshot (23.811458ms)
+✔ evidence remains available beside the decision and marks preserve focused control and saved work (46.369583ms)
+✔ Study returns directly to its own unchanged case and rejects a replaced snapshot (20.382375ms)
+✔ in-case reading uses an installed local voice only and stops on pause (24.42475ms)
+✔ active task precedes route in actual page reading order (12.804292ms)
+✔ Study keeps the paused revised case question and answer aligned with its saved catalog (36.943042ms)
+✔ filters toggle freely and cannot charge again for the same set selected in a different order after resume (48.370833ms)
+✔ fragment assembly leaves distractors unused and saves partial ordered work (18.296291ms)
+✔ compact warrants preserve every answer combination, saved selections, and the original score path (19.67975ms)
+✔ save restoration requires a paused Study session and rejects a stale replacement preview (14.899959ms)
+✔ fallback evidence renders plain names and labels as text, not markup (11.012583ms)
+✔ fictional warrant names agree across clues, controls, review and Study while saves keep canonical answers (13.683459ms)
+✔ offline edition embeds all current packs and runtime assets without fetching maps or scripts (45.977417ms)
+✔ every shipped script is syntax-covered and included in the deployment artifact (4.496708ms)
+✔ offline JSON embedding preserves literal replacement markers and script-looking evidence (7.268625ms)
+✔ every short route is a deterministic contiguous window, including the final pack locations (76.181375ms)
+✔ case selection uses unseen variants, then the least recently visited variant (2.344333ms)
+✔ format balancing stays inside equally fresh case candidates (0.281417ms)
+✔ recent history is bounded, deduplicated and accepts only current pack case identities (3.93625ms)
+✔ only actually visited cases enter history, including an abandoned first stop (36.75625ms)
+✔ a saved non-prefix route restores exact locations and cases after history changes (13.560541ms)
+✔ schema 5 preserves its historical route and migrates only after resume (9.445708ms)
+✔ schema 6 preserves its historical route and migrates only after resume (6.393375ms)
+✔ schema 7 preserves its historical route and migrates only after resume (14.13825ms)
+✔ schema-6 Mixed resumes a formerly-choice case without applying the expanded catalog (22.947917ms)
+✔ a window ending before the pack end returns to headquarters and uses only visited finale evidence (7.690584ms)
+✔ scoreboards separate route windows and preserve legacy prefix records (13.190833ms)
+✔ Mixed records keep original and expanded catalogs on separate boards (6.613292ms)
+✔ subset activity rules distinguish unordered filters from ordered fragment assembly (0.139208ms)
+Quiz pack manifest unavailable; using built-in fallback cases. Error: No network in harness
+    at fetch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:52:87)
+    at fetchJson (game.js:160:28)
+    at loadQuizPack (game.js:204:28)
+    at game.js:523:9
+    at dispatch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:47:88)
+    at Object.boot (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:62:14)
+    at TestContext.<anonymous> (/Users/ryanjohnson/Projects/nonsense/carmen/tests/session-regressions.test.js:126:32)
+    at Test.runInAsyncScope (node:async_hooks:214:14)
+    at Test.run (node:internal/test_runner/test:1047:25)
+    at Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+Quiz pack manifest unavailable; using built-in fallback cases. Error: No network in harness
+    at fetch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:52:87)
+    at fetchJson (game.js:160:28)
+    at loadQuizPack (game.js:204:28)
+    at game.js:523:9
+    at dispatch (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:47:88)
+    at Object.boot (/Users/ryanjohnson/Projects/nonsense/carmen/tests/helpers/game-harness.cjs:62:14)
+    at TestContext.<anonymous> (/Users/ryanjohnson/Projects/nonsense/carmen/tests/session-regressions.test.js:166:32)
+    at Test.runInAsyncScope (node:async_hooks:214:14)
+    at Test.run (node:internal/test_runner/test:1047:25)
+    at Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+✔ resume preserves hint cost, attempts, eliminated options, and solved score (38.890333ms)
+✔ warrant rejection is locked during feedback; unsolved and final warrants are rejected (24.551375ms)
+✔ approved warrant resumes the between-stop phase once without awarding twice (21.647875ms)
+✔ abort cancels delayed progression and keeps the save deleted (9.5345ms)
+✔ zero-life resume preserves the case for a support decision and closes only on request (10.69875ms)
+✔ unknown, old, foreign, malformed and unsupported-length saves never migrate (11.28225ms)
+✔ records recover from malformed storage and separate route lengths (9.094292ms)
+✔ all manifest packs complete 4/6/8-stop runs and start again with correct controls (427.65525ms)
+✔ final feedback is resumable and a final failure explains the failed final question (6.847875ms)
+✔ pack loading blocks start and resume until the latest request completes (7.461042ms)
+✔ a late earlier pack response cannot replace the latest selection (5.332875ms)
+✔ unavailable map stays a route fallback across stops without reinitializing Leaflet (4.490042ms)
+✔ stale abort confirmation cannot erase another tab save, even before its storage event (4.102208ms)
+✔ actual boot registers storage cancellation and invalidates an open dialog (6.956667ms)
+✔ clearing an old broken-save control preserves a newer valid save (4.424ms)
+✔ correct-answer feedback waits for Continue and restores without advancing (4.789167ms)
+✔ warrant choices stay local and the established location is filled at every difficulty (14.203667ms)
+✔ actual page bindings expose unique controls, voice labels, pause and text-route preference (4.876958ms)
+✔ keyboard shortcuts execute after boot and ignore focused form controls (5.152667ms)
+✔ a pending storage event cannot let an old tab overwrite a newer save (5.84825ms)
+✔ notebook preserves exact case versions, optional notes and immutable updates (2.5045ms)
+✔ explicit self ratings schedule bounded review intervals without passive timers (0.2775ms)
+✔ notebook and backup reject ambiguous, oversized, or inconsistent imported state (1.395292ms)
+✔ resume summary identifies rotated routes, modality, progress and the next action (0.617459ms)
+✔ opening Study pauses callbacks and unscored practice never changes the saved investigation (58.3045ms)
+✔ note edits survive reopening and do not overwrite a newer notebook from another tab (14.337333ms)
+✔ Study opens directly to the active or paused investigation case (15.201625ms)
+✔ a corrupt notebook is preserved, and explicit restore can replace it after preview (8.480208ms)
+✔ import replacement checks the notebook snapshot again at confirmation (12.610209ms)
+✔ a pending file read cannot reopen an import preview after Study closes (7.722959ms)
+✔ read aloud accepts only local voices, requires a click and stops on close (5.104541ms)
+✔ backup export includes an unsaved note draft without overwriting newer browser data (6.810209ms)
+ℹ tests 98
+ℹ suites 0
+ℹ pass 97
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 849.83875
+
+✖ failing tests:
+
+test at tests/design-flow.test.js:96:1
+✖ story reveals recovered records in order and completes its synthesis finale with a short-route commendation (6.708375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (/Users/ryanjohnson/Projects/nonsense/carmen/tests/design-flow.test.js:105:12)
+      at async Test.run (node:internal/test_runner/test:1054:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:744:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+ryanjohnson@MacBookAir carmen % 

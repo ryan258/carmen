@@ -1,4 +1,75 @@
-# Current remediation status — October 17, 2026
+# Current remediation status — October 21, 2026
+
+## Design verification and market-save resolution — October 21
+
+The first design run passed syntax and structural content/fallback checks, then passed 97 of 98 focused tests. The story integration test failed at saved-state validation after solving its first stop. Source inspection identified the new market filter's `version: 2` descriptor as incompatible with `validActivityProgress`, which accepts descriptor format 1. The task's authored revision is already represented by its stable `classic-downtown-square:filter:v2` ID. The descriptor was corrected to `version: 1`, retaining the ID, choices, solution, and save schema. Core and story test coverage was expanded to exercise saving/resuming that task across catalogs 1–3.
+
+Verification of the correction and full design suite succeeded cleanly:
+- `npm run check:syntax` and `npm run check:content` passed for all 12 packs and 320 cases.
+- `node --test tests/design-core.test.js tests/design-flow.test.js` passed all 16 tests.
+- `npm run verify:design` passed all 99 focused design tests with zero failures.
+- `npm run verify:harmony` passed all 118 focused harmony tests with zero failures.
+- `npm test` passed the full Node suite (153/153 tests across 17 test files).
+- `npm run build:offline` generated `dist/carmen-offline.html` bundling all twelve packs, local styles, and sixteen runtime scripts.
+- Ryan ran `npx gitnexus analyze`, cleanly indexing 1,716 nodes, 6,743 edges, 54 clusters, and 147 flows.
+
+## Investigation-flow update — implemented and verified
+
+The current local changes add a primary cross-pack Continue action, four-stop Quick case, independent reasoning preference and initial hint/life allowance, evidence beside decisions, persistent useful-clue marks, new-case arrest confirmation, direct Study return, and in-play local read-aloud. Mistakes receive more useful feedback; support preserves completed work, waives future hint/life costs, and records an assisted result. Zero-life recovery offers continuation or a durable pause before an explicit close. New successful runs use route-relative commendations.
+
+One authored four-stop Bentonville episode, **The Swapped Dispatch**, recovers linked fictional records and ends with three synthesis decisions. Two identified weak source-case presentations and the market activity were revised behind catalog 3. Original pack assets, versions, source metadata and historical catalogs remain unchanged. This is a bounded story pilot, not a rewrite of every pack. The [design update](design-update-2026-10-21.md) gives exact scope and limits.
+
+Schema 8 validates assistance, paid-hint accounting, reasoning preference, episode identity and clue marks. Matching-content schemas 5–7 preserve their existing route and answer interpretation, then upgrade on write. Records separate assistance and new rules. HTML, syntax coverage, and future Pages packaging include the two new helpers (`case-design.js` and `game-experience.js`), making sixteen runtime scripts. The portable offline edition is regenerated at `dist/carmen-offline.html`.
+
+Under Ryan's explicit delegation, all changes are reviewed, documentation aligned, and work bundled into logically grouped local commits. Browser layout, installed-voice behavior, and human acceptance remain open. No push, deployment, or publication occurred.
+
+## Study close correction — after owner verification
+
+Ryan reported that Close Study left the modal visible in the offline edition. Source inspection confirmed that the later `.study-modal { display: flex; }` rule overrode Tailwind's equally specific `.hidden` rule. The close handler changed the class correctly, but the overlay remained displayed; the same conflict also defeated initial hiding. The DOM test double does not compute CSS layout, so the passing lifecycle tests did not cover this defect.
+
+Added `.study-modal.hidden { display: none; }` in `styles.css` and the identical embedded stylesheet in the owner's existing `dist/carmen-offline.html`. The source fix is included in future offline builds; the local artifact was patched directly without running a build. Refresh the file, confirm Study starts hidden, then open and close it with Close Study and Escape and confirm it can reopen. No browser check, test, build, or reindex was run for this correction. The 117-test pass below remains evidence for the preceding tree; it is not visual acceptance of this fix. Save data and JavaScript behavior were unchanged.
+
+## Owner-run harmony verification — October 21
+
+Ryan supplied the complete [terminal transcript](archive/verification-2026-10-21-harmony.txt) from Node v26.7.0 after the harmony implementation. This supersedes pending-verification statements for that implementation; the earlier checkpoints below retain their historical scope.
+
+| Owner-run command | Result | Evidence boundary |
+| --- | --- | --- |
+| `npx gitnexus analyze` | GitNexus 1.6.12 reported successful indexing: 1,465 nodes, 5,435 edges, 49 clusters, 125 flows | Index rebuild evidence, not a test or a complete change-impact report. Progress output includes an abbreviated truncation diagnostic; no claim of complete graph resolution follows from the success message. |
+| `npm run verify:harmony` | Syntax PASS; structural content/manifest/fallback contracts PASS for all twelve packs; **117/117 tests PASS**, zero failures, cancellations, skips, or todos | Eleven focused test files, not the full Node suite. The checker found recorded review evidence for all 320 cases; it did not independently revisit sources or establish human editorial approval. |
+| `npm run build:offline` | Successful output at `dist/carmen-offline.html`; file presence also confirmed during the documentation follow-up | Build and packaging evidence. Opening, playing, local-file persistence, and installed voices still need browser/personal-use evidence. |
+
+The repeated `No network in harness` warnings are expected: the harness deliberately supplies a rejecting `fetch`, and real boot code logs its switch to the built-in fallback. The affected boot regressions pass. These warnings do not identify a production network fault or prove real HTTP loading.
+
+No runtime or test changes were needed in response. This follow-up only archives the supplied evidence and reconciles documentation; agents did not rerun tests, builds, or analysis. Browser/assistive-technology acceptance, source/map-coordinate refresh, and publication remain separate. Changes remain local, unstaged, and uncommitted.
+
+## Harmony follow-up — October 21, after the project review
+
+Ryan asked to implement the identified corrections and next actions while leaving tests, builds, and reindexing to him. His pre-edit index recorded `a0e71b4` at October 21 16:51:54 UTC: 77 files, 1,132 symbols, 4,011 edges, and 96 flows. Read-only impact/source tracing informed the edits; the owner's later rebuild is recorded above. No agent ran analyze/reindex.
+
+Implemented locally: the activity catalog expands to 47 activities in four forms, with explicit catalog identity preserving existing Mixed saves; shorter routes choose bounded windows beyond the old fixed prefix, and recent-case history reduces repeat exposure. Case presentation removes repeated boilerplate where existing specific evidence can carry the dispatch. All 48 existing six-concept transfer prompts are available in unscored Study. Compact warrants reduce the required selection count while retaining the complete original answer combinations and scoring. New games display location-specific fictional names for 192 desk/disguise pairs consistently in clues, controls, hints, explanations, and Study; canonical saved answers and older catalog wording remain intact. Original pack JSON, source metadata, content versions, and generated fallback remain unchanged.
+
+Study / Notebook pauses the investigation, opens its current case, and provides direct selection, answer reveal, saved cases, optional notes, and explicit Again/Got it review scheduling. Notes save locally with conflict checks; retained drafts survive case switches and are included in export. Backup inspection validates the notebook and active save separately, previews replacements, and checks storage snapshots again at confirmation. Optional read-aloud accepts only browser-designated installed local voices, never autoplays, and keeps the full text available. The [Study/recovery guide](study-and-backup.md) documents contracts and limits.
+
+New save schema 7 records route start and activity catalog version. Valid matching-content schema-5 and schema-6 saves keep their original route/activity behavior and upgrade on write; older builds reject schema 7. Remaining trusted-text rendering sinks are escaped, the henchman authoring script uses the established unique-file writer, and separate activity, warrant, study, and save adapters reduce controller concentration. An optional offline builder embeds local assets and all packs with a text route; Ryan subsequently built it successfully. Page loading, syntax coverage, and deployment packaging include fourteen runtime modules, without publishing them.
+
+**Owner verification passed:** the current syntax/content gates, 117 focused tests, and offline build passed as recorded above. Agents ran none of those commands. The [finish plan](finish-plan.md) retains the reproducible command and remaining personal-use checks. Browser/voice/assistive-technology acceptance, exact map-pin/source re-verification, and personal comfort remain separate evidence. All work remains local, unstaged, and uncommitted; no push, deployment, or publication occurred.
+
+The earlier October 21 checkpoint below preserves the first 20-activity/schema-6 implementation as history and is superseded by this follow-up for current functionality.
+
+## Project review and quiz variety — October 21
+
+The [project review](project-review-2026-10-21.md) records the source-based orientation, content inventory, opening Git diff, corrections, and remaining opportunities. The baseline was `a0e71b4`, with only AGENTS.md, CLAUDE.md, and README.md modified. Ryan's existing October 21 16:13 UTC index covered 72 files, 999 symbols, 3,366 relationships, and 84 flows. Pre-edit core/session and puzzle-rendering impact was CRITICAL; answer handling was HIGH. UNKNOWN file-level results were supplemented with current imports, HTML bindings, and test-harness source. That index predates the changes below and is now stale for edited/new files. No reindex ran.
+
+Implemented locally: Mixed activities defaults for new runs, Classic four choices remains selectable, and twenty authored alternatives add fifteen sequences and five matches across all twelve exact pack versions. A seeded adjustment includes at least one alternative when the selected route has a compatible case. Other cases keep four choices. Mixed report rounds two and three order four evenly spaced visited stops and match their tokens; the original first-case question remains round one. The inventory stays available. The [activity guide](quiz-activities.md) records coverage and controls.
+
+Native cards, Undo last, Clear work, and Check work preserve partial selections and rejected arrangements. Each distinct rejected complete answer costs one life; repeating the same rejected arrangement costs no additional life. Correct feedback waits for Continue. Opted-in A–D/1–4 keys now work from puzzle tabs, choices, and cards while protecting forms, links, unrelated controls, modifiers, repeats, and composition. Worked activity answers are included in evidence review.
+
+New saves use schema 6. Valid historical schema-5 saves with matching pack/content versions resume as Classic and upgrade on the next write; older builds reject schema 6. Scoreboards separate quiz format, with valid older records without a format treated as Classic. No pack JSON, content version, authoring generator, or generated fallback changed. The new activity catalog and browser adapter are included in page loading, syntax coverage, and deployment packaging; this does not publish them. SPEC/ROADMAP version drift and the README deployment sentence were corrected.
+
+**Verification pending:** no tests, syntax/content/release gates, builds, browser checks, external source fetches, or GitNexus analyze/reindex ran for this implementation. New focused activity tests and updated regression source are authored, not executed; existing regression helpers explicitly select Classic, with new cases covering Mixed. The [finish plan](finish-plan.md) provides the owner-run command. Earlier 40/40 and 50/50 original-pack results remain historical. The twenty alternatives reuse existing written evidence and do not renew external factual review, establish runtime correctness, or demonstrate input comfort. A short personal input check is optional; a full human audit is not required for personal use.
+
+All current work remains local and uncommitted. No staging, commit, push, deployment, or publication occurred. Earlier authorization/commit statements below apply only to their dated historical work.
 
 ## Editorial follow-up to supplied independent review — October 17
 

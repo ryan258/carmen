@@ -1,32 +1,43 @@
-# Remaining work
+# Carmen roadmap
 
-The local catalogue now has 12 packs and 320 cases. Bentonville has 40 cases at version 4; Argentina has 40 cases at version 5; the two NWA packs and Museums & Missing Labels each have 24 at version 2; Arkansas State Parks, Route 66 and the other five concept packs each have 24 at version 1. All 320 cases carry recorded AI-assisted review evidence (0 pending). The [October 15 all-pack fact-check ledger](docs/all-packs-fact-check.md) completes the original-pack reviews, alongside the [144-case completion ledger](docs/remaining-packs-review.md), [parks/highway ledger](docs/parks-route66-review.md), [NWA ledger](docs/content-audit.md) and [original exemplar](docs/reviewed-exemplar.md).
+## Current state: design revision implemented and verified
 
-The six remaining ideas are now implemented: Ozark Waterways, Arkansas Delta, American National Parks, Railroads & Depots, Architecture & Hidden Details, and Museums & Missing Labels. Their 144 cases use the existing engine and save contract. No automated or browser result is claimed for these additions. The [current evidence](docs/remediation-status.md) keeps the original two-pack test results separate; [SPEC.md](SPEC.md) describes the implementation.
+The [October 21 investigation-flow update](docs/design-update-2026-10-21.md) is implemented and verified. The market activity descriptor was resolved to format 1, and the test suites (`verify:design`, `verify:harmony`, and full `npm test`) passed cleanly with zero failures. The offline build successfully generated `dist/carmen-offline.html`, and Ryan refreshed the GitNexus index to 1,716 nodes, 6,743 edges, 54 clusters, and 147 flows.
 
-## Immediate next action
+The current design adds a prominent Continue case action, Quick case, a custom reasoning preference independent of life/hint allowance, and a workspace that keeps the active decision and evidence together. Useful-clue marks persist. Local read-aloud is available during play, and Study can return directly to its preserved case. Catalog-3 arrests confirm established evidence; older runs retain their original manual warrants.
 
-Run the focused command in [the finish plan](docs/finish-plan.md), then try one short local route using the preferred input method. Confirm Hint, Case file, warrant selection and Pause/Resume, including reading effort. All ten additional packs are in local commits; pushing and publication remain separate actions. The last recorded [deployment](docs/deployment.md) predates all ten additions. Local changes and commits do not update the hosted preview.
+Support can be enabled during a case or offered at zero lives. It preserves work, prevents further life loss, and makes future hints free while retaining previously charged hints and points. Assisted results have separate records. Zero lives also offers pause with the save intact or explicit unfinished closure. New completion commendations use first-try accuracy within the selected route, so short routes can earn the same commendation as long ones. Historical ranks and case interpretation remain available for catalog-1/2 saves.
 
-## Learning-tool priorities
+Content changes are deliberately bounded. Catalog 3 keeps 47 authored alternatives and replaces the market's matching activity with a two-condition filter under a new ID. Two presentation overlays strengthen Buffalo classification and Henry Ford corroboration using existing source notes and explicit fictional records. **The Swapped Dispatch** connects the first four Bentonville stops through recovered records and a three-part synthesis finale. Other packs retain their existing recap finales. Pack JSON, source registries, content versions, and historical review records are unchanged; new presentation has separate review limits.
 
-1. Use one of the reviewed activities to identify confusing wording or excessive reading effort. While claim-level AI-assisted review is recorded across all 320 cases, human feedback, educator evaluation and observed learning remain open across all packs.
-2. Add Study mode, single-case access, a resume summary and a local learning notebook with optional spaced review and export.
-3. Extend the companion guides into reproducible in-game assignments using pack/version/route/seed, and verify a printable format. Transfer prompts and answer reasoning exist; an in-game case picker or assignment interface does not.
-4. Use representative browser/input and zoom checks to guide further changes. Wider educator/autodidact pilots are optional if wanted; they are not prerequisites for personal use.
+Schema 8 persists assistance, support state, charged-hint count, reasoning preference, optional episode identity, and useful-clue marks alongside the established case/route/activity state. Matching-content schemas 5, 6, and 7 retain their original case IDs, route, format, catalog, scores, eliminations, and partial work on resume. New runs use catalog 3. Older builds cannot read schema 8. Boards distinguish rules, assistance, reasoning preference, episode, format, catalog, and exact route.
 
-## Personal comfort and reliability
+The regular page loads sixteen local runtime scripts, including `case-design.js` and `game-experience.js`. The portable builder includes the page's script list and all packs, uses the text route, excludes remote executable resources, and generates `dist/carmen-offline.html`.
 
-The map and records adapters are separate. The controller still shares browser state with them; further dependency injection and view extraction are maintenance options if changes justify them. A framework migration is unnecessary for the current scope.
+## Next action
 
-The older `apply-henchmen.js` authoring helper still uses a fixed temporary filename. Migrate it to the shared unique atomic-write helper with interrupted-write coverage in an authoring-focused pass.
+With the deterministic test gates and offline builder verified, next actions focus on personal use and optional checks:
+- **Personal gameplay check:** assess whether Quick case, supported continuation, the connected episode, evidence layout, speech, and pause/resume feel comfortable in a real browser session.
+- **Offline edition check:** test the generated `dist/carmen-offline.html` file in the preferred local browser environment.
+- Staging and commits are performed under explicit owner delegation. Staging, pushing, deployment, and publication remain separate owner actions.
 
-## Optional enhancements
 
-- Improve distractors and explanation pacing based on actual play.
-- Add typed, reorder, coordinate or logic-grid interactions only with equivalent low-effort text and keyboard paths. These would be new engines.
-- Add original art, new locations or fully bundled offline assets if wanted.
-- Audit shared map pins and broader venue metadata separately. Current trail conditions, access rules, hours and suitability are outside the case reviews.
-- Expand browser/player coverage for any future broader audience without treating it as a requirement for personal use.
+## Historical October 21 harmony baseline
 
-The current Git review found no submodules, tracked gitlinks, nested Git checkouts or active commit hooks. Ryan authorized this full-change review, documentation reconciliation and logically grouped local commits. Pushing and publication remain separate actions. No tests or GitNexus analyze were run by the agent. Historical reviews remain in [the October 12 reconciliation](docs/review-reconciliation-2026-10-12.md).
+Before this design revision, Mixed expanded from twenty to 47 alternatives across twelve packs: twenty ordering, seventeen matching, seven filtering, and three assembly activities. Native cards preserved partial work and free revision. Short routes gained seeded contiguous windows and a bounded history of actually opened cases. Schema 7 stored route offset and catalog identity, preserving schema-5/6 prefix routes and original formats.
+
+The eight text-heavy packs gained concise presentation and distinct fictional location labels while retaining canonical values. Compact warrants preserved every original combination. Study / Notebook added direct case access, stars, optional notes/reviews, 48 existing companion transfers, local-voice speech, and previewed notebook/save restore. The then-current regular page loaded fourteen runtime scripts and gained an optional single-file offline builder.
+
+Ryan's earlier October 21 Node v26.7.0 run passed syntax/content checks and all 117 tests across eleven targeted files, with no failures, cancellations, skips, or TODOs. His offline build and GitNexus 1.6.12 refresh also succeeded. The [original owner-run transcript](docs/archive/verification-2026-10-21-harmony.txt) and [remediation record](docs/remediation-status.md) preserve that evidence. Agents did not run those commands. These results do not verify the subsequent design changes or establish browser/assistive-technology acceptance.
+
+## Remaining decisions and evidence
+
+- **Current verification:** deterministic checks (`verify:design`, `verify:harmony`, `verify`, and `build:offline`) are verified and passing. Real browser/assistive-technology behavior, installed-voice behavior, and local-file persistence remain personal checks.
+- **Content expansion:** 47 alternatives cover selected cases among 320. Expand only when existing evidence supports useful reasoning; preserve old descriptors for saved runs. The one connected episode is a pilot, not a completed campaign redesign.
+- **Editorial scope:** new fictional specificity must remain explicitly fictional. Source notes and dated review limits are not current access, display, travel, or learning guarantees. Neither the two overlays nor the episode imply a factual refresh.
+- **Personal-use feedback:** tune reading load, assistance, explanations, and interaction effort from Ryan's observed needs. Advanced reasoning selects existing authored difficulty and is not a calibrated adaptive system. Timed pressure is unnecessary.
+- **Architecture:** further extraction should address concrete coupling. Shared browser state remains; accounts, a framework rewrite, and hosted infrastructure are not required.
+- **Optional cleanup:** preserve generator ownership and dated evidence before removing unreferenced legacy sources. Absence of a current reference is not a factual withdrawal.
+- **Publication:** local work does not update the hosted preview. Its last recorded deployment contains the original two packs. Staging, commits, pushing, deployment, and publication remain separate owner actions.
+
+The [activity guide](docs/quiz-activities.md), [current contract](SPEC.md), and [remediation status](docs/remediation-status.md) distinguish current implementation, historical evidence, and outstanding checks.

@@ -7,14 +7,17 @@ For cross-system Cyborg work, read `/Users/ryanjohnson/Projects/cyborg/MANUAL.md
 - Do not stage, commit, push, deploy, or publish unless Ryan explicitly delegates that exact action.
 - The exact `cyborg auto --build` workflow may make its documented internal commits after announcing that behavior; it does not authorize publishing or unrelated commits.
 - Ask one material question at a time when human judgment is needed.
-- Do not use GitNexus for projects that are mostly shell scripts.
-- For this remediation, Ryan explicitly requests that agents do not run tests, full suites, GitNexus analyze, or long-running verification. Provide copy/paste commands for Ryan to run and report back. This overrides generated skill advice to automatically reindex.
-- Read-only GitNexus impact/query calls remain required before code edits; UNKNOWN needs source-reference confirmation. Warn about HIGH/CRITICAL risk. Do not treat a partial/truncated graph result as a clean check.
+- For this remediation, Ryan explicitly requests that agents do not run tests, full suites, or long-running verification. Provide copy/paste commands for Ryan to run and report back. This overrides generated skill advice to automatically reindex.
+- Trace affected imports, callers, content-pack consumers, and save compatibility from current source before code edits. Keep unresolved dependencies and verification limits explicit.
+
+## Source change checks
+
+Trace affected imports, callers, routes, templates, and focused tests with native repository searches and source reads before editing. Keep unresolved references explicit and follow Ryan's current verification instructions. Staging, commits, pushes, deployment, and publication require his explicit delegation of that action.
 
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **carmen** (669 symbols, 1741 relationships, 58 execution flows).
+This project is indexed by GitNexus as **carmen** (1,716 symbols, 6,743 relationships, 147 execution flows).
 
 > Index stale? Run `node .gitnexus/run.cjs analyze --index-only` from the project root — it auto-selects an available runner. No `.gitnexus/run.cjs` yet? Bootstrap with `npx`, `bunx`, or `pnpm dlx` — e.g. `bunx gitnexus@latest analyze` (npm 11 npx crash; #1939).
 
