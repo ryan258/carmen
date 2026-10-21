@@ -9,6 +9,15 @@ on:
       - 'carmen-sandiego-bentonville.html'
       - 'game.js'
       - 'game-core.js'
+      - 'case-design.js'
+      - 'game-experience.js'
+      - 'quiz-activities.js'
+      - 'game-activities.js'
+      - 'quiz-practice.js'
+      - 'study-core.js'
+      - 'game-study.js'
+      - 'game-session.js'
+      - 'game-warrant.js'
       - 'game-map.js'
       - 'game-records.js'
       - 'run-generator.js'
@@ -54,7 +63,8 @@ jobs:
           set -euo pipefail
           mkdir -p _site/data/packs
           cp index.html carmen-sandiego-bentonville.html \
-            game.js game-core.js game-map.js game-records.js \
+            game.js game-core.js case-design.js game-experience.js quiz-activities.js game-activities.js game-map.js game-records.js \
+            quiz-practice.js study-core.js game-study.js game-session.js game-warrant.js \
             run-generator.js map-config.js builtin-pack.js \
             styles.css tailwind.build.css _site/
           cp data/quiz-packs.json _site/data/

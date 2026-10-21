@@ -4,6 +4,7 @@
 // Run with: node scripts/apply-henchmen.js [path/to/pack.json]
 const fs = require('node:fs');
 const path = require('node:path');
+const {writeAtomic} = require('./content-io.cjs');
 
 const root = path.resolve(__dirname, '..');
 const packPath = process.argv[2]
@@ -60,8 +61,6 @@ cityOrder.forEach(applyToCity);
 if (JSON.stringify(pack) !== before) {
   pack.contentVersion++;
   require('../game-core.js').validatePack(pack);
-  const temporary = `${packPath}.tmp`;
-  fs.writeFileSync(temporary, JSON.stringify(pack, null, 2) + '\n');
-  fs.renameSync(temporary, packPath);
+  writeAtomic(packPath, JSON.stringify(pack, null, 2) + '\n');
 }
 console.log(`Applied suspect + nextLead to all cases in ${path.relative(root, packPath)}.`);
