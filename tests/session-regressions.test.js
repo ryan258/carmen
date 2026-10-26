@@ -175,3 +175,19 @@ test('a pending storage event cannot let an old tab overwrite a newer save',()=>
   g.backing.set('carmen_save',newer);g.run('requestHint()');
   assert.equal(g.backing.get('carmen_save'),newer);assert.equal(g.state().phase,'idle');
 });
+
+test('destination choice charges wrong trips, never the last life, and survives resume',()=>{
+  const g=createGame();g.start();g.solve();g.warrant();g.flush();
+  // The harness keeps injected markup as a string, so stand in for the rendered buttons and status line.
+  g.run('const byId=document.getElementById; document.getElementById=id=>byId(id)||document.createElement("p")');
+  const choices=()=>JSON.parse(g.run('JSON.stringify(destinationChoices().map(l=>l.id))'));
+  const next=g.run('LOCATIONS[1].id'), offered=choices(), wrong=offered.findIndex(id=>id!==next);
+  assert.equal(g.state().phase,'between');assert.equal(new Set(offered).size,3);assert.ok(offered.includes(next));
+  assert.ok(!offered.includes(g.run('LOCATIONS[0].id')));assert.equal(g.document.getElementById('nextRoundBtn').hidden,true);
+  assert.ok(!g.run(`destinationLead('Points to '+LOCATIONS[1].name)`).includes(g.run('LOCATIONS[1].name')));
+  g.run(`chooseDestination(${wrong})`);assert.equal(g.snapshot().lives,4);assert.equal(g.state().currentLocationIndex,0);
+  g.run('goToTitle(); resumeGame()');g.flush();assert.deepEqual(choices(),offered);
+  g.run(`state.lives=1; chooseDestination(${wrong})`);assert.equal(g.snapshot().lives,1);
+  g.run(`chooseDestination(${offered.indexOf(next)})`);
+  assert.equal(g.state().currentLocationIndex,1);assert.equal(g.state().phase,'investigation');
+});
