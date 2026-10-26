@@ -17,7 +17,7 @@ Trace affected imports, callers, routes, templates, and focused tests with nativ
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **carmen** (1,716 symbols, 6,743 relationships, 147 execution flows).
+This project is indexed by GitNexus as **carmen** (1726 symbols, 6822 relationships, 148 execution flows).
 
 > Index stale? Run `node .gitnexus/run.cjs analyze --index-only` from the project root — it auto-selects an available runner. No `.gitnexus/run.cjs` yet? Bootstrap with `npx`, `bunx`, or `pnpm dlx` — e.g. `bunx gitnexus@latest analyze` (npm 11 npx crash; #1939).
 

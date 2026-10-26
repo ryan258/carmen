@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased — Destination trail choices and transition round deductions (October 26, 2026)
+
+- Add interactive destination trail choices to the transition round ("Where did the trail go?").
+- Generate dynamic travel stub clues from the destination stop's province and tagline when authored leads give away the location name or route position.
+- Seed three distinct destination choices (the correct next stop plus two decoy stops, preferring distinct provinces) consistently from run seed and location index to preserve options across save/resume.
+- Charge wrong destination selections one life, protected by a safety floor that never takes the last life on the transition screen and waives costs in assisted mode.
+- Add accessible strikethrough styling (`.destination-choice:disabled`) and aria live announcements for eliminated cold trails.
+- Add comprehensive session regression tests covering destination choice generation, safety floor, and resume repeatability.
+- Add `.claude/launch.json` for local development HTTP server debugging.
+- Update GitNexus index metrics to 1,726 nodes, 6,822 edges, 56 clusters, and 148 execution flows.
+- Confirm absence of Git submodules.
+
 ## Unreleased — All-pack fact check and review completion (October 15, 2026)
 
 - Complete AI-assisted source/editorial review for the remaining 72 cases across the original two packs: 36 cases in Bentonville and 36 cases in Argentina, bringing the active catalogue to 320 reviewed cases across 12 packs (0 pending).

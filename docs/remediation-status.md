@@ -1,4 +1,16 @@
-# Current remediation status — October 21, 2026
+# Current remediation status — October 26, 2026
+
+## Destination trail choices and GitNexus refresh — October 26
+
+The transition round ("Where did the trail go?") now features interactive trail deduction:
+- Authored next leads that name the stop or route sequence are dynamically converted by `destinationLead` into travel stub clues using the destination's province and tagline.
+- Players choose between three seeded destination options: the true destination and two distinct decoy locations. Resuming an in-progress game deterministically produces identical options.
+- Wrong choices deduct one life unless assisted, protected by a safety floor that never takes the last life on the transition screen, disables the cold option with a strikethrough style, and announces status.
+- Correct choices advance the round. The final stop bypasses travel choices and leads directly to the final report.
+- Regression suite in `tests/session-regressions.test.js` covers choice generation, safety floor, and resume consistency.
+- `.claude/launch.json` added for static local python server debugging.
+- Ryan ran `npx gitnexus analyze`, cleanly indexing 1,726 nodes, 6,822 edges, 56 clusters, and 148 flows.
+- Absence of Git submodules verified.
 
 ## Design verification and market-save resolution — October 21
 

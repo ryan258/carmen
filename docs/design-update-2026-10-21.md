@@ -1,6 +1,6 @@
 # Investigation flow update — October 21, 2026
 
-Implemented in the local working tree and verified. The first supplied design run passed syntax/content gates and 97 of 98 tests; the market activity descriptor-format mismatch was resolved to `version: 1`, and core/story coverage was expanded. Verification of the correction passed cleanly: syntax/content gates passed, `verify:design` passed all 99 tests (with 16/16 in the affected core/flow files), and `build:offline` successfully generated the portable edition at `dist/carmen-offline.html`. Ryan's GitNexus 1.6.12 refresh indexed 1,716 nodes, 6,743 edges, 54 clusters, and 147 flows. Changes are bundled into local commits under explicit user delegation. Browser layout, installed-voice behavior, and human acceptance remain open.
+Implemented in the local working tree and verified. The first supplied design run passed syntax/content gates and 97 of 98 tests; the market activity descriptor-format mismatch was resolved to `version: 1`, and core/story coverage was expanded. Verification of the correction passed cleanly: syntax/content gates passed, `verify:design` passed all 99 tests (with 16/16 in the affected core/flow files), and `build:offline` successfully generated the portable edition at `dist/carmen-offline.html`. Ryan's GitNexus 1.6.12 refresh indexed 1,726 nodes, 6,822 edges, 56 clusters, and 148 flows. Changes are bundled into local commits under explicit user delegation. Browser layout, installed-voice behavior, and human acceptance remain open.
 
 ## Player-facing changes
 
@@ -12,6 +12,7 @@ Implemented in the local working tree and verified. The first supplied design ru
 - Help can be enabled during a case. It permanently marks the result assisted, makes subsequent hints free, and stops further life loss. Previously earned points and previously charged hints remain unchanged. At zero lives, choose Continue with support, Pause and keep case, or explicitly close with the current result. Only explicit closure clears an unfinished run.
 - Local read-aloud is available in play as well as Study. It requires an installed local voice and starts only on request. Tab, screen, modal and pause transitions cancel case speech. Study can return directly to the unchanged case it paused, and displays that case's saved catalog revision.
 - Successful new cases receive a commendation based on first-try stop accuracy within the chosen route. Perfect short routes can receive Chief Inspector. Explicitly closed incomplete investigations get an ended-outcome label rather than a completion commendation. Scores remain secondary and boards distinguish assistance, rules, reasoning preference, episode, format and exact route.
+- Between stops, the transition round requires players to deduce the suspect's destination from the seized lead or travel stub and select from three seeded destination choices. Choosing an incorrect location costs one life unless assisted (never taking the last life) and disables that choice; choosing the correct location advances to the next stop. The final stop leads directly to the headquarters report.
 
 ## Content and authored story
 

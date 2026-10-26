@@ -9,6 +9,7 @@ Start with `python3 -m http.server 8000 --bind 127.0.0.1`, then open http://127.
 ## Session integrity
 
 - [ ] All 12 packs: complete 4-, 6-, and 8-stop runs. Confirm the stop selector, displayed count, inventory, transition lead, final report, and records agree.
+- [ ] Transition round: confirm destination trail choices appear on between-stop screen, deduce from travel stub/lead, confirm wrong choice strikes through and deducts a life (never taking the last life), and correct choice advances to next stop.
 - [ ] Use a hint and choose a wrong answer. Reload/resume: hint count, score penalty, attempts, order, eliminated option, and lives persist.
 - [ ] Solve a puzzle, submit a wrong warrant, then reload. The puzzle stays solved and cannot award points again.
 - [ ] Submit a wrong warrant repeatedly during feedback. One life is lost. The button unlocks after feedback when lives remain.
