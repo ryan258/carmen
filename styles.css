@@ -447,6 +447,7 @@ header, header > div:last-child { flex-wrap: wrap; }
 .activity-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-block: .8rem; }
 .activity-actions button { flex: 1 1 7rem; text-align: center; }
 .activity-actions button:disabled { opacity: .65; }
+.destination-choice:disabled { opacity: .45; text-decoration: line-through; }
 #activityCheck { background: #17130f; color: #fff3d6; }
 .activity-help { font-size: .85rem; line-height: 1.5; }
 

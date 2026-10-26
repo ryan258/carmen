@@ -1327,8 +1327,17 @@ function triggerTransitionRound() {
   const nextLeadBlock = (currentLoc.briefing && currentLoc.briefing.nextLead)
     ? `<div class="glass rounded-xl p-4 text-left max-w-md mx-auto shadow-xl">
         <p class="text-[10px] uppercase tracking-widest font-black text-amber-700 mb-1">Seized From Suspect — Next Lead</p>
-        <p class="text-slate-900 text-xs leading-relaxed italic">${escapeHtml(storyStop?.nextLead || (state.currentLocationIndex === LOCATIONS.length-1 ? 'Your selected route is complete. Return to ACME headquarters for the final report.' : currentLoc.briefing.nextLead))}</p>
+        <p class="text-slate-900 text-xs leading-relaxed italic">${escapeHtml(storyStop?.nextLead || (state.currentLocationIndex === LOCATIONS.length-1 ? 'Your selected route is complete. Return to ACME headquarters for the final report.' : destinationLead(currentLoc.briefing.nextLead)))}</p>
       </div>`
+    : '';
+  const destinationBlock = state.currentLocationIndex < LOCATIONS.length - 1
+    ? `<section class="glass rounded-xl p-4 max-w-md mx-auto shadow-xl" aria-labelledby="destinationHeading">
+        <h4 id="destinationHeading" class="text-amber-700 font-black uppercase tracking-widest text-sm mb-3">Where did the trail go?</h4>
+        <div class="flex flex-col gap-2">
+          ${destinationChoices().map((loc, i) => `<button type="button" id="destination-${i}" onclick="chooseDestination(${i})" class="destination-choice px-4 py-3 bg-slate-800 hover:bg-slate-700 text-slate-100 font-bold rounded-lg border border-white/10">Travel to ${escapeHtml(loc.name)}</button>`).join('')}
+        </div>
+        <p id="destinationStatus" class="text-red-800 text-sm mt-3"></p>
+      </section>`
     : '';
 
   container.innerHTML = `
@@ -1343,6 +1352,7 @@ function triggerTransitionRound() {
     <section class="case-result"><h4>${storyStop ? 'Record recovered' : 'What your evidence established'}</h4><p>${escapeHtml(storyStop?.result || displayCaseText(currentLoc, currentLoc.puzzle.explanation))}</p>${storyStop ? `<p>${escapeHtml(storyStop.evidence)}</p>` : ''}</section>
 
     ${nextLeadBlock}
+    ${destinationBlock}
     ${scoreDetails}
 
     <div class="glass rounded-xl p-5 border border-white/10 text-left max-w-md mx-auto shadow-xl">
@@ -1357,14 +1367,51 @@ function triggerTransitionRound() {
     showScreen('betweenScreen');
     
     const nextBtn = document.getElementById('nextRoundBtn');
-    if (state.currentLocationIndex >= LOCATIONS.length - 1) {
-      nextBtn.textContent = 'Continue: final report';
-      nextBtn.onclick = triggerFinalConfrontationFlow;
-    } else {
-      nextBtn.textContent = 'Continue: next location';
-      nextBtn.onclick = nextRound;
-    }
+    const lastStop = state.currentLocationIndex >= LOCATIONS.length - 1;
+    nextBtn.hidden = !lastStop;
+    nextBtn.textContent = 'Continue: final report';
+    nextBtn.onclick = triggerFinalConfrontationFlow;
   }
+}
+
+// Most authored leads name the next stop outright or say "the next stop in the selected route".
+// Keep the ones that make you think; otherwise clue from the destination's province and tagline.
+function destinationLead(authored) {
+  const next = LOCATIONS[state.currentLocationIndex + 1];
+  if (!authored.toLowerCase().includes(next.name.toLowerCase()) && !/next stop|selected route/i.test(authored)) return authored;
+  // ponytail: six packs use learning objectives as taglines; their leading verb gives them away. Add a travelClue field if this list grows.
+  const placeClue = next.tagline && !/^(Infer|Use|Avoid|Separate|Identify|Distinguish|Match|Reconcile|Preserve|Recognize|Classify|Reject|Repair)\b/.test(next.tagline);
+  return `The suspect's travel stub is stamped ${next.province}.${placeClue ? ` Scrawled on the back: "${next.tagline}."` : ''}`;
+}
+
+// The next lead only matters if the player decides where it points.
+// Seeded from the run so resume shows the same three options.
+function destinationChoices() {
+  const here = LOCATIONS[state.currentLocationIndex], next = LOCATIONS[state.currentLocationIndex + 1];
+  const seed = CarmenRunGenerator.hashSeed(`${state.caseSeed}:destination:${state.currentLocationIndex}`);
+  const others = QUIZ_PACK.locations.filter(loc => loc.id !== here.id && loc.id !== next.id);
+  // Decoys from another province keep the stub clue decisive; fall back if a pack can't supply two.
+  const distinct = others.filter(loc => loc.province !== next.province);
+  const decoys = distinct.length >= 2 ? distinct : others;
+  const choices = [0, 1].map(k => decoys.splice((seed >>> (k * 8)) % decoys.length, 1)[0]);
+  choices.splice(seed % 3, 0, next);
+  return choices;
+}
+
+function chooseDestination(index) {
+  if (state.phase !== 'between' || activeModal || state.currentLocationIndex >= LOCATIONS.length - 1) return;
+  const choice = destinationChoices()[index];
+  if (!choice) return;
+  if (choice.id === LOCATIONS[state.currentLocationIndex + 1].id) { sound.click(); nextRound(); return; }
+  // ponytail: a wrong trip never takes the last life, so 'between' needs no game-over path.
+  // Wrong picks aren't saved; resume re-offers them. Persist them if that gets exploited.
+  if (!state.assisted && state.lives > 1) state.lives--;
+  if (!saveGame()) return;
+  sound.fail();
+  document.getElementById(`destination-${index}`).disabled = true;
+  const message = `The trail is cold in ${choice.name}. Reread the lead and pick again.${state.assisted ? '' : ` ${state.lives} ${state.lives === 1 ? 'life' : 'lives'} remaining.`}`;
+  document.getElementById('destinationStatus').textContent = message;
+  announce(message);
 }
 
 function nextRound() {
