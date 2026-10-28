@@ -87,6 +87,19 @@
         <p id="packSelectorStatus" class="mt-2 text-xs text-slate-400" aria-live="polite">Loading quiz packs...</p>
       </div>
 
+      <section id="careerCard" class="career-card" aria-labelledby="careerHeading">
+        <h3 id="careerHeading">Detective career</h3>
+        <div id="careerProgress"></div>
+        <p id="careerDaily" aria-live="polite"></p>
+        <button id="dailyCaseButton" onclick="startDailyCase()" class="primary-action">Play today's case</button>
+        <button id="careerReviewButton" onclick="openDueReviews()" class="secondary-action" hidden>Review due cases</button>
+        <p class="career-help">One case a day: four stops, mixed activities, five lives. Solve it to grow your streak and earn bonus XP. Stops you miss can go to Study; remembering them later earns XP too.</p>
+        <details class="career-badges">
+          <summary id="careerBadgeSummary">Badges</summary>
+          <ul id="careerBadges"></ul>
+        </details>
+      </section>
+
       <div class="start-actions">
         <button id="quickCaseButton" disabled onclick="startQuickCase()" class="primary-action">Start a quick case</button>
         <p>Four stops, mixed activities, and generous hints. Read the evidence, solve the clue, then confirm the arrest.</p>
@@ -655,6 +668,7 @@
 <script src="./game-warrant.js"></script>
 <script src="./game-study.js"></script>
 <script src="./game.js"></script>
+<script src="./game-career.js"></script>
 <script src="./game-experience.js"></script>
 <!-- Start the optional library after its load/error handlers are defined. -->
 <script async src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" id="leafletScript" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" onload="handleMapLibraryLoad()" onerror="handleMapLibraryError()"></script>

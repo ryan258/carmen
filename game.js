@@ -719,10 +719,10 @@ async function startStoryCase() {
   selectDifficulty('rookie', episode.id);
 }
 
-function selectDifficulty(diff, episodeId = null) {
+function selectDifficulty(diff, episodeId = null, daily = false) {
   if (packLoading || activeModal || !['rookie','detective','inspector'].includes(diff)) return;
   if (episodeId && !CarmenCaseDesign.getEpisode(QUIZ_PACK, episodeId)) return;
-  const options = {challenge: selectedChallenge(), episodeId};
+  const options = {challenge: selectedChallenge(), episodeId, daily};
   const snapshot = storage.getItem(SAVE_KEY);
   if (snapshot !== null) {
     pendingNewCase = {difficulty: diff, snapshot, packId: QUIZ_PACK.id, stopCount: state.stopCount, quizStyle: selectedQuizStyle(), ...options};
@@ -766,7 +766,7 @@ function startNewCase(diff, snapshot, options = {}) {
   const episode = CarmenCaseDesign.getEpisode(QUIZ_PACK, state.episodeId);
   if (state.episodeId && !episode) { goToTitle(); return; }
   if (episode) state.stopCount = episode.stopCount;
-  const run = episode ? {seed: createCaseSeed(), routeStart: episode.routeStart, caseVariantIds: [...episode.caseVariantIds]} : createDistinctRun();
+  const run = episode ? {seed: createCaseSeed(), routeStart: episode.routeStart, caseVariantIds: [...episode.caseVariantIds]} : options.daily ? createDailyRun() : createDistinctRun();
   state.routeStart = run.routeStart;
   LOCATIONS = getRunLocationsForStopCount(state.stopCount, state.routeStart);
   state.difficulty = diff;
@@ -1543,6 +1543,7 @@ function triggerGameSuccess() {
   const rank = getRankString(state.score);
   const scoreRecord = saveHighScore(state.score, rank);
   updateStats(perfectGame ? 'perfect' : 'arrest');
+  const career = recordCareerCase(perfectGame ? 'perfect' : 'arrest');
   storage.setItem(LAST_RUN_KEY, JSON.stringify(state.caseVariantIds));
   storage.removeItem(SAVE_KEY);
   
@@ -1579,6 +1580,7 @@ function triggerGameSuccess() {
         <div>Perfect: +${perfectBonus}</div>
       </div>
     </div>
+    ${renderCareerResult(career)}
     ${renderCaseHistorySummary()}
   `;
   
@@ -1603,6 +1605,7 @@ function finishEscapedCase() {
   const rank = 'Investigation ended before case closure';
   const scoreRecord = saveHighScore(state.score, rank);
   updateStats('escape');
+  const career = recordCareerCase('escape');
   storage.setItem(LAST_RUN_KEY, JSON.stringify(state.caseVariantIds));
   storage.removeItem(SAVE_KEY);
 
@@ -1631,6 +1634,7 @@ function finishEscapedCase() {
       </div>
     </div>
 
+    ${renderCareerResult(career)}
     ${renderEscapedAnswersPanel()}
   `;
 

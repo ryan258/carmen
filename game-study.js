@@ -191,7 +191,7 @@ function rateStudyCase(rating) {
   if (!['again','got-it'].includes(rating) || document.getElementById('studyAgain').disabled) return;
   if (changeStudyEntry({rating})) {
     const entry=studyEntry(studySelectedCase().ref);
-    document.getElementById('studyReviewStatus').textContent=rating==='again' ? 'Kept due for another review.' : `Review scheduled in ${entry.intervalDays} day${entry.intervalDays===1?'':'s'}.`;
+    document.getElementById('studyReviewStatus').textContent=(rating==='again' ? 'Kept due for another review.' : `Review scheduled in ${entry.intervalDays} day${entry.intervalDays===1?'':'s'}.`)+' '+recordCareerStudy(rating,entry);
     ['studyAgain','studyGotIt'].forEach(id=>document.getElementById(id).disabled=true);
   }
 }
