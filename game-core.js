@@ -87,9 +87,10 @@
         visualHtml: '', ariaLabel: `Case evidence from ${location.name}`};
     };
     const last = locations[locations.length-1];
+    // Catalog 3 asks place questions, never recall of tokens; older catalogs keep their saved meaning.
     return [evidenceRound(0, 'First-stop evidence review'),
       evidenceRound(Math.floor(locations.length / 2), 'Route evidence review'),
-      {title:'Route inventory', description:'Use the collected tokens shown in your case inventory.',
+      catalogVersion >= 3 ? evidenceRound(locations.length - 1, 'Last-stop evidence review') : {title:'Route inventory', description:'Use the collected tokens shown in your case inventory.',
         question:'Which token did you collect at the last stop of your selected route?',
         options:[last.token.name, ...locations.filter(loc=>loc.id!==last.id).slice(0,3).map(loc=>loc.token.name)],
         correctIndex:0, visualHtml:'',
@@ -161,7 +162,8 @@
       if (!activities || typeof activities.getCaseActivity !== 'function') throw new Error('Quiz activities are unavailable. Reload the game assets together.');
       return activities.getCaseActivity(pack, item, activityCatalogVersion);
     }
-    if (phase !== 'final' || ![2,3].includes(finalRound) || (activityCatalogVersion >= 3 && episodeId)) return null;
+    // Catalog 3 finales stay four-choice place questions: no route-order or token recall.
+    if (phase !== 'final' || ![2,3].includes(finalRound) || activityCatalogVersion >= 3) return null;
     const count = Math.min(4, locations.length);
     const route = Array.from({length: count}, (_, i) => locations[Math.round(i * (locations.length - 1) / (count - 1))]);
     const identity = `${pack.id}:${pack.contentVersion}:${locations.map(loc => loc.id).join(',')}`;

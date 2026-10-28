@@ -1030,7 +1030,7 @@ function getHintTexts(loc) {
   if (state.isFinalConfrontation) {
     const round = getFinalConfrontationRounds()[state.finalConfrontationRound - 1];
     return round.hints?.length ? round.hints : [
-      'Compare each choice against the written case evidence or the collected route inventory.',
+      'Compare each choice against the written case evidence.',
       round.description,
       `Worked answer: ${round.options[round.correctIndex]}. ${round.explanation}`
     ];
@@ -1477,9 +1477,10 @@ function startFinalConfrontationRound(restoring = false) {
 
 function getFinalConfrontationRounds() {
   if (state.episodeId) return CarmenCore.finalRounds(QUIZ_PACK, LOCATIONS, state.caseVariantIds, state.activityCatalogVersion, state.episodeId);
+  const caseIndices = [0, Math.floor(LOCATIONS.length / 2), LOCATIONS.length - 1];
   return CarmenCore.finalRounds(QUIZ_PACK, LOCATIONS, state.caseVariantIds, state.activityCatalogVersion).map((round, index) => {
-    if (index > 1) return round;
-    const loc = getLocationCase(index === 0 ? 0 : Math.floor(LOCATIONS.length / 2));
+    if (index > 1 && state.activityCatalogVersion < 3) return round;
+    const loc = getLocationCase(caseIndices[index]);
     return {...round, description: displayCaseText(loc, round.description), question: displayCaseText(loc, round.question),
       explanation: displayCaseText(loc, round.explanation), options: round.options.map(value => displayCaseText(loc, value))};
   });

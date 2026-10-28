@@ -152,3 +152,28 @@ test('Continue across packs loads only a manifest pack and refuses a stale saved
   assert.equal(game.backing.get('carmen_save'),newer);
   assert.equal(game.state().phase,'idle');
 });
+
+test('catalog 3 finales review the route stops\' case questions instead of token or route-order recall', () => {
+  const game = createGame();
+  game.document.getElementById('quizStyleSelect').value = 'mixed';
+  game.start(4, 3);
+  assert.equal(game.state().quizStyle, 'mixed');
+  for (let index = 0; index < 4; index++) {
+    solve(game);
+    game.run("switchTab('warrant'); submitWarrant()"); game.flush();
+    game.run(index === 3 ? 'triggerFinalConfrontationFlow()' : 'nextRound()');
+  }
+  const names = JSON.parse(game.run('JSON.stringify(LOCATIONS.map(location => location.name))'));
+  for (const [round, stop] of [[1, 0], [2, 2], [3, 3]]) {
+    assert.equal(game.state().finalConfrontationRound, round);
+    assert.equal(game.run('getCurrentActivity()'), null);
+    assert.equal(game.run('getFinalConfrontationRounds()[state.finalConfrontationRound-1].ariaLabel'), `Case evidence from ${names[stop]}`);
+    assert.deepEqual(JSON.parse(game.run('JSON.stringify(workspaceEvidence().map(item => item.label))')), ['Your route', names[stop]]);
+    solve(game);
+    assert.equal(core.validateSave(game.snapshot(), pack), true);
+    game.run('goToTitle(); resumeGame()');
+    assert.equal(game.state().puzzleSolved, true);
+    game.run('advanceFinalRound()');
+  }
+  assert.equal(game.state().phase, 'complete');
+});

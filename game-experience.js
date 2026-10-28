@@ -14,7 +14,8 @@ function workspaceEvidence() {
     evidence.push({label:'Your route',text:LOCATIONS.map((location,index)=>`${index+1}. ${location.name}`).join('\n')});
     // Original clues remain available for the final review; never expose answer keys.
     const indices=state.episodeId ? [] : state.finalConfrontationRound===1 ? [0]
-      : state.finalConfrontationRound===2 ? [Math.floor(LOCATIONS.length/2)] : [];
+      : state.finalConfrontationRound===2 ? [Math.floor(LOCATIONS.length/2)]
+      : state.activityCatalogVersion>=3 ? [LOCATIONS.length-1] : [];
     for(const index of indices) {
       const item=getLocationCase(index);
       evidence.push({label:item.name,text:item.clues.map(clue=>displayCaseText(item,clue)).join('\n\n')});

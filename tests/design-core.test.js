@@ -138,6 +138,7 @@ test('episode saves pin authored cases and use their synthesis finale in both fo
   const historical = core.finalRounds(pack,route,saved.caseVariantIds,2);
   assert.equal(historical[0].title,'First-stop evidence review');
   assert.equal(historical[2].question,'Which token did you collect at the last stop of your selected route?');
+  assert.equal(core.finalRounds(pack,route,saved.caseVariantIds,3)[2].title,'Last-stop evidence review');
 });
 
 test('commendations recognize accuracy equally on short and long completed routes', () => {

@@ -27,7 +27,7 @@ if(require.main===module) {
   try {
     const result=inspectContent(path.join(__dirname,'..'));
     console.log(`${result.packs.join(', ')}: structural contracts and fallback accepted.`);
-    console.log(`${result.cases} cases; ${result.pending} still need factual/editorial sign-off. The route-based finale inherits those case reviews; its token question uses only the collected inventory.`);
+    console.log(`${result.cases} cases; ${result.pending} still need factual/editorial sign-off. The route-based finale reuses those reviewed case questions; only historical catalog-1/2 saves keep a token question.`);
     if(process.argv.includes('--release') && result.pending) throw new Error('Optional sharing gate not met: claim-level editorial evidence is still pending. Personal preview use does not require this sign-off.');
   } catch(error) { console.error(error.message); process.exitCode=1; }
 }
