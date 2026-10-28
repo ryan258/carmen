@@ -1,6 +1,6 @@
 # Manual regression matrix
 
-For personal use, start with the short check in [accessibility QA](a11y-qa.md). This matrix is retained for broader coverage; it is not a requirement that Ryan manually audit every case. Current verification status lives in [remediation status](remediation-status.md).
+For personal use, start with the short check in [accessibility QA](a11y-qa.md). This matrix is retained for broader coverage; it is not a requirement that Ryan manually audit every case. Current verification status lives in [remediation status](2026-10-27-remediation-status.md).
 
 Status: **not run against the current 12-pack tree, including all ten additional packs**. Record date, Git revision/diff identity, browser/version, viewport/device, actions, and actual results. Browser automation can cover many interactions; real-device behavior, assistive-technology output, factual accuracy, and player judgment need their own evidence.
 
@@ -45,5 +45,5 @@ Use a disposable browser profile for deliberate storage edits.
 
 ## Editorial and player acceptance
 
-- [ ] If public sharing is intended, complete the [content rubric](content-rubric.md) and optional sharing gate evidence.
+- [ ] If public sharing is intended, complete the [content rubric](editorial-rubric.md) and optional sharing gate evidence.
 - [ ] A fresh player completes a route without developer coaching; record confusing clues, use of hints, difficulty, and time. Do not infer broad usability from one session.

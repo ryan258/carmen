@@ -8,7 +8,7 @@ Use the input method you normally prefer on one short route. Confirm that Answer
 
 For the new Mixed format, choose one card, Pause, and Resume; confirm the selection and card labels remain. Try Undo last and Clear work, read the current matching prompt or sequence position, and use Check work when complete. Correct feedback should wait for Continue. If useful, finish the route to try ordering visited stops and matching tokens with the inventory visible. Classic is selected before a new run; formats do not change mid-run. These are suggested checks, not verified outcomes.
 
-The broader matrix below is optional coverage for later sharing. None of these browser/AT outcomes has been verified for the current 12-pack tree, including all ten additional packs. See [revision-specific evidence](remediation-status.md).
+The broader matrix below is optional coverage for later sharing. None of these browser/AT outcomes has been verified for the current 12-pack tree, including all ten additional packs. See [revision-specific evidence](2026-10-27-remediation-status.md).
 
 ## October 21 follow-up controls
 

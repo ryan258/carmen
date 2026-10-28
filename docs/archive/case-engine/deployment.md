@@ -2,7 +2,7 @@
 
 Site address: **https://ryan258.github.io/carmen/**
 
-Ryan requested GitHub Pages hosting on October 12, 2026. The repository uses the official GitHub Actions Pages artifact workflow in [pages.yml](../.github/workflows/pages.yml), with **GitHub Actions** selected as the Pages publishing source. No generated `gh-pages` branch is needed. See [GitHub's custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+Ryan requested GitHub Pages hosting on October 12, 2026. The repository uses the official GitHub Actions Pages artifact workflow in [pages.yml](../../../.github/workflows/pages.yml), with **GitHub Actions** selected as the Pages publishing source. No generated `gh-pages` branch is needed. See [GitHub's custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
 ## First publication — October 12, 2026
 
@@ -34,11 +34,11 @@ For a content or runtime regression, revert the affected change on `main` and pu
 
 All ten additional packs (NWA, parks, Route 66 and the six concept packs) are in local commits; pushing and publication remain separate actions. The last recorded deployment above contains the original two packs; no publication or deployment verification is part of the six-concept authoring. Use localhost for the current 12-pack catalog.
 
-Hosting does not change content or verification status. In the current workspace, Argentina is version 6, Bentonville is version 5, and Northwest Arkansas is version 3. Route 66, Ozark Waterways, Railroads & Depots, NWA Mountain Biking, and Museums & Missing Labels use version 2; the other four packs use version 1. All 320 cases retain scoped AI-assisted review evidence. The October 17 wording amendments and verification limits are recorded in the all-pack ledger; older saves for its six changed packs are incompatible. The [all-pack ledger](all-packs-fact-check.md) records the full 320-case scope. The normal game draws from all variants in the chosen pack. The [original exemplar](reviewed-exemplar.md), [NWA](content-audit.md), [parks/highway](parks-route66-review.md) and [six-concept](remaining-packs-review.md) ledgers are repository companions, not game-site pages.
+Hosting does not change content or verification status. In the current workspace, Argentina is version 6, Bentonville is version 5, and Northwest Arkansas is version 3. Route 66, Ozark Waterways, Railroads & Depots, NWA Mountain Biking, and Museums & Missing Labels use version 2; the other four packs use version 1. All 320 cases retain scoped AI-assisted review evidence. The October 17 wording amendments and verification limits are recorded in the all-pack ledger; older saves for its six changed packs are incompatible. The [all-pack ledger](../../provenance/2026-10-15-all-packs-fact-check.md) records the full 320-case scope. The normal game draws from all variants in the chosen pack. The [original exemplar](../../provenance/2026-10-12-reviewed-exemplar.md), [NWA](../../provenance/2026-10-13-nwa-content-audit.md), [parks/highway](../../provenance/2026-10-14-parks-route66-review.md) and [six-concept](../../provenance/2026-10-14-remaining-packs-review.md) ledgers are repository companions, not game-site pages.
 
 Leaflet and map tiles still use network providers, with Text route/Retry map as documented. Saves and settings belong to the browser origin: localhost progress does not automatically transfer to `https://ryan258.github.io`. GitHub project sites under that same origin share browser storage; this game retains its existing Carmen storage keys.
 
-A successful Pages deployment and successful HTTP responses establish publication and file availability. They do not establish browser layout, keyboard/voice accessibility, map-provider behavior or learning effectiveness. The [short personal input check](a11y-qa.md) remains useful on the hosted address. Prior test and graph evidence is preserved in [remediation status](remediation-status.md).
+A successful Pages deployment and successful HTTP responses establish publication and file availability. They do not establish browser layout, keyboard/voice accessibility, map-provider behavior or learning effectiveness. The [short personal input check](a11y-qa.md) remains useful on the hosted address. Prior test and graph evidence is preserved in [remediation status](2026-10-27-remediation-status.md).
 
 ## Optional local offline file — October 21 follow-up
 

@@ -66,4 +66,4 @@ node .gitnexus/run.cjs detect-changes --scope all --repo .
 
 If graph output is partial/truncated, inspect the missing scope before calling it complete. These commands do not authorize staging or committing. `npm run check:release` is separate from functional verification and is expected to report outstanding editorial work now.
 
-Historical snapshot only. These results do not verify the October 3 runtime changes. See [current status](../remediation-status.md).
+Historical snapshot only. These results do not verify the October 3 runtime changes. See [current status](../case-engine/2026-10-27-remediation-status.md).

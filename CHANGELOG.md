@@ -1,9 +1,17 @@
 # Changelog
 
-## Unreleased — Trivia-only final report (October 27, 2026)
+## Unreleased — Lean trivia redesign (October 28, 2026)
 
-- Catalog-3 final reports, Classic and Mixed, now ask the first, middle, and last stops' case questions with their clues shown. The token-recall question and the route-order and token-match activities are gone from new runs. Catalog-1/2 saves keep their historical finale.
-- Save impact: a catalog-3 Mixed save paused in final-report round 2 or 3 no longer validates, so it will not resume (it stays stored, unmodified). A catalog-3 Classic save paused in round 3 resumes on the new last-stop question.
+- Replace the case engine with a place-trivia trainer. Each stop shows one real, sourced fact with the place's name blanked, and you choose among four places. The full fact and its sources follow every answer.
+- Add spaced review: Leitner boxes with 1/3/7/16/35-day gaps, a due-first case builder, a **Review due clues** mode, and per-pack mastery and due counts.
+- Keep a thin Carmen wrapper: a fictional suspect is caught if you miss at most one clue in four. Keep today's case (six stops, one per day) and a daily streak.
+- Extract the 224 unique reviewed `funFact` entries and their sources from the twelve retired packs into `trivia-bank.js`.
+- Cut fictional clues, puzzles, warrants, Mixed activities, the story episode, hints and lives, Study and notebook, XP and badges, records, the map, the Tailwind build, the offline builder, and every dev dependency. The new app is `index.html`, `trivia.js`, `trivia-bank.js`, and `trivia.css`.
+- Progress uses a new key, `carmen_trivia_v1`, with export, import, and Start fresh for unreadable data. The old engine's saves are left untouched, and its in-progress cases do not carry over.
+- The Pages workflow now packages the four new files. Replace the old tests with `tests/trivia.test.js`.
+- Reorganize `docs/` into `docs/provenance/` (preserving fact check ledgers) and `docs/archive/` (preserving retired case engine and verification records), mapped by `docs/README.md`.
+- This supersedes the uncommitted October 27–28 trivia-wrapper pass on the old engine.
+- Reorganize `docs/` into current `guides/` (authoring facts, deployment, manual QA), dated `provenance/` fact-check ledgers, and `archive/case-engine/` and `archive/verification/` for the retired engine. `docs/README.md` indexes them. Every relative link was rewritten for the moves.
 
 ## Unreleased — Career layer: daily case, XP levels, badges (October 26, 2026)
 
@@ -90,7 +98,7 @@
 - Replace weak geographic decoys with mistakes involving partial evidence, dates/places, missing route links, adaptive reuse, overclaiming, chronology and part/whole distinctions. Remove unsupported details from the selected cases.
 - Advance both pack content versions from 3 to 4 because answers change. Keep schema 5 and stable case IDs; version 3 saves cannot resume against version 4 packs.
 - Regenerate Bentonville JSON and its exact fallback. Make the authoring test's missing-evidence fixture explicit now that its first case is reviewed, and exercise unreviewed-source rejection.
-- Content generation completed. The agent ran no tests, syntax/content checks, browser checks or GitNexus analyze. Ryan's earlier 50/50 result applies to the preceding version 3 correction tree. See [current evidence](docs/remediation-status.md).
+- Content generation completed. The agent ran no tests, syntax/content checks, browser checks or GitNexus analyze. Ryan's earlier 50/50 result applies to the preceding version 3 correction tree. See [current evidence](docs/archive/case-engine/2026-10-27-remediation-status.md).
 - Ryan subsequently completed the exemplar GitNexus refresh: 856 nodes, 3,113 edges, 31 clusters and 73 flows. The complete read-only change report has 23 tracked changed files, 70 symbols and 31 affected flows, with critical impact and no error/partial/truncation flag. No runtime or content correction follows from the graph output alone.
 - Record Ryan's separate Node v26.7.0 version 4 verification: syntax PASS, content/fallback PASS (80 cases, 72 pending reviews), and 40/40 focused tests PASS with no failures, cancellations, skips or todos. Archive the complete transcript and reconcile status docs. The deliberate `No network in harness` diagnostics accompanied passing fallback scenarios; no code repair is indicated. This follow-up changes documentation/evidence only; full-suite, browser/AT and human-learning evidence remain open.
 
@@ -102,7 +110,7 @@
 - Require at least four selected stops for the four-option token finale and save contract.
 - Distinguish pending/failed Leaflet, failed tiles and selected text route; handle late readiness and explicit retry using the pinned script source.
 - Correct warrant difficulty copy, local-accomplice wording and the identified Argentina prompt/headline inconsistencies.
-- Reconcile the review and evidence record; add focused regression cases and browser acceptance steps. Ryan subsequently supplied passing syntax/content checks and 50/50 focused tests, including all 12 new correction regressions. GitNexus rebuilt successfully (835 nodes, 3,079 edges, 31 clusters, 71 flows); change detection reports critical impact across 17 tracked files, 51 symbols and 31 flows. The verification follow-up changed documentation only; the agent ran no tests or analyze. Browser/AT and editorial evidence remain open. See [current evidence](docs/remediation-status.md).
+- Reconcile the review and evidence record; add focused regression cases and browser acceptance steps. Ryan subsequently supplied passing syntax/content checks and 50/50 focused tests, including all 12 new correction regressions. GitNexus rebuilt successfully (835 nodes, 3,079 edges, 31 clusters, 71 flows); change detection reports critical impact across 17 tracked files, 51 symbols and 31 flows. The verification follow-up changed documentation only; the agent ran no tests or analyze. Browser/AT and editorial evidence remain open. See [current evidence](docs/archive/case-engine/2026-10-27-remediation-status.md).
 
 ## Unreleased — October 3, 2026 review remediation
 

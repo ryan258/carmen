@@ -1,6 +1,6 @@
 # Finish the investigation-flow update
 
-The local implementation adds a resume-first start screen, a four-stop Quick case, evidence beside decisions, new-case arrest confirmation, direct Study return, assistance that preserves progress, and one connected Bentonville episode, **The Swapped Dispatch**. The [design update](design-update-2026-10-21.md) records the implementation, content scope and compatibility contracts. The original twelve packs, 320 source cases and content versions remain unchanged.
+The local implementation adds a resume-first start screen, a four-stop Quick case, evidence beside decisions, new-case arrest confirmation, direct Study return, assistance that preserves progress, and one connected Bentonville episode, **The Swapped Dispatch**. The [design update](2026-10-21-design-update.md) records the implementation, content scope and compatibility contracts. The original twelve packs, 320 source cases and content versions remain unchanged.
 
 ## Verification outcome: design tests and offline build verified
 

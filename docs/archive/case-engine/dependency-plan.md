@@ -18,4 +18,4 @@ Do not put private API keys in browser assets. A future provider change must als
 
 ## Verification evidence
 
-The lockfile and dependency versions were not changed in the October 12 correction pass. Historical dependency checks are recorded in [October 2 evidence](archive/verification-2026-10-02.md); they do not verify current runtime changes. See [current status](remediation-status.md).
+The lockfile and dependency versions were not changed in the October 12 correction pass. Historical dependency checks are recorded in [October 2 evidence](../verification/2026-10-02-verification.md); they do not verify current runtime changes. See [current status](2026-10-27-remediation-status.md).

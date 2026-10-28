@@ -2,7 +2,7 @@
 
 This review establishes the current project from repository source, checked-in content, documentation, and the owner's existing GitNexus index. It also records a practical direction for reducing repetition. It is a review of a production-quality personal tool: local play, manageable input, reliable saves, and easy resumption are the priorities. Broader publication, commercial infrastructure, and a full player study are not prerequisites for Ryan's personal use.
 
-**Current status:** Ryan subsequently requested implementation of the identified corrections and next actions, then supplied successful owner-run verification on Node v26.7.0: syntax/content gates, all 117 focused tests, the offline build, and a GitNexus rebuild. The [follow-up remediation](#follow-up-remediation) below supersedes the earlier outstanding-work statements; [current evidence](remediation-status.md#owner-run-harmony-verification--october-21) records the transcript and limits. The earlier sections remain dated review evidence. Browser and personal interaction acceptance remain open.
+**Current status:** Ryan subsequently requested implementation of the identified corrections and next actions, then supplied successful owner-run verification on Node v26.7.0: syntax/content gates, all 117 focused tests, the offline build, and a GitNexus rebuild. The [follow-up remediation](#follow-up-remediation) below supersedes the earlier outstanding-work statements; [current evidence](2026-10-27-remediation-status.md#owner-run-harmony-verification--october-21) records the transcript and limits. The earlier sections remain dated review evidence. Browser and personal interaction acceptance remain open.
 
 ## Review boundary and baseline
 
@@ -26,7 +26,7 @@ The baseline loop is:
 5. Read the capture report, collect a token, and Continue to the next stop.
 6. Finish three report questions at headquarters: first-case evidence, middle-case evidence, and the last stop's token.
 
-Wrong answers and warrants cost a life. Rookie starts with six lives and three hints per stop; Detective has five and two; Inspector has four and no hints. The case pool is shared across difficulties. Correct answers wait for Continue, so reading has no automatic deadline. The main source boundaries are [`game.js`](../game.js), [`game-core.js`](../game-core.js), and [`run-generator.js`](../run-generator.js).
+Wrong answers and warrants cost a life. Rookie starts with six lives and three hints per stop; Detective has five and two; Inspector has four and no hints. The case pool is shared across difficulties. Correct answers wait for Continue, so reading has no automatic deadline. The main source boundaries are [`game.js`](../../../game.js), [`game-core.js`](../../../game-core.js), and [`run-generator.js`](../../../run-generator.js).
 
 This is a static application with no account, backend, telemetry, or external AI call in the game. A local HTTP server is sufficient. Leaflet and map tiles remain optional network dependencies; Text route provides the essential route information. The generated Bentonville snapshot permits a playable fallback if pack loading fails. This is not a fully bundled offline application.
 
@@ -50,29 +50,29 @@ The last deployment recorded in [`deployment.md`](deployment.md) is the original
 | Museums & Missing Labels | 8 | 24 | 2 | 8 |
 | **Total** | **96** | **320** | | **169** |
 
-The manifest is [`data/quiz-packs.json`](../data/quiz-packs.json); complete content lives in [`data/packs/`](../data/packs/). All 320 cases have a `reviewed` status and three authored hints. Baseline mechanic metadata is `deduction-choice` for every case. There are 240 text-only cases and 80 cases with inline HTML illustrations, all in Bentonville and Argentina. Difficulty metadata contains 88 Rookie, 157 Detective, and 75 Inspector cases; those labels do not filter the live pool.
+The manifest is [`data/quiz-packs.json`](../../../data/quiz-packs.json); complete content lives in [`data/packs/`](../../../data/packs). All 320 cases have a `reviewed` status and three authored hints. Baseline mechanic metadata is `deduction-choice` for every case. There are 240 text-only cases and 80 cases with inline HTML illustrations, all in Bentonville and Argentina. Difficulty metadata contains 88 Rookie, 157 Detective, and 75 Inspector cases; those labels do not filter the live pool.
 
 There are 156 reviewed source-registry records and thirteen legacy unreviewed records. None of those thirteen is referenced by a current case. Their presence therefore does not mean thirteen current cases lack review. Removing them is optional authoring cleanup, and Bentonville's source ownership must be respected if that cleanup is done.
 
 The content has substantial useful breadth: geographic recognition, chronology, calculation, provenance, interpreting source limits, distinguishing observation from inference, and applying fictional model rules. Many newer cases ask for more careful reasoning than simple place-name recall. At the baseline, all of those reasoning styles culminated in the same interaction and repeated warrant procedure. The implementation below adds an initial set of alternatives; warrants remain unchanged.
 
-The editorial evidence is deliberately scoped. [`all-packs-fact-check.md`](all-packs-fact-check.md) records the October 15 completion and October 17 corrections, including the unresolved Barstow chronology discrepancy and blocked or unopened sources. Earlier ledgers provide claim scope and worked reasoning: [`reviewed-exemplar.md`](reviewed-exemplar.md), [`content-audit.md`](content-audit.md), [`parks-route66-review.md`](parks-route66-review.md), and [`remaining-packs-review.md`](remaining-packs-review.md). The last includes 48 companion transfer activities. These are repository activities, not tracked in-game assignments.
+The editorial evidence is deliberately scoped. [`all-packs-fact-check.md`](../../provenance/2026-10-15-all-packs-fact-check.md) records the October 15 completion and October 17 corrections, including the unresolved Barstow chronology discrepancy and blocked or unopened sources. Earlier ledgers provide claim scope and worked reasoning: [`reviewed-exemplar.md`](../../provenance/2026-10-12-reviewed-exemplar.md), [`content-audit.md`](../../provenance/2026-10-13-nwa-content-audit.md), [`parks-route66-review.md`](../../provenance/2026-10-14-parks-route66-review.md), and [`remaining-packs-review.md`](../../provenance/2026-10-14-remaining-packs-review.md). The last includes 48 companion transfer activities. These are repository activities, not tracked in-game assignments.
 
 ## Architecture and ownership
 
 | Boundary | Responsibility | Important coupling |
 | --- | --- | --- |
-| [`index.html`](../index.html), [`carmen-sandiego-bentonville.html`](../carmen-sandiego-bentonville.html) | Entry redirect, page structure, native controls, script loading, inline event bindings | New runtime files must be loaded in the correct order; HTML-bound functions may lack complete graph callers |
-| [`game.js`](../game.js) | Browser session state, loading, views, input, feedback, audio, transitions, save ownership | Main integration point; puzzle changes reach start, resume, hints, warrants, finale, and terminal review |
-| [`game-core.js`](../game-core.js) | Scoring, manifest/pack/save contracts, review-evidence predicate, finale resolver, storage facade, cancellable scheduler | Shared by production and Node tests; save validation depends on the same selected-case/finale answers shown by the controller |
-| [`run-generator.js`](../run-generator.js) | Seeded selection and randomization helpers, supported route counts | Authored order and `nextLead` assume adjacent locations; route changes require deliberate compatibility work |
-| [`game-map.js`](../game-map.js), [`map-config.js`](../map-config.js) | Optional Leaflet adapter, map failure states, persistent Text route, provider URL/attribution | Adapter still reads shared controller state; map failure must never reset progress |
-| [`game-records.js`](../game-records.js) | Local scoreboards, statistics, records dialog | Uses controller state and storage; comparable scoreboards separate pack, version, difficulty, and route length |
-| [`styles.css`](../styles.css), `tailwind.input.css`, `tailwind.build.css` | Semantic surfaces and checked-in utility CSS | New semantic styles can live in `styles.css`; new utility classes require a CSS rebuild |
-| [`scripts/generate-bentonville-content.js`](../scripts/generate-bentonville-content.js), [`scripts/bentonville-review-evidence.json`](../scripts/bentonville-review-evidence.json) | Bentonville authoring and claim/source evidence | Generated JSON is an output, not the owning authoring source |
-| [`scripts/build-builtin.cjs`](../scripts/build-builtin.cjs) | Exact Bentonville fallback snapshot | The canonical generated pack and `builtin-pack.js` must stay synchronized |
-| [`scripts/check-content.cjs`](../scripts/check-content.cjs) | Manifest/content/fallback checks and optional editorial gate | Structural acceptance is not independent factual verification or human sign-off |
-| [`tests/helpers/game-harness.cjs`](../tests/helpers/game-harness.cjs) | Runs shipped scripts and HTML bindings against a DOM double | Does not emulate browser layout, accessibility trees, real Leaflet, speech, or provider behavior |
+| [`index.html`](../../../index.html), [`carmen-sandiego-bentonville.html`](../../../carmen-sandiego-bentonville.html) | Entry redirect, page structure, native controls, script loading, inline event bindings | New runtime files must be loaded in the correct order; HTML-bound functions may lack complete graph callers |
+| [`game.js`](../../../game.js) | Browser session state, loading, views, input, feedback, audio, transitions, save ownership | Main integration point; puzzle changes reach start, resume, hints, warrants, finale, and terminal review |
+| [`game-core.js`](../../../game-core.js) | Scoring, manifest/pack/save contracts, review-evidence predicate, finale resolver, storage facade, cancellable scheduler | Shared by production and Node tests; save validation depends on the same selected-case/finale answers shown by the controller |
+| [`run-generator.js`](../../../run-generator.js) | Seeded selection and randomization helpers, supported route counts | Authored order and `nextLead` assume adjacent locations; route changes require deliberate compatibility work |
+| [`game-map.js`](../../../game-map.js), [`map-config.js`](../../../map-config.js) | Optional Leaflet adapter, map failure states, persistent Text route, provider URL/attribution | Adapter still reads shared controller state; map failure must never reset progress |
+| [`game-records.js`](../../../game-records.js) | Local scoreboards, statistics, records dialog | Uses controller state and storage; comparable scoreboards separate pack, version, difficulty, and route length |
+| [`styles.css`](../../../styles.css), `tailwind.input.css`, `tailwind.build.css` | Semantic surfaces and checked-in utility CSS | New semantic styles can live in `styles.css`; new utility classes require a CSS rebuild |
+| [`scripts/generate-bentonville-content.js`](../../../scripts/generate-bentonville-content.js), [`scripts/bentonville-review-evidence.json`](../../../scripts/bentonville-review-evidence.json) | Bentonville authoring and claim/source evidence | Generated JSON is an output, not the owning authoring source |
+| [`scripts/build-builtin.cjs`](../../../scripts/build-builtin.cjs) | Exact Bentonville fallback snapshot | The canonical generated pack and `builtin-pack.js` must stay synchronized |
+| [`scripts/check-content.cjs`](../../../scripts/check-content.cjs) | Manifest/content/fallback checks and optional editorial gate | Structural acceptance is not independent factual verification or human sign-off |
+| [`tests/helpers/game-harness.cjs`](../../../tests/helpers/game-harness.cjs) | Runs shipped scripts and HTML bindings against a DOM double | Does not emulate browser layout, accessibility trees, real Leaflet, speech, or provider behavior |
 
 The architecture is appropriate for the personal static-game scope. Pure rules and adapters have already been separated. A framework migration, backend, account system, or new service is not needed to add variety. Further extraction is valuable where it gives a clear boundary for puzzle rendering and evaluation; a broad rewrite would add unrelated risk.
 
@@ -90,7 +90,7 @@ There is one active save per browser origin. Localhost and the hosted preview do
 
 Bentonville changes start in the generator and review sidecar, then update its JSON and fallback together. Other packs are hand-authored JSON. Changes to answer semantics need a content-version decision and corresponding explanations/hints/review notes. Merely preserving a `reviewed` flag does not certify newly invented interactions or new claims.
 
-[`pages.yml`](../.github/workflows/pages.yml) copies checked-in HTML, JavaScript, styles, the manifest, and all pack JSON files into a static artifact. It does not run tests or rebuild content/CSS. Runtime additions must update both the copy list and push path filters. A local commit does not publish; a relevant push to `main` triggers the recorded deployment workflow. No such action is part of this review.
+[`pages.yml`](../../../.github/workflows/pages.yml) copies checked-in HTML, JavaScript, styles, the manifest, and all pack JSON files into a static artifact. It does not run tests or rebuild content/CSS. Runtime additions must update both the copy list and push path filters. A local commit does not publish; a relevant push to `main` triggers the recorded deployment workflow. No such action is part of this review.
 
 ## Review of the opening Git changes
 
@@ -108,7 +108,7 @@ The existing graph is relevant current structural evidence, but it is not a test
 
 ### C1 — Reconcile top-level content versions and save guidance
 
-At the review baseline, [`SPEC.md`](../SPEC.md) lines 7, 34, and 38 and [`ROADMAP.md`](../ROADMAP.md) line 3 still report pre-October-17 versions. Bentonville is 5, Argentina 6, Northwest Arkansas 3, and Route 66/Ozark Waterways/Railroads are 2. The SPEC persistence paragraph therefore describes obsolete compatibility limits. README, the active data, and the latest ledger have the newer values.
+At the review baseline, [`SPEC.md`](../../../SPEC.md) lines 7, 34, and 38 and [`ROADMAP.md`](../../../ROADMAP.md) line 3 still report pre-October-17 versions. Bentonville is 5, Argentina 6, Northwest Arkansas 3, and Route 66/Ozark Waterways/Railroads are 2. The SPEC persistence paragraph therefore describes obsolete compatibility limits. README, the active data, and the latest ledger have the newer values.
 
 Correct the active contract and roadmap, retaining older dated evidence as history. Reduce repeated version prose where a link to the authoritative catalog is sufficient. Any new modality changes must also update the baseline contract that described only one four-option engine.
 
@@ -118,7 +118,7 @@ Use “does not run tests or rebuild content/CSS” in the opening README change
 
 ### C3 — Bring the older authoring helper onto the existing atomic-write utility
 
-[`scripts/apply-henchmen.js`](../scripts/apply-henchmen.js) lines 63–65 use a fixed `${packPath}.tmp`. Concurrent invocations can collide, and a failed write can leave that shared temporary path behind. [`scripts/content-io.cjs`](../scripts/content-io.cjs) already provides a unique, exclusively created temporary file and cleanup. Reusing it is a small authoring-maintenance correction already acknowledged in the roadmap. It does not need to expand the gameplay work.
+[`scripts/apply-henchmen.js`](../../../scripts/apply-henchmen.js) lines 63–65 use a fixed `${packPath}.tmp`. Concurrent invocations can collide, and a failed write can leave that shared temporary path behind. [`scripts/content-io.cjs`](../../../scripts/content-io.cjs) already provides a unique, exclusively created temporary file and cleanup. Reusing it is a small authoring-maintenance correction already acknowledged in the roadmap. It does not need to expand the gameplay work.
 
 ### C4 — Make modality contracts complete before calling the feature finished
 
@@ -221,7 +221,7 @@ Ryan's focused verification command is:
 npm run check:syntax && npm run check:content && node --test tests/activities.test.js tests/session-regressions.test.js tests/first-correction-pass.test.js tests/core-contracts.test.js tests/run-generation.test.js tests/smoke.test.js
 ```
 
-See the [activity guide](quiz-activities.md), [finish plan](finish-plan.md), and [current remediation status](remediation-status.md) for exact behavior, compatibility, and remaining acceptance limits. A short personal input check remains optional; existing source reviews and authored tests do not establish interaction correctness or comfort.
+See the [activity guide](quiz-activities.md), [finish plan](2026-10-21-finish-plan.md), and [current remediation status](2026-10-27-remediation-status.md) for exact behavior, compatibility, and remaining acceptance limits. A short personal input check remains optional; existing source reviews and authored tests do not establish interaction correctness or comfort.
 
 ## Follow-up remediation
 
@@ -250,7 +250,7 @@ Ryan requested that the identified issues be fixed and next actions taken, with 
 | Plain-text HTML sinks | Fallback evidence labels, names, token fields, titles, and Leaflet tooltip names are escaped. Authored trusted visual HTML remains a separate validated content contract. |
 | Backup and restore | JSON export carries notebook data and the saved case, including one belonging to another pack. Notebook and save restores are separate explicit replacement actions after preview. Strict bounds, current-pack save validation, and snapshot comparisons protect against invalid input and newer local writes. |
 | Optional offline use | `npm run build:offline` packages a single `dist/carmen-offline.html` with all twelve packs, local scripts, and CSS. It contains no remote runtime assets or downloaded tiles; the text route is forced. Source links are optional external navigation. Ryan's build succeeded; offline browser acceptance remains separate. |
-| Map metadata | A [96-location source inventory](map-metadata-audit.md) records coordinate bounds and shared orientation points. The UI explicitly labels pins as approximate. No unsupported coordinate corrections were made. |
+| Map metadata | A [96-location source inventory](../../provenance/2026-10-21-map-metadata-audit.md) records coordinate bounds and shared orientation points. The UI explicitly labels pins as approximate. No unsupported coordinate corrections were made. |
 
 ### Compatibility and recovery decisions
 
@@ -268,7 +268,7 @@ All five named corrections now have source changes addressing them. The opportun
 
 Source review included independent cross-checks of all 47 activity descriptors against their owning clues, compatibility across the old and new catalogs, writable-file ownership, HTML bindings, deployment asset lists, and backup boundaries. That review caught and corrected old Mixed-save reinterpretation, unsaved warrant changes during feedback, omission of other-pack saved cases from backup, and offline literal/HTML-tag embedding problems. Those are source findings and fixes, not test results.
 
-Ryan subsequently supplied a passing Node v26.7.0 run: syntax and content/fallback gates accepted all twelve packs, and all 117 tests in the eleven focused files passed with zero failures, cancellations, skips, or todos. His offline build wrote `dist/carmen-offline.html`. GitNexus 1.6.12 reported a successful rebuild with 1,465 nodes, 5,435 edges, 49 clusters, and 125 flows; this is index evidence, not a complete change-impact report. The [verbatim transcript](archive/verification-2026-10-21-harmony.txt) is preserved. Agents did not rerun these commands. No full-suite run, external map-pin audit, current venue/access review, browser/assistive-technology acceptance, or human interaction acceptance is established. No staging, commit, push, deployment, or publication occurred.
+Ryan subsequently supplied a passing Node v26.7.0 run: syntax and content/fallback gates accepted all twelve packs, and all 117 tests in the eleven focused files passed with zero failures, cancellations, skips, or todos. His offline build wrote `dist/carmen-offline.html`. GitNexus 1.6.12 reported a successful rebuild with 1,465 nodes, 5,435 edges, 49 clusters, and 125 flows; this is index evidence, not a complete change-impact report. The [verbatim transcript](../verification/2026-10-21-harmony.txt) is preserved. Agents did not rerun these commands. No full-suite run, external map-pin audit, current venue/access review, browser/assistive-technology acceptance, or human interaction acceptance is established. No staging, commit, push, deployment, or publication occurred.
 
 The focused owner command is now a reusable package script:
 
@@ -279,4 +279,4 @@ npm run verify:harmony
 
 It runs syntax and content checks plus the activity, route-variety, content-variety, Study, integration, authoring, session, prior-correction, core, run-generation, and smoke test files. It does not run GitNexus or deploy. Both this command and the separate `npm run build:offline` succeeded in Ryan's supplied run; these documentation updates do not require repeating them.
 
-The supplied results contain no failing check requiring a code correction. Expected harness fallback warnings do not establish a real-network defect. Real input comfort, high zoom, screen-reader behavior, installed-voice behavior, and offline browser storage require a focused personal/browser pass if Ryan chooses to authorize one; the automated run cannot supply that evidence. The subsequent [investigation flow update](design-update-2026-10-21.md) adds schema 8, catalog 3, the Swapped Dispatch story, and sixteen runtime scripts, with its design test suite verified.
+The supplied results contain no failing check requiring a code correction. Expected harness fallback warnings do not establish a real-network defect. Real input comfort, high zoom, screen-reader behavior, installed-voice behavior, and offline browser storage require a focused personal/browser pass if Ryan chooses to authorize one; the automated run cannot supply that evidence. The subsequent [investigation flow update](2026-10-21-design-update.md) adds schema 8, catalog 3, the Swapped Dispatch story, and sixteen runtime scripts, with its design test suite verified.

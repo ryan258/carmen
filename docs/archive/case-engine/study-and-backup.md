@@ -2,7 +2,7 @@
 
 The **Study / Notebook** button opens an unscored view of the currently selected pack. If an investigation is running, opening Study pauses it and cancels delayed feedback. The saved investigation is preserved. **Return to case** resumes that unchanged case directly; it checks the pack, content version, and exact saved snapshot first. If another tab changed the save, Study asks the player to review the current case from the menu instead. Closing Study also leaves **Continue case** available on the title screen with the saved stage and next action.
 
-The [October 21 investigation-flow update](design-update-2026-10-21.md) is implemented locally and verified. Its schema-8/catalog-3 behavior, Study return-to-case, career progression integration, and seventeen runtime scripts are fully integrated and verified with `verify:design` and `build:offline`.
+The [October 21 investigation-flow update](2026-10-21-design-update.md) is implemented locally and verified. Its schema-8/catalog-3 behavior, Study return-to-case, career progression integration, and seventeen runtime scripts are fully integrated and verified with `verify:design` and `build:offline`.
 
 ## Direct study and review
 
@@ -57,4 +57,4 @@ Matching-content schema-5, schema-6, and schema-7 saves retain their historical 
 
 Support enabled during play permanently marks the result assisted, makes future hints free, and prevents later life loss without refunding prior deductions or changing earned points. Saved `scoringHintsUsedInRound` retains charged hints; `hintsUsedInRound` retains all hints revealed. Backup/restore preserves both. At zero lives, pause retains the unfinished case, and only explicit closure clears that run after recording its outcome.
 
-The earlier `tests/study.test.js` regressions passed within the harmony suite, and the updated return-to-case, schema-8, and catalog-3 integration passed in `npm run verify:design` (99/99 tests passing). The offline edition is rebuilt with all seventeen runtime scripts via `npm run build:offline`. Browser storage, local-file persistence, installed voices, and assistive-technology behavior remain separate personal checks. The [finish plan](finish-plan.md) and [design update](design-update-2026-10-21.md) record the current status.
+The earlier `tests/study.test.js` regressions passed within the harmony suite, and the updated return-to-case, schema-8, and catalog-3 integration passed in `npm run verify:design` (99/99 tests passing). The offline edition is rebuilt with all seventeen runtime scripts via `npm run build:offline`. Browser storage, local-file persistence, installed voices, and assistive-technology behavior remain separate personal checks. The [finish plan](2026-10-21-finish-plan.md) and [design update](2026-10-21-design-update.md) record the current status.

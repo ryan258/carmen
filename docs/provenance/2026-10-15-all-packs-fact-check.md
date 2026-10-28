@@ -10,21 +10,21 @@ This is a source-backed AI-assisted review, not human educator approval, observe
 
 | Pack | Cases | Current content version | Review record |
 |---|---:|---:|---|
-| American National Parks | 24 | 1 | [Six-concept ledger](remaining-packs-review.md) |
-| Architecture & Hidden Details | 24 | 1 | [Six-concept ledger](remaining-packs-review.md) |
-| Argentina | 40 | 6 | This ledger; four earlier cases remain documented in [the exemplar](reviewed-exemplar.md) |
-| Arkansas Delta | 24 | 1 | [Six-concept ledger](remaining-packs-review.md) |
-| Arkansas State Parks | 24 | 1 | [Parks/highway ledger](parks-route66-review.md) |
-| Bentonville | 40 | 5 | This ledger; four earlier cases remain documented in [the exemplar](reviewed-exemplar.md) |
-| Museums & Missing Labels | 24 | 2 | [Six-concept ledger](remaining-packs-review.md) |
-| Northwest Arkansas | 24 | 3 | [NWA ledger](content-audit.md) |
-| NWA Mountain Biking | 24 | 2 | [NWA ledger](content-audit.md) |
-| Ozark Waterways | 24 | 2 | [Six-concept ledger](remaining-packs-review.md) |
-| Railroads & Depots | 24 | 2 | [Six-concept ledger](remaining-packs-review.md) |
-| Route 66 | 24 | 2 | [Parks/highway ledger](parks-route66-review.md) |
+| American National Parks | 24 | 1 | [Six-concept ledger](2026-10-14-remaining-packs-review.md) |
+| Architecture & Hidden Details | 24 | 1 | [Six-concept ledger](2026-10-14-remaining-packs-review.md) |
+| Argentina | 40 | 6 | This ledger; four earlier cases remain documented in [the exemplar](2026-10-12-reviewed-exemplar.md) |
+| Arkansas Delta | 24 | 1 | [Six-concept ledger](2026-10-14-remaining-packs-review.md) |
+| Arkansas State Parks | 24 | 1 | [Parks/highway ledger](2026-10-14-parks-route66-review.md) |
+| Bentonville | 40 | 5 | This ledger; four earlier cases remain documented in [the exemplar](2026-10-12-reviewed-exemplar.md) |
+| Museums & Missing Labels | 24 | 2 | [Six-concept ledger](2026-10-14-remaining-packs-review.md) |
+| Northwest Arkansas | 24 | 3 | [NWA ledger](2026-10-13-nwa-content-audit.md) |
+| NWA Mountain Biking | 24 | 2 | [NWA ledger](2026-10-13-nwa-content-audit.md) |
+| Ozark Waterways | 24 | 2 | [Six-concept ledger](2026-10-14-remaining-packs-review.md) |
+| Railroads & Depots | 24 | 2 | [Six-concept ledger](2026-10-14-remaining-packs-review.md) |
+| Route 66 | 24 | 2 | [Parks/highway ledger](2026-10-14-parks-route66-review.md) |
 | **Total** | **320** |  | **320 reviewed; 0 pending** |
 
-The 248 previously reviewed cases remain supported by their case-level ledgers: [original exemplar](reviewed-exemplar.md), [NWA](content-audit.md), [parks and Route 66](parks-route66-review.md), and [six concept packs](remaining-packs-review.md). This review adds the other 72:
+The 248 previously reviewed cases remain supported by their case-level ledgers: [original exemplar](2026-10-12-reviewed-exemplar.md), [NWA](2026-10-13-nwa-content-audit.md), [parks and Route 66](2026-10-14-parks-route66-review.md), and [six concept packs](2026-10-14-remaining-packs-review.md). This review adds the other 72:
 
 ## Bentonville — 36 cases completed
 
@@ -84,7 +84,7 @@ The supplied review could not freshly confirm Aconcagua's height or the Marin Ci
 
 Read-only GitNexus reported LOW upstream impact for `createCase`, with one callable-value reference and no affected processes resolved. Pack files, `casesByLocation`, `quizPack` and the fallback returned UNKNOWN; the review sidecar was absent from the index. The index is two commits behind HEAD. Current source inspection confirmed the generator's sidecar merge and `.map(...)` registration, manifest loading, generated fallback, and `validateSave` content-version guard. UNKNOWN was not treated as an all-clear. No analyze/reindex was run.
 
-No tests, separate syntax/content/release gate, browser checks, staging, commits, pushing or publication were run for this amendment. The short `npm run build:content` command regenerated Bentonville and its fallback; its authoring `validatePack` calls are intrinsic to generation. Owner-run verification remains pending in the [finish plan](finish-plan.md).
+No tests, separate syntax/content/release gate, browser checks, staging, commits, pushing or publication were run for this amendment. The short `npm run build:content` command regenerated Bentonville and its fallback; its authoring `validatePack` calls are intrinsic to generation. Owner-run verification remains pending in the [finish plan](../archive/case-engine/2026-10-21-finish-plan.md).
 
 ### Final consistency review — October 17
 
