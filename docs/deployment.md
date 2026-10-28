@@ -14,7 +14,7 @@ Later documentation-only commits do not change the deployed game revision. No te
 
 Pushing a change to the listed game assets or workflow on `main` publishes the checked-in revision. Documentation-only changes do not trigger deployment. The workflow can also be started from **Actions → Deploy GitHub Pages → Run workflow**, using `main`. The [Actions history](https://github.com/ryan258/carmen/actions/workflows/pages.yml) records each deployment and its revision.
 
-The current packaging definition contains the entry page, game HTML, sixteen runtime JavaScript files, two stylesheets, the pack manifest and pack JSON files. `.nojekyll` preserves static delivery; `version.json` records the deployed commit. Source-only authoring scripts, tests, dependency files, agent instructions and documentation archives are excluded from the site artifact. The source repository remains public.
+The current packaging definition contains the entry page, game HTML, seventeen runtime JavaScript files, two stylesheets, the pack manifest and pack JSON files. `.nojekyll` preserves static delivery; `version.json` records the deployed commit. Source-only authoring scripts, tests, dependency files, agent instructions and documentation archives are excluded from the site artifact. The source repository remains public.
 
 The workflow does not install npm packages, rebuild content/CSS, run tests or run GitNexus analyze. Regenerate and review assets as described in [the authoring guide](new-location.md) before publishing changes to their sources. Commit generated assets with those source changes only when committing is explicitly authorized. Keep the copy list and push paths aligned when adding runtime files. The October 21 local changes add `quiz-activities.js`, `game-activities.js`, `quiz-practice.js`, `study-core.js`, `game-study.js`, `game-session.js`, `game-warrant.js`, `case-design.js`, and `game-experience.js` to page loading and packaging; no deployment was performed.
 
@@ -42,7 +42,7 @@ A successful Pages deployment and successful HTTP responses establish publicatio
 
 ## Optional local offline file — October 21 follow-up
 
-`scripts/build-offline.cjs`, exposed as `npm run build:offline`, packages local styles, all sixteen runtime modules, the manifest, and all twelve packs into `dist/carmen-offline.html`. It removes optional Leaflet network assets and uses the text route. Source links remain optional external links; they are not embedded factual archives. This is a self-contained local file, not a service worker or installation flow. The portable artifact was rebuilt and verified alongside `npm run verify:design`. Offline browser use and local-file persistence remain personal checks.
+`scripts/build-offline.cjs`, exposed as `npm run build:offline`, packages local styles, all seventeen runtime modules, the manifest, and all twelve packs into `dist/carmen-offline.html`. It removes optional Leaflet network assets and uses the text route. Source links remain optional external links; they are not embedded factual archives. This is a self-contained local file, not a service worker or installation flow. The portable artifact was rebuilt and verified alongside `npm run verify:design`. Offline browser use and local-file persistence remain personal checks.
 
 To regenerate it after later runtime or content changes:
 

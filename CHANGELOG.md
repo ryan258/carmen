@@ -1,5 +1,21 @@
 # Changelog
 
+## Unreleased — Trivia-only final report (October 27, 2026)
+
+- Catalog-3 final reports, Classic and Mixed, now ask the first, middle, and last stops' case questions with their clues shown. The token-recall question and the route-order and token-match activities are gone from new runs. Catalog-1/2 saves keep their historical finale.
+- Save impact: a catalog-3 Mixed save paused in final-report round 2 or 3 no longer validates, so it will not resume (it stays stored, unmodified). A catalog-3 Classic save paused in round 3 resumes on the new last-stop question.
+
+## Unreleased — Career layer: daily case, XP levels, badges (October 26, 2026)
+
+- Add `game-career.js` and a title-screen **Detective career** card: level, XP progress bar, daily streak, and a badge list.
+- Add **Play today's case**: one dated case per day (`daily-YYYY-MM-DD` seed, four stops, Mixed, detective lives, standard reasoning). An in-progress daily resumes instead of restarting; a finished one locks until tomorrow.
+- Award career XP on every finished case (score on closure, half score with a 50 minimum on escape) plus a daily bonus of 250 + 50 per extra streak day (capped at +250). Ten named levels on a quadratic curve.
+- Add 16 badges (first collar, daily streaks, perfect case, no hints, last life, inspector, deeper reasoning, longest route, the story episode, five packs, every pack, plus three study badges). Results show XP gained, promotions, new badges, and a copyable emoji daily grid.
+- Results end with the next locked badge to chase and a **Play another quick case** button; the title card counts down to the next daily case.
+- Make learning part of the loop: results offer **Review the stops you missed in Study** (queues them due now as Again entries; an unreadable notebook is never overwritten). The career card shows **Review N due cases (+XP)**, which opens Study filtered to due reviews. Each Study review earns career XP once per case per day (Got it +40, Again +15), with three study badges: Field Notes, Bookworm (25 reviews), and Long Memory (a review interval of 8+ days).
+- Career data lives in its own `carmen_career` key and counts each run once. Save schema 8, records, and stats are unchanged.
+- Add `tests/career.test.js`; add the new script to the page, `check:syntax`, and the Pages workflow.
+
 ## Unreleased — Destination trail choices and transition round deductions (October 26, 2026)
 
 - Add interactive destination trail choices to the transition round ("Where did the trail go?").

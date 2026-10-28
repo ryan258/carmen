@@ -10,6 +10,9 @@ Start with `python3 -m http.server 8000 --bind 127.0.0.1`, then open http://127.
 
 - [ ] All 12 packs: complete 4-, 6-, and 8-stop runs. Confirm the stop selector, displayed count, inventory, transition lead, final report, and records agree.
 - [ ] Transition round: confirm destination trail choices appear on between-stop screen, deduce from travel stub/lead, confirm wrong choice strikes through and deducts a life (never taking the last life), and correct choice advances to next stop.
+- [ ] Catalog-3 final report: verify three four-choice place trivia questions (first, middle, last stop case questions with clues shown), confirming that token recall, route ordering, and token-matching activities are not used in new runs.
+- [ ] Career progression & daily case: verify "Play today's case" launches a dated seed (`daily-YYYY-MM-DD`, 4 stops, Mixed, detective), completion awards XP and increments streak, level and badges update, and button locks until tomorrow; confirm "Review due cases" opens Study filtered to due reviews, and rating a case awards career XP.
+- [ ] Case completion results: verify "Review the stops you missed in Study" queues missed stops as due Again entries in the notebook, and "Play another quick case" returns to title and starts a fresh case.
 - [ ] Use a hint and choose a wrong answer. Reload/resume: hint count, score penalty, attempts, order, eliminated option, and lives persist.
 - [ ] Solve a puzzle, submit a wrong warrant, then reload. The puzzle stays solved and cannot award points again.
 - [ ] Submit a wrong warrant repeatedly during feedback. One life is lost. The button unlocks after feedback when lives remain.

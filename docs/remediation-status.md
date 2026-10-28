@@ -1,4 +1,25 @@
-# Current remediation status — October 26, 2026
+# Current remediation status — October 27, 2026
+
+## Career progression layer, trivia-only finale report, and submodules check — October 27
+
+- **Detective career progression layer (`game-career.js`)**:
+  - Implements `carmen_career` persistent storage key, decoupled from game saves, records, and stats.
+  - Adds **Play today's case**: single daily four-stop Mixed detective run seeded `daily-YYYY-MM-DD` across packs, locking upon completion until tomorrow and resuming if in-progress.
+  - Awards career XP on case closure (score) and escape (half score, minimum 50 XP), plus a 250 XP daily bonus with streak scaling (+50 per streak day up to +250).
+  - 10 named detective career levels governed by a quadratic curve (`400 * level * (level - 1)`).
+  - 16 badges covering milestone closures, daily streaks, perfect cases, difficulty modes, packs visited, and Study reviews.
+  - Tight Study integration: Study reviews earn career XP once per case per local day (+40 Got it, +15 Again); title career card displays due reviews for the active pack; case completion allows queuing missed stops directly into the Study notebook as due `Again` items (with safety against unreadable notebooks).
+  - Terminal results render career progression, promotions, daily share summary, earned badges, next badge goal, and quick replay.
+  - Accompanied by unit tests in `tests/career.test.js`.
+
+- **Catalog-3 trivia-only final report**:
+  - Final report rounds in Catalog 3 (both Classic and Mixed) now ask three 4-choice questions reviewing the first, middle, and last stops' case questions with clues shown.
+  - Removes token-recall and route-ordering / token-matching activities from Catalog-3 finales; historical Catalog-1/2 saves preserve their original finale structure.
+  - Regression tests added in `tests/design-flow.test.js` and `tests/design-core.test.js`.
+
+- **Packaging and runtime scripts**:
+  - Runtime script count updated from 16 to 17 local scripts (`game-career.js` added to `carmen-sandiego-bentonville.html`, `package.json` syntax check, `.github/workflows/pages.yml`, and offline bundling).
+  - Git submodule status confirmed: no submodules present in the repository.
 
 ## Destination trail choices and GitNexus refresh — October 26
 
