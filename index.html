@@ -3,10 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Where in Bentonville is Carmen Sandiego?</title>
-<meta http-equiv="refresh" content="0; url=./carmen-sandiego-bentonville.html">
+<title>Where in the World? Carmen trivia</title>
+<link rel="stylesheet" href="./trivia.css">
+<script src="./trivia-bank.js" defer></script>
+<script src="./trivia.js" defer></script>
 </head>
 <body>
-<p><a href="./carmen-sandiego-bentonville.html">Open Where in Bentonville is Carmen Sandiego?</a></p>
+<main>
+  <header class="masthead">
+    <p class="kicker">ACME trivia desk</p>
+    <h1 id="packTitle">Where in the World is Carmen Sandiego?</h1>
+    <p id="notice" class="notice" role="status" hidden></p>
+  </header>
+
+  <section id="home" aria-label="Choose a case">
+    <label for="packSelect">Case file</label>
+    <select id="packSelect"></select>
+    <p id="mastery"></p>
+    <div class="actions">
+      <button id="continueBtn" type="button" class="primary" hidden>Continue case</button>
+      <button id="dailyBtn" type="button" class="primary">Today's case</button>
+      <button id="reviewBtn" type="button">Review due clues</button>
+    </div>
+    <div class="actions">
+      <label for="stopSelect">Stops</label>
+      <select id="stopSelect"><option>4</option><option selected>6</option><option>8</option></select>
+      <button id="chaseBtn" type="button">Start a case</button>
+    </div>
+    <p id="streak"></p>
+    <p class="help">Each clue is a real, sourced fact about a place. Pick where it points; the answer, the full fact and its source follow. Missed clues come back for review today, and right answers come back later at growing intervals. Keys 1–4 or A–D answer.</p>
+    <details>
+      <summary>Backup</summary>
+      <div class="actions">
+        <button id="exportBtn" type="button">Export progress</button>
+        <label class="file">Import progress <input id="importInput" type="file" accept="application/json,.json"></label>
+        <button id="freshBtn" type="button" hidden>Start fresh</button>
+      </div>
+    </details>
+  </section>
+
+  <section id="play" hidden aria-labelledby="question">
+    <p id="stopHeading" class="kicker"></p>
+    <p id="lead"></p>
+    <blockquote id="clue"></blockquote>
+    <h2 id="question" tabindex="-1"></h2>
+    <div id="choices" class="choices"></div>
+    <div id="feedback" aria-live="polite"></div>
+    <div class="actions">
+      <button id="nextBtn" type="button" class="primary" hidden>Continue</button>
+      <button id="homeBtn" type="button" class="quiet">Pause</button>
+    </div>
+  </section>
+
+  <section id="results" hidden aria-labelledby="resultHeading">
+    <h2 id="resultHeading" tabindex="-1"></h2>
+    <p id="resultSummary"></p>
+    <ol id="resultList"></ol>
+    <div class="actions">
+      <button id="againBtn" type="button" class="primary">Start another case</button>
+      <button id="resultsHomeBtn" type="button">Home</button>
+    </div>
+  </section>
+
+  <footer>Unofficial fan-made trivia practice. Suspects are fictional; every clue links to its source.</footer>
+</main>
 </body>
 </html>
