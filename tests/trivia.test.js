@@ -32,8 +32,31 @@ test('right answers space reviews out; a miss comes back today', () => {
   assert.deepEqual(progress.cards.f, {box: 2, due: '2026-11-01', seen: 2, right: 2});
   t.grade(progress, 'f', false, '2026-11-01');
   assert.deepEqual(progress.cards.f, {box: 0, due: '2026-11-01', seen: 3, right: 2});
-  for (let i = 0; i < 9; i++) t.grade(progress, 'f', true, TODAY);
+  for (let i = 0; i < 9; i++) t.grade(progress, 'f', true, progress.cards.f.due);
   assert.equal(progress.cards.f.box, t.BOX_DAYS.length - 1);
+});
+
+test('a right answer before the fact is due does not promote it', () => {
+  const progress = t.emptyProgress();
+  t.grade(progress, 'f', true, TODAY);
+  for (let i = 0; i < 5; i++) t.grade(progress, 'f', true, TODAY);
+  assert.deepEqual(progress.cards.f, {box: 1, due: '2026-10-29', seen: 6, right: 6});
+  t.grade(progress, 'f', false, TODAY);
+  assert.equal(progress.cards.f.box, 0, 'an early miss still resets');
+});
+
+test('a daily belongs to its seed day, and leaving one closes it', () => {
+  const progress = t.emptyProgress();
+  progress.run = t.createChase(bank, pack.id, 4, `daily-${TODAY}`, progress, TODAY, 'daily');
+  for (const leg of progress.run.legs) { t.answer(progress, leg.place, '2026-10-29'); t.advance(progress, '2026-10-29'); }
+  assert.deepEqual(Object.keys(progress.dailies), [TODAY], 'finished after midnight, filed under the day it started');
+  progress.run = t.createChase(bank, pack.id, 4, 'daily-2026-10-29', progress, '2026-10-29', 'daily');
+  t.abandon(progress, '2026-10-29');
+  assert.equal(progress.run, null);
+  assert.deepEqual(progress.dailies['2026-10-29'], {packId: pack.id, caught: false});
+  progress.run = t.createChase(bank, pack.id, 4, 'x', progress, TODAY);
+  t.abandon(progress, TODAY);
+  assert.equal(Object.keys(progress.dailies).length, 2, 'leaving an ordinary case records nothing');
 });
 
 test('a chase is seeded, visits distinct places, and offers four choices including the answer', () => {

@@ -43,10 +43,12 @@
   function emptyProgress() { return {version: 1, cards: {}, run: null, dailies: {}, lastPack: null}; }
 
   // A right answer moves the fact up one box and spaces its next review; a miss brings it back today.
+  // A right answer before the fact is due counts but keeps its box and date: spacing needs the gap.
   function grade(progress, factId, correct, today) {
     const card = progress.cards[factId] || {box: 0, due: today, seen: 0, right: 0};
-    const box = correct ? Math.min(card.box + 1, BOX_DAYS.length - 1) : 0;
-    progress.cards[factId] = {box, due: addDays(today, BOX_DAYS[box]), seen: card.seen + 1, right: card.right + (correct ? 1 : 0)};
+    const early = correct && card.due > today;
+    const box = early ? card.box : correct ? Math.min(card.box + 1, BOX_DAYS.length - 1) : 0;
+    progress.cards[factId] = {box, due: early ? card.due : addDays(today, BOX_DAYS[box]), seen: card.seen + 1, right: card.right + (correct ? 1 : 0)};
   }
 
   // Due reviews first, then unseen facts, then whatever comes due soonest.
@@ -89,15 +91,23 @@
     const misses = run.legs.filter(leg => leg.choice !== leg.place).length;
     return {kind: run.kind, packId: run.packId, legs: run.legs, misses, caught: misses <= allowedMisses(run.legs.length)};
   }
+  // A daily belongs to the day in its seed, even when it is finished after midnight.
+  const dailyDay = (run, today) => DAY.test(run.seed.slice(6)) ? run.seed.slice(6) : today;
   // Returns the finished summary after the last leg, otherwise null.
   function advance(progress, today) {
     const run = progress.run;
     if (!run || run.legs[run.index].choice === null) return null;
     if (++run.index < run.legs.length) return null;
     const result = summarize(run);
-    if (run.kind === 'daily') progress.dailies[today] = {packId: run.packId, caught: result.caught};
+    if (run.kind === 'daily') progress.dailies[dailyDay(run, today)] = {packId: run.packId, caught: result.caught};
     progress.run = null;
     return result;
+  }
+  // Leaving a daily closes it as got away, so it can't be replayed once its answers have been seen.
+  function abandon(progress, today) {
+    const run = progress.run;
+    if (run?.kind === 'daily') progress.dailies[dailyDay(run, today)] = {packId: run.packId, caught: false};
+    progress.run = null;
   }
 
   function streak(progress, today) {
@@ -148,7 +158,7 @@
   }
 
   const api = {STORE_KEY, BOX_DAYS, MASTERED_BOX, seeded, shuffle, dayKey, addDays, emptyProgress, grade, pickFact,
-    createChase, createReview, dueFacts, answer, advance, summarize, allowedMisses, streak, mastery, validRun, normalizeProgress};
+    createChase, createReview, dueFacts, answer, advance, abandon, summarize, allowedMisses, streak, mastery, validRun, normalizeProgress};
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (typeof document === 'undefined') return;
 
@@ -223,7 +233,7 @@
     });
     renderFeedback();
     show('play');
-    if (leg.choice === null) $('question').focus();
+    $(leg.choice === null ? 'question' : 'nextBtn').focus();
   }
   const misses = run => run.legs.slice(0, run.index + 1).filter(leg => leg.choice !== null && leg.choice !== leg.place).length;
 
@@ -270,14 +280,20 @@
       return `<li class="${leg.choice === leg.place ? 'right' : 'wrong'}"><strong>${leg.choice === leg.place ? '✓' : '✗'} ${escapeHtml(place.name)}</strong> — ${escapeHtml(fact.fact)}</li>`;
     }).join('');
     $('againBtn').textContent = result.kind === 'review' ? 'Back to cases' : 'Start another case';
-    $('againBtn').onclick = result.kind === 'review' ? renderHome : startChase;
+    $('againBtn').onclick = result.kind === 'review' ? goHome : startChase;
     show('results');
     $('resultHeading').focus();
   }
+  // Navigation home moves focus to the page heading, so it isn't lost on a hidden button.
+  function goHome() { renderHome(); $('packTitle').focus(); }
 
   function begin(run) {
     if (!run) return;
-    if (progress.run && !root.confirm('Replace the case you have in progress?')) return;
+    if (progress.run) {
+      const daily = progress.run.kind === 'daily';
+      if (!root.confirm(daily ? 'Replace the daily case in progress? It will close as got away.' : 'Replace the case you have in progress?')) return;
+      abandon(progress, dayKey());
+    }
     progress.run = run;
     save(); renderLeg();
   }
@@ -318,7 +334,7 @@
   function startFresh() {
     if (!root.confirm('Replace the unreadable saved progress with a fresh start?')) return;
     progress = emptyProgress(); canSave = true; $('freshBtn').hidden = true;
-    notify(''); save(); renderHome();
+    notify(''); save(); goHome();
   }
 
   function onKey(event) {
@@ -339,8 +355,8 @@
     $('reviewBtn').addEventListener('click', startReview);
     $('chaseBtn').addEventListener('click', startChase);
     $('nextBtn').addEventListener('click', next);
-    $('homeBtn').addEventListener('click', renderHome);
-    $('resultsHomeBtn').addEventListener('click', renderHome);
+    $('homeBtn').addEventListener('click', goHome);
+    $('resultsHomeBtn').addEventListener('click', goHome);
     $('exportBtn').addEventListener('click', exportProgress);
     $('importInput').addEventListener('change', importProgress);
     $('freshBtn').addEventListener('click', startFresh);
