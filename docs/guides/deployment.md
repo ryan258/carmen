@@ -23,7 +23,7 @@ Site: **https://ryan258.github.io/carmen/**. The source is set to **GitHub Actio
   gh workflow run pages.yml --repo ryan258/carmen --ref main
   ```
 
-- The workflow copies those four files, adds `.nojekyll`, and writes `version.json` containing the commit. It installs nothing and runs no tests, so run `npm run verify` before you push.
+- The workflow copies those four files, adds `.nojekyll`, and writes `version.json` containing the commit. It installs nothing and runs `npm run verify` first, so a failing test or broken bank stops the publication. Run it locally before you push anyway.
 - Only `main` can deploy. Action versions are pinned, and publications queue rather than cancel one another.
 
 Publishing is Ryan's action. Agents do not push or start the workflow unless he explicitly asks for that.

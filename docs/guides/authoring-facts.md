@@ -19,7 +19,7 @@ Every question comes from `trivia-bank.js`, which holds packs, then places, then
 3. **`fact`:** the full statement shown after an answer. It must be supported by the cited page.
 4. **`clue`:** the same statement with the place's name, and any short form that gives it away, replaced by `____`. For example, "Coler" for Coler Mountain Bike Preserve, "Bariloche", or "The Square".
 5. **`sources`:** at least one `https` page, with its title and publisher.
-6. Run `npm run verify`. The bank test rejects a clue that contains its place's full name. It cannot catch short forms or ambiguity, so check those yourself.
+6. Run `npm run verify`. The bank test rejects a clue that contains its place's full name. It cannot catch short forms, other words that give the place away (such as "bridge" for Brush Creek Bridge), or ambiguity, so check those yourself. A word shared by two places in the pack, like "Walmart", doesn't give either away.
 
 ## Editorial rules
 

@@ -7,8 +7,8 @@ For cross-system Cyborg work, read `/Users/ryanjohnson/Projects/cyborg/MANUAL.md
 - Do not stage, commit, push, deploy, or publish unless Ryan explicitly delegates that exact action.
 - The exact `cyborg auto --build` workflow may make its documented internal commits after announcing that behavior; it does not authorize publishing or unrelated commits.
 - Ask one material question at a time when human judgment is needed.
-- For this remediation, Ryan explicitly requests that agents do not run tests, full suites, or long-running verification. Provide copy/paste commands for Ryan to run and report back. This overrides generated skill advice to automatically reindex.
-- Trace affected imports, callers, content-pack consumers, and save compatibility from current source before code edits. Keep unresolved dependencies and verification limits explicit.
+- Ryan explicitly requests that agents do not run tests, full suites, `gitnexus analyze`, or long-running verification. Provide copy/paste commands for Ryan to run and report back. This overrides generated skill advice to automatically reindex.
+- Trace affected imports, callers, fact-bank consumers, and save compatibility from current source before code edits. Keep unresolved dependencies and verification limits explicit.
 
 ## Source change checks
 
@@ -17,7 +17,7 @@ Trace affected imports, callers, routes, templates, and focused tests with nativ
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **carmen** (1726 symbols, 6822 relationships, 148 execution flows).
+This project is indexed by GitNexus as **carmen** (568 symbols, 1274 relationships, 39 execution flows).
 
 > Index stale? Run `node .gitnexus/run.cjs analyze --index-only` from the project root — it auto-selects an available runner. No `.gitnexus/run.cjs` yet? Bootstrap with `npx`, `bunx`, or `pnpm dlx` — e.g. `bunx gitnexus@latest analyze` (npm 11 npx crash; #1939).
 

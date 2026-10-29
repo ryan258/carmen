@@ -1,5 +1,24 @@
 # Changelog
 
+## Unreleased — Quiznauts place banks (October 29, 2026)
+
+- Import 309 facts about 240 places from four Quiznauts banks (capitals-hard, dish-origins, earth-superlatives, extreme-earth) as 11 new packs: capitals of Africa, the Americas, Asia, Europe, and Oceania, World's Kitchens, World Almanac, Extreme Lands, Extreme Waters, Weather Records, and Disaster Records. The bank now has 23 packs, 336 places, and 503 facts.
+- Only questions with a place for an answer came over, with numeric follow-ups merged into their place's fact. 49 of the 400 questions were left out, as listed in `docs/provenance/2026-10-29-quiznauts-import.md`.
+- The imported facts are unreviewed, as they are in Quiznauts. Their coordinates are approximate, and suspects repeat within each family of packs. The original 12 packs are unchanged.
+- Ryan's `npm run verify` passed syntax and all 9 tests with the imported bank. A browser-pane load showed all 23 packs and played a World's Kitchens clue with no console errors.
+
+## Unreleased — Review fixes (October 29, 2026)
+
+- Fix spacing: a right answer before a fact is due no longer moves it up a box. Before, replaying a one-fact-per-place pack four times in a day mastered every fact.
+- File a finished daily under the day in its seed, so one finished after midnight keeps the streak and leaves the new day's case open.
+- Close an unfinished daily as got away when another case or review replaces it, so its route can't be replayed after its answers were seen.
+- Keep focus visible after navigation: Pause, Home, and Start fresh focus the page heading, and resuming an answered clue focuses Continue. Add an empty favicon so hosts don't log a 404.
+- Clean the fact bank from 224 to 194 facts. Retire 30 near-duplicates, puzzle-residue hedges, and facts that didn't identify their place. Rewrite 42 clues or facts to drop hedges and wording that gave the answer away, such as "Mt. ____ Station", "trading post", or "Walmart history" in a Walmart Museum clue. Give four suspects unique aliases.
+- Run `npm run verify` in the Pages workflow before publishing. Add tests for early answers, midnight dailies, and abandoned dailies (9 tests).
+- Reconcile SPEC, README, ROADMAP, docs/README, the authoring guide, and the GitNexus counts in CLAUDE.md and AGENTS.md.
+- Ryan's `npm run verify` passed syntax and all 9 tests. A scripted browser-pane run of the play, resume, abandoned-daily, review, and recovery checks passed with no console errors. Screen readers and zoom were not rechecked.
+- Set `autoPort: false` for the `carmen` launch entry: its server arguments hardcode port 8001, so a reassigned port served nothing.
+
 ## Unreleased — Lean trivia redesign (October 28, 2026)
 
 - Replace the case engine with a place-trivia trainer. Each stop shows one real, sourced fact with the place's name blanked, and you choose among four places. The full fact and its sources follow every answer.
@@ -9,7 +28,6 @@
 - Cut fictional clues, puzzles, warrants, Mixed activities, the story episode, hints and lives, Study and notebook, XP and badges, records, the map, the Tailwind build, the offline builder, and every dev dependency. The new app is `index.html`, `trivia.js`, `trivia-bank.js`, and `trivia.css`.
 - Progress uses a new key, `carmen_trivia_v1`, with export, import, and Start fresh for unreadable data. The old engine's saves are left untouched, and its in-progress cases do not carry over.
 - The Pages workflow now packages the four new files. Replace the old tests with `tests/trivia.test.js`.
-- Reorganize `docs/` into `docs/provenance/` (preserving fact check ledgers) and `docs/archive/` (preserving retired case engine and verification records), mapped by `docs/README.md`.
 - This supersedes the uncommitted October 27–28 trivia-wrapper pass on the old engine.
 - Reorganize `docs/` into current `guides/` (authoring facts, deployment, manual QA), dated `provenance/` fact-check ledgers, and `archive/case-engine/` and `archive/verification/` for the retired engine. `docs/README.md` indexes them. Every relative link was rewritten for the moves.
 
