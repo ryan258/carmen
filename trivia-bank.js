@@ -1,4 +1,5 @@
-// Trivia bank: real, source-reviewed facts per place, extracted from the retired case packs on 2026-10-28.
+// Trivia bank: real, sourced facts per place. The first 12 packs are source-reviewed facts from the retired case packs (2026-10-28).
+// The 11 packs from capitals-africa-carmen on are unreviewed Quiznauts imports (2026-10-29); see docs/provenance/2026-10-29-quiznauts-import.md.
 // Edit clues here directly; keep fact ids stable so review progress survives.
 const TRIVIA_BANK = {
  "version": 1,
@@ -21,18 +22,6 @@ const TRIVIA_BANK = {
      },
      "facts": [
       {
-       "id": "downtown-square-1",
-       "clue": "____ Bentonville Inc. describes its Farmers Market as a place to buy goods from the people who grow, raise, or make them. Offerings vary by season.",
-       "fact": "Downtown Bentonville Inc. describes its Farmers Market as a place to buy goods from the people who grow, raise, or make them. Offerings vary by season.",
-       "sources": [
-        {
-         "title": "Bentonville Farmers Market — location and producer policy",
-         "publisher": "Downtown Bentonville Inc.",
-         "url": "https://downtownbentonville.org/events/farmers-market"
-        }
-       ]
-      },
-      {
        "id": "downtown-square-2",
        "clue": "Visit Bentonville describes the ____ as a year-round gathering place for community programs.",
        "fact": "Visit Bentonville describes the Square as a year-round gathering place for community programs.",
@@ -51,7 +40,7 @@ const TRIVIA_BANK = {
       },
       {
        "id": "downtown-square-3",
-       "clue": "The ____ is the heart of Bentonville historic downtown and sits among civic, dining, shopping, and public art destinations.",
+       "clue": "The ____ is the heart of Bentonville's historic center and sits among civic, dining, shopping, and public art destinations.",
        "fact": "The Square is the heart of Bentonville historic downtown and sits among civic, dining, shopping, and public art destinations.",
        "sources": [
         {
@@ -107,13 +96,18 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "walmart-museum-1",
-       "clue": "Walton's 5&10 in Bentonville and the first Walmart in Rogers are distinct stores in Walmart's historical account.",
-       "fact": "Walton's 5&10 in Bentonville and the first Walmart in Rogers are distinct stores in Walmart's historical account.",
+       "clue": "Walton's 5&10, now part of the ____, was a different store from the first Walmart, which opened in Rogers.",
+       "fact": "Walton's 5&10, now part of the Walmart Museum, was a different store from the first Walmart, which opened in Rogers.",
        "sources": [
         {
          "title": "Sam Walton — The Road to Walmart",
          "publisher": "Walmart",
          "url": "https://corporate.walmart.com/about/sam-walton"
+        },
+        {
+         "title": "Walmart Museum & History",
+         "publisher": "Walmart",
+         "url": "https://corporate.walmart.com/about/walmart-museum/"
         }
        ]
       },
@@ -131,20 +125,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "walmart-museum-3",
-       "clue": "The museum galleries trace Walmart history from a small-town store to a global retailer.",
-       "fact": "The museum galleries trace Walmart history from a small-town store to a global retailer.",
-       "sources": [
-        {
-         "title": "Walmart Museum & History",
-         "publisher": "Walmart",
-         "url": "https://corporate.walmart.com/about/walmart-museum/"
-        }
-       ]
-      },
-      {
-       "id": "walmart-museum-4",
-       "clue": "The ____ includes archive-focused exhibits alongside the 5&10 and cafe experiences.",
-       "fact": "The Walmart Museum includes archive-focused exhibits alongside the 5&10 and cafe experiences.",
+       "clue": "The ____ galleries trace the company's history from a small-town store to a global retailer.",
+       "fact": "The Walmart Museum galleries trace Walmart history from a small-town store to a global retailer.",
        "sources": [
         {
          "title": "Walmart Museum & History",
@@ -155,8 +137,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "walmart-museum-5",
-       "clue": "The ____ lists free admission and includes galleries, Walton's 5&10, and The Spark Cafe.",
-       "fact": "The Walmart Museum lists free admission and includes galleries, Walton's 5&10, and The Spark Cafe.",
+       "clue": "The ____ has free admission and includes galleries, Walton's 5&10, and The Spark Cafe.",
+       "fact": "The Walmart Museum has free admission and includes galleries, Walton's 5&10, and The Spark Cafe.",
        "sources": [
         {
          "title": "Walmart Museum & History",
@@ -182,8 +164,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "walmart-home-office-1",
-       "clue": "Walmart describes the new ____ as a 350-acre campus with an interactive map.",
-       "fact": "Walmart describes the new Home Office as a 350-acre campus with an interactive map.",
+       "clue": "The new ____ is a 350-acre campus.",
+       "fact": "The new Home Office is a 350-acre campus.",
        "sources": [
         {
          "title": "New Home Office",
@@ -206,8 +188,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "walmart-home-office-3",
-       "clue": "Walmart lists 8th & Plate among the new ____ spaces where campus ideas and public visits meet.",
-       "fact": "Walmart lists 8th & Plate among the new Home Office spaces where campus ideas and public visits meet.",
+       "clue": "8th & Plate is one of the new ____'s public spaces.",
+       "fact": "8th & Plate is one of the new Home Office's public spaces.",
        "sources": [
         {
          "title": "New Home Office",
@@ -230,8 +212,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "walmart-home-office-5",
-       "clue": "Walmart says the 12 office buildings on the new ____ each tell a unique story through design and identity.",
-       "fact": "Walmart says the 12 office buildings on the new Home Office each tell a unique story through design and identity.",
+       "clue": "The new ____ campus has 12 workplace buildings, each designed with its own identity.",
+       "fact": "The new Home Office campus has 12 workplace buildings, each designed with its own identity.",
        "sources": [
         {
          "title": "New Home Office",
@@ -283,18 +265,6 @@ const TRIVIA_BANK = {
        "id": "crystal-bridges-3",
        "clue": "____ has a library with more than 50,000 art reference volumes.",
        "fact": "Crystal Bridges has a library with more than 50,000 art reference volumes.",
-       "sources": [
-        {
-         "title": "About Crystal Bridges Museum of American Art",
-         "publisher": "Crystal Bridges Museum of American Art",
-         "url": "https://crystalbridges.org/about"
-        }
-       ]
-      },
-      {
-       "id": "crystal-bridges-4",
-       "clue": "The museum building was designed by architect Moshe Safdie with pavilions around spring-fed ponds.",
-       "fact": "The museum building was designed by architect Moshe Safdie with pavilions around spring-fed ponds.",
        "sources": [
         {
          "title": "About Crystal Bridges Museum of American Art",
@@ -537,18 +507,6 @@ const TRIVIA_BANK = {
          "url": "https://peelcompton.org/coler-mountain-bike-preserve/mountain-biking/"
         }
        ]
-      },
-      {
-       "id": "coler-preserve-5",
-       "clue": "Visit Bentonville lists Airship Coffee at ____ among the preserve stops.",
-       "fact": "Visit Bentonville lists Airship Coffee at Coler among the preserve stops.",
-       "sources": [
-        {
-         "title": "Coler Campground",
-         "publisher": "Peel Compton Foundation",
-         "url": "https://www.peelcompton.org/coler-mountain-bike-preserve/coler-campground/"
-        }
-       ]
       }
      ]
     },
@@ -756,18 +714,6 @@ const TRIVIA_BANK = {
        ]
       },
       {
-       "id": "mendoza-3",
-       "clue": "The government visitor account describes Puente del Inca using natural processes. Establishing its full formation history would require more detailed geological evidence.",
-       "fact": "The government visitor account describes Puente del Inca using natural processes. Establishing its full formation history would require more detailed geological evidence.",
-       "sources": [
-        {
-         "title": "Uspallata, Mendoza — Qué visitar: Puente del Inca",
-         "publisher": "Government of Argentina",
-         "url": "https://www.argentina.gob.ar/node/465223"
-        }
-       ]
-      },
-      {
        "id": "mendoza-4",
        "clue": "____ wine regions use Andes snowmelt and irrigation canals to support vineyards in an otherwise dry climate.",
        "fact": "Mendoza wine regions use Andes snowmelt and irrigation canals to support vineyards in an otherwise dry climate.",
@@ -813,8 +759,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "salta-1",
-       "clue": "The operator itinerary separates road and train legs: rail boarding at San Antonio de los Cobres, a visit to La Polvorilla, and a return to that station.",
-       "fact": "The operator itinerary separates road and train legs: rail boarding at San Antonio de los Cobres, a visit to La Polvorilla, and a return to that station.",
+       "clue": "The Tren a las Nubes trip combines a road leg with a rail leg that boards at San Antonio de los Cobres, visits La Polvorilla, and returns to that station.",
+       "fact": "The Tren a las Nubes trip combines a road leg with a rail leg that boards at San Antonio de los Cobres, visits La Polvorilla, and returns to that station.",
        "sources": [
         {
          "title": "Recorrido — San Antonio de los Cobres and La Polvorilla",
@@ -900,18 +846,6 @@ const TRIVIA_BANK = {
          "title": "Barrio Nueva Córdoba",
          "publisher": "Government of Córdoba Tourism",
          "url": "https://cordobaturismo.gov.ar/experiencias/barrio-nueva-cordoba/"
-        }
-       ]
-      },
-      {
-       "id": "cordoba-2",
-       "clue": "UNESCO lists the Jesuit Block and five estancias together. Its account also recognizes Indigenous people and enslaved Africans in the labor and knowledge behind this history.",
-       "fact": "UNESCO lists the Jesuit Block and five estancias together. Its account also recognizes Indigenous people and enslaved Africans in the labor and knowledge behind this history.",
-       "sources": [
-        {
-         "title": "Jesuit Block and Estancias of Córdoba — Brief synthesis",
-         "publisher": "UNESCO World Heritage Centre",
-         "url": "https://whc.unesco.org/en/list/995/"
         }
        ]
       },
@@ -1013,18 +947,6 @@ const TRIVIA_BANK = {
        ]
       },
       {
-       "id": "iguazu-4",
-       "clue": "____ is near the meeting area of Argentina, Brazil, and Paraguay.",
-       "fact": "Puerto Iguazu is near the meeting area of Argentina, Brazil, and Paraguay.",
-       "sources": [
-        {
-         "title": "Triple Frontier viewpoint",
-         "publisher": "Visit Iguazú",
-         "url": "https://visitiguazu.travel/atractivos/paseo-artesanal-hito-tres-fronteras/"
-        }
-       ]
-      },
-      {
        "id": "iguazu-5",
        "clue": "____ National Park protects subtropical forest around one of the world's great waterfall systems.",
        "fact": "Iguazu National Park protects subtropical forest around one of the world's great waterfall systems.",
@@ -1108,23 +1030,6 @@ const TRIVIA_BANK = {
          "url": "https://www.barilocheturismo.gob.ar/es/centro-civico"
         }
        ]
-      },
-      {
-       "id": "bariloche-5",
-       "clue": "Nahuel Huapi Lake is central to ____ scenery and national-park tourism.",
-       "fact": "Nahuel Huapi Lake is central to Bariloche scenery and national-park tourism.",
-       "sources": [
-        {
-         "title": "Puerto Pañuelo",
-         "publisher": "Municipality of San Carlos de Bariloche Tourism",
-         "url": "https://www.barilocheturismo.gob.ar/es/puerto-panuelo"
-        },
-        {
-         "title": "Lake excursions on Nahuel Huapi",
-         "publisher": "Municipality of San Carlos de Bariloche Tourism",
-         "url": "https://www.barilocheturismo.gob.ar/es/excursiones-lacustres"
-        }
-       ]
       }
      ]
     },
@@ -1183,18 +1088,6 @@ const TRIVIA_BANK = {
        ]
       },
       {
-       "id": "ushuaia-4",
-       "clue": "____ is strongly associated with the End of the World identity and Tierra del Fuego landscapes.",
-       "fact": "Ushuaia is strongly associated with the End of the World identity and Tierra del Fuego landscapes.",
-       "sources": [
-        {
-         "title": "End of the World Train",
-         "publisher": "Municipality of Ushuaia Tourism",
-         "url": "https://turismoushuaia.com/prestador/tren-del-fin-del-mundo/"
-        }
-       ]
-      },
-      {
        "id": "ushuaia-5",
        "clue": "Martial Glacier sits above ____ and is associated with mountain views over the city and Beagle Channel.",
        "fact": "Martial Glacier sits above Ushuaia and is associated with mountain views over the city and Beagle Channel.",
@@ -1234,23 +1127,6 @@ const TRIVIA_BANK = {
        ]
       },
       {
-       "id": "el-calafate-2",
-       "clue": "____ is a gateway for visitors learning about and visiting Patagonian glaciers.",
-       "fact": "El Calafate is a gateway for visitors learning about and visiting Patagonian glaciers.",
-       "sources": [
-        {
-         "title": "Glaciarium Ice Museum and Glaciological Interpretation Centre",
-         "publisher": "Glaciarium",
-         "url": "https://www.glaciarium.com/"
-        },
-        {
-         "title": "Puerto Pañuelo",
-         "publisher": "Municipality of San Carlos de Bariloche Tourism",
-         "url": "https://www.barilocheturismo.gob.ar/es/puerto-panuelo"
-        }
-       ]
-      },
-      {
        "id": "el-calafate-3",
        "clue": "Lago Argentino is the large lake associated with glacier routes near ____.",
        "fact": "Lago Argentino is the large lake associated with glacier routes near El Calafate.",
@@ -1276,23 +1152,6 @@ const TRIVIA_BANK = {
          "title": "Los Glaciares National Park concessionaires and boat departures",
          "publisher": "Argentina National Parks Administration",
          "url": "https://www.argentina.gob.ar/parquesnacionales/patagonia-austral/parque-nacional-los-glaciares/concesionarios"
-        }
-       ]
-      },
-      {
-       "id": "el-calafate-5",
-       "clue": "Glacier museums and park exhibits help visitors understand ice, climate, and Patagonian landscapes.",
-       "fact": "Glacier museums and park exhibits help visitors understand ice, climate, and Patagonian landscapes.",
-       "sources": [
-        {
-         "title": "Glaciers: Water of the Future — snow accumulation and glacier ice formation",
-         "publisher": "Government of Argentina educational resource",
-         "url": "https://www.argentina.gob.ar/sites/default/files/secuencia_didactica._glaciares_agua_del_futuro.pdf"
-        },
-        {
-         "title": "Glaciarium Ice Museum and Glaciological Interpretation Centre",
-         "publisher": "Glaciarium",
-         "url": "https://www.glaciarium.com/"
         }
        ]
       }
@@ -1397,8 +1256,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "nwa-rogers-2",
-       "clue": "____ describes a paved connection from The Railyard Bike Park to Lake Atalanta Park.",
-       "fact": "Rogers describes a paved connection from The Railyard Bike Park to Lake Atalanta Park.",
+       "clue": "A paved trail in ____ connects The Railyard Bike Park to Lake Atalanta Park.",
+       "fact": "A paved trail in Rogers connects The Railyard Bike Park to Lake Atalanta Park.",
        "sources": [
         {
          "title": "Rogers’ Premier Bike Park — The Railyard",
@@ -1409,18 +1268,6 @@ const TRIVIA_BANK = {
          "title": "Railyard Park",
          "publisher": "Destination Rogers",
          "url": "https://www.destinationrogers.com/listings/railyard-park/907/"
-        }
-       ]
-      },
-      {
-       "id": "nwa-rogers-3",
-       "clue": "Lake Atalanta Park is connected to The Railyard Bike Park by a paved trail.",
-       "fact": "Lake Atalanta Park is connected to The Railyard Bike Park by a paved trail.",
-       "sources": [
-        {
-         "title": "Rogers’ Premier Bike Park — The Railyard",
-         "publisher": "Destination Rogers",
-         "url": "https://www.destinationrogers.com/uncategorized/rogers-premier-bike-park-railyard/"
         }
        ]
       }
@@ -1503,21 +1350,9 @@ const TRIVIA_BANK = {
        ]
       },
       {
-       "id": "nwa-fayetteville-2",
-       "clue": "Senior Walk records University of Arkansas graduates’ names across campus.",
-       "fact": "Senior Walk records University of Arkansas graduates’ names across campus.",
-       "sources": [
-        {
-         "title": "Visit & Explore",
-         "publisher": "University of Arkansas",
-         "url": "https://www.uark.edu/about/explore.php"
-        }
-       ]
-      },
-      {
        "id": "nwa-fayetteville-3",
-       "clue": "The University of Arkansas lists Chi Omega Greek Theatre as a place for concerts and rallies.",
-       "fact": "The University of Arkansas lists Chi Omega Greek Theatre as a place for concerts and rallies.",
+       "clue": "The University of Arkansas's Chi Omega Greek Theatre hosts concerts and rallies.",
+       "fact": "The University of Arkansas's Chi Omega Greek Theatre hosts concerts and rallies.",
        "sources": [
         {
          "title": "Visit & Explore",
@@ -1684,8 +1519,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "nwa-pea-ridge-3",
-       "clue": "The NPS describes a Williams Hollow hiking loop that returns to Elkhorn Tavern.",
-       "fact": "The NPS describes a Williams Hollow hiking loop that returns to Elkhorn Tavern.",
+       "clue": "The Williams Hollow hiking loop returns to Elkhorn Tavern.",
+       "fact": "The Williams Hollow hiking loop at Pea Ridge returns to Elkhorn Tavern.",
        "sources": [
         {
          "title": "Williams Hollow Loop Hike",
@@ -1783,7 +1618,7 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "mtb-coler-1",
-       "clue": "Airship at ____ is an open-air cafe within the preserve.",
+       "clue": "Airship at ____ is an open-air cafe.",
        "fact": "Airship at Coler is an open-air cafe within the preserve.",
        "sources": [
         {
@@ -1797,18 +1632,6 @@ const TRIVIA_BANK = {
        "id": "mtb-coler-2",
        "clue": "Applegate Trail is the paved corridor through ____.",
        "fact": "Applegate Trail is the paved corridor through Coler.",
-       "sources": [
-        {
-         "title": "Visit Coler",
-         "publisher": "Peel Compton Foundation",
-         "url": "https://peelcompton.org/coler-mountain-bike-preserve/visit-us/"
-        }
-       ]
-      },
-      {
-       "id": "mtb-coler-3",
-       "clue": "____ includes a campground as well as its riding trails.",
-       "fact": "Coler includes a campground as well as its riding trails.",
        "sources": [
         {
          "title": "Visit Coler",
@@ -1855,18 +1678,6 @@ const TRIVIA_BANK = {
          "url": "https://www.bentonville.ar.gov/DocumentCenter/View/6103/SLAUGHTER-PEN_Update_7-22-2020"
         }
        ]
-      },
-      {
-       "id": "mtb-slaughter-3",
-       "clue": "Medusa is a trail name on Bentonville’s July 2020 ____ map.",
-       "fact": "Medusa is a trail name on Bentonville’s July 2020 Slaughter Pen map.",
-       "sources": [
-        {
-         "title": "Slaughter Pen trail map — names only, July 2020",
-         "publisher": "City of Bentonville",
-         "url": "https://www.bentonville.ar.gov/DocumentCenter/View/6103/SLAUGHTER-PEN_Update_7-22-2020"
-        }
-       ]
       }
      ]
     },
@@ -1897,8 +1708,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "mtb-back40-2",
-       "clue": "____ reference places Metfield Skills Park along Rago.",
-       "fact": "The Back 40 reference places Metfield Skills Park along Rago.",
+       "clue": "In ____ trail system, Metfield Skills Park sits along the Rago trail.",
+       "fact": "In the Back 40 trail system, Metfield Skills Park sits along the Rago trail.",
        "sources": [
         {
          "title": "Back 40 Trail Maps and Stats",
@@ -2218,18 +2029,6 @@ const TRIVIA_BANK = {
          "url": "https://www.arkansas.com/state-parks/explore/parks/petit-jean-state-park"
         }
        ]
-      },
-      {
-       "id": "arkansas-state-parks-petit-jean-3",
-       "clue": "At ____, Mather Lodge serves lodging, the rock dam forms Lake Bailey, and Cedar Falls is a waterfall.",
-       "fact": "At Petit Jean, Mather Lodge serves lodging, the rock dam forms Lake Bailey, and Cedar Falls is a waterfall.",
-       "sources": [
-        {
-         "title": "Petit Jean State Park",
-         "publisher": "Arkansas State Parks",
-         "url": "https://www.arkansas.com/state-parks/explore/parks/petit-jean-state-park"
-        }
-       ]
       }
      ]
     },
@@ -2248,20 +2047,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "arkansas-state-parks-mount-magazine-1",
-       "clue": "____ reaches 2,753 feet above sea level, Arkansas’s highest point. The lodge overlooks the Petit Jean River Valley and Blue Mountain Lake.",
-       "fact": "Mount Magazine reaches 2,753 feet above sea level, Arkansas’s highest point. The lodge overlooks the Petit Jean River Valley and Blue Mountain Lake.",
-       "sources": [
-        {
-         "title": "Mount Magazine State Park",
-         "publisher": "Arkansas State Parks",
-         "url": "https://www.arkansas.com/state-parks/explore/parks/mount-magazine-state-park"
-        }
-       ]
-      },
-      {
-       "id": "arkansas-state-parks-mount-magazine-2",
-       "clue": "The official summit elevation for ____ is 2,753 feet above sea level.",
-       "fact": "The official summit elevation for Mount Magazine is 2,753 feet above sea level.",
+       "clue": "____ reaches 2,753 feet above sea level, Arkansas’s highest point.",
+       "fact": "Mount Magazine reaches 2,753 feet above sea level, Arkansas’s highest point.",
        "sources": [
         {
          "title": "Mount Magazine State Park",
@@ -2320,18 +2107,6 @@ const TRIVIA_BANK = {
          "url": "https://geology.arkansas.gov/minerals/industrial/diamond-industrial.html"
         }
        ]
-      },
-      {
-       "id": "arkansas-state-parks-crater-of-diamonds-3",
-       "clue": "The park’s diamond-bearing volcanic pipe is near Murfreesboro. The geological description does not identify it as a river gravel deposit.",
-       "fact": "The park’s diamond-bearing volcanic pipe is near Murfreesboro. The geological description does not identify it as a river gravel deposit.",
-       "sources": [
-        {
-         "title": "Diamond (Industrial): Arkansas deposits",
-         "publisher": "Arkansas Office of the State Geologist",
-         "url": "https://geology.arkansas.gov/minerals/industrial/diamond-industrial.html"
-        }
-       ]
       }
      ]
     },
@@ -2344,14 +2119,14 @@ const TRIVIA_BANK = {
      "emoji": "🏛️",
      "suspect": {
       "name": "Tess Typeset",
-      "alias": "The Misprint",
+      "alias": "The Typo",
       "emoji": "🏛️"
      },
      "facts": [
       {
        "id": "arkansas-state-parks-historic-washington-1",
-       "clue": "____’s 1874 Courthouse serves as the park visitor center. The park also interprets printing and blacksmithing through a Print Museum and Blacksmith Shop.",
-       "fact": "Historic Washington’s 1874 Courthouse serves as the park visitor center. The park also interprets printing and blacksmithing through a Print Museum and Blacksmith Shop.",
+       "clue": "____’s 1874 Courthouse serves as the park visitor center.",
+       "fact": "Historic Washington’s 1874 Courthouse serves as the park visitor center.",
        "sources": [
         {
          "title": "Historic Washington State Park",
@@ -2362,20 +2137,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "arkansas-state-parks-historic-washington-2",
-       "clue": "____ includes a Print Museum interpreting printing.",
-       "fact": "Historic Washington includes a Print Museum interpreting printing.",
-       "sources": [
-        {
-         "title": "Historic Washington State Park",
-         "publisher": "Arkansas State Parks",
-         "url": "https://www.arkansas.com/state-parks/explore/parks/historic-washington-state-park"
-        }
-       ]
-      },
-      {
-       "id": "arkansas-state-parks-historic-washington-3",
-       "clue": "____ includes the 1874 Courthouse visitor center and a Print Museum.",
-       "fact": "Historic Washington includes the 1874 Courthouse visitor center and a Print Museum.",
+       "clue": "____ interprets printing and blacksmithing through a Print Museum and Blacksmith Shop.",
+       "fact": "Historic Washington interprets printing and blacksmithing through a Print Museum and Blacksmith Shop.",
        "sources": [
         {
          "title": "Historic Washington State Park",
@@ -2401,42 +2164,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "arkansas-state-parks-lake-chicot-1",
-       "clue": "____ is an oxbow lake. USGS explains that an oxbow forms when a river takes a shortcut and the old bend becomes a separate water body.",
-       "fact": "Lake Chicot is an oxbow lake. USGS explains that an oxbow forms when a river takes a shortcut and the old bend becomes a separate water body.",
-       "sources": [
-        {
-         "title": "Lake Chicot State Park",
-         "publisher": "Arkansas State Parks",
-         "url": "https://www.arkansas.com/state-parks/explore/parks/lake-chicot-state-park"
-        },
-        {
-         "title": "Oxbow Lakes",
-         "publisher": "USGS EROS",
-         "url": "https://eros.usgs.gov/earthshots/oxbow-lakes"
-        }
-       ]
-      },
-      {
-       "id": "arkansas-state-parks-lake-chicot-2",
-       "clue": "In the general oxbow process, a river bend precedes a shortcut that leaves the old bend separated from the main channel.",
-       "fact": "In the general oxbow process, a river bend precedes a shortcut that leaves the old bend separated from the main channel.",
-       "sources": [
-        {
-         "title": "Lake Chicot State Park",
-         "publisher": "Arkansas State Parks",
-         "url": "https://www.arkansas.com/state-parks/explore/parks/lake-chicot-state-park"
-        },
-        {
-         "title": "Oxbow Lakes",
-         "publisher": "USGS EROS",
-         "url": "https://eros.usgs.gov/earthshots/oxbow-lakes"
-        }
-       ]
-      },
-      {
-       "id": "arkansas-state-parks-lake-chicot-3",
-       "clue": "____ is an oxbow lake; a cutoff can leave an old river bend as a lake.",
-       "fact": "Lake Chicot is an oxbow lake; a cutoff can leave an old river bend as a lake.",
+       "clue": "____ is an oxbow lake. An oxbow forms when a river takes a shortcut and the old bend becomes a separate water body.",
+       "fact": "Lake Chicot is an oxbow lake. An oxbow forms when a river takes a shortcut and the old bend becomes a separate water body.",
        "sources": [
         {
          "title": "Lake Chicot State Park",
@@ -2488,18 +2217,6 @@ const TRIVIA_BANK = {
          "url": "https://www.arkansas.com/state-parks/explore/parks/jacksonport-state-park"
         }
        ]
-      },
-      {
-       "id": "arkansas-state-parks-jacksonport-3",
-       "clue": "____’s history includes a steamboat port where the White and Black rivers meet.",
-       "fact": "Jacksonport’s history includes a steamboat port where the White and Black rivers meet.",
-       "sources": [
-        {
-         "title": "Jacksonport State Park",
-         "publisher": "Arkansas State Parks",
-         "url": "https://www.arkansas.com/state-parks/explore/parks/jacksonport-state-park"
-        }
-       ]
       }
      ]
     },
@@ -2530,20 +2247,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "arkansas-state-parks-mammoth-spring-2",
-       "clue": "Water from ____ forms a lake and then flows south as the Spring River.",
+       "clue": "Water from ____ forms a lake and then flows south as a river.",
        "fact": "Water from Mammoth Spring forms a lake and then flows south as the Spring River.",
-       "sources": [
-        {
-         "title": "Mammoth Spring State Park",
-         "publisher": "Arkansas State Parks",
-         "url": "https://www.arkansas.com/state-parks/explore/parks/mammoth-spring-state-park"
-        }
-       ]
-      },
-      {
-       "id": "arkansas-state-parks-mammoth-spring-3",
-       "clue": "The park contains remnants of both a mill and a hydroelectric plant, separate from its Frisco train depot.",
-       "fact": "The park contains remnants of both a mill and a hydroelectric plant, separate from its Frisco train depot.",
        "sources": [
         {
          "title": "Mammoth Spring State Park",
@@ -2569,32 +2274,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "arkansas-state-parks-ozark-folk-center-1",
-       "clue": "The ____’s Craft Village presents artisans demonstrating crafts. Its Heritage Herb Garden is a living classroom, and the Ozark Highlands Theater presents music.",
+       "clue": "The ____’s Craft Village presents artisans demonstrating crafts. Its Heritage Herb Garden is a living classroom, and its theater presents music.",
        "fact": "The Ozark Folk Center’s Craft Village presents artisans demonstrating crafts. Its Heritage Herb Garden is a living classroom, and the Ozark Highlands Theater presents music.",
-       "sources": [
-        {
-         "title": "Ozark Folk Center State Park",
-         "publisher": "Arkansas State Parks",
-         "url": "https://www.arkansas.com/state-parks/parks/ozark-folk-center-state-park/music/about"
-        }
-       ]
-      },
-      {
-       "id": "arkansas-state-parks-ozark-folk-center-2",
-       "clue": "The ____ interprets crafts, plants and music through its village, garden and theater.",
-       "fact": "The Ozark Folk Center interprets crafts, plants and music through its village, garden and theater.",
-       "sources": [
-        {
-         "title": "Ozark Folk Center State Park",
-         "publisher": "Arkansas State Parks",
-         "url": "https://www.arkansas.com/state-parks/parks/ozark-folk-center-state-park/music/about"
-        }
-       ]
-      },
-      {
-       "id": "arkansas-state-parks-ozark-folk-center-3",
-       "clue": "The Heritage Herb Garden at the ____ serves as a living classroom; the Craft Village emphasizes making demonstrations and the theater presents music.",
-       "fact": "The Heritage Herb Garden at the Ozark Folk Center serves as a living classroom; the Craft Village emphasizes making demonstrations and the theater presents music.",
        "sources": [
         {
          "title": "Ozark Folk Center State Park",
@@ -2647,18 +2328,6 @@ const TRIVIA_BANK = {
          "url": "https://home.nps.gov/places/amblers-texaco-gas-station.htm"
         }
        ]
-      },
-      {
-       "id": "route-66-dwight-3",
-       "clue": "At Ambler’s, the original office used wood clapboard; the later service bay used concrete block.",
-       "fact": "At Ambler’s, the original office used wood clapboard; the later service bay used concrete block.",
-       "sources": [
-        {
-         "title": "Ambler’s Texaco Gas Station",
-         "publisher": "National Park Service",
-         "url": "https://home.nps.gov/places/amblers-texaco-gas-station.htm"
-        }
-       ]
       }
      ]
     },
@@ -2688,21 +2357,9 @@ const TRIVIA_BANK = {
        ]
       },
       {
-       "id": "route-66-springfield-2",
-       "clue": "Rock Fountain Court was built in 1945, using a freestanding cabin layout associated with earlier roadside lodging.",
-       "fact": "Rock Fountain Court was built in 1945, using a freestanding cabin layout associated with earlier roadside lodging.",
-       "sources": [
-        {
-         "title": "Rock Fountain Court",
-         "publisher": "National Park Service",
-         "url": "https://www.nps.gov/places/rock-fountain-court.htm"
-        }
-       ]
-      },
-      {
        "id": "route-66-springfield-3",
-       "clue": "NPS describes Rock Fountain Court as frame cabins with Ozark sandstone veneer. A veneer is a facing, not a statement that every wall is solid stone.",
-       "fact": "NPS describes Rock Fountain Court as frame cabins with Ozark sandstone veneer. A veneer is a facing, not a statement that every wall is solid stone.",
+       "clue": "NPS describes Rock Fountain Court as frame cabins with Ozark sandstone veneer.",
+       "fact": "NPS describes Rock Fountain Court as frame cabins with Ozark sandstone veneer.",
        "sources": [
         {
          "title": "Rock Fountain Court",
@@ -2728,8 +2385,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "route-66-brush-creek-1",
-       "clue": "____ is a built reinforced-concrete bridge with paired arches, associated with James Barney Marsh’s design.",
-       "fact": "Brush Creek Bridge is a built reinforced-concrete bridge with paired arches, associated with James Barney Marsh’s design.",
+       "clue": "____ is a reinforced-concrete span with paired arches, associated with James Barney Marsh’s design.",
+       "fact": "Brush Creek Bridge is a reinforced-concrete bridge with paired arches, associated with James Barney Marsh’s design.",
        "sources": [
         {
          "title": "Brush Creek Bridge",
@@ -2740,20 +2397,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "route-66-brush-creek-2",
-       "clue": "Marsh patented his bridge design in 1912. ____ was constructed in 1923.",
+       "clue": "Marsh patented his arch design in 1912. ____ was constructed in 1923.",
        "fact": "Marsh patented his bridge design in 1912. Brush Creek Bridge was constructed in 1923.",
-       "sources": [
-        {
-         "title": "Brush Creek Bridge",
-         "publisher": "National Park Service",
-         "url": "https://www.nps.gov/places/brush-creek-bridge.htm"
-        }
-       ]
-      },
-      {
-       "id": "route-66-brush-creek-3",
-       "clue": "____ uses paired arches and reinforced concrete. Reinforced concrete combines concrete with embedded reinforcement; a silhouette alone does not expose that reinforcement.",
-       "fact": "Brush Creek Bridge uses paired arches and reinforced concrete. Reinforced concrete combines concrete with embedded reinforcement; a silhouette alone does not expose that reinforcement.",
        "sources": [
         {
          "title": "Brush Creek Bridge",
@@ -2841,18 +2486,6 @@ const TRIVIA_BANK = {
        ]
       },
       {
-       "id": "route-66-shamrock-2",
-       "clue": "A third space at Tower Station and U-Drop Inn was planned for retail but was used for overflow cafe seating.",
-       "fact": "A third space at Tower Station and U-Drop Inn was planned for retail but was used for overflow cafe seating.",
-       "sources": [
-        {
-         "title": "Tower Station and U-Drop Inn Cafe",
-         "publisher": "National Park Service",
-         "url": "https://www.nps.gov/places/tower-station-and-u-drop-inn-cafe.htm"
-        }
-       ]
-      },
-      {
        "id": "route-66-shamrock-3",
        "clue": "The third space in the ____ landmark was intended for retail, then used for additional cafe seating.",
        "fact": "The third space in the Shamrock landmark was intended for retail, then used for additional cafe seating.",
@@ -2895,18 +2528,6 @@ const TRIVIA_BANK = {
        "id": "route-66-tucumcari-2",
        "clue": "The Blue Swallow was listed in the National Register of Historic Places in 1993 and received an NPS restoration grant in 2007.",
        "fact": "The Blue Swallow was listed in the National Register of Historic Places in 1993 and received an NPS restoration grant in 2007.",
-       "sources": [
-        {
-         "title": "Blue Swallow Motel",
-         "publisher": "National Park Service",
-         "url": "https://www.nps.gov/places/blue-swallow-motel.htm"
-        }
-       ]
-      },
-      {
-       "id": "route-66-tucumcari-3",
-       "clue": "The Blue Swallow’s documented plan is L-shaped, with garages located between sleeping units.",
-       "fact": "The Blue Swallow’s documented plan is L-shaped, with garages located between sleeping units.",
        "sources": [
         {
          "title": "Blue Swallow Motel",
@@ -3049,7 +2670,7 @@ const TRIVIA_BANK = {
      "emoji": "🛶",
      "suspect": {
       "name": "Mira Margin",
-      "alias": "The Watermark",
+      "alias": "The Undertow",
       "emoji": "🛶"
      },
      "facts": [
@@ -3244,7 +2865,7 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "ozark-waterways-alley-1",
-       "clue": "____ used spring water for power. The present building dates to 1893–1894 and replaced an earlier mill; it was initially unpainted, later white with green trim, and later red.",
+       "clue": "____ used spring water for power. The present building dates to 1893–1894 and replaced an earlier one; it was initially unpainted, later white with green trim, and later red.",
        "fact": "Alley Mill used spring water for power. The present building dates to 1893–1894 and replaced an earlier mill; it was initially unpainted, later white with green trim, and later red.",
        "sources": [
         {
@@ -3277,7 +2898,7 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "arkansas-delta-cultural-center-1",
-       "clue": "The ____ interprets regional history in A Heritage of Determination at its Depot Museum, and Delta music through Delta Sounds at its Visitors Center.",
+       "clue": "The ____ interprets regional history in A Heritage of Determination at its Depot Museum, and the region’s music at its Visitors Center.",
        "fact": "The Delta Cultural Center interprets regional history in A Heritage of Determination at its Depot Museum, and Delta music through Delta Sounds at its Visitors Center.",
        "sources": [
         {
@@ -3358,7 +2979,7 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "arkansas-delta-lakeport-1",
-       "clue": "____’s house dates to 1859. The museum interprets enslaved people’s lives as well as plantation owners and later sharecropping; the property was given to Arkansas State University in 2001.",
+       "clue": "____’s house dates to 1859. The museum interprets enslaved people’s lives as well as the owners and later sharecropping; the property was given to Arkansas State University in 2001.",
        "fact": "Lakeport’s house dates to 1859. The museum interprets enslaved people’s lives as well as plantation owners and later sharecropping; the property was given to Arkansas State University in 2001.",
        "sources": [
         {
@@ -3379,13 +3000,13 @@ const TRIVIA_BANK = {
      "emoji": "🎸",
      "suspect": {
       "name": "Della Date",
-      "alias": "The Backdate",
+      "alias": "The Homesteader",
       "emoji": "🎸"
      },
      "facts": [
       {
        "id": "arkansas-delta-dyess-1",
-       "clue": "____ was established in 1934 as an agricultural resettlement colony. The Cash family arrived in 1935; the planned layout combined a town center with surrounding farmsteads.",
+       "clue": "____ was established in 1934 as an agricultural resettlement community. The Cash family arrived in 1935; the planned layout combined a town center with surrounding farmsteads.",
        "fact": "Dyess was established in 1934 as an agricultural resettlement colony. The Cash family arrived in 1935; the planned layout combined a town center with surrounding farmsteads.",
        "sources": [
         {
@@ -3412,7 +3033,7 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "arkansas-delta-arkansas-post-1",
-       "clue": "In 1686 de Tonti established a French trading post at the existing Quapaw village of Osotouy. The post later relocated because of flooding; it became a US possession in 1803 and territorial capital in 1819.",
+       "clue": "In 1686 de Tonti established a French trading settlement at the existing Quapaw village of Osotouy. It later relocated because of flooding; it became a US possession in 1803 and territorial capital in 1819.",
        "fact": "In 1686 de Tonti established a French trading post at the existing Quapaw village of Osotouy. The post later relocated because of flooding; it became a US possession in 1803 and territorial capital in 1819.",
        "sources": [
         {
@@ -3526,8 +3147,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "american-national-parks-smokies-1",
-       "clue": "The NPS comparison describes salamanders with moist smooth skin and jelly-encased eggs, versus lizards with scaly skin and leathery eggs. Lungless salamanders exchange gases through skin and mouth/throat tissues.",
-       "fact": "The NPS comparison describes salamanders with moist smooth skin and jelly-encased eggs, versus lizards with scaly skin and leathery eggs. Lungless salamanders exchange gases through skin and mouth/throat tissues.",
+       "clue": "This park’s amphibians include lungless salamanders, which exchange gases through their skin and the tissues of the mouth and throat.",
+       "fact": "Great Smoky Mountains National Park’s amphibians include lungless salamanders, which exchange gases through their skin and the tissues of the mouth and throat.",
        "sources": [
         {
          "title": "Great Smoky Mountains: Amphibians",
@@ -3580,7 +3201,7 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "american-national-parks-grand-canyon-1",
-       "clue": "The Colorado River eroded uplifted layered rock at ____. Many of its layered rocks formed long before the canyon’s later incision; resistant layers commonly form cliffs and softer layers slopes.",
+       "clue": "The Colorado River eroded uplifted layered rock at ____. Many of its layered rocks formed long before the gorge’s later incision; resistant layers commonly form cliffs and softer layers slopes.",
        "fact": "The Colorado River eroded uplifted layered rock at Grand Canyon. Many of its layered rocks formed long before the canyon’s later incision; resistant layers commonly form cliffs and softer layers slopes.",
        "sources": [
         {
@@ -3634,7 +3255,7 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "american-national-parks-arches-1",
-       "clue": "Water is a major shaping force at ____. In one pathway described by NPS, fractured sandstone is shaped into fins and then arches; continuing erosion can eventually cause collapse.",
+       "clue": "Water is a major shaping force here. In one pathway described by NPS, fractured sandstone is shaped into fins and then into ____; continuing erosion can eventually cause collapse.",
        "fact": "Water is a major shaping force at Arches. In one pathway described by NPS, fractured sandstone is shaped into fins and then arches; continuing erosion can eventually cause collapse.",
        "sources": [
         {
@@ -3688,8 +3309,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "american-national-parks-hawaii-1",
-       "clue": "Volcanic activity has built the Hawaiian island chain. The park interprets Kīlauea and Mauna Loa; heat melts rock into magma that can rise and erupt at the surface.",
-       "fact": "Volcanic activity has built the Hawaiian island chain. The park interprets Kīlauea and Mauna Loa; heat melts rock into magma that can rise and erupt at the surface.",
+       "clue": "Volcanic activity built this island chain. The park interprets Kīlauea and Mauna Loa, where magma can rise and erupt at the surface.",
+       "fact": "Volcanic activity built the Hawaiian island chain. Hawaiʻi Volcanoes National Park interprets Kīlauea and Mauna Loa, where magma can rise and erupt at the surface.",
        "sources": [
         {
          "title": "Hawaiʻi Volcanoes: Volcanoes",
@@ -3721,8 +3342,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "railroads-depots-steamtown-1",
-       "clue": "____’s collection reference includes steam and diesel-electric locomotives, passenger cars and freight cars. Some equipment listed in its 1991 historical study later left the collection.",
-       "fact": "Steamtown’s collection reference includes steam and diesel-electric locomotives, passenger cars and freight cars. Some equipment listed in its 1991 historical study later left the collection.",
+       "clue": "____’s collection includes steam and diesel-electric locomotives, passenger cars and freight cars.",
+       "fact": "Steamtown’s collection includes steam and diesel-electric locomotives, passenger cars and freight cars.",
        "sources": [
         {
          "title": "Steamtown’s Locomotives and Cars",
@@ -3775,8 +3396,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "railroads-depots-mount-clare-1",
-       "clue": "The historic campus lists Mt. ____ Station (1851), Baldwin Roundhouse (1884) and Annex (1891). The Tender Kitchen nickname belonged to a repair shed used mainly for freight cars, not a food kitchen.",
-       "fact": "The historic campus lists Mt. Clare Station (1851), Baldwin Roundhouse (1884) and Annex (1891). The Tender Kitchen nickname belonged to a repair shed used mainly for freight cars, not a food kitchen.",
+       "clue": "This historic campus includes an 1851 station, the Baldwin Roundhouse (1884) and the Annex (1891). A repair shed there, used mainly for freight cars, was nicknamed the Tender Kitchen.",
+       "fact": "The historic campus includes Mt. Clare Station (1851), the Baldwin Roundhouse (1884) and the Annex (1891). A repair shed there, used mainly for freight cars, was nicknamed the Tender Kitchen.",
        "sources": [
         {
          "title": "Mount Clare historic rail campus",
@@ -3883,8 +3504,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "railroads-depots-golden-spike-1",
-       "clue": "The park’s Jupiter and No. 119 replicas were completed in 1979 to represent historic locomotives. Historical black-and-white photographs and later replicas are different kinds of evidence.",
-       "fact": "The park’s Jupiter and No. 119 replicas were completed in 1979 to represent historic locomotives. Historical black-and-white photographs and later replicas are different kinds of evidence.",
+       "clue": "The park’s Jupiter and No. 119 locomotive replicas were completed in 1979.",
+       "fact": "The park’s Jupiter and No. 119 locomotive replicas were completed in 1979.",
        "sources": [
         {
          "title": "Golden Spike: Horse of a Different Color",
@@ -4024,7 +3645,7 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "architecture-hidden-details-gateway-arch-1",
-       "clue": "Eero Saarinen’s stainless steel ____ design was selected in 1947–1948. Construction ran from 1963 to 1965; the arch is 630 feet tall.",
+       "clue": "Eero Saarinen’s stainless steel ____ design was selected in 1947–1948. Construction ran from 1963 to 1965; it is 630 feet tall.",
        "fact": "Eero Saarinen’s stainless steel Gateway Arch design was selected in 1947–1948. Construction ran from 1963 to 1965; the arch is 630 feet tall.",
        "sources": [
         {
@@ -4110,8 +3731,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "architecture-hidden-details-marin-1",
-       "clue": "____ commissioned Wright’s ____ in 1957; its initial opening was in 1962. The county describes it as a public architectural project.",
-       "fact": "Marin County commissioned Wright’s Civic Center in 1957; its initial opening was in 1962. The county describes it as a public architectural project.",
+       "clue": "____ commissioned Wright’s ____ in 1957; its initial opening was in 1962.",
+       "fact": "Marin County commissioned Wright’s Civic Center in 1957; its initial opening was in 1962.",
        "sources": [
         {
          "title": "Civic Center’s 60th Anniversary",
@@ -4137,8 +3758,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "architecture-hidden-details-bradbury-1",
-       "clue": "The ____ is documented for its skylit atrium and intricate ironwork. Its source page also describes workspace and filming uses.",
-       "fact": "The Bradbury Building is documented for its skylit atrium and intricate ironwork. Its source page also describes workspace and filming uses.",
+       "clue": "The ____ is documented for its skylit atrium and intricate ironwork. It is also used as workspace and as a filming location.",
+       "fact": "The Bradbury Building is documented for its skylit atrium and intricate ironwork. It is also used as workspace and as a filming location.",
        "sources": [
         {
          "title": "Bradbury Building",
@@ -4170,8 +3791,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "museums-missing-labels-air-space-1",
-       "clue": "The museum’s 1903 Wright Flyer record concerns the aircraft’s North Carolina flights in 1903. The collection record and display institution are distinct from the historical flight location.",
-       "fact": "The museum’s 1903 Wright Flyer record concerns the aircraft’s North Carolina flights in 1903. The collection record and display institution are distinct from the historical flight location.",
+       "clue": "The ____’s collection includes the 1903 Wright Flyer, the aircraft of the Wright brothers’ 1903 flights in North Carolina.",
+       "fact": "The National Air and Space Museum’s collection includes the 1903 Wright Flyer, the aircraft of the Wright brothers’ 1903 flights in North Carolina.",
        "sources": [
         {
          "title": "1903 Wright Flyer",
@@ -4197,8 +3818,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "museums-missing-labels-field-1",
-       "clue": "The ____’s SUE specimen record describes its body mounted with a cast skull. The original specimen, a cast component and the assembled display are distinct categories.",
-       "fact": "The Field Museum’s SUE specimen record describes its body mounted with a cast skull. The original specimen, a cast component and the assembled display are distinct categories.",
+       "clue": "The ____’s SUE specimen is mounted with a cast skull.",
+       "fact": "The Field Museum’s SUE specimen is mounted with a cast skull.",
        "sources": [
         {
          "title": "SUE collection record",
@@ -4224,8 +3845,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "museums-missing-labels-henry-ford-1",
-       "clue": "The museum interprets Rosa Parks’s 1955 resistance to segregation on a Montgomery bus. Archived information helped identify bus 2857; its restoration retained original material where possible and used matching replacement parts.",
-       "fact": "The museum interprets Rosa Parks’s 1955 resistance to segregation on a Montgomery bus. Archived information helped identify bus 2857; its restoration retained original material where possible and used matching replacement parts.",
+       "clue": "The museum interprets Rosa Parks’s 1955 resistance to segregation on a Montgomery bus. It restored that bus, number 2857, keeping original material where possible.",
+       "fact": "The museum interprets Rosa Parks’s 1955 resistance to segregation on a Montgomery bus. It restored that bus, number 2857, keeping original material where possible.",
        "sources": [
         {
          "title": "Rosa Parks Bus: Curating and Preserving",
@@ -4251,8 +3872,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "museums-missing-labels-computer-history-1",
-       "clue": "Babbage designed Difference Engine No.2 in 1847–1849 but did not complete it in his lifetime. Modern working reconstructions followed; the museum’s referenced exhibit is dated May 2008–January 2016.",
-       "fact": "Babbage designed Difference Engine No.2 in 1847–1849 but did not complete it in his lifetime. Modern working reconstructions followed; the museum’s referenced exhibit is dated May 2008–January 2016.",
+       "clue": "Babbage designed Difference Engine No. 2 in 1847–1849 but did not complete it in his lifetime. This museum exhibited a modern working reconstruction from May 2008 to January 2016.",
+       "fact": "Babbage designed Difference Engine No. 2 in 1847–1849 but did not complete it in his lifetime. The Computer History Museum exhibited a modern working reconstruction from May 2008 to January 2016.",
        "sources": [
         {
          "title": "The Babbage Engine historical exhibit",
@@ -4353,19 +3974,7508 @@ const TRIVIA_BANK = {
      "emoji": "🛫",
      "suspect": {
       "name": "Boe Beacon",
-      "alias": "The Lifespan Slip",
+      "alias": "The Tailwind",
       "emoji": "🛫"
      },
      "facts": [
       {
        "id": "museums-missing-labels-flight-1",
-       "clue": "The museum’s archive describes the Red Barn’s 1909 shipyard origins and aircraft production there from 1917. William E. Boeing lived 1881–1956; his papers include material with wider date coverage.",
-       "fact": "The museum’s archive describes the Red Barn’s 1909 shipyard origins and aircraft production there from 1917. William E. Boeing lived 1881–1956; his papers include material with wider date coverage.",
+       "clue": "The museum’s Red Barn began as a 1909 shipyard building, and aircraft were built there from 1917.",
+       "fact": "The museum’s Red Barn began as a 1909 shipyard building, and aircraft were built there from 1917.",
        "sources": [
         {
          "title": "Heath Shipyard archive scope note",
          "publisher": "The Museum of Flight Archives",
          "url": "https://archives.museumofflight.org/subjects/45"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "capitals-africa-carmen",
+   "title": "Where in Africa's Capitals is Carmen Sandiego?",
+   "places": [
+    {
+     "id": "cap-porto-novo",
+     "name": "Porto-Novo",
+     "region": "Benin",
+     "lat": 6.5,
+     "lng": 2.6,
+     "emoji": "🇧🇯",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-porto-novo-1",
+       "clue": "____ is the official capital of Benin.",
+       "fact": "Porto-Novo is the official capital of Benin.",
+       "sources": [
+        {
+         "title": "Porto-Novo",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Porto-Novo"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-gitega",
+     "name": "Gitega",
+     "region": "Burundi",
+     "lat": -3.43,
+     "lng": 29.92,
+     "emoji": "🇧🇮",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-gitega-1",
+       "clue": "____ has been the political capital of Burundi since 2019.",
+       "fact": "Gitega has been the political capital of Burundi since 2019.",
+       "sources": [
+        {
+         "title": "Gitega",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Gitega"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-abuja",
+     "name": "Abuja",
+     "region": "Nigeria",
+     "lat": 9.08,
+     "lng": 7.4,
+     "emoji": "🇳🇬",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-abuja-1",
+       "clue": "____ has been the capital of Nigeria since 1991.",
+       "fact": "Abuja has been the capital of Nigeria since 1991.",
+       "sources": [
+        {
+         "title": "Abuja",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Abuja"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-lagos",
+     "name": "Lagos",
+     "region": "Nigeria",
+     "lat": 6.52,
+     "lng": 3.38,
+     "emoji": "🇳🇬",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-lagos-1",
+       "clue": "____ was the capital of Nigeria until 1991.",
+       "fact": "Lagos was the capital of Nigeria until 1991.",
+       "sources": [
+        {
+         "title": "Lagos",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Lagos"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-yamoussoukro",
+     "name": "Yamoussoukro",
+     "region": "Ivory Coast",
+     "lat": 6.82,
+     "lng": -5.28,
+     "emoji": "🇨🇮",
+     "suspect": {
+      "name": "Dee Plomat",
+      "alias": "The Envoy",
+      "emoji": "🎩"
+     },
+     "facts": [
+      {
+       "id": "cap-yamoussoukro-1",
+       "clue": "____ has been the capital of Ivory Coast since 1983.",
+       "fact": "Yamoussoukro has been the capital of Ivory Coast since 1983.",
+       "sources": [
+        {
+         "title": "Yamoussoukro",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Yamoussoukro"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-rabat",
+     "name": "Rabat",
+     "region": "Morocco",
+     "lat": 34.02,
+     "lng": -6.84,
+     "emoji": "🇲🇦",
+     "suspect": {
+      "name": "Ann Exe",
+      "alias": "The Annexer",
+      "emoji": "📜"
+     },
+     "facts": [
+      {
+       "id": "cap-rabat-1",
+       "clue": "____ is the capital of Morocco.",
+       "fact": "Rabat is the capital of Morocco.",
+       "sources": [
+        {
+         "title": "Rabat",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Rabat"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-dodoma",
+     "name": "Dodoma",
+     "region": "Tanzania",
+     "lat": -6.16,
+     "lng": 35.75,
+     "emoji": "🇹🇿",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-dodoma-1",
+       "clue": "____ is the capital of Tanzania.",
+       "fact": "Dodoma is the capital of Tanzania.",
+       "sources": [
+        {
+         "title": "Dodoma",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Dodoma"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-antananarivo",
+     "name": "Antananarivo",
+     "region": "Madagascar",
+     "lat": -18.88,
+     "lng": 47.51,
+     "emoji": "🇲🇬",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-antananarivo-1",
+       "clue": "____ is the capital of Madagascar.",
+       "fact": "Antananarivo is the capital of Madagascar.",
+       "sources": [
+        {
+         "title": "Antananarivo",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Antananarivo"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-ouagadougou",
+     "name": "Ouagadougou",
+     "region": "Burkina Faso",
+     "lat": 12.37,
+     "lng": -1.52,
+     "emoji": "🇧🇫",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-ouagadougou-1",
+       "clue": "____ is the capital of Burkina Faso.",
+       "fact": "Ouagadougou is the capital of Burkina Faso.",
+       "sources": [
+        {
+         "title": "Ouagadougou",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Ouagadougou"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-yaounde",
+     "name": "Yaoundé",
+     "region": "Cameroon",
+     "lat": 3.87,
+     "lng": 11.52,
+     "emoji": "🇨🇲",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-yaounde-1",
+       "clue": "____ is the capital of Cameroon.",
+       "fact": "Yaoundé is the capital of Cameroon.",
+       "sources": [
+        {
+         "title": "Yaoundé",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Yaound%C3%A9"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-lilongwe",
+     "name": "Lilongwe",
+     "region": "Malawi",
+     "lat": -13.96,
+     "lng": 33.79,
+     "emoji": "🇲🇼",
+     "suspect": {
+      "name": "Dee Plomat",
+      "alias": "The Envoy",
+      "emoji": "🎩"
+     },
+     "facts": [
+      {
+       "id": "cap-lilongwe-1",
+       "clue": "____ has been the capital of Malawi since 1975.",
+       "fact": "Lilongwe has been the capital of Malawi since 1975.",
+       "sources": [
+        {
+         "title": "Lilongwe",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Lilongwe"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-n-djamena",
+     "name": "N'Djamena",
+     "region": "Chad",
+     "lat": 12.13,
+     "lng": 15.06,
+     "emoji": "🇹🇩",
+     "suspect": {
+      "name": "Ann Exe",
+      "alias": "The Annexer",
+      "emoji": "📜"
+     },
+     "facts": [
+      {
+       "id": "cap-n-djamena-1",
+       "clue": "____ is the capital of Chad.",
+       "fact": "N'Djamena is the capital of Chad.",
+       "sources": [
+        {
+         "title": "N'Djamena",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/N'Djamena"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-niamey",
+     "name": "Niamey",
+     "region": "Niger",
+     "lat": 13.51,
+     "lng": 2.11,
+     "emoji": "🇳🇪",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-niamey-1",
+       "clue": "____ is the capital of Niger.",
+       "fact": "Niamey is the capital of Niger.",
+       "sources": [
+        {
+         "title": "Niamey",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Niamey"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-nairobi",
+     "name": "Nairobi",
+     "region": "Kenya",
+     "lat": -1.29,
+     "lng": 36.82,
+     "emoji": "🇰🇪",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-nairobi-1",
+       "clue": "____ is the capital of Kenya.",
+       "fact": "Nairobi is the capital of Kenya.",
+       "sources": [
+        {
+         "title": "Nairobi",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Nairobi"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-mbabane",
+     "name": "Mbabane",
+     "region": "Eswatini",
+     "lat": -26.32,
+     "lng": 31.14,
+     "emoji": "🇸🇿",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-mbabane-1",
+       "clue": "____ is the administrative capital of Eswatini.",
+       "fact": "Mbabane is the administrative capital of Eswatini.",
+       "sources": [
+        {
+         "title": "Mbabane",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Mbabane"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-kampala",
+     "name": "Kampala",
+     "region": "Uganda",
+     "lat": 0.35,
+     "lng": 32.58,
+     "emoji": "🇺🇬",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-kampala-1",
+       "clue": "____ is the capital of Uganda.",
+       "fact": "Kampala is the capital of Uganda.",
+       "sources": [
+        {
+         "title": "Kampala",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Kampala"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-dakar",
+     "name": "Dakar",
+     "region": "Senegal",
+     "lat": 14.72,
+     "lng": -17.47,
+     "emoji": "🇸🇳",
+     "suspect": {
+      "name": "Dee Plomat",
+      "alias": "The Envoy",
+      "emoji": "🎩"
+     },
+     "facts": [
+      {
+       "id": "cap-dakar-1",
+       "clue": "____ is the capital of Senegal.",
+       "fact": "Dakar is the capital of Senegal.",
+       "sources": [
+        {
+         "title": "Dakar",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Dakar"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-nouakchott",
+     "name": "Nouakchott",
+     "region": "Mauritania",
+     "lat": 18.08,
+     "lng": -15.98,
+     "emoji": "🇲🇷",
+     "suspect": {
+      "name": "Ann Exe",
+      "alias": "The Annexer",
+      "emoji": "📜"
+     },
+     "facts": [
+      {
+       "id": "cap-nouakchott-1",
+       "clue": "____, the capital of Mauritania, was built as the capital around independence in 1960.",
+       "fact": "Nouakchott, the capital of Mauritania, was built as the capital around independence in 1960.",
+       "sources": [
+        {
+         "title": "Nouakchott",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Nouakchott"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-asmara",
+     "name": "Asmara",
+     "region": "Eritrea",
+     "lat": 15.32,
+     "lng": 38.93,
+     "emoji": "🇪🇷",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-asmara-1",
+       "clue": "____, the capital of Eritrea, is known for its 1930s modernist buildings.",
+       "fact": "Asmara, the capital of Eritrea, is known for its 1930s modernist buildings.",
+       "sources": [
+        {
+         "title": "Asmara",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Asmara"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-libreville",
+     "name": "Libreville",
+     "region": "Gabon",
+     "lat": 0.39,
+     "lng": 9.45,
+     "emoji": "🇬🇦",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-libreville-1",
+       "clue": "____ is the capital of Gabon.",
+       "fact": "Libreville is the capital of Gabon.",
+       "sources": [
+        {
+         "title": "Libreville",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Libreville"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-kinshasa",
+     "name": "Kinshasa",
+     "region": "DR Congo",
+     "lat": -4.32,
+     "lng": 15.31,
+     "emoji": "🇨🇩",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-kinshasa-1",
+       "clue": "____, the capital of DR Congo, faces Brazzaville, the capital of the Republic of the Congo, across the Congo River.",
+       "fact": "Kinshasa, the capital of DR Congo, faces Brazzaville, the capital of the Republic of the Congo, across the Congo River.",
+       "sources": [
+        {
+         "title": "Kinshasa",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Kinshasa"
+        },
+        {
+         "title": "Brazzaville",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Brazzaville"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-praia",
+     "name": "Praia",
+     "region": "Cape Verde",
+     "lat": 14.93,
+     "lng": -23.51,
+     "emoji": "🇨🇻",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-praia-1",
+       "clue": "____ is the capital of Cape Verde.",
+       "fact": "Praia is the capital of Cape Verde.",
+       "sources": [
+        {
+         "title": "Praia",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Praia"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-gaborone",
+     "name": "Gaborone",
+     "region": "Botswana",
+     "lat": -24.65,
+     "lng": 25.91,
+     "emoji": "🇧🇼",
+     "suspect": {
+      "name": "Dee Plomat",
+      "alias": "The Envoy",
+      "emoji": "🎩"
+     },
+     "facts": [
+      {
+       "id": "cap-gaborone-1",
+       "clue": "____ is the capital of Botswana.",
+       "fact": "Gaborone is the capital of Botswana.",
+       "sources": [
+        {
+         "title": "Gaborone",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Gaborone"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-moroni",
+     "name": "Moroni",
+     "region": "Comoros",
+     "lat": -11.7,
+     "lng": 43.26,
+     "emoji": "🇰🇲",
+     "suspect": {
+      "name": "Ann Exe",
+      "alias": "The Annexer",
+      "emoji": "📜"
+     },
+     "facts": [
+      {
+       "id": "cap-moroni-1",
+       "clue": "____ is the capital of Comoros.",
+       "fact": "Moroni is the capital of Comoros.",
+       "sources": [
+        {
+         "title": "Moroni, Comoros",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Moroni,_Comoros"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "capitals-americas-carmen",
+   "title": "Where in the Capitals of the Americas is Carmen Sandiego?",
+   "places": [
+    {
+     "id": "cap-ottawa",
+     "name": "Ottawa",
+     "region": "Canada",
+     "lat": 45.42,
+     "lng": -75.7,
+     "emoji": "🇨🇦",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-ottawa-1",
+       "clue": "____, the capital of Canada, was chosen by Queen Victoria in 1857.",
+       "fact": "Ottawa, the capital of Canada, was chosen by Queen Victoria in 1857.",
+       "sources": [
+        {
+         "title": "Ottawa",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Ottawa"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-brasilia",
+     "name": "Brasília",
+     "region": "Brazil",
+     "lat": -15.79,
+     "lng": -47.88,
+     "emoji": "🇧🇷",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-brasilia-1",
+       "clue": "____, the capital of Brazil, was built from scratch and opened in 1960.",
+       "fact": "Brasília, the capital of Brazil, was built from scratch and opened in 1960.",
+       "sources": [
+        {
+         "title": "Brasília",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Bras%C3%ADlia"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-rio-de-janeiro",
+     "name": "Rio de Janeiro",
+     "region": "Brazil",
+     "lat": -22.91,
+     "lng": -43.17,
+     "emoji": "🇧🇷",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-rio-de-janeiro-1",
+       "clue": "____ was the capital of Brazil from 1763 to 1960, before Brasília. Salvador was the capital before that.",
+       "fact": "Rio de Janeiro was the capital of Brazil from 1763 to 1960, before Brasília. Salvador was the capital before that.",
+       "sources": [
+        {
+         "title": "Rio de Janeiro",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Rio_de_Janeiro"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-sucre",
+     "name": "Sucre",
+     "region": "Bolivia",
+     "lat": -19.05,
+     "lng": -65.26,
+     "emoji": "🇧🇴",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-sucre-1",
+       "clue": "____ is the constitutional capital of Bolivia. The government sits in La Paz.",
+       "fact": "Sucre is the constitutional capital of Bolivia. The government sits in La Paz.",
+       "sources": [
+        {
+         "title": "Sucre",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Sucre"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-la-paz",
+     "name": "La Paz",
+     "region": "Bolivia",
+     "lat": -16.5,
+     "lng": -68.15,
+     "emoji": "🇧🇴",
+     "suspect": {
+      "name": "Dee Plomat",
+      "alias": "The Envoy",
+      "emoji": "🎩"
+     },
+     "facts": [
+      {
+       "id": "cap-la-paz-1",
+       "clue": "____, Bolivia, is the highest seat of government in the world, about 3,600 meters up.",
+       "fact": "La Paz, Bolivia, is the highest seat of government in the world, about 3,600 meters up.",
+       "sources": [
+        {
+         "title": "La Paz",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/La_Paz"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-quito",
+     "name": "Quito",
+     "region": "Ecuador",
+     "lat": -0.18,
+     "lng": -78.47,
+     "emoji": "🇪🇨",
+     "suspect": {
+      "name": "Ann Exe",
+      "alias": "The Annexer",
+      "emoji": "📜"
+     },
+     "facts": [
+      {
+       "id": "cap-quito-1",
+       "clue": "____ is the capital of Ecuador.",
+       "fact": "Quito is the capital of Ecuador.",
+       "sources": [
+        {
+         "title": "Quito",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Quito"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-belmopan",
+     "name": "Belmopan",
+     "region": "Belize",
+     "lat": 17.25,
+     "lng": -88.76,
+     "emoji": "🇧🇿",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-belmopan-1",
+       "clue": "____, the capital of Belize, was built inland after a 1961 hurricane hit Belize City.",
+       "fact": "Belmopan, the capital of Belize, was built inland after a 1961 hurricane hit Belize City.",
+       "sources": [
+        {
+         "title": "Belmopan",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Belmopan"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-tegucigalpa",
+     "name": "Tegucigalpa",
+     "region": "Honduras",
+     "lat": 14.07,
+     "lng": -87.19,
+     "emoji": "🇭🇳",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-tegucigalpa-1",
+       "clue": "____ is the capital of Honduras.",
+       "fact": "Tegucigalpa is the capital of Honduras.",
+       "sources": [
+        {
+         "title": "Tegucigalpa",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Tegucigalpa"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-buenos-aires",
+     "name": "Buenos Aires",
+     "region": "Argentina",
+     "lat": -34.6,
+     "lng": -58.38,
+     "emoji": "🇦🇷",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-buenos-aires-1",
+       "clue": "____ is the capital of Argentina.",
+       "fact": "Buenos Aires is the capital of Argentina.",
+       "sources": [
+        {
+         "title": "Buenos Aires",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Buenos_Aires"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-mexico-city",
+     "name": "Mexico City",
+     "region": "Mexico",
+     "lat": 19.43,
+     "lng": -99.13,
+     "emoji": "🇲🇽",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-mexico-city-1",
+       "clue": "____ was built on the site of the Aztec capital Tenochtitlan.",
+       "fact": "Mexico City was built on the site of the Aztec capital Tenochtitlan.",
+       "sources": [
+        {
+         "title": "Mexico City",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Mexico_City"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-lima",
+     "name": "Lima",
+     "region": "Peru",
+     "lat": -12.05,
+     "lng": -77.04,
+     "emoji": "🇵🇪",
+     "suspect": {
+      "name": "Dee Plomat",
+      "alias": "The Envoy",
+      "emoji": "🎩"
+     },
+     "facts": [
+      {
+       "id": "cap-lima-1",
+       "clue": "____ is the capital of Peru.",
+       "fact": "Lima is the capital of Peru.",
+       "sources": [
+        {
+         "title": "Lima",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Lima"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-valparaiso",
+     "name": "Valparaíso",
+     "region": "Chile",
+     "lat": -33.05,
+     "lng": -71.62,
+     "emoji": "🇨🇱",
+     "suspect": {
+      "name": "Ann Exe",
+      "alias": "The Annexer",
+      "emoji": "📜"
+     },
+     "facts": [
+      {
+       "id": "cap-valparaiso-1",
+       "clue": "Chile's National Congress has met in ____ since 1990. Santiago is the capital.",
+       "fact": "Chile's National Congress has met in Valparaíso since 1990. Santiago is the capital.",
+       "sources": [
+        {
+         "title": "National Congress of Chile",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/National_Congress_of_Chile"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-santo-domingo",
+     "name": "Santo Domingo",
+     "region": "Dominican Republic",
+     "lat": 18.49,
+     "lng": -69.93,
+     "emoji": "🇩🇴",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-santo-domingo-1",
+       "clue": "____, the capital of the Dominican Republic, is the oldest continuously inhabited European-founded city in the Americas.",
+       "fact": "Santo Domingo, the capital of the Dominican Republic, is the oldest continuously inhabited European-founded city in the Americas.",
+       "sources": [
+        {
+         "title": "Santo Domingo",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Santo_Domingo"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-bogota",
+     "name": "Bogotá",
+     "region": "Colombia",
+     "lat": 4.71,
+     "lng": -74.07,
+     "emoji": "🇨🇴",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-bogota-1",
+       "clue": "____ is the capital of Colombia.",
+       "fact": "Bogotá is the capital of Colombia.",
+       "sources": [
+        {
+         "title": "Bogotá",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Bogot%C3%A1"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-port-of-spain",
+     "name": "Port of Spain",
+     "region": "Trinidad and Tobago",
+     "lat": 10.66,
+     "lng": -61.51,
+     "emoji": "🇹🇹",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-port-of-spain-1",
+       "clue": "____ is the capital of Trinidad and Tobago.",
+       "fact": "Port of Spain is the capital of Trinidad and Tobago.",
+       "sources": [
+        {
+         "title": "Port of Spain",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Port_of_Spain"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-kingston",
+     "name": "Kingston",
+     "region": "Jamaica",
+     "lat": 17.97,
+     "lng": -76.79,
+     "emoji": "🇯🇲",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-kingston-1",
+       "clue": "____ is the capital of Jamaica.",
+       "fact": "Kingston is the capital of Jamaica.",
+       "sources": [
+        {
+         "title": "Kingston, Jamaica",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Kingston,_Jamaica"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "capitals-asia-carmen",
+   "title": "Where in Asia's Capitals is Carmen Sandiego?",
+   "places": [
+    {
+     "id": "cap-manila",
+     "name": "Manila",
+     "region": "Philippines",
+     "lat": 14.6,
+     "lng": 120.98,
+     "emoji": "🇵🇭",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-manila-1",
+       "clue": "____ is the capital of the Philippines.",
+       "fact": "Manila is the capital of the Philippines.",
+       "sources": [
+        {
+         "title": "Manila",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Manila"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-ankara",
+     "name": "Ankara",
+     "region": "Turkey",
+     "lat": 39.93,
+     "lng": 32.86,
+     "emoji": "🇹🇷",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-ankara-1",
+       "clue": "____ has been the capital of Turkey since 1923.",
+       "fact": "Ankara has been the capital of Turkey since 1923.",
+       "sources": [
+        {
+         "title": "Ankara",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Ankara"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-istanbul",
+     "name": "Istanbul",
+     "region": "Turkey",
+     "lat": 41.01,
+     "lng": 28.98,
+     "emoji": "🇹🇷",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-istanbul-1",
+       "clue": "____, once Constantinople, was the capital of the Ottoman Empire. Ankara became the capital of Turkey in 1923.",
+       "fact": "Istanbul, once Constantinople, was the capital of the Ottoman Empire. Ankara became the capital of Turkey in 1923.",
+       "sources": [
+        {
+         "title": "Istanbul",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Istanbul"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-astana",
+     "name": "Astana",
+     "region": "Kazakhstan",
+     "lat": 51.17,
+     "lng": 71.45,
+     "emoji": "🇰🇿",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-astana-1",
+       "clue": "____ is the capital of Kazakhstan. It was called Nur-Sultan from 2019 to 2022.",
+       "fact": "Astana is the capital of Kazakhstan. It was called Nur-Sultan from 2019 to 2022.",
+       "sources": [
+        {
+         "title": "Astana",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Astana"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-naypyidaw",
+     "name": "Naypyidaw",
+     "region": "Myanmar",
+     "lat": 19.76,
+     "lng": 96.08,
+     "emoji": "🇲🇲",
+     "suspect": {
+      "name": "Dee Plomat",
+      "alias": "The Envoy",
+      "emoji": "🎩"
+     },
+     "facts": [
+      {
+       "id": "cap-naypyidaw-1",
+       "clue": "____ has been the capital of Myanmar since 2006.",
+       "fact": "Naypyidaw has been the capital of Myanmar since 2006.",
+       "sources": [
+        {
+         "title": "Naypyidaw",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Naypyidaw"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-thimphu",
+     "name": "Thimphu",
+     "region": "Bhutan",
+     "lat": 27.47,
+     "lng": 89.64,
+     "emoji": "🇧🇹",
+     "suspect": {
+      "name": "Ann Exe",
+      "alias": "The Annexer",
+      "emoji": "📜"
+     },
+     "facts": [
+      {
+       "id": "cap-thimphu-1",
+       "clue": "____ is the capital of Bhutan.",
+       "fact": "Thimphu is the capital of Bhutan.",
+       "sources": [
+        {
+         "title": "Thimphu",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Thimphu"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-hanoi",
+     "name": "Hanoi",
+     "region": "Vietnam",
+     "lat": 21.03,
+     "lng": 105.85,
+     "emoji": "🇻🇳",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-hanoi-1",
+       "clue": "____ is the capital of Vietnam.",
+       "fact": "Hanoi is the capital of Vietnam.",
+       "sources": [
+        {
+         "title": "Hanoi",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Hanoi"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-islamabad",
+     "name": "Islamabad",
+     "region": "Pakistan",
+     "lat": 33.68,
+     "lng": 73.05,
+     "emoji": "🇵🇰",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-islamabad-1",
+       "clue": "____, the capital of Pakistan, is a planned city built in the 1960s.",
+       "fact": "Islamabad, the capital of Pakistan, is a planned city built in the 1960s.",
+       "sources": [
+        {
+         "title": "Islamabad",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Islamabad"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-karachi",
+     "name": "Karachi",
+     "region": "Pakistan",
+     "lat": 24.86,
+     "lng": 67.01,
+     "emoji": "🇵🇰",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-karachi-1",
+       "clue": "____ was the first capital of Pakistan, from 1947. Rawalpindi served while Islamabad was built.",
+       "fact": "Karachi was the first capital of Pakistan, from 1947. Rawalpindi served while Islamabad was built.",
+       "sources": [
+        {
+         "title": "Karachi",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Karachi"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-kuala-lumpur",
+     "name": "Kuala Lumpur",
+     "region": "Malaysia",
+     "lat": 3.14,
+     "lng": 101.69,
+     "emoji": "🇲🇾",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-kuala-lumpur-1",
+       "clue": "____ is the capital of Malaysia, though most government offices moved to Putrajaya.",
+       "fact": "Kuala Lumpur is the capital of Malaysia, though most government offices moved to Putrajaya.",
+       "sources": [
+        {
+         "title": "Kuala Lumpur",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Kuala_Lumpur"
+        },
+        {
+         "title": "Putrajaya",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Putrajaya"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-sri-jayawardenepura-kotte",
+     "name": "Sri Jayawardenepura Kotte",
+     "region": "Sri Lanka",
+     "lat": 6.89,
+     "lng": 79.92,
+     "emoji": "🇱🇰",
+     "suspect": {
+      "name": "Dee Plomat",
+      "alias": "The Envoy",
+      "emoji": "🎩"
+     },
+     "facts": [
+      {
+       "id": "cap-sri-jayawardenepura-kotte-1",
+       "clue": "____, a suburb of Colombo where parliament sits, is the official legislative capital of Sri Lanka.",
+       "fact": "Sri Jayawardenepura Kotte, a suburb of Colombo where parliament sits, is the official legislative capital of Sri Lanka.",
+       "sources": [
+        {
+         "title": "Sri Jayawardenepura Kotte",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Sri_Jayawardenepura_Kotte"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-new-delhi",
+     "name": "New Delhi",
+     "region": "India",
+     "lat": 28.61,
+     "lng": 77.21,
+     "emoji": "🇮🇳",
+     "suspect": {
+      "name": "Ann Exe",
+      "alias": "The Annexer",
+      "emoji": "📜"
+     },
+     "facts": [
+      {
+       "id": "cap-new-delhi-1",
+       "clue": "____ is the capital of India.",
+       "fact": "New Delhi is the capital of India.",
+       "sources": [
+        {
+         "title": "New Delhi",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/New_Delhi"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-beijing",
+     "name": "Beijing",
+     "region": "China",
+     "lat": 39.9,
+     "lng": 116.41,
+     "emoji": "🇨🇳",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-beijing-1",
+       "clue": "____ is the capital of China.",
+       "fact": "Beijing is the capital of China.",
+       "sources": [
+        {
+         "title": "Beijing",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Beijing"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-vientiane",
+     "name": "Vientiane",
+     "region": "Laos",
+     "lat": 17.98,
+     "lng": 102.63,
+     "emoji": "🇱🇦",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-vientiane-1",
+       "clue": "____ is the capital of Laos.",
+       "fact": "Vientiane is the capital of Laos.",
+       "sources": [
+        {
+         "title": "Vientiane",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Vientiane"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-tashkent",
+     "name": "Tashkent",
+     "region": "Uzbekistan",
+     "lat": 41.3,
+     "lng": 69.24,
+     "emoji": "🇺🇿",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-tashkent-1",
+       "clue": "____ is the capital of Uzbekistan.",
+       "fact": "Tashkent is the capital of Uzbekistan.",
+       "sources": [
+        {
+         "title": "Tashkent",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Tashkent"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-bishkek",
+     "name": "Bishkek",
+     "region": "Kyrgyzstan",
+     "lat": 42.87,
+     "lng": 74.59,
+     "emoji": "🇰🇬",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-bishkek-1",
+       "clue": "____ is the capital of Kyrgyzstan.",
+       "fact": "Bishkek is the capital of Kyrgyzstan.",
+       "sources": [
+        {
+         "title": "Bishkek",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Bishkek"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-seoul",
+     "name": "Seoul",
+     "region": "South Korea",
+     "lat": 37.57,
+     "lng": 126.98,
+     "emoji": "🇰🇷",
+     "suspect": {
+      "name": "Dee Plomat",
+      "alias": "The Envoy",
+      "emoji": "🎩"
+     },
+     "facts": [
+      {
+       "id": "cap-seoul-1",
+       "clue": "____ is the capital of South Korea.",
+       "fact": "Seoul is the capital of South Korea.",
+       "sources": [
+        {
+         "title": "Seoul",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Seoul"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-tokyo",
+     "name": "Tokyo",
+     "region": "Japan",
+     "lat": 35.68,
+     "lng": 139.69,
+     "emoji": "🇯🇵",
+     "suspect": {
+      "name": "Ann Exe",
+      "alias": "The Annexer",
+      "emoji": "📜"
+     },
+     "facts": [
+      {
+       "id": "cap-tokyo-1",
+       "clue": "____ is the capital of Japan.",
+       "fact": "Tokyo is the capital of Japan.",
+       "sources": [
+        {
+         "title": "Tokyo",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Tokyo"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-kyoto",
+     "name": "Kyoto",
+     "region": "Japan",
+     "lat": 35.01,
+     "lng": 135.77,
+     "emoji": "🇯🇵",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-kyoto-1",
+       "clue": "____ was the imperial capital of Japan from 794 until the emperor moved to Tokyo in 1869.",
+       "fact": "Kyoto was the imperial capital of Japan from 794 until the emperor moved to Tokyo in 1869.",
+       "sources": [
+        {
+         "title": "Kyoto",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Kyoto"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-tbilisi",
+     "name": "Tbilisi",
+     "region": "Georgia",
+     "lat": 41.72,
+     "lng": 44.79,
+     "emoji": "🇬🇪",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-tbilisi-1",
+       "clue": "____ is the capital of Georgia, the country.",
+       "fact": "Tbilisi is the capital of Georgia, the country.",
+       "sources": [
+        {
+         "title": "Tbilisi",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Tbilisi"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-dushanbe",
+     "name": "Dushanbe",
+     "region": "Tajikistan",
+     "lat": 38.56,
+     "lng": 68.79,
+     "emoji": "🇹🇯",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-dushanbe-1",
+       "clue": "____ is the capital of Tajikistan.",
+       "fact": "Dushanbe is the capital of Tajikistan.",
+       "sources": [
+        {
+         "title": "Dushanbe",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Dushanbe"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-ashgabat",
+     "name": "Ashgabat",
+     "region": "Turkmenistan",
+     "lat": 37.96,
+     "lng": 58.33,
+     "emoji": "🇹🇲",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-ashgabat-1",
+       "clue": "____ is the capital of Turkmenistan.",
+       "fact": "Ashgabat is the capital of Turkmenistan.",
+       "sources": [
+        {
+         "title": "Ashgabat",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Ashgabat"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-bandar-seri-begawan",
+     "name": "Bandar Seri Begawan",
+     "region": "Brunei",
+     "lat": 4.89,
+     "lng": 114.94,
+     "emoji": "🇧🇳",
+     "suspect": {
+      "name": "Dee Plomat",
+      "alias": "The Envoy",
+      "emoji": "🎩"
+     },
+     "facts": [
+      {
+       "id": "cap-bandar-seri-begawan-1",
+       "clue": "____ is the capital of Brunei.",
+       "fact": "Bandar Seri Begawan is the capital of Brunei.",
+       "sources": [
+        {
+         "title": "Bandar Seri Begawan",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Bandar_Seri_Begawan"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-damascus",
+     "name": "Damascus",
+     "region": "Syria",
+     "lat": 33.51,
+     "lng": 36.29,
+     "emoji": "🇸🇾",
+     "suspect": {
+      "name": "Ann Exe",
+      "alias": "The Annexer",
+      "emoji": "📜"
+     },
+     "facts": [
+      {
+       "id": "cap-damascus-1",
+       "clue": "____, the capital of Syria, is one of the oldest continuously inhabited cities.",
+       "fact": "Damascus, the capital of Syria, is one of the oldest continuously inhabited cities.",
+       "sources": [
+        {
+         "title": "Damascus",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Damascus"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-abu-dhabi",
+     "name": "Abu Dhabi",
+     "region": "United Arab Emirates",
+     "lat": 24.45,
+     "lng": 54.38,
+     "emoji": "🇦🇪",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-abu-dhabi-1",
+       "clue": "____ is the capital of the United Arab Emirates.",
+       "fact": "Abu Dhabi is the capital of the United Arab Emirates.",
+       "sources": [
+        {
+         "title": "Abu Dhabi",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Abu_Dhabi"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-riyadh",
+     "name": "Riyadh",
+     "region": "Saudi Arabia",
+     "lat": 24.71,
+     "lng": 46.68,
+     "emoji": "🇸🇦",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-riyadh-1",
+       "clue": "____ is the capital of Saudi Arabia.",
+       "fact": "Riyadh is the capital of Saudi Arabia.",
+       "sources": [
+        {
+         "title": "Riyadh",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Riyadh"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "capitals-europe-carmen",
+   "title": "Where in Europe's Capitals is Carmen Sandiego?",
+   "places": [
+    {
+     "id": "cap-bern",
+     "name": "Bern",
+     "region": "Switzerland",
+     "lat": 46.95,
+     "lng": 7.45,
+     "emoji": "🇨🇭",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-bern-1",
+       "clue": "____ is the seat of government of Switzerland. The Swiss call it the \"federal city\"; the constitution names no capital.",
+       "fact": "Bern is the seat of government of Switzerland. The Swiss call it the \"federal city\"; the constitution names no capital.",
+       "sources": [
+        {
+         "title": "Bern",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Bern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-amsterdam",
+     "name": "Amsterdam",
+     "region": "Netherlands",
+     "lat": 52.37,
+     "lng": 4.9,
+     "emoji": "🇳🇱",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-amsterdam-1",
+       "clue": "____ is the capital of the Netherlands, though the government and king work in The Hague.",
+       "fact": "Amsterdam is the capital of the Netherlands, though the government and king work in The Hague.",
+       "sources": [
+        {
+         "title": "Amsterdam",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Amsterdam"
+        },
+        {
+         "title": "The Hague",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/The_Hague"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-skopje",
+     "name": "Skopje",
+     "region": "North Macedonia",
+     "lat": 42,
+     "lng": 21.43,
+     "emoji": "🇲🇰",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-skopje-1",
+       "clue": "____ is the capital of North Macedonia.",
+       "fact": "Skopje is the capital of North Macedonia.",
+       "sources": [
+        {
+         "title": "Skopje",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Skopje"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-chisinau",
+     "name": "Chișinău",
+     "region": "Moldova",
+     "lat": 47.01,
+     "lng": 28.86,
+     "emoji": "🇲🇩",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-chisinau-1",
+       "clue": "____ is the capital of Moldova.",
+       "fact": "Chișinău is the capital of Moldova.",
+       "sources": [
+        {
+         "title": "Chișinău",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Chi%C8%99in%C4%83u"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-edinburgh",
+     "name": "Edinburgh",
+     "region": "Scotland",
+     "lat": 55.95,
+     "lng": -3.19,
+     "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+     "suspect": {
+      "name": "Dee Plomat",
+      "alias": "The Envoy",
+      "emoji": "🎩"
+     },
+     "facts": [
+      {
+       "id": "cap-edinburgh-1",
+       "clue": "____ is the capital of Scotland.",
+       "fact": "Edinburgh is the capital of Scotland.",
+       "sources": [
+        {
+         "title": "Edinburgh",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Edinburgh"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-berlin",
+     "name": "Berlin",
+     "region": "Germany",
+     "lat": 52.52,
+     "lng": 13.4,
+     "emoji": "🇩🇪",
+     "suspect": {
+      "name": "Ann Exe",
+      "alias": "The Annexer",
+      "emoji": "📜"
+     },
+     "facts": [
+      {
+       "id": "cap-berlin-1",
+       "clue": "____ is the capital of Germany. Bonn was West Germany's capital until reunification.",
+       "fact": "Berlin is the capital of Germany. Bonn was West Germany's capital until reunification.",
+       "sources": [
+        {
+         "title": "Berlin",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Berlin"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-ljubljana",
+     "name": "Ljubljana",
+     "region": "Slovenia",
+     "lat": 46.06,
+     "lng": 14.51,
+     "emoji": "🇸🇮",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-ljubljana-1",
+       "clue": "____ is the capital of Slovenia.",
+       "fact": "Ljubljana is the capital of Slovenia.",
+       "sources": [
+        {
+         "title": "Ljubljana",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Ljubljana"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-zagreb",
+     "name": "Zagreb",
+     "region": "Croatia",
+     "lat": 45.81,
+     "lng": 15.98,
+     "emoji": "🇭🇷",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-zagreb-1",
+       "clue": "____ is the capital of Croatia.",
+       "fact": "Zagreb is the capital of Croatia.",
+       "sources": [
+        {
+         "title": "Zagreb",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Zagreb"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-sarajevo",
+     "name": "Sarajevo",
+     "region": "Bosnia and Herzegovina",
+     "lat": 43.86,
+     "lng": 18.41,
+     "emoji": "🇧🇦",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-sarajevo-1",
+       "clue": "____ is the capital of Bosnia and Herzegovina.",
+       "fact": "Sarajevo is the capital of Bosnia and Herzegovina.",
+       "sources": [
+        {
+         "title": "Sarajevo",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Sarajevo"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-moscow",
+     "name": "Moscow",
+     "region": "Russia",
+     "lat": 55.76,
+     "lng": 37.62,
+     "emoji": "🇷🇺",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-moscow-1",
+       "clue": "____ is the capital of Russia.",
+       "fact": "Moscow is the capital of Russia.",
+       "sources": [
+        {
+         "title": "Moscow",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Moscow"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-madrid",
+     "name": "Madrid",
+     "region": "Spain",
+     "lat": 40.42,
+     "lng": -3.7,
+     "emoji": "🇪🇸",
+     "suspect": {
+      "name": "Dee Plomat",
+      "alias": "The Envoy",
+      "emoji": "🎩"
+     },
+     "facts": [
+      {
+       "id": "cap-madrid-1",
+       "clue": "____ is the capital of Spain.",
+       "fact": "Madrid is the capital of Spain.",
+       "sources": [
+        {
+         "title": "Madrid",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Madrid"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-vilnius",
+     "name": "Vilnius",
+     "region": "Lithuania",
+     "lat": 54.69,
+     "lng": 25.28,
+     "emoji": "🇱🇹",
+     "suspect": {
+      "name": "Ann Exe",
+      "alias": "The Annexer",
+      "emoji": "📜"
+     },
+     "facts": [
+      {
+       "id": "cap-vilnius-1",
+       "clue": "____ is the capital of Lithuania.",
+       "fact": "Vilnius is the capital of Lithuania.",
+       "sources": [
+        {
+         "title": "Vilnius",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Vilnius"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-helsinki",
+     "name": "Helsinki",
+     "region": "Finland",
+     "lat": 60.17,
+     "lng": 24.94,
+     "emoji": "🇫🇮",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-helsinki-1",
+       "clue": "____ has been the capital of Finland since 1812.",
+       "fact": "Helsinki has been the capital of Finland since 1812.",
+       "sources": [
+        {
+         "title": "Helsinki",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Helsinki"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-bucharest",
+     "name": "Bucharest",
+     "region": "Romania",
+     "lat": 44.43,
+     "lng": 26.1,
+     "emoji": "🇷🇴",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-bucharest-1",
+       "clue": "____ is the capital of Romania.",
+       "fact": "Bucharest is the capital of Romania.",
+       "sources": [
+        {
+         "title": "Bucharest",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Bucharest"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-sofia",
+     "name": "Sofia",
+     "region": "Bulgaria",
+     "lat": 42.7,
+     "lng": 23.32,
+     "emoji": "🇧🇬",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-sofia-1",
+       "clue": "____ is the capital of Bulgaria.",
+       "fact": "Sofia is the capital of Bulgaria.",
+       "sources": [
+        {
+         "title": "Sofia",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Sofia"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-athens",
+     "name": "Athens",
+     "region": "Greece",
+     "lat": 37.98,
+     "lng": 23.73,
+     "emoji": "🇬🇷",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-athens-1",
+       "clue": "____ is the capital of Greece.",
+       "fact": "Athens is the capital of Greece.",
+       "sources": [
+        {
+         "title": "Athens",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Athens"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-lisbon",
+     "name": "Lisbon",
+     "region": "Portugal",
+     "lat": 38.72,
+     "lng": -9.14,
+     "emoji": "🇵🇹",
+     "suspect": {
+      "name": "Dee Plomat",
+      "alias": "The Envoy",
+      "emoji": "🎩"
+     },
+     "facts": [
+      {
+       "id": "cap-lisbon-1",
+       "clue": "____ is the capital of Portugal.",
+       "fact": "Lisbon is the capital of Portugal.",
+       "sources": [
+        {
+         "title": "Lisbon",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Lisbon"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-valletta",
+     "name": "Valletta",
+     "region": "Malta",
+     "lat": 35.9,
+     "lng": 14.51,
+     "emoji": "🇲🇹",
+     "suspect": {
+      "name": "Ann Exe",
+      "alias": "The Annexer",
+      "emoji": "📜"
+     },
+     "facts": [
+      {
+       "id": "cap-valletta-1",
+       "clue": "____, the capital of Malta, is one of the smallest capitals in Europe.",
+       "fact": "Valletta, the capital of Malta, is one of the smallest capitals in Europe.",
+       "sources": [
+        {
+         "title": "Valletta",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Valletta"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-podgorica",
+     "name": "Podgorica",
+     "region": "Montenegro",
+     "lat": 42.44,
+     "lng": 19.26,
+     "emoji": "🇲🇪",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-podgorica-1",
+       "clue": "____ is the capital of Montenegro.",
+       "fact": "Podgorica is the capital of Montenegro.",
+       "sources": [
+        {
+         "title": "Podgorica",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Podgorica"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-reykjavik",
+     "name": "Reykjavík",
+     "region": "Iceland",
+     "lat": 64.15,
+     "lng": -21.94,
+     "emoji": "🇮🇸",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-reykjavik-1",
+       "clue": "____, the capital of Iceland, is the northernmost national capital in the world, at about 64° north.",
+       "fact": "Reykjavík, the capital of Iceland, is the northernmost national capital in the world, at about 64° north.",
+       "sources": [
+        {
+         "title": "Reykjavík",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Reykjav%C3%ADk"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-dublin",
+     "name": "Dublin",
+     "region": "Ireland",
+     "lat": 53.35,
+     "lng": -6.26,
+     "emoji": "🇮🇪",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-dublin-1",
+       "clue": "____ is the capital of Ireland.",
+       "fact": "Dublin is the capital of Ireland.",
+       "sources": [
+        {
+         "title": "Dublin",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Dublin"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-warsaw",
+     "name": "Warsaw",
+     "region": "Poland",
+     "lat": 52.23,
+     "lng": 21.01,
+     "emoji": "🇵🇱",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-warsaw-1",
+       "clue": "____ is the capital of Poland.",
+       "fact": "Warsaw is the capital of Poland.",
+       "sources": [
+        {
+         "title": "Warsaw",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Warsaw"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "capitals-oceania-carmen",
+   "title": "Where in Oceania's Capitals is Carmen Sandiego?",
+   "places": [
+    {
+     "id": "cap-canberra",
+     "name": "Canberra",
+     "region": "Australia",
+     "lat": -35.28,
+     "lng": 149.13,
+     "emoji": "🇦🇺",
+     "suspect": {
+      "name": "Cora Capitol",
+      "alias": "The Seat Warmer",
+      "emoji": "🏛️"
+     },
+     "facts": [
+      {
+       "id": "cap-canberra-1",
+       "clue": "____, the capital of Australia, was built as a compromise between rivals Sydney and Melbourne.",
+       "fact": "Canberra, the capital of Australia, was built as a compromise between rivals Sydney and Melbourne.",
+       "sources": [
+        {
+         "title": "Canberra",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Canberra"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-wellington",
+     "name": "Wellington",
+     "region": "New Zealand",
+     "lat": -41.29,
+     "lng": 174.78,
+     "emoji": "🇳🇿",
+     "suspect": {
+      "name": "Rex Regalia",
+      "alias": "The Crown Jewel",
+      "emoji": "👑"
+     },
+     "facts": [
+      {
+       "id": "cap-wellington-1",
+       "clue": "____ has been the capital of New Zealand since 1865.",
+       "fact": "Wellington has been the capital of New Zealand since 1865.",
+       "sources": [
+        {
+         "title": "Wellington",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Wellington"
+        }
+       ]
+      },
+      {
+       "id": "cap-wellington-2",
+       "clue": "____ is the southernmost national capital in the world, at about 41° south.",
+       "fact": "Wellington is the southernmost national capital in the world, at about 41° south.",
+       "sources": [
+        {
+         "title": "Wellington",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Wellington"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-suva",
+     "name": "Suva",
+     "region": "Fiji",
+     "lat": -18.14,
+     "lng": 178.44,
+     "emoji": "🇫🇯",
+     "suspect": {
+      "name": "Polly Ticks",
+      "alias": "The Filibuster",
+      "emoji": "🗳️"
+     },
+     "facts": [
+      {
+       "id": "cap-suva-1",
+       "clue": "____ is the capital of Fiji.",
+       "fact": "Suva is the capital of Fiji.",
+       "sources": [
+        {
+         "title": "Suva",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Suva"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-port-moresby",
+     "name": "Port Moresby",
+     "region": "Papua New Guinea",
+     "lat": -9.44,
+     "lng": 147.18,
+     "emoji": "🇵🇬",
+     "suspect": {
+      "name": "Max Mapleton",
+      "alias": "The Border Hopper",
+      "emoji": "🗺️"
+     },
+     "facts": [
+      {
+       "id": "cap-port-moresby-1",
+       "clue": "____ is the capital of Papua New Guinea.",
+       "fact": "Port Moresby is the capital of Papua New Guinea.",
+       "sources": [
+        {
+         "title": "Port Moresby",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Port_Moresby"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-ngerulmud",
+     "name": "Ngerulmud",
+     "region": "Palau",
+     "lat": 7.5,
+     "lng": 134.62,
+     "emoji": "🇵🇼",
+     "suspect": {
+      "name": "Dee Plomat",
+      "alias": "The Envoy",
+      "emoji": "🎩"
+     },
+     "facts": [
+      {
+       "id": "cap-ngerulmud-1",
+       "clue": "____ has been the capital of Palau since 2006.",
+       "fact": "Ngerulmud has been the capital of Palau since 2006.",
+       "sources": [
+        {
+         "title": "Ngerulmud",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Ngerulmud"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cap-palikir",
+     "name": "Palikir",
+     "region": "Micronesia",
+     "lat": 6.92,
+     "lng": 158.16,
+     "emoji": "🇫🇲",
+     "suspect": {
+      "name": "Ann Exe",
+      "alias": "The Annexer",
+      "emoji": "📜"
+     },
+     "facts": [
+      {
+       "id": "cap-palikir-1",
+       "clue": "____ is the capital of the Federated States of Micronesia.",
+       "fact": "Palikir is the capital of the Federated States of Micronesia.",
+       "sources": [
+        {
+         "title": "Palikir",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Palikir"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dish-origins-carmen",
+   "title": "Where in the World's Kitchens is Carmen Sandiego?",
+   "places": [
+    {
+     "id": "dish-japan",
+     "name": "Japan",
+     "region": "Asia",
+     "lat": 36.2,
+     "lng": 138.3,
+     "emoji": "🇯🇵",
+     "suspect": {
+      "name": "Sal Monella",
+      "alias": "The Leftover",
+      "emoji": "🥡"
+     },
+     "facts": [
+      {
+       "id": "dish-japan-1",
+       "clue": "Sushi comes from ____.",
+       "fact": "Sushi comes from Japan.",
+       "sources": [
+        {
+         "title": "Sushi",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Sushi"
+        }
+       ]
+      },
+      {
+       "id": "dish-japan-2",
+       "clue": "Tempura comes from ____. Portuguese missionaries brought the frying style there in the 1500s.",
+       "fact": "Tempura comes from Japan. Portuguese missionaries brought the frying style there in the 1500s.",
+       "sources": [
+        {
+         "title": "Tempura",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Tempura"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-thailand",
+     "name": "Thailand",
+     "region": "Asia",
+     "lat": 15.9,
+     "lng": 101,
+     "emoji": "🇹🇭",
+     "suspect": {
+      "name": "Basil Thyme",
+      "alias": "The Garnish",
+      "emoji": "🌿"
+     },
+     "facts": [
+      {
+       "id": "dish-thailand-1",
+       "clue": "Pad thai comes from ____.",
+       "fact": "Pad thai comes from Thailand.",
+       "sources": [
+        {
+         "title": "Pad thai",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Pad_thai"
+        }
+       ]
+      },
+      {
+       "id": "dish-thailand-2",
+       "clue": "Massaman curry comes from ____. Its name and spices show Persian and Malay influence.",
+       "fact": "Massaman curry comes from Thailand. Its name and spices show Persian and Malay influence.",
+       "sources": [
+        {
+         "title": "Massaman curry",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Massaman_curry"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-korea",
+     "name": "Korea",
+     "region": "Asia",
+     "lat": 36.5,
+     "lng": 127.9,
+     "emoji": "🇰🇷",
+     "suspect": {
+      "name": "Ginger Snapp",
+      "alias": "The Pastry Thief",
+      "emoji": "🥐"
+     },
+     "facts": [
+      {
+       "id": "dish-korea-1",
+       "clue": "Kimchi comes from ____.",
+       "fact": "Kimchi comes from Korea.",
+       "sources": [
+        {
+         "title": "Kimchi",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Kimchi"
+        }
+       ]
+      },
+      {
+       "id": "dish-korea-2",
+       "clue": "Bibimbap comes from ____.",
+       "fact": "Bibimbap comes from Korea.",
+       "sources": [
+        {
+         "title": "Bibimbap",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Bibimbap"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-mexico",
+     "name": "Mexico",
+     "region": "North America",
+     "lat": 23.6,
+     "lng": -102.6,
+     "emoji": "🇲🇽",
+     "suspect": {
+      "name": "Mack Aroni",
+      "alias": "The Noodle Bandit",
+      "emoji": "🍝"
+     },
+     "facts": [
+      {
+       "id": "dish-mexico-1",
+       "clue": "The Caesar salad comes from ____. Italian-born chef Caesar Cardini created it in Tijuana in the 1920s.",
+       "fact": "The Caesar salad comes from Mexico. Italian-born chef Caesar Cardini created it in Tijuana in the 1920s.",
+       "sources": [
+        {
+         "title": "Caesar salad",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Caesar_salad"
+        }
+       ]
+      },
+      {
+       "id": "dish-mexico-2",
+       "clue": "Nachos come from ____. Ignacio \"Nacho\" Anaya made them in Piedras Negras in 1943.",
+       "fact": "Nachos come from Mexico. Ignacio \"Nacho\" Anaya made them in Piedras Negras in 1943.",
+       "sources": [
+        {
+         "title": "Nachos",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Nachos"
+        }
+       ]
+      },
+      {
+       "id": "dish-mexico-3",
+       "clue": "Tacos come from ____.",
+       "fact": "Tacos come from Mexico.",
+       "sources": [
+        {
+         "title": "Taco",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Taco"
+        }
+       ]
+      },
+      {
+       "id": "dish-mexico-4",
+       "clue": "Mole poblano comes from Puebla, ____.",
+       "fact": "Mole poblano comes from Puebla, Mexico.",
+       "sources": [
+        {
+         "title": "Mole poblano",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Mole_poblano"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-canada",
+     "name": "Canada",
+     "region": "North America",
+     "lat": 56.1,
+     "lng": -106.3,
+     "emoji": "🇨🇦",
+     "suspect": {
+      "name": "Penny Rolls",
+      "alias": "The Doughnapper",
+      "emoji": "🥯"
+     },
+     "facts": [
+      {
+       "id": "dish-canada-1",
+       "clue": "Hawaiian pizza comes from ____. Greek-born Sam Panopoulos invented it in Ontario in 1962.",
+       "fact": "Hawaiian pizza comes from Canada. Greek-born Sam Panopoulos invented it in Ontario in 1962.",
+       "sources": [
+        {
+         "title": "Hawaiian pizza",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Hawaiian_pizza"
+        }
+       ]
+      },
+      {
+       "id": "dish-canada-2",
+       "clue": "Poutine, fries with cheese curds and gravy, comes from Quebec, ____.",
+       "fact": "Poutine, fries with cheese curds and gravy, comes from Quebec, Canada.",
+       "sources": [
+        {
+         "title": "Poutine",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Poutine"
+        }
+       ]
+      },
+      {
+       "id": "dish-canada-3",
+       "clue": "Butter tarts come from ____.",
+       "fact": "Butter tarts come from Canada.",
+       "sources": [
+        {
+         "title": "Butter tart",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Butter_tart"
+        }
+       ]
+      },
+      {
+       "id": "dish-canada-4",
+       "clue": "Nanaimo bars come from ____. They are named after Nanaimo, British Columbia.",
+       "fact": "Nanaimo bars come from Canada. They are named after Nanaimo, British Columbia.",
+       "sources": [
+        {
+         "title": "Nanaimo bar",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Nanaimo_bar"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-united-states",
+     "name": "United States",
+     "region": "North America",
+     "lat": 37.1,
+     "lng": -95.7,
+     "emoji": "🇺🇸",
+     "suspect": {
+      "name": "Curry Favour",
+      "alias": "The Spice Runner",
+      "emoji": "🌶️"
+     },
+     "facts": [
+      {
+       "id": "dish-united-states-1",
+       "clue": "Fortune cookies come from the ____. They were popularized in California and are rare in China.",
+       "fact": "Fortune cookies come from the United States. They were popularized in California and are rare in China.",
+       "sources": [
+        {
+         "title": "Fortune cookie",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Fortune_cookie"
+        }
+       ]
+      },
+      {
+       "id": "dish-united-states-2",
+       "clue": "Chili con carne comes from Texas, in the ____.",
+       "fact": "Chili con carne comes from Texas, in the United States.",
+       "sources": [
+        {
+         "title": "Chili con carne",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Chili_con_carne"
+        }
+       ]
+      },
+      {
+       "id": "dish-united-states-3",
+       "clue": "Chop suey is a Chinese-American creation from the ____.",
+       "fact": "Chop suey is a Chinese-American creation from the United States.",
+       "sources": [
+        {
+         "title": "Chop suey",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Chop_suey"
+        }
+       ]
+      },
+      {
+       "id": "dish-united-states-4",
+       "clue": "Eggs Benedict come from New York City, in the ____, in the late 1800s.",
+       "fact": "Eggs Benedict come from New York City, in the United States, in the late 1800s.",
+       "sources": [
+        {
+         "title": "Eggs Benedict",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Eggs_Benedict"
+        }
+       ]
+      },
+      {
+       "id": "dish-united-states-5",
+       "clue": "Baked Alaska comes from the ____. It was probably named at Delmonico's in New York.",
+       "fact": "Baked Alaska comes from the United States. It was probably named at Delmonico's in New York.",
+       "sources": [
+        {
+         "title": "Baked Alaska",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Baked_Alaska"
+        }
+       ]
+      },
+      {
+       "id": "dish-united-states-6",
+       "clue": "English muffins come from the ____. Samuel Bath Thomas, an English immigrant, made them in New York.",
+       "fact": "English muffins come from the United States. Samuel Bath Thomas, an English immigrant, made them in New York.",
+       "sources": [
+        {
+         "title": "English muffin",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/English_muffin"
+        }
+       ]
+      },
+      {
+       "id": "dish-united-states-7",
+       "clue": "German chocolate cake comes from the ____. It is named after Samuel German, who developed a baking chocolate.",
+       "fact": "German chocolate cake comes from the United States. It is named after Samuel German, who developed a baking chocolate.",
+       "sources": [
+        {
+         "title": "German chocolate cake",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/German_chocolate_cake"
+        }
+       ]
+      },
+      {
+       "id": "dish-united-states-8",
+       "clue": "Clam chowder comes from the ____, especially New England.",
+       "fact": "Clam chowder comes from the United States, especially New England.",
+       "sources": [
+        {
+         "title": "Clam chowder",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Clam_chowder"
+        }
+       ]
+      },
+      {
+       "id": "dish-united-states-9",
+       "clue": "Gumbo comes from Louisiana, in the ____.",
+       "fact": "Gumbo comes from Louisiana, in the United States.",
+       "sources": [
+        {
+         "title": "Gumbo",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Gumbo"
+        }
+       ]
+      },
+      {
+       "id": "dish-united-states-10",
+       "clue": "The Philly cheesesteak comes from Philadelphia, in the ____, in the 1930s.",
+       "fact": "The Philly cheesesteak comes from Philadelphia, in the United States, in the 1930s.",
+       "sources": [
+        {
+         "title": "Cheesesteak",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Cheesesteak"
+        }
+       ]
+      },
+      {
+       "id": "dish-united-states-11",
+       "clue": "Poke comes from Hawaii, in the ____.",
+       "fact": "Poke comes from Hawaii, in the United States.",
+       "sources": [
+        {
+         "title": "Poke (dish)",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Poke_(dish)"
+        }
+       ]
+      },
+      {
+       "id": "dish-united-states-12",
+       "clue": "Fajitas come from the ____, from Tex-Mex cooking by ranch workers in Texas.",
+       "fact": "Fajitas come from the United States, from Tex-Mex cooking by ranch workers in Texas.",
+       "sources": [
+        {
+         "title": "Fajita",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Fajita"
+        }
+       ]
+      },
+      {
+       "id": "dish-united-states-13",
+       "clue": "Russian dressing comes from the ____, probably from New Hampshire in the 1900s.",
+       "fact": "Russian dressing comes from the United States, probably from New Hampshire in the 1900s.",
+       "sources": [
+        {
+         "title": "Russian dressing",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Russian_dressing"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-spain",
+     "name": "Spain",
+     "region": "Europe",
+     "lat": 40.5,
+     "lng": -3.7,
+     "emoji": "🇪🇸",
+     "suspect": {
+      "name": "Sal Monella",
+      "alias": "The Leftover",
+      "emoji": "🥡"
+     },
+     "facts": [
+      {
+       "id": "dish-spain-1",
+       "clue": "Paella comes from Valencia, in ____.",
+       "fact": "Paella comes from Valencia, in Spain.",
+       "sources": [
+        {
+         "title": "Paella",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Paella"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-hungary",
+     "name": "Hungary",
+     "region": "Europe",
+     "lat": 47.2,
+     "lng": 19.5,
+     "emoji": "🇭🇺",
+     "suspect": {
+      "name": "Basil Thyme",
+      "alias": "The Garnish",
+      "emoji": "🌿"
+     },
+     "facts": [
+      {
+       "id": "dish-hungary-1",
+       "clue": "Goulash comes from ____.",
+       "fact": "Goulash comes from Hungary.",
+       "sources": [
+        {
+         "title": "Goulash",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Goulash"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-senegal",
+     "name": "Senegal",
+     "region": "Africa",
+     "lat": 14.5,
+     "lng": -14.5,
+     "emoji": "🇸🇳",
+     "suspect": {
+      "name": "Ginger Snapp",
+      "alias": "The Pastry Thief",
+      "emoji": "🥐"
+     },
+     "facts": [
+      {
+       "id": "dish-senegal-1",
+       "clue": "Jollof rice comes from ____, from the Wolof people's Jolof Empire. Ghana and Nigeria argue over the best version.",
+       "fact": "Jollof rice comes from Senegal, from the Wolof people's Jolof Empire. Ghana and Nigeria argue over the best version.",
+       "sources": [
+        {
+         "title": "Jollof rice",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Jollof_rice"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-scotland",
+     "name": "Scotland",
+     "region": "Europe",
+     "lat": 56.5,
+     "lng": -4.2,
+     "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+     "suspect": {
+      "name": "Mack Aroni",
+      "alias": "The Noodle Bandit",
+      "emoji": "🍝"
+     },
+     "facts": [
+      {
+       "id": "dish-scotland-1",
+       "clue": "Haggis comes from ____.",
+       "fact": "Haggis comes from Scotland.",
+       "sources": [
+        {
+         "title": "Haggis",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Haggis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-switzerland",
+     "name": "Switzerland",
+     "region": "Europe",
+     "lat": 46.8,
+     "lng": 8.2,
+     "emoji": "🇨🇭",
+     "suspect": {
+      "name": "Penny Rolls",
+      "alias": "The Doughnapper",
+      "emoji": "🥯"
+     },
+     "facts": [
+      {
+       "id": "dish-switzerland-1",
+       "clue": "Fondue comes from ____.",
+       "fact": "Fondue comes from Switzerland.",
+       "sources": [
+        {
+         "title": "Fondue",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Fondue"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-austria",
+     "name": "Austria",
+     "region": "Europe",
+     "lat": 47.5,
+     "lng": 14.6,
+     "emoji": "🇦🇹",
+     "suspect": {
+      "name": "Curry Favour",
+      "alias": "The Spice Runner",
+      "emoji": "🌶️"
+     },
+     "facts": [
+      {
+       "id": "dish-austria-1",
+       "clue": "Danish pastry comes from ____. Danes call it wienerbrød, \"Viennese bread.\"",
+       "fact": "Danish pastry comes from Austria. Danes call it wienerbrød, \"Viennese bread.\"",
+       "sources": [
+        {
+         "title": "Danish pastry",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Danish_pastry"
+        }
+       ]
+      },
+      {
+       "id": "dish-austria-2",
+       "clue": "Wiener schnitzel comes from ____. \"Wiener\" means \"from Vienna.\"",
+       "fact": "Wiener schnitzel comes from Austria. \"Wiener\" means \"from Vienna.\"",
+       "sources": [
+        {
+         "title": "Wiener schnitzel",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Wiener_schnitzel"
+        }
+       ]
+      },
+      {
+       "id": "dish-austria-3",
+       "clue": "Sachertorte comes from ____, from the Hotel Sacher in Vienna.",
+       "fact": "Sachertorte comes from Austria, from the Hotel Sacher in Vienna.",
+       "sources": [
+        {
+         "title": "Sachertorte",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Sachertorte"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-belgium",
+     "name": "Belgium",
+     "region": "Europe",
+     "lat": 50.5,
+     "lng": 4.5,
+     "emoji": "🇧🇪",
+     "suspect": {
+      "name": "Sal Monella",
+      "alias": "The Leftover",
+      "emoji": "🥡"
+     },
+     "facts": [
+      {
+       "id": "dish-belgium-1",
+       "clue": "Belgian waffles come from ____. They became famous in the United States after the 1964 World's Fair.",
+       "fact": "Belgian waffles come from Belgium. They became famous in the United States after the 1964 World's Fair.",
+       "sources": [
+        {
+         "title": "Belgian waffle",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Belgian_waffle"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-england",
+     "name": "England",
+     "region": "Europe",
+     "lat": 52.4,
+     "lng": -1.5,
+     "emoji": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "suspect": {
+      "name": "Basil Thyme",
+      "alias": "The Garnish",
+      "emoji": "🌿"
+     },
+     "facts": [
+      {
+       "id": "dish-england-1",
+       "clue": "The Scotch egg comes from ____. London's Fortnum & Mason claims to have invented it in 1738.",
+       "fact": "The Scotch egg comes from England. London's Fortnum & Mason claims to have invented it in 1738.",
+       "sources": [
+        {
+         "title": "Scotch egg",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Scotch_egg"
+        }
+       ]
+      },
+      {
+       "id": "dish-england-2",
+       "clue": "Yorkshire pudding comes from ____.",
+       "fact": "Yorkshire pudding comes from England.",
+       "sources": [
+        {
+         "title": "Yorkshire pudding",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Yorkshire_pudding"
+        }
+       ]
+      },
+      {
+       "id": "dish-england-3",
+       "clue": "The Cornish pasty comes from ____.",
+       "fact": "The Cornish pasty comes from England.",
+       "sources": [
+        {
+         "title": "Pasty",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Pasty"
+        }
+       ]
+      },
+      {
+       "id": "dish-england-4",
+       "clue": "Fish and chips come from ____.",
+       "fact": "Fish and chips come from England.",
+       "sources": [
+        {
+         "title": "Fish and chips",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Fish_and_chips"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-wales",
+     "name": "Wales",
+     "region": "Europe",
+     "lat": 52.1,
+     "lng": -3.8,
+     "emoji": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+     "suspect": {
+      "name": "Ginger Snapp",
+      "alias": "The Pastry Thief",
+      "emoji": "🥐"
+     },
+     "facts": [
+      {
+       "id": "dish-wales-1",
+       "clue": "Welsh rarebit comes from ____. It is a cheese sauce on toast and contains no rabbit.",
+       "fact": "Welsh rarebit comes from Wales. It is a cheese sauce on toast and contains no rabbit.",
+       "sources": [
+        {
+         "title": "Welsh rarebit",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Welsh_rarebit"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-vietnam",
+     "name": "Vietnam",
+     "region": "Asia",
+     "lat": 14.1,
+     "lng": 108.3,
+     "emoji": "🇻🇳",
+     "suspect": {
+      "name": "Mack Aroni",
+      "alias": "The Noodle Bandit",
+      "emoji": "🍝"
+     },
+     "facts": [
+      {
+       "id": "dish-vietnam-1",
+       "clue": "Pho comes from ____.",
+       "fact": "Pho comes from Vietnam.",
+       "sources": [
+        {
+         "title": "Pho",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Pho"
+        }
+       ]
+      },
+      {
+       "id": "dish-vietnam-2",
+       "clue": "Bánh mì comes from ____. It uses a French-style baguette.",
+       "fact": "Bánh mì comes from Vietnam. It uses a French-style baguette.",
+       "sources": [
+        {
+         "title": "Bánh mì",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/B%C3%A1nh_m%C3%AC"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-france",
+     "name": "France",
+     "region": "Europe",
+     "lat": 46.6,
+     "lng": 2.2,
+     "emoji": "🇫🇷",
+     "suspect": {
+      "name": "Penny Rolls",
+      "alias": "The Doughnapper",
+      "emoji": "🥯"
+     },
+     "facts": [
+      {
+       "id": "dish-france-1",
+       "clue": "The croque monsieur comes from ____.",
+       "fact": "The croque monsieur comes from France.",
+       "sources": [
+        {
+         "title": "Croque monsieur",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Croque_monsieur"
+        }
+       ]
+      },
+      {
+       "id": "dish-france-2",
+       "clue": "Bouillabaisse comes from Marseille, in ____.",
+       "fact": "Bouillabaisse comes from Marseille, in France.",
+       "sources": [
+        {
+         "title": "Bouillabaisse",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Bouillabaisse"
+        }
+       ]
+      },
+      {
+       "id": "dish-france-3",
+       "clue": "Coq au vin comes from ____.",
+       "fact": "Coq au vin comes from France.",
+       "sources": [
+        {
+         "title": "Coq au vin",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Coq_au_vin"
+        }
+       ]
+      },
+      {
+       "id": "dish-france-4",
+       "clue": "Cassoulet comes from southwest ____, around Castelnaudary.",
+       "fact": "Cassoulet comes from southwest France, around Castelnaudary.",
+       "sources": [
+        {
+         "title": "Cassoulet",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Cassoulet"
+        }
+       ]
+      },
+      {
+       "id": "dish-france-5",
+       "clue": "Quiche Lorraine comes from Lorraine, in ____, a region once under German rule.",
+       "fact": "Quiche Lorraine comes from Lorraine, in France, a region once under German rule.",
+       "sources": [
+        {
+         "title": "Quiche",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Quiche"
+        }
+       ]
+      },
+      {
+       "id": "dish-france-6",
+       "clue": "Ratatouille comes from Nice, in ____.",
+       "fact": "Ratatouille comes from Nice, in France.",
+       "sources": [
+        {
+         "title": "Ratatouille",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Ratatouille"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-italy",
+     "name": "Italy",
+     "region": "Europe",
+     "lat": 41.9,
+     "lng": 12.6,
+     "emoji": "🇮🇹",
+     "suspect": {
+      "name": "Curry Favour",
+      "alias": "The Spice Runner",
+      "emoji": "🌶️"
+     },
+     "facts": [
+      {
+       "id": "dish-italy-1",
+       "clue": "Pesto comes from Genoa, in ____.",
+       "fact": "Pesto comes from Genoa, in Italy.",
+       "sources": [
+        {
+         "title": "Pesto",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Pesto"
+        }
+       ]
+      },
+      {
+       "id": "dish-italy-2",
+       "clue": "Carbonara comes from Rome, in ____.",
+       "fact": "Carbonara comes from Rome, in Italy.",
+       "sources": [
+        {
+         "title": "Carbonara",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Carbonara"
+        }
+       ]
+      },
+      {
+       "id": "dish-italy-3",
+       "clue": "Cannoli come from Sicily, in ____.",
+       "fact": "Cannoli come from Sicily, in Italy.",
+       "sources": [
+        {
+         "title": "Cannoli",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Cannoli"
+        }
+       ]
+      },
+      {
+       "id": "dish-italy-4",
+       "clue": "Risotto comes from ____.",
+       "fact": "Risotto comes from Italy.",
+       "sources": [
+        {
+         "title": "Risotto",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Risotto"
+        }
+       ]
+      },
+      {
+       "id": "dish-italy-5",
+       "clue": "Tiramisu comes from ____.",
+       "fact": "Tiramisu comes from Italy.",
+       "sources": [
+        {
+         "title": "Tiramisu",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Tiramisu"
+        }
+       ]
+      },
+      {
+       "id": "dish-italy-6",
+       "clue": "Pizza Margherita comes from Naples, in ____.",
+       "fact": "Pizza Margherita comes from Naples, in Italy.",
+       "sources": [
+        {
+         "title": "Pizza Margherita",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Pizza_Margherita"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-argentina",
+     "name": "Argentina",
+     "region": "South America",
+     "lat": -38.4,
+     "lng": -63.6,
+     "emoji": "🇦🇷",
+     "suspect": {
+      "name": "Sal Monella",
+      "alias": "The Leftover",
+      "emoji": "🥡"
+     },
+     "facts": [
+      {
+       "id": "dish-argentina-1",
+       "clue": "Chimichurri comes from ____.",
+       "fact": "Chimichurri comes from Argentina.",
+       "sources": [
+        {
+         "title": "Chimichurri",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Chimichurri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-turkey",
+     "name": "Turkey",
+     "region": "Asia",
+     "lat": 39,
+     "lng": 35.2,
+     "emoji": "🇹🇷",
+     "suspect": {
+      "name": "Basil Thyme",
+      "alias": "The Garnish",
+      "emoji": "🌿"
+     },
+     "facts": [
+      {
+       "id": "dish-turkey-1",
+       "clue": "Borek comes from ____ and spread across the former Ottoman Empire.",
+       "fact": "Borek comes from Turkey and spread across the former Ottoman Empire.",
+       "sources": [
+        {
+         "title": "Börek",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/B%C3%B6rek"
+        }
+       ]
+      },
+      {
+       "id": "dish-turkey-2",
+       "clue": "Turkish delight, called lokum, comes from ____.",
+       "fact": "Turkish delight, called lokum, comes from Turkey.",
+       "sources": [
+        {
+         "title": "Turkish delight",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Turkish_delight"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-morocco",
+     "name": "Morocco",
+     "region": "Africa",
+     "lat": 31.8,
+     "lng": -7.1,
+     "emoji": "🇲🇦",
+     "suspect": {
+      "name": "Ginger Snapp",
+      "alias": "The Pastry Thief",
+      "emoji": "🥐"
+     },
+     "facts": [
+      {
+       "id": "dish-morocco-1",
+       "clue": "Tagine comes from ____.",
+       "fact": "Tagine comes from Morocco.",
+       "sources": [
+        {
+         "title": "Tajine",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Tajine"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-peru",
+     "name": "Peru",
+     "region": "South America",
+     "lat": -9.2,
+     "lng": -75,
+     "emoji": "🇵🇪",
+     "suspect": {
+      "name": "Mack Aroni",
+      "alias": "The Noodle Bandit",
+      "emoji": "🍝"
+     },
+     "facts": [
+      {
+       "id": "dish-peru-1",
+       "clue": "Ceviche comes from ____, which considers it a national dish.",
+       "fact": "Ceviche comes from Peru, which considers it a national dish.",
+       "sources": [
+        {
+         "title": "Ceviche",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Ceviche"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-brazil",
+     "name": "Brazil",
+     "region": "South America",
+     "lat": -14.2,
+     "lng": -51.9,
+     "emoji": "🇧🇷",
+     "suspect": {
+      "name": "Penny Rolls",
+      "alias": "The Doughnapper",
+      "emoji": "🥯"
+     },
+     "facts": [
+      {
+       "id": "dish-brazil-1",
+       "clue": "Feijoada comes from ____.",
+       "fact": "Feijoada comes from Brazil.",
+       "sources": [
+        {
+         "title": "Feijoada",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Feijoada"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-germany",
+     "name": "Germany",
+     "region": "Europe",
+     "lat": 51.2,
+     "lng": 10.5,
+     "emoji": "🇩🇪",
+     "suspect": {
+      "name": "Curry Favour",
+      "alias": "The Spice Runner",
+      "emoji": "🌶️"
+     },
+     "facts": [
+      {
+       "id": "dish-germany-1",
+       "clue": "The döner kebab sandwich was popularized in Berlin, ____, by Turkish immigrants.",
+       "fact": "The döner kebab sandwich was popularized in Berlin, Germany, by Turkish immigrants.",
+       "sources": [
+        {
+         "title": "Doner kebab",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Doner_kebab"
+        }
+       ]
+      },
+      {
+       "id": "dish-germany-2",
+       "clue": "Black Forest cake comes from ____.",
+       "fact": "Black Forest cake comes from Germany.",
+       "sources": [
+        {
+         "title": "Black Forest gâteau",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Black_Forest_g%C3%A2teau"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-lebanon",
+     "name": "Lebanon",
+     "region": "Asia",
+     "lat": 33.9,
+     "lng": 35.9,
+     "emoji": "🇱🇧",
+     "suspect": {
+      "name": "Sal Monella",
+      "alias": "The Leftover",
+      "emoji": "🥡"
+     },
+     "facts": [
+      {
+       "id": "dish-lebanon-1",
+       "clue": "Tabbouleh comes from the mountains of ____ and Syria.",
+       "fact": "Tabbouleh comes from the mountains of Lebanon and Syria.",
+       "sources": [
+        {
+         "title": "Tabbouleh",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Tabbouleh"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-philippines",
+     "name": "Philippines",
+     "region": "Asia",
+     "lat": 12.9,
+     "lng": 121.8,
+     "emoji": "🇵🇭",
+     "suspect": {
+      "name": "Basil Thyme",
+      "alias": "The Garnish",
+      "emoji": "🌿"
+     },
+     "facts": [
+      {
+       "id": "dish-philippines-1",
+       "clue": "Lumpia comes from the ____. Its name comes from Hokkien Chinese, and it is found in Indonesia too.",
+       "fact": "Lumpia comes from the Philippines. Its name comes from Hokkien Chinese, and it is found in Indonesia too.",
+       "sources": [
+        {
+         "title": "Lumpia",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Lumpia"
+        }
+       ]
+      },
+      {
+       "id": "dish-philippines-2",
+       "clue": "Adobo comes from the ____. The name is Spanish, but the dish is Filipino.",
+       "fact": "Adobo comes from the Philippines. The name is Spanish, but the dish is Filipino.",
+       "sources": [
+        {
+         "title": "Philippine adobo",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Philippine_adobo"
+        }
+       ]
+      },
+      {
+       "id": "dish-philippines-3",
+       "clue": "Balut, a fertilized duck egg, comes from the ____.",
+       "fact": "Balut, a fertilized duck egg, comes from the Philippines.",
+       "sources": [
+        {
+         "title": "Balut (food)",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Balut_(food)"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-russia",
+     "name": "Russia",
+     "region": "Europe",
+     "lat": 61.5,
+     "lng": 105.3,
+     "emoji": "🇷🇺",
+     "suspect": {
+      "name": "Ginger Snapp",
+      "alias": "The Pastry Thief",
+      "emoji": "🥐"
+     },
+     "facts": [
+      {
+       "id": "dish-russia-1",
+       "clue": "Pelmeni come from ____, probably from the Ural region of Siberia.",
+       "fact": "Pelmeni come from Russia, probably from the Ural region of Siberia.",
+       "sources": [
+        {
+         "title": "Pelmeni",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Pelmeni"
+        }
+       ]
+      },
+      {
+       "id": "dish-russia-2",
+       "clue": "Beef stroganoff comes from ____.",
+       "fact": "Beef stroganoff comes from Russia.",
+       "sources": [
+        {
+         "title": "Beef Stroganoff",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Beef_Stroganoff"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-poland",
+     "name": "Poland",
+     "region": "Europe",
+     "lat": 51.9,
+     "lng": 19.1,
+     "emoji": "🇵🇱",
+     "suspect": {
+      "name": "Mack Aroni",
+      "alias": "The Noodle Bandit",
+      "emoji": "🍝"
+     },
+     "facts": [
+      {
+       "id": "dish-poland-1",
+       "clue": "Pierogi come from ____.",
+       "fact": "Pierogi come from Poland.",
+       "sources": [
+        {
+         "title": "Pierogi",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Pierogi"
+        }
+       ]
+      },
+      {
+       "id": "dish-poland-2",
+       "clue": "Bigos, a hunter's stew of cabbage and meat, comes from ____.",
+       "fact": "Bigos, a hunter's stew of cabbage and meat, comes from Poland.",
+       "sources": [
+        {
+         "title": "Bigos",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Bigos"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-greece",
+     "name": "Greece",
+     "region": "Europe",
+     "lat": 39.1,
+     "lng": 21.8,
+     "emoji": "🇬🇷",
+     "suspect": {
+      "name": "Penny Rolls",
+      "alias": "The Doughnapper",
+      "emoji": "🥯"
+     },
+     "facts": [
+      {
+       "id": "dish-greece-1",
+       "clue": "Moussaka comes from ____. It is found across the Balkans and the Middle East, but the layered version is from ____.",
+       "fact": "Moussaka comes from Greece. It is found across the Balkans and the Middle East, but the layered version is from Greece.",
+       "sources": [
+        {
+         "title": "Moussaka",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Moussaka"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-india",
+     "name": "India",
+     "region": "Asia",
+     "lat": 20.6,
+     "lng": 79,
+     "emoji": "🇮🇳",
+     "suspect": {
+      "name": "Curry Favour",
+      "alias": "The Spice Runner",
+      "emoji": "🌶️"
+     },
+     "facts": [
+      {
+       "id": "dish-india-1",
+       "clue": "Butter chicken comes from ____. It was created in Delhi.",
+       "fact": "Butter chicken comes from India. It was created in Delhi.",
+       "sources": [
+        {
+         "title": "Butter chicken",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Butter_chicken"
+        }
+       ]
+      },
+      {
+       "id": "dish-india-2",
+       "clue": "Masala dosa comes from ____.",
+       "fact": "Masala dosa comes from India.",
+       "sources": [
+        {
+         "title": "Masala dosa",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Masala_dosa"
+        }
+       ]
+      },
+      {
+       "id": "dish-india-3",
+       "clue": "Tandoori chicken comes from ____. It was popularized at the Moti Mahal restaurant in Delhi.",
+       "fact": "Tandoori chicken comes from India. It was popularized at the Moti Mahal restaurant in Delhi.",
+       "sources": [
+        {
+         "title": "Tandoori chicken",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Tandoori_chicken"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-denmark",
+     "name": "Denmark",
+     "region": "Europe",
+     "lat": 56.3,
+     "lng": 9.5,
+     "emoji": "🇩🇰",
+     "suspect": {
+      "name": "Sal Monella",
+      "alias": "The Leftover",
+      "emoji": "🥡"
+     },
+     "facts": [
+      {
+       "id": "dish-denmark-1",
+       "clue": "Smørrebrød, open-faced sandwiches, comes from ____.",
+       "fact": "Smørrebrød, open-faced sandwiches, comes from Denmark.",
+       "sources": [
+        {
+         "title": "Smørrebrød",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Sm%C3%B8rrebr%C3%B8d"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-sweden",
+     "name": "Sweden",
+     "region": "Europe",
+     "lat": 60.1,
+     "lng": 18.6,
+     "emoji": "🇸🇪",
+     "suspect": {
+      "name": "Basil Thyme",
+      "alias": "The Garnish",
+      "emoji": "🌿"
+     },
+     "facts": [
+      {
+       "id": "dish-sweden-1",
+       "clue": "Gravlax comes from ____. It is found across Scandinavia, and the name is Swedish.",
+       "fact": "Gravlax comes from Sweden. It is found across Scandinavia, and the name is Swedish.",
+       "sources": [
+        {
+         "title": "Gravlax",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Gravlax"
+        }
+       ]
+      },
+      {
+       "id": "dish-sweden-2",
+       "clue": "Surströmming, fermented herring famous for its smell, comes from ____.",
+       "fact": "Surströmming, fermented herring famous for its smell, comes from Sweden.",
+       "sources": [
+        {
+         "title": "Surströmming",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Surstr%C3%B6mming"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-georgia",
+     "name": "Georgia",
+     "region": "Asia",
+     "lat": 42.3,
+     "lng": 43.4,
+     "emoji": "🇬🇪",
+     "suspect": {
+      "name": "Ginger Snapp",
+      "alias": "The Pastry Thief",
+      "emoji": "🥐"
+     },
+     "facts": [
+      {
+       "id": "dish-georgia-1",
+       "clue": "Khachapuri, a cheese-filled bread, comes from ____, the country.",
+       "fact": "Khachapuri, a cheese-filled bread, comes from Georgia, the country.",
+       "sources": [
+        {
+         "title": "Khachapuri",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Khachapuri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-uzbekistan",
+     "name": "Uzbekistan",
+     "region": "Asia",
+     "lat": 41.4,
+     "lng": 64.6,
+     "emoji": "🇺🇿",
+     "suspect": {
+      "name": "Mack Aroni",
+      "alias": "The Noodle Bandit",
+      "emoji": "🍝"
+     },
+     "facts": [
+      {
+       "id": "dish-uzbekistan-1",
+       "clue": "Plov is the national dish of ____.",
+       "fact": "Plov is the national dish of Uzbekistan.",
+       "sources": [
+        {
+         "title": "Pilaf",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Pilaf"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-new-zealand",
+     "name": "New Zealand",
+     "region": "Oceania",
+     "lat": -40.9,
+     "lng": 174.9,
+     "emoji": "🇳🇿",
+     "suspect": {
+      "name": "Penny Rolls",
+      "alias": "The Doughnapper",
+      "emoji": "🥯"
+     },
+     "facts": [
+      {
+       "id": "dish-new-zealand-1",
+       "clue": "Hāngī comes from ____. It is a Māori method of cooking in a pit oven.",
+       "fact": "Hāngī comes from New Zealand. It is a Māori method of cooking in a pit oven.",
+       "sources": [
+        {
+         "title": "Hāngī",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/H%C4%81ng%C4%AB"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-china",
+     "name": "China",
+     "region": "Asia",
+     "lat": 35.9,
+     "lng": 104.2,
+     "emoji": "🇨🇳",
+     "suspect": {
+      "name": "Curry Favour",
+      "alias": "The Spice Runner",
+      "emoji": "🌶️"
+     },
+     "facts": [
+      {
+       "id": "dish-china-1",
+       "clue": "Peking duck comes from ____.",
+       "fact": "Peking duck comes from China.",
+       "sources": [
+        {
+         "title": "Peking duck",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Peking_duck"
+        }
+       ]
+      },
+      {
+       "id": "dish-china-2",
+       "clue": "Dim sum comes from ____, from Cantonese teahouses.",
+       "fact": "Dim sum comes from China, from Cantonese teahouses.",
+       "sources": [
+        {
+         "title": "Dim sum",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Dim_sum"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-jamaica",
+     "name": "Jamaica",
+     "region": "North America",
+     "lat": 18.1,
+     "lng": -77.3,
+     "emoji": "🇯🇲",
+     "suspect": {
+      "name": "Sal Monella",
+      "alias": "The Leftover",
+      "emoji": "🥡"
+     },
+     "facts": [
+      {
+       "id": "dish-jamaica-1",
+       "clue": "Jerk chicken comes from ____.",
+       "fact": "Jerk chicken comes from Jamaica.",
+       "sources": [
+        {
+         "title": "Jerk (cooking)",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Jerk_(cooking)"
+        }
+       ]
+      },
+      {
+       "id": "dish-jamaica-2",
+       "clue": "Ackee and saltfish comes from ____.",
+       "fact": "Ackee and saltfish comes from Jamaica.",
+       "sources": [
+        {
+         "title": "Ackee and saltfish",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Ackee_and_saltfish"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-indonesia",
+     "name": "Indonesia",
+     "region": "Asia",
+     "lat": -0.8,
+     "lng": 113.9,
+     "emoji": "🇮🇩",
+     "suspect": {
+      "name": "Basil Thyme",
+      "alias": "The Garnish",
+      "emoji": "🌿"
+     },
+     "facts": [
+      {
+       "id": "dish-indonesia-1",
+       "clue": "Rendang comes from ____, from the Minangkabau people of Sumatra.",
+       "fact": "Rendang comes from Indonesia, from the Minangkabau people of Sumatra.",
+       "sources": [
+        {
+         "title": "Rendang",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Rendang"
+        }
+       ]
+      },
+      {
+       "id": "dish-indonesia-2",
+       "clue": "Satay comes from Java, in ____.",
+       "fact": "Satay comes from Java, in Indonesia.",
+       "sources": [
+        {
+         "title": "Satay",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Satay"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-south-africa",
+     "name": "South Africa",
+     "region": "Africa",
+     "lat": -30.6,
+     "lng": 22.9,
+     "emoji": "🇿🇦",
+     "suspect": {
+      "name": "Ginger Snapp",
+      "alias": "The Pastry Thief",
+      "emoji": "🥐"
+     },
+     "facts": [
+      {
+       "id": "dish-south-africa-1",
+       "clue": "Bobotie comes from ____.",
+       "fact": "Bobotie comes from South Africa.",
+       "sources": [
+        {
+         "title": "Bobotie",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Bobotie"
+        }
+       ]
+      },
+      {
+       "id": "dish-south-africa-2",
+       "clue": "Biltong comes from ____.",
+       "fact": "Biltong comes from South Africa.",
+       "sources": [
+        {
+         "title": "Biltong",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Biltong"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-el-salvador",
+     "name": "El Salvador",
+     "region": "North America",
+     "lat": 13.8,
+     "lng": -88.9,
+     "emoji": "🇸🇻",
+     "suspect": {
+      "name": "Mack Aroni",
+      "alias": "The Noodle Bandit",
+      "emoji": "🍝"
+     },
+     "facts": [
+      {
+       "id": "dish-el-salvador-1",
+       "clue": "Pupusas come from ____.",
+       "fact": "Pupusas come from El Salvador.",
+       "sources": [
+        {
+         "title": "Pupusa",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Pupusa"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-ethiopia",
+     "name": "Ethiopia",
+     "region": "Africa",
+     "lat": 9.1,
+     "lng": 40.5,
+     "emoji": "🇪🇹",
+     "suspect": {
+      "name": "Penny Rolls",
+      "alias": "The Doughnapper",
+      "emoji": "🥯"
+     },
+     "facts": [
+      {
+       "id": "dish-ethiopia-1",
+       "clue": "Injera, a spongy flatbread made from teff, comes from ____.",
+       "fact": "Injera, a spongy flatbread made from teff, comes from Ethiopia.",
+       "sources": [
+        {
+         "title": "Injera",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Injera"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dish-australia",
+     "name": "Australia",
+     "region": "Oceania",
+     "lat": -25.3,
+     "lng": 133.8,
+     "emoji": "🇦🇺",
+     "suspect": {
+      "name": "Curry Favour",
+      "alias": "The Spice Runner",
+      "emoji": "🌶️"
+     },
+     "facts": [
+      {
+       "id": "dish-australia-1",
+       "clue": "Vegemite comes from ____.",
+       "fact": "Vegemite comes from Australia.",
+       "sources": [
+        {
+         "title": "Vegemite",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Vegemite"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "world-almanac-carmen",
+   "title": "Where in the World Almanac is Carmen Sandiego?",
+   "places": [
+    {
+     "id": "world-france",
+     "name": "France",
+     "region": "Europe",
+     "lat": 46.6,
+     "lng": 2.2,
+     "emoji": "🇫🇷",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "world-france-1",
+       "clue": "____ has the most time zones of any country, 12, thanks to its territories around the world.",
+       "fact": "France has the most time zones of any country, 12, thanks to its territories around the world.",
+       "sources": [
+        {
+         "title": "Time in France",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Time_in_France"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "world-canada",
+     "name": "Canada",
+     "region": "North America",
+     "lat": 56.1,
+     "lng": -106.3,
+     "emoji": "🇨🇦",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "world-canada-1",
+       "clue": "____ has the most lakes of any country, more than the rest of the world combined by some counts.",
+       "fact": "Canada has the most lakes of any country, more than the rest of the world combined by some counts.",
+       "sources": [
+        {
+         "title": "Lakes of Canada",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Lakes_of_Canada"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "world-sweden",
+     "name": "Sweden",
+     "region": "Europe",
+     "lat": 60.1,
+     "lng": 18.6,
+     "emoji": "🇸🇪",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "world-sweden-1",
+       "clue": "____ is made up of more islands than any other country, about 267,000, though most are tiny.",
+       "fact": "Sweden is made up of more islands than any other country, about 267,000, though most are tiny.",
+       "sources": [
+        {
+         "title": "Sweden",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Sweden"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "world-indonesia",
+     "name": "Indonesia",
+     "region": "Asia",
+     "lat": -0.8,
+     "lng": 113.9,
+     "emoji": "🇮🇩",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "world-indonesia-1",
+       "clue": "____ has about 17,000 islands.",
+       "fact": "Indonesia has about 17,000 islands.",
+       "sources": [
+        {
+         "title": "Indonesia",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Indonesia"
+        }
+       ]
+      },
+      {
+       "id": "world-indonesia-2",
+       "clue": "____ has had more volcanoes erupt in recorded history than any other country. It sits on the Pacific Ring of Fire.",
+       "fact": "Indonesia has had more volcanoes erupt in recorded history than any other country. It sits on the Pacific Ring of Fire.",
+       "sources": [
+        {
+         "title": "List of volcanoes in Indonesia",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/List_of_volcanoes_in_Indonesia"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "world-uzbekistan",
+     "name": "Uzbekistan",
+     "region": "Asia",
+     "lat": 41.4,
+     "lng": 64.6,
+     "emoji": "🇺🇿",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "world-uzbekistan-1",
+       "clue": "____ is doubly landlocked, like Liechtenstein: every neighbor is also landlocked.",
+       "fact": "Uzbekistan is doubly landlocked, like Liechtenstein: every neighbor is also landlocked.",
+       "sources": [
+        {
+         "title": "Landlocked country",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Landlocked_country"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "world-saudi-arabia",
+     "name": "Saudi Arabia",
+     "region": "Asia",
+     "lat": 23.9,
+     "lng": 45.1,
+     "emoji": "🇸🇦",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "world-saudi-arabia-1",
+       "clue": "____ is the largest country with no permanent rivers.",
+       "fact": "Saudi Arabia is the largest country with no permanent rivers.",
+       "sources": [
+        {
+         "title": "Saudi Arabia",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Saudi_Arabia"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "world-italy",
+     "name": "Italy",
+     "region": "Europe",
+     "lat": 41.9,
+     "lng": 12.6,
+     "emoji": "🇮🇹",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "world-italy-1",
+       "clue": "____ has the most UNESCO World Heritage Sites, narrowly ahead of China.",
+       "fact": "Italy has the most UNESCO World Heritage Sites, narrowly ahead of China.",
+       "sources": [
+        {
+         "title": "World Heritage Site",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/World_Heritage_Site"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "world-south-sudan",
+     "name": "South Sudan",
+     "region": "Africa",
+     "lat": 7.9,
+     "lng": 30,
+     "emoji": "🇸🇸",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "world-south-sudan-1",
+       "clue": "____, independent since 2011, is the youngest country in the world.",
+       "fact": "South Sudan, independent since 2011, is the youngest country in the world.",
+       "sources": [
+        {
+         "title": "South Sudan",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/South_Sudan"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "world-brazil",
+     "name": "Brazil",
+     "region": "South America",
+     "lat": -14.2,
+     "lng": -51.9,
+     "emoji": "🇧🇷",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "world-brazil-1",
+       "clue": "____ is the largest country in South America by area.",
+       "fact": "Brazil is the largest country in South America by area.",
+       "sources": [
+        {
+         "title": "Brazil",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Brazil"
+        }
+       ]
+      },
+      {
+       "id": "world-brazil-2",
+       "clue": "Most of the Pantanal is in ____. It extends into Bolivia and Paraguay.",
+       "fact": "Most of the Pantanal is in Brazil. It extends into Bolivia and Paraguay.",
+       "sources": [
+        {
+         "title": "Pantanal",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Pantanal"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "world-chile",
+     "name": "Chile",
+     "region": "South America",
+     "lat": -35.7,
+     "lng": -71.5,
+     "emoji": "🇨🇱",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "world-chile-1",
+       "clue": "____ holds most of the Atacama Desert.",
+       "fact": "Chile holds most of the Atacama Desert.",
+       "sources": [
+        {
+         "title": "Atacama Desert",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Atacama_Desert"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "world-united-states",
+     "name": "United States",
+     "region": "North America",
+     "lat": 37.1,
+     "lng": -95.7,
+     "emoji": "🇺🇸",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "world-united-states-1",
+       "clue": "The lowest point in the ____ is Badwater Basin in Death Valley, 86 m below sea level.",
+       "fact": "The lowest point in the United States is Badwater Basin in Death Valley, 86 m below sea level.",
+       "sources": [
+        {
+         "title": "Death Valley",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Death_Valley"
+        }
+       ]
+      },
+      {
+       "id": "world-united-states-2",
+       "clue": "The ____ has the most tornadoes of any country, over 1,000 a year.",
+       "fact": "The United States has the most tornadoes of any country, over 1,000 a year.",
+       "sources": [
+        {
+         "title": "Tornado",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Tornado"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "world-australia",
+     "name": "Australia",
+     "region": "Oceania",
+     "lat": -25.3,
+     "lng": 133.8,
+     "emoji": "🇦🇺",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "world-australia-1",
+       "clue": "____ is the driest inhabited continent. Only Antarctica is drier.",
+       "fact": "Australia is the driest inhabited continent. Only Antarctica is drier.",
+       "sources": [
+        {
+         "title": "Australia",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Australia"
+        }
+       ]
+      },
+      {
+       "id": "world-australia-2",
+       "clue": "____ is the flattest continent.",
+       "fact": "Australia is the flattest continent.",
+       "sources": [
+        {
+         "title": "Geography of Australia",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Geography_of_Australia"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "world-antarctica",
+     "name": "Antarctica",
+     "region": "South Pole",
+     "lat": -82.9,
+     "lng": 135,
+     "emoji": "🇦🇶",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "world-antarctica-1",
+       "clue": "____ holds the largest ice sheet on Earth.",
+       "fact": "Antarctica holds the largest ice sheet on Earth.",
+       "sources": [
+        {
+         "title": "Antarctic ice sheet",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Antarctic_ice_sheet"
+        }
+       ]
+      },
+      {
+       "id": "world-antarctica-2",
+       "clue": "____ is the only continent without native reptiles or amphibians.",
+       "fact": "Antarctica is the only continent without native reptiles or amphibians.",
+       "sources": [
+        {
+         "title": "Antarctica",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Antarctica"
+        }
+       ]
+      },
+      {
+       "id": "world-antarctica-3",
+       "clue": "____ is the windiest continent.",
+       "fact": "Antarctica is the windiest continent.",
+       "sources": [
+        {
+         "title": "Antarctica",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Antarctica"
+        }
+       ]
+      },
+      {
+       "id": "world-antarctica-4",
+       "clue": "____ is the coldest continent.",
+       "fact": "Antarctica is the coldest continent.",
+       "sources": [
+        {
+         "title": "Antarctica",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Antarctica"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "earth-lands-carmen",
+   "title": "Where on Earth's Extreme Lands is Carmen Sandiego?",
+   "places": [
+    {
+     "id": "earth-denali",
+     "name": "Denali",
+     "region": "Alaska, US",
+     "lat": 63.07,
+     "lng": -151.01,
+     "emoji": "⛰️",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "earth-denali-1",
+       "clue": "____, in Alaska, is the highest mountain in North America, at 6,190 m.",
+       "fact": "Denali, in Alaska, is the highest mountain in North America, at 6,190 m.",
+       "sources": [
+        {
+         "title": "Denali",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Denali"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-aconcagua",
+     "name": "Aconcagua",
+     "region": "Argentina",
+     "lat": -32.65,
+     "lng": -70.01,
+     "emoji": "⛰️",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "earth-aconcagua-1",
+       "clue": "____, in Argentina, is the highest mountain in South America, at about 6,960 m.",
+       "fact": "Aconcagua, in Argentina, is the highest mountain in South America, at about 6,960 m.",
+       "sources": [
+        {
+         "title": "Aconcagua",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Aconcagua"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-mount-elbrus",
+     "name": "Mount Elbrus",
+     "region": "Russia",
+     "lat": 43.35,
+     "lng": 42.44,
+     "emoji": "⛰️",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "earth-mount-elbrus-1",
+       "clue": "____, in the Caucasus of Russia, is the highest mountain in Europe by most counts, at 5,642 m. Mont Blanc is the highest in the Alps.",
+       "fact": "Mount Elbrus, in the Caucasus of Russia, is the highest mountain in Europe by most counts, at 5,642 m. Mont Blanc is the highest in the Alps.",
+       "sources": [
+        {
+         "title": "Mount Elbrus",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Mount_Elbrus"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-mount-vinson",
+     "name": "Mount Vinson",
+     "region": "Antarctica",
+     "lat": -78.53,
+     "lng": -85.62,
+     "emoji": "⛰️",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "earth-mount-vinson-1",
+       "clue": "____ is the highest mountain in Antarctica, about 4,890 m.",
+       "fact": "Mount Vinson is the highest mountain in Antarctica, about 4,890 m.",
+       "sources": [
+        {
+         "title": "Vinson Massif",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Vinson_Massif"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-kilimanjaro",
+     "name": "Kilimanjaro",
+     "region": "Tanzania",
+     "lat": -3.07,
+     "lng": 37.35,
+     "emoji": "⛰️",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "earth-kilimanjaro-1",
+       "clue": "____, in Tanzania, is the highest mountain in Africa, at 5,895 m.",
+       "fact": "Kilimanjaro, in Tanzania, is the highest mountain in Africa, at 5,895 m.",
+       "sources": [
+        {
+         "title": "Mount Kilimanjaro",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Mount_Kilimanjaro"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-puncak-jaya",
+     "name": "Puncak Jaya",
+     "region": "Indonesia",
+     "lat": -4.08,
+     "lng": 137.16,
+     "emoji": "⛰️",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "earth-puncak-jaya-1",
+       "clue": "____, in Indonesian New Guinea, is the highest mountain in Oceania, about 4,880 m.",
+       "fact": "Puncak Jaya, in Indonesian New Guinea, is the highest mountain in Oceania, about 4,880 m.",
+       "sources": [
+        {
+         "title": "Puncak Jaya",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Puncak_Jaya"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-mount-kosciuszko",
+     "name": "Mount Kosciuszko",
+     "region": "Australia",
+     "lat": -36.46,
+     "lng": 148.26,
+     "emoji": "⛰️",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "earth-mount-kosciuszko-1",
+       "clue": "____ is the highest point on mainland Australia, at 2,228 m.",
+       "fact": "Mount Kosciuszko is the highest point on mainland Australia, at 2,228 m.",
+       "sources": [
+        {
+         "title": "Mount Kosciuszko",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Mount_Kosciuszko"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-mount-stanley",
+     "name": "Mount Stanley",
+     "region": "Uganda and DR Congo",
+     "lat": 0.39,
+     "lng": 29.87,
+     "emoji": "⛰️",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "earth-mount-stanley-1",
+       "clue": "____ is the highest point in the Rwenzori Mountains and the third-highest peak in Africa.",
+       "fact": "Mount Stanley is the highest point in the Rwenzori Mountains and the third-highest peak in Africa.",
+       "sources": [
+        {
+         "title": "Mount Stanley",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Mount_Stanley"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-gangkhar-puensum",
+     "name": "Gangkhar Puensum",
+     "region": "Bhutan",
+     "lat": 28.05,
+     "lng": 90.46,
+     "emoji": "🏔️",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "earth-gangkhar-puensum-1",
+       "clue": "____, in the Himalayas of Bhutan, is the highest mountain no one has climbed.",
+       "fact": "Gangkhar Puensum, in the Himalayas of Bhutan, is the highest mountain no one has climbed.",
+       "sources": [
+        {
+         "title": "Gangkhar Puensum",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Gangkhar_Puensum"
+        }
+       ]
+      },
+      {
+       "id": "earth-gangkhar-puensum-2",
+       "clue": "Bhutan banned climbing its highest peaks, including ____, in 1994, out of respect for local beliefs. Later rules banned all peaks over 6,000 m.",
+       "fact": "Bhutan banned climbing its highest peaks, including Gangkhar Puensum, in 1994, out of respect for local beliefs. Later rules banned all peaks over 6,000 m.",
+       "sources": [
+        {
+         "title": "Gangkhar Puensum",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Gangkhar_Puensum"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-ojos-del-salado",
+     "name": "Ojos del Salado",
+     "region": "Chile and Argentina",
+     "lat": -27.11,
+     "lng": -68.54,
+     "emoji": "🌋",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "earth-ojos-del-salado-1",
+       "clue": "____, on the Chile–Argentina border, is the highest active volcano, at about 6,893 m.",
+       "fact": "Ojos del Salado, on the Chile–Argentina border, is the highest active volcano, at about 6,893 m.",
+       "sources": [
+        {
+         "title": "Ojos del Salado",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Ojos_del_Salado"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-mauna-loa",
+     "name": "Mauna Loa",
+     "region": "Hawaii, US",
+     "lat": 19.48,
+     "lng": -155.6,
+     "emoji": "🌋",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "earth-mauna-loa-1",
+       "clue": "____, in Hawaii, is the largest active volcano on Earth.",
+       "fact": "Mauna Loa, in Hawaii, is the largest active volcano on Earth.",
+       "sources": [
+        {
+         "title": "Mauna Loa",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Mauna_Loa"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-andes",
+     "name": "Andes",
+     "region": "South America",
+     "lat": -32,
+     "lng": -70,
+     "emoji": "🏔️",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "earth-andes-1",
+       "clue": "The ____ are the longest mountain range on land, about 7,000 km.",
+       "fact": "The Andes are the longest mountain range on land, about 7,000 km.",
+       "sources": [
+        {
+         "title": "Andes",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Andes"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-tibetan-plateau",
+     "name": "Tibetan Plateau",
+     "region": "China",
+     "lat": 33,
+     "lng": 88,
+     "emoji": "🏔️",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "earth-tibetan-plateau-1",
+       "clue": "The ____ is the highest plateau on Earth, averaging over 4,500 m.",
+       "fact": "The Tibetan Plateau is the highest plateau on Earth, averaging over 4,500 m.",
+       "sources": [
+        {
+         "title": "Tibetan Plateau",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Tibetan_Plateau"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-yarlung-tsangpo-grand-canyon",
+     "name": "Yarlung Tsangpo Grand Canyon",
+     "region": "Tibet, China",
+     "lat": 29.8,
+     "lng": 95,
+     "emoji": "🏞️",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "earth-yarlung-tsangpo-grand-canyon-1",
+       "clue": "The ____, in Tibet, is the deepest canyon on Earth, about 6 km deep in places, three times the depth of the Grand Canyon.",
+       "fact": "The Yarlung Tsangpo Grand Canyon, in Tibet, is the deepest canyon on Earth, about 6 km deep in places, three times the depth of the Grand Canyon.",
+       "sources": [
+        {
+         "title": "Yarlung Tsangpo Grand Canyon",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Yarlung_Tsangpo_Grand_Canyon"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-mammoth-cave",
+     "name": "Mammoth Cave",
+     "region": "Kentucky, US",
+     "lat": 37.19,
+     "lng": -86.1,
+     "emoji": "🕳️",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "earth-mammoth-cave-1",
+       "clue": "____, in Kentucky, is the longest known cave system, with over 680 km mapped and still growing.",
+       "fact": "Mammoth Cave, in Kentucky, is the longest known cave system, with over 680 km mapped and still growing.",
+       "sources": [
+        {
+         "title": "Mammoth Cave National Park",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Mammoth_Cave_National_Park"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-hang-son-oong",
+     "name": "Hang Sơn Đoòng",
+     "region": "Vietnam",
+     "lat": 17.46,
+     "lng": 106.29,
+     "emoji": "🕳️",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "earth-hang-son-oong-1",
+       "clue": "____, in Vietnam, has the largest known cave passage, big enough to hold a city block.",
+       "fact": "Hang Sơn Đoòng, in Vietnam, has the largest known cave passage, big enough to hold a city block.",
+       "sources": [
+        {
+         "title": "Hang Sơn Đoòng",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Hang_S%C6%A1n_%C4%90o%C3%B2ng"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-veryovkina-cave",
+     "name": "Veryovkina Cave",
+     "region": "Georgia",
+     "lat": 43.41,
+     "lng": 40.36,
+     "emoji": "🕳️",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "earth-veryovkina-cave-1",
+       "clue": "____, in Georgia, is the deepest known cave, about 2,212 m deep.",
+       "fact": "Veryovkina Cave, in Georgia, is the deepest known cave, about 2,212 m deep.",
+       "sources": [
+        {
+         "title": "Veryovkina Cave",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Veryovkina_Cave"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-salar-de-uyuni",
+     "name": "Salar de Uyuni",
+     "region": "Bolivia",
+     "lat": -20.13,
+     "lng": -67.49,
+     "emoji": "🧂",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "earth-salar-de-uyuni-1",
+       "clue": "____, in Bolivia, is the largest salt flat, about 10,000 km². In the wet season it becomes a giant mirror.",
+       "fact": "Salar de Uyuni, in Bolivia, is the largest salt flat, about 10,000 km². In the wet season it becomes a giant mirror.",
+       "sources": [
+        {
+         "title": "Salar de Uyuni",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Salar_de_Uyuni"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-atacama",
+     "name": "Atacama",
+     "region": "Chile",
+     "lat": -24.5,
+     "lng": -69.25,
+     "emoji": "🏜️",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "earth-atacama-1",
+       "clue": "The ____, in Chile, is the driest non-polar desert on Earth. Some weather stations there have never recorded rain.",
+       "fact": "The Atacama, in Chile, is the driest non-polar desert on Earth. Some weather stations there have never recorded rain.",
+       "sources": [
+        {
+         "title": "Atacama Desert",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Atacama_Desert"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-yellowstone",
+     "name": "Yellowstone",
+     "region": "Wyoming, US",
+     "lat": 44.43,
+     "lng": -110.59,
+     "emoji": "🏞️",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "earth-yellowstone-1",
+       "clue": "____ became the first national park in the world in 1872.",
+       "fact": "Yellowstone became the first national park in the world in 1872.",
+       "sources": [
+        {
+         "title": "Yellowstone National Park",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Yellowstone_National_Park"
+        }
+       ]
+      },
+      {
+       "id": "earth-yellowstone-2",
+       "clue": "Most of ____ is in Wyoming. Small parts are in Montana and Idaho.",
+       "fact": "Most of Yellowstone is in Wyoming. Small parts are in Montana and Idaho.",
+       "sources": [
+        {
+         "title": "Yellowstone National Park",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Yellowstone_National_Park"
+        }
+       ]
+      },
+      {
+       "id": "earth-yellowstone-3",
+       "clue": "Old Faithful, the geyser that erupts so regularly it was named for it, is in ____.",
+       "fact": "Old Faithful, the geyser that erupts so regularly it was named for it, is in Yellowstone.",
+       "sources": [
+        {
+         "title": "Old Faithful",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Old_Faithful"
+        }
+       ]
+      },
+      {
+       "id": "earth-yellowstone-4",
+       "clue": "Steamboat Geyser, in ____, is the tallest active geyser. It can shoot over 90 m.",
+       "fact": "Steamboat Geyser, in Yellowstone, is the tallest active geyser. It can shoot over 90 m.",
+       "sources": [
+        {
+         "title": "Steamboat Geyser",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Steamboat_Geyser"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-northeast-greenland-national-park",
+     "name": "Northeast Greenland National Park",
+     "region": "Greenland",
+     "lat": 76,
+     "lng": -30,
+     "emoji": "🏞️",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "earth-northeast-greenland-national-park-1",
+       "clue": "____ is the largest national park, bigger than most countries.",
+       "fact": "Northeast Greenland National Park is the largest national park, bigger than most countries.",
+       "sources": [
+        {
+         "title": "Northeast Greenland National Park",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Northeast_Greenland_National_Park"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-general-sherman",
+     "name": "General Sherman",
+     "region": "California, US",
+     "lat": 36.58,
+     "lng": -118.75,
+     "emoji": "🌲",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "earth-general-sherman-1",
+       "clue": "____, a giant sequoia in California, is the largest tree by volume.",
+       "fact": "General Sherman, a giant sequoia in California, is the largest tree by volume.",
+       "sources": [
+        {
+         "title": "General Sherman (tree)",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/General_Sherman_(tree)"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-blue-mountains-of-oregon",
+     "name": "Blue Mountains of Oregon",
+     "region": "Oregon, US",
+     "lat": 44.48,
+     "lng": -118.5,
+     "emoji": "🍄",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "earth-blue-mountains-of-oregon-1",
+       "clue": "A honey fungus in the ____ spreads under about 9 to 10 km² and is often called the largest living thing.",
+       "fact": "A honey fungus in the Blue Mountains of Oregon spreads under about 9 to 10 km² and is often called the largest living thing.",
+       "sources": [
+        {
+         "title": "Armillaria ostoyae",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Armillaria_ostoyae"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-la-rinconada",
+     "name": "La Rinconada",
+     "region": "Peru",
+     "lat": -14.63,
+     "lng": -69.45,
+     "emoji": "🏘️",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "earth-la-rinconada-1",
+       "clue": "____, in Peru, is the highest permanent town in the world, a gold-mining town about 5,100 m up.",
+       "fact": "La Rinconada, in Peru, is the highest permanent town in the world, a gold-mining town about 5,100 m up.",
+       "sources": [
+        {
+         "title": "La Rinconada, Peru",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/La_Rinconada,_Peru"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-ushuaia",
+     "name": "Ushuaia",
+     "region": "Argentina",
+     "lat": -54.8,
+     "lng": -68.3,
+     "emoji": "🏘️",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "earth-ushuaia-1",
+       "clue": "____, in Argentina, is often called the southernmost city in the world. Tiny Puerto Williams in Chile is farther south, but much smaller.",
+       "fact": "Ushuaia, in Argentina, is often called the southernmost city in the world. Tiny Puerto Williams in Chile is farther south, but much smaller.",
+       "sources": [
+        {
+         "title": "Ushuaia",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Ushuaia"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "earth-waters-carmen",
+   "title": "Where in Earth's Extreme Waters is Carmen Sandiego?",
+   "places": [
+    {
+     "id": "earth-pacific-ocean",
+     "name": "Pacific Ocean",
+     "region": "Ocean",
+     "lat": 0,
+     "lng": -160,
+     "emoji": "🌊",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "earth-pacific-ocean-1",
+       "clue": "The ____ is the deepest ocean, home of the Mariana Trench.",
+       "fact": "The Pacific is the deepest ocean, home of the Mariana Trench.",
+       "sources": [
+        {
+         "title": "Pacific Ocean",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Pacific_Ocean"
+        }
+       ]
+      },
+      {
+       "id": "earth-pacific-ocean-2",
+       "clue": "The Challenger Deep, in the ____'s Mariana Trench, is the deepest known point in the ocean, nearly 11 km down.",
+       "fact": "The Challenger Deep, in the Pacific's Mariana Trench, is the deepest known point in the ocean, nearly 11 km down.",
+       "sources": [
+        {
+         "title": "Challenger Deep",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Challenger_Deep"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-atlantic-ocean",
+     "name": "Atlantic Ocean",
+     "region": "Ocean",
+     "lat": 0,
+     "lng": -30,
+     "emoji": "🌊",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "earth-atlantic-ocean-1",
+       "clue": "The ____ is the saltiest ocean.",
+       "fact": "The Atlantic is the saltiest ocean.",
+       "sources": [
+        {
+         "title": "Atlantic Ocean",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Atlantic_Ocean"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-arctic-ocean",
+     "name": "Arctic Ocean",
+     "region": "Ocean",
+     "lat": 90,
+     "lng": 0,
+     "emoji": "🌊",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "earth-arctic-ocean-1",
+       "clue": "The ____ is the smallest ocean.",
+       "fact": "The Arctic Ocean is the smallest ocean.",
+       "sources": [
+        {
+         "title": "Arctic Ocean",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Arctic_Ocean"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-southern-ocean",
+     "name": "Southern Ocean",
+     "region": "Ocean",
+     "lat": -60,
+     "lng": 0,
+     "emoji": "🌊",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "earth-southern-ocean-1",
+       "clue": "The ____, around Antarctica, is the most recently recognized ocean. National Geographic added it to its maps in 2021.",
+       "fact": "The Southern Ocean, around Antarctica, is the most recently recognized ocean. National Geographic added it to its maps in 2021.",
+       "sources": [
+        {
+         "title": "Southern Ocean",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Southern_Ocean"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-point-nemo",
+     "name": "Point Nemo",
+     "region": "South Pacific",
+     "lat": -48.88,
+     "lng": -123.39,
+     "emoji": "📍",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "earth-point-nemo-1",
+       "clue": "____ is the spot in the ocean farthest from any land, about 2,700 km away. Space stations are retired near it.",
+       "fact": "Point Nemo is the spot in the ocean farthest from any land, about 2,700 km away. Space stations are retired near it.",
+       "sources": [
+        {
+         "title": "Pole of inaccessibility",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Pole_of_inaccessibility"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-red-sea",
+     "name": "Red Sea",
+     "region": "Africa and Asia",
+     "lat": 20,
+     "lng": 38,
+     "emoji": "🌊",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "earth-red-sea-1",
+       "clue": "The ____ is the saltiest sea connected to the ocean, thanks to heat, evaporation and little river inflow.",
+       "fact": "The Red Sea is the saltiest sea connected to the ocean, thanks to heat, evaporation and little river inflow.",
+       "sources": [
+        {
+         "title": "Red Sea",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Red_Sea"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-sargasso-sea",
+     "name": "Sargasso Sea",
+     "region": "North Atlantic",
+     "lat": 28,
+     "lng": -66,
+     "emoji": "🌊",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "earth-sargasso-sea-1",
+       "clue": "The ____, in the Atlantic, has no coastline. It is bounded only by ocean currents.",
+       "fact": "The Sargasso Sea, in the Atlantic, has no coastline. It is bounded only by ocean currents.",
+       "sources": [
+        {
+         "title": "Sargasso Sea",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Sargasso_Sea"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-bay-of-bengal",
+     "name": "Bay of Bengal",
+     "region": "Indian Ocean",
+     "lat": 15,
+     "lng": 88,
+     "emoji": "🌊",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "earth-bay-of-bengal-1",
+       "clue": "The ____ is the largest bay in the world.",
+       "fact": "The Bay of Bengal is the largest bay in the world.",
+       "sources": [
+        {
+         "title": "Bay of Bengal",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Bay_of_Bengal"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-bay-of-fundy",
+     "name": "Bay of Fundy",
+     "region": "Canada",
+     "lat": 45,
+     "lng": -65.8,
+     "emoji": "🌊",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "earth-bay-of-fundy-1",
+       "clue": "The ____, in Canada, has the highest tides in the world, rising about 16 m.",
+       "fact": "The Bay of Fundy, in Canada, has the highest tides in the world, rising about 16 m.",
+       "sources": [
+        {
+         "title": "Bay of Fundy",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Bay_of_Fundy"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-scoresby-sund",
+     "name": "Scoresby Sund",
+     "region": "Greenland",
+     "lat": 70.4,
+     "lng": -23,
+     "emoji": "🧊",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "earth-scoresby-sund-1",
+       "clue": "____, in Greenland, is the longest fjord in the world, about 350 km long.",
+       "fact": "Scoresby Sund, in Greenland, is the longest fjord in the world, about 350 km long.",
+       "sources": [
+        {
+         "title": "Scoresby Sound",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Scoresby_Sound"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-dead-sea",
+     "name": "Dead Sea",
+     "region": "Israel, Jordan and the West Bank",
+     "lat": 31.5,
+     "lng": 35.5,
+     "emoji": "🧂",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "earth-dead-sea-1",
+       "clue": "The shores of the ____ are the lowest dry land on Earth, about 430 m below sea level.",
+       "fact": "The shores of the Dead Sea are the lowest dry land on Earth, about 430 m below sea level.",
+       "sources": [
+        {
+         "title": "Dead Sea",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Dead_Sea"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-don-juan-pond",
+     "name": "Don Juan Pond",
+     "region": "Antarctica",
+     "lat": -77.56,
+     "lng": 161.19,
+     "emoji": "🧂",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "earth-don-juan-pond-1",
+       "clue": "____, in Antarctica, is the saltiest natural body of water known, so salty it rarely freezes even at −50 °C.",
+       "fact": "Don Juan Pond, in Antarctica, is the saltiest natural body of water known, so salty it rarely freezes even at −50 °C.",
+       "sources": [
+        {
+         "title": "Don Juan Pond",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Don_Juan_Pond"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-lake-baikal",
+     "name": "Lake Baikal",
+     "region": "Russia",
+     "lat": 53.5,
+     "lng": 108,
+     "emoji": "💧",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "earth-lake-baikal-1",
+       "clue": "____ is the largest lake by volume of fresh water, holding about a fifth of the world's unfrozen surface fresh water.",
+       "fact": "Lake Baikal is the largest lake by volume of fresh water, holding about a fifth of the world's unfrozen surface fresh water.",
+       "sources": [
+        {
+         "title": "Lake Baikal",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Lake_Baikal"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-lake-victoria",
+     "name": "Lake Victoria",
+     "region": "East Africa",
+     "lat": -1,
+     "lng": 33,
+     "emoji": "💧",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "earth-lake-victoria-1",
+       "clue": "____ is the largest lake in Africa.",
+       "fact": "Lake Victoria is the largest lake in Africa.",
+       "sources": [
+        {
+         "title": "Lake Victoria",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Lake_Victoria"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-lake-ladoga",
+     "name": "Lake Ladoga",
+     "region": "Russia",
+     "lat": 61,
+     "lng": 31.5,
+     "emoji": "💧",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "earth-lake-ladoga-1",
+       "clue": "____, in Russia near St. Petersburg, is the largest lake in Europe.",
+       "fact": "Lake Ladoga, in Russia near St. Petersburg, is the largest lake in Europe.",
+       "sources": [
+        {
+         "title": "Lake Ladoga",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Lake_Ladoga"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-kati-thanda-lake-eyre",
+     "name": "Kati Thanda–Lake Eyre",
+     "region": "Australia",
+     "lat": -28.4,
+     "lng": 137.3,
+     "emoji": "💧",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "earth-kati-thanda-lake-eyre-1",
+       "clue": "____, usually dry salt, is the largest lake in Australia.",
+       "fact": "Kati Thanda–Lake Eyre, usually dry salt, is the largest lake in Australia.",
+       "sources": [
+        {
+         "title": "Kati Thanda–Lake Eyre",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Kati_Thanda%E2%80%93Lake_Eyre"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-lake-hillier",
+     "name": "Lake Hillier",
+     "region": "Australia",
+     "lat": -34.09,
+     "lng": 123.2,
+     "emoji": "💗",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "earth-lake-hillier-1",
+       "clue": "____, in Australia, is naturally bright pink, colored by salt-loving microorganisms, especially the alga Dunaliella salina.",
+       "fact": "Lake Hillier, in Australia, is naturally bright pink, colored by salt-loving microorganisms, especially the alga Dunaliella salina.",
+       "sources": [
+        {
+         "title": "Lake Hillier",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Lake_Hillier"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-lake-titicaca",
+     "name": "Lake Titicaca",
+     "region": "Peru and Bolivia",
+     "lat": -15.8,
+     "lng": -69.4,
+     "emoji": "💧",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "earth-lake-titicaca-1",
+       "clue": "____, about 3,800 m up in the Andes, is often called the highest navigable lake.",
+       "fact": "Lake Titicaca, about 3,800 m up in the Andes, is often called the highest navigable lake.",
+       "sources": [
+        {
+         "title": "Lake Titicaca",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Lake_Titicaca"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-yangtze",
+     "name": "Yangtze",
+     "region": "China",
+     "lat": 31.4,
+     "lng": 121.5,
+     "emoji": "🏞️",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "earth-yangtze-1",
+       "clue": "The ____ is the longest river in Asia, about 6,300 km.",
+       "fact": "The Yangtze is the longest river in Asia, about 6,300 km.",
+       "sources": [
+        {
+         "title": "Yangtze",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Yangtze"
+        }
+       ]
+      },
+      {
+       "id": "earth-yangtze-2",
+       "clue": "The ____, in China, is the longest river entirely within one country.",
+       "fact": "The Yangtze, in China, is the longest river entirely within one country.",
+       "sources": [
+        {
+         "title": "Yangtze",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Yangtze"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-amazon",
+     "name": "Amazon",
+     "region": "South America",
+     "lat": 0,
+     "lng": -50,
+     "emoji": "🏞️",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "earth-amazon-1",
+       "clue": "The ____ carries the most water of any river, about a fifth of all river water reaching the oceans.",
+       "fact": "The Amazon carries the most water of any river, about a fifth of all river water reaching the oceans.",
+       "sources": [
+        {
+         "title": "Amazon River",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Amazon_River"
+        }
+       ]
+      },
+      {
+       "id": "earth-amazon-2",
+       "clue": "The ____ rainforest is the largest rainforest, covering much of northern South America.",
+       "fact": "The Amazon rainforest is the largest rainforest, covering much of northern South America.",
+       "sources": [
+        {
+         "title": "Amazon rainforest",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Amazon_rainforest"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-congo-river",
+     "name": "Congo River",
+     "region": "Central Africa",
+     "lat": -6,
+     "lng": 12.4,
+     "emoji": "🏞️",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "earth-congo-river-1",
+       "clue": "The ____ crosses the equator twice as it curves through central Africa.",
+       "fact": "The Congo River crosses the equator twice as it curves through central Africa.",
+       "sources": [
+        {
+         "title": "Congo River",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Congo_River"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-danube",
+     "name": "Danube",
+     "region": "Europe",
+     "lat": 45.2,
+     "lng": 29.6,
+     "emoji": "🏞️",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "earth-danube-1",
+       "clue": "The ____ flows through more countries than any other river: 10, from Germany to the Black Sea.",
+       "fact": "The Danube flows through more countries than any other river: 10, from Germany to the Black Sea.",
+       "sources": [
+        {
+         "title": "Danube",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Danube"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-murray",
+     "name": "Murray",
+     "region": "Australia",
+     "lat": -35.56,
+     "lng": 138.88,
+     "emoji": "🏞️",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "earth-murray-1",
+       "clue": "The ____ is the longest river in Australia, about 2,500 km.",
+       "fact": "The Murray is the longest river in Australia, about 2,500 km.",
+       "sources": [
+        {
+         "title": "Murray River",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Murray_River"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-chicago-river",
+     "name": "Chicago River",
+     "region": "Illinois, US",
+     "lat": 41.89,
+     "lng": -87.62,
+     "emoji": "🏙️",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "earth-chicago-river-1",
+       "clue": "The ____ was reversed by engineers in 1900 to carry sewage away from Lake Michigan.",
+       "fact": "The Chicago River was reversed by engineers in 1900 to carry sewage away from Lake Michigan.",
+       "sources": [
+        {
+         "title": "Chicago River",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Chicago_River"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-ganges-brahmaputra-delta",
+     "name": "Ganges–Brahmaputra Delta",
+     "region": "Bangladesh and India",
+     "lat": 22.5,
+     "lng": 89.5,
+     "emoji": "🏞️",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "earth-ganges-brahmaputra-delta-1",
+       "clue": "The ____, mostly in Bangladesh, is the largest river delta in the world.",
+       "fact": "The Ganges–Brahmaputra Delta, mostly in Bangladesh, is the largest river delta in the world.",
+       "sources": [
+        {
+         "title": "Ganges Delta",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Ganges_Delta"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-pantanal",
+     "name": "Pantanal",
+     "region": "Brazil",
+     "lat": -18,
+     "lng": -57,
+     "emoji": "🐊",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "earth-pantanal-1",
+       "clue": "The ____, mostly in Brazil, is the largest tropical wetland.",
+       "fact": "The Pantanal, mostly in Brazil, is the largest tropical wetland.",
+       "sources": [
+        {
+         "title": "Pantanal",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Pantanal"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-marajo",
+     "name": "Marajó",
+     "region": "Brazil",
+     "lat": -1,
+     "lng": -49.5,
+     "emoji": "🏝️",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "earth-marajo-1",
+       "clue": "____, at the mouth of the Amazon in Brazil, is by many counts the largest freshwater island in a river, about the size of Switzerland.",
+       "fact": "Marajó, at the mouth of the Amazon in Brazil, is by many counts the largest freshwater island in a river, about the size of Switzerland.",
+       "sources": [
+        {
+         "title": "Marajó",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Maraj%C3%B3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-manitoulin-island",
+     "name": "Manitoulin Island",
+     "region": "Ontario, Canada",
+     "lat": 45.8,
+     "lng": -82,
+     "emoji": "🏝️",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "earth-manitoulin-island-1",
+       "clue": "____, in Lake Huron, is the largest island in a lake.",
+       "fact": "Manitoulin Island, in Lake Huron, is the largest island in a lake.",
+       "sources": [
+        {
+         "title": "Manitoulin Island",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Manitoulin_Island"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-sicily",
+     "name": "Sicily",
+     "region": "Italy",
+     "lat": 37.6,
+     "lng": 14,
+     "emoji": "🏝️",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "earth-sicily-1",
+       "clue": "____ is the largest island in the Mediterranean.",
+       "fact": "Sicily is the largest island in the Mediterranean.",
+       "sources": [
+        {
+         "title": "Sicily",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Sicily"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "earth-tristan-da-cunha",
+     "name": "Tristan da Cunha",
+     "region": "South Atlantic",
+     "lat": -37.11,
+     "lng": -12.28,
+     "emoji": "🏝️",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "earth-tristan-da-cunha-1",
+       "clue": "____, in the South Atlantic, is often called the most remote inhabited island, about 2,400 km from the nearest mainland in South Africa.",
+       "fact": "Tristan da Cunha, in the South Atlantic, is often called the most remote inhabited island, about 2,400 km from the nearest mainland in South Africa.",
+       "sources": [
+        {
+         "title": "Tristan da Cunha",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Tristan_da_Cunha"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "weather-records-carmen",
+   "title": "Where in the Weather Records is Carmen Sandiego?",
+   "places": [
+    {
+     "id": "weather-death-valley",
+     "name": "Death Valley",
+     "region": "California, US",
+     "lat": 36.46,
+     "lng": -116.87,
+     "emoji": "🌡️",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "weather-death-valley-1",
+       "clue": "____, in California, holds the world's highest recorded air temperature: 56.7 °C on July 10, 1913.",
+       "fact": "Death Valley, in California, holds the world's highest recorded air temperature: 56.7 °C on July 10, 1913.",
+       "sources": [
+        {
+         "title": "Highest temperature recorded on Earth",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Highest_temperature_recorded_on_Earth"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      },
+      {
+       "id": "weather-death-valley-2",
+       "clue": "____ holds the heat record because the WMO threw out Libya's 58 °C reading in 2012, citing problems including an inexperienced observer and a poor instrument.",
+       "fact": "Death Valley holds the heat record because the WMO threw out Libya's 58 °C reading in 2012, citing problems including an inexperienced observer and a poor instrument.",
+       "sources": [
+        {
+         "title": "Highest temperature recorded on Earth",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Highest_temperature_recorded_on_Earth"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-vostok-station",
+     "name": "Vostok Station",
+     "region": "Antarctica",
+     "lat": -78.46,
+     "lng": 106.84,
+     "emoji": "🥶",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "weather-vostok-station-1",
+       "clue": "____, in Antarctica, recorded the lowest temperature on Earth: −89.2 °C on July 21, 1983.",
+       "fact": "Vostok Station, in Antarctica, recorded the lowest temperature on Earth: −89.2 °C on July 21, 1983.",
+       "sources": [
+        {
+         "title": "Lowest temperature recorded on Earth",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Lowest_temperature_recorded_on_Earth"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-oymyakon",
+     "name": "Oymyakon",
+     "region": "Siberia, Russia",
+     "lat": 63.46,
+     "lng": 142.79,
+     "emoji": "🥶",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "weather-oymyakon-1",
+       "clue": "____, in Siberia, is often called the coldest inhabited town. It has dropped below −67 °C.",
+       "fact": "Oymyakon, in Siberia, is often called the coldest inhabited town. It has dropped below −67 °C.",
+       "sources": [
+        {
+         "title": "Oymyakon",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Oymyakon"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-klinck",
+     "name": "Klinck",
+     "region": "Greenland",
+     "lat": 72.3,
+     "lng": -40.5,
+     "emoji": "🥶",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "weather-klinck-1",
+       "clue": "____, in Greenland, recorded the coldest temperature in the Northern Hemisphere: −69.6 °C in 1991.",
+       "fact": "Klinck, in Greenland, recorded the coldest temperature in the Northern Hemisphere: −69.6 °C in 1991.",
+       "sources": [
+        {
+         "title": "List of weather records",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/List_of_weather_records"
+        },
+        {
+         "title": "Climate of Greenland",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Climate_of_Greenland"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-prospect-creek",
+     "name": "Prospect Creek",
+     "region": "Alaska, US",
+     "lat": 66.81,
+     "lng": -150.67,
+     "emoji": "🥶",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "weather-prospect-creek-1",
+       "clue": "____, Alaska, recorded the coldest temperature in the United States: −62.1 °C in 1971.",
+       "fact": "Prospect Creek, Alaska, recorded the coldest temperature in the United States: −62.1 °C in 1971.",
+       "sources": [
+        {
+         "title": "Prospect Creek, Alaska",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Prospect_Creek,_Alaska"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-mawsynram",
+     "name": "Mawsynram",
+     "region": "India",
+     "lat": 25.3,
+     "lng": 91.58,
+     "emoji": "🌧️",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "weather-mawsynram-1",
+       "clue": "____, in northeast India, has the highest average yearly rainfall, nearly 12 m a year.",
+       "fact": "Mawsynram, in northeast India, has the highest average yearly rainfall, nearly 12 m a year.",
+       "sources": [
+        {
+         "title": "Mawsynram",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Mawsynram"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-cherrapunji",
+     "name": "Cherrapunji",
+     "region": "India",
+     "lat": 25.3,
+     "lng": 91.7,
+     "emoji": "🌧️",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "weather-cherrapunji-1",
+       "clue": "____, in India, had the most rain ever in one year: about 26.5 m from August 1860 to July 1861.",
+       "fact": "Cherrapunji, in India, had the most rain ever in one year: about 26.5 m from August 1860 to July 1861.",
+       "sources": [
+        {
+         "title": "Cherrapunji",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Cherrapunji"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-reunion",
+     "name": "Réunion",
+     "region": "Indian Ocean",
+     "lat": -21.11,
+     "lng": 55.53,
+     "emoji": "🌧️",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "weather-reunion-1",
+       "clue": "Foc-Foc, on ____ in the Indian Ocean, had the most rain ever in 24 hours: about 1,825 mm during a 1966 cyclone.",
+       "fact": "Foc-Foc, on Réunion in the Indian Ocean, had the most rain ever in 24 hours: about 1,825 mm during a 1966 cyclone.",
+       "sources": [
+        {
+         "title": "List of weather records",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/List_of_weather_records"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-arica",
+     "name": "Arica",
+     "region": "Chile",
+     "lat": -18.48,
+     "lng": -70.31,
+     "emoji": "🏜️",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "weather-arica-1",
+       "clue": "____, Chile, gets less than 1 mm of rain a year on average. It is often called the driest city on Earth.",
+       "fact": "Arica, Chile, gets less than 1 mm of rain a year on average. It is often called the driest city on Earth.",
+       "sources": [
+        {
+         "title": "Arica",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Arica"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-dallol",
+     "name": "Dallol",
+     "region": "Ethiopia",
+     "lat": 14.24,
+     "lng": 40.3,
+     "emoji": "🌡️",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "weather-dallol-1",
+       "clue": "____, in Ethiopia, has the hottest year-round average temperature on record, about 35 °C over several years of records.",
+       "fact": "Dallol, in Ethiopia, has the hottest year-round average temperature on record, about 35 °C over several years of records.",
+       "sources": [
+        {
+         "title": "Dallol, Ethiopia",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Dallol,_Ethiopia"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-lut-desert",
+     "name": "Lut Desert",
+     "region": "Iran",
+     "lat": 30.5,
+     "lng": 58.5,
+     "emoji": "🌡️",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "weather-lut-desert-1",
+       "clue": "Satellites have measured the hottest ground surface on Earth in the ____, in Iran: about 70.7 °C in 2005.",
+       "fact": "Satellites have measured the hottest ground surface on Earth in the Lut Desert, in Iran: about 70.7 °C in 2005.",
+       "sources": [
+        {
+         "title": "Lut Desert",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Lut_Desert"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-mitribah",
+     "name": "Mitribah",
+     "region": "Kuwait",
+     "lat": 29.8,
+     "lng": 47,
+     "emoji": "🌡️",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "weather-mitribah-1",
+       "clue": "____, Kuwait, recorded 54 °C in 2016, tying Turbat, Pakistan, for the highest temperature in Asia.",
+       "fact": "Mitribah, Kuwait, recorded 54 °C in 2016, tying Turbat, Pakistan, for the highest temperature in Asia.",
+       "sources": [
+        {
+         "title": "List of weather records",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/List_of_weather_records"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-kebili",
+     "name": "Kebili",
+     "region": "Tunisia",
+     "lat": 33.7,
+     "lng": 8.97,
+     "emoji": "🌡️",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "weather-kebili-1",
+       "clue": "____, Tunisia, recorded the highest temperature in Africa: 55 °C in 1931.",
+       "fact": "Kebili, Tunisia, recorded the highest temperature in Africa: 55 °C in 1931.",
+       "sources": [
+        {
+         "title": "List of weather records",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/List_of_weather_records"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-floridia",
+     "name": "Floridia",
+     "region": "Sicily, Italy",
+     "lat": 37.08,
+     "lng": 15.15,
+     "emoji": "🌡️",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "weather-floridia-1",
+       "clue": "____, in Sicily, recorded the highest temperature in Europe: 48.8 °C in August 2021.",
+       "fact": "Floridia, in Sicily, recorded the highest temperature in Europe: 48.8 °C in August 2021.",
+       "sources": [
+        {
+         "title": "Floridia",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Floridia"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-oodnadatta",
+     "name": "Oodnadatta",
+     "region": "South Australia",
+     "lat": -27.55,
+     "lng": 135.45,
+     "emoji": "🌡️",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "weather-oodnadatta-1",
+       "clue": "____, South Australia, recorded the highest temperature in Australia: 50.7 °C in 1960.",
+       "fact": "Oodnadatta, South Australia, recorded the highest temperature in Australia: 50.7 °C in 1960.",
+       "sources": [
+        {
+         "title": "Oodnadatta",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Oodnadatta"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-lytton",
+     "name": "Lytton",
+     "region": "British Columbia, Canada",
+     "lat": 50.23,
+     "lng": -121.58,
+     "emoji": "🌡️",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "weather-lytton-1",
+       "clue": "____, British Columbia, set the all-time heat record for Canada, 49.6 °C, in June 2021. A wildfire destroyed most of the village a day later.",
+       "fact": "Lytton, British Columbia, set the all-time heat record for Canada, 49.6 °C, in June 2021. A wildfire destroyed most of the village a day later.",
+       "sources": [
+        {
+         "title": "Lytton, British Columbia",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Lytton,_British_Columbia"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-coningsby",
+     "name": "Coningsby",
+     "region": "Lincolnshire, UK",
+     "lat": 53.1,
+     "lng": -0.17,
+     "emoji": "🌡️",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "weather-coningsby-1",
+       "clue": "____, Lincolnshire, recorded the highest temperature in the UK: 40.3 °C in July 2022.",
+       "fact": "Coningsby, Lincolnshire, recorded the highest temperature in the UK: 40.3 °C in July 2022.",
+       "sources": [
+        {
+         "title": "2022 United Kingdom heatwaves",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/2022_United_Kingdom_heatwaves"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-verkhoyansk",
+     "name": "Verkhoyansk",
+     "region": "Siberia, Russia",
+     "lat": 67.55,
+     "lng": 133.39,
+     "emoji": "🌡️",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "weather-verkhoyansk-1",
+       "clue": "____, in Siberia, recorded the highest temperature in the Arctic: 38 °C in June 2020.",
+       "fact": "Verkhoyansk, in Siberia, recorded the highest temperature in the Arctic: 38 °C in June 2020.",
+       "sources": [
+        {
+         "title": "Verkhoyansk",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Verkhoyansk"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-esperanza-base",
+     "name": "Esperanza Base",
+     "region": "Antarctic Peninsula",
+     "lat": -63.4,
+     "lng": -56.99,
+     "emoji": "🌡️",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "weather-esperanza-base-1",
+       "clue": "____, on the Antarctic Peninsula, recorded the highest temperature in Antarctica: 18.3 °C in February 2020.",
+       "fact": "Esperanza Base, on the Antarctic Peninsula, recorded the highest temperature in Antarctica: 18.3 °C in February 2020.",
+       "sources": [
+        {
+         "title": "Esperanza Base",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Esperanza_Base"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-loma",
+     "name": "Loma",
+     "region": "Montana, US",
+     "lat": 47.94,
+     "lng": -110.5,
+     "emoji": "🌡️",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "weather-loma-1",
+       "clue": "____, Montana, had the biggest 24-hour temperature change in the United States in 1972: about 57 °C, from −48 °C to 9 °C.",
+       "fact": "Loma, Montana, had the biggest 24-hour temperature change in the United States in 1972: about 57 °C, from −48 °C to 9 °C.",
+       "sources": [
+        {
+         "title": "Loma, Montana",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Loma,_Montana"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-spearfish",
+     "name": "Spearfish",
+     "region": "South Dakota, US",
+     "lat": 44.49,
+     "lng": -103.86,
+     "emoji": "🌡️",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "weather-spearfish-1",
+       "clue": "In January 1943 the temperature in ____, South Dakota, rose about 27 °C in two minutes, from −20 °C to 7 °C, thanks to a warm chinook wind.",
+       "fact": "In January 1943 the temperature in Spearfish, South Dakota, rose about 27 °C in two minutes, from −20 °C to 7 °C, thanks to a warm chinook wind.",
+       "sources": [
+        {
+         "title": "Spearfish, South Dakota",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Spearfish,_South_Dakota"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-yuma",
+     "name": "Yuma",
+     "region": "Arizona, US",
+     "lat": 32.69,
+     "lng": -114.63,
+     "emoji": "☀️",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "weather-yuma-1",
+       "clue": "____, Arizona, is often called the sunniest city in the world, with sun about 90 percent of daylight hours.",
+       "fact": "Yuma, Arizona, is often called the sunniest city in the world, with sun about 90 percent of daylight hours.",
+       "sources": [
+        {
+         "title": "Yuma, Arizona",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Yuma,_Arizona"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-grand-banks",
+     "name": "Grand Banks",
+     "region": "Newfoundland, Canada",
+     "lat": 45,
+     "lng": -51,
+     "emoji": "🌫️",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "weather-grand-banks-1",
+       "clue": "The ____ of Newfoundland, where warm and cold currents meet, are often called the foggiest place in the world.",
+       "fact": "The Grand Banks of Newfoundland, where warm and cold currents meet, are often called the foggiest place in the world.",
+       "sources": [
+        {
+         "title": "Grand Banks of Newfoundland",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Grand_Banks_of_Newfoundland"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weather-mount-baker",
+     "name": "Mount Baker",
+     "region": "Washington, US",
+     "lat": 48.86,
+     "lng": -121.68,
+     "emoji": "❄️",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "weather-mount-baker-1",
+       "clue": "____, Washington, holds the US record for snow in one season: about 29 m in 1998–99.",
+       "fact": "Mount Baker, Washington, holds the US record for snow in one season: about 29 m in 1998–99.",
+       "sources": [
+        {
+         "title": "Mount Baker Ski Area",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Mount_Baker_Ski_Area"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "disaster-records-carmen",
+   "title": "Where in the Disaster Records is Carmen Sandiego?",
+   "places": [
+    {
+     "id": "disaster-vivian",
+     "name": "Vivian",
+     "region": "South Dakota, US",
+     "lat": 43.93,
+     "lng": -100.3,
+     "emoji": "🧊",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "disaster-vivian-1",
+       "clue": "The largest hailstone in the United States by diameter fell in ____, South Dakota, in 2010: about 20 cm across.",
+       "fact": "The largest hailstone in the United States by diameter fell in Vivian, South Dakota, in 2010: about 20 cm across.",
+       "sources": [
+        {
+         "title": "Hail",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Hail"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "disaster-barrow-island",
+     "name": "Barrow Island",
+     "region": "Australia",
+     "lat": -20.8,
+     "lng": 115.4,
+     "emoji": "💨",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "disaster-barrow-island-1",
+       "clue": "____, Australia, recorded the strongest wind gust outside a tornado: about 408 km/h during Cyclone Olivia in 1996.",
+       "fact": "Barrow Island, Australia, recorded the strongest wind gust outside a tornado: about 408 km/h during Cyclone Olivia in 1996.",
+       "sources": [
+        {
+         "title": "List of weather records",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/List_of_weather_records"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "disaster-mount-washington",
+     "name": "Mount Washington",
+     "region": "New Hampshire, US",
+     "lat": 44.27,
+     "lng": -71.3,
+     "emoji": "💨",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "disaster-mount-washington-1",
+       "clue": "____, New Hampshire, held the world wind gust record from 1934 to 1996, after a 372 km/h gust.",
+       "fact": "Mount Washington, New Hampshire, held the world wind gust record from 1934 to 1996, after a 372 km/h gust.",
+       "sources": [
+        {
+         "title": "Mount Washington",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Mount_Washington"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "disaster-lake-maracaibo",
+     "name": "Lake Maracaibo",
+     "region": "Venezuela",
+     "lat": 9.8,
+     "lng": -71.6,
+     "emoji": "⚡",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "disaster-lake-maracaibo-1",
+       "clue": "____, in Venezuela, gets the most lightning on Earth. Storms flicker there on about 300 nights a year.",
+       "fact": "Lake Maracaibo, in Venezuela, gets the most lightning on Earth. Storms flicker there on about 300 nights a year.",
+       "sources": [
+        {
+         "title": "Catatumbo lightning",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Catatumbo_lightning"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "disaster-great-plains",
+     "name": "Great Plains",
+     "region": "Central US",
+     "lat": 40,
+     "lng": -100,
+     "emoji": "🌪️",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "disaster-great-plains-1",
+       "clue": "The ____ of the central US are known as Tornado Alley.",
+       "fact": "The Great Plains of the central US are known as Tornado Alley.",
+       "sources": [
+        {
+         "title": "Tornado Alley",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Tornado_Alley"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "disaster-bangladesh",
+     "name": "Bangladesh",
+     "region": "South Asia",
+     "lat": 23.7,
+     "lng": 90.4,
+     "emoji": "🌀",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "disaster-bangladesh-1",
+       "clue": "The heaviest known hailstone, about 1 kg, fell in Gopalganj, ____, in 1986.",
+       "fact": "The heaviest known hailstone, about 1 kg, fell in Gopalganj, Bangladesh, in 1986.",
+       "sources": [
+        {
+         "title": "List of weather records",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/List_of_weather_records"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      },
+      {
+       "id": "disaster-bangladesh-2",
+       "clue": "The deadliest tornado on record struck ____ in 1989, killing about 1,300 people.",
+       "fact": "The deadliest tornado on record struck Bangladesh in 1989, killing about 1,300 people.",
+       "sources": [
+        {
+         "title": "Daulatpur–Saturia tornado",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Daulatpur%E2%80%93Saturia_tornado"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      },
+      {
+       "id": "disaster-bangladesh-3",
+       "clue": "The Bhola cyclone of 1970, the deadliest tropical cyclone on record, struck what is now ____. Estimates of the dead range from about 300,000 to 500,000.",
+       "fact": "The Bhola cyclone of 1970, the deadliest tropical cyclone on record, struck what is now Bangladesh. Estimates of the dead range from about 300,000 to 500,000.",
+       "sources": [
+        {
+         "title": "1970 Bhola cyclone",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/1970_Bhola_cyclone"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "disaster-moradabad",
+     "name": "Moradabad",
+     "region": "India",
+     "lat": 28.84,
+     "lng": 78.77,
+     "emoji": "🧊",
+     "suspect": {
+      "name": "Rocky Ledge",
+      "alias": "The Landslide",
+      "emoji": "🪨"
+     },
+     "facts": [
+      {
+       "id": "disaster-moradabad-1",
+       "clue": "The deadliest hailstorm on record struck ____, India, in 1888, killing about 246 people.",
+       "fact": "The deadliest hailstorm on record struck Moradabad, India, in 1888, killing about 246 people.",
+       "sources": [
+        {
+         "title": "1888 Moradabad hailstorm",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/1888_Moradabad_hailstorm"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "disaster-dronka",
+     "name": "Dronka",
+     "region": "Egypt",
+     "lat": 27.15,
+     "lng": 31.17,
+     "emoji": "⚡",
+     "suspect": {
+      "name": "Gale Forsythe",
+      "alias": "The Squall",
+      "emoji": "🌪️"
+     },
+     "facts": [
+      {
+       "id": "disaster-dronka-1",
+       "clue": "In ____, Egypt, in 1994, lightning set off burning fuel that flooded the town, the deadliest lightning disaster on record.",
+       "fact": "In Dronka, Egypt, in 1994, lightning set off burning fuel that flooded the town, the deadliest lightning disaster on record.",
+       "sources": [
+        {
+         "title": "Dronka",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Dronka"
+        },
+        {
+         "title": "WMO Archive of Weather and Climate Extremes",
+         "publisher": "World Meteorological Organization",
+         "url": "https://wmo.asu.edu/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "disaster-tambora",
+     "name": "Tambora",
+     "region": "Indonesia",
+     "lat": -8.25,
+     "lng": 118,
+     "emoji": "🌋",
+     "suspect": {
+      "name": "Terra Firma",
+      "alias": "The Fault Line",
+      "emoji": "🌋"
+     },
+     "facts": [
+      {
+       "id": "disaster-tambora-1",
+       "clue": "The 1815 eruption of ____, in Indonesia, was the biggest in recorded history, rated 7 on the Volcanic Explosivity Index. Mount St. Helens in 1980 was a 5.",
+       "fact": "The 1815 eruption of Tambora, in Indonesia, was the biggest in recorded history, rated 7 on the Volcanic Explosivity Index. Mount St. Helens in 1980 was a 5.",
+       "sources": [
+        {
+         "title": "1815 eruption of Mount Tambora",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/1815_eruption_of_Mount_Tambora"
+        }
+       ]
+      },
+      {
+       "id": "disaster-tambora-2",
+       "clue": "Ash from the eruption of ____ cooled the planet, making 1816 \"the Year Without a Summer.\"",
+       "fact": "Ash from the eruption of Tambora cooled the planet, making 1816 \"the Year Without a Summer.\"",
+       "sources": [
+        {
+         "title": "Year Without a Summer",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Year_Without_a_Summer"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "disaster-valdivia",
+     "name": "Valdivia",
+     "region": "Chile",
+     "lat": -39.81,
+     "lng": -73.25,
+     "emoji": "🌐",
+     "suspect": {
+      "name": "Misty Banks",
+      "alias": "The Fogbank",
+      "emoji": "🌫️"
+     },
+     "facts": [
+      {
+       "id": "disaster-valdivia-1",
+       "clue": "The strongest earthquake ever recorded, magnitude 9.5, struck near ____, Chile, in 1960.",
+       "fact": "The strongest earthquake ever recorded, magnitude 9.5, struck near Valdivia, Chile, in 1960.",
+       "sources": [
+        {
+         "title": "1960 Valdivia earthquake",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/1960_Valdivia_earthquake"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "disaster-shaanxi",
+     "name": "Shaanxi",
+     "region": "China",
+     "lat": 34.5,
+     "lng": 109.5,
+     "emoji": "🌐",
+     "suspect": {
+      "name": "Hal Stone",
+      "alias": "The Hailstorm",
+      "emoji": "🧊"
+     },
+     "facts": [
+      {
+       "id": "disaster-shaanxi-1",
+       "clue": "The deadliest earthquake on record struck ____, China, in 1556, killing about 830,000 people. Many lived in cave homes that collapsed.",
+       "fact": "The deadliest earthquake on record struck Shaanxi, China, in 1556, killing about 830,000 people. Many lived in cave homes that collapsed.",
+       "sources": [
+        {
+         "title": "1556 Shaanxi earthquake",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/1556_Shaanxi_earthquake"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "disaster-lituya-bay",
+     "name": "Lituya Bay",
+     "region": "Alaska, US",
+     "lat": 58.64,
+     "lng": -137.55,
+     "emoji": "🌊",
+     "suspect": {
+      "name": "Del Ta",
+      "alias": "The Silt Runner",
+      "emoji": "🏞️"
+     },
+     "facts": [
+      {
+       "id": "disaster-lituya-bay-1",
+       "clue": "In 1958 a landslide into ____, Alaska, sent water about 524 m up a mountainside, the tallest tsunami wave on record.",
+       "fact": "In 1958 a landslide into Lituya Bay, Alaska, sent water about 524 m up a mountainside, the tallest tsunami wave on record.",
+       "sources": [
+        {
+         "title": "1958 Lituya Bay earthquake and megatsunami",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/1958_Lituya_Bay_earthquake_and_megatsunami"
         }
        ]
       }
