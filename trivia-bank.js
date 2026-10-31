@@ -1,5 +1,5 @@
 // Trivia bank: real, sourced facts per place. The first 12 packs are source-reviewed facts from the retired case packs (2026-10-28).
-// The 11 packs from capitals-africa-carmen on are unreviewed Quiznauts imports (2026-10-29); see docs/provenance/2026-10-29-quiznauts-import.md.
+// The 11 Quiznauts packs from capitals-africa-carmen on were source-reviewed and cleaned on 2026-10-30; see docs/provenance/2026-10-30-quiznauts-fact-check.md.
 // Edit clues here directly; keep fact ids stable so review progress survives.
 const TRIVIA_BANK = {
  "version": 1,
@@ -4040,8 +4040,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "cap-gitega-1",
-       "clue": "____ has been the political capital of Burundi since 2019.",
-       "fact": "Gitega has been the political capital of Burundi since 2019.",
+       "clue": "____ became the political capital of Burundi by parliamentary vote in January 2019, while Bujumbura remains the economic center.",
+       "fact": "Gitega became the political capital of Burundi by parliamentary vote in January 2019, while Bujumbura remains the economic center.",
        "sources": [
         {
          "title": "Gitega",
@@ -4121,8 +4121,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "cap-yamoussoukro-1",
-       "clue": "____ has been the capital of Ivory Coast since 1983.",
-       "fact": "Yamoussoukro has been the capital of Ivory Coast since 1983.",
+       "clue": "____ became the legal capital of Ivory Coast in 1983, although former capital Abidjan retains many political and economic functions.",
+       "fact": "Yamoussoukro became the legal capital of Ivory Coast in 1983, although former capital Abidjan retains many political and economic functions.",
        "sources": [
         {
          "title": "Yamoussoukro",
@@ -4316,7 +4316,7 @@ const TRIVIA_BANK = {
         {
          "title": "N'Djamena",
          "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/N'Djamena"
+         "url": "https://en.wikipedia.org/wiki/N%27Djamena"
         }
        ]
       }
@@ -4391,8 +4391,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "cap-mbabane-1",
-       "clue": "____ is the administrative capital of Eswatini.",
-       "fact": "Mbabane is the administrative capital of Eswatini.",
+       "clue": "____ is the executive capital of Eswatini, while Lobamba serves as the royal and legislative capital.",
+       "fact": "Mbabane is the executive capital of Eswatini, while Lobamba serves as the royal and legislative capital.",
        "sources": [
         {
          "title": "Mbabane",
@@ -4472,8 +4472,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "cap-nouakchott-1",
-       "clue": "____, the capital of Mauritania, was built as the capital around independence in 1960.",
-       "fact": "Nouakchott, the capital of Mauritania, was built as the capital around independence in 1960.",
+       "clue": "____, the capital of Mauritania, was built from a small fishing village around independence in 1960.",
+       "fact": "Nouakchott, the capital of Mauritania, was built from a small fishing village around independence in 1960.",
        "sources": [
         {
          "title": "Nouakchott",
@@ -4672,8 +4672,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "cap-ottawa-1",
-       "clue": "____, the capital of Canada, was chosen by Queen Victoria in 1857.",
-       "fact": "Ottawa, the capital of Canada, was chosen by Queen Victoria in 1857.",
+       "clue": "____, the capital of Canada, was chosen by Queen Victoria in 1857 as capital of the colonial Province of Canada, a decade before Confederation.",
+       "fact": "Ottawa, the capital of Canada, was chosen by Queen Victoria in 1857 as capital of the colonial Province of Canada, a decade before Confederation.",
        "sources": [
         {
          "title": "Ottawa",
@@ -4726,8 +4726,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "cap-rio-de-janeiro-1",
-       "clue": "____ was the capital of Brazil from 1763 to 1960, before Brasília. Salvador was the capital before that.",
-       "fact": "Rio de Janeiro was the capital of Brazil from 1763 to 1960, before Brasília. Salvador was the capital before that.",
+       "clue": "____ served as the colonial, royal, and national capital of Brazil from 1763 to 1960, after Salvador and before Brasília.",
+       "fact": "Rio de Janeiro served as the colonial, royal, and national capital of Brazil from 1763 to 1960, after Salvador and before Brasília.",
        "sources": [
         {
          "title": "Rio de Janeiro",
@@ -4753,8 +4753,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "cap-sucre-1",
-       "clue": "____ is the constitutional capital of Bolivia. The government sits in La Paz.",
-       "fact": "Sucre is the constitutional capital of Bolivia. The government sits in La Paz.",
+       "clue": "____ is the constitutional capital of Bolivia and home to its Supreme Court, while the executive and legislature sit in La Paz.",
+       "fact": "Sucre is the constitutional capital of Bolivia and home to its Supreme Court, while the executive and legislature sit in La Paz.",
        "sources": [
         {
          "title": "Sucre",
@@ -4861,8 +4861,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "cap-tegucigalpa-1",
-       "clue": "____ is the capital of Honduras.",
-       "fact": "Tegucigalpa is the capital of Honduras.",
+       "clue": "____, together with its sister city Comayagüela, forms the constitutional capital of Honduras.",
+       "fact": "Tegucigalpa, together with its sister city Comayagüela, forms the constitutional capital of Honduras.",
        "sources": [
         {
          "title": "Tegucigalpa",
@@ -5218,8 +5218,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "cap-naypyidaw-1",
-       "clue": "____ has been the capital of Myanmar since 2006.",
-       "fact": "Naypyidaw has been the capital of Myanmar since 2006.",
+       "clue": "____ replaced Yangon as the administrative capital of Myanmar in November 2005 and received its official name in March 2006.",
+       "fact": "Naypyidaw replaced Yangon as the administrative capital of Myanmar in November 2005 and received its official name in March 2006.",
        "sources": [
         {
          "title": "Naypyidaw",
@@ -5326,13 +5326,18 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "cap-karachi-1",
-       "clue": "____ was the first capital of Pakistan, from 1947. Rawalpindi served while Islamabad was built.",
-       "fact": "Karachi was the first capital of Pakistan, from 1947. Rawalpindi served while Islamabad was built.",
+       "clue": "____ served as the first federal capital of Pakistan starting in 1947; Rawalpindi later served as interim capital while Islamabad was built.",
+       "fact": "Karachi served as the first federal capital of Pakistan starting in 1947; Rawalpindi later served as interim capital while Islamabad was built.",
        "sources": [
         {
          "title": "Karachi",
          "publisher": "Wikipedia",
          "url": "https://en.wikipedia.org/wiki/Karachi"
+        },
+        {
+         "title": "Islamabad",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Islamabad"
         }
        ]
       }
@@ -5385,8 +5390,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "cap-sri-jayawardenepura-kotte-1",
-       "clue": "____, a suburb of Colombo where parliament sits, is the official legislative capital of Sri Lanka.",
-       "fact": "Sri Jayawardenepura Kotte, a suburb of Colombo where parliament sits, is the official legislative capital of Sri Lanka.",
+       "clue": "____, a city bordering Colombo where parliament sits, became the island nation's official capital in 1982.",
+       "fact": "Sri Jayawardenepura Kotte, a city bordering Colombo where parliament sits, became the official capital of Sri Lanka in 1982.",
        "sources": [
         {
          "title": "Sri Jayawardenepura Kotte",
@@ -6152,8 +6157,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "cap-helsinki-1",
-       "clue": "____ has been the capital of Finland since 1812.",
-       "fact": "Helsinki has been the capital of Finland since 1812.",
+       "clue": "____ became capital of the Grand Duchy of Finland in 1812 and has remained the capital of independent Finland since 1917.",
+       "fact": "Helsinki became capital of the Grand Duchy of Finland in 1812 and has remained the capital of independent Finland since 1917.",
        "sources": [
         {
          "title": "Helsinki",
@@ -6287,8 +6292,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "cap-valletta-1",
-       "clue": "____, the capital of Malta, is one of the smallest capitals in Europe.",
-       "fact": "Valletta, the capital of Malta, is one of the smallest capitals in Europe.",
+       "clue": "____, the capital of Malta, covers 0.61 km², making it the smallest capital city in the European Union by area.",
+       "fact": "Valletta, the capital of Malta, covers 0.61 km², making it the smallest capital city in the European Union by area.",
        "sources": [
         {
          "title": "Valletta",
@@ -6341,8 +6346,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "cap-reykjavik-1",
-       "clue": "____, the capital of Iceland, is the northernmost national capital in the world, at about 64° north.",
-       "fact": "Reykjavík, the capital of Iceland, is the northernmost national capital in the world, at about 64° north.",
+       "clue": "____, the capital of Iceland, is the northernmost capital of a sovereign state in the world, at about 64° north.",
+       "fact": "Reykjavík, the capital of Iceland, is the northernmost capital of a sovereign state in the world, at about 64° north.",
        "sources": [
         {
          "title": "Reykjavík",
@@ -6467,8 +6472,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "cap-wellington-2",
-       "clue": "____ is the southernmost national capital in the world, at about 41° south.",
-       "fact": "Wellington is the southernmost national capital in the world, at about 41° south.",
+       "clue": "____ is the southernmost capital of a sovereign state in the world, at about 41° south.",
+       "fact": "Wellington is the southernmost capital of a sovereign state in the world, at about 41° south.",
        "sources": [
         {
          "title": "Wellington",
@@ -6563,7 +6568,7 @@ const TRIVIA_BANK = {
     {
      "id": "cap-palikir",
      "name": "Palikir",
-     "region": "Micronesia",
+     "region": "Federated States of Micronesia",
      "lat": 6.92,
      "lng": 158.16,
      "emoji": "🇫🇲",
@@ -6645,18 +6650,6 @@ const TRIVIA_BANK = {
       "emoji": "🌿"
      },
      "facts": [
-      {
-       "id": "dish-thailand-1",
-       "clue": "Pad thai comes from ____.",
-       "fact": "Pad thai comes from Thailand.",
-       "sources": [
-        {
-         "title": "Pad thai",
-         "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Pad_thai"
-        }
-       ]
-      },
       {
        "id": "dish-thailand-2",
        "clue": "Massaman curry comes from ____. Its name and spices show Persian and Malay influence.",
@@ -6765,9 +6758,9 @@ const TRIVIA_BANK = {
        "fact": "Mole poblano comes from Puebla, Mexico.",
        "sources": [
         {
-         "title": "Mole poblano",
+         "title": "Mole (sauce)",
          "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Mole_poblano"
+         "url": "https://en.wikipedia.org/wiki/Mole_(sauce)"
         }
        ]
       }
@@ -6850,74 +6843,14 @@ const TRIVIA_BANK = {
      },
      "facts": [
       {
-       "id": "dish-united-states-1",
-       "clue": "Fortune cookies come from the ____. They were popularized in California and are rare in China.",
-       "fact": "Fortune cookies come from the United States. They were popularized in California and are rare in China.",
-       "sources": [
-        {
-         "title": "Fortune cookie",
-         "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Fortune_cookie"
-        }
-       ]
-      },
-      {
-       "id": "dish-united-states-2",
-       "clue": "Chili con carne comes from Texas, in the ____.",
-       "fact": "Chili con carne comes from Texas, in the United States.",
-       "sources": [
-        {
-         "title": "Chili con carne",
-         "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Chili_con_carne"
-        }
-       ]
-      },
-      {
-       "id": "dish-united-states-3",
-       "clue": "Chop suey is a Chinese-American creation from the ____.",
-       "fact": "Chop suey is a Chinese-American creation from the United States.",
-       "sources": [
-        {
-         "title": "Chop suey",
-         "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Chop_suey"
-        }
-       ]
-      },
-      {
        "id": "dish-united-states-4",
-       "clue": "Eggs Benedict come from New York City, in the ____, in the late 1800s.",
-       "fact": "Eggs Benedict come from New York City, in the United States, in the late 1800s.",
+       "clue": "Eggs Benedict originated in New York City, in the ____, with rival accounts crediting Delmonico’s in 1860 and the Waldorf Hotel in 1894.",
+       "fact": "Eggs Benedict originated in New York City, in the United States, with rival accounts crediting Delmonico’s in 1860 and the Waldorf Hotel in 1894.",
        "sources": [
         {
          "title": "Eggs Benedict",
          "publisher": "Wikipedia",
          "url": "https://en.wikipedia.org/wiki/Eggs_Benedict"
-        }
-       ]
-      },
-      {
-       "id": "dish-united-states-5",
-       "clue": "Baked Alaska comes from the ____. It was probably named at Delmonico's in New York.",
-       "fact": "Baked Alaska comes from the United States. It was probably named at Delmonico's in New York.",
-       "sources": [
-        {
-         "title": "Baked Alaska",
-         "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Baked_Alaska"
-        }
-       ]
-      },
-      {
-       "id": "dish-united-states-6",
-       "clue": "English muffins come from the ____. Samuel Bath Thomas, an English immigrant, made them in New York.",
-       "fact": "English muffins come from the United States. Samuel Bath Thomas, an English immigrant, made them in New York.",
-       "sources": [
-        {
-         "title": "English muffin",
-         "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/English_muffin"
         }
        ]
       },
@@ -6959,8 +6892,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "dish-united-states-10",
-       "clue": "The Philly cheesesteak comes from Philadelphia, in the ____, in the 1930s.",
-       "fact": "The Philly cheesesteak comes from Philadelphia, in the United States, in the 1930s.",
+       "clue": "The Philly cheesesteak originated in Philadelphia, in the ____, starting as a 1930s chopped-steak sandwich before cheese was added around mid-century.",
+       "fact": "The Philly cheesesteak originated in Philadelphia, in the United States, starting as a 1930s chopped-steak sandwich before cheese was added around mid-century.",
        "sources": [
         {
          "title": "Cheesesteak",
@@ -6971,8 +6904,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "dish-united-states-11",
-       "clue": "Poke comes from Hawaii, in the ____.",
-       "fact": "Poke comes from Hawaii, in the United States.",
+       "clue": "Poke originated in pre-contact Native Hawaiian cuisine in Hawaii, now part of the ____.",
+       "fact": "Poke originated in pre-contact Native Hawaiian cuisine in Hawaii, now part of the United States.",
        "sources": [
         {
          "title": "Poke (dish)",
@@ -6983,8 +6916,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "dish-united-states-12",
-       "clue": "Fajitas come from the ____, from Tex-Mex cooking by ranch workers in Texas.",
-       "fact": "Fajitas come from the United States, from Tex-Mex cooking by ranch workers in Texas.",
+       "clue": "Fajitas trace their first culinary evidence to the 1930s ranch lands of South and West Texas, in the ____, along the Rio Grande borderlands.",
+       "fact": "Fajitas trace their first culinary evidence to the 1930s ranch lands of South and West Texas, in the United States, along the Rio Grande borderlands.",
        "sources": [
         {
          "title": "Fajita",
@@ -6995,8 +6928,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "dish-united-states-13",
-       "clue": "Russian dressing comes from the ____, probably from New Hampshire in the 1900s.",
-       "fact": "Russian dressing comes from the United States, probably from New Hampshire in the 1900s.",
+       "clue": "Russian dressing originated in the ____, appearing in print by 1900 before a mayonnaise-based version was popularized in Nashua, New Hampshire, in the 1910s.",
+       "fact": "Russian dressing originated in the United States, appearing in print by 1900 before a mayonnaise-based version was popularized in Nashua, New Hampshire, in the 1910s.",
        "sources": [
         {
          "title": "Russian dressing",
@@ -7103,8 +7036,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "dish-scotland-1",
-       "clue": "Haggis comes from ____.",
-       "fact": "Haggis comes from Scotland.",
+       "clue": "Haggis, a savory pudding of sheep offal, oatmeal, and spices, is traditionally traced to ____ and considered its national dish, despite early English recipes.",
+       "fact": "Haggis, a savory pudding of sheep offal, oatmeal, and spices, is traditionally traced to Scotland and considered its national dish, despite early English recipes.",
        "sources": [
         {
          "title": "Haggis",
@@ -7156,18 +7089,6 @@ const TRIVIA_BANK = {
      },
      "facts": [
       {
-       "id": "dish-austria-1",
-       "clue": "Danish pastry comes from ____. Danes call it wienerbrød, \"Viennese bread.\"",
-       "fact": "Danish pastry comes from Austria. Danes call it wienerbrød, \"Viennese bread.\"",
-       "sources": [
-        {
-         "title": "Danish pastry",
-         "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Danish_pastry"
-        }
-       ]
-      },
-      {
        "id": "dish-austria-2",
        "clue": "Wiener schnitzel comes from ____. \"Wiener\" means \"from Vienna.\"",
        "fact": "Wiener schnitzel comes from Austria. \"Wiener\" means \"from Vienna.\"",
@@ -7181,8 +7102,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "dish-austria-3",
-       "clue": "Sachertorte comes from ____, from the Hotel Sacher in Vienna.",
-       "fact": "Sachertorte comes from Austria, from the Hotel Sacher in Vienna.",
+       "clue": "Sachertorte comes from Vienna, in ____, where Franz Sacher created it in 1832 decades before his son opened the Hotel Sacher in 1876.",
+       "fact": "Sachertorte comes from Vienna, in Austria, where Franz Sacher created it in 1832 decades before his son opened the Hotel Sacher in 1876.",
        "sources": [
         {
          "title": "Sachertorte",
@@ -7208,8 +7129,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "dish-belgium-1",
-       "clue": "Belgian waffles come from ____. They became famous in the United States after the 1964 World's Fair.",
-       "fact": "Belgian waffles come from Belgium. They became famous in the United States after the 1964 World's Fair.",
+       "clue": "Brussels waffles from ____ were showcased at Expo 58 and popularized in the United States at the 1962 Seattle and 1964 New York World's Fairs.",
+       "fact": "Brussels waffles from Belgium were showcased at Expo 58 and popularized in the United States at the 1962 Seattle and 1964 New York World's Fairs, becoming known there as Belgian waffles.",
        "sources": [
         {
          "title": "Belgian waffle",
@@ -7278,33 +7199,6 @@ const TRIVIA_BANK = {
          "title": "Fish and chips",
          "publisher": "Wikipedia",
          "url": "https://en.wikipedia.org/wiki/Fish_and_chips"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "dish-wales",
-     "name": "Wales",
-     "region": "Europe",
-     "lat": 52.1,
-     "lng": -3.8,
-     "emoji": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
-     "suspect": {
-      "name": "Ginger Snapp",
-      "alias": "The Pastry Thief",
-      "emoji": "🥐"
-     },
-     "facts": [
-      {
-       "id": "dish-wales-1",
-       "clue": "Welsh rarebit comes from ____. It is a cheese sauce on toast and contains no rabbit.",
-       "fact": "Welsh rarebit comes from Wales. It is a cheese sauce on toast and contains no rabbit.",
-       "sources": [
-        {
-         "title": "Welsh rarebit",
-         "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Welsh_rarebit"
         }
        ]
       }
@@ -7400,8 +7294,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "dish-france-4",
-       "clue": "Cassoulet comes from southwest ____, around Castelnaudary.",
-       "fact": "Cassoulet comes from southwest France, around Castelnaudary.",
+       "clue": "Cassoulet comes from southern ____, around Castelnaudary.",
+       "fact": "Cassoulet comes from southern France, around Castelnaudary.",
        "sources": [
         {
          "title": "Cassoulet",
@@ -7412,8 +7306,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "dish-france-5",
-       "clue": "Quiche Lorraine comes from Lorraine, in ____, a region once under German rule.",
-       "fact": "Quiche Lorraine comes from Lorraine, in France, a region once under German rule.",
+       "clue": "Quiche Lorraine comes from the Lorraine region of ____, where the word quiche was attested by 1605.",
+       "fact": "Quiche Lorraine comes from the Lorraine region of France, where the word quiche was attested by 1605.",
        "sources": [
         {
          "title": "Quiche",
@@ -7463,8 +7357,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "dish-italy-2",
-       "clue": "Carbonara comes from Rome, in ____.",
-       "fact": "Carbonara comes from Rome, in Italy.",
+       "clue": "Carbonara is typical of the Lazio region of ____, including Rome, and took its modern form and name in the mid-20th century.",
+       "fact": "Carbonara is typical of the Lazio region of Italy, including Rome, and took its modern form and name in the mid-20th century.",
        "sources": [
         {
          "title": "Carbonara",
@@ -7564,21 +7458,9 @@ const TRIVIA_BANK = {
      },
      "facts": [
       {
-       "id": "dish-turkey-1",
-       "clue": "Borek comes from ____ and spread across the former Ottoman Empire.",
-       "fact": "Borek comes from Turkey and spread across the former Ottoman Empire.",
-       "sources": [
-        {
-         "title": "Börek",
-         "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/B%C3%B6rek"
-        }
-       ]
-      },
-      {
        "id": "dish-turkey-2",
-       "clue": "Turkish delight, called lokum, comes from ____.",
-       "fact": "Turkish delight, called lokum, comes from Turkey.",
+       "clue": "Lokum, a gel confection of starch and sugar often flavored with rosewater, is popularly linked to 1770s confectioner Hacı Bekir in Istanbul, ____, though similar Persian and Arab sweets are older.",
+       "fact": "Lokum, or Turkish delight, a gel confection of starch and sugar often flavored with rosewater, is popularly linked to 1770s confectioner Hacı Bekir in Istanbul, Turkey, though similar Persian and Arab sweets are older.",
        "sources": [
         {
          "title": "Turkish delight",
@@ -7604,13 +7486,13 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "dish-morocco-1",
-       "clue": "Tagine comes from ____.",
-       "fact": "Tagine comes from Morocco.",
+       "clue": "The cone-lidded clay tagine cooking pot originated in Tafraout, ____, and gives its name to a slow-cooked Maghrebi stew.",
+       "fact": "The cone-lidded clay tagine cooking pot originated in Tafraout, Morocco, and gives its name to a slow-cooked Maghrebi stew.",
        "sources": [
         {
-         "title": "Tajine",
+         "title": "Tagine",
          "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Tajine"
+         "url": "https://en.wikipedia.org/wiki/Tagine"
         }
        ]
       }
@@ -7631,8 +7513,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "dish-peru-1",
-       "clue": "Ceviche comes from ____, which considers it a national dish.",
-       "fact": "Ceviche comes from Peru, which considers it a national dish.",
+       "clue": "Historians trace the modern form of ceviche to colonial-era ____, where it is considered the national dish.",
+       "fact": "Historians trace the modern form of ceviche to colonial-era Peru, where it is considered the national dish.",
        "sources": [
         {
          "title": "Ceviche",
@@ -7658,13 +7540,13 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "dish-brazil-1",
-       "clue": "Feijoada comes from ____.",
-       "fact": "Feijoada comes from Brazil.",
+       "clue": "Feijoada à brasileira, a stew of black beans with pork and beef first documented in Recife in 1827, is considered a national dish of ____.",
+       "fact": "Feijoada à brasileira, a stew of black beans with pork and beef first documented in Recife in 1827, is considered a national dish of Brazil.",
        "sources": [
         {
-         "title": "Feijoada",
+         "title": "Feijoada (Brazilian dish)",
          "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Feijoada"
+         "url": "https://en.wikipedia.org/wiki/Feijoada_(Brazilian_dish)"
         }
        ]
       }
@@ -7697,13 +7579,13 @@ const TRIVIA_BANK = {
       },
       {
        "id": "dish-germany-2",
-       "clue": "Black Forest cake comes from ____.",
-       "fact": "Black Forest cake comes from Germany.",
+       "clue": "Black Forest gateau is traditionally associated with ____, where the earliest archived recipe appeared in 1927, though its exact origin is disputed.",
+       "fact": "Black Forest gateau is traditionally associated with Germany, where the earliest archived recipe appeared in 1927, though its exact origin is disputed.",
        "sources": [
         {
-         "title": "Black Forest gâteau",
+         "title": "Black Forest gateau",
          "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Black_Forest_g%C3%A2teau"
+         "url": "https://en.wikipedia.org/wiki/Black_Forest_gateau"
         }
        ]
       }
@@ -7750,33 +7632,21 @@ const TRIVIA_BANK = {
      },
      "facts": [
       {
-       "id": "dish-philippines-1",
-       "clue": "Lumpia comes from the ____. Its name comes from Hokkien Chinese, and it is found in Indonesia too.",
-       "fact": "Lumpia comes from the Philippines. Its name comes from Hokkien Chinese, and it is found in Indonesia too.",
-       "sources": [
-        {
-         "title": "Lumpia",
-         "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Lumpia"
-        }
-       ]
-      },
-      {
        "id": "dish-philippines-2",
-       "clue": "Adobo comes from the ____. The name is Spanish, but the dish is Filipino.",
-       "fact": "Adobo comes from the Philippines. The name is Spanish, but the dish is Filipino.",
+       "clue": "In the ____, adobo is a dish of meat or seafood braised in vinegar, soy sauce, garlic, bay leaves, and black peppercorns; Spanish colonists gave an indigenous cooking method that name.",
+       "fact": "In the Philippines, adobo is a dish of meat or seafood braised in vinegar, soy sauce, garlic, bay leaves, and black peppercorns; Spanish colonists gave an indigenous cooking method that name.",
        "sources": [
         {
-         "title": "Philippine adobo",
+         "title": "Adobo (Filipino dish)",
          "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Philippine_adobo"
+         "url": "https://en.wikipedia.org/wiki/Adobo_(Filipino_dish)"
         }
        ]
       },
       {
        "id": "dish-philippines-3",
-       "clue": "Balut, a fertilized duck egg, comes from the ____.",
-       "fact": "Balut, a fertilized duck egg, comes from the Philippines.",
+       "clue": "Balut, a fertilized duck egg incubated and steamed in the shell, was localized into a signature street food in the ____.",
+       "fact": "Balut, a fertilized duck egg incubated and steamed in the shell, was localized into a signature street food in the Philippines.",
        "sources": [
         {
          "title": "Balut (food)",
@@ -7791,8 +7661,8 @@ const TRIVIA_BANK = {
      "id": "dish-russia",
      "name": "Russia",
      "region": "Europe",
-     "lat": 61.5,
-     "lng": 105.3,
+     "lat": 55.75,
+     "lng": 37.62,
      "emoji": "🇷🇺",
      "suspect": {
       "name": "Ginger Snapp",
@@ -7802,8 +7672,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "dish-russia-1",
-       "clue": "Pelmeni come from ____, probably from the Ural region of Siberia.",
-       "fact": "Pelmeni come from Russia, probably from the Ural region of Siberia.",
+       "clue": "Pelmeni became a staple of ____ during expansion into the Urals and Siberia, the two regions most often linked to their origin.",
+       "fact": "Pelmeni became a staple of Russia during expansion into the Urals and Siberia, the two regions most often linked to their origin.",
        "sources": [
         {
          "title": "Pelmeni",
@@ -7841,8 +7711,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "dish-poland-1",
-       "clue": "Pierogi come from ____.",
-       "fact": "Pierogi come from Poland.",
+       "clue": "Pierogi are traditional filled dumplings of ____ documented since the 17th century, though their exact origin is unknown.",
+       "fact": "Pierogi are traditional filled dumplings of Poland documented since the 17th century, though their exact origin is unknown.",
        "sources": [
         {
          "title": "Pierogi",
@@ -7880,8 +7750,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "dish-greece-1",
-       "clue": "Moussaka comes from ____. It is found across the Balkans and the Middle East, but the layered version is from ____.",
-       "fact": "Moussaka comes from Greece. It is found across the Balkans and the Middle East, but the layered version is from Greece.",
+       "clue": "While moussaka has older Arab and Ottoman roots, chef Nikolaos Tselementes created the modern baked version topped with béchamel sauce in ____ in the 1920s.",
+       "fact": "While moussaka has older Arab and Ottoman roots, chef Nikolaos Tselementes created the modern baked version topped with béchamel sauce in Greece in the 1920s.",
        "sources": [
         {
          "title": "Moussaka",
@@ -7907,8 +7777,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "dish-india-1",
-       "clue": "Butter chicken comes from ____. It was created in Delhi.",
-       "fact": "Butter chicken comes from India. It was created in Delhi.",
+       "clue": "Butter chicken is closely associated with the Moti Mahal restaurant in Delhi, ____, which popularized the dish in the 1950s.",
+       "fact": "Butter chicken is closely associated with the Moti Mahal restaurant in Delhi, India, which popularized the dish in the 1950s.",
        "sources": [
         {
          "title": "Butter chicken",
@@ -7931,8 +7801,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "dish-india-3",
-       "clue": "Tandoori chicken comes from ____. It was popularized at the Moti Mahal restaurant in Delhi.",
-       "fact": "Tandoori chicken comes from India. It was popularized at the Moti Mahal restaurant in Delhi.",
+       "clue": "Tandoori chicken originated in the pre-Partition Punjab and was popularized after independence at the Moti Mahal restaurant in New Delhi, ____.",
+       "fact": "Tandoori chicken originated in the pre-Partition Punjab and was popularized after independence at the Moti Mahal restaurant in New Delhi, India.",
        "sources": [
         {
          "title": "Tandoori chicken",
@@ -7958,8 +7828,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "dish-denmark-1",
-       "clue": "Smørrebrød, open-faced sandwiches, comes from ____.",
-       "fact": "Smørrebrød, open-faced sandwiches, comes from Denmark.",
+       "clue": "Smørrebrød, from smør og brød ('butter and bread'), is the open-faced sandwich of ____, served on dense, dark sourdough rye bread called rugbrød.",
+       "fact": "Smørrebrød, from smør og brød ('butter and bread'), is the open-faced sandwich of Denmark, served on dense, dark sourdough rye bread called rugbrød.",
        "sources": [
         {
          "title": "Smørrebrød",
@@ -7983,18 +7853,6 @@ const TRIVIA_BANK = {
       "emoji": "🌿"
      },
      "facts": [
-      {
-       "id": "dish-sweden-1",
-       "clue": "Gravlax comes from ____. It is found across Scandinavia, and the name is Swedish.",
-       "fact": "Gravlax comes from Sweden. It is found across Scandinavia, and the name is Swedish.",
-       "sources": [
-        {
-         "title": "Gravlax",
-         "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Gravlax"
-        }
-       ]
-      },
       {
        "id": "dish-sweden-2",
        "clue": "Surströmming, fermented herring famous for its smell, comes from ____.",
@@ -8024,8 +7882,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "dish-georgia-1",
-       "clue": "Khachapuri, a cheese-filled bread, comes from ____, the country.",
-       "fact": "Khachapuri, a cheese-filled bread, comes from Georgia, the country.",
+       "clue": "Khachapuri, a leavened cheese-filled bread, comes from ____.",
+       "fact": "Khachapuri, a leavened cheese-filled bread, comes from Georgia.",
        "sources": [
         {
          "title": "Khachapuri",
@@ -8051,8 +7909,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "dish-uzbekistan-1",
-       "clue": "Plov is the national dish of ____.",
-       "fact": "Plov is the national dish of Uzbekistan.",
+       "clue": "Plov is the national dish of ____ and neighboring Tajikistan, recognized on UNESCO’s intangible cultural heritage list in 2016.",
+       "fact": "Plov is the national dish of Uzbekistan and neighboring Tajikistan, recognized on UNESCO’s intangible cultural heritage list in 2016.",
        "sources": [
         {
          "title": "Pilaf",
@@ -8183,8 +8041,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "dish-indonesia-1",
-       "clue": "Rendang comes from ____, from the Minangkabau people of Sumatra.",
-       "fact": "Rendang comes from Indonesia, from the Minangkabau people of Sumatra.",
+       "clue": "Rendang is closely tied to the Minangkabau people of West Sumatra, in ____, having developed along the cultural crossroads of the Malacca Strait.",
+       "fact": "Rendang is closely tied to the Minangkabau people of West Sumatra, in Indonesia, having developed along the cultural crossroads of the Malacca Strait.",
        "sources": [
         {
          "title": "Rendang",
@@ -8195,8 +8053,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "dish-indonesia-2",
-       "clue": "Satay comes from Java, in ____.",
-       "fact": "Satay comes from Java, in Indonesia.",
+       "clue": "Satay developed in port cities of Java and Sumatra, in ____, as well as the Malay Peninsula, adapting Middle Eastern kebabs with local spices and skewering.",
+       "fact": "Satay developed in port cities of Java and Sumatra, in Indonesia, as well as the Malay Peninsula, adapting Middle Eastern kebabs with local spices and skewering.",
        "sources": [
         {
          "title": "Satay",
@@ -8234,8 +8092,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "dish-south-africa-2",
-       "clue": "Biltong comes from ____.",
-       "fact": "Biltong comes from South Africa.",
+       "clue": "Biltong, air-dried meat cured with vinegar, salt, black pepper, and coriander by 17th-century Dutch pioneers, is closely associated with ____.",
+       "fact": "Biltong, air-dried meat cured with vinegar, salt, black pepper, and coriander in Southern Africa by 17th-century Dutch pioneers, is closely associated with South Africa.",
        "sources": [
         {
          "title": "Biltong",
@@ -8261,8 +8119,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "dish-el-salvador-1",
-       "clue": "Pupusas come from ____.",
-       "fact": "Pupusas come from El Salvador.",
+       "clue": "The pupusa, a thick stuffed griddle cake from Central America, is the national dish of ____.",
+       "fact": "The pupusa, a thick stuffed griddle cake from El Salvador and Honduras, is the national dish of El Salvador.",
        "sources": [
         {
          "title": "Pupusa",
@@ -8288,8 +8146,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "dish-ethiopia-1",
-       "clue": "Injera, a spongy flatbread made from teff, comes from ____.",
-       "fact": "Injera, a spongy flatbread made from teff, comes from Ethiopia.",
+       "clue": "Injera, a spongy fermented flatbread made from teff, is a staple of ____ and neighboring Eritrea.",
+       "fact": "Injera, a spongy fermented flatbread made from teff, is a staple of Ethiopia and neighboring Eritrea.",
        "sources": [
         {
          "title": "Injera",
@@ -8348,8 +8206,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "world-france-1",
-       "clue": "____ has the most time zones of any country, 12, thanks to its territories around the world.",
-       "fact": "France has the most time zones of any country, 12, thanks to its territories around the world.",
+       "clue": "____ spans 12 time zones—more than any other country—thanks to its overseas territories, or 13 including its Antarctic claim.",
+       "fact": "France spans 12 time zones—more than any other country—thanks to its overseas territories, or 13 including its Antarctic claim.",
        "sources": [
         {
          "title": "Time in France",
@@ -8379,9 +8237,9 @@ const TRIVIA_BANK = {
        "fact": "Canada has the most lakes of any country, more than the rest of the world combined by some counts.",
        "sources": [
         {
-         "title": "Lakes of Canada",
+         "title": "List of lakes of Canada",
          "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Lakes_of_Canada"
+         "url": "https://en.wikipedia.org/wiki/List_of_lakes_of_Canada"
         }
        ]
       }
@@ -8402,13 +8260,18 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "world-sweden-1",
-       "clue": "____ is made up of more islands than any other country, about 267,000, though most are tiny.",
-       "fact": "Sweden is made up of more islands than any other country, about 267,000, though most are tiny.",
+       "clue": "____ tops international island rankings with 267,570 islands, though fewer than 1,000 are inhabited.",
+       "fact": "Sweden tops international island rankings with 267,570 islands, though fewer than 1,000 are inhabited.",
        "sources": [
         {
          "title": "Sweden",
          "publisher": "Wikipedia",
          "url": "https://en.wikipedia.org/wiki/Sweden"
+        },
+        {
+         "title": "List of countries by number of islands",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_islands"
         }
        ]
       }
@@ -8429,8 +8292,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "world-indonesia-1",
-       "clue": "____ has about 17,000 islands.",
-       "fact": "Indonesia has about 17,000 islands.",
+       "clue": "____ is the world's largest archipelagic state, spanning between 13,000 and 17,500 islands.",
+       "fact": "Indonesia is the world's largest archipelagic state, spanning between 13,000 and 17,500 islands.",
        "sources": [
         {
          "title": "Indonesia",
@@ -8441,8 +8304,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "world-indonesia-2",
-       "clue": "____ has had more volcanoes erupt in recorded history than any other country. It sits on the Pacific Ring of Fire.",
-       "fact": "Indonesia has had more volcanoes erupt in recorded history than any other country. It sits on the Pacific Ring of Fire.",
+       "clue": "Sitting on the Pacific Ring of Fire and Alpide belt, ____ has 127 active volcanoes, including Krakatoa and Mount Merapi.",
+       "fact": "Sitting on the Pacific Ring of Fire and Alpide belt, Indonesia has 127 active volcanoes, including Krakatoa and Mount Merapi.",
        "sources": [
         {
          "title": "List of volcanoes in Indonesia",
@@ -8522,8 +8385,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "world-italy-1",
-       "clue": "____ has the most UNESCO World Heritage Sites, narrowly ahead of China.",
-       "fact": "Italy has the most UNESCO World Heritage Sites, narrowly ahead of China.",
+       "clue": "____ and China sit atop the UNESCO World Heritage list, each home to more than 60 inscribed sites.",
+       "fact": "Italy and China sit atop the UNESCO World Heritage list, each home to more than 60 inscribed sites.",
        "sources": [
         {
          "title": "World Heritage Site",
@@ -8681,8 +8544,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "world-australia-1",
-       "clue": "____ is the driest inhabited continent. Only Antarctica is drier.",
-       "fact": "Australia is the driest inhabited continent. Only Antarctica is drier.",
+       "clue": "____ is the driest inhabited continent on Earth.",
+       "fact": "Australia is the driest inhabited continent on Earth; only Antarctica is drier overall.",
        "sources": [
         {
          "title": "Australia",
@@ -8708,7 +8571,7 @@ const TRIVIA_BANK = {
     {
      "id": "world-antarctica",
      "name": "Antarctica",
-     "region": "South Pole",
+     "region": "Southern Hemisphere",
      "lat": -82.9,
      "lng": 135,
      "emoji": "🇦🇶",
@@ -8732,13 +8595,18 @@ const TRIVIA_BANK = {
       },
       {
        "id": "world-antarctica-2",
-       "clue": "____ is the only continent without native reptiles or amphibians.",
-       "fact": "Antarctica is the only continent without native reptiles or amphibians.",
+       "clue": "____ has no natural fully terrestrial mammals, reptiles, or amphibians.",
+       "fact": "Antarctica has no natural fully terrestrial mammals, reptiles, or amphibians.",
        "sources": [
         {
          "title": "Antarctica",
          "publisher": "Wikipedia",
          "url": "https://en.wikipedia.org/wiki/Antarctica"
+        },
+        {
+         "title": "Wildlife of Antarctica",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Wildlife_of_Antarctica"
         }
        ]
       },
@@ -8816,8 +8684,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-aconcagua-1",
-       "clue": "____, in Argentina, is the highest mountain in South America, at about 6,960 m.",
-       "fact": "Aconcagua, in Argentina, is the highest mountain in South America, at about 6,960 m.",
+       "clue": "____, in Argentina, is the highest mountain in South America and outside Asia, at about 6,967 m.",
+       "fact": "Aconcagua, in Argentina, is the highest mountain in South America and outside Asia, at about 6,967 m.",
        "sources": [
         {
          "title": "Aconcagua",
@@ -8843,8 +8711,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-mount-elbrus-1",
-       "clue": "____, in the Caucasus of Russia, is the highest mountain in Europe by most counts, at 5,642 m. Mont Blanc is the highest in the Alps.",
-       "fact": "Mount Elbrus, in the Caucasus of Russia, is the highest mountain in Europe by most counts, at 5,642 m. Mont Blanc is the highest in the Alps.",
+       "clue": "____, in the Caucasus of Russia, is the highest mountain in Russia and Europe, at 5,642 m.",
+       "fact": "Mount Elbrus, in the Caucasus of Russia, is the highest mountain in Russia and Europe, at 5,642 m.",
        "sources": [
         {
          "title": "Mount Elbrus",
@@ -8978,8 +8846,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-mount-stanley-1",
-       "clue": "____ is the highest point in the Rwenzori Mountains and the third-highest peak in Africa.",
-       "fact": "Mount Stanley is the highest point in the Rwenzori Mountains and the third-highest peak in Africa.",
+       "clue": "____, on the border of Uganda and DR Congo in the Rwenzori range, is Africa’s third-tallest independent mountain and fourth-highest peak, at 5,109 m.",
+       "fact": "Mount Stanley, on the border of Uganda and DR Congo in the Rwenzori range, is Africa’s third-tallest independent mountain and fourth-highest peak, at 5,109 m.",
        "sources": [
         {
          "title": "Mount Stanley",
@@ -9017,8 +8885,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "earth-gangkhar-puensum-2",
-       "clue": "Bhutan banned climbing its highest peaks, including ____, in 1994, out of respect for local beliefs. Later rules banned all peaks over 6,000 m.",
-       "fact": "Bhutan banned climbing its highest peaks, including Gangkhar Puensum, in 1994, out of respect for local beliefs. Later rules banned all peaks over 6,000 m.",
+       "clue": "Bhutan banned climbing mountains above 6,000 m, including ____, in 1994 out of respect for local spiritual beliefs, and banned all mountaineering in 2003.",
+       "fact": "Bhutan banned climbing mountains above 6,000 m, including Gangkhar Puensum, in 1994 out of respect for local spiritual beliefs, and banned all mountaineering in 2003.",
        "sources": [
         {
          "title": "Gangkhar Puensum",
@@ -9044,8 +8912,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-ojos-del-salado-1",
-       "clue": "____, on the Chile–Argentina border, is the highest active volcano, at about 6,893 m.",
-       "fact": "Ojos del Salado, on the Chile–Argentina border, is the highest active volcano, at about 6,893 m.",
+       "clue": "____, a dormant peak on the border of Chile and Argentina, is the highest volcano on Earth, at 6,893 m.",
+       "fact": "Ojos del Salado, a dormant peak on the border of Chile and Argentina, is the highest volcano on Earth, at 6,893 m.",
        "sources": [
         {
          "title": "Ojos del Salado",
@@ -9098,8 +8966,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-andes-1",
-       "clue": "The ____ are the longest mountain range on land, about 7,000 km.",
-       "fact": "The Andes are the longest mountain range on land, about 7,000 km.",
+       "clue": "South America's western edge is lined by the ____, the longest continental mountain range on Earth, stretching 7,000 to 8,900 km.",
+       "fact": "South America's western edge is lined by the Andes, the longest continental mountain range on Earth, stretching 7,000 to 8,900 km.",
        "sources": [
         {
          "title": "Andes",
@@ -9125,8 +8993,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-tibetan-plateau-1",
-       "clue": "The ____ is the highest plateau on Earth, averaging over 4,500 m.",
-       "fact": "The Tibetan Plateau is the highest plateau on Earth, averaging over 4,500 m.",
+       "clue": "The ____, in Asia, is the highest and largest highland region on Earth, averaging over 4,500 m above sea level.",
+       "fact": "The Tibetan Plateau is the highest and largest plateau on Earth, averaging over 4,500 m above sea level.",
        "sources": [
         {
          "title": "Tibetan Plateau",
@@ -9152,8 +9020,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-yarlung-tsangpo-grand-canyon-1",
-       "clue": "The ____, in Tibet, is the deepest canyon on Earth, about 6 km deep in places, three times the depth of the Grand Canyon.",
-       "fact": "The Yarlung Tsangpo Grand Canyon, in Tibet, is the deepest canyon on Earth, about 6 km deep in places, three times the depth of the Grand Canyon.",
+       "clue": "The ____, in Tibet, is the deepest gorge on land, reaching 6,009 m deep.",
+       "fact": "The Yarlung Tsangpo Grand Canyon, in Tibet, is the deepest canyon on land, reaching 6,009 m deep.",
        "sources": [
         {
          "title": "Yarlung Tsangpo Grand Canyon",
@@ -9179,8 +9047,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-mammoth-cave-1",
-       "clue": "____, in Kentucky, is the longest known cave system, with over 680 km mapped and still growing.",
-       "fact": "Mammoth Cave, in Kentucky, is the longest known cave system, with over 680 km mapped and still growing.",
+       "clue": "____, in central Kentucky, is the longest known subterranean passage system in the world, with over 680 km mapped.",
+       "fact": "Mammoth Cave, in central Kentucky, is the longest known cave system in the world, with over 680 km mapped.",
        "sources": [
         {
          "title": "Mammoth Cave National Park",
@@ -9206,8 +9074,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-hang-son-oong-1",
-       "clue": "____, in Vietnam, has the largest known cave passage, big enough to hold a city block.",
-       "fact": "Hang Sơn Đoòng, in Vietnam, has the largest known cave passage, big enough to hold a city block.",
+       "clue": "____, in Vietnam, contains the largest known subterranean passage in the world by volume, over 5 km long, 200 m high, and 150 m wide.",
+       "fact": "Hang Sơn Đoòng, in Vietnam, contains the largest known cave passage in the world by volume, over 5 km long, 200 m high, and 150 m wide.",
        "sources": [
         {
          "title": "Hang Sơn Đoòng",
@@ -9233,8 +9101,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-veryovkina-cave-1",
-       "clue": "____, in Georgia, is the deepest known cave, about 2,212 m deep.",
-       "fact": "Veryovkina Cave, in Georgia, is the deepest known cave, about 2,212 m deep.",
+       "clue": "____, in Abkhazia, Georgia, reaches 2,209 m underground, the second-deepest known subterranean system on Earth after nearby Krubera.",
+       "fact": "Veryovkina Cave, in Abkhazia, Georgia, reaches 2,209 m underground, the second-deepest known cave on Earth after nearby Krubera Cave.",
        "sources": [
         {
          "title": "Veryovkina Cave",
@@ -9260,8 +9128,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-salar-de-uyuni-1",
-       "clue": "____, in Bolivia, is the largest salt flat, about 10,000 km². In the wet season it becomes a giant mirror.",
-       "fact": "Salar de Uyuni, in Bolivia, is the largest salt flat, about 10,000 km². In the wet season it becomes a giant mirror.",
+       "clue": "____, in Bolivia, is the largest salt flat in the world, covering about 10,582 km².",
+       "fact": "Salar de Uyuni, in Bolivia, is the largest salt flat in the world, covering about 10,582 km².",
        "sources": [
         {
          "title": "Salar de Uyuni",
@@ -9296,9 +9164,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/Atacama_Desert"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -9319,8 +9187,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-yellowstone-1",
-       "clue": "____ became the first national park in the world in 1872.",
-       "fact": "Yellowstone became the first national park in the world in 1872.",
+       "clue": "Signed into law in 1872 mainly in Wyoming, ____ was established as the first protected park of its kind in the world.",
+       "fact": "Signed into law in 1872 mainly in Wyoming, Yellowstone became the first national park in the world.",
        "sources": [
         {
          "title": "Yellowstone National Park",
@@ -9382,8 +9250,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-northeast-greenland-national-park-1",
-       "clue": "____ is the largest national park, bigger than most countries.",
-       "fact": "Northeast Greenland National Park is the largest national park, bigger than most countries.",
+       "clue": "Established in 1974 on the world's largest island, ____ protects 972,000 km²—the largest protected land area of its kind, bigger than most countries.",
+       "fact": "Established in 1974, Northeast Greenland National Park protects 972,000 km²—the world's largest national park, bigger than most countries.",
        "sources": [
         {
          "title": "Northeast Greenland National Park",
@@ -9413,9 +9281,9 @@ const TRIVIA_BANK = {
        "fact": "General Sherman, a giant sequoia in California, is the largest tree by volume.",
        "sources": [
         {
-         "title": "General Sherman (tree)",
+         "title": "General Sherman Tree",
          "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/General_Sherman_(tree)"
+         "url": "https://en.wikipedia.org/wiki/General_Sherman_Tree"
         }
        ]
       }
@@ -9425,8 +9293,8 @@ const TRIVIA_BANK = {
      "id": "earth-blue-mountains-of-oregon",
      "name": "Blue Mountains of Oregon",
      "region": "Oregon, US",
-     "lat": 44.48,
-     "lng": -118.5,
+     "lat": 44.82,
+     "lng": -118.1,
      "emoji": "🍄",
      "suspect": {
       "name": "Hal Stone",
@@ -9436,13 +9304,18 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-blue-mountains-of-oregon-1",
-       "clue": "A honey fungus in the ____ spreads under about 9 to 10 km² and is often called the largest living thing.",
-       "fact": "A honey fungus in the Blue Mountains of Oregon spreads under about 9 to 10 km² and is often called the largest living thing.",
+       "clue": "A honey fungus in Malheur National Forest in the ____ is widely called the largest living organism on Earth, covering about 9.1 km² underground.",
+       "fact": "A honey fungus in Malheur National Forest in the Blue Mountains of Oregon is widely called the largest living organism on Earth, covering about 9.1 km² underground.",
        "sources": [
         {
          "title": "Armillaria ostoyae",
          "publisher": "Wikipedia",
          "url": "https://en.wikipedia.org/wiki/Armillaria_ostoyae"
+        },
+        {
+         "title": "Blue Mountains (Pacific Northwest)",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Blue_Mountains_(Pacific_Northwest)"
         }
        ]
       }
@@ -9463,8 +9336,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-la-rinconada-1",
-       "clue": "____, in Peru, is the highest permanent town in the world, a gold-mining town about 5,100 m up.",
-       "fact": "La Rinconada, in Peru, is the highest permanent town in the world, a gold-mining town about 5,100 m up.",
+       "clue": "____, a Peruvian gold-mining town at 4,900 to 5,100 m above sea level, is the highest larger permanent settlement in the world.",
+       "fact": "La Rinconada, a Peruvian gold-mining town at 4,900 to 5,100 m above sea level, is the highest larger permanent settlement in the world.",
        "sources": [
         {
          "title": "La Rinconada, Peru",
@@ -9523,8 +9396,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-pacific-ocean-1",
-       "clue": "The ____ is the deepest ocean, home of the Mariana Trench.",
-       "fact": "The Pacific is the deepest ocean, home of the Mariana Trench.",
+       "clue": "The ____ is the largest and deepest of Earth’s oceanic divisions, averaging about 4,000 m deep.",
+       "fact": "The Pacific Ocean is the largest and deepest of Earth’s oceanic divisions, averaging about 4,000 m deep.",
        "sources": [
         {
          "title": "Pacific Ocean",
@@ -9535,8 +9408,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "earth-pacific-ocean-2",
-       "clue": "The Challenger Deep, in the ____'s Mariana Trench, is the deepest known point in the ocean, nearly 11 km down.",
-       "fact": "The Challenger Deep, in the Pacific's Mariana Trench, is the deepest known point in the ocean, nearly 11 km down.",
+       "clue": "Challenger Deep, in the Mariana Trench of the ____, is the deepest known point in the seabed, nearly 11,000 m down.",
+       "fact": "Challenger Deep, in the Mariana Trench of the Pacific Ocean, is the deepest known point in the seabed, nearly 11,000 m down.",
        "sources": [
         {
          "title": "Challenger Deep",
@@ -9562,8 +9435,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-atlantic-ocean-1",
-       "clue": "The ____ is the saltiest ocean.",
-       "fact": "The Atlantic is the saltiest ocean.",
+       "clue": "Among Earth’s major oceans, the ____ is on average the saltiest.",
+       "fact": "Among Earth’s major oceans, the Atlantic Ocean is on average the saltiest.",
        "sources": [
         {
          "title": "Atlantic Ocean",
@@ -9670,8 +9543,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-red-sea-1",
-       "clue": "The ____ is the saltiest sea connected to the ocean, thanks to heat, evaporation and little river inflow.",
-       "fact": "The Red Sea is the saltiest sea connected to the ocean, thanks to heat, evaporation and little river inflow.",
+       "clue": "The ____, between Africa and Arabia, is one of the saltiest bodies of water in the world owing to high evaporation, low rainfall, and no major river inflow.",
+       "fact": "The Red Sea, between Africa and Arabia, is one of the saltiest bodies of water in the world owing to high evaporation, low rainfall, and no major river inflow.",
        "sources": [
         {
          "title": "Red Sea",
@@ -9697,8 +9570,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-sargasso-sea-1",
-       "clue": "The ____, in the Atlantic, has no coastline. It is bounded only by ocean currents.",
-       "fact": "The Sargasso Sea, in the Atlantic, has no coastline. It is bounded only by ocean currents.",
+       "clue": "The ____ is the only sea on Earth bounded entirely by swirling ocean currents rather than land.",
+       "fact": "The Sargasso Sea, in the North Atlantic, is the only sea on Earth bounded entirely by swirling ocean currents rather than land.",
        "sources": [
         {
          "title": "Sargasso Sea",
@@ -9724,13 +9597,18 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-bay-of-bengal-1",
-       "clue": "The ____ is the largest bay in the world.",
-       "fact": "The Bay of Bengal is the largest bay in the world.",
+       "clue": "Covering 2.6 million km² in the northeastern Indian Ocean, the ____ is the largest marine embayment of its kind in the world.",
+       "fact": "Covering 2.6 million km² in the northeastern Indian Ocean, the Bay of Bengal is the largest bay in the world.",
        "sources": [
         {
          "title": "Bay of Bengal",
          "publisher": "Wikipedia",
          "url": "https://en.wikipedia.org/wiki/Bay_of_Bengal"
+        },
+        {
+         "title": "Bay",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/Bay"
         }
        ]
       }
@@ -9765,7 +9643,7 @@ const TRIVIA_BANK = {
     },
     {
      "id": "earth-scoresby-sund",
-     "name": "Scoresby Sund",
+     "name": "Scoresby Sound",
      "region": "Greenland",
      "lat": 70.4,
      "lng": -23,
@@ -9778,8 +9656,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-scoresby-sund-1",
-       "clue": "____, in Greenland, is the longest fjord in the world, about 350 km long.",
-       "fact": "Scoresby Sund, in Greenland, is the longest fjord in the world, about 350 km long.",
+       "clue": "____, in eastern Greenland, is one of the largest and longest fjord systems in the world, extending up to 350 km inland.",
+       "fact": "Scoresby Sound, in eastern Greenland, is one of the largest and longest fjord systems in the world, extending up to 350 km inland.",
        "sources": [
         {
          "title": "Scoresby Sound",
@@ -9805,8 +9683,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-dead-sea-1",
-       "clue": "The shores of the ____ are the lowest dry land on Earth, about 430 m below sea level.",
-       "fact": "The shores of the Dead Sea are the lowest dry land on Earth, about 430 m below sea level.",
+       "clue": "The shores of the ____ form the lowest dry land on Earth, nearly 440 m below sea level as of 2025.",
+       "fact": "The shores of the Dead Sea form the lowest dry land on Earth, nearly 440 m below sea level as of 2025.",
        "sources": [
         {
          "title": "Dead Sea",
@@ -9814,9 +9692,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/Dead_Sea"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -9837,8 +9715,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-don-juan-pond-1",
-       "clue": "____, in Antarctica, is the saltiest natural body of water known, so salty it rarely freezes even at −50 °C.",
-       "fact": "Don Juan Pond, in Antarctica, is the saltiest natural body of water known, so salty it rarely freezes even at −50 °C.",
+       "clue": "____, in Antarctica, is the saltiest of the Antarctic lakes at over 45% salinity, rarely freezing even below −50 °C.",
+       "fact": "Don Juan Pond, in Antarctica, is the saltiest of the Antarctic lakes at over 45% salinity, rarely freezing even below −50 °C.",
        "sources": [
         {
          "title": "Don Juan Pond",
@@ -9918,8 +9796,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-lake-ladoga-1",
-       "clue": "____, in Russia near St. Petersburg, is the largest lake in Europe.",
-       "fact": "Lake Ladoga, in Russia near St. Petersburg, is the largest lake in Europe.",
+       "clue": "____, in northwestern Russia near St. Petersburg, is the largest lake located entirely in Europe.",
+       "fact": "Lake Ladoga, in northwestern Russia near St. Petersburg, is the largest lake located entirely in Europe.",
        "sources": [
         {
          "title": "Lake Ladoga",
@@ -9945,8 +9823,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-kati-thanda-lake-eyre-1",
-       "clue": "____, usually dry salt, is the largest lake in Australia.",
-       "fact": "Kati Thanda–Lake Eyre, usually dry salt, is the largest lake in Australia.",
+       "clue": "Usually a dry salt pan, ____ becomes the largest lake in Australia on the rare occasions when it fills completely.",
+       "fact": "Usually a dry salt pan, Kati Thanda–Lake Eyre becomes the largest lake in Australia on the rare occasions when it fills completely.",
        "sources": [
         {
          "title": "Kati Thanda–Lake Eyre",
@@ -10038,8 +9916,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "earth-yangtze-2",
-       "clue": "The ____, in China, is the longest river entirely within one country.",
-       "fact": "The Yangtze, in China, is the longest river entirely within one country.",
+       "clue": "The ____, in China, is the largest and longest river flowing entirely within a single country.",
+       "fact": "The Yangtze, in China, is the largest and longest river flowing entirely within a single country.",
        "sources": [
         {
          "title": "Yangtze",
@@ -10077,8 +9955,8 @@ const TRIVIA_BANK = {
       },
       {
        "id": "earth-amazon-2",
-       "clue": "The ____ rainforest is the largest rainforest, covering much of northern South America.",
-       "fact": "The Amazon rainforest is the largest rainforest, covering much of northern South America.",
+       "clue": "The basin of the ____ holds the world's largest tropical rainforest, covering much of northern South America.",
+       "fact": "The basin of the Amazon holds the world's largest tropical rainforest, covering much of northern South America.",
        "sources": [
         {
          "title": "Amazon rainforest",
@@ -10212,8 +10090,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-ganges-brahmaputra-delta-1",
-       "clue": "The ____, mostly in Bangladesh, is the largest river delta in the world.",
-       "fact": "The Ganges–Brahmaputra Delta, mostly in Bangladesh, is the largest river delta in the world.",
+       "clue": "Predominantly in Bangladesh and West Bengal, India, the ____ is the largest river-mouth fan in the world.",
+       "fact": "Predominantly in Bangladesh and West Bengal, India, the Ganges–Brahmaputra Delta is the largest river delta in the world.",
        "sources": [
         {
          "title": "Ganges Delta",
@@ -10266,8 +10144,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-marajo-1",
-       "clue": "____, at the mouth of the Amazon in Brazil, is by many counts the largest freshwater island in a river, about the size of Switzerland.",
-       "fact": "Marajó, at the mouth of the Amazon in Brazil, is by many counts the largest freshwater island in a river, about the size of Switzerland.",
+       "clue": "____, a coastal delta landmass in Pará, Brazil, bordered by river mouths and the open ocean, covers about 40,100 km²—comparable in size to Switzerland.",
+       "fact": "Marajó, a coastal delta island at the mouth of the Amazon in Pará, Brazil, bordered by river waters and the Atlantic Ocean, covers about 40,100 km²—comparable in size to Switzerland.",
        "sources": [
         {
          "title": "Marajó",
@@ -10293,8 +10171,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-manitoulin-island-1",
-       "clue": "____, in Lake Huron, is the largest island in a lake.",
-       "fact": "Manitoulin Island, in Lake Huron, is the largest island in a lake.",
+       "clue": "Covering 2,766 km² in Ontario’s Lake Huron, ____ is the largest landmass inside a freshwater lake and holds over 100 lakes of its own.",
+       "fact": "Covering 2,766 km² in Ontario’s Lake Huron, Manitoulin Island is the largest lake island in the world and holds over 100 lakes of its own.",
        "sources": [
         {
          "title": "Manitoulin Island",
@@ -10347,8 +10225,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "earth-tristan-da-cunha-1",
-       "clue": "____, in the South Atlantic, is often called the most remote inhabited island, about 2,400 km from the nearest mainland in South Africa.",
-       "fact": "Tristan da Cunha, in the South Atlantic, is often called the most remote inhabited island, about 2,400 km from the nearest mainland in South Africa.",
+       "clue": "Accessible only by a six-day ship journey from Cape Town, South Africa, volcanic ____ is considered the most remote inhabited archipelago in the world.",
+       "fact": "Accessible only by a six-day ship journey from Cape Town, South Africa, volcanic Tristan da Cunha in the South Atlantic is considered the most remote inhabited archipelago in the world.",
        "sources": [
         {
          "title": "Tristan da Cunha",
@@ -10380,8 +10258,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "weather-death-valley-1",
-       "clue": "____, in California, holds the world's highest recorded air temperature: 56.7 °C on July 10, 1913.",
-       "fact": "Death Valley, in California, holds the world's highest recorded air temperature: 56.7 °C on July 10, 1913.",
+       "clue": "____, in California, holds the official WMO record for highest air temperature on Earth: 56.7 °C on July 10, 1913, though some meteorologists question that reading.",
+       "fact": "Death Valley, in California, holds the official WMO record for highest air temperature on Earth: 56.7 °C on July 10, 1913, though some meteorologists question that reading.",
        "sources": [
         {
          "title": "Highest temperature recorded on Earth",
@@ -10389,16 +10267,16 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/Highest_temperature_recorded_on_Earth"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       },
       {
        "id": "weather-death-valley-2",
-       "clue": "____ holds the heat record because the WMO threw out Libya's 58 °C reading in 2012, citing problems including an inexperienced observer and a poor instrument.",
-       "fact": "Death Valley holds the heat record because the WMO threw out Libya's 58 °C reading in 2012, citing problems including an inexperienced observer and a poor instrument.",
+       "clue": "____ reclaimed the heat record in 2012 after the WMO disqualified Libya’s 57.8 °C reading from 1922, concluding an inexperienced observer likely misread a new replacement instrument.",
+       "fact": "Death Valley reclaimed the heat record in 2012 after the WMO disqualified Libya’s 57.8 °C reading from 1922, concluding an inexperienced observer likely misread a new replacement instrument.",
        "sources": [
         {
          "title": "Highest temperature recorded on Earth",
@@ -10406,9 +10284,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/Highest_temperature_recorded_on_Earth"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -10438,9 +10316,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/Lowest_temperature_recorded_on_Earth"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -10477,8 +10355,8 @@ const TRIVIA_BANK = {
      "id": "weather-klinck",
      "name": "Klinck",
      "region": "Greenland",
-     "lat": 72.3,
-     "lng": -40.5,
+     "lat": 72.18,
+     "lng": -40,
      "emoji": "🥶",
      "suspect": {
       "name": "Misty Banks",
@@ -10502,9 +10380,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/Climate_of_Greenland"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -10552,8 +10430,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "weather-mawsynram-1",
-       "clue": "____, in northeast India, has the highest average yearly rainfall, nearly 12 m a year.",
-       "fact": "Mawsynram, in northeast India, has the highest average yearly rainfall, nearly 12 m a year.",
+       "clue": "____, in Meghalaya, northeast India, averages about 11,872 mm of rain a year and is officially recognized as the wettest place on Earth, alongside rival claims in Colombia.",
+       "fact": "Mawsynram, in Meghalaya, northeast India, averages about 11,872 mm of rain a year and is officially recognized as the wettest place on Earth, alongside rival claims in Colombia.",
        "sources": [
         {
          "title": "Mawsynram",
@@ -10561,9 +10439,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/Mawsynram"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -10593,9 +10471,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/Cherrapunji"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -10616,8 +10494,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "weather-reunion-1",
-       "clue": "Foc-Foc, on ____ in the Indian Ocean, had the most rain ever in 24 hours: about 1,825 mm during a 1966 cyclone.",
-       "fact": "Foc-Foc, on Réunion in the Indian Ocean, had the most rain ever in 24 hours: about 1,825 mm during a 1966 cyclone.",
+       "clue": "____, in the Indian Ocean, recorded 1,825 mm of rain in 24 hours during Tropical Cyclone Denise in January 1966, the world 24-hour rainfall record.",
+       "fact": "Réunion, in the Indian Ocean, recorded 1,825 mm of rain in 24 hours during Tropical Cyclone Denise in January 1966, the world 24-hour rainfall record.",
        "sources": [
         {
          "title": "List of weather records",
@@ -10625,9 +10503,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/List_of_weather_records"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -10648,8 +10526,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "weather-arica-1",
-       "clue": "____, Chile, gets less than 1 mm of rain a year on average. It is often called the driest city on Earth.",
-       "fact": "Arica, Chile, gets less than 1 mm of rain a year on average. It is often called the driest city on Earth.",
+       "clue": "____, a port city in northern Chile with historical averages below 1 mm of rain a year—2.3 mm in 1991–2020 normals—is often called the driest city on Earth.",
+       "fact": "Arica, a port city in northern Chile with historical averages below 1 mm of rain a year—2.3 mm in 1991–2020 normals—is often called the driest city on Earth.",
        "sources": [
         {
          "title": "Arica",
@@ -10679,9 +10557,9 @@ const TRIVIA_BANK = {
        "fact": "Dallol, in Ethiopia, has the hottest year-round average temperature on record, about 35 °C over several years of records.",
        "sources": [
         {
-         "title": "Dallol, Ethiopia",
+         "title": "Dallol (ghost town)",
          "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Dallol,_Ethiopia"
+         "url": "https://en.wikipedia.org/wiki/Dallol_(ghost_town)"
         }
        ]
       }
@@ -10702,8 +10580,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "weather-lut-desert-1",
-       "clue": "Satellites have measured the hottest ground surface on Earth in the ____, in Iran: about 70.7 °C in 2005.",
-       "fact": "Satellites have measured the hottest ground surface on Earth in the Lut Desert, in Iran: about 70.7 °C in 2005.",
+       "clue": "NASA satellites measured the hottest land surface on Earth in Iran's ____: 70.7 °C in 2005, later revised to 80.8 °C in higher-resolution data.",
+       "fact": "NASA satellites measured the hottest land surface on Earth in Iran's Lut Desert: 70.7 °C in 2005, later revised to 80.8 °C in higher-resolution data.",
        "sources": [
         {
          "title": "Lut Desert",
@@ -10718,8 +10596,8 @@ const TRIVIA_BANK = {
      "id": "weather-mitribah",
      "name": "Mitribah",
      "region": "Kuwait",
-     "lat": 29.8,
-     "lng": 47,
+     "lat": 29.82,
+     "lng": 47.27,
      "emoji": "🌡️",
      "suspect": {
       "name": "Del Ta",
@@ -10729,8 +10607,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "weather-mitribah-1",
-       "clue": "____, Kuwait, recorded 54 °C in 2016, tying Turbat, Pakistan, for the highest temperature in Asia.",
-       "fact": "Mitribah, Kuwait, recorded 54 °C in 2016, tying Turbat, Pakistan, for the highest temperature in Asia.",
+       "clue": "____, Kuwait, recorded a WMO-verified 53.9 °C in July 2016, the highest modern instrumental temperature verified in Asia.",
+       "fact": "Mitribah, Kuwait, recorded a WMO-verified 53.9 °C in July 2016, the highest modern instrumental temperature verified in Asia.",
        "sources": [
         {
          "title": "List of weather records",
@@ -10738,9 +10616,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/List_of_weather_records"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -10761,8 +10639,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "weather-kebili-1",
-       "clue": "____, Tunisia, recorded the highest temperature in Africa: 55 °C in 1931.",
-       "fact": "Kebili, Tunisia, recorded the highest temperature in Africa: 55 °C in 1931.",
+       "clue": "____, Tunisia, holds the WMO-listed temperature record for Africa at 55 °C in July 1931, though meteorologists have questioned colonial-era desert readings.",
+       "fact": "Kebili, Tunisia, holds the WMO-listed temperature record for Africa at 55 °C in July 1931, though meteorologists have questioned colonial-era desert readings.",
        "sources": [
         {
          "title": "List of weather records",
@@ -10770,9 +10648,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/List_of_weather_records"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -10802,9 +10680,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/Floridia"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -10825,13 +10703,18 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "weather-oodnadatta-1",
-       "clue": "____, South Australia, recorded the highest temperature in Australia: 50.7 °C in 1960.",
-       "fact": "Oodnadatta, South Australia, recorded the highest temperature in Australia: 50.7 °C in 1960.",
+       "clue": "____, South Australia, recorded 50.7 °C in January 1960, Australia’s highest reliably measured temperature—a mark tied by Onslow in January 2022.",
+       "fact": "Oodnadatta, South Australia, recorded 50.7 °C in January 1960, Australia’s highest reliably measured temperature—a mark tied by Onslow in January 2022.",
        "sources": [
         {
          "title": "Oodnadatta",
          "publisher": "Wikipedia",
          "url": "https://en.wikipedia.org/wiki/Oodnadatta"
+        },
+        {
+         "title": "List of weather records",
+         "publisher": "Wikipedia",
+         "url": "https://en.wikipedia.org/wiki/List_of_weather_records"
         }
        ]
       }
@@ -10915,9 +10798,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/Verkhoyansk"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -10947,9 +10830,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/Esperanza_Base"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -11051,8 +10934,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "weather-grand-banks-1",
-       "clue": "The ____ of Newfoundland, where warm and cold currents meet, are often called the foggiest place in the world.",
-       "fact": "The Grand Banks of Newfoundland, where warm and cold currents meet, are often called the foggiest place in the world.",
+       "clue": "Southeast of Newfoundland, the cold Labrador Current mixes with the warm Gulf Stream over the ____, causing frequent extreme fog over historic fishing grounds.",
+       "fact": "Southeast of Newfoundland, the cold Labrador Current mixes with the warm Gulf Stream over the Grand Banks, causing frequent extreme fog over historic fishing grounds.",
        "sources": [
         {
          "title": "Grand Banks of Newfoundland",
@@ -11065,7 +10948,7 @@ const TRIVIA_BANK = {
     },
     {
      "id": "weather-mount-baker",
-     "name": "Mount Baker",
+     "name": "Mt. Baker Ski Area",
      "region": "Washington, US",
      "lat": 48.86,
      "lng": -121.68,
@@ -11078,13 +10961,13 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "weather-mount-baker-1",
-       "clue": "____, Washington, holds the US record for snow in one season: about 29 m in 1998–99.",
-       "fact": "Mount Baker, Washington, holds the US record for snow in one season: about 29 m in 1998–99.",
+       "clue": "In Washington's North Cascades near Mount Shuksan, ____ recorded 29 m (1,140 inches) of snow in 1998–99, the world single-season snowfall record.",
+       "fact": "In Washington's North Cascades near Mount Shuksan, Mt. Baker Ski Area recorded 29 m (1,140 inches) of snow in 1998–99, the world single-season snowfall record.",
        "sources": [
         {
-         "title": "Mount Baker Ski Area",
+         "title": "Mt. Baker Ski Area",
          "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Mount_Baker_Ski_Area"
+         "url": "https://en.wikipedia.org/wiki/Mt._Baker_Ski_Area"
         }
        ]
       }
@@ -11147,9 +11030,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/List_of_weather_records"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -11170,8 +11053,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "disaster-mount-washington-1",
-       "clue": "____, New Hampshire, held the world wind gust record from 1934 to 1996, after a 372 km/h gust.",
-       "fact": "Mount Washington, New Hampshire, held the world wind gust record from 1934 to 1996, after a 372 km/h gust.",
+       "clue": "____, in New Hampshire, measured a 372 km/h (231 mph) wind speed in April 1934, which stood as the world’s top non-tornadic wind record until 1996.",
+       "fact": "Mount Washington, in New Hampshire, measured a 372 km/h (231 mph) wind speed in April 1934, which stood as the world’s top non-tornadic wind record until 1996.",
        "sources": [
         {
          "title": "Mount Washington",
@@ -11197,8 +11080,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "disaster-lake-maracaibo-1",
-       "clue": "____, in Venezuela, gets the most lightning on Earth. Storms flicker there on about 300 nights a year.",
-       "fact": "Lake Maracaibo, in Venezuela, gets the most lightning on Earth. Storms flicker there on about 300 nights a year.",
+       "clue": "____, in Venezuela, has the highest lightning density on Earth, with Catatumbo storms flashing 140 to 160 nights a year.",
+       "fact": "Lake Maracaibo, in Venezuela, has the highest lightning density on Earth, with Catatumbo storms flashing 140 to 160 nights a year.",
        "sources": [
         {
          "title": "Catatumbo lightning",
@@ -11224,8 +11107,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "disaster-great-plains-1",
-       "clue": "The ____ of the central US are known as Tornado Alley.",
-       "fact": "The Great Plains of the central US are known as Tornado Alley.",
+       "clue": "Storm chasers recognize the tornado belt across the ____ of the central United States as Tornado Alley.",
+       "fact": "Storm chasers recognize the tornado belt across the Great Plains of the central United States as Tornado Alley.",
        "sources": [
         {
          "title": "Tornado Alley",
@@ -11260,9 +11143,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/List_of_weather_records"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       },
@@ -11277,9 +11160,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/Daulatpur%E2%80%93Saturia_tornado"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       },
@@ -11321,9 +11204,9 @@ const TRIVIA_BANK = {
          "url": "https://en.wikipedia.org/wiki/1888_Moradabad_hailstorm"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -11331,7 +11214,7 @@ const TRIVIA_BANK = {
     },
     {
      "id": "disaster-dronka",
-     "name": "Dronka",
+     "name": "Durunka",
      "region": "Egypt",
      "lat": 27.15,
      "lng": 31.17,
@@ -11344,18 +11227,18 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "disaster-dronka-1",
-       "clue": "In ____, Egypt, in 1994, lightning set off burning fuel that flooded the town, the deadliest lightning disaster on record.",
-       "fact": "In Dronka, Egypt, in 1994, lightning set off burning fuel that flooded the town, the deadliest lightning disaster on record.",
+       "clue": "In ____, Egypt, in November 1994, lightning ignited fuel storage tanks whose floodwaters swept blazing fuel into town, the deadliest lightning disaster on record.",
+       "fact": "In Durunka, Egypt, in November 1994, lightning ignited fuel storage tanks whose floodwaters swept blazing fuel into town, the deadliest lightning disaster on record.",
        "sources": [
         {
-         "title": "Dronka",
+         "title": "Durunka",
          "publisher": "Wikipedia",
-         "url": "https://en.wikipedia.org/wiki/Dronka"
+         "url": "https://en.wikipedia.org/wiki/Durunka"
         },
         {
-         "title": "WMO Archive of Weather and Climate Extremes",
+         "title": "Records of Weather and Climate Extremes",
          "publisher": "World Meteorological Organization",
-         "url": "https://wmo.asu.edu/"
+         "url": "https://wmo.int/files/records-of-weather-and-climate-extremes-table"
         }
        ]
       }
@@ -11432,7 +11315,7 @@ const TRIVIA_BANK = {
      "name": "Shaanxi",
      "region": "China",
      "lat": 34.5,
-     "lng": 109.5,
+     "lng": 109.3,
      "emoji": "🌐",
      "suspect": {
       "name": "Hal Stone",
@@ -11442,8 +11325,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "disaster-shaanxi-1",
-       "clue": "The deadliest earthquake on record struck ____, China, in 1556, killing about 830,000 people. Many lived in cave homes that collapsed.",
-       "fact": "The deadliest earthquake on record struck Shaanxi, China, in 1556, killing about 830,000 people. Many lived in cave homes that collapsed.",
+       "clue": "A catastrophic 1556 earthquake in ____, China, collapsed loess cave dwellings; imperial registers dropped by 830,000, with modern estimates citing about 100,000 direct deaths alongside famine, plague, and migration.",
+       "fact": "A catastrophic 1556 earthquake in Shaanxi, China, collapsed loess cave dwellings; imperial registers dropped by 830,000, with modern estimates citing about 100,000 direct deaths alongside famine, plague, and migration.",
        "sources": [
         {
          "title": "1556 Shaanxi earthquake",
@@ -11469,8 +11352,8 @@ const TRIVIA_BANK = {
      "facts": [
       {
        "id": "disaster-lituya-bay-1",
-       "clue": "In 1958 a landslide into ____, Alaska, sent water about 524 m up a mountainside, the tallest tsunami wave on record.",
-       "fact": "In 1958 a landslide into Lituya Bay, Alaska, sent water about 524 m up a mountainside, the tallest tsunami wave on record.",
+       "clue": "In 1958 a rockslide into ____, Alaska, drove water to a run-up elevation of 524 m up the opposite slope, the highest tsunami wave run-up on record.",
+       "fact": "In 1958 a rockslide into Lituya Bay, Alaska, drove water to a run-up elevation of 524 m up the opposite slope, the highest tsunami wave run-up on record.",
        "sources": [
         {
          "title": "1958 Lituya Bay earthquake and megatsunami",
