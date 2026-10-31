@@ -2,7 +2,7 @@
 
 The 11 packs from `capitals-africa-carmen` onward in `trivia-bank.js` came from four question banks in `../quiznauts/questions/`: `capitals-hard-100.json`, `dish-origins-100.json`, `earth-superlatives-100.json`, and `extreme-earth-100.json`.
 
-**Review status: unreviewed.** Quiznauts marks every one of these questions `unreviewed`. They were written from memory with linked sources, and the October 23 fact-check reset cleared all their sign-offs. The import did not check them against their sources. Treat these packs as drafts until someone checks each fact against its linked source.
+**Review status at import: unreviewed (superseded on October 30, 2026).** Quiznauts marked every one of these questions `unreviewed`. They were written from memory with linked sources, and the October 23 fact-check reset cleared all their sign-offs. The October 29 import did not check them against their sources. See [`2026-10-30-quiznauts-fact-check.md`](2026-10-30-quiznauts-fact-check.md) for the subsequent source, coordinate, and editorial review that retired 1 place and 11 facts and rewrote or tightened 103 facts across these 11 packs (now 239 places, 298 facts).
 
 ## What changed in the import
 

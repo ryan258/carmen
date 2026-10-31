@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — Quiznauts fact check and cleanup (October 30, 2026)
+
+- Complete AI-assisted source, coordinate, and editorial review of all 11 Quiznauts packs against live-fetched Wikipedia wikitext and the WMO extremes archive (`docs/provenance/2026-10-30-quiznauts-fact-check.md`).
+- Retire 1 place (`dish-wales`) and 11 contradicted, multi-origin colliding, or unfixable giveaway facts in World's Kitchens (`dish-wales-1`, `dish-thailand-1`, `dish-united-states-1`, `-2`, `-3`, `-5`, `-6`, `dish-austria-1`, `dish-turkey-1`, `dish-philippines-1`, `dish-sweden-1`). The bank now holds 23 packs, 335 places, and 492 facts.
+- Rewrite or tighten 103 facts and clues across all 11 Quiznauts packs to fix source contradictions, outdated or drifted records, missing superlative qualifiers, national-demonym and 1-of-1 place-name word giveaways, plural-verb blank leaks, and grammar issues while keeping surviving fact and place IDs stable.
+- Update all 19 `wmo.asu.edu` links to the direct WMO extremes table on `wmo.int`, resolve 9 redirected Wikipedia URLs to canonical targets, add supporting Wikipedia citations where multi-article claims required them, and fix 10 place coordinates, regions, or canonical names (`Scoresby Sound`, `Mt. Baker Ski Area`, `Durunka`).
+- Reconcile `README.md`, `SPEC.md`, `ROADMAP.md`, `docs/README.md`, and `docs/provenance/2026-10-29-quiznauts-import.md`. Per project instructions, `npm run verify` and `gitnexus analyze` were not run by the agent.
+
 ## Unreleased — Quiznauts place banks (October 29, 2026)
 
 - Import 309 facts about 240 places from four Quiznauts banks (capitals-hard, dish-origins, earth-superlatives, extreme-earth) as 11 new packs: capitals of Africa, the Americas, Asia, Europe, and Oceania, World's Kitchens, World Almanac, Extreme Lands, Extreme Waters, Weather Records, and Disaster Records. The bank now has 23 packs, 336 places, and 503 facts.
